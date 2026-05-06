@@ -1,0 +1,27 @@
+{
+  "name": "@content-gen/cli",
+  "version": "0.1.0",
+  "description": "content-gen command-line tool: build Markov models, scaffold packs",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "content-gen": "./dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@content-gen/core": "workspace:*",
+    "@content-gen/markov": "workspace:*"
+  }
+}

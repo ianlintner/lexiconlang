@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@content-gen/core": ["../core/src/index.ts"],
+      "@content-gen/markov": ["../markov/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts", "dist"],
+  "references": [
+    { "path": "../core" },
+    { "path": "../markov" }
+  ]
+}

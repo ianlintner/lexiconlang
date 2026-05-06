@@ -1,0 +1,27 @@
+{
+  "name": "content-gen",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Seedable, composable, multi-strategy game content generation for TypeScript",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.29.3",
+  "scripts": {
+    "build": "pnpm -r --filter='./packages/*' run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b",
+    "samples": "vitest run tests/sample-output.test.ts",
+    "clean": "pnpm -r --filter='./packages/*' exec rm -rf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.9"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}

@@ -1,0 +1,47 @@
+name: Release (manual)
+
+# Manual workflow for cutting a release once npm publishing is wired up.
+# Skipped by default — uncomment the npm publish step and add NPM_TOKEN to
+# repository secrets when you're ready to publish to the registry.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "git tag to release (e.g. v0.1.0)"
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag }}
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: "https://registry.npmjs.org"
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm test
+
+      # Uncomment when ready to publish.
+      # - run: pnpm -r --filter='./packages/*' publish --access public --no-git-checks
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag }}
+          generate_release_notes: true

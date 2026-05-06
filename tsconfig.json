@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/grammar" },
+    { "path": "./packages/markov" },
+    { "path": "./packages/fantasy" },
+    { "path": "./packages/scifi" },
+    { "path": "./packages/modern" },
+    { "path": "./packages/cli" }
+  ]
+}
