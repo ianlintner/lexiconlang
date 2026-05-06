@@ -150,66 +150,66 @@ export const fullName: Generator<FullName> = {
 
 // ─── Place names ─────────────────────────────────────────────────────────
 
-const settlementName = grammar({
+export const settlementName = grammar({
   start: t`${"prefix"}${"suffix"}`,
   prefix: placePrefixes,
   suffix: placeSuffixes.settlement,
 }, { id: "fantasy.place.settlement" });
 
-const cityName = grammar({
+export const cityName = grammar({
   start: { "#prefix##suffix#": 4, "#prefix# of #realm#": 1, "Old #prefix##suffix#": 1 },
   prefix: placePrefixes,
   suffix: placeSuffixes.settlement,
   realm: ["the Vale", "the Mark", "the Wash", "the Reach", "the Sound"],
 }, { id: "fantasy.place.city" });
 
-const villageName = grammar({
+export const villageName = grammar({
   start: t`${"prefix"}${"suffix"}`,
   prefix: ["Little", "High", "Low", "North", "South", "East", "West",
            "Old", "New", ...placePrefixes.slice(0, 10)],
   suffix: ["bridge", "field", "ford", "thorpe", "cross", "fen", "moor", "shire", "hollow"],
 }, { id: "fantasy.place.village" });
 
-const tavernName = grammar({
+export const tavernName = grammar({
   start: { "The #adj.cap# #noun.cap#": 6, "The #adj.cap# #animal.cap#": 4, "The #animal.cap#'s #noun.cap#": 2 },
   adj: [...adjectives.rustic, ...adjectives.shiny, ...adjectives.natural],
   noun: tavernNouns,
   animal: animals.map((a) => a.toLowerCase()),
 }, { id: "fantasy.place.tavern" });
 
-const mountainName = grammar({
+export const mountainName = grammar({
   start: t`${"prefix"} ${"suffix"}`,
   prefix: placePrefixes,
   suffix: placeSuffixes.hill.map((s) => s[0]!.toUpperCase() + s.slice(1)),
 }, { id: "fantasy.place.mountain" });
 
-const forestName = grammar({
+export const forestName = grammar({
   start: { "The #prefix# #suffix#": 3, "#prefix#wood": 2, "#name#'s #suffix#": 1 },
   prefix: placePrefixes,
   suffix: placeSuffixes.forest.map((s) => s[0]!.toUpperCase() + s.slice(1)),
   name: ["Beren", "Erion", "Halas", "Niord", "Tar"],
 }, { id: "fantasy.place.forest" });
 
-const riverName = grammar({
+export const riverName = grammar({
   start: t`The ${"prefix"}${"suffix"}`,
   prefix: placePrefixes,
   suffix: placeSuffixes.water,
 }, { id: "fantasy.place.river" });
 
-const landmarkName = pickOf<string>(
+export const landmarkName = pickOf<string>(
   mountainName, forestName, riverName,
 );
 
 // ─── Factions, guilds, orders ────────────────────────────────────────────
 
-const factionName = grammar({
+export const factionName = grammar({
   start: { "The #type# of the #adj.cap# #thing.cap#": 4, "The #adj.cap# #type#": 3, "Order of the #adj.cap# #thing.cap#": 2 },
   type: factionTypes,
   adj: [...adjectives.noble, ...adjectives.mystical, ...adjectives.shiny],
   thing: [...animals, "Crown", "Sword", "Flame", "Star", "Moon", "Dawn", "Veil", "Path"],
 }, { id: "fantasy.faction" });
 
-const cultName = grammar({
+export const cultName = grammar({
   start: { "The #adj.cap# #shape.cap#": 5, "Children of #thing.cap#": 3, "The Cult of the #adj.cap# #thing.cap#": 2 },
   adj: adjectives.sinister,
   shape: ["Veil", "Maw", "Eye", "Hand", "Tooth", "Tongue"],
@@ -218,7 +218,7 @@ const cultName = grammar({
 
 // ─── Items ────────────────────────────────────────────────────────────────
 
-const weaponName = grammar({
+export const weaponName = grammar({
   start: { "#adj.cap# #weapon.cap#": 3, "#weapon.cap# of the #adj.cap# #target.cap#": 2, "#name.cap#'s #weapon.cap#": 1 },
   adj: [...adjectives.shiny, ...adjectives.mystical, "Whispering", "Singing", "Howling"],
   weapon: weapons,
@@ -226,7 +226,7 @@ const weaponName = grammar({
   name: ["Aragorn", "Bran", "Cassia", "Dorian", "Elara"],
 }, { id: "fantasy.item.weapon" });
 
-const armorName = grammar({
+export const armorName = grammar({
   start: t`${"adj.cap"} ${"piece.cap"}`,
   adj: [...adjectives.shiny, ...adjectives.mystical],
   piece: armorPieces,
@@ -234,17 +234,17 @@ const armorName = grammar({
 
 // ─── Epithets, titles ────────────────────────────────────────────────────
 
-const epithet = grammar({
+export const epithet = grammar({
   start: { "the #target.cap# #action#": 3, "the #adj#": 2, "#action# of the #target.cap#s": 1 },
   target: epithetTargets,
   action: epithetActions,
   adj: ["Bold", "Quiet", "Wise", "Cruel", "Lost", "Ironhearted", "Crooked", "Just"],
 }, { id: "fantasy.epithet" });
 
-const nobleTitle: Generator<string> = oneOf(...titles.noble);
-const martialTitle: Generator<string> = oneOf(...titles.martial);
-const arcaneTitle: Generator<string> = oneOf(...titles.arcane);
-const divineTitle: Generator<string> = oneOf(...titles.divine);
+export const nobleTitle: Generator<string> = oneOf(...titles.noble);
+export const martialTitle: Generator<string> = oneOf(...titles.martial);
+export const arcaneTitle: Generator<string> = oneOf(...titles.arcane);
+export const divineTitle: Generator<string> = oneOf(...titles.divine);
 
 // ─── Personality / NPC ───────────────────────────────────────────────────
 
@@ -331,7 +331,7 @@ export const settlement: Generator<Settlement> = {
 
 // ─── Quest hooks ─────────────────────────────────────────────────────────
 
-const questHook = grammar({
+export const questHook = grammar({
   start: t`${"open"} ${"subject"}, ${"comp"}.`,
   open: questHookOpenings,
   subject: questHookSubjects,
@@ -340,7 +340,7 @@ const questHook = grammar({
 
 // ─── Dragon ──────────────────────────────────────────────────────────────
 
-const dragon = grammar({
+export const dragon = grammar({
   start: t`${"adj"} the ${"color.cap"} ${"kind.cap"}`,
   adj: dragonAdjectives,
   color: dragonColors,
