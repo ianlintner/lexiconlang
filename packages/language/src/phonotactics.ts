@@ -15,7 +15,7 @@ export function generateWord(glyphs: GlyphSystem, ctx: Context): string {
   // 1. Pick word shape
   const shapeCtx = ctx.child("shape");
   const shapeStr = pickWeighted(glyphs.wordShapes, shapeCtx);
-  const syllableCount = parseWordShape(shapeStr);
+  const syllableCount = parseWordShape(shapeStr, shapeCtx);
 
   // 2. Pick syllable templates and generate glyphs for each
   const syllables: string[] = [];
@@ -34,11 +34,11 @@ export function generateWord(glyphs: GlyphSystem, ctx: Context): string {
   return capitalize(word, glyphs, ctx);
 }
 
-function parseWordShape(shape: string): number {
+function parseWordShape(shape: string, ctx: Context): number {
   // "1" -> 1, "2" -> 2, "1-2" -> random in [1,2]
   if (shape.includes("-")) {
     const [lo, hi] = shape.split("-").map(Number);
-    return Math.floor(Math.random() * (hi! - lo! + 1)) + lo!;
+    return ctx.rng.nextInt(lo!, hi! + 1);
   }
   return Number(shape);
 }
