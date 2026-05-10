@@ -1,4 +1,4 @@
-import type { Culture, GlyphSystem } from "@lexicon/language";
+import type { Culture, GlyphSystem, VisualGlyphSystem } from "@lexicon/language";
 import { archetypes, coreMeanings } from "@lexicon/language";
 import { fantasyIndustrial } from "./meanings.js";
 
@@ -50,6 +50,24 @@ export const dwarvish: Culture = {
       ],
     ],
   },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "dwarvish.runes",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["rect", "line", "arc"],
+        complexity: "medium",
+        symmetry: false,
+        palette: ["#8B4513", "#D2691E"],
+      },
+      renderParams: {
+        size: 28,
+        strokeWidth: 2.5,
+      },
+    },
+  },
 };
 
 export const elvish: Culture = {
@@ -99,6 +117,28 @@ export const elvish: Culture = {
         1,
       ],
     ],
+  },
+  visualGlyphSystems: {
+    conceptual: {
+      id: "elvish.ideograms",
+      type: "conceptual",
+      renderFormat: "unicode",
+      mappingStrategy: "morpheme",
+      unicodeMappings: {
+        grace: "✨",
+        moonlight: "🌙",
+        forest: "🌳",
+        starlight: "⭐",
+        song: "🎵",
+        light: "✨",
+        ancient: "📜",
+        silver: "🪙",
+        wisdom: "🧠",
+      },
+      renderParams: {
+        fallback: "◆",
+      },
+    },
   },
 };
 
