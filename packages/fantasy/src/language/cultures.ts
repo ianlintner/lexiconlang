@@ -1,4 +1,4 @@
-import type { Culture } from "@content-gen/language";
+import type { Culture, GlyphSystem } from "@content-gen/language";
 import { archetypes, coreMeanings } from "@content-gen/language";
 import { fantasyIndustrial } from "./meanings.js";
 
@@ -7,7 +7,7 @@ export const dwarvish: Culture = {
   glyphs: {
     ...archetypes.guttural,
     joiner: "",
-  },
+  } as GlyphSystem,
   meaningPacks: [coreMeanings, fantasyIndustrial],
   templates: {
     given: [
@@ -57,7 +57,7 @@ export const elvish: Culture = {
   glyphs: {
     ...archetypes.flowing,
     joiner: "",
-  },
+  } as GlyphSystem,
   meaningPacks: [coreMeanings, fantasyIndustrial],
   templates: {
     given: [
@@ -107,7 +107,7 @@ export const orcish: Culture = {
   glyphs: {
     ...archetypes.guttural,
     joiner: "",
-  },
+  } as GlyphSystem,
   meaningPacks: [coreMeanings, fantasyIndustrial],
   templates: {
     given: [
@@ -144,7 +144,7 @@ export const halfling: Culture = {
   glyphs: {
     ...archetypes.clipped,
     joiner: "",
-  },
+  } as GlyphSystem,
   meaningPacks: [coreMeanings, fantasyIndustrial],
   templates: {
     given: [
@@ -178,7 +178,7 @@ export const draconic: Culture = {
   glyphs: {
     ...archetypes.sibilant,
     joiner: "",
-  },
+  } as GlyphSystem,
   meaningPacks: [coreMeanings, fantasyIndustrial],
   templates: {
     given: [

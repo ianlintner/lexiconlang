@@ -251,6 +251,10 @@ export const weaponName = grammar({
   nick: ["Stinger", "Fang", "Whisper", "Thunder", "Reaper"],
 }, { id: "scifi.weapon" });
 
+// ─── Language submodule ──────────────────────────────────────────────────
+
+export * as language from "./language/index.js";
+
 // ─── Public API ──────────────────────────────────────────────────────────
 
 export const generators = {

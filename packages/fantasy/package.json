@@ -20,6 +20,7 @@
   "dependencies": {
     "@content-gen/core": "workspace:*",
     "@content-gen/grammar": "workspace:*",
+    "@content-gen/language": "workspace:*",
     "@content-gen/markov": "workspace:*"
   }
 }
