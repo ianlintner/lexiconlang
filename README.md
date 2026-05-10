@@ -1,4 +1,4 @@
-# Lexicon · v0.2.0
+You# Lexicon · v0.2.0
 
 [![npm](https://img.shields.io/npm/v/lexicon-conlang)](https://www.npmjs.com/package/lexicon-conlang)
 [![CI](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml)
