@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
+    "types": ["node"],
     "paths": {
       "@content-gen/core": ["../core/src/index.ts"],
       "@content-gen/markov": ["../markov/src/index.ts"]
