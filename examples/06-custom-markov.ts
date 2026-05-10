@@ -17,8 +17,8 @@
 //
 // Run: pnpm --filter examples custom-markov
 
-import { createContext, repeat } from "@content-gen/core";
-import { markov, train } from "@content-gen/markov";
+import { createContext, repeat } from "@lexicon/core";
+import { markov, train } from "@lexicon/markov";
 
 // Welsh-ish town names — a small inline corpus to demonstrate training.
 const corpus = [

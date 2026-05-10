@@ -1,5 +1,5 @@
-import type { Context, Generator, Registry, WeightInput } from "@content-gen/core";
-import { buildAliasTable, sampleAlias, normalizeWeights } from "@content-gen/core";
+import type { Context, Generator, Registry, WeightInput } from "@lexicon/core";
+import { buildAliasTable, sampleAlias, normalizeWeights } from "@lexicon/core";
 import { builtinModifiers, type Modifier } from "./modifiers.js";
 import { parse, type Node, type ModifierCall } from "./parser.js";
 

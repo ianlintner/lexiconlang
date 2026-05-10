@@ -1,4 +1,4 @@
-import type { Generator, Context } from "@content-gen/core";
+import type { Generator, Context } from "@lexicon/core";
 
 /** Atomic glyph classes and their phonotactic rules. */
 export interface GlyphSystem {

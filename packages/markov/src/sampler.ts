@@ -1,4 +1,4 @@
-import type { Generator, RNG, Context } from "@content-gen/core";
+import type { Generator, RNG, Context } from "@lexicon/core";
 import { END, START, type MarkovModel } from "./model.js";
 
 export interface SampleOptions {

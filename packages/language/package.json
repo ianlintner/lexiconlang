@@ -1,5 +1,5 @@
 {
-  "name": "@content-gen/language",
+  "name": "@lexicon/language",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -12,11 +12,11 @@
   },
   "files": ["dist"],
   "dependencies": {
-    "@content-gen/core": "workspace:*"
+    "@lexicon/core": "workspace:*"
   },
   "devDependencies": {
-    "@content-gen/fantasy": "workspace:*",
-    "@content-gen/scifi": "workspace:*",
+    "@lexicon/fantasy": "workspace:*",
+    "@lexicon/scifi": "workspace:*",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
   },

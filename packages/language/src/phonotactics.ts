@@ -1,4 +1,4 @@
-import type { Context } from "@content-gen/core";
+import type { Context } from "@lexicon/core";
 import type { GlyphSystem } from "./types.js";
 import { constraintMatches } from "./glyphs.js";
 

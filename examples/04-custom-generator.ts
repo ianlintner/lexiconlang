@@ -15,8 +15,8 @@ import {
   intRange,
   oneOf,
   weightedList,
-} from "@content-gen/core";
-import { fullName } from "@content-gen/fantasy";
+} from "@lexicon/core";
+import { fullName } from "@lexicon/fantasy";
 
 interface IronKnight {
   name: string;

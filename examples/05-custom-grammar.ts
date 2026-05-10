@@ -9,8 +9,8 @@
 //
 // Run: pnpm --filter examples custom-grammar
 
-import { createContext } from "@content-gen/core";
-import { grammar, t } from "@content-gen/grammar";
+import { createContext } from "@lexicon/core";
+import { grammar, t } from "@lexicon/grammar";
 
 // ─── (a) JSON form ───────────────────────────────────────────────────────
 

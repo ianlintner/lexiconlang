@@ -5,7 +5,7 @@
 //
 // Run: pnpm --filter examples quickstart
 
-import { fantasy } from "@content-gen/fantasy";
+import { fantasy } from "@lexicon/fantasy";
 
 const game = fantasy.withSeed("hello-world");
 

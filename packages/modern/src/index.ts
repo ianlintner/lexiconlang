@@ -7,8 +7,8 @@ import {
   intRange,
   oneOf,
   weightedList,
-} from "@content-gen/core";
-import { grammar, t } from "@content-gen/grammar";
+} from "@lexicon/core";
+import { grammar, t } from "@lexicon/grammar";
 
 // ─── Person names (deliberately mixed origins) ───────────────────────────
 

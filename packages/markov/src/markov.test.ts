@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createContext } from "@content-gen/core";
+import { createContext } from "@lexicon/core";
 import { markov } from "./sampler.js";
 import { train } from "./trainer.js";
 import { fromJSON, toJSON } from "./model.js";

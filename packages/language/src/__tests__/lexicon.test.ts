@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { createContext } from "@content-gen/core";
+import { createContext } from "@lexicon/core";
 import type { Culture } from "../types.js";
 import { buildLexicon } from "../lexicon.js";
 import { coreMeanings } from "../meanings.js";

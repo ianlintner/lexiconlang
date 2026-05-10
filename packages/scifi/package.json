@@ -1,5 +1,5 @@
 {
-  "name": "@content-gen/scifi",
+  "name": "@lexicon/scifi",
   "version": "0.1.0",
   "description": "Sci-fi genre content pack for content-gen — star systems, ships, species, megacorps",
   "type": "module",
@@ -18,9 +18,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@content-gen/core": "workspace:*",
-    "@content-gen/grammar": "workspace:*",
-    "@content-gen/language": "workspace:*",
-    "@content-gen/markov": "workspace:*"
+    "@lexicon/core": "workspace:*",
+    "@lexicon/grammar": "workspace:*",
+    "@lexicon/language": "workspace:*",
+    "@lexicon/markov": "workspace:*"
   }
 }

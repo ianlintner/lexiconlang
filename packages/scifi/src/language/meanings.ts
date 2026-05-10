@@ -1,4 +1,4 @@
-import type { MeaningPack } from "@content-gen/language";
+import type { MeaningPack } from "@lexicon/language";
 
 export const scifiMeanings: MeaningPack = {
   id: "scifi",

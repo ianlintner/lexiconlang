@@ -1,5 +1,5 @@
-import type { Culture, GlyphSystem } from "@content-gen/language";
-import { archetypes, coreMeanings } from "@content-gen/language";
+import type { Culture, GlyphSystem } from "@lexicon/language";
+import { archetypes, coreMeanings } from "@lexicon/language";
 import { fantasyIndustrial } from "./meanings.js";
 
 export const dwarvish: Culture = {

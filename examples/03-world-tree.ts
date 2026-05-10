@@ -18,14 +18,14 @@
 //
 // Run: pnpm --filter examples world
 
-import { createContext, repeat } from "@content-gen/core";
+import { createContext, repeat } from "@lexicon/core";
 import {
   cityName,
   factionName,
   landmarkName,
   npc,
   settlement,
-} from "@content-gen/fantasy";
+} from "@lexicon/fantasy";
 
 const world = createContext({ seed: "campaign-of-iron" });
 

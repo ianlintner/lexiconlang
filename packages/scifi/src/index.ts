@@ -8,10 +8,10 @@ import {
   oneOf,
   pickOf,
   weightedList,
-} from "@content-gen/core";
-import { grammar, t } from "@content-gen/grammar";
-import { markov, train } from "@content-gen/markov";
-import { generateName, type TranslatedName } from "@content-gen/language";
+} from "@lexicon/core";
+import { grammar, t } from "@lexicon/grammar";
+import { markov, train } from "@lexicon/markov";
+import { generateName, type TranslatedName } from "@lexicon/language";
 import { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
 
 // ─── Corpora for alien-sounding names (deprecated) ──────────────────────

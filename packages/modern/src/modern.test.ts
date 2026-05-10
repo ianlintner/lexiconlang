@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createContext } from "@content-gen/core";
+import { createContext } from "@lexicon/core";
 import { modern, person, address } from "./index.js";
 
 describe("modern pack", () => {

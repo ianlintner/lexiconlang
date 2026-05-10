@@ -1,8 +1,8 @@
 {
-  "name": "content-gen",
-  "version": "0.1.0",
+  "name": "lexicon",
+  "version": "0.2.0",
   "private": true,
-  "description": "Seedable, composable, multi-strategy game content generation for TypeScript",
+  "description": "Procedural constructed language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming",
   "type": "module",
   "engines": {
     "node": ">=20"

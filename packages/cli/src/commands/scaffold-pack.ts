@@ -8,7 +8,7 @@ export async function runScaffoldPack(args: ParsedArgs): Promise<void> {
   const target = resolve(outDir, name);
 
   const safeName = name.replace(/[^a-z0-9-]/gi, "-").toLowerCase();
-  const pkgName = `@content-gen/${safeName}`;
+  const pkgName = `@lexicon/${safeName}`;
 
   await mkdir(join(target, "src"), { recursive: true });
 
@@ -28,8 +28,8 @@ export async function runScaffoldPack(args: ParsedArgs): Promise<void> {
         sideEffects: false,
         scripts: { build: "tsc -b", typecheck: "tsc --noEmit" },
         dependencies: {
-          "@content-gen/core": "workspace:*",
-          "@content-gen/grammar": "workspace:*",
+          "@lexicon/core": "workspace:*",
+          "@lexicon/grammar": "workspace:*",
         },
       },
       null,
@@ -47,8 +47,8 @@ export async function runScaffoldPack(args: ParsedArgs): Promise<void> {
           outDir: "./dist",
           rootDir: "./src",
           paths: {
-            "@content-gen/core": ["../core/src/index.ts"],
-            "@content-gen/grammar": ["../grammar/src/index.ts"],
+            "@lexicon/core": ["../core/src/index.ts"],
+            "@lexicon/grammar": ["../grammar/src/index.ts"],
           },
         },
         include: ["src/**/*"],
@@ -63,8 +63,8 @@ export async function runScaffoldPack(args: ParsedArgs): Promise<void> {
 
   await writeFile(
     join(target, "src", "index.ts"),
-    `import { type Generator, oneOf } from "@content-gen/core";
-import { grammar } from "@content-gen/grammar";
+    `import { type Generator, oneOf } from "@lexicon/core";
+import { grammar } from "@lexicon/grammar";
 
 export const example: Generator<string> = grammar({
   start: "Hello, #name#!",

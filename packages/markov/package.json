@@ -1,5 +1,5 @@
 {
-  "name": "@content-gen/markov",
+  "name": "@lexicon/markov",
   "version": "0.1.0",
   "description": "Markov-chain name and word generator with offline trainer",
   "type": "module",
@@ -22,6 +22,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@content-gen/core": "workspace:*"
+    "@lexicon/core": "workspace:*"
   }
 }

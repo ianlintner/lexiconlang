@@ -1,5 +1,5 @@
 {
-  "name": "@content-gen/modern",
+  "name": "@lexicon/modern",
   "version": "0.1.0",
   "description": "Modern-day genre content pack for content-gen — names, cities, companies, streets",
   "type": "module",
@@ -18,7 +18,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@content-gen/core": "workspace:*",
-    "@content-gen/grammar": "workspace:*"
+    "@lexicon/core": "workspace:*",
+    "@lexicon/grammar": "workspace:*"
   }
 }

@@ -1,17 +1,20 @@
-# content-gen
+# Lexicon
 
-**Seedable, composable, multi-strategy game content generation for TypeScript.**
+**Procedural constructed-language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming.**
 
-Generate names, NPCs, places, factions, items, and entire worlds — deterministically from a seed, mixing weighted lists, Tracery-style grammars, and Markov chains under one typed API.
+Generate culture-specific names with meaningful translations. Names are morpheme-rich, phonotactically coherent, and derived from a culture's phonetic system and semantic meanings. Same seed → identical results across machines, runs, and library versions.
 
 ```ts
-import { fantasy } from "@content-gen/fantasy";
+import { fantasy } from "@lexicon/fantasy";
 
-const game = fantasy.withSeed("hello-world");
+const game = fantasy.withSeed("campaign-1");
 
-game.npc;            // { name: { full: "Aelyn Stormvale", race: "elf", ... }, age: 47, ... }
-game.place.tavern(); // "The Gilded Anchor"
-game.quest();        // "Locals whisper that the silent bell of the church, before the next full moon."
+const name = game.npc.name.full;
+// → { form: "Drakaztum Ironforge", translation: "Strong-anvil Iron-forge", language: "fantasy.dwarvish" }
+
+name.form;            // "Drakaztum Ironforge" (conlang string)
+name.translation;     // "Strong-anvil Iron-forge" (English morpheme meanings)
+name.toString();      // "Drakaztum Ironforge" (template-string compatible)
 ```
 
 [![CI](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml)
@@ -20,9 +23,14 @@ game.quest();        // "Locals whisper that the silent bell of the church, befo
 
 ## Why
 
-Most procedural-content libraries pick one strategy: faker.js does big lookup tables, Tracery does grammars, markov-namegen does n-grams, and rot.js does roguelike RNG. None of them compose with each other, and only some of them are deterministic.
+Most naming libraries treat names as opaque strings. **Lexicon generates names as *meaningful utterances* — each morpheme carries semantic weight.**
 
-**`content-gen` puts every strategy behind one `Generator<T>` interface.** A grammar can call a Markov chain. A Markov chain can be a child of a `compose()`d NPC. A whole `world → region → settlement → npc` tree derives from one string seed and is byte-identical across machines, runs, and library versions.
+Each culture has:
+- A **glyph system** (phonotactics): which sounds cluster together, syllable patterns, phonotactic constraints
+- A **lexicon**: meaning ↔ conlang form mappings, derived deterministically from a culture's seed
+- **Templates**: morpheme recipes for personal names, place names, etc.
+
+**Result:** Names like `Drakaztum` (Strong-anvil), `Aelthelan` (Silver-stream), `Krazzivek` (Swarm-signal) — each name is both aesthetically coherent AND semantically meaningful.
 
 | | faker | Tracery | rot.js | **content-gen** |
 |---|---|---|---|---|
@@ -35,58 +43,66 @@ Most procedural-content libraries pick one strategy: faker.js does big lookup ta
 | Typed | partial | ✗ | partial | ✓ |
 | Tree-shakeable genre packs | ✗ | n/a | ✗ | ✓ |
 
-Coming in v0.2: phoneme/language system (Dwarf-Fortress-style culture-specific languages — names you can *translate*).
-Coming in v0.3: LLM bake-out CLI + live runtime with deterministic content-addressed cache.
+**v0.2 is shipping now** — full language system implementation with 9 culture presets.
 
 ---
 
 ## Install
 
 ```bash
-pnpm add @content-gen/core @content-gen/fantasy
-# add what you need:
-pnpm add @content-gen/grammar @content-gen/markov \
-         @content-gen/scifi @content-gen/modern
+pnpm add @lexicon/language @lexicon/fantasy
+# or sci-fi:
+pnpm add @lexicon/scifi
+# add generators for other content types:
+pnpm add @lexicon/grammar @lexicon/markov @lexicon/core
 ```
 
 Requires Node ≥ 20 or any modern browser. ESM-only. No native deps.
 
 ---
 
-## Five-minute tour
+## Usage
 
-### 1. Pin a seed, get content
+### Generate a dwarvish name
 
 ```ts
-import { fantasy } from "@content-gen/fantasy";
+import { dwarvish, buildLexicon } from "@lexicon/fantasy/language";
+import { createContext } from "@lexicon/core";
 
-const game = fantasy.withSeed("campaign-of-iron");
-console.log(game.npc.name.full);    // "Aelyn Stormvale"
-console.log(game.place.settlement().name); // "Blackvale"
-console.log(game.faction.order()); // "The Order of the Verdant Hawk"
+const ctx = createContext({ seed: "my-world" });
+const lexicon = buildLexicon(dwarvish, ctx);
+
+// Generate a given name:
+const name = generateName(dwarvish, "given", ctx.child("hero:1"));
+console.log(name.form);        // "Drakaztum"
+console.log(name.translation); // "Strong-anvil"
+console.log(name.language);    // "fantasy.dwarvish"
 ```
 
-### 2. Batch generation
+### Full NPC with fantasy integration
 
 ```ts
-import { createContext, repeat } from "@content-gen/core";
-import { npc } from "@content-gen/fantasy";
+import { fantasy } from "@lexicon/fantasy";
 
-const tavern = createContext({ seed: "the-gilded-anchor" });
-const patrons = repeat(npc, { min: 5, max: 12 }).generate(tavern);
-// 5–12 NPCs; same seed → same patrons, every time
+const game = fantasy.withSeed("campaign-7");
+const npc = game.npc;
+
+console.log(npc.name.full.form);        // "Aelyn Stormvale"
+console.log(npc.name.full.translation); // "Silver-stream Storm-vale"
+console.log(npc.name.full.language);    // "fantasy.elvish"
 ```
 
-### 3. Hierarchical worlds
+### Sci-fi alien names
 
 ```ts
-const world  = createContext({ seed: "campaign-7" });
-const region = world.child("region:23");
-const town   = region.child("settlement:5");
-const elder  = npc.generate(town.child("npc:elder"));
-// `world → region:23 → settlement:5 → npc:elder` is a stable address.
-// Re-deriving the elder from the same path on any machine, any day, any
-// build, returns the same NPC. You don't have to persist them.
+import { humanoidName, mycoidName, plantoidName } from "@lexicon/scifi";
+import { createContext } from "@lexicon/core";
+
+const ctx = createContext({ seed: "crew-manifest" });
+
+console.log(humanoidName.generate(ctx.child("humanoid:1")).form);
+console.log(mycoidName.generate(ctx.child("mycoid:1")).form);
+console.log(plantoidName.generate(ctx.child("plantoid:1")).form);
 ```
 
 ### 4. Compose your own

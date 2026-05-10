@@ -1,5 +1,5 @@
 {
-  "name": "@content-gen/fantasy",
+  "name": "@lexicon/fantasy",
   "version": "0.1.0",
   "description": "Fantasy genre content pack for content-gen — races, names, places, factions",
   "type": "module",
@@ -18,9 +18,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@content-gen/core": "workspace:*",
-    "@content-gen/grammar": "workspace:*",
-    "@content-gen/language": "workspace:*",
-    "@content-gen/markov": "workspace:*"
+    "@lexicon/core": "workspace:*",
+    "@lexicon/grammar": "workspace:*",
+    "@lexicon/language": "workspace:*",
+    "@lexicon/markov": "workspace:*"
   }
 }

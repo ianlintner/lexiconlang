@@ -20,22 +20,22 @@ importers:
 
   examples:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@content-gen/fantasy':
+      '@lexicon/fantasy':
         specifier: workspace:*
         version: link:../packages/fantasy
-      '@content-gen/grammar':
+      '@lexicon/grammar':
         specifier: workspace:*
         version: link:../packages/grammar
-      '@content-gen/markov':
+      '@lexicon/markov':
         specifier: workspace:*
         version: link:../packages/markov
-      '@content-gen/modern':
+      '@lexicon/modern':
         specifier: workspace:*
         version: link:../packages/modern
-      '@content-gen/scifi':
+      '@lexicon/scifi':
         specifier: workspace:*
         version: link:../packages/scifi
     devDependencies:
@@ -45,10 +45,10 @@ importers:
 
   packages/cli:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
-      '@content-gen/markov':
+      '@lexicon/markov':
         specifier: workspace:*
         version: link:../markov
 
@@ -56,35 +56,35 @@ importers:
 
   packages/fantasy:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
-      '@content-gen/grammar':
+      '@lexicon/grammar':
         specifier: workspace:*
         version: link:../grammar
-      '@content-gen/language':
+      '@lexicon/language':
         specifier: workspace:*
         version: link:../language
-      '@content-gen/markov':
+      '@lexicon/markov':
         specifier: workspace:*
         version: link:../markov
 
   packages/grammar:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
 
   packages/language:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
-      '@content-gen/fantasy':
+      '@lexicon/fantasy':
         specifier: workspace:*
         version: link:../fantasy
-      '@content-gen/scifi':
+      '@lexicon/scifi':
         specifier: workspace:*
         version: link:../scifi
       typescript:
@@ -96,31 +96,31 @@ importers:
 
   packages/markov:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
 
   packages/modern:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
-      '@content-gen/grammar':
+      '@lexicon/grammar':
         specifier: workspace:*
         version: link:../grammar
 
   packages/scifi:
     dependencies:
-      '@content-gen/core':
+      '@lexicon/core':
         specifier: workspace:*
         version: link:../core
-      '@content-gen/grammar':
+      '@lexicon/grammar':
         specifier: workspace:*
         version: link:../grammar
-      '@content-gen/language':
+      '@lexicon/language':
         specifier: workspace:*
         version: link:../language
-      '@content-gen/markov':
+      '@lexicon/markov':
         specifier: workspace:*
         version: link:../markov
 

@@ -16,12 +16,12 @@
     "all": "tsx _run-all.ts"
   },
   "dependencies": {
-    "@content-gen/core": "workspace:*",
-    "@content-gen/grammar": "workspace:*",
-    "@content-gen/markov": "workspace:*",
-    "@content-gen/fantasy": "workspace:*",
-    "@content-gen/scifi": "workspace:*",
-    "@content-gen/modern": "workspace:*"
+    "@lexicon/core": "workspace:*",
+    "@lexicon/grammar": "workspace:*",
+    "@lexicon/markov": "workspace:*",
+    "@lexicon/fantasy": "workspace:*",
+    "@lexicon/scifi": "workspace:*",
+    "@lexicon/modern": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.2"

@@ -6,10 +6,10 @@
 //
 // Run: pnpm --filter examples cross-genre
 
-import { compose, createContext, oneOf, repeat } from "@content-gen/core";
-import { fullName as fantasyFullName, dwarvenMaleName } from "@content-gen/fantasy";
-import { scifi } from "@content-gen/scifi";
-import { modern } from "@content-gen/modern";
+import { compose, createContext, oneOf, repeat } from "@lexicon/core";
+import { fullName as fantasyFullName, dwarvenMaleName } from "@lexicon/fantasy";
+import { scifi } from "@lexicon/scifi";
+import { modern } from "@lexicon/modern";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //

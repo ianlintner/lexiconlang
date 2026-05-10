@@ -1,5 +1,5 @@
 {
-  "name": "@content-gen/cli",
+  "name": "@lexicon/cli",
   "version": "0.1.0",
   "description": "content-gen command-line tool: build Markov models, scaffold packs",
   "type": "module",
@@ -21,7 +21,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@content-gen/core": "workspace:*",
-    "@content-gen/markov": "workspace:*"
+    "@lexicon/core": "workspace:*",
+    "@lexicon/markov": "workspace:*"
   }
 }
