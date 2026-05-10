@@ -20,8 +20,8 @@ export interface ShapeParams {
 }
 
 export interface CanvasInstruction {
-  type: "moveTo" | "lineTo" | "arc" | "rect" | "stroke" | "fill" | "beginPath" | "closePath";
-  params: number[];
+  type: "moveTo" | "lineTo" | "arc" | "rect" | "stroke" | "fill" | "beginPath" | "closePath" | "save" | "restore" | "setStrokeStyle" | "setLineWidth" | "setFillStyle";
+  params: (number | string)[];
 }
 
 export interface RenderParams {

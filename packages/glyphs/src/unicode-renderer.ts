@@ -60,12 +60,12 @@ export function renderToUnicode(meaning: string, config?: UnicodeConfig): string
 
   // Check custom mappings first if provided
   if (config?.mappings && meaning in config.mappings) {
-    return config.mappings[meaning];
+    return config.mappings[meaning] ?? fallback;
   }
 
   // Check predefined registry
   if (meaning in UnicodeRegistry) {
-    return UnicodeRegistry[meaning];
+    return UnicodeRegistry[meaning] ?? fallback;
   }
 
   // Return fallback for unmapped meanings

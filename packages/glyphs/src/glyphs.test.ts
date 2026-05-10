@@ -3,6 +3,7 @@ import type { VisualGlyphSystem, Glyph, GlyphSet, ShapeParams, CanvasInstruction
 import { generateShapes } from "./shape-generator.js";
 import { renderToSVG } from "./svg-renderer.js";
 import { renderToUnicode } from "./unicode-renderer.js";
+import { renderToCanvas } from "./canvas-renderer.js";
 import { createContext } from "@lexicon/core";
 
 describe("Types", () => {
@@ -627,6 +628,185 @@ describe("Unicode Renderer", () => {
         const result = renderToUnicode("strong");
         expect(result.length).toBeGreaterThanOrEqual(1);
       });
+    });
+  });
+});
+
+describe("Canvas Renderer", () => {
+  describe("renderToCanvas", () => {
+    it("returns an array of CanvasInstruction", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes);
+      expect(Array.isArray(instructions)).toBe(true);
+    });
+
+    it("generates instructions for a single rect shape", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes);
+      expect(instructions.length).toBeGreaterThan(0);
+      // Should have: save, setStrokeStyle, setLineWidth, beginPath, rect, stroke, restore
+      expect(instructions.some((i) => i.type === "save")).toBe(true);
+      expect(instructions.some((i) => i.type === "restore")).toBe(true);
+    });
+
+    it("includes beginPath and closePath for path-based shapes", () => {
+      const shapes: ShapeParams[] = [{ type: "line", x: 0.1, y: 0.1, x2: 0.5, y2: 0.5 }];
+      const instructions = renderToCanvas(shapes);
+      expect(instructions.some((i) => i.type === "beginPath")).toBe(true);
+      expect(instructions.some((i) => i.type === "closePath")).toBe(true);
+    });
+
+    it("scales normalized coordinates by size parameter", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.2, w: 0.3, h: 0.4 }];
+      const instructions = renderToCanvas(shapes, { size: 100 });
+      // Rect instruction should have scaled coordinates
+      const rectInstr = instructions.find((i) => i.type === "rect");
+      expect(rectInstr).toBeDefined();
+      expect(rectInstr?.params[0]).toBe(10); // x: 0.1 * 100
+      expect(rectInstr?.params[1]).toBe(20); // y: 0.2 * 100
+      expect(rectInstr?.params[2]).toBe(30); // w: 0.3 * 100
+      expect(rectInstr?.params[3]).toBe(40); // h: 0.4 * 100
+    });
+
+    it("applies default size of 32 when not provided", () => {
+      const shapes: ShapeParams[] = [{ type: "circle", x: 0.5, y: 0.5, r: 0.2 }];
+      const instructions = renderToCanvas(shapes);
+      const arcInstr = instructions.find((i) => i.type === "arc");
+      expect(arcInstr).toBeDefined();
+      // Default size is 32, so cx should be 0.5 * 32 = 16
+      expect(arcInstr?.params[0]).toBe(16);
+      expect(arcInstr?.params[1]).toBe(16);
+    });
+
+    it("applies strokeWidth to setLineWidth instruction", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes, { strokeWidth: 4 });
+      const lineWidthInstr = instructions.find((i) => i.type === "setLineWidth");
+      expect(lineWidthInstr).toBeDefined();
+      expect(lineWidthInstr?.params[0]).toBe(4);
+    });
+
+    it("applies default strokeWidth of 2", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes);
+      const lineWidthInstr = instructions.find((i) => i.type === "setLineWidth");
+      expect(lineWidthInstr).toBeDefined();
+      expect(lineWidthInstr?.params[0]).toBe(2);
+    });
+
+    it("applies stroke color from palette", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes, { palette: ["#FF0000"] });
+      const strokeStyleInstr = instructions.find((i) => i.type === "setStrokeStyle");
+      expect(strokeStyleInstr).toBeDefined();
+      expect(strokeStyleInstr?.params[0]).toBe("#FF0000");
+    });
+
+    it("uses default color #000000 when no palette provided", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes);
+      const strokeStyleInstr = instructions.find((i) => i.type === "setStrokeStyle");
+      expect(strokeStyleInstr).toBeDefined();
+      expect(strokeStyleInstr?.params[0]).toBe("#000000");
+    });
+
+    it("rotates through palette colors for multiple shapes", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.5, y: 0.5, r: 0.2 },
+        { type: "line", x: 0.1, y: 0.5, x2: 0.9, y2: 0.9 },
+      ];
+      const instructions = renderToCanvas(shapes, { palette: ["#FF0000", "#00FF00"] });
+      // Extract stroke style instructions (one per shape)
+      const strokeInstrs = instructions.filter((i) => i.type === "setStrokeStyle");
+      expect(strokeInstrs.length).toBeGreaterThanOrEqual(3);
+      // Should cycle: #FF0000, #00FF00, #FF0000
+      expect(strokeInstrs[0]?.params[0]).toBe("#FF0000");
+      expect(strokeInstrs[1]?.params[0]).toBe("#00FF00");
+      expect(strokeInstrs[2]?.params[0]).toBe("#FF0000");
+    });
+
+    it("generates rect instruction for rect shape", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.2, w: 0.3, h: 0.4 }];
+      const instructions = renderToCanvas(shapes, { size: 100 });
+      const rectInstr = instructions.find((i) => i.type === "rect");
+      expect(rectInstr).toBeDefined();
+      expect(rectInstr?.params).toEqual([10, 20, 30, 40]);
+    });
+
+    it("generates arc instruction for circle shape", () => {
+      const shapes: ShapeParams[] = [{ type: "circle", x: 0.5, y: 0.5, r: 0.2 }];
+      const instructions = renderToCanvas(shapes, { size: 100 });
+      const arcInstr = instructions.find((i) => i.type === "arc");
+      expect(arcInstr).toBeDefined();
+      // Should be full circle: arc(50, 50, 20, 0, 2*PI, false)
+      expect(arcInstr?.params[0]).toBe(50); // cx
+      expect(arcInstr?.params[1]).toBe(50); // cy
+      expect(arcInstr?.params[2]).toBe(20); // r
+    });
+
+    it("generates moveTo and lineTo for line shape", () => {
+      const shapes: ShapeParams[] = [{ type: "line", x: 0.1, y: 0.2, x2: 0.8, y2: 0.9 }];
+      const instructions = renderToCanvas(shapes, { size: 100 });
+      const moveToInstr = instructions.find((i) => i.type === "moveTo");
+      const lineToInstr = instructions.find((i) => i.type === "lineTo");
+      expect(moveToInstr).toBeDefined();
+      expect(moveToInstr?.params).toEqual([10, 20]);
+      expect(lineToInstr).toBeDefined();
+      expect(lineToInstr?.params).toEqual([80, 90]);
+    });
+
+    it("generates arc instruction for arc shape with angles", () => {
+      const shapes: ShapeParams[] = [
+        { type: "arc", x: 0.5, y: 0.5, r: 0.2, startAngle: 0, endAngle: Math.PI / 2 },
+      ];
+      const instructions = renderToCanvas(shapes, { size: 100 });
+      const arcInstr = instructions.find((i) => i.type === "arc");
+      expect(arcInstr).toBeDefined();
+      expect(arcInstr?.params[0]).toBe(50); // cx
+      expect(arcInstr?.params[1]).toBe(50); // cy
+      expect(arcInstr?.params[2]).toBe(20); // r
+      expect(arcInstr?.params[3]).toBe(0); // startAngle
+      expect(arcInstr?.params[4]).toBe(Math.PI / 2); // endAngle
+    });
+
+    it("handles empty shapes array", () => {
+      const instructions = renderToCanvas([]);
+      expect(Array.isArray(instructions)).toBe(true);
+      expect(instructions.length).toBe(0);
+    });
+
+    it("renders all shape types", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.3, y: 0.3, r: 0.1 },
+        { type: "line", x: 0.5, y: 0.5, x2: 0.8, y2: 0.8 },
+        { type: "arc", x: 0.7, y: 0.7, r: 0.1, startAngle: 0, endAngle: Math.PI },
+        { type: "polygon", x: 0.2, y: 0.8, r: 0.1, sides: 5 },
+      ];
+      const instructions = renderToCanvas(shapes);
+      expect(instructions.some((i) => i.type === "rect")).toBe(true);
+      expect(instructions.some((i) => i.type === "arc")).toBe(true);
+      expect(instructions.some((i) => i.type === "moveTo")).toBe(true);
+    });
+
+    it("has deterministic output for same shapes", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.5, y: 0.5, r: 0.2 },
+      ];
+      const instr1 = renderToCanvas(shapes);
+      const instr2 = renderToCanvas(shapes);
+      expect(instr1).toEqual(instr2);
+    });
+
+    it("stroke instruction comes after drawing instructions", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const instructions = renderToCanvas(shapes);
+      const rectIdx = instructions.findIndex((i) => i.type === "rect");
+      const strokeIdx = instructions.findIndex((i) => i.type === "stroke");
+      expect(rectIdx).toBeGreaterThan(-1);
+      expect(strokeIdx).toBeGreaterThan(rectIdx);
     });
   });
 });
