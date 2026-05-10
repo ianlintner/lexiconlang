@@ -12,3 +12,4 @@ export type {
   TranslatedName,
 } from "./types.js";
 export { constraintMatches } from "./glyphs.js";
+export { generateWord } from "./phonotactics.js";
