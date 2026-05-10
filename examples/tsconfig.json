@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": false,
+    "incremental": false,
+    "paths": {
+      "@content-gen/core": ["../packages/core/src/index.ts"],
+      "@content-gen/grammar": ["../packages/grammar/src/index.ts"],
+      "@content-gen/markov": ["../packages/markov/src/index.ts"],
+      "@content-gen/fantasy": ["../packages/fantasy/src/index.ts"],
+      "@content-gen/scifi": ["../packages/scifi/src/index.ts"],
+      "@content-gen/modern": ["../packages/modern/src/index.ts"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}

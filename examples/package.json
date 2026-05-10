@@ -1,0 +1,29 @@
+{
+  "name": "examples",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Runnable examples for content-gen",
+  "type": "module",
+  "scripts": {
+    "quickstart": "tsx 01-quickstart.ts",
+    "tavern": "tsx 02-batch-patrons.ts",
+    "world": "tsx 03-world-tree.ts",
+    "custom-generator": "tsx 04-custom-generator.ts",
+    "custom-grammar": "tsx 05-custom-grammar.ts",
+    "custom-markov": "tsx 06-custom-markov.ts",
+    "reroll": "tsx 07-seed-and-reroll.ts",
+    "cross-genre": "tsx 08-cross-genre.ts",
+    "all": "tsx _run-all.ts"
+  },
+  "dependencies": {
+    "@content-gen/core": "workspace:*",
+    "@content-gen/grammar": "workspace:*",
+    "@content-gen/markov": "workspace:*",
+    "@content-gen/fantasy": "workspace:*",
+    "@content-gen/scifi": "workspace:*",
+    "@content-gen/modern": "workspace:*"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

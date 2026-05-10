@@ -12,6 +12,7 @@ import {
 } from "@content-gen/core";
 import { grammar, t } from "@content-gen/grammar";
 import { markov, train, type MarkovModel } from "@content-gen/markov";
+import { generateName, type TranslatedName, type Culture } from "@content-gen/language";
 
 import { corpora, type CorpusName } from "./corpora.js";
 import {
@@ -34,6 +35,38 @@ import {
   titles,
   weapons,
 } from "./data.js";
+import {
+  dwarvish,
+  elvish,
+  orcish,
+  halfling,
+  draconic,
+  plantoid,
+  mycanoids,
+} from "./language/cultures.js";
+
+// ─── Culture mapping ─────────────────────────────────────────────────────
+
+function raceToCulture(race: Race): Culture {
+  switch (race) {
+    case "elf":
+      return elvish;
+    case "dwarf":
+      return dwarvish;
+    case "halfling":
+      return halfling;
+    case "orc":
+      return orcish;
+    case "dragonborn":
+      return draconic;
+    case "plantoid":
+      return plantoid;
+    case "mycanoid":
+      return mycanoids;
+    default:
+      return dwarvish; // placeholder for human
+  }
+}
 
 // ─── Markov-trained name generators ──────────────────────────────────────
 
@@ -57,82 +90,61 @@ const orcishModel = trainCorpus("orcish");
 const halflingModel = trainCorpus("halfling");
 const draconicModel = trainCorpus("draconic");
 
+/** @deprecated Use givenName generator which uses the language system. */
 export const elvenMaleName = markov(elvenMaleModel, { id: "fantasy.name.elven_male" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const elvenFemaleName = markov(elvenFemaleModel, { id: "fantasy.name.elven_female" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const dwarvenMaleName = markov(dwarvenMaleModel, { id: "fantasy.name.dwarven_male" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const dwarvenFemaleName = markov(dwarvenFemaleModel, { id: "fantasy.name.dwarven_female" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const humanMaleName = markov(humanMaleModel, { id: "fantasy.name.human_male" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const humanFemaleName = markov(humanFemaleModel, { id: "fantasy.name.human_female" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const orcishName = markov(orcishModel, { id: "fantasy.name.orcish" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const halflingName = markov(halflingModel, { id: "fantasy.name.halfling" });
+/** @deprecated Use givenName generator which uses the language system. */
 export const draconicName = markov(draconicModel, { id: "fantasy.name.draconic" });
 
 // ─── Race / sex ──────────────────────────────────────────────────────────
 
-export type Race = "human" | "elf" | "dwarf" | "halfling" | "orc" | "dragonborn";
+export type Race = "human" | "elf" | "dwarf" | "halfling" | "orc" | "dragonborn" | "plantoid" | "mycanoid";
 export type Sex = "male" | "female";
 
 export const race: Generator<Race> = weightedList<Race>(
-  { human: 50, elf: 15, dwarf: 15, halfling: 10, orc: 5, dragonborn: 5 },
+  { human: 50, elf: 15, dwarf: 15, halfling: 10, orc: 5, dragonborn: 5, plantoid: 2, mycanoid: 2 },
   { id: "fantasy.race" },
 );
 
 export const sex: Generator<Sex> = oneOf<Sex>("male", "female");
 
-// ─── Surname / given name keyed by race+sex ─────────────────────────────
+// ─── Name generators using language system ───────────────────────────────
 
-const surnameGrammar = grammar({
-  start: t`${"prefix"}${"suffix"}`,
-  prefix: ["Storm", "Wind", "Iron", "Stone", "Black", "Silver", "Gold", "Oak", "Ash",
-           "Wolf", "Bear", "Hawk", "Frost", "Fire", "Shadow", "Bright", "Grim", "Long"],
-  suffix: ["vale", "hold", "fang", "heart", "blade", "wood", "shield", "bane",
-           "song", "watch", "crest", "fall", "born", "thorn", "mane", "river"],
-}, { id: "fantasy.surname.compound" });
-
-const dwarvenSurname = grammar({
-  start: t`${"clan"}`,
-  clan: [
-    "Ironforge", "Stormhammer", "Battleborn", "Firebeard", "Steelshield",
-    "Goldhand", "Stonefoot", "Deepdelver", "Brewbringer", "Hammerfall",
-    "Oathkeeper", "Anvilbreaker", "Coalheart", "Boulderfist",
-  ],
-}, { id: "fantasy.surname.dwarven" });
-
-const elvenSurname = grammar({
-  start: t`${"prefix"}${"suffix"}`,
-  prefix: ["Aman", "Cael", "Eira", "Faer", "Galad", "Iril", "Larth", "Mor",
-           "Nael", "Quelen", "Sylvan", "Thal"],
-  suffix: ["dor", "ion", "iel", "ras", "wen", "lor", "thar", "vyr", "is", "ael"],
-}, { id: "fantasy.surname.elven" });
-
-export const surname: Generator<string> = pickOf(
-  { gen: surnameGrammar, weight: 6 },
-  { gen: dwarvenSurname, weight: 2 },
-  { gen: elvenSurname, weight: 2 },
-);
-
-function nameByRaceSex(r: Race, s: Sex): Generator<string> {
-  if (r === "elf") return s === "male" ? elvenMaleName : elvenFemaleName;
-  if (r === "dwarf") return s === "male" ? dwarvenMaleName : dwarvenFemaleName;
-  if (r === "halfling") return halflingName;
-  if (r === "orc") return orcishName;
-  if (r === "dragonborn") return draconicName;
-  return s === "male" ? humanMaleName : humanFemaleName;
-}
-
-export const givenName: Generator<string> = {
+export const givenName: Generator<TranslatedName> = {
   id: "fantasy.givenName",
   generate(ctx: Context) {
     const r = race.generate(ctx.child("race"));
-    const s = sex.generate(ctx.child("sex"));
-    return nameByRaceSex(r, s).generate(ctx.child("name"));
+    const culture = raceToCulture(r);
+    return generateName(culture, "given", ctx.child("name"));
+  },
+};
+
+export const surname: Generator<TranslatedName> = {
+  id: "fantasy.surname",
+  generate(ctx: Context) {
+    const r = race.generate(ctx.child("race"));
+    const culture = raceToCulture(r);
+    return generateName(culture, "surname", ctx.child("name"));
   },
 };
 
 export interface FullName {
-  given: string;
-  surname: string;
-  full: string;
+  given: TranslatedName;
+  surname: TranslatedName;
+  full: TranslatedName;
   race: Race;
   sex: Sex;
 }
@@ -142,74 +154,119 @@ export const fullName: Generator<FullName> = {
   generate(ctx: Context) {
     const r = race.generate(ctx.child("race"));
     const s = sex.generate(ctx.child("sex"));
-    const given = nameByRaceSex(r, s).generate(ctx.child("given"));
-    const sur = surname.generate(ctx.child("surname"));
-    return { given, surname: sur, full: `${given} ${sur}`, race: r, sex: s };
+    const givenTN = givenName.generate(ctx.child("given"));
+    const surnameTN = surname.generate(ctx.child("surname"));
+    const full: TranslatedName = {
+      form: `${givenTN.form} ${surnameTN.form}`,
+      translation: `${givenTN.translation} ${surnameTN.translation}`,
+      language: givenTN.language,
+      toString() {
+        return this.form;
+      },
+    };
+    return { given: givenTN, surname: surnameTN, full, race: r, sex: s };
   },
 };
 
 // ─── Place names ─────────────────────────────────────────────────────────
 
-const settlementName = grammar({
+/**
+ * Language-backed place name generators. These pick a random culture
+ * and generate a name using the language system.
+ */
+const allCultures: readonly Culture[] = [dwarvish, elvish, orcish, halfling, draconic];
+
+function generatePlaceName(
+  nameKind: "settlement" | "mountain" | "river" | "forest",
+  ctx: Context,
+): TranslatedName {
+  const culture = allCultures[ctx.rng.nextInt(0, allCultures.length - 1)]!;
+  // Fallback to "given" if the template doesn't exist
+  const templates = culture.templates[nameKind];
+  if (!templates || templates.length === 0) {
+    return generateName(culture, "given", ctx);
+  }
+  return generateName(culture, nameKind, ctx);
+}
+
+export const settlementName: Generator<TranslatedName> = {
+  id: "fantasy.place.settlement",
+  generate(ctx: Context) {
+    return generatePlaceName("settlement", ctx);
+  },
+};
+
+export const mountainName: Generator<TranslatedName> = {
+  id: "fantasy.place.mountain",
+  generate(ctx: Context) {
+    return generatePlaceName("mountain", ctx);
+  },
+};
+
+export const forestName: Generator<TranslatedName> = {
+  id: "fantasy.place.forest",
+  generate(ctx: Context) {
+    return generatePlaceName("forest", ctx);
+  },
+};
+
+export const riverName: Generator<TranslatedName> = {
+  id: "fantasy.place.river",
+  generate(ctx: Context) {
+    return generatePlaceName("river", ctx);
+  },
+};
+
+// Grammar-based place names (kept for variety)
+const grammarSettlementName = grammar({
   start: t`${"prefix"}${"suffix"}`,
   prefix: placePrefixes,
   suffix: placeSuffixes.settlement,
-}, { id: "fantasy.place.settlement" });
+}, { id: "fantasy.place.settlement.grammar" });
 
-const cityName = grammar({
+const grammarCityName = grammar({
   start: { "#prefix##suffix#": 4, "#prefix# of #realm#": 1, "Old #prefix##suffix#": 1 },
   prefix: placePrefixes,
   suffix: placeSuffixes.settlement,
   realm: ["the Vale", "the Mark", "the Wash", "the Reach", "the Sound"],
 }, { id: "fantasy.place.city" });
 
-const villageName = grammar({
+const grammarVillageName = grammar({
   start: t`${"prefix"}${"suffix"}`,
   prefix: ["Little", "High", "Low", "North", "South", "East", "West",
            "Old", "New", ...placePrefixes.slice(0, 10)],
   suffix: ["bridge", "field", "ford", "thorpe", "cross", "fen", "moor", "shire", "hollow"],
 }, { id: "fantasy.place.village" });
 
-const tavernName = grammar({
+export const cityName = grammarCityName;
+export const villageName = grammarVillageName;
+
+export const tavernName = grammar({
   start: { "The #adj.cap# #noun.cap#": 6, "The #adj.cap# #animal.cap#": 4, "The #animal.cap#'s #noun.cap#": 2 },
   adj: [...adjectives.rustic, ...adjectives.shiny, ...adjectives.natural],
   noun: tavernNouns,
   animal: animals.map((a) => a.toLowerCase()),
 }, { id: "fantasy.place.tavern" });
 
-const mountainName = grammar({
-  start: t`${"prefix"} ${"suffix"}`,
-  prefix: placePrefixes,
-  suffix: placeSuffixes.hill.map((s) => s[0]!.toUpperCase() + s.slice(1)),
-}, { id: "fantasy.place.mountain" });
-
-const forestName = grammar({
-  start: { "The #prefix# #suffix#": 3, "#prefix#wood": 2, "#name#'s #suffix#": 1 },
-  prefix: placePrefixes,
-  suffix: placeSuffixes.forest.map((s) => s[0]!.toUpperCase() + s.slice(1)),
-  name: ["Beren", "Erion", "Halas", "Niord", "Tar"],
-}, { id: "fantasy.place.forest" });
-
-const riverName = grammar({
-  start: t`The ${"prefix"}${"suffix"}`,
-  prefix: placePrefixes,
-  suffix: placeSuffixes.water,
-}, { id: "fantasy.place.river" });
-
-const landmarkName = pickOf<string>(
-  mountainName, forestName, riverName,
-);
+export const landmarkName: Generator<TranslatedName> = {
+  id: "fantasy.place.landmark",
+  generate(ctx: Context) {
+    return pickOf<TranslatedName>(
+      mountainName, forestName, riverName,
+    ).generate(ctx);
+  },
+};
 
 // ─── Factions, guilds, orders ────────────────────────────────────────────
 
-const factionName = grammar({
+export const factionName = grammar({
   start: { "The #type# of the #adj.cap# #thing.cap#": 4, "The #adj.cap# #type#": 3, "Order of the #adj.cap# #thing.cap#": 2 },
   type: factionTypes,
   adj: [...adjectives.noble, ...adjectives.mystical, ...adjectives.shiny],
   thing: [...animals, "Crown", "Sword", "Flame", "Star", "Moon", "Dawn", "Veil", "Path"],
 }, { id: "fantasy.faction" });
 
-const cultName = grammar({
+export const cultName = grammar({
   start: { "The #adj.cap# #shape.cap#": 5, "Children of #thing.cap#": 3, "The Cult of the #adj.cap# #thing.cap#": 2 },
   adj: adjectives.sinister,
   shape: ["Veil", "Maw", "Eye", "Hand", "Tooth", "Tongue"],
@@ -218,7 +275,7 @@ const cultName = grammar({
 
 // ─── Items ────────────────────────────────────────────────────────────────
 
-const weaponName = grammar({
+export const weaponName = grammar({
   start: { "#adj.cap# #weapon.cap#": 3, "#weapon.cap# of the #adj.cap# #target.cap#": 2, "#name.cap#'s #weapon.cap#": 1 },
   adj: [...adjectives.shiny, ...adjectives.mystical, "Whispering", "Singing", "Howling"],
   weapon: weapons,
@@ -226,7 +283,7 @@ const weaponName = grammar({
   name: ["Aragorn", "Bran", "Cassia", "Dorian", "Elara"],
 }, { id: "fantasy.item.weapon" });
 
-const armorName = grammar({
+export const armorName = grammar({
   start: t`${"adj.cap"} ${"piece.cap"}`,
   adj: [...adjectives.shiny, ...adjectives.mystical],
   piece: armorPieces,
@@ -234,17 +291,17 @@ const armorName = grammar({
 
 // ─── Epithets, titles ────────────────────────────────────────────────────
 
-const epithet = grammar({
+export const epithet = grammar({
   start: { "the #target.cap# #action#": 3, "the #adj#": 2, "#action# of the #target.cap#s": 1 },
   target: epithetTargets,
   action: epithetActions,
   adj: ["Bold", "Quiet", "Wise", "Cruel", "Lost", "Ironhearted", "Crooked", "Just"],
 }, { id: "fantasy.epithet" });
 
-const nobleTitle: Generator<string> = oneOf(...titles.noble);
-const martialTitle: Generator<string> = oneOf(...titles.martial);
-const arcaneTitle: Generator<string> = oneOf(...titles.arcane);
-const divineTitle: Generator<string> = oneOf(...titles.divine);
+export const nobleTitle: Generator<string> = oneOf(...titles.noble);
+export const martialTitle: Generator<string> = oneOf(...titles.martial);
+export const arcaneTitle: Generator<string> = oneOf(...titles.arcane);
+export const divineTitle: Generator<string> = oneOf(...titles.divine);
 
 // ─── Personality / NPC ───────────────────────────────────────────────────
 
@@ -311,7 +368,7 @@ export const settlement: Generator<Settlement> = {
       village: 6, town: 3, city: 1,
     }).generate(ctx.child("kind"));
     const nameGen =
-      kind === "city" ? cityName : kind === "town" ? settlementName : villageName;
+      kind === "city" ? grammarCityName : kind === "town" ? grammarSettlementName : grammarVillageName;
     const name = nameGen.generate(ctx.child("name"));
     const popRanges = { village: [40, 400], town: [400, 4000], city: [4000, 40000] } as const;
     const [lo, hi] = popRanges[kind];
@@ -331,7 +388,7 @@ export const settlement: Generator<Settlement> = {
 
 // ─── Quest hooks ─────────────────────────────────────────────────────────
 
-const questHook = grammar({
+export const questHook = grammar({
   start: t`${"open"} ${"subject"}, ${"comp"}.`,
   open: questHookOpenings,
   subject: questHookSubjects,
@@ -340,7 +397,7 @@ const questHook = grammar({
 
 // ─── Dragon ──────────────────────────────────────────────────────────────
 
-const dragon = grammar({
+export const dragon = grammar({
   start: t`${"adj"} the ${"color.cap"} ${"kind.cap"}`,
   adj: dragonAdjectives,
   color: dragonColors,
@@ -392,16 +449,16 @@ export const generators = {
 export interface FantasyAPI {
   npc: NPC;
   hero: NPC & { epithet: string; title: string };
-  name: { full: () => FullName; given: () => string; surname: () => string };
+  name: { full: () => FullName; given: () => TranslatedName; surname: () => TranslatedName };
   place: {
     settlement: () => Settlement;
     city: () => string;
     village: () => string;
     tavern: () => string;
-    mountain: () => string;
-    forest: () => string;
-    river: () => string;
-    landmark: () => string;
+    mountain: () => TranslatedName;
+    forest: () => TranslatedName;
+    river: () => TranslatedName;
+    landmark: () => TranslatedName;
   };
   faction: { order: () => string; cult: () => string };
   item: { weapon: () => string; armor: () => string };
@@ -453,3 +510,5 @@ export const fantasy: FantasyEntry = {
     };
   },
 };
+
+export * as language from "./language/index.js";
