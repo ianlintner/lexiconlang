@@ -1,47 +1,57 @@
-name: Release (manual)
-
-# Manual workflow for cutting a release once npm publishing is wired up.
-# Skipped by default — uncomment the npm publish step and add NPM_TOKEN to
-# repository secrets when you're ready to publish to the registry.
+name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: "git tag to release (e.g. v0.1.0)"
-        required: true
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
+    name: Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
+      id-token: write
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.inputs.tag }}
+          fetch-depth: 0
 
-      - uses: pnpm/action-setup@v6
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
         with:
-          version: 10
+          version: 10.29.3
 
-      - uses: actions/setup-node@v6
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: pnpm
-          registry-url: "https://registry.npmjs.org"
+          node-version: "20"
+          cache: "pnpm"
 
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm typecheck
-      - run: pnpm build
-      - run: pnpm test
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      # Uncomment when ready to publish.
-      # - run: pnpm -r --filter='./packages/*' publish --access public --no-git-checks
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - uses: softprops/action-gh-release@v2
+      - name: Create Release Pull Request or Publish
+        id: changesets
+        uses: changesets/action@v1
         with:
-          tag_name: ${{ github.event.inputs.tag }}
-          generate_release_notes: true
+          publish: pnpm release
+          title: "chore: release packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VERSION=$(jq -r '.version' package.json)
+          gh release create v$VERSION \
+            --title "v$VERSION" \
+            --notes "Release of lexicon-conlang v$VERSION" \
+            --generate-notes

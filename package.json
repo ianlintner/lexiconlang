@@ -28,9 +28,14 @@
     "test:watch": "vitest",
     "typecheck": "tsc -b",
     "samples": "vitest run tests/sample-output.test.ts",
-    "clean": "pnpm -r --filter='./packages/*' exec rm -rf dist tsconfig.tsbuildinfo"
+    "clean": "pnpm -r --filter='./packages/*' exec rm -rf dist tsconfig.tsbuildinfo",
+    "changeset:add": "changeset add",
+    "changeset:version": "changeset version",
+    "changeset:publish": "pnpm build && changeset publish",
+    "release": "pnpm changeset:version && pnpm changeset:publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.5",
     "@types/node": "^25.6.2",
     "typescript": "^6.0.3",
     "vite": "^8.0.11",
