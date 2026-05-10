@@ -108,8 +108,8 @@ console.log(plantoidName.generate(ctx.child("plantoid:1")).form);
 ### 4. Compose your own
 
 ```ts
-import { compose, oneOf, intRange } from "@content-gen/core";
-import { fullName } from "@content-gen/fantasy";
+import { compose, oneOf, intRange } from "@lexicon/core";
+import { fullName } from "@lexicon/fantasy";
 
 const knight = compose<{ name: string; rank: string; years: number }>({
   id: "app.knight",
@@ -127,7 +127,7 @@ const gerald = knight.generate(world.child("knight:gerald"));
 ### 5. Write your own grammar
 
 ```ts
-import { grammar, t } from "@content-gen/grammar";
+import { grammar, t } from "@lexicon/grammar";
 
 const spell = grammar({
   start: t`${"prefix.cap"} ${"element.cap"} ${"form.cap"}`,
@@ -143,7 +143,7 @@ JSON form is equivalent — both compile to the same AST. Modifiers (`cap`, `s`,
 ### 6. Train a Markov on your own corpus
 
 ```ts
-import { markov, train } from "@content-gen/markov";
+import { markov, train } from "@lexicon/markov";
 
 const model = train(["aberffraw", "betws", "caernarfon", /* ... */], {
   order: 3,
@@ -198,13 +198,13 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 
 | Package | Purpose |
 |---|---|
-| [`@content-gen/core`](packages/core) | sfc32 RNG with deterministic string-fork, `Context` tree, `Generator`, composition primitives (`compose`, `oneOf`, `pickOf`, `repeat`, `weightedList`, `map`, `chain`), alias-method sampling, `Registry` |
-| [`@content-gen/grammar`](packages/grammar) | Tracery-compatible JSON grammars + TS tagged-template DSL (`t\`...\``); 16 builtin modifiers; plugin-namespace symbol refs (e.g. `#markov:elven#`) |
-| [`@content-gen/markov`](packages/markov) | Character-level Markov n-gram trainer + sampler; backoff smoothing; `rejectSubstringsOfLength` for verbatim-rejection; JSON model format |
-| [`@content-gen/fantasy`](packages/fantasy) | Genre pack: 9 race-aware Markov name generators, NPCs, settlements, taverns, factions, cults, weapons, armor, dragons, quest hooks (~35 generators) |
-| [`@content-gen/scifi`](packages/scifi) | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators) |
-| [`@content-gen/modern`](packages/modern) | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators) |
-| [`@content-gen/cli`](packages/cli) | `content-gen` command-line tool — `build-markov`, `scaffold-pack` |
+| [`@lexicon/core`](packages/core) | sfc32 RNG with deterministic string-fork, `Context` tree, `Generator`, composition primitives (`compose`, `oneOf`, `pickOf`, `repeat`, `weightedList`, `map`, `chain`), alias-method sampling, `Registry` |
+| [`@lexicon/grammar`](packages/grammar) | Tracery-compatible JSON grammars + TS tagged-template DSL (`t\`...\``); 16 builtin modifiers; plugin-namespace symbol refs (e.g. `#markov:elven#`) |
+| [`@lexicon/markov`](packages/markov) | Character-level Markov n-gram trainer + sampler; backoff smoothing; `rejectSubstringsOfLength` for verbatim-rejection; JSON model format |
+| [`@lexicon/fantasy`](packages/fantasy) | Genre pack: 9 race-aware Markov name generators, NPCs, settlements, taverns, factions, cults, weapons, armor, dragons, quest hooks (~35 generators) |
+| [`@lexicon/scifi`](packages/scifi) | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators) |
+| [`@lexicon/modern`](packages/modern) | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators) |
+| [`@lexicon/cli`](packages/cli) | `content-gen` command-line tool — `build-markov`, `scaffold-pack` |
 
 All packages ESM-only, `sideEffects: false`, no native deps.
 
@@ -235,7 +235,7 @@ pnpm --filter examples all
 
 ## CLI
 
-The `@content-gen/cli` package installs a `content-gen` binary:
+The `@lexicon/cli` package installs a `content-gen` binary:
 
 ```bash
 # Train a Markov model from a corpus and save the precomputed table.
@@ -270,8 +270,8 @@ CI runs typecheck + build + test on Node 20 and 22, plus a CLI smoke test, and u
 ## Roadmap
 
 - **v0.1** *(current)* — deterministic core, grammar, Markov, fantasy/scifi/modern packs, CLI.
-- **v0.2** — `@content-gen/phonology`: phoneme/syllable language system. Per-culture phonotactics; a fictional language has consistent words for "iron" and "mountain", so `placeName(["iron","mountain.gen"])` yields `"Khorum-tha"` and the player can be told what it means. Translation as a free byproduct.
-- **v0.3** — `@content-gen/llm`: bake-out CLI (recipe + Zod schema → validated weighted-list JSON) + live `AsyncGenerator` with content-addressed cache (`hash(prompt, scope, seed, model)`). Cache is shippable — play through your game once, commit the cache, ship a fully deterministic offline build.
+- **v0.2** — `@lexicon/phonology`: phoneme/syllable language system. Per-culture phonotactics; a fictional language has consistent words for "iron" and "mountain", so `placeName(["iron","mountain.gen"])` yields `"Khorum-tha"` and the player can be told what it means. Translation as a free byproduct.
+- **v0.3** — `@lexicon/llm`: bake-out CLI (recipe + Zod schema → validated weighted-list JSON) + live `AsyncGenerator` with content-addressed cache (`hash(prompt, scope, seed, model)`). Cache is shippable — play through your game once, commit the cache, ship a fully deterministic offline build.
 - **v0.4+** — modern pack expansion, web playground/authoring tools, additional packs (cyberpunk, post-apoc, historical).
 
 ---
