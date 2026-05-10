@@ -23,3 +23,10 @@ export interface CanvasInstruction {
   type: "moveTo" | "lineTo" | "arc" | "rect" | "stroke" | "fill" | "beginPath" | "closePath";
   params: number[];
 }
+
+export interface RenderParams {
+  size?: number;        // default 32
+  strokeWidth?: number; // default 2
+  palette?: string[];   // default ["#000000"]
+  fallback?: string;    // unused in SVG renderer
+}

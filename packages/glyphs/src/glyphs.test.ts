@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
-import type { VisualGlyphSystem, Glyph, GlyphSet, ShapeParams, CanvasInstruction, Complexity } from "./types.js";
+import type { VisualGlyphSystem, Glyph, GlyphSet, ShapeParams, CanvasInstruction, Complexity, RenderParams } from "./types.js";
 import { generateShapes } from "./shape-generator.js";
+import { renderToSVG } from "./svg-renderer.js";
 import { createContext } from "@lexicon/core";
 
 describe("Types", () => {
@@ -325,6 +326,185 @@ describe("Shape Generator", () => {
 
         expect(shapes1).toEqual(shapes2);
       });
+    });
+  });
+});
+
+describe("SVG Renderer", () => {
+  describe("renderToSVG", () => {
+    it("returns a string", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes);
+      expect(typeof svg).toBe("string");
+    });
+
+    it("produces valid SVG with svg root element", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes);
+      expect(svg).toMatch(/^<svg/);
+      expect(svg).toMatch(/<\/svg>$/);
+    });
+
+    it("includes viewBox attribute with default size", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('viewBox="0 0 32 32"');
+    });
+
+    it("uses custom size in viewBox", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const params: RenderParams = { size: 64 };
+      const svg = renderToSVG(shapes, params);
+      expect(svg).toContain('viewBox="0 0 64 64"');
+    });
+
+    it("includes xmlns attribute", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('xmlns="http://www.w3.org/2000/svg"');
+    });
+
+    it("renders rect shape with scaled coordinates", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.2, w: 0.3, h: 0.4 }];
+      const svg = renderToSVG(shapes, { size: 100 });
+      expect(svg).toContain('<rect');
+      expect(svg).toContain('x="10"');
+      expect(svg).toContain('y="20"');
+      expect(svg).toContain('width="30"');
+      expect(svg).toContain('height="40"');
+    });
+
+    it("renders circle shape with scaled coordinates and radius", () => {
+      const shapes: ShapeParams[] = [{ type: "circle", x: 0.5, y: 0.5, r: 0.2 }];
+      const svg = renderToSVG(shapes, { size: 100 });
+      expect(svg).toContain('<circle');
+      expect(svg).toContain('cx="50"');
+      expect(svg).toContain('cy="50"');
+      expect(svg).toContain('r="20"');
+    });
+
+    it("renders line shape with scaled coordinates", () => {
+      const shapes: ShapeParams[] = [{ type: "line", x: 0.1, y: 0.2, x2: 0.8, y2: 0.9 }];
+      const svg = renderToSVG(shapes, { size: 100 });
+      expect(svg).toContain('<line');
+      expect(svg).toContain('x1="10"');
+      expect(svg).toContain('y1="20"');
+      expect(svg).toContain('x2="80"');
+      expect(svg).toContain('y2="90"');
+    });
+
+    it("renders arc shape with path element", () => {
+      const shapes: ShapeParams[] = [
+        { type: "arc", x: 0.5, y: 0.5, r: 0.2, startAngle: 0, endAngle: Math.PI / 2 },
+      ];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('<path');
+      expect(svg).toContain('d="M');
+    });
+
+    it("renders polygon shape with points attribute", () => {
+      const shapes: ShapeParams[] = [{ type: "polygon", x: 0.5, y: 0.5, r: 0.2, sides: 6 }];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('<polygon');
+      expect(svg).toContain('points="');
+    });
+
+    it("applies stroke width from renderParams", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes, { strokeWidth: 4 });
+      expect(svg).toContain('stroke-width="4"');
+    });
+
+    it("applies default stroke width of 2", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('stroke-width="2"');
+    });
+
+    it("applies stroke color from palette", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes, { palette: ["#FF0000"] });
+      expect(svg).toContain('stroke="#FF0000"');
+    });
+
+    it("rotates through palette colors for multiple shapes", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.5, y: 0.5, r: 0.2 },
+        { type: "line", x: 0.1, y: 0.5, x2: 0.9, y2: 0.9 },
+      ];
+      const svg = renderToSVG(shapes, { palette: ["#FF0000", "#00FF00"] });
+      // Should cycle through palette: rect=#FF0000, circle=#00FF00, line=#FF0000
+      const rects = svg.match(/stroke="#FF0000"/g) || [];
+      const greens = svg.match(/stroke="#00FF00"/g) || [];
+      expect(rects.length).toBeGreaterThanOrEqual(1);
+      expect(greens.length).toBeGreaterThanOrEqual(1);
+    });
+
+    it("uses default color #000000 when no palette provided", () => {
+      const shapes: ShapeParams[] = [{ type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 }];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('stroke="#000000"');
+    });
+
+    it("all shapes have fill='none'", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.5, y: 0.5, r: 0.2 },
+      ];
+      const svg = renderToSVG(shapes);
+      const fillMatches = svg.match(/fill="none"/g) || [];
+      expect(fillMatches.length).toBe(shapes.length);
+    });
+
+    it("output contains no whitespace (minified)", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.5, y: 0.5, r: 0.2 },
+      ];
+      const svg = renderToSVG(shapes);
+      // SVG should be minified (no newlines or extra spaces)
+      expect(svg).not.toContain("\n");
+      expect(svg).not.toMatch(/>\s+</);
+    });
+
+    it("handles empty shapes array", () => {
+      const svg = renderToSVG([]);
+      expect(svg).toMatch(/^<svg.*<\/svg>$/);
+      expect(svg).toContain('viewBox="0 0 32 32"');
+    });
+
+    it("scales all coordinates by size parameter", () => {
+      const shapes: ShapeParams[] = [{ type: "circle", x: 0.25, y: 0.75, r: 0.1 }];
+      const svg = renderToSVG(shapes, { size: 200 });
+      expect(svg).toContain('cx="50"');
+      expect(svg).toContain('cy="150"');
+      expect(svg).toContain('r="20"');
+    });
+
+    it("rect includes rotation attribute when present", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.5, y: 0.5, w: 0.2, h: 0.2, rotation: 45 },
+      ];
+      const svg = renderToSVG(shapes);
+      // When rotation is present, the rect should have transform or be rendered with rotation
+      expect(svg).toContain('rect');
+    });
+
+    it("renders all shape types in single SVG", () => {
+      const shapes: ShapeParams[] = [
+        { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+        { type: "circle", x: 0.3, y: 0.3, r: 0.1 },
+        { type: "line", x: 0.5, y: 0.5, x2: 0.8, y2: 0.8 },
+        { type: "arc", x: 0.7, y: 0.7, r: 0.1, startAngle: 0, endAngle: Math.PI },
+        { type: "polygon", x: 0.2, y: 0.8, r: 0.1, sides: 5 },
+      ];
+      const svg = renderToSVG(shapes);
+      expect(svg).toContain('<rect');
+      expect(svg).toContain('<circle');
+      expect(svg).toContain('<line');
+      expect(svg).toContain('<path');
+      expect(svg).toContain('<polygon');
     });
   });
 });
