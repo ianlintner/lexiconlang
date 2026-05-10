@@ -41,6 +41,8 @@ import {
   orcish,
   halfling,
   draconic,
+  plantoid,
+  mycanoids,
 } from "./language/cultures.js";
 
 // ─── Culture mapping ─────────────────────────────────────────────────────
@@ -57,6 +59,10 @@ function raceToCulture(race: Race): Culture {
       return orcish;
     case "dragonborn":
       return draconic;
+    case "plantoid":
+      return plantoid;
+    case "mycanoid":
+      return mycanoids;
     default:
       return dwarvish; // placeholder for human
   }
@@ -105,11 +111,11 @@ export const draconicName = markov(draconicModel, { id: "fantasy.name.draconic" 
 
 // ─── Race / sex ──────────────────────────────────────────────────────────
 
-export type Race = "human" | "elf" | "dwarf" | "halfling" | "orc" | "dragonborn";
+export type Race = "human" | "elf" | "dwarf" | "halfling" | "orc" | "dragonborn" | "plantoid" | "mycanoid";
 export type Sex = "male" | "female";
 
 export const race: Generator<Race> = weightedList<Race>(
-  { human: 50, elf: 15, dwarf: 15, halfling: 10, orc: 5, dragonborn: 5 },
+  { human: 50, elf: 15, dwarf: 15, halfling: 10, orc: 5, dragonborn: 5, plantoid: 2, mycanoid: 2 },
   { id: "fantasy.race" },
 );
 

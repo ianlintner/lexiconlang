@@ -12,7 +12,7 @@ import {
 import { grammar, t } from "@content-gen/grammar";
 import { markov, train } from "@content-gen/markov";
 import { generateName, type TranslatedName } from "@content-gen/language";
-import { humanoid, insectoid, aquatic, synth } from "./language/cultures.js";
+import { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
 
 // ─── Corpora for alien-sounding names (deprecated) ──────────────────────
 
@@ -68,6 +68,41 @@ export const synthName: Generator<TranslatedName> = {
   id: "scifi.synthName",
   generate(ctx: Context) {
     return generateName(synth, "given", ctx);
+  },
+};
+
+export const birdpeopleName: Generator<TranslatedName> = {
+  id: "scifi.birdpeopleName",
+  generate(ctx: Context) {
+    return generateName(birdpeople, "given", ctx);
+  },
+};
+
+export const rockpeopleName: Generator<TranslatedName> = {
+  id: "scifi.rockpeopleName",
+  generate(ctx: Context) {
+    return generateName(rockpeople, "given", ctx);
+  },
+};
+
+export const mycoidName: Generator<TranslatedName> = {
+  id: "scifi.mycoidName",
+  generate(ctx: Context) {
+    return generateName(mycoids, "given", ctx);
+  },
+};
+
+export const mammalianName: Generator<TranslatedName> = {
+  id: "scifi.mammalianName",
+  generate(ctx: Context) {
+    return generateName(mammalian, "given", ctx);
+  },
+};
+
+export const plantoidName: Generator<TranslatedName> = {
+  id: "scifi.plantoidName",
+  generate(ctx: Context) {
+    return generateName(plantoid, "given", ctx);
   },
 };
 

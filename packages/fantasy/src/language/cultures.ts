@@ -128,7 +128,7 @@ export const orcish: Culture = {
         {
           kind: "compose",
           parts: [
-            { pick: "noun", tag: "blood" },
+            { pick: "noun", tag: "war" },
             { pick: "noun", tag: "strength" },
           ],
           sep: "",
@@ -201,6 +201,80 @@ export const draconic: Culture = {
           parts: [
             { pick: "noun", tag: "power" },
             { pick: "adjective", tag: "eternal" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+};
+
+export const plantoid: Culture = {
+  id: "fantasy.plantoid",
+  glyphs: {
+    ...archetypes.flowing,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, fantasyIndustrial],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "nature", capitalize: true },
+            { pick: "verb", tag: "life" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "nature", capitalize: true },
+            { pick: "noun", tag: "nature" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+};
+
+export const mycanoids: Culture = {
+  id: "fantasy.mycanoids",
+  glyphs: {
+    ...archetypes.flowing,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, fantasyIndustrial],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "fungal", capitalize: true },
+            { pick: "noun", tag: "cycle" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "fungal", capitalize: true },
+            { pick: "adjective", tag: "fungal" },
           ],
           sep: "",
         },
