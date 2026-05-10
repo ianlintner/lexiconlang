@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import type { VisualGlyphSystem, Glyph, GlyphSet, ShapeParams, CanvasInstruction, Complexity, RenderParams } from "./types.js";
 import { generateShapes } from "./shape-generator.js";
 import { renderToSVG } from "./svg-renderer.js";
+import { renderToUnicode } from "./unicode-renderer.js";
 import { createContext } from "@lexicon/core";
 
 describe("Types", () => {
@@ -505,6 +506,127 @@ describe("SVG Renderer", () => {
       expect(svg).toContain('<line');
       expect(svg).toContain('<path');
       expect(svg).toContain('<polygon');
+    });
+  });
+});
+
+describe("Unicode Renderer", () => {
+  describe("renderToUnicode", () => {
+    describe("Predefined mappings", () => {
+      it("maps 'strong' to 💪", () => {
+        const result = renderToUnicode("strong");
+        expect(result).toBe("💪");
+      });
+
+      it("maps 'anvil' to ⚒", () => {
+        const result = renderToUnicode("anvil");
+        expect(result).toBe("⚒");
+      });
+
+      it("maps 'gem' to 💎", () => {
+        const result = renderToUnicode("gem");
+        expect(result).toBe("💎");
+      });
+
+      it("maps 'mountain' to ⛰", () => {
+        const result = renderToUnicode("mountain");
+        expect(result).toBe("⛰");
+      });
+
+      it("maps 'fire' to 🔥", () => {
+        const result = renderToUnicode("fire");
+        expect(result).toBe("🔥");
+      });
+
+      it("maps 'water' to 💧", () => {
+        const result = renderToUnicode("water");
+        expect(result).toBe("💧");
+      });
+
+      it("maps 'stone' to 🪨", () => {
+        const result = renderToUnicode("stone");
+        expect(result).toBe("🪨");
+      });
+
+      it("maps 'metal' to ⚙", () => {
+        const result = renderToUnicode("metal");
+        expect(result).toBe("⚙");
+      });
+
+      it("maps 'sky' to ☁", () => {
+        const result = renderToUnicode("sky");
+        expect(result).toBe("☁");
+      });
+
+      it("maps 'tree' to 🌳", () => {
+        const result = renderToUnicode("tree");
+        expect(result).toBe("🌳");
+      });
+
+      it("maps 'star' to ⭐", () => {
+        const result = renderToUnicode("star");
+        expect(result).toBe("⭐");
+      });
+
+      it("maps 'moon' to 🌙", () => {
+        const result = renderToUnicode("moon");
+        expect(result).toBe("🌙");
+      });
+    });
+
+    describe("Custom mappings", () => {
+      it("allows custom mappings to override defaults", () => {
+        const result = renderToUnicode("strong", { mappings: { strong: "🦾" } });
+        expect(result).toBe("🦾");
+      });
+
+      it("falls back to predefined mapping if custom mapping not provided", () => {
+        const result = renderToUnicode("gem", { mappings: { stone: "🪨" } });
+        expect(result).toBe("💎");
+      });
+
+      it("supports multiple custom mappings", () => {
+        const config = { mappings: { strong: "🦾", fire: "🌡" } };
+        expect(renderToUnicode("strong", config)).toBe("🦾");
+        expect(renderToUnicode("fire", config)).toBe("🌡");
+      });
+    });
+
+    describe("Fallback behavior", () => {
+      it("returns default fallback '□' for unmapped meaning", () => {
+        const result = renderToUnicode("unmapped-meaning");
+        expect(result).toBe("□");
+      });
+
+      it("returns custom fallback for unmapped meaning", () => {
+        const result = renderToUnicode("unmapped", { fallback: "?" });
+        expect(result).toBe("?");
+      });
+
+      it("returns custom fallback even if custom mappings provided", () => {
+        const config = { mappings: { custom: "⚡" }, fallback: "❌" };
+        const result = renderToUnicode("unmapped", config);
+        expect(result).toBe("❌");
+      });
+
+      it("prefers custom mapping over fallback", () => {
+        const config = { mappings: { strong: "🦾" }, fallback: "?" };
+        const result = renderToUnicode("strong", config);
+        expect(result).toBe("🦾");
+      });
+    });
+
+    describe("Return type", () => {
+      it("always returns a string", () => {
+        expect(typeof renderToUnicode("strong")).toBe("string");
+        expect(typeof renderToUnicode("unmapped")).toBe("string");
+        expect(typeof renderToUnicode("fire", { fallback: "x" })).toBe("string");
+      });
+
+      it("returns a single character or character sequence", () => {
+        const result = renderToUnicode("strong");
+        expect(result.length).toBeGreaterThanOrEqual(1);
+      });
     });
   });
 });
