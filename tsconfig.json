@@ -5,6 +5,8 @@
     { "path": "./packages/core" },
     { "path": "./packages/grammar" },
     { "path": "./packages/markov" },
+    { "path": "./packages/glyphs" },
+    { "path": "./packages/language" },
     { "path": "./packages/fantasy" },
     { "path": "./packages/scifi" },
     { "path": "./packages/modern" },
