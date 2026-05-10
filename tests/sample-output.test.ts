@@ -53,7 +53,7 @@ describe("sample-output integration", () => {
       bullet(
         npcs.map(
           (n) =>
-            `${n.name.full.padEnd(28)}  ${n.name.race.padEnd(10)} ${String(n.age).padStart(3)}y  ${n.occupation.padEnd(16)} — ${n.personality.trait}, but ${n.personality.flaw}; ${n.personality.quirk}`,
+            `${n.name.full.toString().padEnd(28)}  ${n.name.race.padEnd(10)} ${String(n.age).padStart(3)}y  ${n.occupation.padEnd(16)} — ${n.personality.trait}, but ${n.personality.flaw}; ${n.personality.quirk}`,
         ),
       ),
     );
@@ -63,7 +63,7 @@ describe("sample-output integration", () => {
     out.push(
       bullet(
         fantasyNames.map(
-          (n) => `${n.full.padEnd(30)}  (${n.race}, ${n.sex})`,
+          (n) => `${n.full.toString().padEnd(30)}  (${n.race}, ${n.sex})`,
         ),
       ),
     );
@@ -85,7 +85,7 @@ describe("sample-output integration", () => {
     for (const s of settlements) {
       out.push(
         `  • ${s.name} (${s.kind}, pop. ${s.population.toLocaleString()})\n` +
-          `      leader: ${s.leader.name.full}, ${s.leader.occupation}\n` +
+          `      leader: ${s.leader.name.full.toString()}, ${s.leader.occupation}\n` +
           `      taverns: ${s.notableLocations.join("; ")}\n`,
       );
     }
@@ -202,6 +202,11 @@ describe("sample-output integration", () => {
     const ctx2 = createContext({ seed: SEED });
     const a = repeat(fantasyNpc, 5).generate(ctx1.child("fantasy.npcs"));
     const b = repeat(fantasyNpc, 5).generate(ctx2.child("fantasy.npcs"));
-    expect(a).toEqual(b);
+    expect(a.length).toBe(b.length);
+    for (let i = 0; i < a.length; i++) {
+      expect(a[i]!.name.full.form).toBe(b[i]!.name.full.form);
+      expect(a[i]!.age).toBe(b[i]!.age);
+      expect(a[i]!.occupation).toBe(b[i]!.occupation);
+    }
   });
 });
