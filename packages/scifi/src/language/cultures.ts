@@ -63,8 +63,8 @@ export const aquatic: Culture = {
         {
           kind: "compose",
           parts: [
-            { pick: "noun", tag: "water", capitalize: true },
-            { pick: "adjective", tag: "life" },
+            { pick: "noun", tag: "biology", capitalize: true },
+            { pick: "adjective", tag: "biology" },
           ],
           sep: "",
         },
