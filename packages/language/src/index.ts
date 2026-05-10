@@ -14,3 +14,4 @@ export type {
 export { constraintMatches } from "./glyphs.js";
 export { generateWord } from "./phonotactics.js";
 export { coreMeanings } from "./meanings.js";
+export { buildLexicon } from "./lexicon.js";
