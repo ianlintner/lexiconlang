@@ -200,12 +200,12 @@ export const scifiMeanings: MeaningPack = {
     { id: "sleek", class: "adjective", tags: ["quality", "design"], label: "sleek" },
     { id: "massive", class: "adjective", tags: ["quality", "size"], label: "massive" },
     { id: "compact", class: "adjective", tags: ["quality", "size"], label: "compact" },
-    { id: "volatile", class: "adjective", tags: ["quality", "danger"], label: "volatile" },
+    { id: "unstable", class: "adjective", tags: ["quality", "danger"], label: "unstable" },
     { id: "ancient", class: "adjective", tags: ["time", "old"], label: "ancient" },
     { id: "cutting-edge", class: "adjective", tags: ["quality", "advanced"], label: "cutting-edge" },
 
     // Sensory & Perception
-    { id: "scan", class: "noun", tags: ["perception", "technology"], label: "scan" },
+    { id: "scanner", class: "noun", tags: ["perception", "technology"], label: "scanner" },
     { id: "visual", class: "adjective", tags: ["perception", "sense"], label: "visual" },
     { id: "sonic", class: "adjective", tags: ["perception", "sense"], label: "sonic" },
     { id: "infrared", class: "adjective", tags: ["perception", "sense"], label: "infrared" },
@@ -309,7 +309,7 @@ export const scifiMeanings: MeaningPack = {
 
     // Environment & Atmosphere
     { id: "atmosphere", class: "noun", tags: ["environment", "air"], label: "atmosphere" },
-    { id: "pressure", class: "noun", tags: ["environment", "force"], label: "pressure" },
+    { id: "stress", class: "noun", tags: ["environment", "force"], label: "stress" },
     { id: "gravity", class: "noun", tags: ["physics", "force"], label: "gravity" },
     { id: "radiation", class: "noun", tags: ["energy", "danger"], label: "radiation" },
     { id: "thermal", class: "adjective", tags: ["energy", "heat"], label: "thermal" },
@@ -332,7 +332,7 @@ export const scifiMeanings: MeaningPack = {
     { id: "emotion", class: "noun", tags: ["mind", "feeling"], label: "emotion" },
     { id: "logic", class: "noun", tags: ["mind", "thought"], label: "logic" },
     { id: "reason", class: "verb", tags: ["mind", "action"], label: "reason" },
-    { id: "analyze", class: "verb", tags: ["mind", "action"], label: "analyze" },
+    { id: "examine", class: "verb", tags: ["mind", "action"], label: "examine" },
     { id: "interpret", class: "verb", tags: ["mind", "action"], label: "interpret" },
     { id: "understand", class: "verb", tags: ["mind", "knowledge"], label: "understand" },
 
@@ -352,7 +352,7 @@ export const scifiMeanings: MeaningPack = {
     { id: "heading", class: "noun", tags: ["movement", "direction"], label: "heading" },
     { id: "approach", class: "verb", tags: ["movement", "action"], label: "approach" },
     { id: "retreat", class: "verb", tags: ["movement", "action"], label: "retreat" },
-    { id: "station", class: "verb", tags: ["movement", "position"], label: "station" },
+    { id: "deploy", class: "verb", tags: ["movement", "position"], label: "deploy" },
 
     // Degradation & Decay
     { id: "corrosion", class: "noun", tags: ["danger", "decay"], label: "corrosion" },
@@ -366,7 +366,7 @@ export const scifiMeanings: MeaningPack = {
     { id: "bit", class: "noun", tags: ["technology", "information"], label: "bit" },
     { id: "buffer", class: "noun", tags: ["technology", "storage"], label: "buffer" },
     { id: "cache", class: "noun", tags: ["technology", "storage"], label: "cache" },
-    { id: "memory", class: "noun", tags: ["technology", "storage"], label: "memory" },
+    { id: "storage", class: "noun", tags: ["technology", "storage"], label: "storage" },
     { id: "processor", class: "noun", tags: ["technology", "computation"], label: "processor" },
     { id: "compute", class: "verb", tags: ["technology", "action"], label: "compute" },
     { id: "process", class: "verb", tags: ["technology", "action"], label: "process" },
