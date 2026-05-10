@@ -11,8 +11,10 @@ import {
 } from "@content-gen/core";
 import { grammar, t } from "@content-gen/grammar";
 import { markov, train } from "@content-gen/markov";
+import { generateName, type TranslatedName } from "@content-gen/language";
+import { humanoid, insectoid, aquatic, synth } from "./language/cultures.js";
 
-// ─── Corpora for alien-sounding names ────────────────────────────────────
+// ─── Corpora for alien-sounding names (deprecated) ──────────────────────
 
 const alienHumanoid = [
   "tharin", "velkar", "morath", "zelath", "oberon", "kael", "jovan",
@@ -32,9 +34,42 @@ const humanoidModel = train(alienHumanoid, { order: 3, minLength: 4, maxLength: 
 const insectoidModel = train(alienInsectoid, { order: 2, minLength: 4, maxLength: 8 });
 const aquaticModel = train(alienAquatic, { order: 3, minLength: 5, maxLength: 9 });
 
-export const humanoidName = markov(humanoidModel, { id: "scifi.alien.humanoid" });
-export const insectoidName = markov(insectoidModel, { id: "scifi.alien.insectoid" });
-export const aquaticName = markov(aquaticModel, { id: "scifi.alien.aquatic" });
+/** @deprecated Use `humanoidName` instead. This Markov-based generator will be removed in v0.3. */
+export const markovHumanoidName = markov(humanoidModel, { id: "scifi.alien.humanoid" });
+/** @deprecated Use `insectoidName` instead. This Markov-based generator will be removed in v0.3. */
+export const markovInsectoidName = markov(insectoidModel, { id: "scifi.alien.insectoid" });
+/** @deprecated Use `aquaticName` instead. This Markov-based generator will be removed in v0.3. */
+export const markovAquaticName = markov(aquaticModel, { id: "scifi.alien.aquatic" });
+
+// ─── Language-backed alien name generators ──────────────────────────────
+
+export const humanoidName: Generator<TranslatedName> = {
+  id: "scifi.humanoidName",
+  generate(ctx: Context) {
+    return generateName(humanoid, "given", ctx);
+  },
+};
+
+export const insectoidName: Generator<TranslatedName> = {
+  id: "scifi.insectoidName",
+  generate(ctx: Context) {
+    return generateName(insectoid, "given", ctx);
+  },
+};
+
+export const aquaticName: Generator<TranslatedName> = {
+  id: "scifi.aquaticName",
+  generate(ctx: Context) {
+    return generateName(aquatic, "given", ctx);
+  },
+};
+
+export const synthName: Generator<TranslatedName> = {
+  id: "scifi.synthName",
+  generate(ctx: Context) {
+    return generateName(synth, "given", ctx);
+  },
+};
 
 // ─── Star / planet names ──────────────────────────────────────────────────
 
@@ -154,11 +189,11 @@ const humanSurname = oneOf(
   "Ortiz", "Kovac", "Yamada", "Ortega",
 );
 
-function speciesName(sp: Species): Generator<string> {
+function speciesName(sp: Species): Generator<string | TranslatedName> {
   if (sp === "humanoid") return humanoidName;
   if (sp === "insectoid") return insectoidName;
   if (sp === "aquatic") return aquaticName;
-  if (sp === "synth") return synthDesignation;
+  if (sp === "synth") return synthName;
   return {
     id: "scifi.alien.human",
     generate(ctx) {
@@ -195,7 +230,9 @@ export const crewMember: Generator<CrewMember> = {
   id: "scifi.crewMember",
   generate(ctx: Context) {
     const sp = species.generate(ctx.child("species"));
-    const name = speciesName(sp).generate(ctx.child("name"));
+    const nameGen = speciesName(sp).generate(ctx.child("name"));
+    // Convert TranslatedName or string to string
+    const name = typeof nameGen === "string" ? nameGen : nameGen.form;
     const r = role.generate(ctx.child("role"));
     const c = callsign.generate(ctx.child("callsign"));
     const homeworld = planetName.generate(ctx.child("homeworld"));
@@ -270,9 +307,14 @@ export const generators = {
   humanoidName,
   insectoidName,
   aquaticName,
+  synthName,
   callsign,
   role,
   planetType,
+  // Deprecated generators (Markov-based)
+  markovHumanoidName,
+  markovInsectoidName,
+  markovAquaticName,
 } as const;
 
 export interface ScifiAPI {
