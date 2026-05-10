@@ -62,6 +62,9 @@ importers:
       '@content-gen/grammar':
         specifier: workspace:*
         version: link:../grammar
+      '@content-gen/language':
+        specifier: workspace:*
+        version: link:../language
       '@content-gen/markov':
         specifier: workspace:*
         version: link:../markov
@@ -78,6 +81,12 @@ importers:
         specifier: workspace:*
         version: link:../core
     devDependencies:
+      '@content-gen/fantasy':
+        specifier: workspace:*
+        version: link:../fantasy
+      '@content-gen/scifi':
+        specifier: workspace:*
+        version: link:../scifi
       typescript:
         specifier: ^5.0.0
         version: 5.9.3

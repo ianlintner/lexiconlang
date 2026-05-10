@@ -12,11 +12,11 @@
   },
   "files": ["dist"],
   "dependencies": {
-    "@content-gen/core": "workspace:*",
-    "@content-gen/fantasy": "workspace:*",
-    "@content-gen/scifi": "workspace:*"
+    "@content-gen/core": "workspace:*"
   },
   "devDependencies": {
+    "@content-gen/fantasy": "workspace:*",
+    "@content-gen/scifi": "workspace:*",
     "typescript": "^5.0.0",
     "vitest": "^1.0.0"
   },
