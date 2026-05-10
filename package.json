@@ -1,5 +1,5 @@
 {
-  "name": "lexicon",
+  "name": "lexicon-conlang",
   "version": "0.2.0",
   "private": true,
   "description": "Procedural constructed language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming",

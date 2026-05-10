@@ -32,7 +32,7 @@ Each culture has:
 
 **Result:** Names like `Drakaztum` (Strong-anvil), `Aelthelan` (Silver-stream), `Krazzivek` (Swarm-signal) — each name is both aesthetically coherent AND semantically meaningful.
 
-| | faker | Tracery | rot.js | **content-gen** |
+| | faker | Tracery | rot.js | **lexicon-conlang** |
 |---|---|---|---|---|
 | Weighted lists | ✓ | partial | partial | ✓ |
 | Context-free grammars | ✗ | ✓ | ✗ | ✓ (Tracery-compatible) |
