@@ -4,7 +4,7 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "paths": {
-      "@content-gen/core": ["../core/src/index.ts"]
+      "@lexicon/core": ["../core/src/index.ts"]
     }
   },
   "include": ["src/**/*"],

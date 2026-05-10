@@ -5,8 +5,8 @@
     "rootDir": "./src",
     "types": ["node"],
     "paths": {
-      "@content-gen/core": ["../core/src/index.ts"],
-      "@content-gen/markov": ["../markov/src/index.ts"]
+      "@lexicon/core": ["../core/src/index.ts"],
+      "@lexicon/markov": ["../markov/src/index.ts"]
     }
   },
   "include": ["src/**/*"],
