@@ -453,3 +453,5 @@ export const fantasy: FantasyEntry = {
     };
   },
 };
+
+export * as language from "./language/index.js";
