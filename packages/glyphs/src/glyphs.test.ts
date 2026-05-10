@@ -1197,7 +1197,7 @@ describe("glyphsFor", () => {
 
   describe("Context isolation", () => {
     it("does not modify the passed context", () => {
-      
+
       const name = {
         form: "Test",
         translation: "meaning",
@@ -1221,5 +1221,680 @@ describe("glyphsFor", () => {
 
       expect(ctx.scope).toEqual(scopeBefore);
     });
+  });
+});
+
+describe("Edge Cases", () => {
+  describe("Empty/null handling", () => {
+    it("handles empty translation with morpheme strategy", () => {
+      const name = {
+        form: "Test",
+        translation: "",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.empty-translation",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "empty-translation" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      // Empty string split by hyphen produces one empty string
+      expect(result.conceptual?.length).toBe(1);
+    });
+
+    it("handles single character name with phoneme strategy", () => {
+      const name = {
+        form: "A",
+        translation: "meaning",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.single-char",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "single-char" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.phonetic).toBeDefined();
+      expect(result.phonetic?.length).toBe(1);
+      expect(result.phonetic?.[0]?.svg).toBeDefined();
+    });
+
+    it("handles single morpheme with morpheme strategy", () => {
+      const name = {
+        form: "Strong",
+        translation: "powerful",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.single-morpheme",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "single-morpheme" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.length).toBe(1);
+      expect(result.conceptual?.[0]?.meaning).toBe("powerful");
+    });
+  });
+
+  describe("Boundary conditions", () => {
+    it("handles very long name (30+ characters) with phoneme strategy", () => {
+      const longName = "A".repeat(35);
+      const name = {
+        form: longName,
+        translation: "meaning",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.long-name",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "long-name" });
+      const result = glyphsFor(name, system, ctx);
+
+      // 35 chars / 2 = 17.5, so 18 glyphs
+      expect(result.phonetic).toBeDefined();
+      expect(result.phonetic?.length).toBe(18);
+    });
+
+    it("generates glyphs for all complexity levels", () => {
+      const complexities: Complexity[] = ["simple", "medium", "complex"];
+      const name = {
+        form: "Test",
+        translation: "meaning",
+        language: "test",
+      };
+
+      for (const complexity of complexities) {
+        const system: VisualGlyphSystem = {
+          id: `test.complexity.${complexity}`,
+          type: "alphabet",
+          renderFormat: "svg",
+          mappingStrategy: "phoneme",
+          generator: {
+            baseShapes: ["rect", "circle", "line"],
+            complexity,
+            symmetry: false,
+          },
+        };
+        const ctx = createContext({ seed: `complexity-${complexity}` });
+        const result = glyphsFor(name, system, ctx);
+
+        expect(result.phonetic).toBeDefined();
+        expect(result.phonetic?.length).toBeGreaterThan(0);
+        for (const glyph of result.phonetic || []) {
+          expect(glyph.svg).toBeDefined();
+        }
+      }
+    });
+
+    it("handles morpheme with multiple hyphens", () => {
+      const name = {
+        form: "Complex",
+        translation: "strong-anvil-fire",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.multi-morpheme",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "multi-morpheme" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.length).toBe(3);
+      expect(result.conceptual?.[0]?.meaning).toBe("strong");
+      expect(result.conceptual?.[1]?.meaning).toBe("anvil");
+      expect(result.conceptual?.[2]?.meaning).toBe("fire");
+    });
+  });
+});
+
+describe("Render format combinations", () => {
+  describe("SVG rendering variations", () => {
+    it("renders with custom colors for multiple glyphs", () => {
+      const name = {
+        form: "Test",
+        translation: "strong-fire",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.svg.colors",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+        renderParams: {
+          palette: ["#FF0000", "#00FF00", "#0000FF"],
+          strokeWidth: 3,
+          size: 48,
+        },
+      };
+      const ctx = createContext({ seed: "svg-colors" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.[0]?.svg).toContain("#FF0000");
+      expect(result.conceptual?.[1]?.svg).toContain("#00FF00");
+      expect(result.conceptual?.[0]?.svg).toContain('viewBox="0 0 48 48"');
+      expect(result.conceptual?.[0]?.svg).toContain('stroke-width="3"');
+    });
+
+    it("renders same name with different sizes produces different viewBox", () => {
+      const name = {
+        form: "Test",
+        translation: "meaning",
+        language: "test",
+      };
+
+      const system32: VisualGlyphSystem = {
+        id: "test.svg.size32",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+        renderParams: { size: 32 },
+      };
+
+      const system64: VisualGlyphSystem = {
+        id: "test.svg.size64",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+        renderParams: { size: 64 },
+      };
+
+      const ctx32 = createContext({ seed: "svg-size" });
+      const result32 = glyphsFor(name, system32, ctx32);
+
+      const ctx64 = createContext({ seed: "svg-size" });
+      const result64 = glyphsFor(name, system64, ctx64);
+
+      expect(result32.phonetic?.[0]?.svg).toContain('viewBox="0 0 32 32"');
+      expect(result64.phonetic?.[0]?.svg).toContain('viewBox="0 0 64 64"');
+    });
+  });
+
+  describe("Unicode rendering variations", () => {
+    it("renders with custom unicode mappings", () => {
+      const name = {
+        form: "Test",
+        translation: "strong-metal",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.unicode.custom",
+        type: "conceptual",
+        renderFormat: "unicode",
+        mappingStrategy: "morpheme",
+        unicodeMappings: {
+          strong: "🦾",
+          metal: "⚙",
+        },
+      };
+      const ctx = createContext({ seed: "unicode-custom" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual?.[0]?.unicode).toBe("🦾");
+      expect(result.conceptual?.[1]?.unicode).toBe("⚙");
+    });
+
+    it("uses fallback for unmapped unicode meanings", () => {
+      const name = {
+        form: "Test",
+        translation: "unmapped-concept",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.unicode.fallback",
+        type: "conceptual",
+        renderFormat: "unicode",
+        mappingStrategy: "morpheme",
+        unicodeMappings: { unmapped: "X" },
+        renderParams: { fallback: "?" },
+      };
+      const ctx = createContext({ seed: "unicode-fallback" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual?.[0]?.unicode).toBe("X");
+      expect(result.conceptual?.[1]?.unicode).toBe("?");
+    });
+  });
+
+  describe("Canvas rendering variations", () => {
+    it("produces valid canvas instruction sequences", () => {
+      const name = {
+        form: "Test",
+        translation: "meaning",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.canvas.valid",
+        type: "alphabet",
+        renderFormat: "canvas",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect", "circle", "line"],
+          complexity: "medium",
+          symmetry: false,
+        },
+        renderParams: { size: 100, strokeWidth: 2 },
+      };
+      const ctx = createContext({ seed: "canvas-valid" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.phonetic).toBeDefined();
+      for (const glyph of result.phonetic || []) {
+        expect(glyph.canvasInstructions).toBeDefined();
+        expect(Array.isArray(glyph.canvasInstructions)).toBe(true);
+
+        // Check for valid instruction types
+        for (const instr of glyph.canvasInstructions || []) {
+          expect(["moveTo", "lineTo", "arc", "rect", "stroke", "fill",
+                  "beginPath", "closePath", "save", "restore",
+                  "setStrokeStyle", "setLineWidth", "setFillStyle"]).toContain(instr.type);
+          expect(Array.isArray(instr.params)).toBe(true);
+        }
+      }
+    });
+  });
+
+  describe("All three formats on same name", () => {
+    it("can generate SVG, Unicode, and Canvas for same name", () => {
+      const name = {
+        form: "Test",
+        translation: "strong-fire",
+        language: "test",
+      };
+
+      const svgSystem: VisualGlyphSystem = {
+        id: "test.svg",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+        renderParams: { size: 32 },
+      };
+
+      const unicodeSystem: VisualGlyphSystem = {
+        id: "test.unicode",
+        type: "conceptual",
+        renderFormat: "unicode",
+        mappingStrategy: "morpheme",
+        unicodeMappings: { strong: "💪", fire: "🔥" },
+      };
+
+      const canvasSystem: VisualGlyphSystem = {
+        id: "test.canvas",
+        type: "conceptual",
+        renderFormat: "canvas",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+        renderParams: { size: 32 },
+      };
+
+      const ctxSvg = createContext({ seed: "multi-format" });
+      const resultSvg = glyphsFor(name, svgSystem, ctxSvg);
+
+      const ctxUnicode = createContext({ seed: "multi-format" });
+      const resultUnicode = glyphsFor(name, unicodeSystem, ctxUnicode);
+
+      const ctxCanvas = createContext({ seed: "multi-format" });
+      const resultCanvas = glyphsFor(name, canvasSystem, ctxCanvas);
+
+      expect(resultSvg.conceptual?.[0]?.svg).toBeDefined();
+      expect(resultUnicode.conceptual?.[0]?.unicode).toBe("💪");
+      expect(resultCanvas.conceptual?.[0]?.canvasInstructions).toBeDefined();
+    });
+  });
+});
+
+describe("Integration tests", () => {
+  describe("Fantasy culture systems", () => {
+    it("generates glyphs with dwarvish culture names", async () => {
+      // Import fantasy module to get dwarvish culture
+      const { language: fantasyLanguage } = await import("@lexicon/fantasy");
+      const { dwarvish } = fantasyLanguage;
+
+      const name = {
+        form: "Ironforge",
+        translation: "strong-metal",
+        language: "dwarvish",
+      };
+      const system: VisualGlyphSystem = {
+        id: "fantasy.dwarvish.glyphs",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect", "circle"],
+          complexity: "medium",
+          symmetry: false,
+        },
+        renderParams: { palette: ["#8B4513"] },
+      };
+      const ctx = createContext({ seed: "dwarvish-test" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.length).toBe(2);
+      expect(result.conceptual?.[0]?.meaning).toBe("strong");
+      expect(result.conceptual?.[1]?.meaning).toBe("metal");
+    });
+
+    it("generates glyphs with elvish culture names", async () => {
+      const { language: fantasyLanguage } = await import("@lexicon/fantasy");
+      const { elvish } = fantasyLanguage;
+
+      const name = {
+        form: "Silverwind",
+        translation: "light-nature",
+        language: "elvish",
+      };
+      const system: VisualGlyphSystem = {
+        id: "fantasy.elvish.glyphs",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["circle", "arc"],
+          complexity: "medium",
+          symmetry: true,
+        },
+        renderParams: { palette: ["#C0C0C0"] },
+      };
+      const ctx = createContext({ seed: "elvish-test" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.length).toBe(2);
+      expect(result.conceptual?.[0]?.meaning).toBe("light");
+      expect(result.conceptual?.[1]?.meaning).toBe("nature");
+    });
+  });
+
+  describe("SciFi culture systems", () => {
+    it("generates glyphs with humanoid culture names", async () => {
+      const { language: scifiLanguage } = await import("@lexicon/scifi");
+      const { humanoid } = scifiLanguage;
+
+      const name = {
+        form: "Nexus",
+        translation: "network-artificial",
+        language: "humanoid",
+      };
+      const system: VisualGlyphSystem = {
+        id: "scifi.humanoid.glyphs",
+        type: "conceptual",
+        renderFormat: "svg",
+        mappingStrategy: "morpheme",
+        generator: {
+          baseShapes: ["rect", "line"],
+          complexity: "complex",
+          symmetry: false,
+        },
+        renderParams: { palette: ["#00FF00"] },
+      };
+      const ctx = createContext({ seed: "humanoid-test" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.length).toBe(2);
+    });
+
+    it("generates glyphs with insectoid culture names", async () => {
+      const { language: scifiLanguage } = await import("@lexicon/scifi");
+      const { insectoid } = scifiLanguage;
+
+      const name = {
+        form: "Chitara",
+        translation: "collective-swarm",
+        language: "insectoid",
+      };
+      const system: VisualGlyphSystem = {
+        id: "scifi.insectoid.glyphs",
+        type: "conceptual",
+        renderFormat: "unicode",
+        mappingStrategy: "morpheme",
+        unicodeMappings: {
+          collective: "🐜",
+          swarm: "🐝",
+        },
+      };
+      const ctx = createContext({ seed: "insectoid-test" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.conceptual).toBeDefined();
+      expect(result.conceptual?.length).toBe(2);
+    });
+  });
+
+  describe("Different TranslatedName inputs", () => {
+    it("works with minimal TranslatedName", () => {
+      const name: TranslatedName = {
+        form: "X",
+        translation: "ex",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.minimal",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "holistic",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "minimal-name" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.holistic).toBeDefined();
+      expect(result.holistic?.id).toBe("g0");
+      expect(result.holistic?.svg).toBeDefined();
+    });
+
+    it("works with TranslatedName including toString method", () => {
+      const name = {
+        form: "Test",
+        translation: "meaning",
+        language: "test",
+        toString() {
+          return this.form;
+        },
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.with-tostring",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+      const ctx = createContext({ seed: "tostring-name" });
+      const result = glyphsFor(name, system, ctx);
+
+      expect(result.phonetic).toBeDefined();
+      expect(result.phonetic?.length).toBe(2);
+    });
+  });
+
+  describe("RNG isolation", () => {
+    it("glyph generation does not affect caller context state", () => {
+      const name = {
+        form: "Test",
+        translation: "meaning",
+        language: "test",
+      };
+      const system: VisualGlyphSystem = {
+        id: "test.rng-isolation",
+        type: "alphabet",
+        renderFormat: "svg",
+        mappingStrategy: "phoneme",
+        generator: {
+          baseShapes: ["rect"],
+          complexity: "simple",
+          symmetry: false,
+        },
+      };
+
+      const ctx = createContext({ seed: "rng-test" });
+      const scopeBefore = ctx.scope.length;
+
+      glyphsFor(name, system, ctx);
+
+      // Context's internal scope should not change
+      expect(ctx.scope.length).toBe(scopeBefore);
+
+      // Another call with same context should produce same results
+      const ctx2 = createContext({ seed: "rng-test" });
+      const result1 = glyphsFor(name, system, ctx.child("call1"));
+      const result2 = glyphsFor(name, system, ctx2.child("call1"));
+
+      expect(result1.phonetic).toEqual(result2.phonetic);
+    });
+  });
+});
+
+describe("Performance verification", () => {
+  it("generates 5 glyphs in reasonable time (<50ms)", () => {
+    const name = {
+      form: "GenerateTest",
+      translation: "quick-test",
+      language: "test",
+    };
+    const system: VisualGlyphSystem = {
+      id: "perf.five",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["rect", "circle"],
+        complexity: "medium",
+        symmetry: false,
+      },
+    };
+
+    const startTime = performance.now();
+    for (let i = 0; i < 5; i++) {
+      const ctx = createContext({ seed: `perf-five-${i}` });
+      glyphsFor(name, system, ctx);
+    }
+    const endTime = performance.now();
+    const elapsed = endTime - startTime;
+
+    expect(elapsed).toBeLessThan(50);
+  });
+
+  it("generates 20 glyphs in reasonable time (<200ms)", () => {
+    const name = {
+      form: "PerformanceTest",
+      translation: "speed-test",
+      language: "test",
+    };
+    const system: VisualGlyphSystem = {
+      id: "perf.twenty",
+      type: "conceptual",
+      renderFormat: "svg",
+      mappingStrategy: "morpheme",
+      generator: {
+        baseShapes: ["rect", "circle", "line"],
+        complexity: "complex",
+        symmetry: false,
+      },
+    };
+
+    const startTime = performance.now();
+    for (let i = 0; i < 20; i++) {
+      const ctx = createContext({ seed: `perf-twenty-${i}` });
+      glyphsFor(name, system, ctx);
+    }
+    const endTime = performance.now();
+    const elapsed = endTime - startTime;
+
+    expect(elapsed).toBeLessThan(200);
+  });
+
+  it("renders SVG for 5 glyphs in reasonable time (<50ms)", () => {
+    const shapes: ShapeParams[] = [
+      { type: "rect", x: 0.1, y: 0.1, w: 0.2, h: 0.2 },
+      { type: "circle", x: 0.3, y: 0.3, r: 0.1 },
+      { type: "line", x: 0.5, y: 0.5, x2: 0.8, y2: 0.8 },
+      { type: "arc", x: 0.7, y: 0.7, r: 0.1, startAngle: 0, endAngle: Math.PI },
+      { type: "polygon", x: 0.2, y: 0.8, r: 0.1, sides: 5 },
+    ];
+
+    const startTime = performance.now();
+    for (let i = 0; i < 5; i++) {
+      renderToSVG(shapes, { size: 64, strokeWidth: 2 });
+    }
+    const endTime = performance.now();
+    const elapsed = endTime - startTime;
+
+    expect(elapsed).toBeLessThan(50);
   });
 });
