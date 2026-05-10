@@ -1,4 +1,4 @@
-export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy } from "@lexicon/language";
+export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy, TranslatedName } from "@lexicon/language";
 
 // Glyphs-package-specific types:
 export type BaseShape = "rect" | "circle" | "line" | "arc" | "polygon";
@@ -21,7 +21,7 @@ export interface ShapeParams {
 
 export interface CanvasInstruction {
   type: "moveTo" | "lineTo" | "arc" | "rect" | "stroke" | "fill" | "beginPath" | "closePath" | "save" | "restore" | "setStrokeStyle" | "setLineWidth" | "setFillStyle";
-  params: (number | string)[];
+  params: Array<number | string>;
 }
 
 export interface RenderParams {

@@ -8,7 +8,7 @@ export interface Glyph {
   id: string;
   meaning?: string;
   svg?: string;
-  canvasInstructions?: Array<{ type: string; params: number[] }>;
+  canvasInstructions?: Array<{ type: string; params: Array<number | string> }>;
   unicode?: string;
 }
 
