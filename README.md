@@ -1,4 +1,7 @@
-# Lexicon
+# Lexicon · v0.2.0
+
+[![npm](https://img.shields.io/npm/v/lexicon-conlang)](https://www.npmjs.com/package/lexicon-conlang)
+[![CI](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml)
 
 **Procedural constructed-language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming.**
 
@@ -16,8 +19,6 @@ name.form;            // "Drakaztum Ironforge" (conlang string)
 name.translation;     // "Strong-anvil Iron-forge" (English morpheme meanings)
 name.toString();      // "Drakaztum Ironforge" (template-string compatible)
 ```
-
-[![CI](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml)
 
 ---
 
@@ -43,7 +44,14 @@ Each culture has:
 | Typed | partial | ✗ | partial | ✓ |
 | Tree-shakeable genre packs | ✗ | n/a | ✗ | ✓ |
 
-**v0.2 is shipping now** — full language system implementation with 9 culture presets.
+## ✨ What's New in v0.2
+
+- **Full language system**: Glyph systems, phonotactics, deterministic lexicon generation
+- **9 culture presets**: 5 fantasy (dwarvish, elvish, orcish, halfling, draconic) + 4 sci-fi (humanoid, insectoid, aquatic, synth) + extensible to custom cultures
+- **Morpheme-rich names**: Each name breaks down into semantic components with English translations
+- **Phonotactic archetypes**: Reusable templates for different language aesthetics (flowing, guttural, sibilant, clipped, resonant)
+- **Breaking change**: Name generators now return `TranslatedName` objects with `form`, `translation`, and `language` properties
+- **Determinism guarantees**: Seeded, order-independent, patch-stable lexicon generation
 
 ---
 

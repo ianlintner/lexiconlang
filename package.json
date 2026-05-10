@@ -1,8 +1,22 @@
 {
   "name": "lexicon-conlang",
   "version": "0.2.0",
-  "private": true,
+  "private": false,
   "description": "Procedural constructed language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming",
+  "keywords": ["conlang", "constructed-language", "procedural-generation", "names", "worldbuilding", "deterministic", "seeded-rng"],
+  "homepage": "https://github.com/ianlintner/content-gen#readme",
+  "bugs": {
+    "url": "https://github.com/ianlintner/content-gen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianlintner/content-gen.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ian Lintner",
+    "url": "https://github.com/ianlintner"
+  },
   "type": "module",
   "engines": {
     "node": ">=20"
