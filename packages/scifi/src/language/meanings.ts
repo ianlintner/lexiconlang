@@ -511,5 +511,40 @@ export const scifiMeanings: MeaningPack = {
     { id: "sprout", class: "verb", tags: ["nature", "growth"], label: "sprout" },
     { id: "vinelike", class: "adjective", tags: ["nature", "growth"], label: "vinelike" },
     { id: "verdant", class: "adjective", tags: ["nature", "life"], label: "verdant" },
+
+    // Reptilian (predator, cold, patient)
+    { id: "scale", class: "noun", tags: ["predator", "biology"], label: "scale" },
+    { id: "slither", class: "verb", tags: ["predator", "movement"], label: "slither" },
+    { id: "venom", class: "noun", tags: ["predator", "biology"], label: "venom" },
+    { id: "ambush", class: "verb", tags: ["predator", "action"], label: "ambush" },
+    { id: "patient", class: "adjective", tags: ["predator", "behavior"], label: "patient" },
+    { id: "cold-blooded", class: "adjective", tags: ["predator", "cold"], label: "cold-blooded" },
+    { id: "cold", class: "adjective", tags: ["predator", "cold"], label: "cold" },
+    { id: "serpentine", class: "adjective", tags: ["predator", "form"], label: "serpentine" },
+    { id: "coil", class: "noun", tags: ["predator", "form"], label: "coil" },
+    { id: "apex", class: "noun", tags: ["predator", "rank"], label: "apex" },
+
+    // Hivemind (distributed, consensus, network-identity)
+    { id: "consensus", class: "noun", tags: ["hivemind", "collective"], label: "consensus" },
+    { id: "broadcast", class: "verb", tags: ["hivemind", "communication"], label: "broadcast" },
+    { id: "distributed", class: "adjective", tags: ["hivemind", "structure"], label: "distributed" },
+    { id: "parallel", class: "adjective", tags: ["hivemind", "structure"], label: "parallel" },
+    { id: "index", class: "noun", tags: ["hivemind", "identity"], label: "index" },
+    { id: "shard", class: "noun", tags: ["hivemind", "identity"], label: "shard" },
+    { id: "replicate", class: "verb", tags: ["hivemind", "action"], label: "replicate" },
+    { id: "fork", class: "verb", tags: ["hivemind", "action"], label: "fork" },
+    { id: "join", class: "verb", tags: ["hivemind", "action"], label: "join" },
+
+    // Grayfolk (psionic, observer, ancient, enigmatic)
+    { id: "observer", class: "noun", tags: ["grayfolk", "role"], label: "observer" },
+    { id: "psionic", class: "adjective", tags: ["grayfolk", "mind"], label: "psionic" },
+    { id: "telepathy", class: "noun", tags: ["grayfolk", "mind"], label: "telepathy" },
+    { id: "watcher", class: "noun", tags: ["grayfolk", "role"], label: "watcher" },
+    { id: "enigma", class: "noun", tags: ["grayfolk", "mystery"], label: "enigma" },
+    { id: "silence", class: "noun", tags: ["grayfolk", "state"], label: "silence" },
+    { id: "orb", class: "noun", tags: ["grayfolk", "form"], label: "orb" },
+    { id: "lens", class: "noun", tags: ["grayfolk", "form"], label: "lens" },
+    { id: "unfathomable", class: "adjective", tags: ["grayfolk", "mystery"], label: "unfathomable" },
+    { id: "still", class: "adjective", tags: ["grayfolk", "state"], label: "still" },
   ],
 };
