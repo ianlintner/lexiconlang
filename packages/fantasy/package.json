@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/fantasy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Fantasy genre content pack for content-gen — races, names, places, factions",
   "type": "module",
   "main": "./dist/index.js",
@@ -11,7 +11,11 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "README.md"],
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsc -b",
