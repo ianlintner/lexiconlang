@@ -345,3 +345,195 @@ export const mycanoids: Culture = {
     ],
   },
 };
+
+export const celestial: Culture = {
+  id: "fantasy.celestial",
+  glyphs: {
+    ...archetypes.resonant,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, fantasyIndustrial],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "adjective", tag: "light", capitalize: true },
+            { pick: "noun", tag: "divine" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "celestial", capitalize: true },
+            { pick: "noun", tag: "grace" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    settlement: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "adjective", tag: "divine", capitalize: true },
+            { pick: "noun", tag: "structure" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  visualGlyphSystems: {
+    conceptual: {
+      id: "celestial.radiance",
+      type: "conceptual",
+      renderFormat: "unicode",
+      mappingStrategy: "morpheme",
+      unicodeMappings: {
+        light: "✨",
+        radiant: "✨",
+        bright: "✨",
+        dawn: "☀",
+        sunlight: "☀",
+        sun: "☀",
+        star: "🌟",
+        seraph: "🌟",
+        halo: "⚜",
+        crown: "⚜",
+        grace: "⚜",
+        wing: "🪶",
+        feather: "🪶",
+        sacred: "✝",
+        divine: "✝",
+        holy: "✝",
+        song: "🎵",
+        blessed: "🌙",
+        moon: "🌙",
+      },
+      renderParams: {
+        fallback: "◇",
+      },
+    },
+  },
+};
+
+export const fey: Culture = {
+  id: "fantasy.fey",
+  glyphs: {
+    ...archetypes.sibilant,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, fantasyIndustrial],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "adjective", tag: "fey", capitalize: true },
+            { pick: "noun", tag: "fey" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "nature", capitalize: true },
+            { pick: "noun", tag: "fey" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "fey.sylvan",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["arc", "line"],
+        complexity: "medium",
+        symmetry: false,
+        palette: ["#556B2F", "#9370DB"],
+      },
+      renderParams: {
+        size: 26,
+        strokeWidth: 1.5,
+      },
+    },
+  },
+};
+
+export const tiefling: Culture = {
+  id: "fantasy.tiefling",
+  glyphs: {
+    ...archetypes.guttural,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, fantasyIndustrial],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "adjective", tag: "fire", capitalize: true },
+            { pick: "noun", tag: "infernal" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "fire", capitalize: true },
+            { pick: "noun", tag: "contract" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "tiefling.infernal",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["polygon", "line"],
+        complexity: "complex",
+        symmetry: false,
+        palette: ["#8B0000", "#2F2F2F"],
+      },
+      renderParams: {
+        size: 28,
+        strokeWidth: 2,
+      },
+    },
+  },
+};
