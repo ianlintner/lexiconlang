@@ -141,5 +141,41 @@ export const fantasyIndustrial: MeaningPack = {
     { id: "fungal", class: "adjective", tags: ["fungal", "nature"], label: "fungal" },
     { id: "sentient", class: "adjective", tags: ["fungal", "mind"], label: "sentient" },
     { id: "ancient", class: "adjective", tags: ["fungal", "time"], label: "ancient" },
+
+    // Celestial / Aasimar (divine light, grace, sky)
+    { id: "radiant", class: "adjective", tags: ["light", "divine"], label: "radiant" },
+    { id: "dawn", class: "noun", tags: ["light", "celestial"], label: "dawn" },
+    { id: "halo", class: "noun", tags: ["light", "divine"], label: "halo" },
+    { id: "hallow", class: "verb", tags: ["divine", "blessing"], label: "hallow" },
+    { id: "seraph", class: "noun", tags: ["divine", "celestial"], label: "seraph" },
+    { id: "grace", class: "noun", tags: ["divine", "grace"], label: "grace" },
+    { id: "feather", class: "noun", tags: ["celestial", "sky"], label: "feather" },
+    { id: "wing", class: "noun", tags: ["celestial", "sky"], label: "wing" },
+    { id: "sacred", class: "adjective", tags: ["divine", "holy"], label: "sacred" },
+    { id: "sunlight", class: "noun", tags: ["light", "celestial"], label: "sunlight" },
+
+    // Fey / Sidhe (dream, mischief, nature-magic)
+    { id: "whisper", class: "noun", tags: ["fey", "sound"], label: "whisper" },
+    { id: "mist", class: "noun", tags: ["fey", "nature"], label: "mist" },
+    { id: "dream", class: "noun", tags: ["fey", "mind"], label: "dream" },
+    { id: "lullaby", class: "noun", tags: ["fey", "song"], label: "lullaby" },
+    { id: "glamour", class: "noun", tags: ["fey", "magic"], label: "glamour" },
+    { id: "hollow", class: "noun", tags: ["fey", "nature"], label: "hollow" },
+    { id: "briar", class: "noun", tags: ["fey", "nature"], label: "briar" },
+    { id: "sprite", class: "noun", tags: ["fey", "creature"], label: "sprite" },
+    { id: "elusive", class: "adjective", tags: ["fey", "behavior"], label: "elusive" },
+    { id: "cunning", class: "adjective", tags: ["fey", "behavior"], label: "cunning" },
+    { id: "wisp", class: "noun", tags: ["fey", "light"], label: "wisp" },
+    { id: "reverie", class: "noun", tags: ["fey", "mind"], label: "reverie" },
+
+    // Tiefling / Infernal (fire, oath, defiance)
+    { id: "ember", class: "noun", tags: ["fire", "infernal"], label: "ember" },
+    { id: "ash", class: "noun", tags: ["fire", "shadow"], label: "ash" },
+    { id: "cinder", class: "noun", tags: ["fire", "infernal"], label: "cinder" },
+    { id: "brimstone", class: "noun", tags: ["fire", "infernal"], label: "brimstone" },
+    { id: "defiant", class: "adjective", tags: ["infernal", "behavior"], label: "defiant" },
+    { id: "smolder", class: "verb", tags: ["fire", "infernal"], label: "smolder" },
+    { id: "sulfur", class: "noun", tags: ["infernal", "material"], label: "sulfur" },
+    { id: "sooth", class: "verb", tags: ["infernal", "magic"], label: "sooth" },
   ],
 };
