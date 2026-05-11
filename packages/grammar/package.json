@@ -1,5 +1,5 @@
 {
-  "name": "@lexicon/grammar",
+  "name": "@lexiconlang/grammar",
   "version": "0.1.0",
   "description": "Tracery-compatible grammar engine for content-gen, with TS tagged-template DSL",
   "type": "module",
@@ -18,6 +18,6 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@lexicon/core": "workspace:*"
+    "@lexiconlang/core": "workspace:*"
   }
 }

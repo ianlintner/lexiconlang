@@ -1,4 +1,4 @@
-import type { Context } from "@lexicon/core";
+import type { Context } from "@lexiconlang/core";
 import type { Culture, NameTemplate, TranslatedName, TemplatePart, WordClass } from "./types.js";
 import { buildLexicon } from "./lexicon.js";
 
@@ -77,7 +77,7 @@ function renderTemplate(
   }
 
   const form = forms.join(template.sep ?? "");
-  const translation = translations.join(template.sep ?? "-");
+  const translation = translations.join(template.transSep ?? "-");
 
   return { form, translation, parts };
 }

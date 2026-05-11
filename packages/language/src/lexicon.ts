@@ -1,4 +1,4 @@
-import type { Context } from "@lexicon/core";
+import type { Context } from "@lexiconlang/core";
 import type { Culture, Lexicon, WordClass } from "./types.js";
 import { generateWord } from "./phonotactics.js";
 

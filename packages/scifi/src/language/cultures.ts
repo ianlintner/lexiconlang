@@ -1,5 +1,5 @@
-import type { Culture, GlyphSystem } from "@lexicon/language";
-import { archetypes, coreMeanings } from "@lexicon/language";
+import type { Culture, GlyphSystem, VisualGlyphSystem } from "@lexiconlang/language";
+import { archetypes, coreMeanings } from "@lexiconlang/language";
 import { scifiMeanings } from "./meanings.js";
 
 export const humanoid: Culture = {
@@ -24,6 +24,24 @@ export const humanoid: Culture = {
       ],
     ],
   },
+  visualGlyphSystems: {
+    holistic: {
+      id: "humanoid.geometric",
+      type: "conceptual",
+      renderFormat: "canvas",
+      mappingStrategy: "holistic",
+      generator: {
+        baseShapes: ["rect", "circle", "polygon"],
+        complexity: "medium",
+        symmetry: true,
+        palette: ["#00BFFF", "#1E90FF"],
+      },
+      renderParams: {
+        size: 48,
+        strokeWidth: 3,
+      },
+    },
+  },
 };
 
 export const insectoid: Culture = {
@@ -47,6 +65,24 @@ export const insectoid: Culture = {
         1,
       ],
     ],
+  },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "insectoid.chitin",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["line", "arc", "polygon"],
+        complexity: "complex",
+        symmetry: false,
+        palette: ["#2F4F4F", "#696969"],
+      },
+      renderParams: {
+        size: 32,
+        strokeWidth: 1.5,
+      },
+    },
   },
 };
 

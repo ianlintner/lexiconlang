@@ -15,8 +15,8 @@ import {
   intRange,
   oneOf,
   weightedList,
-} from "@lexicon/core";
-import { fullName } from "@lexicon/fantasy";
+} from "@lexiconlang/core";
+import { fullName } from "@lexiconlang/fantasy";
 
 interface IronKnight {
   name: string;
@@ -56,7 +56,7 @@ const rank = weightedList<IronKnight["rank"]>(
 const ironKnight: Generator<IronKnight> = compose<IronKnight>({
   id: "ironknight",
   parts: {
-    name: (ctx) => fullName.generate(ctx).full,
+    name: (ctx) => String(fullName.generate(ctx).full),
     house,
     sword,
     motto,

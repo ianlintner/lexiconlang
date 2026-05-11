@@ -5,12 +5,12 @@
     "composite": false,
     "incremental": false,
     "paths": {
-      "@lexicon/core": ["../packages/core/src/index.ts"],
-      "@lexicon/grammar": ["../packages/grammar/src/index.ts"],
-      "@lexicon/markov": ["../packages/markov/src/index.ts"],
-      "@lexicon/fantasy": ["../packages/fantasy/src/index.ts"],
-      "@lexicon/scifi": ["../packages/scifi/src/index.ts"],
-      "@lexicon/modern": ["../packages/modern/src/index.ts"]
+      "@lexiconlang/core": ["../packages/core/src/index.ts"],
+      "@lexiconlang/grammar": ["../packages/grammar/src/index.ts"],
+      "@lexiconlang/markov": ["../packages/markov/src/index.ts"],
+      "@lexiconlang/fantasy": ["../packages/fantasy/src/index.ts"],
+      "@lexiconlang/scifi": ["../packages/scifi/src/index.ts"],
+      "@lexiconlang/modern": ["../packages/modern/src/index.ts"]
     }
   },
   "include": ["./**/*.ts"]

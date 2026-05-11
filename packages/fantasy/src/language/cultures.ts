@@ -1,5 +1,5 @@
-import type { Culture, GlyphSystem } from "@lexicon/language";
-import { archetypes, coreMeanings } from "@lexicon/language";
+import type { Culture, GlyphSystem, VisualGlyphSystem } from "@lexiconlang/language";
+import { archetypes, coreMeanings } from "@lexiconlang/language";
 import { fantasyIndustrial } from "./meanings.js";
 
 export const dwarvish: Culture = {
@@ -50,6 +50,24 @@ export const dwarvish: Culture = {
       ],
     ],
   },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "dwarvish.runes",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["rect", "line", "arc"],
+        complexity: "medium",
+        symmetry: false,
+        palette: ["#8B4513", "#D2691E"],
+      },
+      renderParams: {
+        size: 28,
+        strokeWidth: 2.5,
+      },
+    },
+  },
 };
 
 export const elvish: Culture = {
@@ -99,6 +117,50 @@ export const elvish: Culture = {
         1,
       ],
     ],
+  },
+  visualGlyphSystems: {
+    conceptual: {
+      id: "elvish.ideograms",
+      type: "conceptual",
+      renderFormat: "unicode",
+      mappingStrategy: "morpheme",
+      unicodeMappings: {
+        // Adjectives that lead elvish given names
+        wild: "🌿",
+        fierce: "⚡",
+        verdant: "🍃",
+        thorned: "🌵",
+        ancient: "📜",
+        // Nature nouns that appear as second morphemes
+        leaf: "🍃",
+        vine: "🌿",
+        bloom: "🌸",
+        blossom: "🌺",
+        root: "🪵",
+        seed: "🌱",
+        sprout: "🌱",
+        stem: "🌾",
+        plant: "🌱",
+        wildwood: "🌳",
+        forest: "🌳",
+        grove: "🌳",
+        // Celestial morphemes for surnames
+        moon: "🌙",
+        moonlight: "🌙",
+        star: "⭐",
+        starlight: "⭐",
+        sun: "☀",
+        sky: "☁",
+        silver: "🪙",
+        light: "✨",
+        wisdom: "🧠",
+        song: "🎵",
+        grace: "✨",
+      },
+      renderParams: {
+        fallback: "◆",
+      },
+    },
   },
 };
 

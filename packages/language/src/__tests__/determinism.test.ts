@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { createContext } from "@lexicon/core";
+import { createContext } from "@lexiconlang/core";
 import type { Culture } from "../types.js";
 import { buildLexicon } from "../lexicon.js";
-import * as fantasyModule from "@lexicon/fantasy";
-import * as scifiModule from "@lexicon/scifi";
+import * as fantasyModule from "@lexiconlang/fantasy";
+import * as scifiModule from "@lexiconlang/scifi";
 
 const { dwarvish, elvish, orcish, halfling, draconic } = fantasyModule.language;
 const { humanoid, insectoid, aquatic, synth } = scifiModule.language;

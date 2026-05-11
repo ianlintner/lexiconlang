@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { createContext } from "@lexicon/core";
+import { createContext } from "@lexiconlang/core";
 import type { GlyphSystem } from "../types.js";
 import { generateWord } from "../phonotactics.js";
 

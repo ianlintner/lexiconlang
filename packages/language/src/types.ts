@@ -1,4 +1,47 @@
-import type { Generator, Context } from "@lexicon/core";
+import type { Generator, Context } from "@lexiconlang/core";
+
+// Visual glyph types (avoids circular dependency)
+export type RenderFormat = "svg" | "unicode" | "canvas";
+export type MappingStrategy = "phoneme" | "morpheme" | "holistic";
+
+export interface Glyph {
+  id: string;
+  meaning?: string;
+  svg?: string;
+  canvasInstructions?: Array<{ type: string; params: Array<number | string> }>;
+  unicode?: string;
+}
+
+export interface GlyphSet {
+  phonetic?: Glyph[];
+  conceptual?: Glyph[];
+  holistic?: Glyph;
+}
+
+export interface VisualGlyphSystem {
+  id: string;
+  type: "alphabet" | "conceptual";
+  renderFormat: RenderFormat;
+  mappingStrategy: MappingStrategy;
+  generator?: {
+    baseShapes: Array<"rect" | "circle" | "line" | "arc" | "polygon">;
+    complexity: "simple" | "medium" | "complex";
+    symmetry: boolean;
+    palette?: string[];
+  };
+  templates?: Array<{
+    id: string;
+    baseShape: "rect" | "circle" | "line";
+    variants: number;
+    modifiers: Array<"rotate" | "scale" | "stroke">;
+  }>;
+  unicodeMappings?: Record<string, string>;
+  renderParams?: {
+    size?: number;
+    strokeWidth?: number;
+    fallback?: string;
+  };
+}
 
 /** Atomic glyph classes and their phonotactic rules. */
 export interface GlyphSystem {
@@ -58,6 +101,7 @@ export interface Culture {
   meaningPacks: readonly MeaningPack[];
   templates: NameTemplates;
   capitalize?: "first" | "all" | "none";
+  visualGlyphSystems?: Record<string, VisualGlyphSystem>;
 }
 
 export interface NameTemplates {
@@ -70,7 +114,7 @@ export interface NameTemplates {
 }
 
 export type NameTemplate =
-  | { kind: "compose"; parts: readonly TemplatePart[]; sep?: string }
+  | { kind: "compose"; parts: readonly TemplatePart[]; sep?: string; transSep?: string }
   | { kind: "literal"; form: string; translation: string };
 
 export type TemplatePart =
@@ -83,5 +127,6 @@ export interface TranslatedName {
   translation: string;
   language: string;
   parts?: readonly { form: string; meaning: string }[];
+  glyphs?: GlyphSet;
   toString(): string;
 }

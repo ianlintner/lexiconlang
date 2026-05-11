@@ -53,5 +53,5 @@ jobs:
           VERSION=$(jq -r '.version' package.json)
           gh release create v$VERSION \
             --title "v$VERSION" \
-            --notes "Release of lexicon-conlang v$VERSION" \
+            --notes "Release of lexiconlang v$VERSION" \
             --generate-notes

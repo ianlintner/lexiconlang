@@ -184,7 +184,7 @@ const dwarvish: Culture = {
 
 ## 5. Integration Points
 
-### New Package: `@lexicon/glyphs`
+### New Package: `@lexiconlang/glyphs`
 
 **Exports:**
 - `GlyphSystem` interface
@@ -196,11 +196,11 @@ const dwarvish: Culture = {
 - `glyphsFor(name, glyphSystem, ctx)` — standalone function for glyph generation
 
 **Dependencies:**
-- `@lexicon/core` (RNG, Context)
+- `@lexiconlang/core` (RNG, Context)
 
-### Updates to `@lexicon/fantasy` and `@lexicon/scifi`
+### Updates to `@lexiconlang/fantasy` and `@lexiconlang/scifi`
 
-- Import `@lexicon/glyphs` as optional devDependency (for types)
+- Import `@lexiconlang/glyphs` as optional devDependency (for types)
 - Add `glyphSystems` to culture definitions
 - No changes to name generator signatures (glyph generation is opt-in)
 
@@ -270,7 +270,7 @@ withGlyphs: true?
 ### Example Usage
 
 ```ts
-import { fantasy } from "@lexicon/fantasy";
+import { fantasy } from "@lexiconlang/fantasy";
 
 const game = fantasy.withSeed("campaign-1");
 
@@ -334,7 +334,7 @@ console.log(text); // "💪🔨" (Strong-anvil)
 
 The implementation will be staged:
 
-1. **Core infrastructure** — `@lexicon/glyphs` package, interfaces, RNG integration
+1. **Core infrastructure** — `@lexiconlang/glyphs` package, interfaces, RNG integration
 2. **Rendering engines** — SVG, Canvas, Unicode renderers
 3. **Culture integration** — Add glyph systems to 2-3 sample cultures
 4. **Testing** — Determinism, fidelity, performance

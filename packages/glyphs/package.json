@@ -1,5 +1,5 @@
 {
-  "name": "@lexicon/glyphs",
+  "name": "@lexiconlang/glyphs",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -17,8 +17,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@lexicon/core": "workspace:*",
-    "@lexicon/language": "workspace:*"
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/language": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.3",

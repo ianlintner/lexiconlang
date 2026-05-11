@@ -10,6 +10,11 @@ export type {
   NameTemplate,
   TemplatePart,
   TranslatedName,
+  Glyph,
+  GlyphSet,
+  VisualGlyphSystem,
+  RenderFormat,
+  MappingStrategy,
 } from "./types.js";
 export { constraintMatches } from "./glyphs.js";
 export { generateWord } from "./phonotactics.js";
