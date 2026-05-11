@@ -12,9 +12,9 @@ import {
 import { grammar, t } from "@lexiconlang/grammar";
 import { markov, train } from "@lexiconlang/markov";
 import { generateName, type TranslatedName } from "@lexiconlang/language";
-import { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
+import { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid, reptilian, hivemind, grayfolk } from "./language/cultures.js";
 
-export { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
+export { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid, reptilian, hivemind, grayfolk } from "./language/cultures.js";
 
 // ─── Corpora for alien-sounding names (deprecated) ──────────────────────
 
@@ -108,6 +108,27 @@ export const plantoidName: Generator<TranslatedName> = {
   },
 };
 
+export const reptilianName: Generator<TranslatedName> = {
+  id: "scifi.reptilianName",
+  generate(ctx: Context) {
+    return generateName(reptilian, "given", ctx);
+  },
+};
+
+export const hivemindName: Generator<TranslatedName> = {
+  id: "scifi.hivemindName",
+  generate(ctx: Context) {
+    return generateName(hivemind, "given", ctx);
+  },
+};
+
+export const grayfolkName: Generator<TranslatedName> = {
+  id: "scifi.grayfolkName",
+  generate(ctx: Context) {
+    return generateName(grayfolk, "given", ctx);
+  },
+};
+
 // ─── Star / planet names ──────────────────────────────────────────────────
 
 const greekLetters = [
@@ -192,7 +213,7 @@ export const factionName = grammar({
 
 // ─── Species ────────────────────────────────────────────────────────────
 
-export type Species = "human" | "humanoid" | "insectoid" | "aquatic" | "synth";
+export type Species = "human" | "humanoid" | "insectoid" | "aquatic" | "synth" | "reptilian" | "hivemind" | "grayfolk";
 
 export const species: Generator<Species> = weightedList<Species>(
   { human: 4, humanoid: 4, insectoid: 2, aquatic: 2, synth: 1 },
@@ -231,6 +252,9 @@ function speciesName(sp: Species): Generator<string | TranslatedName> {
   if (sp === "insectoid") return insectoidName;
   if (sp === "aquatic") return aquaticName;
   if (sp === "synth") return synthName;
+  if (sp === "reptilian") return reptilianName;
+  if (sp === "hivemind") return hivemindName;
+  if (sp === "grayfolk") return grayfolkName;
   return {
     id: "scifi.alien.human",
     generate(ctx) {
