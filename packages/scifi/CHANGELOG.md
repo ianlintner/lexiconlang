@@ -1,5 +1,15 @@
 # @lexiconlang/scifi
 
+## 0.4.0
+
+### Minor Changes
+
+- 9b4c527: Add reptilian, hivemind, and grayfolk cultures to scifi; add celestial, fey, and tiefling cultures to fantasy. Each includes name templates, meaning vocabulary, and a visualGlyphSystem.
+
+### Patch Changes
+
+- @lexiconlang/language@0.3.0
+
 ## 0.3.0
 
 ### Minor Changes

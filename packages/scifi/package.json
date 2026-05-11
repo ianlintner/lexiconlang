@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/scifi",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Sci-fi genre content pack for lexiconlang — star systems, ships, species, megacorps",
   "type": "module",
   "main": "./dist/index.js",
