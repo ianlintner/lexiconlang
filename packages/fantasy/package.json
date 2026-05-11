@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/fantasy",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Fantasy genre content pack for lexiconlang — races, names, places, factions",
   "type": "module",
   "main": "./dist/index.js",

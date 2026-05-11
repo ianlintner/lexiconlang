@@ -1,5 +1,14 @@
 # examples
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [9b4c527]
+  - @lexiconlang/scifi@0.4.0
+  - @lexiconlang/fantasy@0.4.0
+  - @lexiconlang/language@0.3.0
+
 ## 0.0.2
 
 ### Patch Changes
