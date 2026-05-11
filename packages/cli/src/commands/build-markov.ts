@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { train, toJSON, type Corpus } from "@lexicon/markov";
+import { train, toJSON, type Corpus } from "@lexiconlang/markov";
 import { intOption, requireOption, type ParsedArgs } from "../args.js";
 
 export async function runBuildMarkov(args: ParsedArgs): Promise<void> {

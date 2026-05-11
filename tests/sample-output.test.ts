@@ -8,19 +8,19 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { createContext, repeat } from "@lexicon/core";
+import { createContext, repeat } from "@lexiconlang/core";
 import {
   fantasy,
   fullName as fantasyFullName,
   npc as fantasyNpc,
   settlement,
-} from "@lexicon/fantasy";
+} from "@lexiconlang/fantasy";
 import {
   scifi,
   crewMember,
   starSystem,
-} from "@lexicon/scifi";
-import { modern, person } from "@lexicon/modern";
+} from "@lexiconlang/scifi";
+import { modern, person } from "@lexiconlang/modern";
 import { describe, expect, it } from "vitest";
 
 const SEED = "samples-v1";

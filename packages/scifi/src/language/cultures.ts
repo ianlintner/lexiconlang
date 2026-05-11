@@ -1,5 +1,5 @@
-import type { Culture, GlyphSystem, VisualGlyphSystem } from "@lexicon/language";
-import { archetypes, coreMeanings } from "@lexicon/language";
+import type { Culture, GlyphSystem, VisualGlyphSystem } from "@lexiconlang/language";
+import { archetypes, coreMeanings } from "@lexiconlang/language";
 import { scifiMeanings } from "./meanings.js";
 
 export const humanoid: Culture = {

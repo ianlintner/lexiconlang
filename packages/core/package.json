@@ -1,5 +1,5 @@
 {
-  "name": "@lexicon/core",
+  "name": "@lexiconlang/core",
   "version": "0.1.0",
   "description": "Seedable RNG, Context, Generator, and composition primitives for content-gen",
   "type": "module",

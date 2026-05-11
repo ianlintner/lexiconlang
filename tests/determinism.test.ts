@@ -6,10 +6,10 @@
 // you can paste back in).
 
 import { describe, expect, it } from "vitest";
-import { createContext } from "@lexicon/core";
-import { fantasy, npc as fantasyNpc, settlement, fullName } from "@lexicon/fantasy";
-import { scifi, crewMember, starSystem } from "@lexicon/scifi";
-import { modern, person } from "@lexicon/modern";
+import { createContext } from "@lexiconlang/core";
+import { fantasy, npc as fantasyNpc, settlement, fullName } from "@lexiconlang/fantasy";
+import { scifi, crewMember, starSystem } from "@lexiconlang/scifi";
+import { modern, person } from "@lexiconlang/modern";
 
 const SEED = "golden-master-1";
 

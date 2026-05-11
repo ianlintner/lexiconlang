@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createContext } from "@lexicon/core";
+import { createContext } from "@lexiconlang/core";
 import { scifi, crewMember, starSystem } from "./index.js";
 import { humanoid, insectoid } from "./language/cultures.js";
 

@@ -2,11 +2,11 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a new `@lexicon/glyphs` package that generates culture-specific visual writing systems (SVG, Unicode, Canvas) deterministically from the same seeded RNG that drives name generation.
+**Goal:** Add a new `@lexiconlang/glyphs` package that generates culture-specific visual writing systems (SVG, Unicode, Canvas) deterministically from the same seeded RNG that drives name generation.
 
 **Architecture:** A standalone `glyphsFor(name, culture, ctx)` function enriches a `TranslatedName` with visual glyphs. Each culture optionally defines `visualGlyphSystems` (distinct from the existing phonotactic `GlyphSystem`). Glyph shapes are derived from the seeded RNG, making them reproducible. No breaking changes to existing APIs.
 
-**Tech Stack:** TypeScript ESM, `@lexicon/core` (RNG, Context), inline SVG strings, Canvas 2D instruction objects (web-only), Unicode character lookup.
+**Tech Stack:** TypeScript ESM, `@lexiconlang/core` (RNG, Context), inline SVG strings, Canvas 2D instruction objects (web-only), Unicode character lookup.
 
 ---
 
@@ -28,8 +28,8 @@
 - `packages/language/src/types.ts` — add optional `glyphs?: GlyphSet` to `TranslatedName`; add optional `visualGlyphSystems?: Record<string, VisualGlyphSystem>` to `Culture`
 - `packages/fantasy/src/language/cultures.ts` — add `visualGlyphSystems` to `dwarvish` (SVG) and `elvish` (Unicode)
 - `packages/scifi/src/language/cultures.ts` — add `visualGlyphSystems` to `humanoid` (Canvas) and `insectoid` (SVG)
-- `tsconfig.json` (root) — add `@lexicon/glyphs` reference
-- `packages/language/package.json` — add `@lexicon/glyphs` as optional peer (for types only, no circular dep)
+- `tsconfig.json` (root) — add `@lexiconlang/glyphs` reference
+- `packages/language/package.json` — add `@lexiconlang/glyphs` as optional peer (for types only, no circular dep)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ```json
 {
-  "name": "@lexicon/glyphs",
+  "name": "@lexiconlang/glyphs",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -62,8 +62,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@lexicon/core": "workspace:*",
-    "@lexicon/language": "workspace:*"
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/language": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.7.3",
@@ -96,7 +96,7 @@
 export {};
 ```
 
-- [ ] **Step 4: Add `@lexicon/glyphs` to root `tsconfig.json` references**
+- [ ] **Step 4: Add `@lexiconlang/glyphs` to root `tsconfig.json` references**
 
 In `tsconfig.json`, the `references` array becomes:
 ```json
@@ -117,7 +117,7 @@ In `tsconfig.json`, the `references` array becomes:
 }
 ```
 
-Note: `@lexicon/language` was missing — add it too.
+Note: `@lexiconlang/language` was missing — add it too.
 
 - [ ] **Step 5: Run `pnpm install` to link the new package**
 
@@ -139,7 +139,7 @@ Expected: `dist/index.js` and `dist/index.d.ts` created.
 
 ```bash
 git add packages/glyphs/ tsconfig.json
-git commit -m "feat: scaffold @lexicon/glyphs package"
+git commit -m "feat: scaffold @lexiconlang/glyphs package"
 ```
 
 ---
@@ -286,7 +286,7 @@ export interface GlyphSet {
 
 At the top of the file, add the import:
 ```ts
-import type { GlyphSet, VisualGlyphSystem } from "@lexicon/glyphs";
+import type { GlyphSet, VisualGlyphSystem } from "@lexiconlang/glyphs";
 ```
 
 In `TranslatedName`, add:
@@ -313,7 +313,7 @@ export interface Culture {
 }
 ```
 
-**Important:** This creates a circular dependency (`@lexicon/language` → `@lexicon/glyphs` → `@lexicon/language`). To avoid it, define `GlyphSet` and `VisualGlyphSystem` directly in `packages/language/src/types.ts` instead of importing from `@lexicon/glyphs`. The glyphs package will import these types from `@lexicon/language`.
+**Important:** This creates a circular dependency (`@lexiconlang/language` → `@lexiconlang/glyphs` → `@lexiconlang/language`). To avoid it, define `GlyphSet` and `VisualGlyphSystem` directly in `packages/language/src/types.ts` instead of importing from `@lexiconlang/glyphs`. The glyphs package will import these types from `@lexiconlang/language`.
 
 So in `packages/language/src/types.ts`, add these type definitions directly (no import needed):
 
@@ -363,9 +363,9 @@ export interface VisualGlyphSystem {
 
 Then update `TranslatedName` and `Culture` as shown above but without the import.
 
-In `packages/glyphs/src/types.ts`, import from `@lexicon/language` instead:
+In `packages/glyphs/src/types.ts`, import from `@lexiconlang/language` instead:
 ```ts
-export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy } from "@lexicon/language";
+export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy } from "@lexiconlang/language";
 
 // Glyphs-package-specific types (not needed upstream):
 export type BaseShape = "rect" | "circle" | "line" | "arc" | "polygon";
@@ -411,7 +411,7 @@ cd packages/glyphs && npx vitest run src/glyphs.test.ts
 
 Expected: PASS — all 3 type tests pass.
 
-- [ ] **Step 7: Verify @lexicon/language still builds**
+- [ ] **Step 7: Verify @lexiconlang/language still builds**
 
 ```bash
 cd packages/language && pnpm build
@@ -423,7 +423,7 @@ Expected: No errors, `dist/` updated.
 
 ```bash
 git add packages/glyphs/src/types.ts packages/glyphs/src/glyphs.test.ts packages/language/src/types.ts packages/language/src/index.ts
-git commit -m "feat: add Glyph/GlyphSet/VisualGlyphSystem types to @lexicon/language and @lexicon/glyphs"
+git commit -m "feat: add Glyph/GlyphSet/VisualGlyphSystem types to @lexiconlang/language and @lexiconlang/glyphs"
 ```
 
 ---
@@ -438,7 +438,7 @@ The shape generator derives deterministic `ShapeParams[]` from the RNG. Each cal
 - [ ] **Step 1: Add shape-generator tests to `packages/glyphs/src/glyphs.test.ts`**
 
 ```ts
-import { createContext } from "@lexicon/core";
+import { createContext } from "@lexiconlang/core";
 import { generateShapes } from "./shape-generator.js";
 
 describe("generateShapes", () => {
@@ -520,7 +520,7 @@ Expected: FAIL — "Cannot find module './shape-generator.js'"
 - [ ] **Step 3: Create `packages/glyphs/src/shape-generator.ts`**
 
 ```ts
-import type { Context } from "@lexicon/core";
+import type { Context } from "@lexiconlang/core";
 import type { ShapeParams, BaseShape } from "./types.js";
 
 interface GeneratorConfig {
@@ -1040,8 +1040,8 @@ The main function that generates a `GlyphSet` for a `TranslatedName`. Handles al
 
 ```ts
 import { glyphsFor } from "./glyphs-for.js";
-import type { VisualGlyphSystem } from "@lexicon/language";
-import type { TranslatedName } from "@lexicon/language";
+import type { VisualGlyphSystem } from "@lexiconlang/language";
+import type { TranslatedName } from "@lexiconlang/language";
 
 const mockName: TranslatedName = {
   form: "Drakaztum",
@@ -1144,8 +1144,8 @@ Expected: FAIL — "Cannot find module './glyphs-for.js'"
 - [ ] **Step 3: Create `packages/glyphs/src/glyphs-for.ts`**
 
 ```ts
-import type { Context } from "@lexicon/core";
-import type { TranslatedName, VisualGlyphSystem, Glyph, GlyphSet } from "@lexicon/language";
+import type { Context } from "@lexiconlang/core";
+import type { TranslatedName, VisualGlyphSystem, Glyph, GlyphSet } from "@lexiconlang/language";
 import { generateShapes } from "./shape-generator.js";
 import { renderSvg } from "./svg-renderer.js";
 import { renderUnicode } from "./unicode-renderer.js";
@@ -1255,7 +1255,7 @@ git commit -m "feat: add glyphsFor() main function with morpheme/phoneme/holisti
 - [ ] **Step 1: Update `packages/glyphs/src/index.ts` with all public exports**
 
 ```ts
-export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy } from "@lexicon/language";
+export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy } from "@lexiconlang/language";
 export type { ShapeParams, CanvasInstruction, BaseShape, Complexity } from "./types.js";
 export { generateShapes } from "./shape-generator.js";
 export { renderSvg } from "./svg-renderer.js";
@@ -1294,7 +1294,7 @@ elderFuthark cattle: ᚠ
 
 ```bash
 git add packages/glyphs/src/index.ts
-git commit -m "feat: export all public API from @lexicon/glyphs"
+git commit -m "feat: export all public API from @lexiconlang/glyphs"
 ```
 
 ---
@@ -1311,9 +1311,9 @@ Add `visualGlyphSystems` to `dwarvish` (SVG, alphabet) and `elvish` (Unicode, co
 
 ```ts
 import { describe, it, expect } from "vitest";
-import { createContext } from "@lexicon/core";
-import { generateName } from "@lexicon/language";
-import { glyphsFor } from "@lexicon/glyphs";
+import { createContext } from "@lexiconlang/core";
+import { generateName } from "@lexiconlang/language";
+import { glyphsFor } from "@lexiconlang/glyphs";
 import { dwarvish, elvish } from "./language/cultures.js";
 
 describe("Fantasy culture glyph integration", () => {
@@ -1366,7 +1366,7 @@ Expected: FAIL — `dwarvish.visualGlyphSystems` is undefined.
 Add to the `dwarvish` culture object (after the existing `templates` field):
 
 ```ts
-import { elderFuthark } from "@lexicon/glyphs";
+import { elderFuthark } from "@lexiconlang/glyphs";
 
 // In dwarvish:
 visualGlyphSystems: {
@@ -1415,15 +1415,15 @@ visualGlyphSystems: {
 },
 ```
 
-- [ ] **Step 5: Add `@lexicon/glyphs` to `packages/fantasy/package.json` dependencies**
+- [ ] **Step 5: Add `@lexiconlang/glyphs` to `packages/fantasy/package.json` dependencies**
 
 ```json
 "dependencies": {
-  "@lexicon/core": "workspace:*",
-  "@lexicon/glyphs": "workspace:*",
-  "@lexicon/grammar": "workspace:*",
-  "@lexicon/language": "workspace:*",
-  "@lexicon/markov": "workspace:*"
+  "@lexiconlang/core": "workspace:*",
+  "@lexiconlang/glyphs": "workspace:*",
+  "@lexiconlang/grammar": "workspace:*",
+  "@lexiconlang/language": "workspace:*",
+  "@lexiconlang/markov": "workspace:*"
 }
 ```
 
@@ -1456,9 +1456,9 @@ Add `visualGlyphSystems` to `humanoid` (Canvas) and `insectoid` (SVG, angular sh
 
 ```ts
 import { describe, it, expect } from "vitest";
-import { createContext } from "@lexicon/core";
-import { generateName } from "@lexicon/language";
-import { glyphsFor } from "@lexicon/glyphs";
+import { createContext } from "@lexiconlang/core";
+import { generateName } from "@lexiconlang/language";
+import { glyphsFor } from "@lexiconlang/glyphs";
 import { humanoid, insectoid } from "./language/cultures.js";
 
 describe("Scifi culture glyph integration", () => {
@@ -1499,7 +1499,7 @@ Expected: FAIL — scifi cultures have no `visualGlyphSystems`.
 - [ ] **Step 3: Add `visualGlyphSystems` to `humanoid` in `packages/scifi/src/language/cultures.ts`**
 
 ```ts
-import { geometricSymbols } from "@lexicon/glyphs";
+import { geometricSymbols } from "@lexiconlang/glyphs";
 
 // In humanoid culture:
 visualGlyphSystems: {
@@ -1540,16 +1540,16 @@ visualGlyphSystems: {
 },
 ```
 
-- [ ] **Step 5: Add `@lexicon/glyphs` to `packages/scifi/package.json` dependencies**
+- [ ] **Step 5: Add `@lexiconlang/glyphs` to `packages/scifi/package.json` dependencies**
 
 In `packages/scifi/package.json`:
 ```json
 "dependencies": {
-  "@lexicon/core": "workspace:*",
-  "@lexicon/glyphs": "workspace:*",
-  "@lexicon/grammar": "workspace:*",
-  "@lexicon/language": "workspace:*",
-  "@lexicon/markov": "workspace:*"
+  "@lexiconlang/core": "workspace:*",
+  "@lexiconlang/glyphs": "workspace:*",
+  "@lexiconlang/grammar": "workspace:*",
+  "@lexiconlang/language": "workspace:*",
+  "@lexiconlang/markov": "workspace:*"
 }
 ```
 
@@ -1678,10 +1678,10 @@ git commit -m "test: add performance and edge case tests for glyph system
 After this implementation, users can generate visual glyphs alongside names:
 
 ```ts
-import { createContext } from "@lexicon/core";
-import { generateName } from "@lexicon/language";
-import { glyphsFor, elderFuthark } from "@lexicon/glyphs";
-import { dwarvish } from "@lexicon/fantasy/language";
+import { createContext } from "@lexiconlang/core";
+import { generateName } from "@lexiconlang/language";
+import { glyphsFor, elderFuthark } from "@lexiconlang/glyphs";
+import { dwarvish } from "@lexiconlang/fantasy/language";
 
 const ctx = createContext({ seed: "my-world" });
 

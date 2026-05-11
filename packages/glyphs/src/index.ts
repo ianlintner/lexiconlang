@@ -5,10 +5,10 @@ export { renderToUnicode } from "./unicode-renderer.js";
 export { renderToCanvas, executeCanvasInstructions } from "./canvas-renderer.js";
 export { glyphsFor } from "./glyphs.js";
 
-// Types from @lexicon/language
+// Types from @lexiconlang/language
 export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy, TranslatedName } from "./types.js";
 
-// Types from @lexicon/glyphs
+// Types from @lexiconlang/glyphs
 export type { BaseShape, Complexity, ShapeParams, CanvasInstruction, RenderParams } from "./types.js";
 
 // Constants

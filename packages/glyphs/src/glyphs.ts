@@ -1,5 +1,5 @@
-import type { Context } from "@lexicon/core";
-import type { TranslatedName, VisualGlyphSystem, GlyphSet, Glyph } from "@lexicon/language";
+import type { Context } from "@lexiconlang/core";
+import type { TranslatedName, VisualGlyphSystem, GlyphSet, Glyph } from "@lexiconlang/language";
 import { generateShapes } from "./shape-generator.js";
 import { renderToSVG } from "./svg-renderer.js";
 import { renderToUnicode } from "./unicode-renderer.js";

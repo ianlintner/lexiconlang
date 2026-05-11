@@ -10,8 +10,8 @@
 //
 // Run: pnpm --filter examples reroll
 
-import { createContext } from "@lexicon/core";
-import { settlement } from "@lexicon/fantasy";
+import { createContext } from "@lexiconlang/core";
+import { settlement } from "@lexiconlang/fantasy";
 
 // ─── Save game = world seed (a single string) ────────────────────────────
 

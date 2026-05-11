@@ -1,13 +1,13 @@
 ---
-"@lexicon/glyphs": minor
-"@lexicon/language": minor
-"@lexicon/fantasy": minor
-"@lexicon/scifi": minor
+"@lexiconlang/glyphs": minor
+"@lexiconlang/language": minor
+"@lexiconlang/fantasy": minor
+"@lexiconlang/scifi": minor
 ---
 
 Add visual glyph system: deterministic, seeded writing systems alongside conlang text.
 
-- New `@lexicon/glyphs` package with three renderers: SVG (inline vector), Unicode (character lookup), and Canvas (drawing instructions).
+- New `@lexiconlang/glyphs` package with three renderers: SVG (inline vector), Unicode (character lookup), and Canvas (drawing instructions).
 - `glyphsFor(name, system, ctx)` orchestrates phoneme / morpheme / holistic mapping strategies.
 - `TranslatedName` gains an optional `glyphs?: GlyphSet` field; `Culture` gains an optional `visualGlyphSystems` field. Both are additive — no breaking changes.
 - Fantasy: dwarvish (SVG runes, phonemic) and elvish (Unicode ideograms, morphemic).

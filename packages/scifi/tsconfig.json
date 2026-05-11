@@ -4,10 +4,10 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "paths": {
-      "@lexicon/core": ["../core/src/index.ts"],
-      "@lexicon/grammar": ["../grammar/src/index.ts"],
-      "@lexicon/language": ["../language/src/index.ts"],
-      "@lexicon/markov": ["../markov/src/index.ts"]
+      "@lexiconlang/core": ["../core/src/index.ts"],
+      "@lexiconlang/grammar": ["../grammar/src/index.ts"],
+      "@lexiconlang/language": ["../language/src/index.ts"],
+      "@lexiconlang/markov": ["../markov/src/index.ts"]
     }
   },
   "include": ["src/**/*"],

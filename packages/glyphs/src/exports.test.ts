@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 
 // Verify all exports exist and are the correct type
 describe("Package Exports", () => {
-  it("exports all types from @lexicon/language", () => {
-    // Types from @lexicon/language
+  it("exports all types from @lexiconlang/language", () => {
+    // Types from @lexiconlang/language
     import("../src/index.js").then((module) => {
       // These should be types, so we can't directly check them at runtime,
       // but the TypeScript compiler will verify they exist
@@ -61,8 +61,8 @@ describe("Package Exports", () => {
 
     // Verify exports are organized with comments
     expect(content).toContain("// Functions");
-    expect(content).toContain("// Types from @lexicon/language");
-    expect(content).toContain("// Types from @lexicon/glyphs");
+    expect(content).toContain("// Types from @lexiconlang/language");
+    expect(content).toContain("// Types from @lexiconlang/glyphs");
     expect(content).toContain("// Constants");
     expect(content).toContain("// Interfaces");
   });

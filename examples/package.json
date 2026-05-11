@@ -17,14 +17,14 @@
     "all": "tsx _run-all.ts"
   },
   "dependencies": {
-    "@lexicon/core": "workspace:*",
-    "@lexicon/grammar": "workspace:*",
-    "@lexicon/markov": "workspace:*",
-    "@lexicon/language": "workspace:*",
-    "@lexicon/glyphs": "workspace:*",
-    "@lexicon/fantasy": "workspace:*",
-    "@lexicon/scifi": "workspace:*",
-    "@lexicon/modern": "workspace:*"
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/markov": "workspace:*",
+    "@lexiconlang/language": "workspace:*",
+    "@lexiconlang/glyphs": "workspace:*",
+    "@lexiconlang/fantasy": "workspace:*",
+    "@lexiconlang/scifi": "workspace:*",
+    "@lexiconlang/modern": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.19.2"

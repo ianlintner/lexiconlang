@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createContext } from "@lexicon/core";
+import { createContext } from "@lexiconlang/core";
 import { fantasy, npc, settlement, fullName } from "./index.js";
 
 describe("fantasy pack", () => {

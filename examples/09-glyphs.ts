@@ -11,11 +11,11 @@
 //
 // Run: pnpm --filter examples glyphs
 
-import { createContext } from "@lexicon/core";
-import { generateName } from "@lexicon/language";
-import { glyphsFor } from "@lexicon/glyphs";
-import { dwarvish, elvish } from "@lexicon/fantasy";
-import { humanoid } from "@lexicon/scifi";
+import { createContext } from "@lexiconlang/core";
+import { generateName } from "@lexiconlang/language";
+import { glyphsFor } from "@lexiconlang/glyphs";
+import { dwarvish, elvish } from "@lexiconlang/fantasy";
+import { humanoid } from "@lexiconlang/scifi";
 
 const ctx = createContext({ seed: "glyph-demo" });
 

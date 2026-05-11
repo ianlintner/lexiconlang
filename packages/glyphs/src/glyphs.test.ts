@@ -5,7 +5,7 @@ import { renderToSVG } from "./svg-renderer.js";
 import { renderToUnicode } from "./unicode-renderer.js";
 import { renderToCanvas } from "./canvas-renderer.js";
 import { glyphsFor } from "./glyphs.js";
-import { createContext } from "@lexicon/core";
+import { createContext } from "@lexiconlang/core";
 
 describe("Types", () => {
   it("VisualGlyphSystem compiles with svg renderFormat", () => {
@@ -1613,7 +1613,7 @@ describe("Integration tests", () => {
   describe("Fantasy culture systems", () => {
     it("generates glyphs with dwarvish culture names", async () => {
       // Import fantasy module to get dwarvish culture
-      const { language: fantasyLanguage } = await import("@lexicon/fantasy");
+      const { language: fantasyLanguage } = await import("@lexiconlang/fantasy");
       const { dwarvish } = fantasyLanguage;
 
       const name = {
@@ -1643,7 +1643,7 @@ describe("Integration tests", () => {
     });
 
     it("generates glyphs with elvish culture names", async () => {
-      const { language: fantasyLanguage } = await import("@lexicon/fantasy");
+      const { language: fantasyLanguage } = await import("@lexiconlang/fantasy");
       const { elvish } = fantasyLanguage;
 
       const name = {
@@ -1675,7 +1675,7 @@ describe("Integration tests", () => {
 
   describe("SciFi culture systems", () => {
     it("generates glyphs with humanoid culture names", async () => {
-      const { language: scifiLanguage } = await import("@lexicon/scifi");
+      const { language: scifiLanguage } = await import("@lexiconlang/scifi");
       const { humanoid } = scifiLanguage;
 
       const name = {
@@ -1703,7 +1703,7 @@ describe("Integration tests", () => {
     });
 
     it("generates glyphs with insectoid culture names", async () => {
-      const { language: scifiLanguage } = await import("@lexicon/scifi");
+      const { language: scifiLanguage } = await import("@lexiconlang/scifi");
       const { insectoid } = scifiLanguage;
 
       const name = {

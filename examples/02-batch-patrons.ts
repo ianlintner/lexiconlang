@@ -8,8 +8,8 @@
 //
 // Run: pnpm --filter examples tavern
 
-import { createContext, repeat } from "@lexicon/core";
-import { npc } from "@lexicon/fantasy";
+import { createContext, repeat } from "@lexiconlang/core";
+import { npc } from "@lexiconlang/fantasy";
 
 const tavernSeed = createContext({ seed: "the-gilded-anchor" });
 

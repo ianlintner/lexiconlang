@@ -1,4 +1,4 @@
-import type { Generator, Context } from "@lexicon/core";
+import type { Generator, Context } from "@lexiconlang/core";
 
 // Visual glyph types (avoids circular dependency)
 export type RenderFormat = "svg" | "unicode" | "canvas";

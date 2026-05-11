@@ -9,10 +9,10 @@ import {
   repeat,
   weightedList,
   type Seed,
-} from "@lexicon/core";
-import { grammar, t } from "@lexicon/grammar";
-import { markov, train, type MarkovModel } from "@lexicon/markov";
-import { generateName, type TranslatedName, type Culture } from "@lexicon/language";
+} from "@lexiconlang/core";
+import { grammar, t } from "@lexiconlang/grammar";
+import { markov, train, type MarkovModel } from "@lexiconlang/markov";
+import { generateName, type TranslatedName, type Culture } from "@lexiconlang/language";
 
 import { corpora, type CorpusName } from "./corpora.js";
 import {

@@ -26,28 +26,28 @@ importers:
 
   examples:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@lexicon/fantasy':
+      '@lexiconlang/fantasy':
         specifier: workspace:*
         version: link:../packages/fantasy
-      '@lexicon/glyphs':
+      '@lexiconlang/glyphs':
         specifier: workspace:*
         version: link:../packages/glyphs
-      '@lexicon/grammar':
+      '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../packages/grammar
-      '@lexicon/language':
+      '@lexiconlang/language':
         specifier: workspace:*
         version: link:../packages/language
-      '@lexicon/markov':
+      '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../packages/markov
-      '@lexicon/modern':
+      '@lexiconlang/modern':
         specifier: workspace:*
         version: link:../packages/modern
-      '@lexicon/scifi':
+      '@lexiconlang/scifi':
         specifier: workspace:*
         version: link:../packages/scifi
     devDependencies:
@@ -57,10 +57,10 @@ importers:
 
   packages/cli:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
-      '@lexicon/markov':
+      '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
 
@@ -68,25 +68,25 @@ importers:
 
   packages/fantasy:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
-      '@lexicon/grammar':
+      '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../grammar
-      '@lexicon/language':
+      '@lexiconlang/language':
         specifier: workspace:*
         version: link:../language
-      '@lexicon/markov':
+      '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
 
   packages/glyphs:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
-      '@lexicon/language':
+      '@lexiconlang/language':
         specifier: workspace:*
         version: link:../language
     devDependencies:
@@ -99,20 +99,20 @@ importers:
 
   packages/grammar:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
 
   packages/language:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
     devDependencies:
-      '@lexicon/fantasy':
+      '@lexiconlang/fantasy':
         specifier: workspace:*
         version: link:../fantasy
-      '@lexicon/scifi':
+      '@lexiconlang/scifi':
         specifier: workspace:*
         version: link:../scifi
       typescript:
@@ -124,31 +124,31 @@ importers:
 
   packages/markov:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
 
   packages/modern:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
-      '@lexicon/grammar':
+      '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../grammar
 
   packages/scifi:
     dependencies:
-      '@lexicon/core':
+      '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
-      '@lexicon/grammar':
+      '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../grammar
-      '@lexicon/language':
+      '@lexiconlang/language':
         specifier: workspace:*
         version: link:../language
-      '@lexicon/markov':
+      '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
 

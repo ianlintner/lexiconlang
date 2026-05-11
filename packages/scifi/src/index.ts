@@ -8,10 +8,10 @@ import {
   oneOf,
   pickOf,
   weightedList,
-} from "@lexicon/core";
-import { grammar, t } from "@lexicon/grammar";
-import { markov, train } from "@lexicon/markov";
-import { generateName, type TranslatedName } from "@lexicon/language";
+} from "@lexiconlang/core";
+import { grammar, t } from "@lexiconlang/grammar";
+import { markov, train } from "@lexiconlang/markov";
+import { generateName, type TranslatedName } from "@lexiconlang/language";
 import { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
 
 export { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";

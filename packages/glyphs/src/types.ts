@@ -1,4 +1,4 @@
-export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy, TranslatedName } from "@lexicon/language";
+export type { Glyph, GlyphSet, VisualGlyphSystem, RenderFormat, MappingStrategy, TranslatedName } from "@lexiconlang/language";
 
 // Glyphs-package-specific types:
 export type BaseShape = "rect" | "circle" | "line" | "arc" | "polygon";

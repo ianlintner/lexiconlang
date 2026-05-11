@@ -1,4 +1,4 @@
-import type { MeaningPack } from "@lexicon/language";
+import type { MeaningPack } from "@lexiconlang/language";
 
 export const scifiMeanings: MeaningPack = {
   id: "scifi",
