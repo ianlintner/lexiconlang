@@ -253,3 +253,182 @@ export const plantoid: Culture = {
     ],
   },
 };
+
+export const reptilian: Culture = {
+  id: "scifi.reptilian",
+  glyphs: {
+    ...archetypes.sibilant,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, scifiMeanings],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "adjective", tag: "predator", capitalize: true },
+            { pick: "noun", tag: "predator" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "geology", capitalize: true },
+            { pick: "noun", tag: "predator" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "reptilian.scales",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["arc", "line", "polygon"],
+        complexity: "complex",
+        symmetry: false,
+        palette: ["#556B2F", "#8B7500"],
+      },
+      renderParams: {
+        size: 30,
+        strokeWidth: 1.5,
+      },
+    },
+  },
+};
+
+export const hivemind: Culture = {
+  id: "scifi.hivemind",
+  glyphs: {
+    ...archetypes.clipped,
+    joiner: ".",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, scifiMeanings],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "hivemind", capitalize: true },
+            { literal: "7", translation: "index" },
+          ],
+          sep: ".",
+        },
+        1,
+      ],
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "network", capitalize: true },
+            { pick: "noun", tag: "hivemind" },
+          ],
+          sep: ".",
+        },
+        1,
+      ],
+    ],
+  },
+  visualGlyphSystems: {
+    phonetic: {
+      id: "hivemind.grid",
+      type: "alphabet",
+      renderFormat: "svg",
+      mappingStrategy: "phoneme",
+      generator: {
+        baseShapes: ["rect", "line"],
+        complexity: "medium",
+        symmetry: false,
+        palette: ["#00CED1", "#C0C0C0"],
+      },
+      renderParams: {
+        size: 26,
+        strokeWidth: 1,
+      },
+    },
+  },
+};
+
+export const grayfolk: Culture = {
+  id: "scifi.grayfolk",
+  glyphs: {
+    ...archetypes.resonant,
+    joiner: "",
+  } as GlyphSystem,
+  meaningPacks: [coreMeanings, scifiMeanings],
+  templates: {
+    given: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "adjective", tag: "grayfolk", capitalize: true },
+            { pick: "noun", tag: "mind" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    surname: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "knowledge", capitalize: true },
+            { pick: "noun", tag: "grayfolk" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  visualGlyphSystems: {
+    holistic: {
+      id: "grayfolk.observer",
+      type: "conceptual",
+      renderFormat: "unicode",
+      mappingStrategy: "morpheme",
+      unicodeMappings: {
+        awareness: "◉",
+        perception: "◉",
+        eye: "◉",
+        orb: "◉",
+        cognition: "⊙",
+        consciousness: "⊙",
+        mind: "⊙",
+        intelligence: "⊙",
+        silence: "◯",
+        still: "◯",
+        void: "◯",
+        archive: "⌬",
+        memory: "⌬",
+        knowledge: "⌬",
+        quantum: "✦",
+        anomaly: "✦",
+        enigma: "✦",
+        observer: "◌",
+        watcher: "◌",
+        telepathy: "≋",
+        psionic: "≋",
+      },
+      renderParams: {
+        fallback: "◌",
+      },
+    },
+  },
+};
