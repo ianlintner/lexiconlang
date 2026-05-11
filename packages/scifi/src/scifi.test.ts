@@ -15,7 +15,7 @@ describe("scifi pack", () => {
     const c = crewMember.generate(createContext({ seed: "x" }));
     expect(c.name).toBeTypeOf("string");
     expect(c.name.length).toBeGreaterThan(0);
-    expect(["human", "humanoid", "insectoid", "aquatic", "synth"]).toContain(c.species);
+    expect(["human", "humanoid", "insectoid", "aquatic", "synth", "reptilian", "hivemind", "grayfolk"]).toContain(c.species);
     expect(c.role).toBeTypeOf("string");
     expect(c.callsign).toBeTypeOf("string");
     expect(c.homeworld).toBeTypeOf("string");
