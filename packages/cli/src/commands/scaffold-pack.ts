@@ -83,6 +83,8 @@ export const generators = { example } as const;
   );
 
   console.log(`[scaffold-pack] created ${pkgName} at ${target}`);
-  console.log(`[scaffold-pack] add { "path": "./packages/${name}" } to root tsconfig.json references`);
+  console.log(
+    `[scaffold-pack] add { "path": "./packages/${name}" } to root tsconfig.json references`,
+  );
   console.log(`[scaffold-pack] then run: pnpm install`);
 }

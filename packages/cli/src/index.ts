@@ -30,7 +30,12 @@ async function main(): Promise<void> {
   const argv = process.argv.slice(2);
   const args = parseArgs(argv);
 
-  if (!args.command || args.command === "help" || args.options["help"] || args.options["h"]) {
+  if (
+    !args.command ||
+    args.command === "help" ||
+    args.options["help"] ||
+    args.options["h"]
+  ) {
     console.log(HELP);
     return;
   }

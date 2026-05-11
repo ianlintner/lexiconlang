@@ -9,7 +9,10 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ["link", { rel: "icon", href: "/lexiconlang/favicon.svg", type: "image/svg+xml" }],
+    [
+      "link",
+      { rel: "icon", href: "/lexiconlang/favicon.svg", type: "image/svg+xml" },
+    ],
     ["meta", { name: "theme-color", content: "#8b5cf6" }],
   ],
 
@@ -25,7 +28,10 @@ export default defineConfig({
       {
         text: "v0.3",
         items: [
-          { text: "Changelog", link: "https://github.com/ianlintner/lexiconlang/releases" },
+          {
+            text: "Changelog",
+            link: "https://github.com/ianlintner/lexiconlang/releases",
+          },
           { text: "npm", link: "https://www.npmjs.com/package/lexiconlang" },
         ],
       },

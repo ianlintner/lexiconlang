@@ -18,8 +18,8 @@ const ctx = createContext({ seed: "test-data" });
 const p = person.generate(ctx.child("user:1"));
 // → { name, email, phone, address, dateOfBirth, occupation, ... }
 
-city.generate(ctx.child("hq"));       // "Westbridge"
-company.generate(ctx.child("acme"));  // "Northstar Logistics"
+city.generate(ctx.child("hq")); // "Westbridge"
+company.generate(ctx.child("acme")); // "Northstar Logistics"
 ```
 
 ## What's included
@@ -35,7 +35,7 @@ For test fixtures, pin a seed and the data is identical across runs:
 
 ```ts
 const fixtures = repeat(person, 100).generate(
-  createContext({ seed: "test-fixtures" }).child("users")
+  createContext({ seed: "test-fixtures" }).child("users"),
 );
 ```
 

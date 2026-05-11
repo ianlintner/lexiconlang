@@ -13,21 +13,21 @@ runes that anyone else with the same campaign seed sees.
 
 ## The three renderers
 
-| Format    | Output                         | Use when                                                    |
-| --------- | ------------------------------ | ----------------------------------------------------------- |
+| Format    | Output                          | Use when                                                    |
+| --------- | ------------------------------- | ----------------------------------------------------------- |
 | `svg`     | Compact inline `<svg>...</svg>` | You want crisp, scalable glyphs in HTML/React/Vue.          |
-| `unicode` | Single Unicode character(s)    | You want text-native rendering, terminals, minimal payload. |
-| `canvas`  | Array of drawing instructions  | You're drawing to a `<canvas>` (game UI, image export).     |
+| `unicode` | Single Unicode character(s)     | You want text-native rendering, terminals, minimal payload. |
+| `canvas`  | Array of drawing instructions   | You're drawing to a `<canvas>` (game UI, image export).     |
 
 ## The three mapping strategies
 
 How does a name map to glyphs?
 
-| Strategy   | Granularity                              | Example                                |
-| ---------- | ---------------------------------------- | -------------------------------------- |
-| `phoneme`  | One glyph per 2-character unit in form   | `Drakaztum` → 5 glyphs                 |
-| `morpheme` | One glyph per meaning component          | `strong-anvil` → 2 glyphs              |
-| `holistic` | A single glyph for the whole name        | `NgirangingaLangange` → 1 glyph        |
+| Strategy   | Granularity                            | Example                         |
+| ---------- | -------------------------------------- | ------------------------------- |
+| `phoneme`  | One glyph per 2-character unit in form | `Drakaztum` → 5 glyphs          |
+| `morpheme` | One glyph per meaning component        | `strong-anvil` → 2 glyphs       |
+| `holistic` | A single glyph for the whole name      | `NgirangingaLangange` → 1 glyph |
 
 ## Generating glyphs
 
@@ -41,7 +41,11 @@ const ctx = createContext({ seed: "campaign-1" });
 const name = generateName(elvish, "given", ctx.child("hero"));
 // → { form: "WaeYia", translation: "wild-vine", language: "fantasy.elvish" }
 
-const glyphs = glyphsFor(name, elvish.visualGlyphSystems!.conceptual!, ctx.child("hero"));
+const glyphs = glyphsFor(
+  name,
+  elvish.visualGlyphSystems!.conceptual!,
+  ctx.child("hero"),
+);
 // → { conceptual: [
 //       { id: "g0", meaning: "wild", unicode: "🌿" },
 //       { id: "g1", meaning: "vine", unicode: "🌿" }
@@ -62,7 +66,11 @@ glyphs.conceptual?.forEach((g) => {
 Or for SVG cultures, drop the inline `<svg>` strings directly:
 
 ```ts
-const dwarfGlyphs = glyphsFor(name, dwarvish.visualGlyphSystems!.phonetic!, ctx);
+const dwarfGlyphs = glyphsFor(
+  name,
+  dwarvish.visualGlyphSystems!.phonetic!,
+  ctx,
+);
 dwarfGlyphs.phonetic?.forEach((g) => {
   const div = document.createElement("div");
   div.innerHTML = g.svg!;

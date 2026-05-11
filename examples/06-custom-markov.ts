@@ -22,11 +22,35 @@ import { markov, train } from "@lexiconlang/markov";
 
 // Welsh-ish town names — a small inline corpus to demonstrate training.
 const corpus = [
-  "aberffraw", "betws-y-coed", "caernarfon", "cricieth", "dolgellau",
-  "ffestiniog", "harlech", "llanberis", "llanfair", "llanrwst", "machynlleth",
-  "penmaenmawr", "porthmadog", "pwllheli", "rhyl", "tywyn", "abergele",
-  "barmouth", "bangor", "conwy", "criccieth", "denbigh", "holyhead",
-  "menai", "newtown", "prestatyn", "ruthin", "tregaron", "wrexham",
+  "aberffraw",
+  "betws-y-coed",
+  "caernarfon",
+  "cricieth",
+  "dolgellau",
+  "ffestiniog",
+  "harlech",
+  "llanberis",
+  "llanfair",
+  "llanrwst",
+  "machynlleth",
+  "penmaenmawr",
+  "porthmadog",
+  "pwllheli",
+  "rhyl",
+  "tywyn",
+  "abergele",
+  "barmouth",
+  "bangor",
+  "conwy",
+  "criccieth",
+  "denbigh",
+  "holyhead",
+  "menai",
+  "newtown",
+  "prestatyn",
+  "ruthin",
+  "tregaron",
+  "wrexham",
 ];
 
 const model = train(corpus, {
@@ -38,7 +62,9 @@ const model = train(corpus, {
 
 console.log("Model summary:");
 console.log(`  contexts: ${Object.keys(model.transitions).length}`);
-console.log(`  forbidden (no-verbatim): ${model.forbidden?.length ?? 0} entries\n`);
+console.log(
+  `  forbidden (no-verbatim): ${model.forbidden?.length ?? 0} entries\n`,
+);
 
 const townName = markov(model, { id: "welsh.town" });
 const ctx = createContext({ seed: "cymru" });
@@ -53,4 +79,6 @@ for (const n of names) console.log(`  • ${n}`);
 // To verify originality:
 const generated = new Set(names.map((n) => n.toLowerCase()));
 const overlap = corpus.filter((c) => generated.has(c));
-console.log(`\nOverlap with training corpus: ${overlap.length} entries (should be 0).`);
+console.log(
+  `\nOverlap with training corpus: ${overlap.length} entries (should be 0).`,
+);

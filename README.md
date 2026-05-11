@@ -15,34 +15,35 @@ const game = fantasy.withSeed("campaign-1");
 const name = game.npc.name.full;
 // → { form: "Drakaztum Ironforge", translation: "Strong-anvil Iron-forge", language: "fantasy.dwarvish" }
 
-name.form;            // "Drakaztum Ironforge" (conlang string)
-name.translation;     // "Strong-anvil Iron-forge" (English morpheme meanings)
-name.toString();      // "Drakaztum Ironforge" (template-string compatible)
+name.form; // "Drakaztum Ironforge" (conlang string)
+name.translation; // "Strong-anvil Iron-forge" (English morpheme meanings)
+name.toString(); // "Drakaztum Ironforge" (template-string compatible)
 ```
 
 ---
 
 ## Why
 
-Most naming libraries treat names as opaque strings. **Lexicon generates names as *meaningful utterances* — each morpheme carries semantic weight.**
+Most naming libraries treat names as opaque strings. **Lexicon generates names as _meaningful utterances_ — each morpheme carries semantic weight.**
 
 Each culture has:
+
 - A **glyph system** (phonotactics): which sounds cluster together, syllable patterns, phonotactic constraints
 - A **lexicon**: meaning ↔ conlang form mappings, derived deterministically from a culture's seed
 - **Templates**: morpheme recipes for personal names, place names, etc.
 
 **Result:** Names like `Drakaztum` (Strong-anvil), `Aelthelan` (Silver-stream), `Krazzivek` (Swarm-signal) — each name is both aesthetically coherent AND semantically meaningful.
 
-| | faker | Tracery | rot.js | **lexiconlang** |
-|---|---|---|---|---|
-| Weighted lists | ✓ | partial | partial | ✓ |
-| Context-free grammars | ✗ | ✓ | ✗ | ✓ (Tracery-compatible) |
-| Markov chains | ✗ | ✗ | ✗ | ✓ |
-| Hierarchical seeds | ✗ | ✗ | partial | ✓ |
-| Sibling-order independence | ✗ | ✗ | ✗ | ✓ |
-| Strategies inter-operate | n/a | ✗ | ✗ | ✓ |
-| Typed | partial | ✗ | partial | ✓ |
-| Tree-shakeable genre packs | ✗ | n/a | ✗ | ✓ |
+|                            | faker   | Tracery | rot.js  | **lexiconlang**        |
+| -------------------------- | ------- | ------- | ------- | ---------------------- |
+| Weighted lists             | ✓       | partial | partial | ✓                      |
+| Context-free grammars      | ✗       | ✓       | ✗       | ✓ (Tracery-compatible) |
+| Markov chains              | ✗       | ✗       | ✗       | ✓                      |
+| Hierarchical seeds         | ✗       | ✗       | partial | ✓                      |
+| Sibling-order independence | ✗       | ✗       | ✗       | ✓                      |
+| Strategies inter-operate   | n/a     | ✗       | ✗       | ✓                      |
+| Typed                      | partial | ✗       | partial | ✓                      |
+| Tree-shakeable genre packs | ✗       | n/a     | ✗       | ✓                      |
 
 ## ✨ What's New in v0.3
 
@@ -93,9 +94,9 @@ const lexicon = buildLexicon(dwarvish, ctx);
 
 // Generate a given name:
 const name = generateName(dwarvish, "given", ctx.child("hero:1"));
-console.log(name.form);        // "Drakaztum"
+console.log(name.form); // "Drakaztum"
 console.log(name.translation); // "Strong-anvil"
-console.log(name.language);    // "fantasy.dwarvish"
+console.log(name.language); // "fantasy.dwarvish"
 ```
 
 ### Full NPC with fantasy integration
@@ -106,9 +107,9 @@ import { fantasy } from "@lexiconlang/fantasy";
 const game = fantasy.withSeed("campaign-7");
 const npc = game.npc;
 
-console.log(npc.name.full.form);        // "Aelyn Stormvale"
+console.log(npc.name.full.form); // "Aelyn Stormvale"
 console.log(npc.name.full.translation); // "Silver-stream Storm-vale"
-console.log(npc.name.full.language);    // "fantasy.elvish"
+console.log(npc.name.full.language); // "fantasy.elvish"
 ```
 
 ### Generate glyphs alongside the name
@@ -123,11 +124,15 @@ const ctx = createContext({ seed: "campaign-1" });
 const name = generateName(elvish, "given", ctx.child("hero"));
 // → { form: "WaeYia", translation: "wild-vine", language: "fantasy.elvish" }
 
-const glyphs = glyphsFor(name, elvish.visualGlyphSystems!.conceptual!, ctx.child("hero"));
+const glyphs = glyphsFor(
+  name,
+  elvish.visualGlyphSystems!.conceptual!,
+  ctx.child("hero"),
+);
 // → { conceptual: [{ id: "g0", meaning: "wild", unicode: "🌿" },
 //                  { id: "g1", meaning: "vine", unicode: "🌿" }] }
 
-glyphs.conceptual?.map(g => g.unicode).join(""); // "🌿🌿"
+glyphs.conceptual?.map((g) => g.unicode).join(""); // "🌿🌿"
 ```
 
 Same seed → byte-identical glyphs. Swap `elvish` for `dwarvish` to get SVG runes; for `humanoid` (sci-fi) to get Canvas drawing instructions. See [examples/09-glyphs.ts](examples/09-glyphs.ts).
@@ -185,9 +190,9 @@ JSON form is equivalent — both compile to the same AST. Modifiers (`cap`, `s`,
 ```ts
 import { markov, train } from "@lexiconlang/markov";
 
-const model = train(["aberffraw", "betws", "caernarfon", /* ... */], {
+const model = train(["aberffraw", "betws", "caernarfon" /* ... */], {
   order: 3,
-  rejectSubstringsOfLength: 6,  // refuse verbatim training entries
+  rejectSubstringsOfLength: 6, // refuse verbatim training entries
 });
 const townName = markov(model);
 townName.generate(ctx); // "Llanrwst" — never seen in training, but feels right
@@ -206,7 +211,7 @@ lexiconlang build-markov ./corpora/welsh-towns.json --out ./models/welsh.json --
 Determinism is the whole point. Three rules:
 
 1. **Every generator pulls its randomness from `ctx.rng`.** They never close over RNGs themselves.
-2. **`ctx.child(label)` derives a new context whose RNG is hashed from the parent's *origin seed* and the label** — not from the parent's stream. This is the key trick: forking sibling A then sibling B gives you the same children regardless of how many times you fork, in what order, or whether you skip some.
+2. **`ctx.child(label)` derives a new context whose RNG is hashed from the parent's _origin seed_ and the label** — not from the parent's stream. This is the key trick: forking sibling A then sibling B gives you the same children regardless of how many times you fork, in what order, or whether you skip some.
 3. **`compose` uses field names as labels.** Reordering or adding fields to your generator type doesn't invalidate any existing field's seed.
 
 ```ts
@@ -217,8 +222,12 @@ const root2 = createContext({ seed: "world" });
 for (let i = 0; i < 100; i++) root1.child(`region:${i}`);
 
 // Both contexts produce the same NPC for the same path:
-const a = npc.generate(root1.child("region:5").child("settlement:11").child("npc:3"));
-const b = npc.generate(root2.child("region:5").child("settlement:11").child("npc:3"));
+const a = npc.generate(
+  root1.child("region:5").child("settlement:11").child("npc:3"),
+);
+const b = npc.generate(
+  root2.child("region:5").child("settlement:11").child("npc:3"),
+);
 // a equals b, byte for byte.
 ```
 
@@ -227,7 +236,9 @@ The PRNG is **sfc32** (128-bit state, passes BigCrush, ~2 ns/call in V8). Forkin
 **Save = seed.** A whole world tree reconstructs from one string. To support player-driven rerolls without disturbing the rest of the world, encode "version" as part of the path:
 
 ```ts
-const ctx = root.child(`region:0/settlement:5`).child(`v:${rerolls[path] ?? 0}`);
+const ctx = root
+  .child(`region:0/settlement:5`)
+  .child(`v:${rerolls[path] ?? 0}`);
 ```
 
 Bumping `v:0` → `v:1` rerolls just that one settlement.
@@ -236,16 +247,16 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 
 ## Packages
 
-| Package | Purpose |
-|---|---|
-| [`@lexiconlang/core`](packages/core) | sfc32 RNG with deterministic string-fork, `Context` tree, `Generator`, composition primitives (`compose`, `oneOf`, `pickOf`, `repeat`, `weightedList`, `map`, `chain`), alias-method sampling, `Registry` |
-| [`@lexiconlang/grammar`](packages/grammar) | Tracery-compatible JSON grammars + TS tagged-template DSL (`t\`...\``); 16 builtin modifiers; plugin-namespace symbol refs (e.g. `#markov:elven#`) |
-| [`@lexiconlang/markov`](packages/markov) | Character-level Markov n-gram trainer + sampler; backoff smoothing; `rejectSubstringsOfLength` for verbatim-rejection; JSON model format |
-| [`@lexiconlang/fantasy`](packages/fantasy) | Genre pack: 9 race-aware Markov name generators, NPCs, settlements, taverns, factions, cults, weapons, armor, dragons, quest hooks (~35 generators) |
-| [`@lexiconlang/scifi`](packages/scifi) | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators) |
-| [`@lexiconlang/glyphs`](packages/glyphs) | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies |
-| [`@lexiconlang/modern`](packages/modern) | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators) |
-| [`@lexiconlang/cli`](packages/cli) | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack` |
+| Package                                    | Purpose                                                                                                                                                                                                   |
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`@lexiconlang/core`](packages/core)       | sfc32 RNG with deterministic string-fork, `Context` tree, `Generator`, composition primitives (`compose`, `oneOf`, `pickOf`, `repeat`, `weightedList`, `map`, `chain`), alias-method sampling, `Registry` |
+| [`@lexiconlang/grammar`](packages/grammar) | Tracery-compatible JSON grammars + TS tagged-template DSL (`t\`...\``); 16 builtin modifiers; plugin-namespace symbol refs (e.g. `#markov:elven#`)                                                        |
+| [`@lexiconlang/markov`](packages/markov)   | Character-level Markov n-gram trainer + sampler; backoff smoothing; `rejectSubstringsOfLength` for verbatim-rejection; JSON model format                                                                  |
+| [`@lexiconlang/fantasy`](packages/fantasy) | Genre pack: 9 race-aware Markov name generators, NPCs, settlements, taverns, factions, cults, weapons, armor, dragons, quest hooks (~35 generators)                                                       |
+| [`@lexiconlang/scifi`](packages/scifi)     | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators)                                                                |
+| [`@lexiconlang/glyphs`](packages/glyphs)   | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies                                                           |
+| [`@lexiconlang/modern`](packages/modern)   | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators)                                                                                        |
+| [`@lexiconlang/cli`](packages/cli)         | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack`                                                                                                                                         |
 
 All packages ESM-only, `sideEffects: false`, no native deps.
 
@@ -255,17 +266,17 @@ All packages ESM-only, `sideEffects: false`, no native deps.
 
 Self-contained, runnable demos in [examples/](examples/) covering common consumer tasks:
 
-| | |
-|---|---|
-| [01-quickstart](examples/01-quickstart.ts)            | pin a seed, get content |
-| [02-batch-patrons](examples/02-batch-patrons.ts)      | `repeat()` for batch generation |
-| [03-world-tree](examples/03-world-tree.ts)            | hierarchical, lazily-generated worlds |
-| [04-custom-generator](examples/04-custom-generator.ts) | composing your own `Generator<T>` |
-| [05-custom-grammar](examples/05-custom-grammar.ts)    | Tracery grammars in JSON or TS template + custom modifiers |
-| [06-custom-markov](examples/06-custom-markov.ts)      | training a Markov on your own corpus |
-| [07-seed-and-reroll](examples/07-seed-and-reroll.ts)  | save/load by seed; partial rerolls |
-| [08-cross-genre](examples/08-cross-genre.ts)          | mixing fantasy + sci-fi + modern packs |
-| [09-glyphs](examples/09-glyphs.ts)                    | visual writing systems: SVG runes, Unicode ideograms, Canvas glyphs |
+|                                                        |                                                                     |
+| ------------------------------------------------------ | ------------------------------------------------------------------- |
+| [01-quickstart](examples/01-quickstart.ts)             | pin a seed, get content                                             |
+| [02-batch-patrons](examples/02-batch-patrons.ts)       | `repeat()` for batch generation                                     |
+| [03-world-tree](examples/03-world-tree.ts)             | hierarchical, lazily-generated worlds                               |
+| [04-custom-generator](examples/04-custom-generator.ts) | composing your own `Generator<T>`                                   |
+| [05-custom-grammar](examples/05-custom-grammar.ts)     | Tracery grammars in JSON or TS template + custom modifiers          |
+| [06-custom-markov](examples/06-custom-markov.ts)       | training a Markov on your own corpus                                |
+| [07-seed-and-reroll](examples/07-seed-and-reroll.ts)   | save/load by seed; partial rerolls                                  |
+| [08-cross-genre](examples/08-cross-genre.ts)           | mixing fantasy + sci-fi + modern packs                              |
+| [09-glyphs](examples/09-glyphs.ts)                     | visual writing systems: SVG runes, Unicode ideograms, Canvas glyphs |
 
 ```bash
 pnpm install
@@ -313,7 +324,7 @@ CI runs typecheck + build + test on Node 20 and 22, plus a CLI smoke test, and u
 
 - **v0.1** — deterministic core, grammar, Markov, fantasy/scifi/modern packs, CLI.
 - **v0.2** — `@lexiconlang/language`: phoneme/syllable system, per-culture phonotactics, morpheme-rich names with English translations.
-- **v0.3** *(current)* — `@lexiconlang/glyphs`: visual writing systems (SVG / Unicode / Canvas) with per-culture glyph registries and three mapping strategies.
+- **v0.3** _(current)_ — `@lexiconlang/glyphs`: visual writing systems (SVG / Unicode / Canvas) with per-culture glyph registries and three mapping strategies.
 - **v0.4** — `@lexiconlang/llm`: bake-out CLI (recipe + Zod schema → validated weighted-list JSON) + live `AsyncGenerator` with content-addressed cache (`hash(prompt, scope, seed, model)`). Cache is shippable — play through your game once, commit the cache, ship a fully deterministic offline build.
 - **v0.5+** — browser playground for visualizing glyph systems, additional culture glyphs (orcish, halfling, draconic), CLI glyph rendering, additional packs (cyberpunk, post-apoc, historical).
 

@@ -40,12 +40,18 @@ for (let r = 0; r < regionNames.length; r++) {
   const capital = cityName.generate(region.child("capital"));
   const landmark = landmarkName.generate(region.child("landmark"));
 
-  console.log(`\n${regionNames[r]} — capital: ${capital}, landmark: ${landmark}`);
+  console.log(
+    `\n${regionNames[r]} — capital: ${capital}, landmark: ${landmark}`,
+  );
 
   // 2 settlements per region.
-  const settlements = repeat(settlement, 2).generate(region.child("settlements"));
+  const settlements = repeat(settlement, 2).generate(
+    region.child("settlements"),
+  );
   for (const s of settlements) {
-    console.log(`  ${s.name} (${s.kind}, pop. ${s.population.toLocaleString()})`);
+    console.log(
+      `  ${s.name} (${s.kind}, pop. ${s.population.toLocaleString()})`,
+    );
     console.log(`    ruler: ${s.leader.name.full}, the ${s.leader.occupation}`);
 
     // 3 noteworthy NPCs per settlement.
@@ -54,7 +60,9 @@ for (let r = 0; r < regionNames.length; r++) {
     for (const role of noteworthy) {
       const ctx = region.child(`settlement:${s.name}`).child(`npc:${role}`);
       const n = npc.generate(ctx);
-      console.log(`    ${role.padEnd(15)} ${n.name.full} (${n.name.race}, ${n.age})`);
+      console.log(
+        `    ${role.padEnd(15)} ${n.name.full} (${n.name.race}, ${n.age})`,
+      );
     }
   }
 }
@@ -63,10 +71,15 @@ for (let r = 0; r < regionNames.length; r++) {
 // from a brand-new context — no traversal needed.
 const fresh = createContext({ seed: "campaign-of-iron" });
 const elder = npc.generate(
-  fresh.child("region:0").child("settlement:Northmarch-direct").child("npc:village-elder"),
+  fresh
+    .child("region:0")
+    .child("settlement:Northmarch-direct")
+    .child("npc:village-elder"),
 );
 
 console.log("\nDirect lookup (no parent traversal):");
 console.log(`  region:0 → settlement:Northmarch-direct → npc:village-elder`);
 console.log(`  → ${elder.name.full}, ${elder.age}`);
-console.log("Same path always yields the same NPC, today, tomorrow, on any machine.");
+console.log(
+  "Same path always yields the same NPC, today, tomorrow, on any machine.",
+);

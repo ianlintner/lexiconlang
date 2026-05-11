@@ -3,7 +3,15 @@
   "version": "0.2.0",
   "private": false,
   "description": "Procedural constructed language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming",
-  "keywords": ["conlang", "constructed-language", "procedural-generation", "names", "worldbuilding", "deterministic", "seeded-rng"],
+  "keywords": [
+    "conlang",
+    "constructed-language",
+    "procedural-generation",
+    "names",
+    "worldbuilding",
+    "deterministic",
+    "seeded-rng"
+  ],
   "homepage": "https://github.com/ianlintner/lexiconlang#readme",
   "bugs": {
     "url": "https://github.com/ianlintner/lexiconlang/issues"
@@ -42,6 +50,8 @@
     "vitest": "^4.1.5"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
