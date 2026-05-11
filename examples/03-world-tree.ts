@@ -1,6 +1,6 @@
 // 03-world-tree — hierarchical, lazily-generated world content.
 //
-// The killer feature of content-gen's seeding model:
+// The killer feature of lexiconlang's seeding model:
 //
 //     world  → region:N → settlement:M → npc:K
 //

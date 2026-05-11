@@ -41,4 +41,4 @@ const fixtures = repeat(person, 100).generate(
 
 Re-run your tests — same 100 users, same names, same emails, same addresses.
 
-See the [package source](https://github.com/ianlintner/content-gen/tree/main/packages/modern) for the full list.
+See the [package source](https://github.com/ianlintner/lexiconlang/tree/main/packages/modern) for the full list.

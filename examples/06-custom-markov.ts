@@ -11,7 +11,7 @@
 //     important for originality and any rights/attribution concerns.
 //   - For production you'd usually run the trainer offline via the CLI:
 //
-//       content-gen build-markov ./corpus.json --out ./model.json --order 3
+//       lexiconlang build-markov ./corpus.json --out ./model.json --order 3
 //
 //     and ship the JSON model with your game so loading is instant.
 //

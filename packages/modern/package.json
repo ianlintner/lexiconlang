@@ -1,7 +1,7 @@
 {
   "name": "@lexiconlang/modern",
-  "version": "0.1.0",
-  "description": "Modern-day genre content pack for content-gen — names, cities, companies, streets",
+  "version": "0.2.0",
+  "description": "Modern-day genre content pack for lexiconlang — names, cities, companies, streets",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,11 @@
       "import": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "README.md"],
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "sideEffects": false,
   "scripts": {
     "build": "tsc -b",

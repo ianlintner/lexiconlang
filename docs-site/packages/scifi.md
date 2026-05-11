@@ -49,4 +49,4 @@ import {
 } from "@lexiconlang/scifi";
 ```
 
-See the [package source](https://github.com/ianlintner/content-gen/tree/main/packages/scifi) for the full list.
+See the [package source](https://github.com/ianlintner/lexiconlang/tree/main/packages/scifi) for the full list.

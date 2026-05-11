@@ -123,5 +123,5 @@ memory or IndexedDB if you're rendering thousands.
 
 ## See also
 
-- [Runnable example](https://github.com/ianlintner/content-gen/blob/main/examples/09-glyphs.ts) — walks all three formats with output.
+- [Runnable example](https://github.com/ianlintner/lexiconlang/blob/main/examples/09-glyphs.ts) — walks all three formats with output.
 - [Package reference](/packages/glyphs) — full API.

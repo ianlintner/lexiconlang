@@ -61,4 +61,4 @@ import {
 } from "@lexiconlang/fantasy";
 ```
 
-See the [package source](https://github.com/ianlintner/content-gen/tree/main/packages/fantasy) for the full list.
+See the [package source](https://github.com/ianlintner/lexiconlang/tree/main/packages/fantasy) for the full list.

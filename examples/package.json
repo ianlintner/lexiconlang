@@ -1,8 +1,8 @@
 {
   "name": "examples",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-  "description": "Runnable examples for content-gen",
+  "description": "Runnable examples for lexiconlang",
   "type": "module",
   "scripts": {
     "quickstart": "tsx 01-quickstart.ts",

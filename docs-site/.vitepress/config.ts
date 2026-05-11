@@ -4,12 +4,12 @@ export default defineConfig({
   title: "Lexiconlang",
   description:
     "Procedural constructed-language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming.",
-  base: "/content-gen/",
+  base: "/lexiconlang/",
   cleanUrls: true,
   lastUpdated: true,
 
   head: [
-    ["link", { rel: "icon", href: "/content-gen/favicon.svg", type: "image/svg+xml" }],
+    ["link", { rel: "icon", href: "/lexiconlang/favicon.svg", type: "image/svg+xml" }],
     ["meta", { name: "theme-color", content: "#8b5cf6" }],
   ],
 
@@ -25,7 +25,7 @@ export default defineConfig({
       {
         text: "v0.3",
         items: [
-          { text: "Changelog", link: "https://github.com/ianlintner/content-gen/releases" },
+          { text: "Changelog", link: "https://github.com/ianlintner/lexiconlang/releases" },
           { text: "npm", link: "https://www.npmjs.com/package/lexiconlang" },
         ],
       },
@@ -90,13 +90,13 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/ianlintner/content-gen" },
+      { icon: "github", link: "https://github.com/ianlintner/lexiconlang" },
       { icon: "npm", link: "https://www.npmjs.com/package/lexiconlang" },
     ],
 
     editLink: {
       pattern:
-        "https://github.com/ianlintner/content-gen/edit/main/docs-site/:path",
+        "https://github.com/ianlintner/lexiconlang/edit/main/docs-site/:path",
       text: "Edit this page on GitHub",
     },
 

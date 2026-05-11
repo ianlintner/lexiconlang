@@ -3,10 +3,10 @@ import { parseArgs } from "./args.js";
 import { runBuildMarkov } from "./commands/build-markov.js";
 import { runScaffoldPack } from "./commands/scaffold-pack.js";
 
-const HELP = `content-gen — generative content toolkit
+const HELP = `lexiconlang — generative content toolkit
 
 Usage:
-  content-gen <command> [options]
+  lexiconlang <command> [options]
 
 Commands:
   build-markov <input.json> --out <model.json>

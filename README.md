@@ -1,7 +1,7 @@
 # Lexicon · v0.3.0
 
 [![npm](https://img.shields.io/npm/v/lexiconlang)](https://www.npmjs.com/package/lexiconlang)
-[![CI](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml)
+[![CI](https://github.com/ianlintner/lexiconlang/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/lexiconlang/actions/workflows/ci.yml)
 
 **Procedural constructed-language generation: deterministic, seeded conlangs with phonotactics, lexicons, and culture-specific naming.**
 
@@ -196,7 +196,7 @@ townName.generate(ctx); // "Llanrwst" — never seen in training, but feels righ
 For production: train offline via the CLI and ship the precomputed JSON model.
 
 ```bash
-content-gen build-markov ./corpora/welsh-towns.json --out ./models/welsh.json --order 3
+lexiconlang build-markov ./corpora/welsh-towns.json --out ./models/welsh.json --order 3
 ```
 
 ---
@@ -245,7 +245,7 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 | [`@lexiconlang/scifi`](packages/scifi) | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators) |
 | [`@lexiconlang/glyphs`](packages/glyphs) | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies |
 | [`@lexiconlang/modern`](packages/modern) | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators) |
-| [`@lexiconlang/cli`](packages/cli) | `content-gen` command-line tool — `build-markov`, `scaffold-pack` |
+| [`@lexiconlang/cli`](packages/cli) | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack` |
 
 All packages ESM-only, `sideEffects: false`, no native deps.
 
@@ -277,16 +277,16 @@ pnpm --filter examples all
 
 ## CLI
 
-The `@lexiconlang/cli` package installs a `content-gen` binary:
+The `@lexiconlang/cli` package installs a `lexiconlang` binary:
 
 ```bash
 # Train a Markov model from a corpus and save the precomputed table.
-content-gen build-markov ./corpus.json --out ./model.json \
+lexiconlang build-markov ./corpus.json --out ./model.json \
   --order 3 --min-length 4 --max-length 12 \
   --reject-substrings-of-length 5
 
 # Scaffold a new genre pack package.
-content-gen scaffold-pack noir --dir ./packages
+lexiconlang scaffold-pack noir --dir ./packages
 ```
 
 The corpus is either a JSON `string[]`, an array of `{ word, weight }`, or a newline-delimited text file (lines starting with `#` are ignored).
@@ -321,7 +321,7 @@ CI runs typecheck + build + test on Node 20 and 22, plus a CLI smoke test, and u
 
 ## Prior art and credit
 
-- [Tracery](https://tracery.io/) (Kate Compton) — `content-gen` adopts its `#symbol#` grammar conventions and modifier model. JSON grammars from Tracery are mostly source-compatible.
+- [Tracery](https://tracery.io/) (Kate Compton) — `lexiconlang` adopts its `#symbol#` grammar conventions and modifier model. JSON grammars from Tracery are mostly source-compatible.
 - [markov-namegen](https://github.com/Tw1ddle/markov-namegen-lib) (Tw1ddle) — Markov-process-based name generation; the verbatim-rejection idea is borrowed from this lineage.
 - [Dwarf Fortress](https://dwarffortresswiki.org/index.php/Language) (Bay 12) — the "every culture has a language with words for things; names are compositions of meanings" model that v0.2's phonology system is built around.
 - [Faker.js](https://fakerjs.dev/), [Chance.js](https://chancejs.com/), [rot.js](https://ondras.github.io/rot.js/), [Improv](https://github.com/sequitur/improv), [Bracery](https://github.com/ihh/bracery) — each tackles one slice of this problem; this library aims to absorb the best of each behind one composable interface.

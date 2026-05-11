@@ -42,7 +42,7 @@ describe("sample-output integration", () => {
     const ctx = createContext({ seed: SEED });
     const out: string[] = [];
 
-    out.push(`content-gen sample output\n`);
+    out.push(`lexiconlang sample output\n`);
     out.push(`seed: ${SEED}\n`);
     out.push(`generated: deterministic — re-running this test must produce identical content\n`);
 
