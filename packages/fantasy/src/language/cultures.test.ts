@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { dwarvish, elvish } from "./cultures.js";
+import { celestial, dwarvish, elvish, fey, tiefling } from "./cultures.js";
+import { createContext } from "@lexiconlang/core";
+import { generateName } from "@lexiconlang/language";
 
 describe("fantasy cultures visual glyph systems", () => {
   describe("dwarvish culture", () => {
@@ -69,5 +71,92 @@ describe("fantasy cultures visual glyph systems", () => {
       expect(conceptual.renderParams).toBeDefined();
       expect(conceptual.renderParams!.fallback).toBe("◆");
     });
+  });
+});
+
+describe("celestial culture", () => {
+  it("has visualGlyphSystems.conceptual defined", () => {
+    expect(celestial.visualGlyphSystems?.conceptual).toBeDefined();
+  });
+
+  it("conceptual glyph system uses unicode morpheme mapping", () => {
+    const g = celestial.visualGlyphSystems!.conceptual;
+    expect(g.id).toBe("celestial.radiance");
+    expect(g.type).toBe("conceptual");
+    expect(g.renderFormat).toBe("unicode");
+    expect(g.mappingStrategy).toBe("morpheme");
+    expect(g.unicodeMappings!.light).toBe("✨");
+    expect(g.unicodeMappings!.dawn).toBe("☀");
+    expect(g.unicodeMappings!.grace).toBe("⚜");
+    expect(g.unicodeMappings!.wing).toBe("🪶");
+    expect(g.unicodeMappings!.sacred).toBe("✝");
+    expect(g.renderParams!.fallback).toBe("◇");
+  });
+
+  it("generates a non-empty given name", () => {
+    const ctx = createContext({ seed: "celestial-given" });
+    const name = generateName(celestial, "given", ctx);
+    expect(name.form.length).toBeGreaterThan(0);
+  });
+
+  it("generates a non-empty surname", () => {
+    const ctx = createContext({ seed: "celestial-surname" });
+    const name = generateName(celestial, "surname", ctx);
+    expect(name.form.length).toBeGreaterThan(0);
+  });
+});
+
+describe("fey culture", () => {
+  it("has visualGlyphSystems.phonetic defined", () => {
+    expect(fey.visualGlyphSystems?.phonetic).toBeDefined();
+  });
+
+  it("phonetic glyph system is SVG with mossy/violet palette", () => {
+    const g = fey.visualGlyphSystems!.phonetic;
+    expect(g.id).toBe("fey.sylvan");
+    expect(g.type).toBe("alphabet");
+    expect(g.renderFormat).toBe("svg");
+    expect(g.generator!.baseShapes).toContain("arc");
+    expect(g.generator!.palette).toEqual(["#556B2F", "#9370DB"]);
+  });
+
+  it("generates a non-empty given name", () => {
+    const ctx = createContext({ seed: "fey-given" });
+    const name = generateName(fey, "given", ctx);
+    expect(name.form.length).toBeGreaterThan(0);
+  });
+
+  it("generates a non-empty surname", () => {
+    const ctx = createContext({ seed: "fey-surname" });
+    const name = generateName(fey, "surname", ctx);
+    expect(name.form.length).toBeGreaterThan(0);
+  });
+});
+
+describe("tiefling culture", () => {
+  it("has visualGlyphSystems.phonetic defined", () => {
+    expect(tiefling.visualGlyphSystems?.phonetic).toBeDefined();
+  });
+
+  it("phonetic glyph system is complex SVG with ember palette", () => {
+    const g = tiefling.visualGlyphSystems!.phonetic;
+    expect(g.id).toBe("tiefling.infernal");
+    expect(g.type).toBe("alphabet");
+    expect(g.renderFormat).toBe("svg");
+    expect(g.generator!.complexity).toBe("complex");
+    expect(g.generator!.palette).toEqual(["#8B0000", "#2F2F2F"]);
+    expect(g.generator!.baseShapes).toContain("polygon");
+  });
+
+  it("generates a non-empty given name", () => {
+    const ctx = createContext({ seed: "tiefling-given" });
+    const name = generateName(tiefling, "given", ctx);
+    expect(name.form.length).toBeGreaterThan(0);
+  });
+
+  it("generates a non-empty surname", () => {
+    const ctx = createContext({ seed: "tiefling-surname" });
+    const name = generateName(tiefling, "surname", ctx);
+    expect(name.form.length).toBeGreaterThan(0);
   });
 });
