@@ -77,7 +77,7 @@ function renderTemplate(
   }
 
   const form = forms.join(template.sep ?? "");
-  const translation = translations.join(template.sep ?? "-");
+  const translation = translations.join(template.transSep ?? "-");
 
   return { form, translation, parts };
 }

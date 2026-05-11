@@ -13,12 +13,15 @@
     "custom-markov": "tsx 06-custom-markov.ts",
     "reroll": "tsx 07-seed-and-reroll.ts",
     "cross-genre": "tsx 08-cross-genre.ts",
+    "glyphs": "tsx 09-glyphs.ts",
     "all": "tsx _run-all.ts"
   },
   "dependencies": {
     "@lexicon/core": "workspace:*",
     "@lexicon/grammar": "workspace:*",
     "@lexicon/markov": "workspace:*",
+    "@lexicon/language": "workspace:*",
+    "@lexicon/glyphs": "workspace:*",
     "@lexicon/fantasy": "workspace:*",
     "@lexicon/scifi": "workspace:*",
     "@lexicon/modern": "workspace:*"

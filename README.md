@@ -1,4 +1,4 @@
-You# Lexicon · v0.2.0
+# Lexicon · v0.3.0
 
 [![npm](https://img.shields.io/npm/v/lexicon-conlang)](https://www.npmjs.com/package/lexicon-conlang)
 [![CI](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/ianlintner/content-gen/actions/workflows/ci.yml)
@@ -44,6 +44,15 @@ Each culture has:
 | Typed | partial | ✗ | partial | ✓ |
 | Tree-shakeable genre packs | ✗ | n/a | ✗ | ✓ |
 
+## ✨ What's New in v0.3
+
+- **Visual glyph systems**: cultures can declare a `visualGlyphSystem` that renders names as glyphs — SVG runes, Unicode ideograms, or Canvas drawing instructions — derived from the same seed as the name itself.
+- **Three renderers**: SVG (compact inline vectors, ~2–5 ms/glyph), Unicode (instant character lookup), Canvas (replayable drawing-instruction sequences).
+- **Three mapping strategies**: phoneme (one glyph per phonetic unit), morpheme (one glyph per meaning component), holistic (one glyph for the whole name).
+- **Fantasy & sci-fi presets** ship with glyph systems: dwarvish runes (SVG), elvish ideograms (Unicode), humanoid geometry (Canvas), insectoid chitin (SVG).
+- **No breaking changes**: glyphs are opt-in. `TranslatedName.glyphs` and `Culture.visualGlyphSystems` are both optional.
+- **Minor template fix**: `NameTemplate` now supports an optional `transSep` so a culture can set `sep: ""` for the conlang form while keeping `-` as the translation separator (needed for morpheme-based glyph mapping).
+
 ## ✨ What's New in v0.2
 
 - **Full language system**: Glyph systems, phonotactics, deterministic lexicon generation
@@ -61,6 +70,8 @@ Each culture has:
 pnpm add @lexicon/language @lexicon/fantasy
 # or sci-fi:
 pnpm add @lexicon/scifi
+# add visual glyphs:
+pnpm add @lexicon/glyphs
 # add generators for other content types:
 pnpm add @lexicon/grammar @lexicon/markov @lexicon/core
 ```
@@ -99,6 +110,27 @@ console.log(npc.name.full.form);        // "Aelyn Stormvale"
 console.log(npc.name.full.translation); // "Silver-stream Storm-vale"
 console.log(npc.name.full.language);    // "fantasy.elvish"
 ```
+
+### Generate glyphs alongside the name
+
+```ts
+import { createContext } from "@lexicon/core";
+import { generateName } from "@lexicon/language";
+import { glyphsFor } from "@lexicon/glyphs";
+import { elvish } from "@lexicon/fantasy";
+
+const ctx = createContext({ seed: "campaign-1" });
+const name = generateName(elvish, "given", ctx.child("hero"));
+// → { form: "WaeYia", translation: "wild-vine", language: "fantasy.elvish" }
+
+const glyphs = glyphsFor(name, elvish.visualGlyphSystems!.conceptual!, ctx.child("hero"));
+// → { conceptual: [{ id: "g0", meaning: "wild", unicode: "🌿" },
+//                  { id: "g1", meaning: "vine", unicode: "🌿" }] }
+
+glyphs.conceptual?.map(g => g.unicode).join(""); // "🌿🌿"
+```
+
+Same seed → byte-identical glyphs. Swap `elvish` for `dwarvish` to get SVG runes; for `humanoid` (sci-fi) to get Canvas drawing instructions. See [examples/09-glyphs.ts](examples/09-glyphs.ts).
 
 ### Sci-fi alien names
 
@@ -211,6 +243,7 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 | [`@lexicon/markov`](packages/markov) | Character-level Markov n-gram trainer + sampler; backoff smoothing; `rejectSubstringsOfLength` for verbatim-rejection; JSON model format |
 | [`@lexicon/fantasy`](packages/fantasy) | Genre pack: 9 race-aware Markov name generators, NPCs, settlements, taverns, factions, cults, weapons, armor, dragons, quest hooks (~35 generators) |
 | [`@lexicon/scifi`](packages/scifi) | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators) |
+| [`@lexicon/glyphs`](packages/glyphs) | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies |
 | [`@lexicon/modern`](packages/modern) | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators) |
 | [`@lexicon/cli`](packages/cli) | `content-gen` command-line tool — `build-markov`, `scaffold-pack` |
 
@@ -232,6 +265,7 @@ Self-contained, runnable demos in [examples/](examples/) covering common consume
 | [06-custom-markov](examples/06-custom-markov.ts)      | training a Markov on your own corpus |
 | [07-seed-and-reroll](examples/07-seed-and-reroll.ts)  | save/load by seed; partial rerolls |
 | [08-cross-genre](examples/08-cross-genre.ts)          | mixing fantasy + sci-fi + modern packs |
+| [09-glyphs](examples/09-glyphs.ts)                    | visual writing systems: SVG runes, Unicode ideograms, Canvas glyphs |
 
 ```bash
 pnpm install
@@ -277,10 +311,11 @@ CI runs typecheck + build + test on Node 20 and 22, plus a CLI smoke test, and u
 
 ## Roadmap
 
-- **v0.1** *(current)* — deterministic core, grammar, Markov, fantasy/scifi/modern packs, CLI.
-- **v0.2** — `@lexicon/phonology`: phoneme/syllable language system. Per-culture phonotactics; a fictional language has consistent words for "iron" and "mountain", so `placeName(["iron","mountain.gen"])` yields `"Khorum-tha"` and the player can be told what it means. Translation as a free byproduct.
-- **v0.3** — `@lexicon/llm`: bake-out CLI (recipe + Zod schema → validated weighted-list JSON) + live `AsyncGenerator` with content-addressed cache (`hash(prompt, scope, seed, model)`). Cache is shippable — play through your game once, commit the cache, ship a fully deterministic offline build.
-- **v0.4+** — modern pack expansion, web playground/authoring tools, additional packs (cyberpunk, post-apoc, historical).
+- **v0.1** — deterministic core, grammar, Markov, fantasy/scifi/modern packs, CLI.
+- **v0.2** — `@lexicon/language`: phoneme/syllable system, per-culture phonotactics, morpheme-rich names with English translations.
+- **v0.3** *(current)* — `@lexicon/glyphs`: visual writing systems (SVG / Unicode / Canvas) with per-culture glyph registries and three mapping strategies.
+- **v0.4** — `@lexicon/llm`: bake-out CLI (recipe + Zod schema → validated weighted-list JSON) + live `AsyncGenerator` with content-addressed cache (`hash(prompt, scope, seed, model)`). Cache is shippable — play through your game once, commit the cache, ship a fully deterministic offline build.
+- **v0.5+** — browser playground for visualizing glyph systems, additional culture glyphs (orcish, halfling, draconic), CLI glyph rendering, additional packs (cyberpunk, post-apoc, historical).
 
 ---
 

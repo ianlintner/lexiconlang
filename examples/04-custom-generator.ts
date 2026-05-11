@@ -56,7 +56,7 @@ const rank = weightedList<IronKnight["rank"]>(
 const ironKnight: Generator<IronKnight> = compose<IronKnight>({
   id: "ironknight",
   parts: {
-    name: (ctx) => fullName.generate(ctx).full,
+    name: (ctx) => String(fullName.generate(ctx).full),
     house,
     sword,
     motto,

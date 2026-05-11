@@ -18,7 +18,7 @@ const partyOfSix = repeat(npc, 6).generate(tavernSeed.child("party"));
 
 console.log("Adventuring party of six:");
 for (const member of partyOfSix) {
-  console.log(`  • ${member.name.full.padEnd(28)} ${member.name.race.padEnd(10)} ${member.occupation}`);
+  console.log(`  • ${String(member.name.full).padEnd(28)} ${member.name.race.padEnd(10)} ${member.occupation}`);
 }
 
 // Variable-size patrons (between 5 and 12 — count is itself RNG-driven).
@@ -27,7 +27,7 @@ const patrons = repeat(npc, { min: 5, max: 12 }).generate(tavernSeed.child("patr
 console.log(`\n${patrons.length} patrons in the tavern tonight:`);
 for (const p of patrons) {
   const nickname = p.personality.quirk;
-  console.log(`  • ${p.name.full.padEnd(28)} (${nickname})`);
+  console.log(`  • ${String(p.name.full).padEnd(28)} (${nickname})`);
 }
 
 // Demonstrating stability: ask for the same thing again from a fresh seed.

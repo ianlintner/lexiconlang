@@ -14,6 +14,8 @@ import { markov, train } from "@lexicon/markov";
 import { generateName, type TranslatedName } from "@lexicon/language";
 import { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
 
+export { humanoid, insectoid, aquatic, synth, birdpeople, rockpeople, mycoids, mammalian, plantoid } from "./language/cultures.js";
+
 // ─── Corpora for alien-sounding names (deprecated) ──────────────────────
 
 const alienHumanoid = [

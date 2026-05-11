@@ -32,9 +32,15 @@ importers:
       '@lexicon/fantasy':
         specifier: workspace:*
         version: link:../packages/fantasy
+      '@lexicon/glyphs':
+        specifier: workspace:*
+        version: link:../packages/glyphs
       '@lexicon/grammar':
         specifier: workspace:*
         version: link:../packages/grammar
+      '@lexicon/language':
+        specifier: workspace:*
+        version: link:../packages/language
       '@lexicon/markov':
         specifier: workspace:*
         version: link:../packages/markov

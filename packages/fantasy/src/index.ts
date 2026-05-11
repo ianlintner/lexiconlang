@@ -45,6 +45,8 @@ import {
   mycanoids,
 } from "./language/cultures.js";
 
+export { dwarvish, elvish, orcish, halfling, draconic, plantoid, mycanoids } from "./language/cultures.js";
+
 // ─── Culture mapping ─────────────────────────────────────────────────────
 
 function raceToCulture(race: Race): Culture {

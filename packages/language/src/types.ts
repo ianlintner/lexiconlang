@@ -114,7 +114,7 @@ export interface NameTemplates {
 }
 
 export type NameTemplate =
-  | { kind: "compose"; parts: readonly TemplatePart[]; sep?: string }
+  | { kind: "compose"; parts: readonly TemplatePart[]; sep?: string; transSep?: string }
   | { kind: "literal"; form: string; translation: string };
 
 export type TemplatePart =
