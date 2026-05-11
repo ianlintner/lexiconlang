@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="16" fill="url(#bg)"/>
+
+  <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.85">
+    <!-- glyph 1: angular rune -->
+    <path d="M 30 60 L 30 110 M 30 85 L 55 85 M 55 60 L 55 110"/>
+    <!-- glyph 2: circle with cross -->
+    <circle cx="95" cy="85" r="22"/>
+    <path d="M 95 65 L 95 105 M 75 85 L 115 85"/>
+    <!-- glyph 3: triangle stack -->
+    <path d="M 140 110 L 165 60 L 190 110 Z"/>
+    <path d="M 152 85 L 178 85"/>
+    <!-- glyph 4: spiral -->
+    <path d="M 230 85 A 18 18 0 1 1 230 84.99 M 230 85 A 12 12 0 0 1 230 84.99 M 230 85 A 6 6 0 1 1 230 84.99"/>
+    <!-- glyph 5: angled marks -->
+    <path d="M 270 60 L 295 85 L 270 110 M 280 60 L 305 85 L 280 110"/>
+  </g>
+
+  <g stroke="currentColor" stroke-width="1.4" opacity="0.4" fill="none">
+    <path d="M 30 145 L 305 145"/>
+    <path d="M 30 158 L 305 158"/>
+  </g>
+</svg>
