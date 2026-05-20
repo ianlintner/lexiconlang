@@ -23,7 +23,7 @@
     "@lexiconlang/language": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "^5.7.3",
-    "vitest": "^2.1.9"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
   }
 }
