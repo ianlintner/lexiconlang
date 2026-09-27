@@ -66,12 +66,15 @@ function findPnpmSetupSteps(text: string): PnpmSetupStep[] {
 
     // Indent at which the `uses:` key starts; anything less indented ends the
     // step. `- ` on a sequence entry sits before the key and is not indent.
+    // Note: group 2 is the optional `- ` sequence marker, group 3 is the ref.
     const keyIndent = match[1]!.length + (match[2]?.length ?? 0);
 
     let version: string | undefined;
     for (let j = i + 1; j < lines.length; j++) {
       const line = lines[j]!;
-      if (line.trim() === "") continue;
+      // A blank line is a legal YAML step separator: a step's `with:` block
+      // cannot be interrupted by one, so terminate the scan rather than skip.
+      if (line.trim() === "") break;
 
       const lineIndent = line.length - line.trimStart().length;
       if (lineIndent < keyIndent) break;
@@ -83,7 +86,7 @@ function findPnpmSetupSteps(text: string): PnpmSetupStep[] {
       }
     }
 
-    steps.push({ line: i + 1, ref: match[2]!, version });
+    steps.push({ line: i + 1, ref: match[3]!, version });
   }
 
   return steps;
