@@ -29,7 +29,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # @changesets/cli v3 requires Node.js >=22.11 to run releases.
+          node-version: "22"
           cache: "pnpm"
 
       - name: Install dependencies
