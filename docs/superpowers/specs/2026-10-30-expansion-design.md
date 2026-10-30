@@ -165,7 +165,7 @@ export interface NameStructure {
 export interface StructuredNameInput {
   structure: string;
   gender?: Gender;
-  values?: Readonly<Record<string, TranslatedName>>;
+  values?: Readonly<Record<string, TranslatedName>>; // keyed by NameSlot source.field
   locale?: string;
 }
 export interface StructuredName {
@@ -444,8 +444,32 @@ type GeneratorData = GeneratorMetadata & (
 ```
 
 `output` must match the selected engine; schema uses discriminated `oneOf` variants.
-Grammar choices use the current `#symbol#` syntax and builtin modifiers only.
-Rule keys are unique local tokens; grammar external refs must name string-output generators.
+Grammar choices use `#...#` reference tokens and builtin modifiers only.
+Rule keys are unique local tokens matching `[A-Za-z_][A-Za-z0-9_-]*` (no `.`, `/`, `<` or `>`).
+Grammar external refs must name string-output generators by full ID in angle brackets.
+The legacy TS parser splits a reference on top-level dots (`packages/grammar/src/parser.ts`),
+so a bare `#acme.sail/generator/motto#` would read as symbol `acme` plus a modifier.
+The portable profile therefore defines its own reference grammar instead of reusing that split:
+
+```text
+ref      = "#" head *( "." modifier ) "#"
+head     = rule-key / "<" full-id ">"
+modifier = name [ "(" [ arg *( "," arg ) ] ")" ]   ; args are trimmed literal strings
+```
+
+- `#rule#`, `#rule.capitalize#`: local rule key, then modifiers split on top-level `.`.
+- `#<acme.sail/generator/motto>#`, `#<acme.sail/generator/motto>.capitalize.s#`: the bracketed
+  head is read verbatim up to the first `>` and must match the full `ResourceId` syntax of
+  section 6; modifiers attach only after the closing `>`.
+- A `/` outside brackets (e.g. bare `#acme.sail/generator/motto#`), an unterminated `<`, an
+  empty head, an unknown rule key/generator or an unknown modifier name is a `REFERENCE`
+  diagnostic at validation time, never a symbol-plus-modifier reinterpretation.
+- `\` escapes the next character as in the current parser; `<`, `>` need no escape outside refs.
+- Modifier args are literal text only; refs inside args are not expanded in portable v1.
+- F2 commits a shared parse fixture (template → normalized AST JSON or diagnostic code) covering
+  local refs, bracketed full IDs with dotted pack IDs, chained modifiers with args, escapes and
+  each rejection case; N1 asserts the same fixture rather than porting the TS split.
+
 Unknown symbols/modifiers fail validation rather than leaking `((symbol))` placeholders.
 Portable grammar choice sampling uses the v1 integer cumulative algorithm in section 10.
 This is a new interpreter profile; never substitute it for existing TS grammar selection.
@@ -453,7 +477,8 @@ The root expansion uses `ctx.child("rule:" + start)`; each rule chooses at `chil
 Within the selected text, nonliteral symbol occurrences use `child("slot:" + index)` then
 `child("rule:" + symbol)`; index counts symbol occurrences only, starting at zero.
 A nested rule repeats this procedure under its own context; literal text and modifiers draw nothing.
-External string-generator refs use the slot child then `child("generator:" + fullId)`.
+External string-generator refs use the slot child then `child("generator:" + fullId)`;
+`fullId` is the bracket content without `<`/`>`, and modifiers draw nothing.
 Portable v1 excludes assignment/actions and inline weighted-expression syntax; use named rules instead.
 Builtin modifiers are the existing pure TS modifier functions, with no locale-sensitive variants;
 N1 must match their behavior in fixtures or reject the capability, not silently approximate.
@@ -553,7 +578,7 @@ interface World {
   use(pack: LoadedPack): this;
   readonly registry: Registry;
   context(): Context;
-  generate<T = Json>(id: string, key: string): T;
+  generate<T = Json>(id: string, key: string, options?: GenerateOptions): T; // section 16
   list(): readonly GeneratorDescriptor[];
   describe(id: string): GeneratorDescriptor;
   clearCaches(): void;
@@ -577,7 +602,10 @@ Concurrent I/O completion order must not affect compilation or selection arrays.
 World inventory lists sorted IDs; data sampling follows authored array order.
 
 `World.generate(id,key)` uses `context().child("generator:" + id).child("key:" + key)`.
-There is no hidden counter; repeating the same ID and key yields the same result.
+There is no hidden counter; repeating the same ID, key and options yields the same result.
+`options` is validated against the descriptor's input schema before any sampling, adds no child
+label, and is the only way caller slot values reach a `structured-name-v1` generator;
+the tooling service calls this same method, so CLI/MCP and library paths cannot diverge.
 `context()` supplies the world's seed/locale and registry without advancing a shared RNG.
 Raw `registry.get(id).generate(ctx)` remains available and does not add world labels implicitly.
 Discovery descriptors contain ID, pack/version, engine/profile, tags, input/output schema and portability.
@@ -617,9 +645,18 @@ N1 must not parse diagnostic `origin` labels back into seed values to derive for
 Wire RNG state import is excluded from portable v1 until origin round-trip parity is specified.
 In-process TS `Seed`/`RngState` APIs remain available unchanged.
 
-New portable integer weights are positive safe integers with a safe-integer total.
-Selection: `roll = child.rng.nextInt(0, total)`, take the first cumulative upper bound > roll.
-Dice use `nextInt(1, sides + 1)`; arrays use `nextInt(0, length)`.
+New portable integer weights are positive integers whose total is at most `2^32` (4294967296).
+Current `Sfc32.nextInt` scales ONE uint32 draw (`packages/core/src/rng.ts`), so a larger total
+(e.g. weights `[8589934591, 1]`, total `2^33`) cannot reach every roll; such totals are a
+`LIMIT` diagnostic at validation, not a silently biased sampler. No multi-draw sampler in v1.
+Portable bounded integers use `portableInt(n) = floor(nextU32() * n / 2^32)` evaluated in exact
+integer arithmetic (64-bit unsigned product or BigInt), for `1 <= n <= 2^32`; every value in
+`[0, n)` is reachable because the step `n / 2^32` is at most 1.
+For `n <= 2^21` the binary64 product in `nextInt(0, n)` is exact, so TS may call `nextInt` there;
+above `2^21` it must use the exact integer form. N1 implements only the exact integer form.
+Selection: `roll = portableInt(total)` on the child RNG; take the first cumulative upper bound > roll.
+Dice use `1 + portableInt(sides)`; arrays use `portableInt(length)` (both far below `2^21`).
+F2 vectors include totals `2^21`, `2^21 + 1`, `2^32 - 1` and `2^32`, plus a rejected `2^32 + 1`.
 No locale collation, floating weights, platform hash codes or unordered map sampling.
 Strings are preserved as provided; no invisible Unicode normalization during loading or seeding.
 Portable model transition sorting and JSON canonical hashing use ordinal UTF-16 key order.
@@ -863,16 +900,36 @@ interface DialectData {
   orthography?: OrthographyData;
   morphology?: readonly MorphologyRule[];
 }
-interface DerivedLanguage {
-  id: string;
-  parent: string;
-  formOf(meaningId: string): string;
+/** Lexicon that retains the token sequence behind each form (B3 adds it to base lexicons). */
+interface TokenLexicon extends Lexicon {
+  tokensOf(meaningId: string): readonly string[];
+}
+interface DerivedLanguage extends TokenLexicon {
+  readonly id: ResourceId;     // the dialect's ID; also returned as cultureId
+  readonly parent: ResourceId; // base or dialect ID it was derived from
   inflect(form: string, ruleKey: string): string;
 }
 export function deriveDialect(
-  parent: Lexicon, data: DialectData, ctx: Context,
+  parent: TokenLexicon, data: DialectData, ctx: Context,
 ): DerivedLanguage;
 ```
+
+`DerivedLanguage` satisfies the current `Lexicon` interface (`cultureId`, `formOf`, `byClass`,
+`materialize`) plus `tokensOf`, so a derived dialect can be passed back to `deriveDialect`.
+This is what makes `DialectData.parent` naming another dialect typable: the world resolves the
+chain root-first (base lexicon, then each dialect in order) and passes each result as the next
+`parent`. Members of a derived language:
+
+- `cultureId` equals the dialect `id`, so caches and provenance never conflate it with its parent.
+- `tokensOf(m)` applies this dialect's sound changes to `parent.tokensOf(m)`; changes compose in
+  chain order and never re-sample or re-split romanized strings.
+- `formOf(m)` renders `tokensOf(m)` with this dialect's orthography, else the parent's.
+- `byClass` returns the parent's meanings, same set and order; dialects never add or drop meanings.
+- `materialize()` maps the same meaning IDs, in the parent's iteration order, to derived forms.
+- `inflect` applies this dialect's `morphology` rules only; parent rules are not inherited in v1.
+
+A plain `Lexicon` without retained tokens is not a valid parent; B3 type tests cover a two-level
+chain (base → dialect → dialect) and a rejected cycle.
 
 Initial rules match literal tokens; richer class/boundary notation requires a later explicit capability.
 Empty `from` is forbidden; empty `to` expresses deletion; absent context matches anywhere.
@@ -981,19 +1038,32 @@ Exit codes: 0 success, 1 I/O/internal error, 2 invalid request/schema/ref, 3 bou
 Errors go to stderr (machine JSON if requested); no partial stdout batch on failure.
 
 ```ts
+/** JSON-safe caller value for a structured-name `input` slot; no functions or glyphs. */
+interface NameValueData {
+  form: string;
+  translation: string;
+  language?: string; // defaults to the generator's culture ID
+  parts?: readonly { form: string; meaning: string }[];
+}
+interface GenerateOptions {
+  gender?: Gender;
+  structure?: string;
+  values?: Readonly<Record<string, NameValueData>>; // keyed by NameSlot source.field
+}
 interface GenerateRequest {
   id: string;
   seed: string;
   key?: string;
   count?: number;
   locale?: string;
-  options?: { gender?: Gender; structure?: string };
+  options?: GenerateOptions;
 }
 interface GenerateResponse {
   version: 1;
   generator: string;
   seed: string;
   key: string;
+  options: GenerateOptions; // normalized echo, {} when absent
   packLock: readonly { id: string; version: string; hash: string }[];
   items: readonly Json[];
   warnings: readonly string[];
@@ -1007,6 +1077,16 @@ interface ToolError {
 ```
 
 All request options are checked against the generator's input schema; unknown options are errors.
+A `structured-name-v1` descriptor's input schema lists `options.values` with one property per
+`input` slot `field` of its structure: required for non-optional slots, optional otherwise,
+`additionalProperties: false`. Other engines declare no `values`, so supplying it is an error.
+The service converts each `NameValueData` to a `TranslatedName` (adds `toString`, defaults
+`language`) and passes it as `StructuredNameInput.values`; missing required values exit 2.
+Values consume no RNG and do not alter child labels; one request's values apply to every item.
+CLI: `--values-json '<object>'` or `--values-file <trusted-path>` (mutually exclusive), parsed
+as `options.values`. MCP `generate` takes the same `options.values` object in its arguments.
+Each value string obeys the 64 KiB text limit; the object has at most one entry per input field.
+`GenerateResponse` echoes the normalized `options` so a saved response is replayable.
 Tooling response serialization omits `toString` functions and preserves form/translation/parts.
 Object key order is canonical for byte fixtures; no timestamps or machine paths in deterministic output.
 T1 locates shared service code in `@lexiconlang/packs/tooling` (no process/stdout imports).
