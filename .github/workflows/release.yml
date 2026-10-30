@@ -29,7 +29,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # @changesets/cli v3 requires Node.js >=22.11 (PR #34 must land first).
+          node-version: "22"
           cache: "pnpm"
           # changesets/action v2 no longer writes .npmrc from NPM_TOKEN, so let
           # setup-node configure registry auth for the publish script instead.
