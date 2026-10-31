@@ -579,6 +579,7 @@ interface World {
   readonly registry: Registry;
   context(): Context;
   generate<T = Json>(id: string, key: string, options?: GenerateOptions): T; // section 16
+  generateItem<T = Json>(id: string, key: string, index: number, options?: GenerateOptions): T;
   list(): readonly GeneratorDescriptor[];
   describe(id: string): GeneratorDescriptor;
   clearCaches(): void;
@@ -603,9 +604,11 @@ World inventory lists sorted IDs; data sampling follows authored array order.
 
 `World.generate(id,key)` uses `context().child("generator:" + id).child("key:" + key)`.
 There is no hidden counter; repeating the same ID, key and options yields the same result.
-`options` is validated against the descriptor's input schema before any sampling, adds no child
-label, and is the only way caller slot values reach a `structured-name-v1` generator;
-the tooling service calls this same method, so CLI/MCP and library paths cannot diverge.
+`World.generateItem(id,key,i,options)` uses that same path followed by `.child("item:" + i)`.
+Its index is an integer 0–999, serialized in base 10 without padding; never encode `/item:` in key.
+Both methods share validation/dispatch; `options` adds no child label and carries structured slots.
+The tooling service calls `generateItem` for each batch item, including count 1; `generate` is
+the unbatched library API, not an alias for item 0. Prefix and direct-library parity are tested.
 `context()` supplies the world's seed/locale and registry without advancing a shared RNG.
 Raw `registry.get(id).generate(ctx)` remains available and does not add world labels implicitly.
 Discovery descriptors contain ID, pack/version, engine/profile, tags, input/output schema and portability.
@@ -903,6 +906,7 @@ interface DialectData {
 /** Lexicon that retains the token sequence behind each form (B3 adds it to base lexicons). */
 interface TokenLexicon extends Lexicon {
   tokensOf(meaningId: string): readonly string[];
+  readonly orthography: OrthographyData; // resolved, immutable renderer data, including fallback
 }
 interface DerivedLanguage extends TokenLexicon {
   readonly id: ResourceId;     // the dialect's ID; also returned as cultureId
@@ -923,13 +927,14 @@ chain root-first (base lexicon, then each dialect in order) and passes each resu
 - `cultureId` equals the dialect `id`, so caches and provenance never conflate it with its parent.
 - `tokensOf(m)` applies this dialect's sound changes to `parent.tokensOf(m)`; changes compose in
   chain order and never re-sample or re-split romanized strings.
-- `formOf(m)` renders `tokensOf(m)` with this dialect's orthography, else the parent's.
+- `orthography` is `data.orthography ?? parent.orthography`; base/synthetic parents supply it too.
+- `formOf(m)` renders `tokensOf(m)` with this resolved mapping under section 13's matching rules.
 - `byClass` returns the parent's meanings, same set and order; dialects never add or drop meanings.
 - `materialize()` maps the same meaning IDs, in the parent's iteration order, to derived forms.
 - `inflect` applies this dialect's `morphology` rules only; parent rules are not inherited in v1.
 
-A plain `Lexicon` without retained tokens is not a valid parent; B3 type tests cover a two-level
-chain (base → dialect → dialect) and a rejected cycle.
+A plain `Lexicon` without tokens/orthography is not a valid parent; B3 tests cover a two-level
+chain, a rejected cycle, and changed tokens rendered through inherited versus overridden mappings.
 
 Initial rules match literal tokens; richer class/boundary notation requires a later explicit capability.
 Empty `from` is forbidden; empty `to` expresses deletion; absent context matches anywhere.
@@ -1055,7 +1060,7 @@ interface GenerateRequest {
   seed: string;
   key?: string;
   count?: number;
-  locale?: string;
+  locale?: string | null; // omitted inherits host default; null explicitly disables it
   options?: GenerateOptions;
 }
 interface GenerateResponse {
@@ -1063,6 +1068,7 @@ interface GenerateResponse {
   generator: string;
   seed: string;
   key: string;
+  locale: string | null; // effective requested/world locale; null = legacy English fallback
   options: GenerateOptions; // normalized echo, {} when absent
   packLock: readonly { id: string; version: string; hash: string }[];
   items: readonly Json[];
@@ -1086,7 +1092,11 @@ Values consume no RNG and do not alter child labels; one request's values apply 
 CLI: `--values-json '<object>'` or `--values-file <trusted-path>` (mutually exclusive), parsed
 as `options.values`. MCP `generate` takes the same `options.values` object in its arguments.
 Each value string obeys the 64 KiB text limit; the object has at most one entry per input field.
-`GenerateResponse` echoes the normalized `options` so a saved response is replayable.
+The service uses explicit request locale (null disables it), else host default, else legacy English.
+It constructs the request world with that locale; both library dispatch methods inherit its context.
+`GenerateResponse.locale` echoes this effective selection, not a per-meaning fallback language.
+Replay uses it explicitly (null means no locale, ignoring host defaults), plus options and pack lock.
+CLI `--locale` maps to request locale. B4 tests defaulted/explicit locales and mixed-gloss fallback replay.
 Tooling response serialization omits `toString` functions and preserves form/translation/parts.
 Object key order is canonical for byte fixtures; no timestamps or machine paths in deterministic output.
 T1 locates shared service code in `@lexiconlang/packs/tooling` (no process/stdout imports).
