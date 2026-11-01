@@ -29,20 +29,30 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          # @changesets/cli v3 requires Node.js >=22.11 (PR #34 must land first).
+          node-version: "22"
           cache: "pnpm"
+          # changesets/action v2 no longer writes .npmrc from NPM_TOKEN, so let
+          # setup-node configure registry auth for the publish script instead.
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Create Release Pull Request or Publish
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
-          publish: pnpm release
-          title: "chore: release packages"
+          # v2 renamed the root inputs: `publish` -> `publish-script`,
+          # `title` -> `pr-title`; the token is now a first-class input rather
+          # than being read from the GITHUB_TOKEN environment variable.
+          publish-script: pnpm release
+          pr-title: "chore: release packages"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # NODE_AUTH_TOKEN is what the .npmrc written by setup-node reads.
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub Release
