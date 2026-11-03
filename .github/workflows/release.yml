@@ -29,30 +29,37 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          # @changesets/cli v3 requires Node.js >=22.11 to run releases.
+          # @changesets/cli v3 requires Node.js ^22.11 || ^24 || >=26.
           node-version: "22"
           cache: "pnpm"
+          # changesets/action v2 no longer provisions .npmrc from NPM_TOKEN, so
+          # setup-node writes the registry auth that the publish script reads.
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Create Release Pull Request or Publish
         id: changesets
-        uses: changesets/action@v1
+        # v2 is the release of changesets/action built for @changesets/cli v3;
+        # v1 parses the `New tag:` stdout that CLI v3 no longer prints and would
+        # therefore never report `published=true`.
+        uses: changesets/action@v2
         with:
-          publish: pnpm release
-          title: "chore: release packages"
+          # v2 renamed the root inputs (`publish` -> `publish-script`,
+          # `title` -> `pr-title`) and requires an explicit `github-token`
+          # instead of reading the GITHUB_TOKEN environment variable. Publish
+          # only: `changeset version` exits 1 under CLI v3 when there is nothing
+          # left to version, which is exactly the state the publish phase runs in.
+          publish-script: pnpm changeset:publish
+          pr-title: "chore: release packages"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # v2 creates one GitHub Release per published package tag by default
+          # (`create-github-releases`), so the previous hand-rolled
+          # `gh release create v$(root version)` step was removed: the root
+          # package is not a changesets workspace package, so its version never
+          # changes and the step failed with an existing release from the second
+          # publish onwards.
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Create GitHub Release
-        if: steps.changesets.outputs.published == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          VERSION=$(jq -r '.version' package.json)
-          gh release create v$VERSION \
-            --title "v$VERSION" \
-            --notes "Release of lexiconlang v$VERSION" \
-            --generate-notes
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
