@@ -77,7 +77,7 @@ pnpm add @lexiconlang/glyphs
 pnpm add @lexiconlang/grammar @lexiconlang/markov @lexiconlang/core
 ```
 
-Requires Node ≥ 20 or any modern browser. ESM-only. No native deps.
+Requires Node ≥ 22.13 or any modern browser. ESM-only. No native deps.
 
 ---
 
@@ -316,7 +316,7 @@ pnpm samples           # regenerate tests/__artifacts__/samples.txt for human re
 
 The repo is a pnpm workspace. Each package is independent and publishable.
 
-CI runs typecheck + build + test on Node 20 and 22, plus a CLI smoke test, and uploads the `samples.txt` artifact on every run for visual review of generator output.
+CI runs typecheck + build + test on Node 22 and 24, plus a CLI smoke test, and uploads the `samples.txt` artifact on every run for visual review of generator output.
 
 ---
 

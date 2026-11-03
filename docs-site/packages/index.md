@@ -43,4 +43,4 @@ All packages are:
 - **`sideEffects: false`** (tree-shakeable)
 - **Zero native deps**
 - **TypeScript-first** with full type definitions
-- **Node ≥ 20** or any modern browser
+- **Node ≥ 22.13** or any modern browser
