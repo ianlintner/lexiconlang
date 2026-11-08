@@ -34,7 +34,7 @@ pnpm add @lexiconlang/scifi @lexiconlang/modern
 pnpm add @lexiconlang/core @lexiconlang/grammar @lexiconlang/markov
 ```
 
-**Requirements:** Node ≥ 20 or any modern browser. ESM-only. No native deps.
+**Requirements:** Node ≥ 22.13 or any modern browser. ESM-only. No native deps.
 
 ## Your first generator
 

@@ -17,7 +17,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [20, 22]
+        # @changesets/cli v3 and vitest 5 require Node ^22.11 || ^24; Node 20 is
+        # no longer a supported development runtime for this repository.
+        node: [22, 24]
     steps:
       - uses: actions/checkout@v7
 
