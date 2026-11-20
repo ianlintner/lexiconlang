@@ -3,10 +3,13 @@ export type {
   Constraint,
   Meaning,
   WordClass,
+  BuiltinWordClass,
+  WordClassDefinition,
   MeaningPack,
   Lexicon,
   Culture,
   NameTemplates,
+  TemplateChoices,
   NameTemplate,
   TemplatePart,
   TranslatedName,
@@ -15,10 +18,27 @@ export type {
   VisualGlyphSystem,
   RenderFormat,
   MappingStrategy,
+  Gender,
+  NameOptions,
+  NameRole,
+  NameSlot,
+  NameSlotSource,
+  NameStructure,
+  StructuredName,
+  StructuredNameComponent,
+  StructuredNameInput,
 } from "./types.js";
+export { builtinWordClasses, defineCulture, isBuiltinWordClass } from "./types.js";
 export { constraintMatches } from "./glyphs.js";
 export { generateWord } from "./phonotactics.js";
 export { coreMeanings } from "./meanings.js";
-export { buildLexicon } from "./lexicon.js";
-export { generateName } from "./templates.js";
+export {
+  buildLexicon,
+  createLexiconCache,
+  DEFAULT_LEXICON_CACHE_CAPACITY,
+} from "./lexicon.js";
+export type { LexiconCache, LexiconCacheStats } from "./lexicon.js";
+export { generateName, resolveNameTemplates } from "./templates.js";
+export { generateStructuredName } from "./structures.js";
+export { freezeCulture, isFrozenCulture } from "./freeze.js";
 export { archetypes } from "./archetypes.js";

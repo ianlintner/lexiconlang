@@ -49,6 +49,60 @@ export const dwarvish: Culture = {
         1,
       ],
     ],
+    // Pack-declared kind (not one of the built-ins).
+    clan: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "family", capitalize: true },
+            { pick: "noun", tag: "earth" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+    // Epithet kind: "the Bold" style appendages.
+    epithet: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { literal: "the ", translation: "the " },
+            { pick: "adjective", tag: "virtue", capitalize: true },
+          ],
+          sep: "",
+          transSep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  nameStructures: {
+    // Dwarf formal name: house first, then the given name, then an optional
+    // patronymic and an optional epithet.
+    "dwarvish.house-name": {
+      id: "dwarvish.house-name",
+      separator: " ",
+      slots: [
+        { key: "house", role: "house", source: { type: "kind", kind: "clan" } },
+        { key: "given", role: "given", source: { type: "kind", kind: "given" } },
+        {
+          key: "patronymic",
+          role: "patronymic",
+          source: { type: "input", field: "patronymic" },
+          optional: true,
+          prefix: "son of ",
+        },
+        {
+          key: "epithet",
+          role: "epithet",
+          source: { type: "kind", kind: "epithet" },
+          optional: true,
+        },
+      ],
+    },
   },
   visualGlyphSystems: {
     phonetic: {

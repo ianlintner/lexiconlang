@@ -23,6 +23,46 @@ export const humanoid: Culture = {
         1,
       ],
     ],
+    // Pack-declared kind (not one of the built-ins).
+    ship: [
+      [
+        {
+          kind: "compose",
+          parts: [
+            { pick: "noun", tag: "space", capitalize: true },
+            { pick: "noun", tag: "propulsion" },
+          ],
+          sep: "",
+        },
+        1,
+      ],
+    ],
+  },
+  nameStructures: {
+    // Ship name with an optional designation and an optional registry code.
+    "scifi.humanoid.ship": {
+      id: "scifi.humanoid.ship",
+      separator: " ",
+      translationSeparator: " ",
+      slots: [
+        {
+          key: "designation",
+          role: "designation",
+          source: { type: "input", field: "designation" },
+          optional: true,
+          suffix: " class",
+        },
+        { key: "ship", role: "ship", source: { type: "kind", kind: "ship" } },
+        {
+          key: "registry",
+          role: "registry",
+          source: { type: "input", field: "registry" },
+          optional: true,
+          prefix: "(",
+          suffix: ")",
+        },
+      ],
+    },
   },
   visualGlyphSystems: {
     holistic: {

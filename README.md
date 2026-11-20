@@ -150,6 +150,10 @@ console.log(mycoidName.generate(ctx.child("mycoid:1")).form);
 console.log(plantoidName.generate(ctx.child("plantoid:1")).form);
 ```
 
+### Open culture schema
+
+Cultures can declare any name kind (`ship`, `tavern`, `deity`, ...), opt in to structured names (`nameStructures`, `generateStructuredName`) and gendered pools (`generateName(..., { gender })`), and share a lexicon cache via `freezeCulture`. Existing seeds are unchanged. See [examples/10-open-schema.ts](examples/10-open-schema.ts) and the [cultures guide](docs-site/guide/cultures.md).
+
 ### 4. Compose your own
 
 ```ts
@@ -277,6 +281,7 @@ Self-contained, runnable demos in [examples/](examples/) covering common consume
 | [07-seed-and-reroll](examples/07-seed-and-reroll.ts)   | save/load by seed; partial rerolls                                  |
 | [08-cross-genre](examples/08-cross-genre.ts)           | mixing fantasy + sci-fi + modern packs                              |
 | [09-glyphs](examples/09-glyphs.ts)                     | visual writing systems: SVG runes, Unicode ideograms, Canvas glyphs |
+| [10-open-schema](examples/10-open-schema.ts)           | custom name kinds, structured names, gender, lexicon cache          |
 
 ```bash
 pnpm install

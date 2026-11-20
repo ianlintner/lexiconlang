@@ -110,3 +110,41 @@ That means:
 
 Cultures without visual glyph systems can still have names generated — glyphs
 are purely additive.
+
+## Open schema: custom kinds, structures, gender
+
+A culture's `templates` is an open record. Built-in kinds (`given`, `surname`,
+`settlement`, `mountain`, `river`, `forest`) keep their types, and any other key
+is a pack-declared kind such as `ship`, `tavern`, `deity`, `guild`, `title` or
+`epithet`. `generateName(culture, kind, ctx)` accepts every declared kind; an
+undeclared kind still throws.
+
+```ts
+import { createContext } from "@lexiconlang/core";
+import { generateName, generateStructuredName } from "@lexiconlang/language";
+import { dwarvish } from "@lexiconlang/fantasy";
+
+const ctx = createContext({ seed: "demo" });
+generateName(dwarvish, "clan", ctx.child("clan")); // custom kind
+
+generateStructuredName(
+  dwarvish,
+  { structure: "dwarvish.house-name" },
+  ctx.child("formal"),
+); // house + given [+ patronymic] [+ epithet]
+```
+
+- **Word classes** — `noun | adjective | verb | particle` plus any class a
+  pack declares (`Culture.wordClasses`). Use qualified IDs in shared packs.
+- **Name structures** — `Culture.nameStructures` declares ordered slots
+  (given-first or family-first via `order`, patronymic/matronymic, clan/house,
+  honorific, epithet). Each generated slot rolls through
+  `ctx.child("slot:<key>")`; caller-supplied input slots consume no RNG.
+- **Gender** — `masculine | feminine | neutral | any`, opt-in via
+  `genderTemplates` and `generateName(..., { gender })`. Omit it and output is
+  byte-identical to before.
+- **Lexicon cache** — `buildLexicon(culture, ctx, cache?)` memoizes per
+  (culture identity, seed path). `generateName` shares a bounded cache for
+  cultures wrapped in `freezeCulture()`; mutable cultures are never cached.
+
+Runnable example: [`examples/10-open-schema.ts`](https://github.com/ianlintner/lexiconlang/blob/main/examples/10-open-schema.ts).
