@@ -152,14 +152,20 @@ function displayOrder(structure: NameStructure): readonly NameSlot[] {
         `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} has unknown source type ${JSON.stringify(sourceType)}`,
       );
     }
-    if (slot.source.type === "kind" && slot.source.kind.length === 0) {
+    if (
+      slot.source.type === "kind" &&
+      (typeof slot.source.kind !== "string" || slot.source.kind.length === 0)
+    ) {
       throw new Error(
-        `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} references an empty kind`,
+        `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} references a missing or non-string kind`,
       );
     }
-    if (slot.source.type === "input" && slot.source.field.length === 0) {
+    if (
+      slot.source.type === "input" &&
+      (typeof slot.source.field !== "string" || slot.source.field.length === 0)
+    ) {
       throw new Error(
-        `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} references an empty input field`,
+        `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} references a missing or non-string input field`,
       );
     }
     byKey.set(slot.key, slot);

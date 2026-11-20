@@ -205,6 +205,36 @@ describe("freezeCulture / isFrozenCulture", () => {
     expect(after).not.toBe(before);
   });
 
+  it("never treats an accessor-backed culture as a cacheable snapshot", () => {
+    const glyphsA = Object.freeze({ ...culture.glyphs }) as GlyphSystem;
+    const glyphsB = Object.freeze({
+      ...culture.glyphs,
+      classes: Object.fromEntries(
+        Object.keys(culture.glyphs.classes).map((k) => [k, Object.freeze(["z"])]),
+      ),
+    }) as GlyphSystem;
+    let flip = false;
+    const accessor = Object.freeze(
+      Object.defineProperties(
+        { ...culture, templates: Object.freeze({ ...culture.templates }) },
+        { glyphs: { enumerable: true, get: () => (flip ? glyphsB : glyphsA) } },
+      ),
+    ) as Culture;
+    expect(Object.isFrozen(accessor)).toBe(true);
+    expect(isFrozenCulture(accessor)).toBe(false);
+    const seed = "accessor-check";
+    const before = generateName(accessor, "given", createContext({ seed })).form;
+    flip = true;
+    const after = generateName(accessor, "given", createContext({ seed })).form;
+    const fresh = generateName(
+      { ...culture, glyphs: glyphsB } as Culture,
+      "given",
+      createContext({ seed }),
+    ).form;
+    expect(after).toBe(fresh);
+    expect(after).not.toBe(before);
+  });
+
   it("deep-freezes the snapshot", () => {
     const frozen = freezeCulture({ ...culture } as Culture);
     expect(isFrozenCulture(frozen)).toBe(true);

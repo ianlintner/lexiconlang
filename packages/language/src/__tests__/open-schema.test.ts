@@ -304,6 +304,29 @@ describe("structured names", () => {
           },
         ],
       },
+      "test.numeric-field": {
+        id: "test.numeric-field",
+        slots: [
+          { key: "given", role: "given", source: { type: "kind", kind: "given" } },
+          {
+            key: "num",
+            role: "patronymic",
+            source: { type: "input", field: 7 as never },
+            optional: true,
+          },
+        ],
+      },
+      "test.numeric-kind": {
+        id: "test.numeric-kind",
+        slots: [
+          {
+            key: "num",
+            role: "given",
+            source: { type: "kind", kind: 7 as never },
+            optional: true,
+          },
+        ],
+      },
       "test.proto-input": {
         id: "test.proto-input",
         slots: [
@@ -456,6 +479,17 @@ describe("structured names", () => {
         createContext({ seed: "s" }),
       ),
     ).toThrow(/unknown source type "inptu"/);
+  });
+
+  it("rejects non-string source kind/field on optional slots", () => {
+    for (const [id, re] of [
+      ["test.numeric-field", /non-string input field/],
+      ["test.numeric-kind", /non-string kind/],
+    ] as const) {
+      expect(() =>
+        generateStructuredName(structured, { structure: id }, createContext({ seed: "s" })),
+      ).toThrow(re);
+    }
   });
 
   it("uses own-property lookups for structures, kinds and input fields", () => {

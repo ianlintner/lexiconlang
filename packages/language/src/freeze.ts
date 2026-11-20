@@ -43,8 +43,12 @@ function isDeepFrozen(value: unknown, seen: WeakSet<object>): boolean {
   if (seen.has(object)) return true;
   seen.add(object);
   if (!Object.isFrozen(object)) return false;
-  for (const key of Object.getOwnPropertyNames(object)) {
-    if (!isDeepFrozen((object as Record<string, unknown>)[key], seen)) return false;
+  for (const key of Reflect.ownKeys(object)) {
+    const descriptor = Object.getOwnPropertyDescriptor(object, key);
+    // Accessors can return different values over time; never invoke them and
+    // never treat an accessor-backed object as an immutable snapshot.
+    if (descriptor === undefined || !("value" in descriptor)) return false;
+    if (!isDeepFrozen(descriptor.value, seen)) return false;
   }
   return true;
 }
