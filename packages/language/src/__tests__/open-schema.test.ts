@@ -291,6 +291,32 @@ describe("structured names", () => {
           },
         ],
       },
+      "test.bad-source": {
+        id: "test.bad-source",
+        slots: [
+          { key: "given", role: "given", source: { type: "kind", kind: "given" } },
+          {
+            key: "typo",
+            role: "patronymic",
+            // Deliberate typo: not a valid source type.
+            source: { type: "inptu", field: "patronymic" } as never,
+            optional: true,
+          },
+        ],
+      },
+      "test.proto-input": {
+        id: "test.proto-input",
+        slots: [
+          { key: "given", role: "given", source: { type: "kind", kind: "given" } },
+          {
+            key: "proto",
+            role: "patronymic",
+            source: { type: "input", field: "constructor" },
+            optional: true,
+            prefix: "of ",
+          },
+        ],
+      },
     },
   });
 
@@ -420,6 +446,49 @@ describe("structured names", () => {
         createContext({ seed: "s" }),
       ),
     ).toThrow(/orders unknown slot/);
+  });
+
+  it("rejects an unknown slot source type instead of dropping the component", () => {
+    expect(() =>
+      generateStructuredName(
+        structured,
+        { structure: "test.bad-source" },
+        createContext({ seed: "s" }),
+      ),
+    ).toThrow(/unknown source type "inptu"/);
+  });
+
+  it("uses own-property lookups for structures, kinds and input fields", () => {
+    const ctx = () => createContext({ seed: "s" });
+
+    // Inherited Object.prototype keys are not structures.
+    expect(() => generateStructuredName(structured, { structure: "constructor" }, ctx())).toThrow(
+      /No name structure "constructor"/,
+    );
+    expect(() => generateName(structured, "constructor" as never, ctx())).toThrow(
+      /No templates for constructor/,
+    );
+    expect(() =>
+      generateName(structured, "toString" as never, ctx(), { gender: "masculine" }),
+    ).toThrow(/No templates for toString/);
+
+    // An absent optional input named "constructor" is simply omitted.
+    const omitted = generateStructuredName(structured, { structure: "test.proto-input", values: {} }, ctx());
+    expect(omitted.form).toBe("Rurik");
+    expect(omitted.components.map((c) => c.key)).toEqual(["given"]);
+
+    // An explicitly declared prototype-named key is honoured.
+    const declared = generateStructuredName(
+      structured,
+      {
+        structure: "test.proto-input",
+        values: {
+          ["constructor"]: { form: "Anna", translation: "anna", language: "l" },
+        },
+      },
+      ctx(),
+    );
+    expect(declared.form).toBe("Rurik of Anna");
   });
 
   it("rejects a missing required input and a malformed input value", () => {

@@ -20,18 +20,33 @@ export function freezeCulture<C extends Culture>(culture: C): C {
 }
 
 /**
- * True when `culture` looks like a frozen snapshot: the culture object, its
- * glyph system and its template record are all frozen.
+ * True only when `culture` is a verified deep snapshot: the culture and every
+ * object/array reachable from it are frozen.
  *
- * Note that `Object.freeze` is shallow — freezing only the culture object
- * itself leaves `glyphs` mutable. Use {@link freezeCulture} to be sure.
+ * `Object.freeze` is shallow — a culture whose `glyphs` and `templates` are
+ * frozen can still hold mutable nested arrays, which would let a cached
+ * lexicon go stale. Use {@link freezeCulture} to be sure.
  */
 export function isFrozenCulture(culture: Culture): boolean {
-  return (
-    Object.isFrozen(culture) &&
-    Object.isFrozen(culture.glyphs) &&
-    Object.isFrozen(culture.templates)
-  );
+  if (verifiedDeepFrozen.has(culture)) return true;
+  if (!isDeepFrozen(culture, new WeakSet())) return false;
+  // Freezing is permanent, so a positive verification never goes stale.
+  verifiedDeepFrozen.add(culture);
+  return true;
+}
+
+const verifiedDeepFrozen = new WeakSet<object>();
+
+function isDeepFrozen(value: unknown, seen: WeakSet<object>): boolean {
+  if (value === null || typeof value !== "object") return true;
+  const object = value as object;
+  if (seen.has(object)) return true;
+  seen.add(object);
+  if (!Object.isFrozen(object)) return false;
+  for (const key of Object.getOwnPropertyNames(object)) {
+    if (!isDeepFrozen((object as Record<string, unknown>)[key], seen)) return false;
+  }
+  return true;
 }
 
 function deepFreeze<T>(value: T, seen: WeakSet<object> = new WeakSet()): T {

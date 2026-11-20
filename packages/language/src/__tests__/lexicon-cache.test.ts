@@ -162,6 +162,49 @@ describe("freezeCulture / isFrozenCulture", () => {
     expect(isFrozenCulture({ ...culture } as Culture)).toBe(false);
   });
 
+  it("rejects a shallow-frozen culture whose nested arrays stay mutable", () => {
+    const partial = Object.freeze({
+      ...culture,
+      glyphs: Object.freeze({ ...culture.glyphs }),
+      templates: Object.freeze({ ...culture.templates }),
+    }) as Culture;
+    expect(Object.isFrozen(partial)).toBe(true);
+    expect(Object.isFrozen(partial.glyphs)).toBe(true);
+    expect(Object.isFrozen(partial.templates)).toBe(true);
+    expect(isFrozenCulture(partial)).toBe(false);
+  });
+
+  it("does not serve stale forms from the shared cache for a partially frozen culture", () => {
+    const classes: Record<string, string[]> = {};
+    for (const [name, glyphList] of Object.entries(culture.glyphs.classes)) {
+      classes[name] = [...glyphList];
+    }
+    const glyphs = { ...culture.glyphs, classes } as GlyphSystem;
+    const partial = Object.freeze({
+      ...culture,
+      glyphs: Object.freeze(glyphs),
+      templates: Object.freeze({ ...culture.templates }),
+    }) as Culture;
+    const seed = "stale-check";
+    const before = generateName(partial, "given", createContext({ seed })).form;
+    // Mutate nested arrays the shallow freezes do not protect.
+    for (const list of Object.values(classes)) list.splice(0, list.length, "z");
+    const fresh = generateName(
+      {
+        ...partial,
+        glyphs: {
+          ...glyphs,
+          classes: Object.fromEntries(Object.keys(classes).map((k) => [k, ["z"]])),
+        },
+      } as Culture,
+      "given",
+      createContext({ seed }),
+    ).form;
+    const after = generateName(partial, "given", createContext({ seed })).form;
+    expect(after).toBe(fresh);
+    expect(after).not.toBe(before);
+  });
+
   it("deep-freezes the snapshot", () => {
     const frozen = freezeCulture({ ...culture } as Culture);
     expect(isFrozenCulture(frozen)).toBe(true);

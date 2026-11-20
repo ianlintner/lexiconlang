@@ -83,12 +83,24 @@ export function resolveNameTemplates(
   nameKind: string,
   gender?: Gender,
 ): TemplateChoices | undefined {
-  const base = (culture.templates as NameTemplates)[nameKind];
+  const base = ownValue(culture.templates as NameTemplates, nameKind);
   if (gender === undefined) return base;
 
-  const gendered = culture.genderTemplates?.[gender]?.[nameKind];
+  const genderPool = ownValue(culture.genderTemplates, gender);
+  const gendered = genderPool === undefined ? undefined : ownValue(genderPool, nameKind);
   if (gendered !== undefined && gendered.length > 0) return gendered;
   return base;
+}
+
+/** Own-property lookup so keys like "constructor" never hit Object.prototype. */
+export function ownValue<T>(
+  record: { readonly [key: string]: T | undefined } | undefined,
+  key: string,
+): T | undefined {
+  if (record === undefined || !Object.prototype.hasOwnProperty.call(record, key)) {
+    return undefined;
+  }
+  return record[key];
 }
 
 function renderTemplate(

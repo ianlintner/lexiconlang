@@ -9,7 +9,7 @@ import type {
   StructuredNameInput,
   TranslatedName,
 } from "./types.js";
-import { generateName, resolveNameTemplates } from "./templates.js";
+import { generateName, ownValue, resolveNameTemplates } from "./templates.js";
 
 /**
  * Generate a structured name — "given + family", family-first, patronymic /
@@ -36,7 +36,7 @@ export function generateStructuredName<C extends Culture>(
   input: StructuredNameInput,
   ctx: Context,
 ): StructuredName {
-  const structure = culture.nameStructures?.[input.structure];
+  const structure = ownValue(culture.nameStructures, input.structure);
   if (structure === undefined) {
     throw new Error(
       `No name structure ${JSON.stringify(input.structure)} in culture ${culture.id}`,
@@ -64,7 +64,10 @@ export function generateStructuredName<C extends Culture>(
         ...(input.locale !== undefined ? { locale: input.locale } : {}),
       });
     } else {
-      const provided = input.values?.[slot.source.field];
+      const provided = ownValue(
+        input.values as { readonly [key: string]: TranslatedName | undefined } | undefined,
+        slot.source.field,
+      );
       if (provided === undefined) {
         if (slot.optional === true) continue;
         throw new Error(
@@ -141,6 +144,12 @@ function displayOrder(structure: NameStructure): readonly NameSlot[] {
     if (slot.suffix !== undefined && typeof slot.suffix !== "string") {
       throw new Error(
         `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} has a non-string suffix`,
+      );
+    }
+    const sourceType = (slot.source as { type?: unknown } | null | undefined)?.type;
+    if (sourceType !== "kind" && sourceType !== "input") {
+      throw new Error(
+        `Slot ${JSON.stringify(slot.key)} in structure ${JSON.stringify(structure.id)} has unknown source type ${JSON.stringify(sourceType)}`,
       );
     }
     if (slot.source.type === "kind" && slot.source.kind.length === 0) {
