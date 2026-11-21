@@ -6,13 +6,16 @@
     "types": ["node"],
     "paths": {
       "@lexiconlang/core": ["../core/src/index.ts"],
-      "@lexiconlang/markov": ["../markov/src/index.ts"]
+      "@lexiconlang/markov": ["../markov/src/index.ts"],
+      "@lexiconlang/packs": ["../packs/src/index.ts"],
+      "@lexiconlang/packs/node": ["../packs/src/node.ts"]
     }
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test.ts", "dist"],
   "references": [
     { "path": "../core" },
-    { "path": "../markov" }
+    { "path": "../markov" },
+    { "path": "../packs" }
   ]
 }

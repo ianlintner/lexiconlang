@@ -301,9 +301,26 @@ lexiconlang build-markov ./corpus.json --out ./model.json \
   --order 3 --min-length 4 --max-length 12 \
   --reject-substrings-of-length 5
 
-# Scaffold a new genre pack package.
+# Scaffold a new genre pack package (JSON manifest + typed TS facade).
 lexiconlang scaffold-pack noir --dir ./packages
+
+# Validate a declarative pack manifest (schema, semantics, provenance, assets).
+lexiconlang validate-pack ./packages/noir/data/noir.pack.json
 ```
+
+### Declarative packs
+
+`@lexiconlang/packs` loads `*.pack.json` manifests, freezes them and exposes a deterministic world registry:
+
+```ts
+import { createWorld, definePack } from "@lexiconlang/packs";
+import pack from "./noir.pack.json" with { type: "json" };
+
+const world = createWorld({ seed: "campaign-7" }).use(definePack(pack));
+console.log(world.generate("noir/generator/detective", "hero-1"));
+```
+
+See [Authoring packs](https://lexiconlang.dev/guide/authoring-packs) for the schema, from-scratch packs, extension semantics and licensing notes.
 
 The corpus is either a JSON `string[]`, an array of `{ word, weight }`, or a newline-delimited text file (lines starting with `#` are ignored).
 

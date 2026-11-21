@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@lexiconlang/core": "workspace:*",
-    "@lexiconlang/markov": "workspace:*"
+    "@lexiconlang/markov": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
   }
 }

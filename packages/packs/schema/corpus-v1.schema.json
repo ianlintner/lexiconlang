@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/corpus-v1.schema.json",
+  "title": "LexiconLang Markov corpus v1",
+  "$ref": "#/$defs/corpusData",
+  "$defs": {
+    "corpusData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "provenance"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "provenance": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["word", "weight"],
+            "properties": {
+              "word": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+              "weight": { "$ref": "common-v1.schema.json#/$defs/positiveInteger" }
+            }
+          }
+        },
+        "asset": { "$ref": "common-v1.schema.json#/$defs/asset" }
+      },
+      "oneOf": [
+        { "required": ["entries"], "not": { "required": ["asset"] } },
+        { "required": ["asset"], "not": { "required": ["entries"] } }
+      ]
+    },
+    "modelData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "corpus", "asset", "profile"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "corpus": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "asset": { "$ref": "common-v1.schema.json#/$defs/asset" },
+        "profile": { "const": "markov-json-v1" }
+      }
+    }
+  }
+}

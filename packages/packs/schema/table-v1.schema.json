@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/table-v1.schema.json",
+  "title": "LexiconLang roll table v1",
+  "$ref": "#/$defs/tableData",
+  "$defs": {
+    "tableResult": {
+      "oneOf": [
+        { "type": "object", "additionalProperties": false, "required": ["type", "text"], "properties": { "type": { "const": "text" }, "text": { "$ref": "common-v1.schema.json#/$defs/safeString" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "table"], "properties": { "type": { "const": "table" }, "table": { "$ref": "common-v1.schema.json#/$defs/resourceId" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "generator"], "properties": { "type": { "const": "generator" }, "generator": { "$ref": "common-v1.schema.json#/$defs/resourceId" }, "field": { "enum": ["form", "translation"] } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "grammar", "template"], "properties": { "type": { "const": "grammar" }, "grammar": { "$ref": "common-v1.schema.json#/$defs/resourceId" }, "template": { "$ref": "common-v1.schema.json#/$defs/safeString" } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "parts", "separator"], "properties": { "type": { "const": "sequence" }, "separator": { "type": "string" }, "parts": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["key", "result"], "properties": { "key": { "$ref": "common-v1.schema.json#/$defs/localId" }, "result": { "$ref": "#/$defs/tableResult" } } } } } },
+        { "type": "object", "additionalProperties": false, "required": ["type", "table", "count", "duplicates"], "properties": { "type": { "const": "roll" }, "table": { "$ref": "common-v1.schema.json#/$defs/resourceId" }, "count": { "type": "integer", "minimum": 1, "maximum": 100 }, "duplicates": { "enum": ["allow", "reroll"] } } }
+      ]
+    },
+    "tableData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "mode", "entries"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "description": { "type": "string" },
+        "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+        "maxDepth": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "maxAttempts": { "type": "integer", "minimum": 1, "maximum": 1000 },
+        "mode": { "enum": ["weighted", "dice"] },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "result"],
+            "properties": {
+              "key": { "$ref": "common-v1.schema.json#/$defs/localId" },
+              "weight": { "$ref": "common-v1.schema.json#/$defs/positiveInteger" },
+              "range": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "type": "integer" } },
+              "result": { "$ref": "#/$defs/tableResult" }
+            }
+          }
+        },
+        "dice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["count", "sides", "modifier"],
+          "properties": {
+            "count": { "type": "integer", "minimum": 1, "maximum": 100 },
+            "sides": { "type": "integer", "minimum": 2, "maximum": 1000 },
+            "modifier": { "type": "integer", "minimum": -1000, "maximum": 1000 }
+          }
+        }
+      },
+      "oneOf": [
+        {
+          "required": ["mode"],
+          "properties": {
+            "mode": { "const": "weighted" },
+            "entries": { "items": { "required": ["weight"], "not": { "required": ["range"] } } }
+          },
+          "not": { "required": ["dice"] }
+        },
+        {
+          "required": ["mode", "dice"],
+          "properties": {
+            "mode": { "const": "dice" },
+            "entries": { "items": { "required": ["range"], "not": { "required": ["weight"] } } }
+          }
+        }
+      ]
+    }
+  }
+}

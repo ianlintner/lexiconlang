@@ -2,6 +2,7 @@
 import { parseArgs } from "./args.js";
 import { runBuildMarkov } from "./commands/build-markov.js";
 import { runScaffoldPack } from "./commands/scaffold-pack.js";
+import { runValidatePack } from "./commands/validate-pack.js";
 
 const HELP = `lexiconlang — generative content toolkit
 
@@ -20,7 +21,11 @@ Commands:
         --no-lowercase                    Disable lowercasing the corpus.
 
   scaffold-pack <name> [--dir <packages>]
-      Create a new content pack package skeleton at <dir>/<name>.
+      Create a new content pack package skeleton at <dir>/<name>
+      with a JSON pack manifest and a typed TS facade.
+
+  validate-pack <file> [--root <dir>]
+      Validate a *.pack.json manifest (schema + semantics) and print its hash.
 
   help, --help, -h
       Show this message.
@@ -46,6 +51,9 @@ async function main(): Promise<void> {
       return;
     case "scaffold-pack":
       await runScaffoldPack(args);
+      return;
+    case "validate-pack":
+      await runValidatePack(args);
       return;
     default:
       console.error(`Unknown command: ${args.command}\n`);

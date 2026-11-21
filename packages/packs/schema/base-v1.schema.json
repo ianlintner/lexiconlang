@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/base-v1.schema.json",
+  "title": "LexiconLang base descriptor v1 (B1 data boundary)",
+  "$ref": "#/$defs/baseData",
+  "$defs": {
+    "orthography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "mappings", "unknown"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/localId" },
+        "mappings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to"],
+            "properties": { "from": { "type": "string", "minLength": 1 }, "to": { "type": "string" } }
+          }
+        },
+        "unknown": { "enum": ["preserve", "error"] }
+      }
+    },
+    "baseData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "inspiredBy", "scope", "glyphs", "orthography", "templates", "nameStructures", "provenance", "sensitivity"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "inspiredBy": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+        "scope": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+        "glyphs": { "$ref": "common-v1.schema.json#/$defs/glyphSystem" },
+        "orthography": { "$ref": "#/$defs/orthography" },
+        "romanization": { "$ref": "#/$defs/orthography" },
+        "templates": { "type": "object", "additionalProperties": { "type": "array", "items": { "$ref": "common-v1.schema.json#/$defs/weightedNameTemplate" } } },
+        "nameStructures": { "type": "object", "additionalProperties": { "$ref": "common-v1.schema.json#/$defs/nameStructure" } },
+        "corpus": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "provenance": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+        "sensitivity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["framing", "exclusions", "review"],
+          "properties": {
+            "framing": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+            "exclusions": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+            "review": { "$ref": "common-v1.schema.json#/$defs/safeString" }
+          }
+        }
+      }
+    }
+  }
+}
