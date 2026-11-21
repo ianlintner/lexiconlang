@@ -197,7 +197,7 @@ export function parseSoundChange(line: string): SoundChangeRule {
   const to = toExpr === "0" ? [] : parseCategory(toExpr);
   const fromIsCategory = arrow[0]!.trim().startsWith("{");
   const toIsCategory = toExpr.startsWith("{");
-  if (fromIsCategory && !toIsCategory && from.length > 1 && to.length > 1 && from.length !== to.length) {
+  if (fromIsCategory && toIsCategory && from.length !== to.length) {
     throw new Error(`rule ${JSON.stringify(line)}: category arity mismatch`);
   }
   if (!fromIsCategory && toIsCategory && to.length > 1) {
@@ -208,7 +208,10 @@ export function parseSoundChange(line: string): SoundChangeRule {
   let after: EnvironmentSlot[] | undefined;
   if (environment !== undefined) {
     const env = environment.trim();
-    if (!env.includes("_")) throw new Error(`environment must contain '_': ${JSON.stringify(line)}`);
+    const underscores = env.split("_").length - 1;
+    if (underscores !== 1) {
+      throw new Error(`environment must contain exactly one '_': ${JSON.stringify(line)}`);
+    }
     const [left, right] = env.split("_") as [string, string];
     if (left.trim() !== "") before = parseEnvironment(left, line);
     if (right.trim() !== "") after = parseEnvironment(right, line);
@@ -239,20 +242,34 @@ export function parseSoundChangeRule(rule: SoundChangeRule): SoundChangeRule {
   if (rule.from.length > 1 && rule.to.length > 1 && rule.from.length !== rule.to.length) {
     throw new Error(`rule ${JSON.stringify(key)}: category arity mismatch`);
   }
+  if (rule.from.length === 1 && rule.to.length > 1) {
+    throw new Error(`rule ${JSON.stringify(key)}: single from cannot map to multiple to values`);
+  }
   for (const field of ["before", "after"] as const) {
     const env = rule[field];
     if (env === undefined) continue;
     if (!Array.isArray(env)) throw new Error(`rule ${JSON.stringify(key)}: ${field} must be an array`);
     for (const slot of env) {
       // Legacy flat JSON form: ["#"] means one boundary slot.
-      if (typeof slot === "string") continue;
-      assertStringArray(slot, `${field} slot`, key);
+      if (typeof slot === "string") {
+        if (slot === "") throw new Error(`rule ${JSON.stringify(key)}: empty ${field} slot`);
+        continue;
+      }
+      const alternatives = assertStringArray(slot, `${field} slot`, key);
+      if (alternatives.length === 0) throw new Error(`rule ${JSON.stringify(key)}: empty ${field} slot`);
+      if (alternatives.includes("#") && alternatives.length > 1) {
+        throw new Error(`rule ${JSON.stringify(key)}: '#' cannot be mixed with literals in an environment slot`);
+      }
     }
   }
   return rule;
 }
 
-/** Parse a category expression: `{a,b}` expands to members; a bare token is one member. */
+/**
+ * Parse a category expression: `{a,b}` expands to members; a bare token is one member.
+ * Multi-token bare expressions (`a b`) are rejected rather than silently
+ * becoming one literal token.
+ */
 function parseCategory(expr: string): string[] {
   const trimmed = expr.trim();
   if (trimmed.startsWith("{") && trimmed.endsWith("}")) {
@@ -260,7 +277,11 @@ function parseCategory(expr: string): string[] {
     if (members.length === 0) throw new Error(`empty category in expression: ${JSON.stringify(expr)}`);
     return members;
   }
-  return trimmed.length > 0 ? [trimmed] : [];
+  if (trimmed.length === 0) return [];
+  if (/\s/.test(trimmed)) {
+    throw new Error(`expected a single token or {category}, got: ${JSON.stringify(expr)}`);
+  }
+  return [trimmed];
 }
 
 /**
@@ -296,9 +317,19 @@ export function applySoundChanges(
   let current = [...tokens];
   for (const rawRule of rules) {
     const rule = parseSoundChangeRule(rawRule);
+    // The syllable-boundary marker is internal: a user rule can never target
+    // it, and it is skipped when locating rule targets.
+    if (rule.from.includes(SYLLABLE_BOUNDARY)) {
+      throw new Error(`rule ${JSON.stringify(rule.key)}: cannot target an internal boundary`);
+    }
     const output: string[] = [];
     let i = 0;
     while (i < current.length) {
+      if (current[i] === SYLLABLE_BOUNDARY) {
+        output.push(current[i]!);
+        i++;
+        continue;
+      }
       const match = matchRule(current, i, rule);
       if (match !== undefined) {
         const replacement = rule.to.length === 0
@@ -345,27 +376,36 @@ function matchesEnvironment(
   side: "before" | "after",
 ): boolean {
   const env = normalizeEnv(rawEnv) ?? [];
-  // Literal slots consume one token each; `#` is zero-width and checks an
-  // absolute sequence boundary. For "before", slots are authored left-to-right
-  // but sit immediately left of the target; the last literal is nearest it.
+  // Literal slots consume one *visible* token each; `#` is zero-width and
+  // checks an absolute sequence boundary. The internal syllable marker is
+  // skipped when counting visible tokens so it never acts as a context slot.
+  const visibleTokens = tokens.filter((t) => t !== SYLLABLE_BOUNDARY);
+  const visibleIndex = (absolute: number): number => {
+    let count = 0;
+    for (let i = 0; i < absolute && i < tokens.length; i++) {
+      if (tokens[i] !== SYLLABLE_BOUNDARY) count++;
+    }
+    return count;
+  };
+  const targetIndex = visibleIndex(position);
   const literalCount = env.filter((slot) => !slot.includes("#")).length;
-  if (side === "before" && position - literalCount < 0) return false;
-  if (side === "after" && position + literalCount > tokens.length) return false;
+  if (side === "before" && targetIndex - literalCount < 0) return false;
+  if (side === "after" && targetIndex + literalCount > visibleTokens.length) return false;
 
   let literalIndex = 0;
   for (const slot of env) {
     const isBoundary = slot.includes("#");
     const slotPosition = side === "before"
-      ? position - literalCount + literalIndex
-      : position + literalIndex;
+      ? targetIndex - literalCount + literalIndex
+      : targetIndex + literalIndex;
     let slotMatches = false;
     for (const alternative of slot) {
       if (alternative === "#") {
-        if (side === "before" ? slotPosition === 0 : slotPosition === tokens.length) {
+        if (side === "before" ? slotPosition === 0 : slotPosition === visibleTokens.length) {
           slotMatches = true;
           break;
         }
-      } else if (tokens[slotPosition] === alternative) {
+      } else if (visibleTokens[slotPosition] === alternative) {
         slotMatches = true;
         break;
       }
@@ -449,6 +489,8 @@ export interface TokenLexicon extends Lexicon {
 export interface DerivedLanguage extends TokenLexicon {
   readonly id: string;
   readonly parent: string;
+  /** @internal Parent lexicon, used for ancestry validation only. */
+  readonly parentLexicon?: TokenLexicon;
   inflect(form: string, ruleKey: string): string;
   /** True when both languages share tokens for `meaningId` after their changes. */
   cognatesWith(other: TokenLexicon, meaningId: string): boolean;
@@ -475,21 +517,68 @@ function assertTokenLexicon(parent: TokenLexicon, expectedParent: string, selfId
   if (typeof parent.tokensOf !== "function" || parent.orthography === undefined) {
     throw new Error(`deriveDialect: parent must be a TokenLexicon (got ${JSON.stringify(parent.cultureId)})`);
   }
-  const parentId = (parent as DerivedLanguage).id ?? parent.cultureId;
-  if (selfId === expectedParent || selfId === parentId) {
+  if (selfId === expectedParent) {
     throw new Error(`deriveDialect: dialect cycle at ${JSON.stringify(selfId)}`);
   }
-  // A two-node cycle: the direct parent's own parent is this new daughter.
-  const ancestorId = (parent as DerivedLanguage).parent;
-  if (ancestorId !== undefined && ancestorId === selfId) {
-    throw new Error(`deriveDialect: dialect cycle at ${JSON.stringify(selfId)}`);
-  }
-  if (expectedParent !== parent.cultureId && expectedParent !== parentId) {
+  if (expectedParent !== parent.cultureId && expectedParent !== (parent as DerivedLanguage).id) {
     throw new Error(
       `deriveDialect: data.parent ${JSON.stringify(expectedParent)} does not match parent ` +
-      `${JSON.stringify(parentId)} (cultureId ${JSON.stringify(parent.cultureId)})`,
+      `${JSON.stringify((parent as DerivedLanguage).id ?? parent.cultureId)} (cultureId ${JSON.stringify(parent.cultureId)})`,
     );
   }
+  // Walk the whole ancestor chain: no derived language may reuse any ancestor's
+  // ID, including the root, at any depth (otherwise cultureId stops being unique).
+  const seen = new Set<string>([selfId]);
+  let current: TokenLexicon | undefined = parent;
+  while (current !== undefined) {
+    const id = (current as DerivedLanguage).id ?? current.cultureId;
+    if (seen.has(id)) throw new Error(`deriveDialect: dialect cycle or ID reuse at ${JSON.stringify(id)}`);
+    seen.add(id);
+    current = (current as DerivedLanguage).parent !== undefined
+      ? (current as DerivedLanguage & { parentLexicon?: TokenLexicon }).parentLexicon
+      : undefined;
+  }
+}
+
+/**
+ * Private boundary marker used while rewriting a multi-syllable word. It keeps
+ * syllable divisions for rendering without splitting the token sequence: rules
+ * see one whole word, so `#` means the true word edge and contexts may span
+ * syllables. The marker is transparent to `#`, can never be a rule target,
+ * and is removed before rendering.
+ */
+const SYLLABLE_BOUNDARY = "\u0000syllable-boundary\u0000";
+
+/**
+ * Apply sound changes to a segmented word in a single whole-word pass.
+ * Rewrites are computed on the flat token sequence (with zero-width boundary
+ * markers), then redistributed over the original segment count by appending
+ * each marker to the segment that preceded it. A deletion that removes a
+ * whole segment leaves an empty segment, which renders as no joiner text.
+ */
+function rewriteSegments(
+  segments: readonly (readonly string[])[],
+  rules: readonly SoundChangeRule[],
+): readonly (readonly string[])[] {
+  if (segments.length <= 1) {
+    return [applySoundChanges(segments[0] ?? [], rules)];
+  }
+  const flat: string[] = [];
+  for (let i = 0; i < segments.length; i++) {
+    if (i > 0) flat.push(SYLLABLE_BOUNDARY);
+    flat.push(...segments[i]!);
+  }
+  const rewritten = applySoundChanges(flat, rules);
+  const result: string[][] = segments.map(() => []);
+  let segmentIndex = 0;
+  for (const token of rewritten) {
+    if (token === SYLLABLE_BOUNDARY) {
+      segmentIndex++;
+    } else {
+      result[segmentIndex]!.push(token);
+    }
+  }
+  return result;
 }
 
 /** Render rewritten segments with the parent's joiner/capitalization behaviour. */
@@ -528,15 +617,13 @@ export function deriveDialect(
   // never perturb sibling rolls. The fork exists for future opt-in profiles.
   void ctx.child(`dialect:${data.id}`);
 
-  // Rewrite per syllable segment when the parent retained boundaries; this is
-  // what preserves a culture's joiner and capitalization through derivation.
+  // Rewrite the whole word once so `#` and cross-syllable contexts work, then
+  // split the rewritten tokens back onto the parent's syllable boundaries.
+  // This preserves joiners/capitalization without splitting the rule scope.
   const segmentsOf = (meaningId: string): readonly (readonly string[])[] => {
-    if (parent.segmentsOf === undefined) {
-      return [applySoundChanges(parent.tokensOf(meaningId), data.soundChanges)];
-    }
-    return parent.segmentsOf(meaningId).map((segment) =>
-      applySoundChanges(segment, data.soundChanges),
-    );
+    const parentSegments = parent.segmentsOf?.(meaningId);
+    const segments = parentSegments ?? [parent.tokensOf(meaningId)];
+    return rewriteSegments(segments, data.soundChanges);
   };
 
   const tokensOf = (meaningId: string): readonly string[] => segmentsOf(meaningId).flat();
@@ -545,6 +632,7 @@ export function deriveDialect(
     cultureId: data.id,
     id: data.id,
     parent: data.parent,
+    parentLexicon: parent,
     orthography,
     renderHint,
     tokensOf,

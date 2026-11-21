@@ -171,6 +171,63 @@ describe("joiner-preserving derivation", () => {
     expect(daughter.tokensOf("m:any")).toEqual(["t", "i", "s", "b", "a", "b"]);
     expect(daughter.formOf("m:any")).toBe("tis-bab");
   });
+
+  // Regression (round-2 review): rules must see the whole word, not one
+  // syllable at a time. '#' is the word edge and contexts may cross syllables.
+  it("treats # as the word edge and matches across syllable boundaries", () => {
+    const parent: TokenLexicon = {
+      cultureId: "test.no-joiner",
+      orthography: identity,
+      tokensOf: () => ["a", "r", "u", "y", "o"],
+      segmentsOf: () => [["a", "r"], ["u"], ["y", "o"]],
+      renderHint: { joiner: "", capitalize: false },
+      byClass: () => [],
+      formOf: () => "aruyo",
+      materialize: () => new Map(),
+    };
+    const wordFinal = deriveDialect(
+      parent,
+      {
+        id: "test.final",
+        parent: "test.no-joiner",
+        soundChanges: [parseSoundChange("r > Q / _ #")],
+      },
+      ctx(),
+    );
+    expect(wordFinal.formOf("m:any")).toBe("aruyo"); // r is not word-final
+    const finalO = deriveDialect(
+      parent,
+      {
+        id: "test.final-o",
+        parent: "test.no-joiner",
+        soundChanges: [parseSoundChange("o > Q / _ #")],
+      },
+      ctx(),
+    );
+    expect(finalO.formOf("m:any")).toBe("aruyQ");
+
+    const crossSyllable = deriveDialect(
+      parent,
+      {
+        id: "test.cross",
+        parent: "test.no-joiner",
+        soundChanges: [parseSoundChange("u > Z / r _")],
+      },
+      ctx(),
+    );
+    expect(crossSyllable.formOf("m:any")).toBe("arZyo");
+
+    const atStart = deriveDialect(
+      parent,
+      {
+        id: "test.start",
+        parent: "test.no-joiner",
+        soundChanges: [parseSoundChange("a > A / # _")],
+      },
+      ctx(),
+    );
+    expect(atStart.formOf("m:any")).toBe("Aruyo");
+  });
 });
 
 describe("environment parsing and matching", () => {
@@ -199,6 +256,19 @@ describe("environment parsing and matching", () => {
     expect(() => parseSoundChangeRule({ key: "x", from: [1 as unknown as string], to: ["a"] })).toThrow(
       /string/,
     );
+    // Round-2 review: duplicate target markers and multi-token bare LHS.
+    expect(() => parseSoundChange("t > s / _ _")).toThrow(/exactly one/);
+    expect(() => parseSoundChange("a b > c")).toThrow(/single token/);
+    expect(() => parseSoundChange("{a,b} > {c,d,e}")).toThrow(/arity/);
+    expect(() => parseSoundChangeRule({ key: "empty", from: ["a"], to: ["b"], before: [[]] })).toThrow(
+      /empty.*slot/i,
+    );
+    expect(() =>
+      parseSoundChangeRule({ key: "mixed", from: ["a"], to: ["b"], after: [["#", "a"]] }),
+    ).toThrow(/cannot be mixed/);
+    expect(() =>
+      parseSoundChangeRule({ key: "json-multi", from: ["a"], to: ["b", "c"] }),
+    ).toThrow(/multiple to/);
   });
 });
 
@@ -212,6 +282,22 @@ describe("cycle detection", () => {
         ctx(),
       ),
     ).toThrow(/parent/i);
+  });
+
+  it("rejects reusing an ancestor ID at any depth", () => {
+    const root = syntheticLexicon();
+    const a = deriveDialect(
+      root,
+      { id: "test.a", parent: root.cultureId, soundChanges: [] },
+      ctx(),
+    );
+    const b = deriveDialect(a, { id: "test.b", parent: a.id, soundChanges: [] }, ctx());
+    expect(() =>
+      deriveDialect(b, { id: root.cultureId, parent: b.id, soundChanges: [] }, ctx()),
+    ).toThrow(/cycle or ID reuse/);
+    expect(() =>
+      deriveDialect(b, { id: "test.a", parent: b.id, soundChanges: [] }, ctx()),
+    ).toThrow(/cycle or ID reuse/);
   });
 });
 
@@ -259,8 +345,9 @@ describe("sound-change application", () => {
     ];
     expect(applySoundChanges(["t", "a", "t"], rules)).toEqual(["sh", "a", "sh"]);
     // Within a single rule, output is not re-scanned (nonrecursive per pass).
-    expect(applySoundChanges(["t", "a"], [{ key: "t>ts", from: ["t"], to: ["t", "s"] }])).toEqual([
-      "t", "s", "a",
+    // A digraph is one output token ("ts"), not two tokens.
+    expect(applySoundChanges(["t", "a"], [{ key: "t>ts", from: ["t"], to: ["ts"] }])).toEqual([
+      "ts", "a",
     ]);
   });
 

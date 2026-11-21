@@ -36,6 +36,13 @@ most once and its output is not re-scanned by the same rule (nonrecursive per
 pass); later rules may act on earlier output. `from` entries are literal tokens
 (alternatives of a category), never regular expressions.
 
+**Whole-word scope.** A rule sees the entire word's token sequence, including
+when the parent culture inserts a syllable joiner. `#` matches only the start
+or end of the whole word, and contexts may span syllable boundaries, so e.g.
+`u > Z / r _` can rewrite `u` across a syllable break. The parent's joiner and
+capitalization are restored when the daughter renders its form; a zero-change
+daughter reproduces its parent byte-for-byte.
+
 ## Orthography and romanization
 
 ```ts
