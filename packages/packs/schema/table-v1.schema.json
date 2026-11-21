@@ -24,6 +24,7 @@
         "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
         "maxDepth": { "type": "integer", "minimum": 1, "maximum": 64 },
         "maxAttempts": { "type": "integer", "minimum": 1, "maximum": 1000 },
+        "mode": { "enum": ["weighted", "dice"] },
         "entries": {
           "type": "array",
           "minItems": 1,
@@ -55,9 +56,9 @@
           "required": ["mode"],
           "properties": {
             "mode": { "const": "weighted" },
-            "entries": { "items": { "required": ["weight"], "not": { "required": ["range"] } } },
-            "not": { "required": ["dice"] }
-          }
+            "entries": { "items": { "required": ["weight"], "not": { "required": ["range"] } } }
+          },
+          "not": { "required": ["dice"] }
         },
         {
           "required": ["mode", "dice"],

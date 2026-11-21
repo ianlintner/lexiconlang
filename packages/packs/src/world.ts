@@ -5,7 +5,7 @@ import { decodeUtf8 } from "./hash.js";
 import { portableGrammar, portableInt, validateGrammar } from "./grammar.js";
 import { rollTable, validateTable, type TableHost, type TableRoll } from "./table.js";
 import { PackValidationError, type GeneratorData, type GeneratorDescriptor, type GenerateOptions, type Json as PackJson, type LoadedPack, type PackManifestV1, type World } from "./types.js";
-import { validatePack } from "./pack.js";
+import { satisfies, validatePack } from "./pack.js";
 import { RESOURCE_MAX_COUNT, dedupe } from "./validate.js";
 
 type AnyRecord = Record<string, unknown>;
@@ -105,12 +105,22 @@ function install(state: WorldState, pack: LoadedPack): void {
     }
     fail([{ code: "COLLISION", pointer: "", message: `pack ${pack.manifest.id} already installed at ${prior.pack.manifest.version}` }]);
   }
-  const depsByVersion = new Map<string, LoadedPack>();
-  for (const dep of pack.dependencies) depsByVersion.set(`${dep.manifest.id}@${dep.manifest.version}`, dep);
-  for (const dep of [...pack.manifest.depends, ...pack.manifest.extends]) {
+  const resolvedDeps = pack.dependencies;
+  // Declared dependencies must already be installed in the world. This is the
+  // "install base before child" contract documented in authoring-packs.md and
+  // applies equally to definePack() (which has no resolver) and loadPack().
+  // When the pack carries resolver-resolved dependency hashes, verify them too.
+  for (const [i, dep] of [...pack.manifest.depends, ...pack.manifest.extends].entries()) {
     const installed = state.installed.get(dep.id);
-    if (!installed || installed.pack.manifest.version !== dep.version || installed.pack.hash !== depsByVersion.get(`${dep.id}@${dep.version}`)?.hash) {
-      fail([{ code: "DEPENDENCY", pointer: "/depends", message: `install ${dep.id}@${dep.version} before ${pack.manifest.id}` }]);
+    if (!installed) {
+      fail([{ code: "DEPENDENCY", pointer: `/depends/${i}`, message: `install ${dep.id}@${dep.version} before ${pack.manifest.id}` }]);
+    }
+    if (!satisfies(installed.pack.manifest.version, dep.version)) {
+      fail([{ code: "DEPENDENCY", pointer: `/depends/${i}`, message: `${dep.id}@${installed.pack.manifest.version} does not satisfy ${dep.version}` }]);
+    }
+    const known = resolvedDeps.find((d) => d.manifest.id === dep.id);
+    if (known && known.hash !== installed.pack.hash) {
+      fail([{ code: "INTEGRITY", pointer: `/depends/${i}`, message: `installed ${dep.id} does not match the dependency hash resolved for ${pack.manifest.id}` }]);
     }
   }
 
@@ -368,8 +378,8 @@ function samplePortableMarkov(json: MarkovModelJSON, ctx: Context): string {
   }
   const transitions = new Map<string, Array<readonly [string, number]>>();
   for (const [key, row] of Object.entries(json.transitions)) {
-    const entries = Object.keys(row).sort().map((k) => [k === "\\u0000" ? END : k, row[k] as number] as const);
-    transitions.set(key === "\\u0000" ? END : key, entries);
+    const entries = Object.keys(row).sort().map((k) => [k, row[k] as number] as const);
+    transitions.set(key, entries);
   }
   let out = "";
   let context = START;

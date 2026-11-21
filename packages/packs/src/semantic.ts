@@ -58,13 +58,20 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
   }
 
   // Dependency declarations: no pack may appear in both lists.
+  // Use explicit list/index iteration so diagnostics point at the real entry.
   const depends = new Set(manifest.depends.map((d) => d.id));
-  manifest.extends.forEach((d, i) => {
-    if (depends.has(d.id)) diag.push({ code: "DEPENDENCY", pointer: `/extends/${i}/id`, message: `${d.id} is declared in both depends and extends` });
-  });
-  for (const d of [...manifest.depends, ...manifest.extends]) {
-    if (d.id === packId) diag.push({ code: "DEPENDENCY", pointer: `/depends/0/id`, message: `pack cannot depend on itself` });
-    if (!/^v?\d+\.\d+\.\d+$/.test(d.version)) diag.push({ code: "SCHEMA", pointer: `/depends/0/version`, message: `invalid dependency version ${d.version}` });
+  for (const [list, entries] of [["depends", manifest.depends], ["extends", manifest.extends]] as const) {
+    entries.forEach((d, i) => {
+      const pointer = `/${list}/${i}`;
+      if (list === "extends" && depends.has(d.id)) {
+        diag.push({ code: "DEPENDENCY", pointer: `${pointer}/id`, message: `${d.id} is declared in both depends and extends` });
+      }
+      if (d.id === packId) diag.push({ code: "DEPENDENCY", pointer: `${pointer}/id`, message: "pack cannot depend on itself" });
+      // v1 accepts exact x.y.z and caret ^x.y.z ranges.
+      if (!/^\^?(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$/.test(d.version)) {
+        diag.push({ code: "SCHEMA", pointer: `${pointer}/version`, message: `invalid dependency version ${d.version}` });
+      }
+    });
   }
 
   // Capability declarations must cover behavior-bearing sections and be known.
