@@ -2,13 +2,162 @@ import type { Context } from "@lexiconlang/core";
 import type { Culture, Lexicon, WordClass } from "./types.js";
 import { generateWord } from "./phonotactics.js";
 
+/** Default capacity of a {@link LexiconCache}. */
+export const DEFAULT_LEXICON_CACHE_CAPACITY = 128;
+
+/** Monotonic format tag: bump it if the cache key layout ever changes. */
+const LEXICON_CACHE_FORMAT = "lexicon-cache-v1";
+
+export interface LexiconCacheStats {
+  readonly hits: number;
+  readonly misses: number;
+  readonly evictions: number;
+}
+
+/**
+ * A bounded, key-addressed lexicon memo.
+ *
+ * A lexicon is a pure function of (culture snapshot, seed path), so caching it
+ * is output-preserving: the same key always yields byte-identical forms. The
+ * cache only removes work — it never changes a result.
+ */
+export interface LexiconCache {
+  readonly maxEntries: number;
+  readonly size: number;
+  readonly stats: LexiconCacheStats;
+  /** Return the memoized lexicon for `key`, building it with `create` on a miss. */
+  getOrCreate(key: string, create: () => Lexicon): Lexicon;
+  clear(): void;
+}
+
+/**
+ * Create a bounded lexicon cache.
+ *
+ * `maxEntries: 0` disables memoization while still counting misses — handy for
+ * benchmarking an uncached baseline.
+ */
+export function createLexiconCache(
+  options: { maxEntries?: number } = {},
+): LexiconCache {
+  const maxEntries = options.maxEntries ?? DEFAULT_LEXICON_CACHE_CAPACITY;
+  if (!Number.isInteger(maxEntries) || maxEntries < 0) {
+    throw new Error(
+      `createLexiconCache: maxEntries must be a non-negative integer, got ${String(maxEntries)}`,
+    );
+  }
+
+  const entries = new Map<string, Lexicon>();
+  let hits = 0;
+  let misses = 0;
+  let evictions = 0;
+
+  return {
+    maxEntries,
+
+    get size(): number {
+      return entries.size;
+    },
+
+    get stats(): LexiconCacheStats {
+      return { hits, misses, evictions };
+    },
+
+    getOrCreate(key: string, create: () => Lexicon): Lexicon {
+      const existing = entries.get(key);
+      if (existing !== undefined) {
+        hits++;
+        if (maxEntries > 0) {
+          // Refresh recency: Map preserves insertion order.
+          entries.delete(key);
+          entries.set(key, existing);
+        }
+        return existing;
+      }
+
+      misses++;
+      const built = create();
+
+      if (maxEntries > 0) {
+        entries.set(key, built);
+        while (entries.size > maxEntries) {
+          const oldest = entries.keys().next();
+          if (oldest.done === true) break;
+          entries.delete(oldest.value);
+          evictions++;
+        }
+      }
+
+      return built;
+    },
+
+    clear(): void {
+      entries.clear();
+    },
+  };
+}
+
 /**
  * Build a deterministic, key-addressed lexicon for a culture.
  * Each meaning's conlang form is derived from a fork keyed on the meaning ID,
  * ensuring order-independence and patch stability.
+ *
+ * Pass a {@link LexiconCache} to memoize the lexicon across calls (per culture
+ * identity and seed path). Without a cache the behaviour is unchanged.
  */
-export function buildLexicon(culture: Culture, ctx: Context): Lexicon {
+export function buildLexicon(
+  culture: Culture,
+  ctx: Context,
+  cache?: LexiconCache,
+): Lexicon {
   const cultureCtx = ctx.child(`lang:${culture.id}`);
+
+  if (cache === undefined) {
+    return createLexicon(culture, cultureCtx);
+  }
+
+  const key = lexiconCacheKey(culture, cultureCtx);
+  return cache.getOrCreate(key, () => createLexicon(culture, cultureCtx));
+}
+
+/**
+ * Stable identity for a culture object. Deliberately *identity*, not `id`:
+ * two distinct culture objects that share an `id` may carry different glyphs
+ * or meaning packs, and must not share a lexicon entry.
+ */
+const cultureIdentity = new WeakMap<object, number>();
+let nextCultureIdentity = 0;
+
+function identityOf(culture: Culture): number {
+  let id = cultureIdentity.get(culture);
+  if (id === undefined) {
+    id = nextCultureIdentity++;
+    cultureIdentity.set(culture, id);
+  }
+  return id;
+}
+
+/**
+ * Cache key = culture identity + the full fingerprint of the freshly derived
+ * child RNG fork (algo, state, origin) + the ctx scope path. Structured tuple
+ * serialization, so no field can be confused with a delimiter.
+ */
+function lexiconCacheKey(culture: Culture, cultureCtx: Context): string {
+  const state = cultureCtx.rng.state();
+  const [a, b, c, d] = state.state;
+  return JSON.stringify([
+    LEXICON_CACHE_FORMAT,
+    identityOf(culture),
+    state.algo,
+    a,
+    b,
+    c,
+    d,
+    state.origin,
+    [...cultureCtx.scope].join("\u0000"),
+  ]);
+}
+
+function createLexicon(culture: Culture, cultureCtx: Context): Lexicon {
   const cache = new Map<string, string>();
 
   // Build a flat map of all meanings from all packs

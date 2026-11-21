@@ -1,22 +1,59 @@
 import type { Context } from "@lexiconlang/core";
-import type { Culture, NameTemplate, TranslatedName, TemplatePart, WordClass } from "./types.js";
-import { buildLexicon } from "./lexicon.js";
+import type {
+  Culture,
+  Gender,
+  NameOptions,
+  NameTemplate,
+  NameTemplates,
+  TemplateChoices,
+  TranslatedName,
+  TemplatePart,
+} from "./types.js";
+import { buildLexicon, createLexiconCache, DEFAULT_LEXICON_CACHE_CAPACITY } from "./lexicon.js";
+import { isFrozenCulture } from "./freeze.js";
+
+/**
+ * Shared, bounded lexicon memo used by {@link generateName} for frozen culture
+ * snapshots. Mutable cultures are never shared: a caller who mutates a culture
+ * in place would otherwise see stale forms.
+ */
+const sharedLexiconCache = createLexiconCache({
+  maxEntries: DEFAULT_LEXICON_CACHE_CAPACITY,
+});
 
 /**
  * Generate a name from a template for a given culture.
- * Selects meanings by class/tag, composes them, and returns form + translation.
+ *
+ * `nameKind` is an open key into `culture.templates`, so any pack-declared kind
+ * (`ship`, `tavern`, `deity`, `guild`, `epithet`, `title`, ...) works exactly
+ * like the built-in `given` / `surname` / `settlement` kinds.
+ *
+ * Passing `options.gender` switches to the culture's opt-in
+ * `genderTemplates[gender]` pool for that kind, falling back to
+ * `templates[kind]` when the gender declares no pool of its own. Omitting the
+ * option leaves the RNG path — and therefore the output — untouched.
  */
-export function generateName(culture: Culture, nameKind: keyof Culture["templates"], ctx: Context): TranslatedName {
-  const templates = culture.templates[nameKind];
+export function generateName<C extends Culture>(
+  culture: C,
+  nameKind: Extract<keyof C["templates"], string>,
+  ctx: Context,
+  options?: NameOptions,
+): TranslatedName {
+  const templates = resolveNameTemplates(culture, nameKind, options?.gender);
+
   if (!templates || templates.length === 0) {
-    throw new Error(`No templates for ${nameKind} in culture ${culture.id}`);
+    throw new Error(`No templates for ${String(nameKind)} in culture ${culture.id}`);
   }
 
   // Pick a template
   const template = pickWeighted(templates, ctx.child("template"));
 
-  // Build lexicon
-  const lexicon = buildLexicon(culture, ctx.child("lexicon"));
+  // Build lexicon (memoized only for immutable culture snapshots)
+  const lexicon = buildLexicon(
+    culture,
+    ctx.child("lexicon"),
+    isFrozenCulture(culture) ? sharedLexiconCache : undefined,
+  );
 
   // Render name from template
   const rendered = renderTemplate(template, culture, lexicon, ctx.child("render"));
@@ -32,6 +69,38 @@ export function generateName(culture: Culture, nameKind: keyof Culture["template
   };
 
   return translatedName;
+}
+
+/**
+ * Resolve the template pool for a kind.
+ *
+ * - no gender → `templates[kind]` (unchanged legacy path)
+ * - gender with its own pool → that pool
+ * - gender without a pool → the base pool (never a concatenation)
+ */
+export function resolveNameTemplates(
+  culture: Culture,
+  nameKind: string,
+  gender?: Gender,
+): TemplateChoices | undefined {
+  const base = ownValue(culture.templates as NameTemplates, nameKind);
+  if (gender === undefined) return base;
+
+  const genderPool = ownValue(culture.genderTemplates, gender);
+  const gendered = genderPool === undefined ? undefined : ownValue(genderPool, nameKind);
+  if (gendered !== undefined && gendered.length > 0) return gendered;
+  return base;
+}
+
+/** Own-property lookup so keys like "constructor" never hit Object.prototype. */
+export function ownValue<T>(
+  record: { readonly [key: string]: T | undefined } | undefined,
+  key: string,
+): T | undefined {
+  if (record === undefined || !Object.prototype.hasOwnProperty.call(record, key)) {
+    return undefined;
+  }
+  return record[key];
 }
 
 function renderTemplate(
