@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/grammar-v1.schema.json",
+  "title": "LexiconLang portable grammar v1",
+  "$ref": "#/$defs/grammarData",
+  "$defs": {
+    "grammarData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "start", "rules"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+        "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+        "start": { "$ref": "common-v1.schema.json#/$defs/ruleKey" },
+        "maxDepth": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "choices"],
+            "properties": {
+              "key": { "$ref": "common-v1.schema.json#/$defs/ruleKey" },
+              "choices": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "common-v1.schema.json#/$defs/weightedString" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

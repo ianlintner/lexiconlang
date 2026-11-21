@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/generator-v1.schema.json",
+  "title": "LexiconLang generator descriptor v1",
+  "$ref": "#/$defs/generatorData",
+  "$defs": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+        "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" }
+      }
+    },
+    "generatorData": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "description", "tags", "output", "engine", "culture", "kind"],
+          "properties": {
+            "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+            "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+            "output": { "const": "translated-name-v1" },
+            "engine": { "const": "name-v1" },
+            "culture": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "kind": { "type": "string", "minLength": 1 },
+            "gender": { "enum": ["masculine", "feminine", "neutral", "any"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "description", "tags", "output", "engine", "culture", "structure"],
+          "properties": {
+            "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+            "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+            "output": { "const": "structured-name-v1" },
+            "engine": { "const": "structured-name-v1" },
+            "culture": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "structure": { "$ref": "common-v1.schema.json#/$defs/localId" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "description", "tags", "output", "engine", "grammar"],
+          "properties": {
+            "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+            "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+            "output": { "const": "string" },
+            "engine": { "const": "grammar-v1" },
+            "grammar": { "$ref": "common-v1.schema.json#/$defs/resourceId" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "description", "tags", "output", "engine", "table"],
+          "properties": {
+            "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+            "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+            "output": { "const": "table-roll-v1" },
+            "engine": { "const": "table-v1" },
+            "table": { "$ref": "common-v1.schema.json#/$defs/resourceId" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "description", "tags", "output", "engine", "model"],
+          "properties": {
+            "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+            "description": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+            "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+            "output": { "const": "string" },
+            "engine": { "const": "markov-v1" },
+            "model": { "$ref": "common-v1.schema.json#/$defs/resourceId" }
+          }
+        }
+      ]
+    }
+  }
+}

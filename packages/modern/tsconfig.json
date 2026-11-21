@@ -8,7 +8,7 @@
       "@lexiconlang/grammar": ["../grammar/src/index.ts"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/modern.pack.json"],
   "exclude": ["src/**/*.test.ts", "dist"],
   "references": [
     { "path": "../core" },

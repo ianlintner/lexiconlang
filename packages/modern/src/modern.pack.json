@@ -1,0 +1,122 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.modern",
+  "version": "0.2.0",
+  "license": "MIT",
+  "description": "Original synthetic modern-day names, places and companies (lexiconlang legacy data bundle)",
+  "provenance": [
+    {
+      "id": "original-lexiconlang",
+      "source": "original:lexiconlang",
+      "title": "Synthetic modern genre data",
+      "creator": "lexiconlang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original synthetic data authored for lexiconlang; no third-party corpora used.",
+      "modifications": "None",
+      "files": ["modern.pack.json"]
+    }
+  ],
+  "givenMale": [
+    "Aiden", "Alex", "Ben", "Carlos", "Daniel", "Ethan", "Felix", "Gabriel",
+    "Hassan", "Isaac", "Jayden", "Kenji", "Liam", "Marcus", "Noah",
+    "Omar", "Parker", "Quinn", "Ravi", "Samir", "Theo", "Umar",
+    "Victor", "Wyatt", "Xavier", "Yusuf", "Zane", "Anders", "Bo",
+    "Cole", "Diego", "Eli", "Finn", "George"
+  ],
+  "givenFemale": [
+    "Aaliyah", "Beatrice", "Camila", "Diana", "Elena", "Fatima", "Grace",
+    "Hannah", "Imani", "Julia", "Kira", "Lina", "Mira", "Naomi",
+    "Olivia", "Priya", "Quinn", "Riya", "Sofia", "Tara", "Una",
+    "Valeria", "Wren", "Xiomara", "Yara", "Zara", "Anya", "Brielle",
+    "Chloe", "Daria", "Eve"
+  ],
+  "surnames": [
+    "Adams", "Brooks", "Chen", "Davis", "Evans", "Fischer", "Garcia",
+    "Hayashi", "Ibarra", "Johnson", "Kowalski", "Lopez", "Martinez",
+    "Nguyen", "Okonkwo", "Patel", "Quintero", "Robinson", "Smith",
+    "Tanaka", "Uddin", "Vargas", "Wilson", "Xu", "Yamamoto", "Zhao",
+    "Anderson", "Brown", "Clark", "Diaz", "Edwards", "Foster"
+  ],
+  "occupations": [
+    "Software Engineer", "Teacher", "Nurse", "Accountant", "Mechanic",
+    "Lawyer", "Designer", "Consultant", "Architect", "Plumber",
+    "Chef", "Journalist", "Doctor", "Pharmacist", "Electrician",
+    "Carpenter", "Manager", "Analyst", "Photographer", "Writer"
+  ],
+  "grammars": {
+    "city": {
+      "id": "modern.city",
+      "rules": {
+        "start": { "#prefix##suffix#": 4, "#proper#": 3, "#proper# #suffix2#": 1 },
+        "prefix": ["New", "North", "South", "East", "West", "Old", "Port", "Lake", "Mount", "Fort", "Saint"],
+        "suffix": ["ville", "burg", "field", "ford", "town", "side", "view", "haven", "ridge", "wood", "shore", "stead"],
+        "proper": ["Bridgeport", "Crestwood", "Fairhaven", "Glenwood", "Harborlight", "Ironbridge", "Lakemont", "Maplebrook", "Northgate", "Oakdale", "Riverstone", "Silverlake", "Westvale", "Brookline", "Cedarville"],
+        "suffix2": ["Heights", "Hills", "Falls", "Junction", "Springs", "Plains"]
+      }
+    },
+    "street": {
+      "id": "modern.street",
+      "rules": {
+        "start": { "#stem# #type#": 5, "#ordinal# #type#": 3, "#tree# #type#": 2 },
+        "stem": ["Maple", "Oak", "Elm", "Cedar", "Pine", "Birch", "Willow", "Aspen", "Riverside", "Hillside", "Meadow", "Park", "Sunset", "Highland", "Lakeview", "Spring", "Lincoln", "Jackson", "Madison", "Adams"],
+        "ordinal": ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th"],
+        "tree": ["Cherry", "Magnolia", "Sycamore", "Cypress"],
+        "type": ["Street", "Avenue", "Lane", "Road", "Boulevard", "Drive", "Way", "Court"]
+      }
+    },
+    "company": {
+      "id": "modern.company",
+      "rules": {
+        "start": { "#brand# #type#": 4, "#brand# & #brand2#": 3, "#person.cap# & #person2.cap#": 2 },
+        "brand": ["Sterling", "Apex", "Vertex", "Nimbus", "Pinnacle", "Catalyst", "Quanta", "Helix", "Beacon", "Anchor", "Compass", "Parallel", "Northwind", "Lighthouse", "Granite", "Cedar"],
+        "brand2": ["Group", "Holdings", "Partners", "Capital", "Ventures", "Industries", "Solutions", "Labs", "Works", "Studios"],
+        "type": ["Inc.", "LLC", "Corp.", "Group", "Industries", "Logistics", "Technologies", "Holdings", "Systems", "Capital"],
+        "person": { "source": "surnames", "slice": [0, 16], "lowercase": true },
+        "person2": { "source": "surnames", "slice": [16, 32], "lowercase": true }
+      }
+    },
+    "domain": {
+      "id": "modern.domain",
+      "rules": {
+        "start": { "#stem##stem2#.#tld#": 5, "#stem#-#stem2#.#tld#": 2 },
+        "stem": ["sky", "river", "stone", "echo", "pulse", "drift", "atlas", "north", "ember", "vault", "loft", "harbor", "summit"],
+        "stem2": ["works", "labs", "tech", "co", "io", "group", "studio", "shop"],
+        "tld": ["com", "io", "net", "co", "app", "dev"]
+      }
+    },
+    "band": {
+      "id": "modern.band",
+      "rules": {
+        "start": { "The #adj.cap# #noun.cap#s": 3, "#stem.cap# #stem2.cap#": 3, "#animal.cap# #suffix#": 2 },
+        "adj": ["lonely", "burning", "neon", "midnight", "broken", "shy", "wild"],
+        "noun": ["heart", "wave", "moon", "ghost", "wolf", "kid", "saint", "river"],
+        "stem": ["stellar", "neon", "iron", "velvet", "static", "moss", "drift", "ember"],
+        "stem2": ["choir", "veil", "tide", "machine", "club", "house", "garden"],
+        "animal": ["fox", "wolf", "bear", "horse", "bird", "fish", "crow"],
+        "suffix": ["Brigade", "Brigade", "Avenue", "Highway", "Express"]
+      }
+    },
+    "song": {
+      "id": "modern.song",
+      "rules": {
+        "start": { "#prefix# #object.cap#": 4, "#emotion.cap# in the #place.cap#": 3, "#verb.cap# the #object.cap#": 2 },
+        "prefix": ["Last", "First", "Lonely", "Broken", "Stolen", "Quiet"],
+        "object": ["promise", "letter", "dance", "summer", "city", "sky", "mirror"],
+        "emotion": ["love", "fear", "grief", "joy", "hope"],
+        "place": ["dark", "rain", "morning", "kitchen", "highway", "alley"],
+        "verb": ["chase", "burn", "find", "lose", "remember"]
+      }
+    },
+    "book": {
+      "id": "modern.book",
+      "rules": {
+        "start": { "The #noun.cap# of #place.cap#": 4, "#adj.cap# #noun.cap#": 3, "How to #verb# a #noun#": 2 },
+        "noun": ["secret", "garden", "house", "letter", "machine", "kingdom", "country", "harvest", "promise", "river", "bridge", "winter"],
+        "place": ["small things", "lost time", "stolen years", "yesterday", "the unfinished", "burning bridges"],
+        "adj": ["the silent", "the last", "small", "ordinary", "broken", "improbable"],
+        "verb": ["lose", "build", "remember", "save", "dismantle"]
+      }
+    }
+  }
+}
