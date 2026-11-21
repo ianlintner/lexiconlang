@@ -1,0 +1,38 @@
+{
+  "name": "@lexiconlang/packs",
+  "version": "0.1.0",
+  "description": "Declarative JSON pack format v1, schema validation, portable generators and world assembly",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./node": {
+      "types": "./dist/src/node.d.ts",
+      "import": "./dist/src/node.js"
+    },
+    "./schema/*": "./schema/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "schema",
+    "README.md",
+    "PROVENANCE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/language": "workspace:*",
+    "@lexiconlang/markov": "workspace:*",
+    "ajv": "^8.20.0"
+  }
+}

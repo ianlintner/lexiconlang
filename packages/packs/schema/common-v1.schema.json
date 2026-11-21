@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/common-v1.schema.json",
+  "title": "LexiconLang portable v1 shared data shapes",
+  "$defs": {
+    "nonEmptyString": { "type": "string", "minLength": 1 },
+    "safeString": { "type": "string", "maxLength": 65536 },
+    "positiveInteger": { "type": "integer", "minimum": 1, "maximum": 4294967295 },
+    "semver": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
+    "packId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*(\\.[a-z][a-z0-9-]*)*$" },
+    "resourceId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*(\\.[a-z][a-z0-9-]*)*(/[a-z][a-z0-9-]*){1,2}$" },
+    "localId": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+    "ruleKey": { "type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_-]*$" },
+    "stringArray": { "type": "array", "items": { "type": "string" } },
+    "weightedString": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "weight"],
+      "properties": {
+        "value": { "$ref": "#/$defs/safeString" },
+        "weight": { "$ref": "#/$defs/positiveInteger" }
+      }
+    },
+    "glyphSystem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classes", "syllables", "wordShapes"],
+      "properties": {
+        "classes": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string", "minLength": 1 } } },
+        "syllables": { "type": "array", "items": { "$ref": "#/$defs/weightTuple" } },
+        "wordShapes": { "type": "array", "items": { "$ref": "#/$defs/weightTuple" } },
+        "constraints": { "type": "array", "items": { "$ref": "#/$defs/constraint" } },
+        "joiner": { "type": "string" }
+      }
+    },
+    "weightTuple": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [{ "type": "string" }, { "$ref": "#/$defs/positiveInteger" }],
+      "items": false
+    },
+    "constraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pattern", "rule"],
+      "properties": {
+        "pattern": { "type": "array", "items": { "type": "string" } },
+        "rule": {
+          "oneOf": [
+            { "const": "forbid" },
+            { "type": "object", "additionalProperties": false, "required": ["maxOccurrences"], "properties": { "maxOccurrences": { "type": "integer", "minimum": 0 } } }
+          ]
+        }
+      }
+    },
+    "nameTemplate": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "form", "translation"],
+          "properties": {
+            "kind": { "const": "literal" },
+            "form": { "$ref": "#/$defs/safeString" },
+            "translation": { "$ref": "#/$defs/safeString" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "parts"],
+          "properties": {
+            "kind": { "const": "compose" },
+            "sep": { "type": "string" },
+            "transSep": { "type": "string" },
+            "parts": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["pick"],
+                    "properties": {
+                      "pick": { "type": "string", "minLength": 1 },
+                      "tag": { "type": "string" },
+                      "capitalize": { "type": "boolean" }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": ["literal"],
+                    "properties": {
+                      "literal": { "$ref": "#/$defs/safeString" },
+                      "translation": { "$ref": "#/$defs/safeString" }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "weightedNameTemplate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "weight"],
+      "properties": { "value": { "$ref": "#/$defs/nameTemplate" }, "weight": { "$ref": "#/$defs/positiveInteger" } }
+    },
+    "wordClassDefinition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "label": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "nameSlot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["key", "role", "source"],
+      "properties": {
+        "key": { "$ref": "#/$defs/localId" },
+        "role": { "type": "string", "minLength": 1 },
+        "source": {
+          "oneOf": [
+            { "type": "object", "additionalProperties": false, "required": ["type", "kind"], "properties": { "type": { "const": "kind" }, "kind": { "type": "string", "minLength": 1 } } },
+            { "type": "object", "additionalProperties": false, "required": ["type", "field"], "properties": { "type": { "const": "input" }, "field": { "type": "string", "minLength": 1 } } }
+          ]
+        },
+        "prefix": { "type": "string" },
+        "suffix": { "type": "string" },
+        "optional": { "type": "boolean" }
+      }
+    },
+    "nameStructure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slots"],
+      "properties": {
+        "id": { "$ref": "#/$defs/localId" },
+        "order": { "$ref": "#/$defs/stringArray" },
+        "separator": { "type": "string" },
+        "translationSeparator": { "type": "string" },
+        "slots": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/nameSlot" } }
+      }
+    },
+    "visualGlyphSystem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "renderFormat", "mappingStrategy"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": { "enum": ["alphabet", "conceptual"] },
+        "renderFormat": { "enum": ["svg", "unicode", "canvas"] },
+        "mappingStrategy": { "enum": ["phoneme", "morpheme", "holistic"] },
+        "generator": { "type": "object" },
+        "templates": { "type": "array", "items": { "type": "object" } },
+        "unicodeMappings": { "type": "object", "additionalProperties": { "type": "string" } },
+        "renderParams": { "type": "object" }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": { "type": "string", "pattern": "^(?!\\/)(?![A-Za-z]+:)(?!.*\\\\).+$" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  }
+}

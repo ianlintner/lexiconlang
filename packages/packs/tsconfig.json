@@ -1,0 +1,24 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": ".",
+    "types": ["node"],
+    "resolveJsonModule": true,
+    "lib": ["ES2023", "DOM"],
+    "paths": {
+      "@lexiconlang/core": ["../core/src/index.ts"],
+      "@lexiconlang/grammar": ["../grammar/src/index.ts"],
+      "@lexiconlang/language": ["../language/src/index.ts"],
+      "@lexiconlang/markov": ["../markov/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "schema/**/*.json"],
+  "exclude": ["src/**/*.test.ts", "dist"],
+  "references": [
+    { "path": "../core" },
+    { "path": "../grammar" },
+    { "path": "../language" },
+    { "path": "../markov" }
+  ]
+}
