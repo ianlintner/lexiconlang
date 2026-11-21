@@ -205,23 +205,80 @@ describe("freezeCulture / isFrozenCulture", () => {
     expect(after).not.toBe(before);
   });
 
+  it("never caches a frozen culture that inherits glyphs from a mutable prototype", () => {
+    const glyphsA = freezeCulture({ ...culture, id: "a" } as Culture).glyphs;
+    const glyphsB = freezeCulture({
+      ...culture,
+      id: "b",
+      glyphs: {
+        ...culture.glyphs,
+        classes: Object.fromEntries(
+          Object.keys(culture.glyphs.classes).map((k) => [k, ["z"]]),
+        ),
+      },
+    } as Culture).glyphs;
+    const proto: { glyphs: GlyphSystem } = { glyphs: glyphsA };
+    const { glyphs: _own, ...rest } = culture;
+    void _own;
+    const child = Object.create(proto) as Record<string, unknown>;
+    Object.assign(child, rest);
+    const inherited = freezeCulture(child as unknown as Culture);
+    expect(Object.isFrozen(inherited)).toBe(true);
+    expect(Object.isFrozen(inherited.glyphs)).toBe(true);
+    expect(isFrozenCulture(inherited)).toBe(false);
+    const seed = "proto-check";
+    const before = generateName(inherited, "given", createContext({ seed })).form;
+    proto.glyphs = glyphsB;
+    const after = generateName(inherited, "given", createContext({ seed })).form;
+    const fresh = generateName(
+      { ...culture, glyphs: glyphsB } as Culture,
+      "given",
+      createContext({ seed }),
+    ).form;
+    expect(after).toBe(fresh);
+    expect(after).not.toBe(before);
+  });
+
   it("never treats an accessor-backed culture as a cacheable snapshot", () => {
-    const glyphsA = Object.freeze({ ...culture.glyphs }) as GlyphSystem;
-    const glyphsB = Object.freeze({
-      ...culture.glyphs,
-      classes: Object.fromEntries(
-        Object.keys(culture.glyphs.classes).map((k) => [k, Object.freeze(["z"])]),
-      ),
-    }) as GlyphSystem;
+    // Everything except the getter itself is deep-frozen, so only the accessor
+    // can make the verifier reject this culture.
+    const glyphsA = freezeCulture({ ...culture, id: "a" } as Culture).glyphs;
+    const glyphsB = freezeCulture({
+      ...culture,
+      id: "b",
+      glyphs: {
+        ...culture.glyphs,
+        classes: Object.fromEntries(
+          Object.keys(culture.glyphs.classes).map((k) => [k, ["z"]]),
+        ),
+      },
+    } as Culture).glyphs;
     let flip = false;
+    let reads = 0;
+    const base = freezeCulture({ ...culture } as Culture);
     const accessor = Object.freeze(
       Object.defineProperties(
-        { ...culture, templates: Object.freeze({ ...culture.templates }) },
-        { glyphs: { enumerable: true, get: () => (flip ? glyphsB : glyphsA) } },
+        { ...base },
+        {
+          glyphs: {
+            enumerable: true,
+            get: () => {
+              reads++;
+              return flip ? glyphsB : glyphsA;
+            },
+          },
+        },
       ),
     ) as Culture;
     expect(Object.isFrozen(accessor)).toBe(true);
+    for (const g of [glyphsA, glyphsB]) {
+      expect(Object.isFrozen(g)).toBe(true);
+      expect(Object.isFrozen(g.classes)).toBe(true);
+      for (const list of Object.values(g.classes)) expect(Object.isFrozen(list)).toBe(true);
+    }
+    reads = 0;
     expect(isFrozenCulture(accessor)).toBe(false);
+    expect(reads).toBe(0);
     const seed = "accessor-check";
     const before = generateName(accessor, "given", createContext({ seed })).form;
     flip = true;

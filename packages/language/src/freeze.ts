@@ -43,6 +43,12 @@ function isDeepFrozen(value: unknown, seen: WeakSet<object>): boolean {
   if (seen.has(object)) return true;
   seen.add(object);
   if (!Object.isFrozen(object)) return false;
+  // Inherited properties are read through the prototype chain and a mutable
+  // prototype can change them later; only plain objects/arrays are snapshots.
+  const proto = Object.getPrototypeOf(object) as unknown;
+  if (proto !== null && proto !== Object.prototype && proto !== Array.prototype) {
+    return false;
+  }
   for (const key of Reflect.ownKeys(object)) {
     const descriptor = Object.getOwnPropertyDescriptor(object, key);
     // Accessors can return different values over time; never invoke them and
