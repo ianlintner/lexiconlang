@@ -27,4 +27,18 @@ export {
 } from "./combinators.js";
 export type { CountSpec, ComposeOptions, Parts, GeneratorChoice, WeightedListOptions } from "./combinators.js";
 
+export {
+  ConstraintExhaustedError,
+  UniquenessSession,
+  DEFAULT_MAX_ATTEMPTS,
+  MAX_MAX_ATTEMPTS,
+  where,
+  unique,
+  sampleUnique,
+  startsWith,
+  wordLength,
+  syllableCount,
+} from "./constraints.js";
+export type { WhereOptions, UniqueOptions, SampleUniqueOptions } from "./constraints.js";
+
 export { fnv1a64, splitmix64, mix, seedToBigInt } from "./hash.js";
