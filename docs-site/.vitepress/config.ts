@@ -51,6 +51,7 @@ export default defineConfig({
           items: [
             { text: "The seeding model", link: "/guide/seeding" },
             { text: "Cultures & morphemes", link: "/guide/cultures" },
+            { text: "Language families", link: "/guide/language-families" },
             { text: "Visual glyph systems", link: "/guide/glyphs" },
           ],
         },

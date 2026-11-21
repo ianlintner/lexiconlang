@@ -154,6 +154,36 @@ console.log(plantoidName.generate(ctx.child("plantoid:1")).form);
 
 Cultures can declare any name kind (`ship`, `tavern`, `deity`, ...), opt in to structured names (`nameStructures`, `generateStructuredName`) and gendered pools (`generateName(..., { gender })`), and share a lexicon cache via `freezeCulture`. Existing seeds are unchanged. See [examples/10-open-schema.ts](examples/10-open-schema.ts) and the [cultures guide](docs-site/guide/cultures.md).
 
+### Dialects and language families
+
+Rewrite a proto-language's tokens with ordered sound-change rules, then render
+through a romanization profile. Daughters share meanings, so related forms are
+cognates by construction.
+
+```ts
+import { createContext } from "@lexiconlang/core";
+import {
+  deriveDialectFromCulture,
+  parseSoundChange,
+} from "@lexiconlang/language";
+import { elvish } from "@lexiconlang/fantasy";
+
+const ctx = createContext({ seed: "campaign-1" });
+const north = deriveDialectFromCulture(
+  elvish,
+  {
+    id: "my.north",
+    parent: elvish.id,
+    soundChanges: [parseSoundChange("t > s / _ #")],
+  },
+  ctx.child("north"),
+);
+console.log(north.formOf("river"));
+```
+
+See [examples/11-dialects.ts](examples/11-dialects.ts) and the
+[language families guide](docs-site/guide/language-families.md).
+
 ### 4. Compose your own
 
 ```ts

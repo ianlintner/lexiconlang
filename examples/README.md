@@ -12,6 +12,9 @@ Runnable, self-contained programs covering the things consumers most often need 
 | [06-custom-markov.ts](06-custom-markov.ts) | Train a Markov chain on your own corpus. Verbatim-rejection. |
 | [07-seed-and-reroll.ts](07-seed-and-reroll.ts) | Save = seed. Partial rerolls without disturbing the rest of the world. |
 | [08-cross-genre.ts](08-cross-genre.ts) | Mixing fantasy + sci-fi + modern packs in one game. |
+| [09-glyphs.ts](09-glyphs.ts) | Visual glyph systems: SVG runes, Unicode ideograms, Canvas instructions. |
+| [10-open-schema.ts](10-open-schema.ts) | Open culture schema: name kinds, structures, gender, lexicon cache. |
+| [11-dialects.ts](11-dialects.ts) | Sound-change rules, romanization, dialect derivation, cognates, demonyms. |
 
 ## Run
 
@@ -27,6 +30,9 @@ pnpm --filter examples custom-grammar
 pnpm --filter examples custom-markov
 pnpm --filter examples reroll
 pnpm --filter examples cross-genre
+pnpm --filter examples glyphs
+pnpm --filter examples open-schema
+pnpm --filter examples dialects
 
 pnpm --filter examples all      # run everything in sequence
 ```

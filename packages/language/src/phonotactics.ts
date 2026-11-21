@@ -10,28 +10,42 @@ import { constraintMatches } from "./glyphs.js";
  * 3. For each class slot, pick a glyph
  * 4. Check constraints; redraw on violation
  * 5. Join and capitalize
+ *
+ * The RNG path is unchanged: this is a thin wrapper over
+ * {@link generateWordTokens} so B3 can retain phonotactic tokens without
+ * re-sampling or splitting a rendered string.
  */
 export function generateWord(glyphs: GlyphSystem, ctx: Context): string {
+  const syllables = generateSyllableGroups(glyphs, ctx);
+  const word = syllables.map((tokens) => tokens.join("")).join(glyphs.joiner ?? "");
+  return capitalize(word, glyphs, ctx);
+}
+
+/**
+ * Like {@link generateWord}, but returns the atomic glyph tokens picked by
+ * phonotactics before capitalization/joining. Draws exactly the same RNG
+ * lanes in the same order as `generateWord`; opt-in only.
+ */
+export function generateWordTokens(glyphs: GlyphSystem, ctx: Context): string[] {
+  return generateSyllableGroups(glyphs, ctx).flat();
+}
+
+/** Shared RNG path: syllable groups, joined by `glyphs.joiner` in `generateWord`. */
+function generateSyllableGroups(glyphs: GlyphSystem, ctx: Context): string[][] {
   // 1. Pick word shape
   const shapeCtx = ctx.child("shape");
   const shapeStr = pickWeighted(glyphs.wordShapes, shapeCtx);
   const syllableCount = parseWordShape(shapeStr, shapeCtx);
 
   // 2. Pick syllable templates and generate glyphs for each
-  const syllables: string[] = [];
+  const groups: string[][] = [];
   for (let i = 0; i < syllableCount; i++) {
     const syllCtx = ctx.child(`syl:${i}`);
     const template = pickWeighted(glyphs.syllables, syllCtx);
     const classes = template.split(" ");
-    const syllableGlyphs = generateSyllable(glyphs, classes, syllCtx);
-    syllables.push(syllableGlyphs);
+    groups.push(generateSyllable(glyphs, classes, syllCtx));
   }
-
-  // 5. Join
-  const word = syllables.join(glyphs.joiner ?? "");
-
-  // 6. Capitalize
-  return capitalize(word, glyphs, ctx);
+  return groups;
 }
 
 function parseWordShape(shape: string, ctx: Context): number {
@@ -43,7 +57,7 @@ function parseWordShape(shape: string, ctx: Context): number {
   return Number(shape);
 }
 
-function generateSyllable(glyphs: GlyphSystem, classes: string[], ctx: Context): string {
+function generateSyllable(glyphs: GlyphSystem, classes: string[], ctx: Context): string[] {
   const glyphSlots: string[] = [];
 
   for (let slot = 0; slot < classes.length; slot++) {
@@ -60,7 +74,7 @@ function generateSyllable(glyphs: GlyphSystem, classes: string[], ctx: Context):
     glyphSlots.push(glyph);
   }
 
-  return glyphSlots.join("");
+  return glyphSlots;
 }
 
 function violatesConstraints(
