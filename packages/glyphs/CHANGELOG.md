@@ -1,5 +1,12 @@
 # @lexiconlang/glyphs
 
+## 0.3.1
+
+### Patch Changes
+
+- Updated dependencies [ec5b53f]
+  - @lexiconlang/language@0.4.0
+
 ## 0.3.0
 
 ### Minor Changes
