@@ -62,3 +62,40 @@ import { archetypes } from "@lexiconlang/language";
 ```
 
 See [Cultures & morphemes](/guide/cultures) for the full guide.
+
+## Content blocklist (F4)
+
+Generated names and words can be screened against a blocklist of profanity and
+accidental real-word collisions. Screening is **opt-in**: `generateName` and all
+existing culture packs are unchanged. Use `generateNameFiltered` when you want
+a filter, or `blocklist` to wrap any generator.
+
+- Comparison uses an **ASCII-folded copy** (NFKC + accents/case folded); the
+  emitted form is never modified. Both `form` and `translation` are checked.
+- `whole-token` (default) matches bounded words; `substring` matches embedded
+  terms.
+- `DEFAULT_BLOCKLIST` is a small, original, CC0-1.0 curated list with an inline
+  provenance note in the package. It is best-effort, not exhaustive.
+- Per-culture/per-pack lists are composed by passing an array of `Blocklist`
+  values; each has an `id` and optional `provenance`.
+
+```ts
+import { createContext } from "@lexiconlang/core";
+import { DEFAULT_BLOCKLIST, createBlocklist, generateNameFiltered } from "@lexiconlang/language";
+import { dwarvish } from "@lexiconlang/fantasy";
+
+const packSafety = createBlocklist({
+  id: "my-game.dwarvish/safety",
+  terms: ["grim", "stash"],
+  mode: "whole-token",
+});
+
+const ctx = createContext({ seed: "party" });
+const name = generateNameFiltered(dwarvish, "given", ctx.child("name"), {
+  blocklists: [DEFAULT_BLOCKLIST, packSafety],
+  maxAttempts: 32,
+});
+```
+
+Exhaustion throws `ConstraintExhaustedError` from `@lexiconlang/core`. Retries
+derive from `ctx.child("attempt:<i>")`, so filtered results are deterministic.

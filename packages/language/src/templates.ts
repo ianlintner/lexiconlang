@@ -1,3 +1,4 @@
+import { where } from "@lexiconlang/core";
 import type { Context } from "@lexiconlang/core";
 import type {
   Culture,
@@ -11,6 +12,7 @@ import type {
 } from "./types.js";
 import { buildLexicon, createLexiconCache, DEFAULT_LEXICON_CACHE_CAPACITY } from "./lexicon.js";
 import { isFrozenCulture } from "./freeze.js";
+import { isBlocked, type Blocklist } from "./filter.js";
 
 /**
  * Shared, bounded lexicon memo used by {@link generateName} for frozen culture
@@ -154,6 +156,43 @@ function renderTemplate(
 function capitalize(s: string): string {
   if (s.length === 0) return s;
   return s[0]!.toUpperCase() + s.slice(1);
+}
+
+/**
+ * Opt-in filtered name generation (F4). Unlike `generateName`, this wrapper
+ * rejects values matching any supplied blocklist and retries under
+ * `ctx.child("attempt:<i>")`. It never changes an existing generator ID or
+ * the legacy call path; filtered generation uses its own deterministic path.
+ */
+export function generateNameFiltered<C extends Culture>(
+  culture: C,
+  nameKind: Extract<keyof C["templates"], string>,
+  ctx: Context,
+  options: NameOptions & {
+    /** Blocklists to apply, e.g. `[DEFAULT_BLOCKLIST]`. Must be nonempty. */
+    blocklists: readonly Blocklist[];
+    /** Attempt count including the first; default 32, bound 1000. */
+    maxAttempts?: number;
+  },
+): TranslatedName {
+  const lists = options.blocklists;
+  if (lists.length === 0) {
+    throw new TypeError("generateNameFiltered: blocklists must not be empty");
+  }
+  const generatorId = `filtered-name:${culture.id}:${String(nameKind)}`;
+  const inner = {
+    id: generatorId,
+    generate: (attemptCtx: Context) =>
+      generateName(culture, nameKind, attemptCtx, options),
+  };
+  return where(
+    inner,
+    (value) => !isBlocked(value, lists),
+    {
+      id: `where:${generatorId}`,
+      ...(options.maxAttempts === undefined ? {} : { maxAttempts: options.maxAttempts }),
+    },
+  ).generate(ctx);
 }
 
 function pickWeighted<T>(items: Array<[T, number]>, ctx: Context): T {

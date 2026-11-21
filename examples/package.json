@@ -15,6 +15,7 @@
     "cross-genre": "tsx 08-cross-genre.ts",
     "glyphs": "tsx 09-glyphs.ts",
     "open-schema": "tsx 10-open-schema.ts",
+    "constraints-blocklist": "tsx 11-constraints-blocklist.ts",
     "all": "tsx _run-all.ts"
   },
   "dependencies": {

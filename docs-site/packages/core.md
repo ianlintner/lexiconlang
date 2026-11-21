@@ -40,6 +40,39 @@ interface Generator<T> {
 | `chain`         | Like `map` but `f` can call other generators with sub-contexts   |
 | `Registry`      | Plugin registry for cross-pack symbol resolution                 |
 
+### Constraints and unique generation (F4)
+
+Opt-in combinators for rejecting values and sampling without replacement. Every
+retry derives through `ctx.child("attempt:<i>")` (or `"item:<i>"`), so results
+are independent of sibling generation order.
+
+| Export                    | Signature / purpose                                                      |
+| ------------------------- | ------------------------------------------------------------------------ |
+| `where`                   | `(gen, predicate, { id?, maxAttempts? })`: retry until accepted           |
+| `ConstraintExhaustedError`| Typed failure: `attempts`, `generatorId`, `name`                           |
+| `unique`                  | `(gen, { session?, key?, id?, maxAttempts? })`: no repeats in a session   |
+| `UniquenessSession`       | Caller-owned seen-set; never global, so callers cannot leak state         |
+| `sampleUnique`            | `(gen, n, { seed, key?, keyLabel?, ... })`: deterministic batch, no repeats|
+| `startsWith`              | `(gen, prefix, opts?)`: constrain a string generator by prefix            |
+| `wordLength` / `syllableCount` | Pure string helpers (word count; vowel-group approximation)          |
+
+`maxAttempts` defaults to 32 and is bounded to 1–1000. Exhaustion throws
+`ConstraintExhaustedError` — there is no partial success.
+
+```ts
+import { createContext, oneOf, sampleUnique, where, syllableCount } from "@lexiconlang/core";
+
+const short = where(oneOf("banana", "fig", "pear"), (s) => syllableCount(s) <= 2, {
+  id: "demo.short-fruit",
+});
+short.generate(createContext({ seed: "snack" })); // "fig"
+
+const names = sampleUnique(oneOf("Ash", "Birch", "Cedar"), 2, {
+  seed: "batch",
+  id: "demo.unique-names",
+}); // deterministic, two distinct values
+```
+
 ## Under the hood
 
 - **PRNG:** sfc32 (128-bit state, passes BigCrush)

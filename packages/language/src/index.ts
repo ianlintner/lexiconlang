@@ -38,7 +38,17 @@ export {
   DEFAULT_LEXICON_CACHE_CAPACITY,
 } from "./lexicon.js";
 export type { LexiconCache, LexiconCacheStats } from "./lexicon.js";
-export { generateName, resolveNameTemplates } from "./templates.js";
+export { generateName, resolveNameTemplates, generateNameFiltered } from "./templates.js";
 export { generateStructuredName } from "./structures.js";
 export { freezeCulture, isFrozenCulture } from "./freeze.js";
 export { archetypes } from "./archetypes.js";
+
+export {
+  DEFAULT_BLOCKLIST,
+  createBlocklist,
+  foldAscii,
+  blocklistMatch,
+  isBlocked,
+  blocklist,
+} from "./filter.js";
+export type { Blocklist, BlocklistMode, Filterable, BlocklistFilterOptions } from "./filter.js";
