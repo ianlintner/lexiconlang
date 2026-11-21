@@ -154,6 +154,41 @@ console.log(plantoidName.generate(ctx.child("plantoid:1")).form);
 
 Cultures can declare any name kind (`ship`, `tavern`, `deity`, ...), opt in to structured names (`nameStructures`, `generateStructuredName`) and gendered pools (`generateName(..., { gender })`), and share a lexicon cache via `freezeCulture`. Existing seeds are unchanged. See [examples/10-open-schema.ts](examples/10-open-schema.ts) and the [cultures guide](docs-site/guide/cultures.md).
 
+### Constrained, unique generation and content blocklists
+
+`@lexiconlang/core` adds opt-in `where(gen, predicate, { maxAttempts })` (typed
+`ConstraintExhaustedError` on failure), `unique` / `sampleUnique` for sampling
+without replacement, and string/length/syllable helpers. All retries derive
+through stable `ctx.child("attempt:<i>")` keys.
+
+`@lexiconlang/language` adds an opt-in blocklist filter for generated names:
+`generateNameFiltered(culture, kind, ctx, { blocklists })` and `blocklist(gen, lists)`.
+Matching uses ASCII-folded comparison copies of the form and translation; the
+shipped `DEFAULT_BLOCKLIST` is a small original CC0-1.0 list with provenance.
+Legacy `generateName` and all existing culture seeds are unchanged.
+
+```ts
+import { createContext, oneOf, sampleUnique, where } from "@lexiconlang/core";
+import { DEFAULT_BLOCKLIST, generateNameFiltered } from "@lexiconlang/language";
+import { dwarvish } from "@lexiconlang/fantasy";
+
+const ctx = createContext({ seed: "party" });
+const short = where(oneOf("Banana", "Fig", "Pear"), (s) => s.length <= 4, {
+  id: "app.short-fruit",
+});
+console.log(short.generate(ctx.child("fruit"))); // "Fig"
+console.log(sampleUnique(oneOf("Ash", "Birch", "Cedar"), 2, { seed: "names" }));
+
+const safeName = generateNameFiltered(dwarvish, "given", ctx.child("name"), {
+  blocklists: [DEFAULT_BLOCKLIST],
+});
+console.log(safeName.form);
+```
+
+See [examples/11-constraints-blocklist.ts](examples/11-constraints-blocklist.ts)
+and the [core](docs-site/packages/core.md) / [language](docs-site/packages/language.md)
+package docs for the full API.
+
 ### 4. Compose your own
 
 ```ts
