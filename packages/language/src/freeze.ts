@@ -66,8 +66,19 @@ function deepFreeze<T>(value: T, seen: WeakSet<object> = new WeakSet()): T {
   if (seen.has(object)) return value;
   seen.add(object);
 
+  // Only plain objects/arrays are walked; anything else (typed arrays, Maps,
+  // class instances, ...) is caller-owned and returned untouched.
+  const proto = Object.getPrototypeOf(object) as unknown;
+  if (proto !== null && proto !== Object.prototype && proto !== Array.prototype) {
+    return value;
+  }
+
   for (const key of Object.getOwnPropertyNames(object)) {
-    deepFreeze((object as Record<string, unknown>)[key], seen);
+    const descriptor = Object.getOwnPropertyDescriptor(object, key);
+    // Never invoke accessors: a getter may return caller-owned or changing
+    // objects. Only data properties are descended into.
+    if (descriptor === undefined || !("value" in descriptor)) continue;
+    deepFreeze(descriptor.value, seen);
   }
 
   return Object.freeze(value);

@@ -223,8 +223,7 @@ describe("freezeCulture / isFrozenCulture", () => {
     const child = Object.create(proto) as Record<string, unknown>;
     Object.assign(child, rest);
     const inherited = freezeCulture(child as unknown as Culture);
-    expect(Object.isFrozen(inherited)).toBe(true);
-    expect(Object.isFrozen(inherited.glyphs)).toBe(true);
+    // Custom-prototype objects are non-plain: freezeCulture leaves them alone.
     expect(isFrozenCulture(inherited)).toBe(false);
     const seed = "proto-check";
     const before = generateName(inherited, "given", createContext({ seed })).form;
@@ -290,6 +289,39 @@ describe("freezeCulture / isFrozenCulture", () => {
     ).form;
     expect(after).toBe(fresh);
     expect(after).not.toBe(before);
+  });
+
+  it("freezeCulture never invokes getters or freezes caller-owned objects", () => {
+    const owned = { note: ["caller-owned"] };
+    let reads = 0;
+    const input = { ...culture } as Record<string, unknown>;
+    Object.defineProperty(input, "extra", {
+      enumerable: true,
+      configurable: true,
+      get: () => {
+        reads++;
+        return owned;
+      },
+    });
+    const frozen = freezeCulture(input as unknown as Culture);
+    expect(reads).toBe(0);
+    expect(Object.isFrozen(frozen)).toBe(true);
+    expect(Object.isFrozen(owned)).toBe(false);
+    expect(Object.isFrozen(owned.note)).toBe(false);
+    expect(isFrozenCulture(frozen)).toBe(false);
+    expect(reads).toBe(0);
+  });
+
+  it("freezeCulture skips non-plain objects instead of throwing", () => {
+    const bytes = new Uint8Array([1, 2, 3]);
+    const input = { ...culture, metadata: { bytes } } as unknown as Culture;
+    let frozen!: Culture;
+    expect(() => {
+      frozen = freezeCulture(input);
+    }).not.toThrow();
+    expect(Object.isFrozen(frozen)).toBe(true);
+    expect(Object.isFrozen(bytes)).toBe(false);
+    expect(isFrozenCulture(frozen)).toBe(false);
   });
 
   it("deep-freezes the snapshot", () => {
