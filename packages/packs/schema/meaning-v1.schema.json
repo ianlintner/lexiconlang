@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/meaning-v1.schema.json",
+  "title": "LexiconLang meaning pack v1",
+  "$ref": "#/$defs/meaningPackData",
+  "$defs": {
+    "meaningPackData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version", "meanings"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "version": { "$ref": "common-v1.schema.json#/$defs/semver" },
+        "meanings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "class", "tags"],
+            "properties": {
+              "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+              "class": { "type": "string", "minLength": 1 },
+              "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+              "label": { "$ref": "common-v1.schema.json#/$defs/safeString" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

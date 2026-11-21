@@ -181,8 +181,43 @@ const north = deriveDialectFromCulture(
 console.log(north.formOf("river"));
 ```
 
-See [examples/11-dialects.ts](examples/11-dialects.ts) and the
+See [examples/12-dialects.ts](examples/12-dialects.ts) and the
 [language families guide](docs-site/guide/language-families.md).
+
+### Constrained, unique generation and content blocklists
+
+`@lexiconlang/core` adds opt-in `where(gen, predicate, { maxAttempts })` (typed
+`ConstraintExhaustedError` on failure), `unique` / `sampleUnique` for sampling
+without replacement, and string/length/syllable helpers. All retries derive
+through stable `ctx.child("attempt:<i>")` keys.
+
+`@lexiconlang/language` adds an opt-in blocklist filter for generated names:
+`generateNameFiltered(culture, kind, ctx, { blocklists })` and `blocklist(gen, lists)`.
+Matching uses ASCII-folded comparison copies of the form and translation; the
+shipped `DEFAULT_BLOCKLIST` is a small original CC0-1.0 list with provenance.
+Legacy `generateName` and all existing culture seeds are unchanged.
+
+```ts
+import { createContext, oneOf, sampleUnique, where } from "@lexiconlang/core";
+import { DEFAULT_BLOCKLIST, generateNameFiltered } from "@lexiconlang/language";
+import { dwarvish } from "@lexiconlang/fantasy";
+
+const ctx = createContext({ seed: "party" });
+const short = where(oneOf("Banana", "Fig", "Pear"), (s) => s.length <= 4, {
+  id: "app.short-fruit",
+});
+console.log(short.generate(ctx.child("fruit"))); // "Fig"
+console.log(sampleUnique(oneOf("Ash", "Birch", "Cedar"), 2, { seed: "names" }));
+
+const safeName = generateNameFiltered(dwarvish, "given", ctx.child("name"), {
+  blocklists: [DEFAULT_BLOCKLIST],
+});
+console.log(safeName.form);
+```
+
+See [examples/11-constraints-blocklist.ts](examples/11-constraints-blocklist.ts)
+and the [core](docs-site/packages/core.md) / [language](docs-site/packages/language.md)
+package docs for the full API.
 
 ### 4. Compose your own
 
@@ -331,9 +366,26 @@ lexiconlang build-markov ./corpus.json --out ./model.json \
   --order 3 --min-length 4 --max-length 12 \
   --reject-substrings-of-length 5
 
-# Scaffold a new genre pack package.
+# Scaffold a new genre pack package (JSON manifest + typed TS facade).
 lexiconlang scaffold-pack noir --dir ./packages
+
+# Validate a declarative pack manifest (schema, semantics, provenance, assets).
+lexiconlang validate-pack ./packages/noir/data/noir.pack.json
 ```
+
+### Declarative packs
+
+`@lexiconlang/packs` loads `*.pack.json` manifests, freezes them and exposes a deterministic world registry:
+
+```ts
+import { createWorld, definePack } from "@lexiconlang/packs";
+import pack from "./noir.pack.json" with { type: "json" };
+
+const world = createWorld({ seed: "campaign-7" }).use(definePack(pack));
+console.log(world.generate("noir/generator/detective", "hero-1"));
+```
+
+See [Authoring packs](https://lexiconlang.dev/guide/authoring-packs) for the schema, from-scratch packs, extension semantics and licensing notes.
 
 The corpus is either a JSON `string[]`, an array of `{ word, weight }`, or a newline-delimited text file (lines starting with `#` are ignored).
 

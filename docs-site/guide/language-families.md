@@ -144,7 +144,7 @@ so "Velmar" → "Velmari" stays consistent across both paths.
 
 ## Run it
 
-See [`examples/11-dialects.ts`](https://github.com/ianlintner/lexiconlang/blob/main/examples/11-dialects.ts):
+See [`examples/12-dialects.ts`](https://github.com/ianlintner/lexiconlang/blob/main/examples/12-dialects.ts):
 
 ```bash
 pnpm install

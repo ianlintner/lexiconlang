@@ -61,6 +61,7 @@ export default defineConfig({
             { text: "Composing generators", link: "/guide/composing" },
             { text: "Custom grammars", link: "/guide/grammars" },
             { text: "Training Markov models", link: "/guide/markov" },
+            { text: "Authoring packs", link: "/guide/authoring-packs" },
           ],
         },
       ],

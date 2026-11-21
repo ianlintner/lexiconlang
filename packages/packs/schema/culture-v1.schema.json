@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/culture-v1.schema.json",
+  "title": "LexiconLang culture v1",
+  "$ref": "#/$defs/cultureData",
+  "$defs": {
+    "cultureData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "extends": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "glyphs": { "$ref": "common-v1.schema.json#/$defs/glyphSystem" },
+        "meaningPacks": { "type": "array", "items": { "$ref": "common-v1.schema.json#/$defs/resourceId" } },
+        "templates": {
+          "type": "object",
+          "additionalProperties": { "type": "array", "items": { "$ref": "common-v1.schema.json#/$defs/weightedNameTemplate" } }
+        },
+        "wordClasses": { "type": "array", "items": { "$ref": "common-v1.schema.json#/$defs/wordClassDefinition" } },
+        "genderTemplates": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": { "type": "array", "items": { "$ref": "common-v1.schema.json#/$defs/weightedNameTemplate" } }
+          }
+        },
+        "nameStructures": {
+          "type": "object",
+          "additionalProperties": { "$ref": "common-v1.schema.json#/$defs/nameStructure" }
+        },
+        "capitalize": { "enum": ["first", "all", "none"] },
+        "visualGlyphSystems": {
+          "type": "object",
+          "additionalProperties": { "$ref": "common-v1.schema.json#/$defs/visualGlyphSystem" }
+        },
+        "base": { "$ref": "common-v1.schema.json#/$defs/resourceId" }
+      }
+    }
+  }
+}

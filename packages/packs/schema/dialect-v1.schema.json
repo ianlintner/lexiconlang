@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lexiconlang.dev/schemas/dialect-v1.schema.json",
+  "title": "LexiconLang dialect descriptor v1 (B3 data boundary)",
+  "$ref": "#/$defs/dialectData",
+  "$defs": {
+    "dialectData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "parent", "soundChanges"],
+      "properties": {
+        "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "parent": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
+        "soundChanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "from", "to"],
+            "properties": {
+              "key": { "$ref": "common-v1.schema.json#/$defs/localId" },
+              "from": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+              "to": { "type": "array", "items": { "type": "string" } },
+              "before": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
+              "after": { "$ref": "common-v1.schema.json#/$defs/stringArray" }
+            }
+          }
+        },
+        "orthography": { "$ref": "base-v1.schema.json#/$defs/orthography" },
+        "morphology": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["key", "operation", "tokens"],
+            "properties": {
+              "key": { "$ref": "common-v1.schema.json#/$defs/localId" },
+              "operation": { "enum": ["prefix", "suffix"] },
+              "tokens": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+            }
+          }
+        }
+      }
+    }
+  }
+}
