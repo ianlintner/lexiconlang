@@ -18,16 +18,18 @@ and its form is related because the tokens came from the same proto form.
 ```ts
 import { parseSoundChange } from "@lexiconlang/language";
 
-parseSoundChange("t > s / _ #"); // { from: ["t"], to: ["s"], after: ["#"] }
+parseSoundChange("t > s / _ #"); // { from: ["t"], to: ["s"], after: [["#"]] }
 parseSoundChange("{k,p} > {t,b} / # _"); // categories, two members
+parseSoundChange("{k,p} > {t,b} / {a,e} _"); // category in the environment
+parseSoundChange("t > s / # a _"); // multi-token environment with a boundary
 parseSoundChange("e > 0 / _ #"); // deletion: to: []
 ```
 
 | Part | Meaning |
 | --- | --- |
-| `from > to` | Token sequences. Categories use `{a,b}`; `0` means deletion. |
-| `/ before _ after` | Environment. `_` is the target; `#` is the sequence boundary. |
-| JSON form | `{ key, from, to, before?, after? }` — pass through `parseSoundChangeRule` to validate. |
+| `from > to` | Token sequences. Categories use `{a,b}`; `0` means deletion. A single literal `from` cannot map to a category of several outputs. |
+| `/ before _ after` | Environment. `_` is the target; `#` is the sequence boundary and may appear in any slot. Whitespace separates slots; `{a,b}` is one slot with alternatives. |
+| JSON form | `{ key, from, to, before?, after? }` — pass through `parseSoundChangeRule` to validate. Each environment slot is an array of alternatives, e.g. `before: [["#"], ["a", "e"]]`; the legacy flat form `before: ["#"]` is also accepted. |
 
 Rules are applied in authored order. Within one rule, each position fires at
 most once and its output is not re-scanned by the same rule (nonrecursive per
@@ -63,8 +65,11 @@ applyOrthography(["š", "ā", "a"], ortho, ascii); // "shaa"
 
 Matching is longest-token first (ties by authored order) over the token
 sequence, never over an already-joined string. `asciiFold` uses a small,
-explicit, deterministic fold table — no locale collation. Profiles are applied
-**after** word generation and sound changes, never to translations or SVG.
+explicit, deterministic fold table — no locale collation. `diacritics: true`
+(the default) **strips** diacritics; set it to `false` to keep them. When
+`asciiFold` is enabled it takes precedence over `diacritics`. Profiles are
+applied **after** word generation and sound changes, never to translations or
+SVG.
 
 ## Deriving dialects
 
@@ -91,6 +96,10 @@ const northern = deriveDialect(
 
 northern.formOf("m:star"); // rewritten form, capitalized like generated forms
 northern.tokensOf("m:star"); // ["t", "a", "l", "e"]
+
+// buildTokenLexicon also retains syllable groups and the parent's joiner:
+// a daughter with zero sound changes reproduces its parent's forms exactly
+// (e.g. "tis-pap" stays "tis-pap" for a culture with joiner "-").
 
 const daughters = languageFamily(
   proto,

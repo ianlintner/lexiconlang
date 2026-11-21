@@ -95,13 +95,133 @@ function language(tokens: Record<string, string[]>): TokenLexicon {
 
 const ctx = () => createContext({ seed: "b3-tests" });
 
+describe("joiner-preserving derivation", () => {
+  // Regression: a zero-change daughter must reproduce its parent byte-for-byte,
+  // including a culture joiner and the parent's capitalization behaviour.
+  it("reproduces a joiner-using parent exactly when no rules apply", () => {
+    const parent: TokenLexicon = {
+      cultureId: "test.synth",
+      orthography: identity,
+      tokensOf(id) {
+        return id === "m:compound" ? ["t", "i", "s", "p", "a", "p"] : ["p", "i"];
+      },
+      segmentsOf(id) {
+        return id === "m:compound" ? [["t", "i", "s"], ["p", "a", "p"]] : [["p", "i"]];
+      },
+      renderHint: { joiner: "-", capitalize: false },
+      byClass: () => [],
+      formOf(id) {
+        return this.segmentsOf!(id).map((seg) => applyOrthography(seg, identity)).join("-");
+      },
+      materialize: () => new Map(),
+    };
+    const daughter = deriveDialect(
+      parent,
+      { id: "test.synth-daughter", parent: "test.synth", soundChanges: [] },
+      ctx(),
+    );
+    expect(daughter.formOf("m:compound")).toBe(parent.formOf("m:compound")); // "tis-pap"
+    expect(daughter.formOf("m:other")).toBe("pi");
+  });
+
+  it("reproduces a generated joiner culture exactly when no rules apply", () => {
+    const culture = defineCulture({
+      id: "test.joined",
+      glyphs: {
+        ...archetypes.flowing,
+        classes: { C: ["t", "p"], V: ["i", "a"] },
+        syllables: [["C V", 1]],
+        wordShapes: [["2", 1]],
+        joiner: "-",
+      } as GlyphSystem,
+      meaningPacks: [],
+      templates: { given: [[{ kind: "literal", form: "A", translation: "a" }, 1]] },
+    });
+    const parent = buildTokenLexicon(culture, ctx());
+    const form = parent.formOf("m:any");
+    expect(form).toContain("-"); // joiner survives
+    const daughter = deriveDialect(
+      parent,
+      { id: "test.joined-daughter", parent: "test.joined", soundChanges: [] },
+      ctx(),
+    );
+    expect(daughter.formOf("m:any")).toBe(form);
+  });
+
+  it("applies sound changes inside syllable segments and keeps the joiner", () => {
+    const parent: TokenLexicon = {
+      cultureId: "test.synth",
+      orthography: identity,
+      tokensOf: () => ["t", "i", "s", "p", "a", "p"],
+      segmentsOf: () => [["t", "i", "s"], ["p", "a", "p"]],
+      renderHint: { joiner: "-", capitalize: false },
+      byClass: () => [],
+      formOf: () => "tis-pap",
+      materialize: () => new Map(),
+    };
+    const daughter = deriveDialect(
+      parent,
+      {
+        id: "test.synth-daughter",
+        parent: "test.synth",
+        soundChanges: [{ key: "p>b", from: ["p"], to: ["b"] }],
+      },
+      ctx(),
+    );
+    expect(daughter.tokensOf("m:any")).toEqual(["t", "i", "s", "b", "a", "b"]);
+    expect(daughter.formOf("m:any")).toBe("tis-bab");
+  });
+});
+
+describe("environment parsing and matching", () => {
+  it("supports category alternatives in environments", () => {
+    const rule = parseSoundChange("{k,p} > {b,d} / {a,e} _");
+    expect(rule.before).toEqual([["a", "e"]]);
+    expect(applySoundChanges(["a", "k"], [rule])).toEqual(["a", "b"]);
+    expect(applySoundChanges(["e", "p"], [rule])).toEqual(["e", "d"]);
+    expect(applySoundChanges(["a", "p"], [rule])).toEqual(["a", "d"]);
+  });
+
+  it("supports multi-token literal environments and # inside a sequence", () => {
+    const multi = parseSoundChange("t > s / a i _");
+    expect(multi.before).toEqual([["a"], ["i"]]);
+    expect(applySoundChanges(["a", "i", "t"], [multi])).toEqual(["a", "i", "s"]);
+    expect(applySoundChanges(["a", "t"], [multi])).toEqual(["a", "t"]);
+
+    const boundary = parseSoundChange("t > s / # a _");
+    expect(boundary.before).toEqual([["#"], ["a"]]);
+    expect(applySoundChanges(["a", "t"], [boundary])).toEqual(["a", "s"]);
+    expect(applySoundChanges(["i", "a", "t"], [boundary])).toEqual(["i", "a", "t"]);
+  });
+
+  it("rejects a single from with multiple to outputs and invalid JSON rules", () => {
+    expect(() => parseSoundChange("a > {b,c}")).toThrow(/single from/);
+    expect(() => parseSoundChangeRule({ key: "x", from: [1 as unknown as string], to: ["a"] })).toThrow(
+      /string/,
+    );
+  });
+});
+
+describe("cycle detection", () => {
+  it("rejects a mismatch between parent data and the actual parent identity", () => {
+    const parent = syntheticLexicon();
+    expect(() =>
+      deriveDialect(
+        parent,
+        { id: "test.other", parent: "not.the.parent", soundChanges: [] },
+        ctx(),
+      ),
+    ).toThrow(/parent/i);
+  });
+});
+
 describe("rule DSL", () => {
   it("parses a basic change with category and environment", () => {
     expect(parseSoundChange("t > s / _ #")).toEqual({
       key: "t > s / _ #",
       from: ["t"],
       to: ["s"],
-      after: ["#"],
+      after: [["#"]],
     });
   });
 
@@ -110,13 +230,13 @@ describe("rule DSL", () => {
       key: "{k,p} > {b,d} / # _",
       from: ["k", "p"],
       to: ["b", "d"],
-      before: ["#"],
+      before: [["#"]],
     });
     expect(parseSoundChange("e > 0 / _ #")).toEqual({
       key: "e > 0 / _ #",
       from: ["e"],
       to: [],
-      after: ["#"],
+      after: [["#"]],
     });
   });
 
@@ -283,10 +403,17 @@ describe("deriveDialect", () => {
         ctx(),
       ),
     ).toThrow(/TokenLexicon/i);
+    // Direct self-parenting is rejected.
     const cycle: DialectData = { id: "test.self", parent: "test.self", soundChanges: [] };
-    const d = deriveDialect(syntheticLexicon(), cycle, ctx());
+    expect(() => deriveDialect(syntheticLexicon(), cycle, ctx())).toThrow(/cycle/i);
+    // A daughter whose id matches its parent's id is also a cycle.
+    const d = deriveDialect(
+      syntheticLexicon(),
+      { id: "test.daughter", parent: "test.proto", soundChanges: [] },
+      ctx(),
+    );
     expect(() =>
-      deriveDialect(d, { id: "test.self", parent: "test.self", soundChanges: [] }, ctx()),
+      deriveDialect(d, { id: "test.proto", parent: "test.daughter", soundChanges: [] }, ctx()),
     ).toThrow(/cycle/i);
   });
 });

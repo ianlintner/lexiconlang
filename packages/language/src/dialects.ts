@@ -14,7 +14,6 @@
  */
 import type { Context } from "@lexiconlang/core";
 import type { Lexicon, WordClass } from "./types.js";
-import { generateWordTokens } from "./phonotactics.js";
 
 // ---------------------------------------------------------------------------
 // Orthography
@@ -31,9 +30,16 @@ export interface OrthographyData {
 
 /** Opt-in rendering profile applied *after* sound changes. */
 export interface RomanizationProfile {
-  /** Drop combining diacritics and precomposed accents. Default true. */
+  /**
+   * When true (the default), strips combining diacritics and precomposed
+   * accents. The name describes the profile's *output* mode, not whether
+   * diacritics are kept; set `false` to retain them.
+   */
   diacritics: boolean;
-  /** Fold all remaining non-ASCII letters to ASCII (best-effort, documented table). */
+  /**
+   * Fold all remaining non-ASCII letters to ASCII (best-effort, documented
+   * table). Takes precedence over `diacritics` when both are enabled.
+   */
   asciiFold: boolean;
   /** Replacement strings for specific rendered tokens, e.g. `{ "š": "sh" }`. */
   digraphs: Readonly<Record<string, string>>;
@@ -151,6 +157,12 @@ function longestMatch(token: string, mappings: OrthographyData["mappings"]): str
 // Sound-change rules
 // ---------------------------------------------------------------------------
 
+/**
+ * One environment slot: the alternatives accepted at that position.
+ * A single-element slot is a literal; `"#"` is the sequence-boundary sentinel.
+ */
+export type EnvironmentSlot = readonly string[];
+
 /** A SCA²-style rule. `from`/`to` are token sequences or category member lists. */
 export interface SoundChangeRule {
   key: string;
@@ -158,10 +170,13 @@ export interface SoundChangeRule {
   from: readonly string[];
   /** Empty array expresses deletion. Same arity as `from` for categories, else one output. */
   to: readonly string[];
-  /** Environment before the target; `#` matches the token-sequence boundary. */
-  before?: readonly string[];
-  /** Environment after the target; `#` matches the token-sequence boundary. */
-  after?: readonly string[];
+  /**
+   * Environment slots before the target; each slot is a list of alternatives.
+   * A flat string (legacy JSON form) is accepted as a single-alternative slot.
+   */
+  before?: readonly (EnvironmentSlot | string)[];
+  /** Environment slots after the target; see {@link SoundChangeRule.before}. */
+  after?: readonly (EnvironmentSlot | string)[];
 }
 
 /**
@@ -178,35 +193,61 @@ export function parseSoundChange(line: string): SoundChangeRule {
   const arrow = change!.split(">");
   if (arrow.length !== 2) throw new Error(`invalid rule (expected '>'): ${JSON.stringify(line)}`);
   const from = parseCategory(arrow[0]!);
-  const to = arrow[1]!.trim() === "0" ? [] : parseCategory(arrow[1]!);
+  const toExpr = arrow[1]!.trim();
+  const to = toExpr === "0" ? [] : parseCategory(toExpr);
+  const fromIsCategory = arrow[0]!.trim().startsWith("{");
+  const toIsCategory = toExpr.startsWith("{");
+  if (fromIsCategory && !toIsCategory && from.length > 1 && to.length > 1 && from.length !== to.length) {
+    throw new Error(`rule ${JSON.stringify(line)}: category arity mismatch`);
+  }
+  if (!fromIsCategory && toIsCategory && to.length > 1) {
+    throw new Error(`rule ${JSON.stringify(line)}: single from cannot map to a category of ${to.length} outputs`);
+  }
 
-  let before: string[] | undefined;
-  let after: string[] | undefined;
+  let before: EnvironmentSlot[] | undefined;
+  let after: EnvironmentSlot[] | undefined;
   if (environment !== undefined) {
     const env = environment.trim();
     if (!env.includes("_")) throw new Error(`environment must contain '_': ${JSON.stringify(line)}`);
     const [left, right] = env.split("_") as [string, string];
-    if (left.trim() !== "") before = parseCategory(left);
-    if (right.trim() !== "") after = parseCategory(right);
+    if (left.trim() !== "") before = parseEnvironment(left, line);
+    if (right.trim() !== "") after = parseEnvironment(right, line);
   }
 
-  return compact({
+  return {
     key: trimmed,
     from,
     to,
     ...(before === undefined ? {} : { before }),
     ...(after === undefined ? {} : { after }),
-  });
+  };
+}
+
+function assertStringArray(value: unknown, field: string, key: string): readonly string[] {
+  if (!Array.isArray(value) || !value.every((item) => typeof item === "string")) {
+    throw new Error(`rule ${JSON.stringify(key)}: ${field} must be an array of strings`);
+  }
+  return value as readonly string[];
 }
 
 /** Normalize/validate a JSON-form rule. Returns the same object when valid. */
 export function parseSoundChangeRule(rule: SoundChangeRule): SoundChangeRule {
-  if (!Array.isArray(rule.from) || rule.from.length === 0) {
-    throw new Error(`rule ${JSON.stringify(rule.key)}: empty from is forbidden`);
-  }
-  if (!Array.isArray(rule.to)) throw new Error(`rule ${JSON.stringify(rule.key)}: to must be an array`);
+  const key = rule?.key;
+  assertStringArray(rule?.from, "from", key);
+  if (rule.from.length === 0) throw new Error(`rule ${JSON.stringify(key)}: empty from is forbidden`);
+  assertStringArray(rule?.to, "to", key);
   if (rule.from.length > 1 && rule.to.length > 1 && rule.from.length !== rule.to.length) {
-    throw new Error(`rule ${JSON.stringify(rule.key)}: category arity mismatch`);
+    throw new Error(`rule ${JSON.stringify(key)}: category arity mismatch`);
+  }
+  for (const field of ["before", "after"] as const) {
+    const env = rule[field];
+    if (env === undefined) continue;
+    if (!Array.isArray(env)) throw new Error(`rule ${JSON.stringify(key)}: ${field} must be an array`);
+    for (const slot of env) {
+      // Legacy flat JSON form: ["#"] means one boundary slot.
+      if (typeof slot === "string") continue;
+      assertStringArray(slot, `${field} slot`, key);
+    }
   }
   return rule;
 }
@@ -215,13 +256,29 @@ export function parseSoundChangeRule(rule: SoundChangeRule): SoundChangeRule {
 function parseCategory(expr: string): string[] {
   const trimmed = expr.trim();
   if (trimmed.startsWith("{") && trimmed.endsWith("}")) {
-    return trimmed.slice(1, -1).split(",").map((t) => t.trim()).filter((t) => t.length > 0);
+    const members = trimmed.slice(1, -1).split(",").map((t) => t.trim()).filter((t) => t.length > 0);
+    if (members.length === 0) throw new Error(`empty category in expression: ${JSON.stringify(expr)}`);
+    return members;
   }
   return trimmed.length > 0 ? [trimmed] : [];
 }
 
-function compact<T extends object>(value: T): T {
-  return value;
+/**
+ * Parse an environment side into ordered slots. Whitespace separates tokens;
+ * `{a,b}` is one slot with two alternatives; `#` is the boundary sentinel.
+ */
+function parseEnvironment(side: string, line: string): EnvironmentSlot[] {
+  const slots: EnvironmentSlot[] = [];
+  const pattern = /\{[^{}]*\}|\S+/g;
+  for (const match of side.match(pattern) ?? []) {
+    if (match.startsWith("{") && !match.endsWith("}")) {
+      throw new Error(`unterminated category in environment: ${JSON.stringify(line)}`);
+    }
+    const alternatives = parseCategory(match);
+    if (alternatives.length === 0) throw new Error(`invalid environment: ${JSON.stringify(line)}`);
+    slots.push(alternatives);
+  }
+  return slots;
 }
 
 /**
@@ -275,20 +332,46 @@ function matchRule(
   return undefined;
 }
 
+/** Normalize legacy flat JSON environments (`["#"]`) to slot form (`[["#"]]`). */
+function normalizeEnv(env: readonly (string | EnvironmentSlot)[] | undefined): readonly EnvironmentSlot[] | undefined {
+  if (env === undefined) return undefined;
+  return env.map((slot) => (typeof slot === "string" ? [slot] : slot));
+}
+
 function matchesEnvironment(
   tokens: readonly string[],
   position: number,
-  env: readonly string[],
+  rawEnv: readonly (string | EnvironmentSlot)[],
   side: "before" | "after",
 ): boolean {
-  if (env.length === 1 && env[0] === "#") {
-    return side === "before" ? position === 0 : position === tokens.length;
-  }
-  // Literal token sequence immediately adjacent to the target.
-  const start = side === "before" ? position - env.length : position;
-  if (start < 0 || start + env.length > tokens.length) return false;
-  for (let i = 0; i < env.length; i++) {
-    if (tokens[start + i] !== env[i]) return false;
+  const env = normalizeEnv(rawEnv) ?? [];
+  // Literal slots consume one token each; `#` is zero-width and checks an
+  // absolute sequence boundary. For "before", slots are authored left-to-right
+  // but sit immediately left of the target; the last literal is nearest it.
+  const literalCount = env.filter((slot) => !slot.includes("#")).length;
+  if (side === "before" && position - literalCount < 0) return false;
+  if (side === "after" && position + literalCount > tokens.length) return false;
+
+  let literalIndex = 0;
+  for (const slot of env) {
+    const isBoundary = slot.includes("#");
+    const slotPosition = side === "before"
+      ? position - literalCount + literalIndex
+      : position + literalIndex;
+    let slotMatches = false;
+    for (const alternative of slot) {
+      if (alternative === "#") {
+        if (side === "before" ? slotPosition === 0 : slotPosition === tokens.length) {
+          slotMatches = true;
+          break;
+        }
+      } else if (tokens[slotPosition] === alternative) {
+        slotMatches = true;
+        break;
+      }
+    }
+    if (!slotMatches) return false;
+    if (!isBoundary) literalIndex++;
   }
   return true;
 }
@@ -337,11 +420,29 @@ export function adjectiveFromPlace(place: string): string {
 // Token lexicons and dialect derivation
 // ---------------------------------------------------------------------------
 
+/**
+ * A rendered word's layout hint. `joiner` is inserted between syllable
+ * segments, and `capitalize` mirrors `generateWord`: words with a joiner are
+ * left lowercase, others capitalize their first character.
+ */
+export interface WordRenderHint {
+  readonly joiner?: string;
+  readonly capitalize?: boolean;
+}
+
 /** Lexicon that retains the token sequence behind each form (spec section 14). */
 export interface TokenLexicon extends Lexicon {
   tokensOf(meaningId: string): readonly string[];
   /** Resolved, immutable renderer data, including fallback. */
   readonly orthography: OrthographyData;
+  /**
+   * Optional syllable segmentation. When present, dialects rewrite each
+   * segment separately and rejoin with {@link WordRenderHint.joiner}, so a
+   * joiner-using parent is reproduced exactly by a zero-change daughter.
+   */
+  segmentsOf?(meaningId: string): readonly (readonly string[])[];
+  /** Optional rendering hint inherited by derived languages. */
+  readonly renderHint?: WordRenderHint;
 }
 
 /** A dialect with identity/provenance and local morphology (spec section 14). */
@@ -370,15 +471,40 @@ export interface LanguageBranch {
   morphology?: readonly MorphologyRule[];
 }
 
-function assertTokenLexicon(parent: TokenLexicon, expectedParent: string): void {
+function assertTokenLexicon(parent: TokenLexicon, expectedParent: string, selfId: string): void {
   if (typeof parent.tokensOf !== "function" || parent.orthography === undefined) {
     throw new Error(`deriveDialect: parent must be a TokenLexicon (got ${JSON.stringify(parent.cultureId)})`);
   }
-  if (expectedParent !== parent.cultureId && expectedParent !== (parent as DerivedLanguage).id) {
-    // Mismatch is allowed only when a world resolves a chain by ID; keep the
-    // check strict enough to catch accidental self-cycles.
-    // (No throw: dialect IDs may be resource IDs while cultureId is the local ID.)
+  const parentId = (parent as DerivedLanguage).id ?? parent.cultureId;
+  if (selfId === expectedParent || selfId === parentId) {
+    throw new Error(`deriveDialect: dialect cycle at ${JSON.stringify(selfId)}`);
   }
+  // A two-node cycle: the direct parent's own parent is this new daughter.
+  const ancestorId = (parent as DerivedLanguage).parent;
+  if (ancestorId !== undefined && ancestorId === selfId) {
+    throw new Error(`deriveDialect: dialect cycle at ${JSON.stringify(selfId)}`);
+  }
+  if (expectedParent !== parent.cultureId && expectedParent !== parentId) {
+    throw new Error(
+      `deriveDialect: data.parent ${JSON.stringify(expectedParent)} does not match parent ` +
+      `${JSON.stringify(parentId)} (cultureId ${JSON.stringify(parent.cultureId)})`,
+    );
+  }
+}
+
+/** Render rewritten segments with the parent's joiner/capitalization behaviour. */
+function renderDerivedForm(
+  segments: readonly (readonly string[])[],
+  orthography: OrthographyData,
+  hint: WordRenderHint | undefined,
+): string {
+  const joiner = hint?.joiner ?? "";
+  const rendered = segments
+    .map((segment) => applyOrthography(segment, orthography))
+    .join(joiner);
+  // generateWord leaves joined forms lowercase and capitalizes unjoined ones.
+  const capitalize = hint?.capitalize ?? (joiner === "");
+  return capitalize ? capitalizeForm(rendered) : rendered;
 }
 
 /**
@@ -391,25 +517,38 @@ export function deriveDialect(
   data: DialectData,
   ctx: Context,
 ): DerivedLanguage {
-  assertTokenLexicon(parent, data.parent);
+  assertTokenLexicon(parent, data.parent, data.id);
   if ((parent as DerivedLanguage).id === data.id) {
     throw new Error(`deriveDialect: dialect cycle at ${JSON.stringify(data.id)}`);
   }
   const orthography = data.orthography ?? parent.orthography;
+  const renderHint = parent.renderHint;
   const morphology = new Map((data.morphology ?? []).map((rule) => [rule.key, rule]));
   // `ctx` is intentionally not sampled: rewriting is deterministic and must
   // never perturb sibling rolls. The fork exists for future opt-in profiles.
   void ctx.child(`dialect:${data.id}`);
 
-  const tokensOf = (meaningId: string): readonly string[] =>
-    applySoundChanges(parent.tokensOf(meaningId), data.soundChanges);
+  // Rewrite per syllable segment when the parent retained boundaries; this is
+  // what preserves a culture's joiner and capitalization through derivation.
+  const segmentsOf = (meaningId: string): readonly (readonly string[])[] => {
+    if (parent.segmentsOf === undefined) {
+      return [applySoundChanges(parent.tokensOf(meaningId), data.soundChanges)];
+    }
+    return parent.segmentsOf(meaningId).map((segment) =>
+      applySoundChanges(segment, data.soundChanges),
+    );
+  };
+
+  const tokensOf = (meaningId: string): readonly string[] => segmentsOf(meaningId).flat();
 
   return {
     cultureId: data.id,
     id: data.id,
     parent: data.parent,
     orthography,
+    renderHint,
     tokensOf,
+    segmentsOf,
     byClass(c: WordClass, tag?: string) {
       return parent.byClass(c, tag);
     },
@@ -422,7 +561,7 @@ export function deriveDialect(
       return result;
     },
     formOf(meaningId: string): string {
-      return capitalizeForm(applyOrthography(tokensOf(meaningId), orthography));
+      return renderDerivedForm(segmentsOf(meaningId), orthography, renderHint);
     },
     inflect(form: string, ruleKey: string): string {
       const rule = morphology.get(ruleKey);

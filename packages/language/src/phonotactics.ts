@@ -25,9 +25,18 @@ export function generateWord(glyphs: GlyphSystem, ctx: Context): string {
  * Like {@link generateWord}, but returns the atomic glyph tokens picked by
  * phonotactics before capitalization/joining. Draws exactly the same RNG
  * lanes in the same order as `generateWord`; opt-in only.
+ *
+ * Syllable boundaries are intentionally flattened here for callers that want
+ * a single token sequence; use {@link generateWordTokenGroups} when the
+ * culture's joiner must be preserved through later rewriting.
  */
 export function generateWordTokens(glyphs: GlyphSystem, ctx: Context): string[] {
   return generateSyllableGroups(glyphs, ctx).flat();
+}
+
+/** Syllable groups before joining/capitalization, for joiner-aware rewriting. */
+export function generateWordTokenGroups(glyphs: GlyphSystem, ctx: Context): string[][] {
+  return generateSyllableGroups(glyphs, ctx);
 }
 
 /** Shared RNG path: syllable groups, joined by `glyphs.joiner` in `generateWord`. */

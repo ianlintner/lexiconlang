@@ -1,6 +1,6 @@
 import type { Context } from "@lexiconlang/core";
 import type { Culture, Lexicon, WordClass } from "./types.js";
-import { generateWord, generateWordTokens } from "./phonotactics.js";
+import { generateWord, generateWordTokenGroups } from "./phonotactics.js";
 import { deriveDialect, type DerivedLanguage, type DialectData, type OrthographyData, type TokenLexicon } from "./dialects.js";
 
 /** Default capacity of a {@link LexiconCache}. */
@@ -233,6 +233,7 @@ export function buildTokenLexicon(
   const build = (): TokenLexicon => {
     const forms = new Map<string, string>();
     const tokens = new Map<string, string[]>();
+    const segments = new Map<string, string[][]>();
     const allMeaningIds: string[] = [];
     const seen = new Set<string>();
     for (const pack of culture.meaningPacks) {
@@ -246,6 +247,7 @@ export function buildTokenLexicon(
     return {
       cultureId: cultureIdOverride ?? culture.id,
       orthography,
+      renderHint: { joiner: culture.glyphs.joiner },
 
       formOf(meaningId: string): string {
         const cached = forms.get(meaningId);
@@ -256,11 +258,19 @@ export function buildTokenLexicon(
         return form;
       },
 
+      segmentsOf(meaningId: string): readonly (readonly string[])[] {
+        const cached = segments.get(meaningId);
+        if (cached !== undefined) return cached;
+        const wordCtx = cultureCtx.child(`word:${meaningId}`);
+        const groups = generateWordTokenGroups(culture.glyphs, wordCtx);
+        segments.set(meaningId, groups);
+        return groups;
+      },
+
       tokensOf(meaningId: string): readonly string[] {
         const cached = tokens.get(meaningId);
         if (cached !== undefined) return [...cached];
-        const wordCtx = cultureCtx.child(`word:${meaningId}`);
-        const picked = generateWordTokens(culture.glyphs, wordCtx);
+        const picked = this.segmentsOf!(meaningId).flat();
         tokens.set(meaningId, picked);
         return [...picked];
       },

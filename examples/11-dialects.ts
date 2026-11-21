@@ -68,7 +68,7 @@ const northern = deriveDialect(
     parent: "demo.proto",
     soundChanges: [
       parseSoundChange("a > e / _ #"), // final a -> e
-      parseSoundChange("{k,p} > {t,b} / # _"), // initial k -> t, p -> b
+      parseSoundChange("{k,p} > {t,b} / {a,e} _"), // initial k -> t, p -> b after a/e
     ],
   },
   ctx.child("northern"),

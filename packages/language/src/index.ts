@@ -38,7 +38,7 @@ export {
   DEFAULT_LEXICON_CACHE_CAPACITY,
   deriveDialectFromCulture,
 } from "./lexicon.js";
-export { generateWord, generateWordTokens } from "./phonotactics.js";
+export { generateWord, generateWordTokenGroups, generateWordTokens } from "./phonotactics.js";
 export {
   applyOrthography,
   applySoundChanges,
@@ -56,12 +56,14 @@ export {
 export type {
   DialectData,
   DerivedLanguage,
+  EnvironmentSlot,
   LanguageBranch,
   MorphologyRule,
   OrthographyData,
   RomanizationProfile,
   SoundChangeRule,
   TokenLexicon,
+  WordRenderHint,
 } from "./dialects.js";
 export type { LexiconCache, LexiconCacheStats } from "./lexicon.js";
 export { generateName, resolveNameTemplates } from "./templates.js";
