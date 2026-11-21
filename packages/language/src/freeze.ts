@@ -73,11 +73,15 @@ function deepFreeze<T>(value: T, seen: WeakSet<object> = new WeakSet()): T {
     return value;
   }
 
-  for (const key of Object.getOwnPropertyNames(object)) {
+  // `Reflect.ownKeys` includes symbol keys, which `getOwnPropertyNames` omits;
+  // only enumerable data properties are part of the documented boundary, so a
+  // non-enumerable property pointing at a caller-owned object is left alone.
+  for (const key of Reflect.ownKeys(object)) {
     const descriptor = Object.getOwnPropertyDescriptor(object, key);
     // Never invoke accessors: a getter may return caller-owned or changing
-    // objects. Only data properties are descended into.
+    // objects. Only enumerable data properties are descended into.
     if (descriptor === undefined || !("value" in descriptor)) continue;
+    if (!descriptor.enumerable) continue;
     deepFreeze(descriptor.value, seen);
   }
 

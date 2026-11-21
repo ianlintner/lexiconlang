@@ -324,6 +324,36 @@ describe("freezeCulture / isFrozenCulture", () => {
     expect(isFrozenCulture(frozen)).toBe(false);
   });
 
+  it("freezeCulture walks only enumerable data properties", () => {
+    const hidden = { note: ["caller-owned"] };
+    const input = { ...culture } as Record<string, unknown>;
+    Object.defineProperty(input, "hidden", {
+      enumerable: false,
+      configurable: true,
+      writable: true,
+      value: hidden,
+    });
+    const frozen = freezeCulture(input as unknown as Culture);
+    expect(Object.isFrozen(frozen)).toBe(true);
+    // A non-enumerable property is outside the documented boundary: the object
+    // it points at belongs to the caller and must not be frozen in place.
+    expect(Object.isFrozen(hidden)).toBe(false);
+    expect(Object.isFrozen(hidden.note)).toBe(false);
+    // Verification is stricter than freezing: skipped mutable data must never
+    // qualify the culture for the shared cache.
+    expect(isFrozenCulture(frozen)).toBe(false);
+  });
+
+  it("freezeCulture descends into enumerable symbol properties", () => {
+    const tag = Symbol("meta");
+    const input = { ...culture } as Record<symbol | string, unknown>;
+    input[tag] = { note: ["symbol-owned"] };
+    const frozen = freezeCulture(input as unknown as Culture);
+    const symbolValue = (frozen as unknown as Record<symbol, { note: string[] }>)[tag];
+    expect(Object.isFrozen(symbolValue)).toBe(true);
+    expect(Object.isFrozen(symbolValue?.note)).toBe(true);
+  });
+
   it("deep-freezes the snapshot", () => {
     const frozen = freezeCulture({ ...culture } as Culture);
     expect(isFrozenCulture(frozen)).toBe(true);
