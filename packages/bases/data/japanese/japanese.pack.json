@@ -1,0 +1,253 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.japanese",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "CV-heavy mora-friendly phonotactics and family-first naming inspired by Japanese; simplified and fictionalised. — Modern Japanese (romanized, macron-free). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-japanese-prov",
+      "source": "original:lexiconlang.bases.japanese",
+      "title": "Modern Japanese (romanized, macron-free)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.japanese/base/default",
+      "inspiredBy": "Modern Japanese (romanized, macron-free)",
+      "scope": "CV-heavy mora-friendly phonotactics and family-first naming inspired by Japanese; simplified and fictionalised.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "k",
+            "g",
+            "s",
+            "z",
+            "t",
+            "d",
+            "n",
+            "h",
+            "b",
+            "m",
+            "y",
+            "r",
+            "w",
+            "sh",
+            "ch",
+            "ts"
+          ],
+          "V": [
+            "a",
+            "i",
+            "u",
+            "e",
+            "o",
+            "ya",
+            "yu",
+            "yo",
+            "ai",
+            "au",
+            "ei",
+            "ou"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            5
+          ],
+          [
+            "V",
+            2
+          ],
+          [
+            "C V C",
+            1
+          ],
+          [
+            "C V V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            3
+          ],
+          [
+            "3",
+            2
+          ],
+          [
+            "1",
+            1
+          ],
+          [
+            "2-2",
+            2
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ],
+        "joiner": ""
+      },
+      "orthography": {
+        "id": "japanese-roman",
+        "mappings": [
+          {
+            "from": "sh",
+            "to": "š"
+          },
+          {
+            "from": "ch",
+            "to": "č"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "japanese-hepburn",
+        "mappings": [
+          {
+            "from": "š",
+            "to": "sh"
+          },
+          {
+            "from": "č",
+            "to": "ch"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Haru",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yuki",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "virtue"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "family": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "place"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "japanese.family-first": {
+          "id": "family-first",
+          "slots": [
+            {
+              "key": "family",
+              "role": "family",
+              "source": {
+                "type": "kind",
+                "kind": "family"
+              }
+            },
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "japanese-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.japanese/culture/default",
+      "base": "lexiconlang.bases.japanese/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}
