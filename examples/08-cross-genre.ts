@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fanta
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { pirates } from "@lexiconlang/pirates";
+import { steampunk } from "@lexiconlang/steampunk";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -100,3 +101,16 @@ for (const c of crew) {
 }
 const voyage = pirates.withSeed("a-golden-reef");
 console.log(`\nTreasure: ${voyage.treasure()}  ·  ${voyage.encounter().text}`);
+
+// ─── Scenario 4: a gaslamp inventor's filing ─────────────────────────────
+
+const brass = steampunk.withSeed("brass-cross-genre");
+console.log("Gaslamp patent filing:");
+console.log(`  Inventor: ${brass.person().form}`);
+console.log(`  Workshop: ${brass.district()} · ${brass.street()}`);
+console.log(`  Patent:   ${brass.patent()}`);
+console.log(`  Vessel:   ${brass.airship()}`);
+console.log(`  Society:  ${brass.society()}`);
+console.log(`  Sunday headline: ${brass.headline()}`);
+console.log(`  Street omen: ${brass.omen().text}`);
+

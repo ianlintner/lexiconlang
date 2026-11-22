@@ -13,6 +13,7 @@
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
     { "path": "./packages/pirates" },
-    { "path": "./packages/cli" }
+    { "path": "./packages/cli" },
+    { "path": "./packages/steampunk" }
   ]
 }
