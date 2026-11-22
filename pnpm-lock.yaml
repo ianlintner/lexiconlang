@@ -35,6 +35,9 @@ importers:
 
   examples:
     dependencies:
+      '@lexiconlang/bases':
+        specifier: workspace:*
+        version: link:../packages/bases
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../packages/core
