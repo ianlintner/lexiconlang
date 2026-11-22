@@ -222,7 +222,7 @@ describe("pack-runtime parity", () => {
 });
 
 describe("content artifacts", () => {
-  const REPEATED_WORD = /\b(\w+)\s+\1\b/i;
+  const REPEATED_WORD = /\b(\w+)[\s—-]+\1\b/i;
 
   it("never emits doubled articles in treasure or ship names", () => {
     for (let i = 0; i < 200; i++) {
@@ -248,6 +248,7 @@ describe("content artifacts", () => {
       for (const generator of data.generators) {
         const text = surface(world.generate(generator.id, "artifact"));
         expect(text, `${generator.id} @ artifact-all-${i}`).not.toMatch(REPEATED_WORD);
+        expect(text, `${generator.id} @ artifact-all-${i}`).not.toMatch(/——|--/);
       }
     }
   });

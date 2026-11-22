@@ -1620,7 +1620,7 @@
               "weight": 4
             },
             {
-              "value": "the #noun#--#noun#",
+              "value": "the #noun#—#echo#",
               "weight": 3
             }
           ]
@@ -1719,6 +1719,43 @@
             },
             {
               "value": "shark",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "echo",
+          "choices": [
+            {
+              "value": "abyss",
+              "weight": 1
+            },
+            {
+              "value": "tempest",
+              "weight": 1
+            },
+            {
+              "value": "maroon",
+              "weight": 1
+            },
+            {
+              "value": "gallow",
+              "weight": 1
+            },
+            {
+              "value": "wreck",
+              "weight": 1
+            },
+            {
+              "value": "knell",
+              "weight": 1
+            },
+            {
+              "value": "riven",
+              "weight": 1
+            },
+            {
+              "value": "salt",
               "weight": 1
             }
           ]
@@ -3302,7 +3339,7 @@
           ],
           "result": {
             "type": "text",
-            "text": "A bird crosses the bow——the old hands exchange a look."
+            "text": "A bird crosses the bow—the old hands exchange a look."
           }
         }
       ]
