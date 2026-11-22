@@ -12,6 +12,7 @@
     { "path": "./packages/modern" },
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
+    { "path": "./packages/pirates" },
     { "path": "./packages/cli" }
   ]
 }

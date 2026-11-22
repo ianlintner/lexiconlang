@@ -1,0 +1,35 @@
+{
+  "name": "@lexiconlang/pirates",
+  "version": "0.1.0",
+  "description": "Pirates & age of sail genre pack: ships, captains, crews, ports, treasure, shanties and sea encounters",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "data", "README.md", "PROVENANCE.md"],
+  "sideEffects": false,
+  "license": "CC0-1.0",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/language": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.9"
+  },
+  "keywords": ["lexiconlang", "genre-pack", "pirates", "nautical"],
+  "publishConfig": { "access": "public" }
+}

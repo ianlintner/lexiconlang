@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { pirates } from "@lexiconlang/pirates";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -72,3 +73,30 @@ for (const d of sq) {
   console.log(`  Det. ${d.legal}  (a.k.a. "${d.alias}")`);
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
+
+// ─── Scenario 3: a pirate crew with a fantasy quartermaster ──────────────
+
+interface PirateRoster {
+  captain: string;
+  ship: string;
+  rank: string;
+  alias: string;
+}
+
+const pirateCrew = compose<PirateRoster>({
+  id: "crossgenre.pirate-crew",
+  parts: {
+    captain: (ctx) => pirates.generators.captainName.generate(ctx.child("captain")).full,
+    ship: pirates.generators.shipName,
+    rank: pirates.generators.navalRank,
+    alias: (ctx) => fantasyFullName.generate(ctx.child("alias")).surname.form,
+  },
+});
+
+console.log("Pirate crew manifest (pirates + fantasy):");
+const crew = repeat(pirateCrew, 4).generate(ctx.child("pirate-crew"));
+for (const c of crew) {
+  console.log(`  ${c.rank.padEnd(20)} ${c.captain.padEnd(38)} a.k.a. "${c.alias}" aboard ${c.ship}`);
+}
+const voyage = pirates.withSeed("a-golden-reef");
+console.log(`\nTreasure: ${voyage.treasure()}  ·  ${voyage.encounter().text}`);
