@@ -1,0 +1,271 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.sanskrit",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Sanskrit; long vowel contrasts and aspirated stops; deliberate simplifications. No Vedic deity names ship. — Sanskrit (romanized transliteration). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-sanskrit-prov",
+      "source": "original:lexiconlang.bases.sanskrit",
+      "title": "Sanskrit (romanized transliteration)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.sanskrit/base/default",
+      "inspiredBy": "Sanskrit (romanized transliteration)",
+      "scope": "Phonotactics and name shapes inspired by Sanskrit; long vowel contrasts and aspirated stops; deliberate simplifications. No Vedic deity names ship.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "bh",
+            "c",
+            "ch",
+            "d",
+            "dh",
+            "g",
+            "gh",
+            "h",
+            "j",
+            "k",
+            "kh",
+            "l",
+            "m",
+            "n",
+            "p",
+            "ph",
+            "r",
+            "s",
+            "sh",
+            "t",
+            "th",
+            "v",
+            "y"
+          ],
+          "V": [
+            "a",
+            "aa",
+            "i",
+            "ii",
+            "u",
+            "uu",
+            "e",
+            "ai",
+            "o",
+            "au"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            2
+          ],
+          [
+            "C C V",
+            2
+          ],
+          [
+            "V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ]
+      },
+      "orthography": {
+        "id": "sanskrit-latin",
+        "mappings": [
+          {
+            "from": "aa",
+            "to": "ā"
+          },
+          {
+            "from": "ii",
+            "to": "ī"
+          },
+          {
+            "from": "uu",
+            "to": "ū"
+          },
+          {
+            "from": "sh",
+            "to": "ś"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "sanskrit-roman",
+        "mappings": [
+          {
+            "from": "ā",
+            "to": "aa"
+          },
+          {
+            "from": "ī",
+            "to": "ii"
+          },
+          {
+            "from": "ū",
+            "to": "uu"
+          },
+          {
+            "from": "ś",
+            "to": "sh"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Arjavira",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kausalindi",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "patronymic": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "family",
+                  "capitalize": true
+                },
+                {
+                  "literal": "putra",
+                  "translation": "child"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "sanskrit.patronymic": {
+          "id": "patronymic",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "patronymic",
+              "role": "patronymic",
+              "source": {
+                "type": "kind",
+                "kind": "patronymic"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "sanskrit-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.sanskrit/culture/default",
+      "base": "lexiconlang.bases.sanskrit/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

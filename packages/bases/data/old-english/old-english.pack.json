@@ -1,0 +1,250 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.old-english",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Old English; Germanic consonant clusters, strong vowels; deliberate simplifications. — Old English (Anglo-Saxon, romanized). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-old-english-prov",
+      "source": "original:lexiconlang.bases.old-english",
+      "title": "Old English (Anglo-Saxon, romanized)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.old-english/base/default",
+      "inspiredBy": "Old English (Anglo-Saxon, romanized)",
+      "scope": "Phonotactics and name shapes inspired by Old English; Germanic consonant clusters, strong vowels; deliberate simplifications.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "h",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "w",
+            "y",
+            "th",
+            "st",
+            "sc",
+            "cg"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "y",
+            "ae",
+            "ea",
+            "eo",
+            "ie"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "C C V",
+            2
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ]
+      },
+      "orthography": {
+        "id": "old-english-latin",
+        "mappings": [
+          {
+            "from": "th",
+            "to": "þ"
+          },
+          {
+            "from": "ae",
+            "to": "æ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "old-english-roman",
+        "mappings": [
+          {
+            "from": "þ",
+            "to": "th"
+          },
+          {
+            "from": "æ",
+            "to": "ae"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eadwulf",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eadwenna",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "patronymic": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "family",
+                  "capitalize": true
+                },
+                {
+                  "literal": "son",
+                  "translation": "son"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "old-english.patronymic": {
+          "id": "patronymic",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "patronymic",
+              "role": "patronymic",
+              "source": {
+                "type": "kind",
+                "kind": "patronymic"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "old-english-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.old-english/culture/default",
+      "base": "lexiconlang.bases.old-english/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

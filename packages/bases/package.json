@@ -36,6 +36,46 @@
       "types": "./dist/src/arabic.d.ts",
       "import": "./dist/src/arabic.js"
     },
+    "./slavic": {
+      "types": "./dist/src/slavic.d.ts",
+      "import": "./dist/src/slavic.js"
+    },
+    "./old-english": {
+      "types": "./dist/src/old-english.d.ts",
+      "import": "./dist/src/old-english.js"
+    },
+    "./persian": {
+      "types": "./dist/src/persian.d.ts",
+      "import": "./dist/src/persian.js"
+    },
+    "./sanskrit": {
+      "types": "./dist/src/sanskrit.d.ts",
+      "import": "./dist/src/sanskrit.js"
+    },
+    "./mandarin": {
+      "types": "./dist/src/mandarin.d.ts",
+      "import": "./dist/src/mandarin.js"
+    },
+    "./nahuatl": {
+      "types": "./dist/src/nahuatl.d.ts",
+      "import": "./dist/src/nahuatl.js"
+    },
+    "./yoruba": {
+      "types": "./dist/src/yoruba.d.ts",
+      "import": "./dist/src/yoruba.js"
+    },
+    "./polynesian": {
+      "types": "./dist/src/polynesian.d.ts",
+      "import": "./dist/src/polynesian.js"
+    },
+    "./ancient-egyptian": {
+      "types": "./dist/src/ancient-egyptian.d.ts",
+      "import": "./dist/src/ancient-egyptian.js"
+    },
+    "./finnish": {
+      "types": "./dist/src/finnish.d.ts",
+      "import": "./dist/src/finnish.js"
+    },
     "./data/*": "./data/*",
     "./package.json": "./package.json"
   },
