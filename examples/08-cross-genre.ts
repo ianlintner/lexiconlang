@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { historicalMedieval } from "@lexiconlang/historical-medieval";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -72,3 +73,15 @@ for (const d of sq) {
   console.log(`  Det. ${d.legal}  (a.k.a. "${d.alias}")`);
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
+
+// ─── Scenario 3: a medieval fair in a modern city ────────────────────────
+// The declarative medieval pack composes with other genres like any generator.
+
+const hm = historicalMedieval.withSeed("the-ironwake");
+console.log("Medieval fair in a modern city:");
+for (let i = 0; i < 3; i++) {
+  const guild = historicalMedieval.generators.guildName.generate(ctx.child(`guild:${i}`));
+  const listing = hm.listing();
+  console.log(`  ${guild} at ${modern.generators.cityName.generate(ctx.child(`city:${i}`))}: ${listing.good} (${listing.price} ${listing.unit})`);
+}
+console.log("  heraldry:", hm.arms().blazon);

@@ -1,0 +1,6432 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.historical-medieval",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original synthetic historical-medieval naming data, settlements, guilds, monasteries, titles, market goods and heraldic vocabulary. Not a claim of historical accuracy.",
+  "provenance": [
+    {
+      "id": "original-lexiconlang-medieval",
+      "source": "original:lexiconlang",
+      "title": "Synthetic historical-medieval genre data",
+      "creator": "lexiconlang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original synthetic name elements and tables authored for lexiconlang. No real living people, trademarks, copyrighted settings or third-party corpora used. Name elements are inspired by broadly public-domain linguistic families (Latin, Old English, Celtic, Norse) but are not reconstructions of any specific historical record.",
+      "modifications": "None",
+      "files": [
+        "historical-medieval.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.historical-medieval/culture/latin",
+      "capitalize": "first",
+      "wordClasses": [
+        {
+          "id": "given",
+          "label": "given name"
+        },
+        {
+          "id": "byname",
+          "label": "byname / cognomen"
+        }
+      ],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aldric",
+              "translation": "old ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amalric",
+              "translation": "work-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Arnulf",
+              "translation": "eagle-wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bertrand",
+              "translation": "bright raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Claudius",
+              "translation": "lame one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corvin",
+              "translation": "raven-like"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Felician",
+              "translation": "fortunate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Florian",
+              "translation": "flowering"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gerard",
+              "translation": "spear-hardy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gregor",
+              "translation": "watchful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hilary",
+              "translation": "cheerful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leopold",
+              "translation": "lion-people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lucian",
+              "translation": "light-bringer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Magnus",
+              "translation": "great"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Martin",
+              "translation": "of Mars"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nicholas",
+              "translation": "victory-people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Odo",
+              "translation": "wealth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Paternus",
+              "translation": "fatherly"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quintin",
+              "translation": "fifth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reginald",
+              "translation": "counsel-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silvester",
+              "translation": "of the forest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Theobald",
+              "translation": "people-bold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Valerian",
+              "translation": "strong"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Willelm",
+              "translation": "will-helmet"
+            },
+            "weight": 1
+          }
+        ],
+        "byname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "de Aula",
+              "translation": "of the hall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "de Campo",
+              "translation": "of the field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "de Monte",
+              "translation": "of the hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "de Ripa",
+              "translation": "of the riverbank"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "de Silva",
+              "translation": "of the wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "de Valle",
+              "translation": "of the valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Faber",
+              "translation": "smith"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Molendinus",
+              "translation": "miller"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pistor",
+              "translation": "baker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sartor",
+              "translation": "tailor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Textor",
+              "translation": "weaver"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cognomen",
+              "translation": "the named"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lexiconlang.historical-medieval/culture/oldenglish",
+      "capitalize": "first",
+      "wordClasses": [
+        {
+          "id": "given",
+          "label": "given name"
+        },
+        {
+          "id": "byname",
+          "label": "byname"
+        }
+      ],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Æthelstan",
+              "translation": "noble stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ælfgifu",
+              "translation": "elf-gift"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beornwulf",
+              "translation": "bear-wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cenwulf",
+              "translation": "bold wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eadric",
+              "translation": "wealth-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eadgyth",
+              "translation": "wealth-war"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ealdred",
+              "translation": "old counsel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eormenlaf",
+              "translation": "great relic"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Godric",
+              "translation": "god-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hildehilde",
+              "translation": "battle-hild"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leofric",
+              "translation": "beloved ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mearc",
+              "translation": "border"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Osbern",
+              "translation": "god-bear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sigebert",
+              "translation": "victory-bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Théodred",
+              "translation": "people-counsel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wulfstan",
+              "translation": "wolf-stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ælfwine",
+              "translation": "elf-friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eadberht",
+              "translation": "wealth-bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hroðgar",
+              "translation": "spear-guard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Swithwulf",
+              "translation": "strong wolf"
+            },
+            "weight": 1
+          }
+        ],
+        "byname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "at Hamme",
+              "translation": "at the homestead"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Æcer",
+              "translation": "of the acre"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Beorg",
+              "translation": "of the barrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Broc",
+              "translation": "of the brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Denne",
+              "translation": "of the valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Ford",
+              "translation": "of the ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Hōh",
+              "translation": "of the hill-spur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Lēah",
+              "translation": "of the clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Mersc",
+              "translation": "of the marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of Wōd",
+              "translation": "of the wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Se Smiþ",
+              "translation": "the smith"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Se Weorþ",
+              "translation": "the worthy"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lexiconlang.historical-medieval/culture/celtic",
+      "capitalize": "first",
+      "wordClasses": [
+        {
+          "id": "given",
+          "label": "given name"
+        },
+        {
+          "id": "byname",
+          "label": "byname"
+        }
+      ],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aedan",
+              "translation": "little fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brennan",
+              "translation": "little raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cadhla",
+              "translation": "beautiful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ciaran",
+              "translation": "little dark one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Diarmaid",
+              "translation": "free man"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elowen",
+              "translation": "elm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fergus",
+              "translation": "man of vigour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gwenllian",
+              "translation": "white lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iseult",
+              "translation": "fair one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lorcan",
+              "translation": "little fierce one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Maelgwn",
+              "translation": "noble hound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Niamh",
+              "translation": "bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Owain",
+              "translation": "young warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rhys",
+              "translation": "ardour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sorcha",
+              "translation": "bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tiernan",
+              "translation": "little lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulric",
+              "translation": "wolf-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Branwen",
+              "translation": "white raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Donal",
+              "translation": "world-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Myrddin",
+              "translation": "sea fort"
+            },
+            "weight": 1
+          }
+        ],
+        "byname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "ap Cynan",
+              "translation": "son of Cynan"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "ap Dafydd",
+              "translation": "son of Dafydd"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "mac Aodha",
+              "translation": "son of Aodh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "mac Con",
+              "translation": "son of the hound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Grey Wood",
+              "translation": "of the grey wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Red Valley",
+              "translation": "of the red valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the White Ford",
+              "translation": "of the white ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Bard",
+              "translation": "the poet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Fair",
+              "translation": "the beautiful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Stout",
+              "translation": "the sturdy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Lake",
+              "translation": "of the lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Rock",
+              "translation": "of the rock"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lexiconlang.historical-medieval/culture/norse",
+      "capitalize": "first",
+      "wordClasses": [
+        {
+          "id": "given",
+          "label": "given name"
+        },
+        {
+          "id": "byname",
+          "label": "byname"
+        }
+      ],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bjǫrn",
+              "translation": "bear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eiríkr",
+              "translation": "ever-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ástríðr",
+              "translation": "god-beauty"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Guðrún",
+              "translation": "god-secret"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hákon",
+              "translation": "high kin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Helga",
+              "translation": "holy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ísólfr",
+              "translation": "ice-wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jón",
+              "translation": "God is gracious"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ketill",
+              "translation": "kettle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Óláfr",
+              "translation": "ancestor's relic"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ragnhildr",
+              "translation": "counsel-battle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sigríðr",
+              "translation": "victory-beauty"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sturla",
+              "translation": "stout one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Þórr",
+              "translation": "thunder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Þorgrímr",
+              "translation": "Thor-mask"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vigdís",
+              "translation": "battle-goddess"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ari",
+              "translation": "eagle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dagfinnr",
+              "translation": "day-finn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Starkadr",
+              "translation": "strong counsel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sveinn",
+              "translation": "boy"
+            },
+            "weight": 1
+          }
+        ],
+        "byname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "á Bæ",
+              "translation": "at the farm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "af Fjalli",
+              "translation": "from the mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "af Holti",
+              "translation": "from the wooded hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "í Dale",
+              "translation": "in the valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "í Vík",
+              "translation": "in the bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "með Saxi",
+              "translation": "with the knife"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Svarti",
+              "translation": "the black"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rauði",
+              "translation": "the red"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hviti",
+              "translation": "the white"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Langi",
+              "translation": "the tall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Smáli",
+              "translation": "the small"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Veiðimaðr",
+              "translation": "hunter"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.historical-medieval/grammar/manor",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#place# #kind#",
+              "weight": 5
+            },
+            {
+              "value": "#saint# #place# #kind#",
+              "weight": 2
+            },
+            {
+              "value": "#place# #feature#",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Ash",
+              "weight": 1
+            },
+            {
+              "value": "Bram",
+              "weight": 1
+            },
+            {
+              "value": "Calder",
+              "weight": 1
+            },
+            {
+              "value": "Dun",
+              "weight": 1
+            },
+            {
+              "value": "Els",
+              "weight": 1
+            },
+            {
+              "value": "Fen",
+              "weight": 1
+            },
+            {
+              "value": "Garth",
+              "weight": 1
+            },
+            {
+              "value": "Holt",
+              "weight": 1
+            },
+            {
+              "value": "Iver",
+              "weight": 1
+            },
+            {
+              "value": "Kirk",
+              "weight": 1
+            },
+            {
+              "value": "Lang",
+              "weight": 1
+            },
+            {
+              "value": "Mar",
+              "weight": 1
+            },
+            {
+              "value": "Nether",
+              "weight": 1
+            },
+            {
+              "value": "Oak",
+              "weight": 1
+            },
+            {
+              "value": "Pendle",
+              "weight": 1
+            },
+            {
+              "value": "Quern",
+              "weight": 1
+            },
+            {
+              "value": "Raven",
+              "weight": 1
+            },
+            {
+              "value": "Stan",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Under",
+              "weight": 1
+            },
+            {
+              "value": "Wyn",
+              "weight": 1
+            },
+            {
+              "value": "Yew",
+              "weight": 1
+            },
+            {
+              "value": "Zeph",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "kind",
+          "choices": [
+            {
+              "value": "Manor",
+              "weight": 1
+            },
+            {
+              "value": "Hall",
+              "weight": 1
+            },
+            {
+              "value": "Grange",
+              "weight": 1
+            },
+            {
+              "value": "Village",
+              "weight": 1
+            },
+            {
+              "value": "Hamlet",
+              "weight": 1
+            },
+            {
+              "value": "Retreat",
+              "weight": 1
+            },
+            {
+              "value": "stead",
+              "weight": 1
+            },
+            {
+              "value": "thorpe",
+              "weight": 1
+            },
+            {
+              "value": "by",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "saint",
+          "choices": [
+            {
+              "value": "St. Alban's",
+              "weight": 1
+            },
+            {
+              "value": "St. Brigid's",
+              "weight": 1
+            },
+            {
+              "value": "St. Cuthbert's",
+              "weight": 1
+            },
+            {
+              "value": "St. Dunstan's",
+              "weight": 1
+            },
+            {
+              "value": "St. Eanswythe's",
+              "weight": 1
+            },
+            {
+              "value": "St. Finian's",
+              "weight": 1
+            },
+            {
+              "value": "St. Gildas's",
+              "weight": 1
+            },
+            {
+              "value": "St. Hilda's",
+              "weight": 1
+            },
+            {
+              "value": "St. Isidore's",
+              "weight": 1
+            },
+            {
+              "value": "St. Jerome's",
+              "weight": 1
+            },
+            {
+              "value": "St. Kenelm's",
+              "weight": 1
+            },
+            {
+              "value": "St. Lambert's",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "feature",
+          "choices": [
+            {
+              "value": "Bridge",
+              "weight": 1
+            },
+            {
+              "value": "Cross",
+              "weight": 1
+            },
+            {
+              "value": "Ford",
+              "weight": 1
+            },
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Lea",
+              "weight": 1
+            },
+            {
+              "value": "Mere",
+              "weight": 1
+            },
+            {
+              "value": "Ridge",
+              "weight": 1
+            },
+            {
+              "value": "Shaw",
+              "weight": 1
+            },
+            {
+              "value": "Well",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/grammar/guild",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "Guild of #trade#",
+              "weight": 4
+            },
+            {
+              "value": "Worshipful Company of #trade#",
+              "weight": 2
+            },
+            {
+              "value": "Confraternity of St. #saint# #trade#",
+              "weight": 2
+            },
+            {
+              "value": "#trade# Guild of #place#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "trade",
+          "choices": [
+            {
+              "value": "Blacksmiths",
+              "weight": 1
+            },
+            {
+              "value": "Brewers",
+              "weight": 1
+            },
+            {
+              "value": "Butchers",
+              "weight": 1
+            },
+            {
+              "value": "Carpenters",
+              "weight": 1
+            },
+            {
+              "value": "Clothiers",
+              "weight": 1
+            },
+            {
+              "value": "Coopers",
+              "weight": 1
+            },
+            {
+              "value": "Dyers",
+              "weight": 1
+            },
+            {
+              "value": "Fishmongers",
+              "weight": 1
+            },
+            {
+              "value": "Fullers",
+              "weight": 1
+            },
+            {
+              "value": "Goldsmiths",
+              "weight": 1
+            },
+            {
+              "value": "Harness-makers",
+              "weight": 1
+            },
+            {
+              "value": "Joiners",
+              "weight": 1
+            },
+            {
+              "value": "Leatherworkers",
+              "weight": 1
+            },
+            {
+              "value": "Masons",
+              "weight": 1
+            },
+            {
+              "value": "Mercers",
+              "weight": 1
+            },
+            {
+              "value": "Millers",
+              "weight": 1
+            },
+            {
+              "value": "Minstrels",
+              "weight": 1
+            },
+            {
+              "value": "Potters",
+              "weight": 1
+            },
+            {
+              "value": "Saddlers",
+              "weight": 1
+            },
+            {
+              "value": "Shipwrights",
+              "weight": 1
+            },
+            {
+              "value": "Silversmiths",
+              "weight": 1
+            },
+            {
+              "value": "Tailors",
+              "weight": 1
+            },
+            {
+              "value": "Tanners",
+              "weight": 1
+            },
+            {
+              "value": "Weavers",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "saint",
+          "choices": [
+            {
+              "value": "Anne",
+              "weight": 1
+            },
+            {
+              "value": "Barnabas",
+              "weight": 1
+            },
+            {
+              "value": "Clement",
+              "weight": 1
+            },
+            {
+              "value": "Dunstan",
+              "weight": 1
+            },
+            {
+              "value": "Eloy",
+              "weight": 1
+            },
+            {
+              "value": "Francis",
+              "weight": 1
+            },
+            {
+              "value": "George",
+              "weight": 1
+            },
+            {
+              "value": "Hilda",
+              "weight": 1
+            },
+            {
+              "value": "Isidore",
+              "weight": 1
+            },
+            {
+              "value": "James",
+              "weight": 1
+            },
+            {
+              "value": "Luke",
+              "weight": 1
+            },
+            {
+              "value": "Martin",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Ashford",
+              "weight": 1
+            },
+            {
+              "value": "Bristol",
+              "weight": 1
+            },
+            {
+              "value": "Canterbury",
+              "weight": 1
+            },
+            {
+              "value": "Dunwich",
+              "weight": 1
+            },
+            {
+              "value": "Exeter",
+              "weight": 1
+            },
+            {
+              "value": "Gloucester",
+              "weight": 1
+            },
+            {
+              "value": "Hereford",
+              "weight": 1
+            },
+            {
+              "value": "Ipswich",
+              "weight": 1
+            },
+            {
+              "value": "Lincoln",
+              "weight": 1
+            },
+            {
+              "value": "Norwich",
+              "weight": 1
+            },
+            {
+              "value": "Oxford",
+              "weight": 1
+            },
+            {
+              "value": "Ripon",
+              "weight": 1
+            },
+            {
+              "value": "Shrewsbury",
+              "weight": 1
+            },
+            {
+              "value": "Winchester",
+              "weight": 1
+            },
+            {
+              "value": "York",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/grammar/monastery",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "Abbey of St. #saint#",
+              "weight": 4
+            },
+            {
+              "value": "Priory of St. #saint#",
+              "weight": 3
+            },
+            {
+              "value": "Monastery of the #relic#",
+              "weight": 2
+            },
+            {
+              "value": "#order# House of #place#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "saint",
+          "choices": [
+            {
+              "value": "Alban",
+              "weight": 1
+            },
+            {
+              "value": "Anselm",
+              "weight": 1
+            },
+            {
+              "value": "Bede",
+              "weight": 1
+            },
+            {
+              "value": "Cuthbert",
+              "weight": 1
+            },
+            {
+              "value": "Dunstan",
+              "weight": 1
+            },
+            {
+              "value": "Edmund",
+              "weight": 1
+            },
+            {
+              "value": "Frideswide",
+              "weight": 1
+            },
+            {
+              "value": "Guthlac",
+              "weight": 1
+            },
+            {
+              "value": "Hilda",
+              "weight": 1
+            },
+            {
+              "value": "Innocent",
+              "weight": 1
+            },
+            {
+              "value": "James",
+              "weight": 1
+            },
+            {
+              "value": "Kenelm",
+              "weight": 1
+            },
+            {
+              "value": "Leofric",
+              "weight": 1
+            },
+            {
+              "value": "Mary",
+              "weight": 1
+            },
+            {
+              "value": "Ninian",
+              "weight": 1
+            },
+            {
+              "value": "Oswald",
+              "weight": 1
+            },
+            {
+              "value": "Patrick",
+              "weight": 1
+            },
+            {
+              "value": "Quintin",
+              "weight": 1
+            },
+            {
+              "value": "Radbod",
+              "weight": 1
+            },
+            {
+              "value": "Swithun",
+              "weight": 1
+            },
+            {
+              "value": "Thomas",
+              "weight": 1
+            },
+            {
+              "value": "Ulric",
+              "weight": 1
+            },
+            {
+              "value": "Wilfrid",
+              "weight": 1
+            },
+            {
+              "value": "Zeno",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "relic",
+          "choices": [
+            {
+              "value": "Holy Thorn",
+              "weight": 1
+            },
+            {
+              "value": "True Cross",
+              "weight": 1
+            },
+            {
+              "value": "Sacred Well",
+              "weight": 1
+            },
+            {
+              "value": "Silver Bell",
+              "weight": 1
+            },
+            {
+              "value": "Ancient Scriptorium",
+              "weight": 1
+            },
+            {
+              "value": "Crowned Image",
+              "weight": 1
+            },
+            {
+              "value": "Hidden Gospel",
+              "weight": 1
+            },
+            {
+              "value": "Martyr's Stone",
+              "weight": 1
+            },
+            {
+              "value": "Golden Censer",
+              "weight": 1
+            },
+            {
+              "value": "Woven Shroud",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "order",
+          "choices": [
+            {
+              "value": "Benedictine",
+              "weight": 1
+            },
+            {
+              "value": "Cistercian",
+              "weight": 1
+            },
+            {
+              "value": "Augustinian",
+              "weight": 1
+            },
+            {
+              "value": "Dominican",
+              "weight": 1
+            },
+            {
+              "value": "Franciscan",
+              "weight": 1
+            },
+            {
+              "value": "Carmelite",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Ashby",
+              "weight": 1
+            },
+            {
+              "value": "Barrow",
+              "weight": 1
+            },
+            {
+              "value": "Caistor",
+              "weight": 1
+            },
+            {
+              "value": "Dover",
+              "weight": 1
+            },
+            {
+              "value": "Ely",
+              "weight": 1
+            },
+            {
+              "value": "Fountains",
+              "weight": 1
+            },
+            {
+              "value": "Glastonbury",
+              "weight": 1
+            },
+            {
+              "value": "Hexham",
+              "weight": 1
+            },
+            {
+              "value": "Iona",
+              "weight": 1
+            },
+            {
+              "value": "Jarrow",
+              "weight": 1
+            },
+            {
+              "value": "Kirkstall",
+              "weight": 1
+            },
+            {
+              "value": "Lindisfarne",
+              "weight": 1
+            },
+            {
+              "value": "Malmesbury",
+              "weight": 1
+            },
+            {
+              "value": "Nunappleton",
+              "weight": 1
+            },
+            {
+              "value": "Rievaulx",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.historical-medieval/table/feudaltitle",
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Baron"
+          }
+        },
+        {
+          "key": "lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Lord"
+          }
+        },
+        {
+          "key": "lady",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Lady"
+          }
+        },
+        {
+          "key": "knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Knight"
+          }
+        },
+        {
+          "key": "count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Count"
+          }
+        },
+        {
+          "key": "countess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Countess"
+          }
+        },
+        {
+          "key": "viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Viscount"
+          }
+        },
+        {
+          "key": "viscountess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Viscountess"
+          }
+        },
+        {
+          "key": "earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Earl"
+          }
+        },
+        {
+          "key": "duchess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Duchess"
+          }
+        },
+        {
+          "key": "duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Duke"
+          }
+        },
+        {
+          "key": "marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marquess"
+          }
+        },
+        {
+          "key": "marcher-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marcher Lord"
+          }
+        },
+        {
+          "key": "abbot",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Abbot"
+          }
+        },
+        {
+          "key": "abbess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Abbess"
+          }
+        },
+        {
+          "key": "prior",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Prior"
+          }
+        },
+        {
+          "key": "prioress",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Prioress"
+          }
+        },
+        {
+          "key": "reeve",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Reeve"
+          }
+        },
+        {
+          "key": "sheriff",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Sheriff"
+          }
+        },
+        {
+          "key": "seneschal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Seneschal"
+          }
+        },
+        {
+          "key": "castellan",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Castellan"
+          }
+        },
+        {
+          "key": "standard-bearer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Standard-bearer"
+          }
+        },
+        {
+          "key": "squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Squire"
+          }
+        },
+        {
+          "key": "page",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Page"
+          }
+        },
+        {
+          "key": "herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Herald"
+          }
+        },
+        {
+          "key": "marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marshal"
+          }
+        },
+        {
+          "key": "constable",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Constable"
+          }
+        },
+        {
+          "key": "chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Chamberlain"
+          }
+        },
+        {
+          "key": "steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Steward"
+          }
+        },
+        {
+          "key": "bailiff",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Bailiff"
+          }
+        },
+        {
+          "key": "mayor",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Mayor"
+          }
+        },
+        {
+          "key": "alderman",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Alderman"
+          }
+        },
+        {
+          "key": "guildmaster",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Guildmaster"
+          }
+        },
+        {
+          "key": "warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Warden"
+          }
+        },
+        {
+          "key": "keeper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Keeper"
+          }
+        },
+        {
+          "key": "serjeant",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Serjeant"
+          }
+        },
+        {
+          "key": "banneret",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Banneret"
+          }
+        },
+        {
+          "key": "freeman",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Freeman"
+          }
+        },
+        {
+          "key": "vassal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Vassal"
+          }
+        },
+        {
+          "key": "homager",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Homager"
+          }
+        },
+        {
+          "key": "coroner",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coroner"
+          }
+        },
+        {
+          "key": "justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Justiciar"
+          }
+        },
+        {
+          "key": "chancellor",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Chancellor"
+          }
+        },
+        {
+          "key": "treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Treasurer"
+          }
+        },
+        {
+          "key": "exchequer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Exchequer"
+          }
+        },
+        {
+          "key": "archdeacon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Archdeacon"
+          }
+        },
+        {
+          "key": "dean",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dean"
+          }
+        },
+        {
+          "key": "canon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Canon"
+          }
+        },
+        {
+          "key": "friar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Friar"
+          }
+        },
+        {
+          "key": "monk",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Monk"
+          }
+        },
+        {
+          "key": "nun",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Nun"
+          }
+        },
+        {
+          "key": "sexton",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Sexton"
+          }
+        },
+        {
+          "key": "sacristan",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Sacristan"
+          }
+        },
+        {
+          "key": "almoner",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Almoner"
+          }
+        },
+        {
+          "key": "confessor",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Confessor"
+          }
+        },
+        {
+          "key": "chaplain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Chaplain"
+          }
+        },
+        {
+          "key": "pilgrim",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Pilgrim"
+          }
+        },
+        {
+          "key": "crusader",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Crusader"
+          }
+        },
+        {
+          "key": "knight-errant",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Knight-errant"
+          }
+        },
+        {
+          "key": "housecarl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Housecarl"
+          }
+        },
+        {
+          "key": "than",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Thane"
+          }
+        },
+        {
+          "key": "ealdorman",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Ealdorman"
+          }
+        },
+        {
+          "key": "gesith",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Gesith"
+          }
+        },
+        {
+          "key": "dreng",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dreng"
+          }
+        },
+        {
+          "key": "husbandman",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Husbandman"
+          }
+        },
+        {
+          "key": "cottar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Cottar"
+          }
+        },
+        {
+          "key": "villein",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Villein"
+          }
+        },
+        {
+          "key": "bordar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Bordar"
+          }
+        },
+        {
+          "key": "freeman-of-the-guild",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Freeman of the Guild"
+          }
+        },
+        {
+          "key": "master-of-the-hall",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Master of the Hall"
+          }
+        },
+        {
+          "key": "high-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Baron"
+          }
+        },
+        {
+          "key": "high-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Lord"
+          }
+        },
+        {
+          "key": "high-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Knight"
+          }
+        },
+        {
+          "key": "high-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Count"
+          }
+        },
+        {
+          "key": "high-earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Earl"
+          }
+        },
+        {
+          "key": "high-duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Duke"
+          }
+        },
+        {
+          "key": "high-marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Marquess"
+          }
+        },
+        {
+          "key": "high-viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Viscount"
+          }
+        },
+        {
+          "key": "high-squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Squire"
+          }
+        },
+        {
+          "key": "high-marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Marshal"
+          }
+        },
+        {
+          "key": "high-steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Steward"
+          }
+        },
+        {
+          "key": "high-warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Warden"
+          }
+        },
+        {
+          "key": "high-justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Justiciar"
+          }
+        },
+        {
+          "key": "high-chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Chamberlain"
+          }
+        },
+        {
+          "key": "high-treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Treasurer"
+          }
+        },
+        {
+          "key": "high-herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "High Herald"
+          }
+        },
+        {
+          "key": "low-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Baron"
+          }
+        },
+        {
+          "key": "low-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Lord"
+          }
+        },
+        {
+          "key": "low-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Knight"
+          }
+        },
+        {
+          "key": "low-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Count"
+          }
+        },
+        {
+          "key": "low-earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Earl"
+          }
+        },
+        {
+          "key": "low-duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Duke"
+          }
+        },
+        {
+          "key": "low-marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Marquess"
+          }
+        },
+        {
+          "key": "low-viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Viscount"
+          }
+        },
+        {
+          "key": "low-squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Squire"
+          }
+        },
+        {
+          "key": "low-marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Marshal"
+          }
+        },
+        {
+          "key": "low-steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Steward"
+          }
+        },
+        {
+          "key": "low-warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Warden"
+          }
+        },
+        {
+          "key": "low-justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Justiciar"
+          }
+        },
+        {
+          "key": "low-chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Chamberlain"
+          }
+        },
+        {
+          "key": "low-treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Treasurer"
+          }
+        },
+        {
+          "key": "low-herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Low Herald"
+          }
+        },
+        {
+          "key": "western-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Baron"
+          }
+        },
+        {
+          "key": "western-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Lord"
+          }
+        },
+        {
+          "key": "western-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Knight"
+          }
+        },
+        {
+          "key": "western-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Count"
+          }
+        },
+        {
+          "key": "western-earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Earl"
+          }
+        },
+        {
+          "key": "western-duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Duke"
+          }
+        },
+        {
+          "key": "western-marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Marquess"
+          }
+        },
+        {
+          "key": "western-viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Viscount"
+          }
+        },
+        {
+          "key": "western-squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Squire"
+          }
+        },
+        {
+          "key": "western-marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Marshal"
+          }
+        },
+        {
+          "key": "western-steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Steward"
+          }
+        },
+        {
+          "key": "western-warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Warden"
+          }
+        },
+        {
+          "key": "western-justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Justiciar"
+          }
+        },
+        {
+          "key": "western-chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Chamberlain"
+          }
+        },
+        {
+          "key": "western-treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Treasurer"
+          }
+        },
+        {
+          "key": "western-herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Western Herald"
+          }
+        },
+        {
+          "key": "eastern-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Baron"
+          }
+        },
+        {
+          "key": "eastern-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Lord"
+          }
+        },
+        {
+          "key": "eastern-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Knight"
+          }
+        },
+        {
+          "key": "eastern-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Count"
+          }
+        },
+        {
+          "key": "eastern-earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Earl"
+          }
+        },
+        {
+          "key": "eastern-duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Duke"
+          }
+        },
+        {
+          "key": "eastern-marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Marquess"
+          }
+        },
+        {
+          "key": "eastern-viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Viscount"
+          }
+        },
+        {
+          "key": "eastern-squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Squire"
+          }
+        },
+        {
+          "key": "eastern-marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Marshal"
+          }
+        },
+        {
+          "key": "eastern-steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Steward"
+          }
+        },
+        {
+          "key": "eastern-warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Warden"
+          }
+        },
+        {
+          "key": "eastern-justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Justiciar"
+          }
+        },
+        {
+          "key": "eastern-chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Chamberlain"
+          }
+        },
+        {
+          "key": "eastern-treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Treasurer"
+          }
+        },
+        {
+          "key": "eastern-herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Eastern Herald"
+          }
+        },
+        {
+          "key": "northern-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Baron"
+          }
+        },
+        {
+          "key": "northern-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Lord"
+          }
+        },
+        {
+          "key": "northern-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Knight"
+          }
+        },
+        {
+          "key": "northern-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Count"
+          }
+        },
+        {
+          "key": "northern-earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Earl"
+          }
+        },
+        {
+          "key": "northern-duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Duke"
+          }
+        },
+        {
+          "key": "northern-marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Marquess"
+          }
+        },
+        {
+          "key": "northern-viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Viscount"
+          }
+        },
+        {
+          "key": "northern-squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Squire"
+          }
+        },
+        {
+          "key": "northern-marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Marshal"
+          }
+        },
+        {
+          "key": "northern-steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Steward"
+          }
+        },
+        {
+          "key": "northern-warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Warden"
+          }
+        },
+        {
+          "key": "northern-justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Justiciar"
+          }
+        },
+        {
+          "key": "northern-chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Chamberlain"
+          }
+        },
+        {
+          "key": "northern-treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Treasurer"
+          }
+        },
+        {
+          "key": "northern-herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Northern Herald"
+          }
+        },
+        {
+          "key": "southern-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Baron"
+          }
+        },
+        {
+          "key": "southern-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Lord"
+          }
+        },
+        {
+          "key": "southern-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Knight"
+          }
+        },
+        {
+          "key": "southern-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Count"
+          }
+        },
+        {
+          "key": "southern-earl",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Earl"
+          }
+        },
+        {
+          "key": "southern-duke",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Duke"
+          }
+        },
+        {
+          "key": "southern-marquess",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Marquess"
+          }
+        },
+        {
+          "key": "southern-viscount",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Viscount"
+          }
+        },
+        {
+          "key": "southern-squire",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Squire"
+          }
+        },
+        {
+          "key": "southern-marshal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Marshal"
+          }
+        },
+        {
+          "key": "southern-steward",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Steward"
+          }
+        },
+        {
+          "key": "southern-warden",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Warden"
+          }
+        },
+        {
+          "key": "southern-justiciar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Justiciar"
+          }
+        },
+        {
+          "key": "southern-chamberlain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Chamberlain"
+          }
+        },
+        {
+          "key": "southern-treasurer",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Treasurer"
+          }
+        },
+        {
+          "key": "southern-herald",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Southern Herald"
+          }
+        },
+        {
+          "key": "royal-baron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Royal Baron"
+          }
+        },
+        {
+          "key": "royal-lord",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Royal Lord"
+          }
+        },
+        {
+          "key": "royal-knight",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Royal Knight"
+          }
+        },
+        {
+          "key": "royal-count",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Royal Count"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/table/marketgood",
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "salt",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "salt"
+          }
+        },
+        {
+          "key": "bread",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "bread"
+          }
+        },
+        {
+          "key": "ale",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "ale"
+          }
+        },
+        {
+          "key": "wool",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "wool"
+          }
+        },
+        {
+          "key": "iron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "iron"
+          }
+        },
+        {
+          "key": "cattle",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cattle"
+          }
+        },
+        {
+          "key": "grain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "grain"
+          }
+        },
+        {
+          "key": "honey",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "honey"
+          }
+        },
+        {
+          "key": "linen",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "linen"
+          }
+        },
+        {
+          "key": "leather",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "leather"
+          }
+        },
+        {
+          "key": "beeswax",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "beeswax"
+          }
+        },
+        {
+          "key": "pepper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "pepper"
+          }
+        },
+        {
+          "key": "silk",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "silk"
+          }
+        },
+        {
+          "key": "spice",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "spice"
+          }
+        },
+        {
+          "key": "wine",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "wine"
+          }
+        },
+        {
+          "key": "tin",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "tin"
+          }
+        },
+        {
+          "key": "copper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "copper"
+          }
+        },
+        {
+          "key": "horse",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "horse"
+          }
+        },
+        {
+          "key": "salt-fish",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "salt-fish"
+          }
+        },
+        {
+          "key": "dyestuff",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "dyestuff"
+          }
+        },
+        {
+          "key": "parchment",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "parchment"
+          }
+        },
+        {
+          "key": "pottery",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "pottery"
+          }
+        },
+        {
+          "key": "charcoal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "charcoal"
+          }
+        },
+        {
+          "key": "hemp",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "hemp"
+          }
+        },
+        {
+          "key": "ivory",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "ivory"
+          }
+        },
+        {
+          "key": "incense",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "incense"
+          }
+        },
+        {
+          "key": "saffron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "saffron"
+          }
+        },
+        {
+          "key": "furs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "furs"
+          }
+        },
+        {
+          "key": "cinnamon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cinnamon"
+          }
+        },
+        {
+          "key": "ginger",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "ginger"
+          }
+        },
+        {
+          "key": "cloves",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cloves"
+          }
+        },
+        {
+          "key": "nutmeg",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "nutmeg"
+          }
+        },
+        {
+          "key": "sugar",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "sugar"
+          }
+        },
+        {
+          "key": "rice",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "rice"
+          }
+        },
+        {
+          "key": "barley",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "barley"
+          }
+        },
+        {
+          "key": "oats",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "oats"
+          }
+        },
+        {
+          "key": "rye",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "rye"
+          }
+        },
+        {
+          "key": "wheat",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "wheat"
+          }
+        },
+        {
+          "key": "beans",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "beans"
+          }
+        },
+        {
+          "key": "peas",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "peas"
+          }
+        },
+        {
+          "key": "onions",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "onions"
+          }
+        },
+        {
+          "key": "garlic",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "garlic"
+          }
+        },
+        {
+          "key": "cabbages",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cabbages"
+          }
+        },
+        {
+          "key": "apples",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "apples"
+          }
+        },
+        {
+          "key": "pears",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "pears"
+          }
+        },
+        {
+          "key": "cherries",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cherries"
+          }
+        },
+        {
+          "key": "cheese",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cheese"
+          }
+        },
+        {
+          "key": "butter",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "butter"
+          }
+        },
+        {
+          "key": "eggs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "eggs"
+          }
+        },
+        {
+          "key": "poultry",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "poultry"
+          }
+        },
+        {
+          "key": "pork",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "pork"
+          }
+        },
+        {
+          "key": "beef",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "beef"
+          }
+        },
+        {
+          "key": "mutton",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "mutton"
+          }
+        },
+        {
+          "key": "venison",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "venison"
+          }
+        },
+        {
+          "key": "trout",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "trout"
+          }
+        },
+        {
+          "key": "eel",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "eel"
+          }
+        },
+        {
+          "key": "herring",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "herring"
+          }
+        },
+        {
+          "key": "cod",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "cod"
+          }
+        },
+        {
+          "key": "salmon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "salmon"
+          }
+        },
+        {
+          "key": "oysters",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "oysters"
+          }
+        },
+        {
+          "key": "candles",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "candles"
+          }
+        },
+        {
+          "key": "soap",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "soap"
+          }
+        },
+        {
+          "key": "rope",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "rope"
+          }
+        },
+        {
+          "key": "sacks",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "sacks"
+          }
+        },
+        {
+          "key": "buckets",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "buckets"
+          }
+        },
+        {
+          "key": "barrels",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "barrels"
+          }
+        },
+        {
+          "key": "nails",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "nails"
+          }
+        },
+        {
+          "key": "horseshoes",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "horseshoes"
+          }
+        },
+        {
+          "key": "axes",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "axes"
+          }
+        },
+        {
+          "key": "knives",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "knives"
+          }
+        },
+        {
+          "key": "fine-salt",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine salt"
+          }
+        },
+        {
+          "key": "fine-bread",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine bread"
+          }
+        },
+        {
+          "key": "fine-ale",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine ale"
+          }
+        },
+        {
+          "key": "fine-wool",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine wool"
+          }
+        },
+        {
+          "key": "fine-iron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine iron"
+          }
+        },
+        {
+          "key": "fine-grain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine grain"
+          }
+        },
+        {
+          "key": "fine-honey",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine honey"
+          }
+        },
+        {
+          "key": "fine-linen",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine linen"
+          }
+        },
+        {
+          "key": "fine-leather",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine leather"
+          }
+        },
+        {
+          "key": "fine-wax",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine wax"
+          }
+        },
+        {
+          "key": "fine-pepper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine pepper"
+          }
+        },
+        {
+          "key": "fine-silk",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine silk"
+          }
+        },
+        {
+          "key": "fine-wine",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine wine"
+          }
+        },
+        {
+          "key": "fine-tin",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine tin"
+          }
+        },
+        {
+          "key": "fine-copper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine copper"
+          }
+        },
+        {
+          "key": "fine-cattle",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine cattle"
+          }
+        },
+        {
+          "key": "fine-cheese",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine cheese"
+          }
+        },
+        {
+          "key": "fine-butter",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine butter"
+          }
+        },
+        {
+          "key": "fine-eggs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine eggs"
+          }
+        },
+        {
+          "key": "fine-fish",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine fish"
+          }
+        },
+        {
+          "key": "fine-apples",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine apples"
+          }
+        },
+        {
+          "key": "fine-onions",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine onions"
+          }
+        },
+        {
+          "key": "fine-barley",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine barley"
+          }
+        },
+        {
+          "key": "fine-rice",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine rice"
+          }
+        },
+        {
+          "key": "fine-cinnamon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine cinnamon"
+          }
+        },
+        {
+          "key": "fine-pottery",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine pottery"
+          }
+        },
+        {
+          "key": "fine-charcoal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine charcoal"
+          }
+        },
+        {
+          "key": "fine-rope",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine rope"
+          }
+        },
+        {
+          "key": "fine-candles",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine candles"
+          }
+        },
+        {
+          "key": "fine-furs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fine furs"
+          }
+        },
+        {
+          "key": "coarse-salt",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse salt"
+          }
+        },
+        {
+          "key": "coarse-bread",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse bread"
+          }
+        },
+        {
+          "key": "coarse-ale",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse ale"
+          }
+        },
+        {
+          "key": "coarse-wool",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse wool"
+          }
+        },
+        {
+          "key": "coarse-iron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse iron"
+          }
+        },
+        {
+          "key": "coarse-grain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse grain"
+          }
+        },
+        {
+          "key": "coarse-honey",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse honey"
+          }
+        },
+        {
+          "key": "coarse-linen",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse linen"
+          }
+        },
+        {
+          "key": "coarse-leather",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse leather"
+          }
+        },
+        {
+          "key": "coarse-wax",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse wax"
+          }
+        },
+        {
+          "key": "coarse-pepper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse pepper"
+          }
+        },
+        {
+          "key": "coarse-silk",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse silk"
+          }
+        },
+        {
+          "key": "coarse-wine",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse wine"
+          }
+        },
+        {
+          "key": "coarse-tin",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse tin"
+          }
+        },
+        {
+          "key": "coarse-copper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse copper"
+          }
+        },
+        {
+          "key": "coarse-cattle",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse cattle"
+          }
+        },
+        {
+          "key": "coarse-cheese",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse cheese"
+          }
+        },
+        {
+          "key": "coarse-butter",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse butter"
+          }
+        },
+        {
+          "key": "coarse-eggs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse eggs"
+          }
+        },
+        {
+          "key": "coarse-fish",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse fish"
+          }
+        },
+        {
+          "key": "coarse-apples",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse apples"
+          }
+        },
+        {
+          "key": "coarse-onions",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse onions"
+          }
+        },
+        {
+          "key": "coarse-barley",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse barley"
+          }
+        },
+        {
+          "key": "coarse-rice",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse rice"
+          }
+        },
+        {
+          "key": "coarse-cinnamon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse cinnamon"
+          }
+        },
+        {
+          "key": "coarse-pottery",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse pottery"
+          }
+        },
+        {
+          "key": "coarse-charcoal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse charcoal"
+          }
+        },
+        {
+          "key": "coarse-rope",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse rope"
+          }
+        },
+        {
+          "key": "coarse-candles",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse candles"
+          }
+        },
+        {
+          "key": "coarse-furs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Coarse furs"
+          }
+        },
+        {
+          "key": "fresh-salt",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh salt"
+          }
+        },
+        {
+          "key": "fresh-bread",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh bread"
+          }
+        },
+        {
+          "key": "fresh-ale",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh ale"
+          }
+        },
+        {
+          "key": "fresh-wool",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh wool"
+          }
+        },
+        {
+          "key": "fresh-iron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh iron"
+          }
+        },
+        {
+          "key": "fresh-grain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh grain"
+          }
+        },
+        {
+          "key": "fresh-honey",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh honey"
+          }
+        },
+        {
+          "key": "fresh-linen",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh linen"
+          }
+        },
+        {
+          "key": "fresh-leather",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh leather"
+          }
+        },
+        {
+          "key": "fresh-wax",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh wax"
+          }
+        },
+        {
+          "key": "fresh-pepper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh pepper"
+          }
+        },
+        {
+          "key": "fresh-silk",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh silk"
+          }
+        },
+        {
+          "key": "fresh-wine",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh wine"
+          }
+        },
+        {
+          "key": "fresh-tin",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh tin"
+          }
+        },
+        {
+          "key": "fresh-copper",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh copper"
+          }
+        },
+        {
+          "key": "fresh-cattle",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh cattle"
+          }
+        },
+        {
+          "key": "fresh-cheese",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh cheese"
+          }
+        },
+        {
+          "key": "fresh-butter",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh butter"
+          }
+        },
+        {
+          "key": "fresh-eggs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh eggs"
+          }
+        },
+        {
+          "key": "fresh-fish",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh fish"
+          }
+        },
+        {
+          "key": "fresh-apples",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh apples"
+          }
+        },
+        {
+          "key": "fresh-onions",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh onions"
+          }
+        },
+        {
+          "key": "fresh-barley",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh barley"
+          }
+        },
+        {
+          "key": "fresh-rice",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh rice"
+          }
+        },
+        {
+          "key": "fresh-cinnamon",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh cinnamon"
+          }
+        },
+        {
+          "key": "fresh-pottery",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh pottery"
+          }
+        },
+        {
+          "key": "fresh-charcoal",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh charcoal"
+          }
+        },
+        {
+          "key": "fresh-rope",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh rope"
+          }
+        },
+        {
+          "key": "fresh-candles",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh candles"
+          }
+        },
+        {
+          "key": "fresh-furs",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Fresh furs"
+          }
+        },
+        {
+          "key": "dried-salt",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried salt"
+          }
+        },
+        {
+          "key": "dried-bread",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried bread"
+          }
+        },
+        {
+          "key": "dried-ale",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried ale"
+          }
+        },
+        {
+          "key": "dried-wool",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried wool"
+          }
+        },
+        {
+          "key": "dried-iron",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried iron"
+          }
+        },
+        {
+          "key": "dried-grain",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried grain"
+          }
+        },
+        {
+          "key": "dried-honey",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried honey"
+          }
+        },
+        {
+          "key": "dried-linen",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried linen"
+          }
+        },
+        {
+          "key": "dried-leather",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried leather"
+          }
+        },
+        {
+          "key": "dried-wax",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Dried wax"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/table/domainevent",
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "event-00",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a plentiful harvest was gathered"
+          }
+        },
+        {
+          "key": "event-01",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a market charter was granted"
+          }
+        },
+        {
+          "key": "event-02",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a border raid was repelled"
+          }
+        },
+        {
+          "key": "event-03",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "new coinage was struck at the mint"
+          }
+        },
+        {
+          "key": "event-04",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a guild dispute was settled by arbitration"
+          }
+        },
+        {
+          "key": "event-05",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "pilgrims passed through on the old road"
+          }
+        },
+        {
+          "key": "event-06",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the river flooded the lower fields"
+          }
+        },
+        {
+          "key": "event-07",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a dry summer depleted the wells"
+          }
+        },
+        {
+          "key": "event-08",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "fire consumed the thatched row"
+          }
+        },
+        {
+          "key": "event-09",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "wolves were sighted near the sheepfolds"
+          }
+        },
+        {
+          "key": "event-10",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a noble wedding was celebrated"
+          }
+        },
+        {
+          "key": "event-11",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a tournament drew knights from three shires"
+          }
+        },
+        {
+          "key": "event-12",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a new tax was levied on the market"
+          }
+        },
+        {
+          "key": "event-13",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a sickness swept the poorer quarter"
+          }
+        },
+        {
+          "key": "event-14",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a truce was sworn between rival houses"
+          }
+        },
+        {
+          "key": "event-15",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a relic was displayed at the abbey"
+          }
+        },
+        {
+          "key": "event-16",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the stone bridge was completed"
+          }
+        },
+        {
+          "key": "event-17",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a new mill began grinding"
+          }
+        },
+        {
+          "key": "event-18",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the sheep were shorn and the wool weighed"
+          }
+        },
+        {
+          "key": "event-19",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the annual fair opened its gates"
+          }
+        },
+        {
+          "key": "event-20",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "vassals renewed their oaths of fealty"
+          }
+        },
+        {
+          "key": "event-21",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a great hunt was held in the royal forest"
+          }
+        },
+        {
+          "key": "event-22",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a wreck washed ashore at the estuary"
+          }
+        },
+        {
+          "key": "event-23",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a bright comet was noted in the sky"
+          }
+        },
+        {
+          "key": "event-24",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the lord returned from a distant campaign"
+          }
+        },
+        {
+          "key": "event-25",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a new bell was cast for the church tower"
+          }
+        },
+        {
+          "key": "event-26",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a winter frost killed the vine cuttings"
+          }
+        },
+        {
+          "key": "event-27",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the smiths struck for higher wages"
+          }
+        },
+        {
+          "key": "event-28",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a stranger arrived with sealed letters"
+          }
+        },
+        {
+          "key": "event-29",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the census roll was read in the market square"
+          }
+        },
+        {
+          "key": "event-30",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a runaway serf was granted sanctuary"
+          }
+        },
+        {
+          "key": "event-31",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the millpond froze over"
+          }
+        },
+        {
+          "key": "event-32",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a peddler sold foreign ribbons"
+          }
+        },
+        {
+          "key": "event-33",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a foal was born in the stable"
+          }
+        },
+        {
+          "key": "event-34",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the roof of the granary was repaired"
+          }
+        },
+        {
+          "key": "event-35",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a dispute over boundaries went to the assize"
+          }
+        },
+        {
+          "key": "event-36",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the garrison was doubled"
+          }
+        },
+        {
+          "key": "event-37",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a sword was found in the ploughed field"
+          }
+        },
+        {
+          "key": "event-38",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the beekeepers moved their hives"
+          }
+        },
+        {
+          "key": "event-39",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a summer storm broke the mast"
+          }
+        },
+        {
+          "key": "event-40",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the bishop dedicated a new chapel"
+          }
+        },
+        {
+          "key": "event-41",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a cartload of salt arrived from the coast"
+          }
+        },
+        {
+          "key": "event-42",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the old well was cleaned"
+          }
+        },
+        {
+          "key": "event-43",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a minstrel sang in the hall"
+          }
+        },
+        {
+          "key": "event-44",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the hunt club elected a new master"
+          }
+        },
+        {
+          "key": "event-45",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a distant king sent an envoy"
+          }
+        },
+        {
+          "key": "event-46",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the yearly rental was collected"
+          }
+        },
+        {
+          "key": "event-47",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a boat was launched at the quay"
+          }
+        },
+        {
+          "key": "event-48",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the apple orchard was replanted"
+          }
+        },
+        {
+          "key": "event-49",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a book was copied in the scriptorium"
+          }
+        },
+        {
+          "key": "event-50",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the watch caught a poacher"
+          }
+        },
+        {
+          "key": "event-51",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the farrier shod the warhorses"
+          }
+        },
+        {
+          "key": "event-52",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a market stall burned down"
+          }
+        },
+        {
+          "key": "event-53",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the steward audited the accounts"
+          }
+        },
+        {
+          "key": "event-54",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a new path was cut through the wood"
+          }
+        },
+        {
+          "key": "event-55",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the tenants petitioned for lower rent"
+          }
+        },
+        {
+          "key": "event-56",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a marriage was arranged between two houses"
+          }
+        },
+        {
+          "key": "event-57",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the relic procession passed the gates"
+          }
+        },
+        {
+          "key": "event-58",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a wolf was killed in the sheepfold"
+          }
+        },
+        {
+          "key": "event-59",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the harvest tithe was carried to the abbey"
+          }
+        },
+        {
+          "key": "event-60",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "workers repaired the town wall"
+          }
+        },
+        {
+          "key": "event-61",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a juggler performed at the feast"
+          }
+        },
+        {
+          "key": "event-62",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the horses were bled by the vet"
+          }
+        },
+        {
+          "key": "event-63",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "a new oven was built for the bakehouse"
+          }
+        },
+        {
+          "key": "event-64",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the steward planted a hedge"
+          }
+        },
+        {
+          "key": "event-65",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "the prisoners were moved to the keep"
+          }
+        },
+        {
+          "key": "event-66",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "snow delayed the merchant caravan"
+          }
+        },
+        {
+          "key": "in-the-north-event-00",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a plentiful harvest was gathered"
+          }
+        },
+        {
+          "key": "in-the-north-event-01",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a market charter was granted"
+          }
+        },
+        {
+          "key": "in-the-north-event-02",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a border raid was repelled"
+          }
+        },
+        {
+          "key": "in-the-north-event-03",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north new coinage was struck at the mint"
+          }
+        },
+        {
+          "key": "in-the-north-event-04",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a guild dispute was settled by arbitration"
+          }
+        },
+        {
+          "key": "in-the-north-event-05",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north pilgrims passed through on the old road"
+          }
+        },
+        {
+          "key": "in-the-north-event-06",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the river flooded the lower fields"
+          }
+        },
+        {
+          "key": "in-the-north-event-07",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a dry summer depleted the wells"
+          }
+        },
+        {
+          "key": "in-the-north-event-08",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north fire consumed the thatched row"
+          }
+        },
+        {
+          "key": "in-the-north-event-09",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north wolves were sighted near the sheepfolds"
+          }
+        },
+        {
+          "key": "in-the-north-event-10",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a noble wedding was celebrated"
+          }
+        },
+        {
+          "key": "in-the-north-event-11",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a tournament drew knights from three shires"
+          }
+        },
+        {
+          "key": "in-the-north-event-12",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a new tax was levied on the market"
+          }
+        },
+        {
+          "key": "in-the-north-event-13",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a sickness swept the poorer quarter"
+          }
+        },
+        {
+          "key": "in-the-north-event-14",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a truce was sworn between rival houses"
+          }
+        },
+        {
+          "key": "in-the-north-event-15",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a relic was displayed at the abbey"
+          }
+        },
+        {
+          "key": "in-the-north-event-16",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the stone bridge was completed"
+          }
+        },
+        {
+          "key": "in-the-north-event-17",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a new mill began grinding"
+          }
+        },
+        {
+          "key": "in-the-north-event-18",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the sheep were shorn and the wool weighed"
+          }
+        },
+        {
+          "key": "in-the-north-event-19",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the annual fair opened its gates"
+          }
+        },
+        {
+          "key": "in-the-north-event-20",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north vassals renewed their oaths of fealty"
+          }
+        },
+        {
+          "key": "in-the-north-event-21",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a great hunt was held in the royal forest"
+          }
+        },
+        {
+          "key": "in-the-north-event-22",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a wreck washed ashore at the estuary"
+          }
+        },
+        {
+          "key": "in-the-north-event-23",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a bright comet was noted in the sky"
+          }
+        },
+        {
+          "key": "in-the-north-event-24",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the lord returned from a distant campaign"
+          }
+        },
+        {
+          "key": "in-the-north-event-25",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a new bell was cast for the church tower"
+          }
+        },
+        {
+          "key": "in-the-north-event-26",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a winter frost killed the vine cuttings"
+          }
+        },
+        {
+          "key": "in-the-north-event-27",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the smiths struck for higher wages"
+          }
+        },
+        {
+          "key": "in-the-north-event-28",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a stranger arrived with sealed letters"
+          }
+        },
+        {
+          "key": "in-the-north-event-29",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the census roll was read in the market square"
+          }
+        },
+        {
+          "key": "in-the-north-event-30",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a runaway serf was granted sanctuary"
+          }
+        },
+        {
+          "key": "in-the-north-event-31",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the millpond froze over"
+          }
+        },
+        {
+          "key": "in-the-north-event-32",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a peddler sold foreign ribbons"
+          }
+        },
+        {
+          "key": "in-the-north-event-33",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a foal was born in the stable"
+          }
+        },
+        {
+          "key": "in-the-north-event-34",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the roof of the granary was repaired"
+          }
+        },
+        {
+          "key": "in-the-north-event-35",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a dispute over boundaries went to the assize"
+          }
+        },
+        {
+          "key": "in-the-north-event-36",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the garrison was doubled"
+          }
+        },
+        {
+          "key": "in-the-north-event-37",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a sword was found in the ploughed field"
+          }
+        },
+        {
+          "key": "in-the-north-event-38",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the beekeepers moved their hives"
+          }
+        },
+        {
+          "key": "in-the-north-event-39",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a summer storm broke the mast"
+          }
+        },
+        {
+          "key": "in-the-north-event-40",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the bishop dedicated a new chapel"
+          }
+        },
+        {
+          "key": "in-the-north-event-41",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a cartload of salt arrived from the coast"
+          }
+        },
+        {
+          "key": "in-the-north-event-42",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the old well was cleaned"
+          }
+        },
+        {
+          "key": "in-the-north-event-43",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a minstrel sang in the hall"
+          }
+        },
+        {
+          "key": "in-the-north-event-44",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the hunt club elected a new master"
+          }
+        },
+        {
+          "key": "in-the-north-event-45",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a distant king sent an envoy"
+          }
+        },
+        {
+          "key": "in-the-north-event-46",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the yearly rental was collected"
+          }
+        },
+        {
+          "key": "in-the-north-event-47",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a boat was launched at the quay"
+          }
+        },
+        {
+          "key": "in-the-north-event-48",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the apple orchard was replanted"
+          }
+        },
+        {
+          "key": "in-the-north-event-49",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a book was copied in the scriptorium"
+          }
+        },
+        {
+          "key": "in-the-north-event-50",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the watch caught a poacher"
+          }
+        },
+        {
+          "key": "in-the-north-event-51",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the farrier shod the warhorses"
+          }
+        },
+        {
+          "key": "in-the-north-event-52",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a market stall burned down"
+          }
+        },
+        {
+          "key": "in-the-north-event-53",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the steward audited the accounts"
+          }
+        },
+        {
+          "key": "in-the-north-event-54",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a new path was cut through the wood"
+          }
+        },
+        {
+          "key": "in-the-north-event-55",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the tenants petitioned for lower rent"
+          }
+        },
+        {
+          "key": "in-the-north-event-56",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a marriage was arranged between two houses"
+          }
+        },
+        {
+          "key": "in-the-north-event-57",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the relic procession passed the gates"
+          }
+        },
+        {
+          "key": "in-the-north-event-58",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a wolf was killed in the sheepfold"
+          }
+        },
+        {
+          "key": "in-the-north-event-59",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the harvest tithe was carried to the abbey"
+          }
+        },
+        {
+          "key": "in-the-north-event-60",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north workers repaired the town wall"
+          }
+        },
+        {
+          "key": "in-the-north-event-61",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a juggler performed at the feast"
+          }
+        },
+        {
+          "key": "in-the-north-event-62",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the horses were bled by the vet"
+          }
+        },
+        {
+          "key": "in-the-north-event-63",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north a new oven was built for the bakehouse"
+          }
+        },
+        {
+          "key": "in-the-north-event-64",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the steward planted a hedge"
+          }
+        },
+        {
+          "key": "in-the-north-event-65",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north the prisoners were moved to the keep"
+          }
+        },
+        {
+          "key": "in-the-north-event-66",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the north snow delayed the merchant caravan"
+          }
+        },
+        {
+          "key": "in-the-south-event-00",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a plentiful harvest was gathered"
+          }
+        },
+        {
+          "key": "in-the-south-event-01",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a market charter was granted"
+          }
+        },
+        {
+          "key": "in-the-south-event-02",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a border raid was repelled"
+          }
+        },
+        {
+          "key": "in-the-south-event-03",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south new coinage was struck at the mint"
+          }
+        },
+        {
+          "key": "in-the-south-event-04",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a guild dispute was settled by arbitration"
+          }
+        },
+        {
+          "key": "in-the-south-event-05",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south pilgrims passed through on the old road"
+          }
+        },
+        {
+          "key": "in-the-south-event-06",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the river flooded the lower fields"
+          }
+        },
+        {
+          "key": "in-the-south-event-07",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a dry summer depleted the wells"
+          }
+        },
+        {
+          "key": "in-the-south-event-08",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south fire consumed the thatched row"
+          }
+        },
+        {
+          "key": "in-the-south-event-09",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south wolves were sighted near the sheepfolds"
+          }
+        },
+        {
+          "key": "in-the-south-event-10",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a noble wedding was celebrated"
+          }
+        },
+        {
+          "key": "in-the-south-event-11",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a tournament drew knights from three shires"
+          }
+        },
+        {
+          "key": "in-the-south-event-12",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a new tax was levied on the market"
+          }
+        },
+        {
+          "key": "in-the-south-event-13",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a sickness swept the poorer quarter"
+          }
+        },
+        {
+          "key": "in-the-south-event-14",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a truce was sworn between rival houses"
+          }
+        },
+        {
+          "key": "in-the-south-event-15",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a relic was displayed at the abbey"
+          }
+        },
+        {
+          "key": "in-the-south-event-16",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the stone bridge was completed"
+          }
+        },
+        {
+          "key": "in-the-south-event-17",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a new mill began grinding"
+          }
+        },
+        {
+          "key": "in-the-south-event-18",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the sheep were shorn and the wool weighed"
+          }
+        },
+        {
+          "key": "in-the-south-event-19",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the annual fair opened its gates"
+          }
+        },
+        {
+          "key": "in-the-south-event-20",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south vassals renewed their oaths of fealty"
+          }
+        },
+        {
+          "key": "in-the-south-event-21",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a great hunt was held in the royal forest"
+          }
+        },
+        {
+          "key": "in-the-south-event-22",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a wreck washed ashore at the estuary"
+          }
+        },
+        {
+          "key": "in-the-south-event-23",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a bright comet was noted in the sky"
+          }
+        },
+        {
+          "key": "in-the-south-event-24",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the lord returned from a distant campaign"
+          }
+        },
+        {
+          "key": "in-the-south-event-25",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a new bell was cast for the church tower"
+          }
+        },
+        {
+          "key": "in-the-south-event-26",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a winter frost killed the vine cuttings"
+          }
+        },
+        {
+          "key": "in-the-south-event-27",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the smiths struck for higher wages"
+          }
+        },
+        {
+          "key": "in-the-south-event-28",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a stranger arrived with sealed letters"
+          }
+        },
+        {
+          "key": "in-the-south-event-29",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the census roll was read in the market square"
+          }
+        },
+        {
+          "key": "in-the-south-event-30",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a runaway serf was granted sanctuary"
+          }
+        },
+        {
+          "key": "in-the-south-event-31",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the millpond froze over"
+          }
+        },
+        {
+          "key": "in-the-south-event-32",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a peddler sold foreign ribbons"
+          }
+        },
+        {
+          "key": "in-the-south-event-33",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a foal was born in the stable"
+          }
+        },
+        {
+          "key": "in-the-south-event-34",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south the roof of the granary was repaired"
+          }
+        },
+        {
+          "key": "in-the-south-event-35",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "in the south a dispute over boundaries went to the assize"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/table/heraldicfield",
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "or",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Or"
+          }
+        },
+        {
+          "key": "argent",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Argent"
+          }
+        },
+        {
+          "key": "azure",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Azure"
+          }
+        },
+        {
+          "key": "gules",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Gules"
+          }
+        },
+        {
+          "key": "sable",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Sable"
+          }
+        },
+        {
+          "key": "vert",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Vert"
+          }
+        },
+        {
+          "key": "purpure",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Purpure"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/table/heraldiccharge",
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "lion",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "lion"
+          }
+        },
+        {
+          "key": "eagle",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "eagle"
+          }
+        },
+        {
+          "key": "crown",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "crown"
+          }
+        },
+        {
+          "key": "sword",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "sword"
+          }
+        },
+        {
+          "key": "cross",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "cross"
+          }
+        },
+        {
+          "key": "stag",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "stag"
+          }
+        },
+        {
+          "key": "wolf",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "wolf"
+          }
+        },
+        {
+          "key": "bear",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "bear"
+          }
+        },
+        {
+          "key": "horse",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "horse"
+          }
+        },
+        {
+          "key": "griffin",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "griffin"
+          }
+        },
+        {
+          "key": "dragon",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "dragon"
+          }
+        },
+        {
+          "key": "falcon",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "falcon"
+          }
+        },
+        {
+          "key": "raven",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "raven"
+          }
+        },
+        {
+          "key": "boar",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "boar"
+          }
+        },
+        {
+          "key": "bull",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "bull"
+          }
+        },
+        {
+          "key": "serpent",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "serpent"
+          }
+        },
+        {
+          "key": "anchor",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "anchor"
+          }
+        },
+        {
+          "key": "key",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "key"
+          }
+        },
+        {
+          "key": "tower",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "tower"
+          }
+        },
+        {
+          "key": "oak",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "oak tree"
+          }
+        },
+        {
+          "key": "fleur",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "fleur-de-lis"
+          }
+        },
+        {
+          "key": "star",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "star"
+          }
+        },
+        {
+          "key": "moon",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "crescent moon"
+          }
+        },
+        {
+          "key": "sun",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "sun"
+          }
+        },
+        {
+          "key": "harp",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "harp"
+          }
+        },
+        {
+          "key": "bell",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "bell"
+          }
+        },
+        {
+          "key": "millwheel",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "millwheel"
+          }
+        },
+        {
+          "key": "ship",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "ship"
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.historical-medieval/generator/person-name",
+      "description": "Medieval person name with a culture-selected given name and byname",
+      "tags": [
+        "medieval",
+        "person",
+        "name"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.historical-medieval/grammar/manor"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/manor",
+      "description": "Medieval manor or village name",
+      "tags": [
+        "medieval",
+        "place",
+        "manor"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.historical-medieval/grammar/manor"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/guild",
+      "description": "Medieval craft guild or confraternity name",
+      "tags": [
+        "medieval",
+        "organization",
+        "guild"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.historical-medieval/grammar/guild"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/monastery",
+      "description": "Medieval abbey, priory or religious house name",
+      "tags": [
+        "medieval",
+        "organization",
+        "monastery"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.historical-medieval/grammar/monastery"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/feudal-title",
+      "description": "Feudal or ecclesiastical title",
+      "tags": [
+        "medieval",
+        "title"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.historical-medieval/table/feudaltitle"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/market-good",
+      "description": "Medieval market commodity",
+      "tags": [
+        "medieval",
+        "market",
+        "good"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.historical-medieval/table/marketgood"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/domain-event",
+      "description": "Domain chronicle event",
+      "tags": [
+        "medieval",
+        "event"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.historical-medieval/table/domainevent"
+    },
+    {
+      "id": "lexiconlang.historical-medieval/generator/heraldry",
+      "description": "Heraldic field and charge pair for a simplified blazon",
+      "tags": [
+        "medieval",
+        "heraldry"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.historical-medieval/grammar/manor"
+    }
+  ],
+  "extensions": {}
+}
