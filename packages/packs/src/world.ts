@@ -4,7 +4,7 @@ import { END, START, type MarkovModelJSON } from "@lexiconlang/markov";
 import { decodeUtf8 } from "./hash.js";
 import { portableGrammar, portableInt, validateGrammar } from "./grammar.js";
 import { rollTable, validateTable, type TableHost, type TableRoll } from "./table.js";
-import { PackValidationError, type GeneratorData, type GeneratorDescriptor, type GenerateOptions, type Json as PackJson, type LoadedPack, type PackManifestV1, type World } from "./types.js";
+import { PackValidationError, type BaseData, type GeneratorData, type GeneratorDescriptor, type GenerateOptions, type Json as PackJson, type LoadedPack, type PackManifestV1, type World } from "./types.js";
 import { satisfies, validatePack } from "./pack.js";
 import { RESOURCE_MAX_COUNT, dedupe } from "./validate.js";
 
@@ -20,6 +20,7 @@ interface WorldState {
   descriptors: Map<string, GeneratorDescriptor>;
   installed: Map<string, Installation>;
   cultures: Map<string, Culture>;
+  bases: Map<string, BaseData>;
   grammars: Map<string, Extract<PackManifestV1["grammars"][number], { rules: unknown }>>;
   tables: Map<string, PackManifestV1["tables"][number]>;
   generators: Map<string, GeneratorData>;
@@ -39,6 +40,7 @@ export function createWorld(options: CreateWorldOptions): World {
     descriptors: new Map(),
     installed: new Map(),
     cultures: new Map(),
+    bases: new Map(),
     grammars: new Map(),
     tables: new Map(),
     generators: new Map(),
@@ -126,6 +128,7 @@ function install(state: WorldState, pack: LoadedPack): void {
 
   const staged = {
     cultures: new Map(state.cultures),
+    bases: new Map(state.bases),
     grammars: new Map(state.grammars),
     tables: new Map(state.tables),
     generators: new Map(state.generators),
@@ -135,19 +138,40 @@ function install(state: WorldState, pack: LoadedPack): void {
   };
 
   const claim = (id: string, pointer: string) => {
-    if (staged.descriptors.has(id) || staged.cultures.has(id) || staged.grammars.has(id) || staged.tables.has(id) || staged.generators.has(id)) {
+    if (staged.descriptors.has(id) || staged.cultures.has(id) || staged.bases.has(id) || staged.grammars.has(id) || staged.tables.has(id) || staged.generators.has(id)) {
       fail([{ code: "COLLISION", pointer, message: `resource id ${id} is already installed` }]);
     }
   };
+  for (const [i, base] of (pack.manifest.bases ?? []).entries()) claim(base.id, `/bases/${i}/id`);
   for (const [i, culture] of pack.manifest.cultures.entries()) claim(culture.id, `/cultures/${i}/id`);
   for (const [i, grammar] of pack.manifest.grammars.entries()) claim(grammar.id, `/grammars/${i}/id`);
   for (const [i, table] of pack.manifest.tables.entries()) claim(table.id, `/tables/${i}/id`);
   for (const [i, generator] of pack.manifest.generators.entries()) claim(generator.id, `/generators/${i}/id`);
   if (state.installed.size + 1 > RESOURCE_MAX_COUNT) fail([{ code: "LIMIT", pointer: "", message: "too many packs in world" }]);
 
+  for (const base of pack.manifest.bases ?? []) staged.bases.set(base.id, base);
   for (const grammar of pack.manifest.grammars) staged.grammars.set(grammar.id, grammar);
   for (const table of pack.manifest.tables) staged.tables.set(table.id, table);
   for (const generator of pack.manifest.generators) staged.generators.set(generator.id, generator);
+
+  const resolveBase = (id: string, pointer: string): BaseData => {
+    const base = staged.bases.get(id) ?? state.bases.get(id);
+    if (!base) fail([{ code: "REFERENCE", pointer, message: `unknown base ${id}` }]);
+    return base;
+  };
+  /** Culture-shaped defaults from a base descriptor (glyphs + templates + structures). */
+  const baseDefaults = (base: BaseData): AnyRecord => ({
+    glyphs: toGlyphSystem(base.glyphs, "/bases/default/glyphs"),
+    templates: Object.fromEntries(Object.entries(base.templates).map(([kind, choices]) => [
+      kind,
+      choices.map((c) => [toLanguageTemplate(c.value, `/bases/default/templates/${kind}`), c.weight] as const),
+    ])),
+    nameStructures: { ...base.nameStructures },
+    capitalize: "first",
+    meaningPacks: [],
+    wordClasses: [],
+    genderTemplates: {},
+  });
 
   const resolveCulture = (id: string, pointer: string, chain: readonly string[]): Culture => {
     const existing = staged.cultures.get(id) ?? state.cultures.get(id);
@@ -155,10 +179,26 @@ function install(state: WorldState, pack: LoadedPack): void {
     if (chain.includes(id)) fail([{ code: "CYCLE", pointer, message: `culture cycle: ${[...chain, id].join(" -> ")}` }]);
     const data = pack.manifest.cultures.find((c) => c.id === id);
     if (!data) fail([{ code: "REFERENCE", pointer, message: `unknown culture ${id}` }]);
+    let parentBase: string | undefined;
     let base: AnyRecord = {};
     if (data.extends) {
       const parent = resolveCulture(data.extends, `${pointer}/extends`, [...chain, id]);
       base = { ...(parent as unknown as AnyRecord) };
+      parentBase = (parent as unknown as AnyRecord).base as string | undefined;
+    }
+    // S0: base defaults apply before parent-culture resolved fields, so a base
+    // declared on an ancestor must also apply to descendants; a child cannot
+    // switch to a different base (derive a new root instead).
+    const baseId = data.base ?? parentBase;
+    if (data.base && parentBase && data.base !== parentBase) {
+      fail([{ code: "REFERENCE", pointer: `${pointer}/base`, message: `culture ${id} cannot change base from inherited parent (${parentBase})` }]);
+    }
+    if (baseId) {
+      const resolved = resolveBase(baseId, `${pointer}/base`);
+      const defaults = baseDefaults(resolved);
+      // Base defaults fill only what the parent/child has not supplied. Parent
+      // resolved fields and child explicit fields win over base defaults.
+      base = { ...defaults, ...base };
     }
     const culture: AnyRecord = {
       ...base,
@@ -171,7 +211,7 @@ function install(state: WorldState, pack: LoadedPack): void {
       nameStructures: mergeNested(base.nameStructures as AnyRecord | undefined, data.nameStructures, `${pointer}/nameStructures`),
       capitalize: data.capitalize ?? base.capitalize ?? "first",
     };
-    if (data.base) culture.base = data.base;
+    if (baseId) culture.base = baseId;
     if (data.visualGlyphSystems) culture.visualGlyphSystems = data.visualGlyphSystems;
     const frozen = freezeCulture(culture as unknown as Culture);
     staged.cultures.set(id, frozen);
@@ -208,6 +248,7 @@ function install(state: WorldState, pack: LoadedPack): void {
   }
 
   state.cultures = staged.cultures;
+  state.bases = staged.bases;
   state.grammars = staged.grammars;
   state.tables = staged.tables;
   state.generators = staged.generators;
@@ -216,7 +257,7 @@ function install(state: WorldState, pack: LoadedPack): void {
   state.descriptors = staged.descriptors;
   state.installed.set(pack.manifest.id, {
     pack,
-    resourceIds: new Set([...staged.cultures.keys(), ...staged.grammars.keys(), ...staged.tables.keys(), ...staged.generators.keys()]),
+    resourceIds: new Set([...staged.cultures.keys(), ...staged.bases.keys(), ...staged.grammars.keys(), ...staged.tables.keys(), ...staged.generators.keys()]),
   });
 }
 
@@ -286,6 +327,7 @@ function toGlyphSystem(glyphs: NonNullable<PackManifestV1["cultures"][number]["g
 
 interface StagedState {
   cultures: Map<string, Culture>;
+  bases: Map<string, BaseData>;
   grammars: Map<string, PackManifestV1["grammars"][number]>;
   tables: Map<string, PackManifestV1["tables"][number]>;
   generators: Map<string, GeneratorData>;

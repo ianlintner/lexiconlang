@@ -8,6 +8,39 @@ export interface PackDependency {
   version: string;
 }
 
+export interface OrthographyData {
+  id: string;
+  mappings: readonly { from: string; to: string }[];
+  unknown: "preserve" | "error";
+}
+
+export interface SensitivityData {
+  framing: string;
+  exclusions: readonly string[];
+  review: string;
+}
+
+/** B1 base language descriptor (data boundary from the S0 spec). */
+export interface BaseData {
+  id: ResourceId;
+  inspiredBy: string;
+  scope: string;
+  glyphs: {
+    classes: Readonly<Record<string, readonly string[]>>;
+    syllables: readonly (readonly [string, number])[];
+    wordShapes: readonly (readonly [string, number])[];
+    constraints?: readonly { pattern: readonly string[]; rule: "forbid" | { maxOccurrences: number } }[];
+    joiner?: string;
+  };
+  orthography: OrthographyData;
+  romanization?: OrthographyData;
+  templates: Readonly<Record<string, readonly WeightedData<NameTemplate>[]>>;
+  nameStructures: Readonly<Record<string, NameStructure>>;
+  corpus?: ResourceId;
+  provenance: readonly string[];
+  sensitivity: SensitivityData;
+}
+
 export interface Provenance {
   id: string;
   source: string;
@@ -137,7 +170,7 @@ export interface PackManifestV1 {
   corpora: readonly CorpusData[];
   markovModels: readonly MarkovModelData[];
   generators: readonly GeneratorData[];
-  bases?: readonly Json[];
+  bases?: readonly BaseData[];
   dialects?: readonly Json[];
   extensions?: Readonly<Record<string, Json>>;
 }

@@ -1,0 +1,268 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.greek",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Aspirated stops, vowel clusters and stem-flavoured names inspired by Ancient Greek; simplified and fictionalised. — Ancient Greek (transliterated, polytonic-free). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-greek-prov",
+      "source": "original:lexiconlang.bases.greek",
+      "title": "Ancient Greek (transliterated, polytonic-free)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.greek/base/default",
+      "inspiredBy": "Ancient Greek (transliterated, polytonic-free)",
+      "scope": "Aspirated stops, vowel clusters and stem-flavoured names inspired by Ancient Greek; simplified and fictionalised.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "g",
+            "d",
+            "z",
+            "th",
+            "k",
+            "l",
+            "m",
+            "n",
+            "x",
+            "p",
+            "r",
+            "s",
+            "t",
+            "ph",
+            "ch",
+            "ps",
+            "ks"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ai",
+            "au",
+            "ei",
+            "oi",
+            "ou"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            2
+          ],
+          [
+            "C V V",
+            2
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            3
+          ],
+          [
+            "3",
+            2
+          ],
+          [
+            "1",
+            1
+          ],
+          [
+            "2-3",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ],
+        "joiner": ""
+      },
+      "orthography": {
+        "id": "greek-romanized",
+        "mappings": [
+          {
+            "from": "ph",
+            "to": "φ"
+          },
+          {
+            "from": "th",
+            "to": "θ"
+          },
+          {
+            "from": "ch",
+            "to": "χ"
+          },
+          {
+            "from": "ks",
+            "to": "ξ"
+          },
+          {
+            "from": "ps",
+            "to": "ψ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "greek-roman",
+        "mappings": [
+          {
+            "from": "φ",
+            "to": "ph"
+          },
+          {
+            "from": "θ",
+            "to": "th"
+          },
+          {
+            "from": "χ",
+            "to": "ch"
+          },
+          {
+            "from": "ξ",
+            "to": "ks"
+          },
+          {
+            "from": "ψ",
+            "to": "ps"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Alexis",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Daphne",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "place"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "greek.given-only": {
+          "id": "given-only",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "greek-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.greek/culture/default",
+      "base": "lexiconlang.bases.greek/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

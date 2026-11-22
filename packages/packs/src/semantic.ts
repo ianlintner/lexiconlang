@@ -2,7 +2,7 @@ import type { PackDiagnostic, PackManifestV1 } from "./types.js";
 import { ASSETS_MAX_BYTES, DEPENDENCY_MAX_DEPTH, RESOURCE_MAX_COUNT, TEXT_MAX_LENGTH, WEIGHT_MAX_TOTAL, dedupe } from "./validate.js";
 
 /** Capabilities this host implements. Unknown behavior fields/caps fail closed. */
-export const SUPPORTED_CAPABILITIES = new Set(["language-v1", "grammar-v1", "tables-v1", "markov-v1"]);
+export const SUPPORTED_CAPABILITIES = new Set(["language-v1", "grammar-v1", "tables-v1", "markov-v1", "bases-v1"]);
 
 const FORBIDDEN_KEYS = new Set(["__proto__", "prototype", "constructor"]);
 const RESOURCE_KINDS = new Set(["culture", "meaning-pack", "meaning", "word-class", "grammar", "table", "corpus", "markov", "generator", "base", "dialect"]);
@@ -86,7 +86,7 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
   need("grammar-v1", manifest.grammars.length > 0 || manifest.generators.some((g) => g.engine === "grammar-v1"));
   need("tables-v1", manifest.tables.length > 0 || manifest.generators.some((g) => g.engine === "table-v1"));
   need("markov-v1", manifest.corpora.length > 0 || manifest.markovModels.length > 0 || manifest.generators.some((g) => g.engine === "markov-v1"));
-  if ((manifest.bases?.length ?? 0) > 0) diag.push({ code: "CAPABILITY", pointer: `/bases`, message: `bases-v1 is not implemented by this host` });
+  need("bases-v1", (manifest.bases?.length ?? 0) > 0);
   if ((manifest.dialects?.length ?? 0) > 0) diag.push({ code: "CAPABILITY", pointer: `/dialects`, message: `dialects-v1 is not implemented by this host` });
 
   // Provenance references and asset paths.
@@ -129,6 +129,13 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
   });
   checkDictionaryKeys(diag, manifest.extensions, "/extensions");
   checkDictionaryKeys(diag, m["bases"], "/bases");
+  // Base resources: nested dictionaries must not carry prototype-pollution keys.
+  manifest.bases?.forEach((base, i) => {
+    const b = base as unknown as Record<string, unknown>;
+    checkDictionaryKeys(diag, b.templates, `/bases/${i}/templates`);
+    checkDictionaryKeys(diag, b.nameStructures, `/bases/${i}/nameStructures`);
+    checkDictionaryKeys(diag, (b.glyphs as Record<string, unknown> | undefined)?.classes, `/bases/${i}/glyphs/classes`);
+  });
 
   // Culture inheritance chains: single parent, acyclic, declared dependency.
   const cultureById = new Map(manifest.cultures.map((c, i) => [c.id, { c, i }]));
@@ -169,7 +176,12 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
   };
   manifest.cultures.forEach((c, i) => {
     if (c.extends) localRef(c.extends, `/cultures/${i}/extends`);
-    if (c.base) localRef(c.base, `/cultures/${i}/base`);
+    // Base refs may be local or from an installed dependency pack; only
+    // enforce existence for pack-local refs here. World install resolves the
+    // rest against the accumulated base registry.
+    if (c.base && rootPack(c.base) === packId && !ids.has(c.base)) {
+      diag.push({ code: "REFERENCE", pointer: `/cultures/${i}/base`, message: `unknown local base ${JSON.stringify(c.base)}` });
+    }
     c.meaningPacks?.forEach((r, j) => localRef(r, `/cultures/${i}/meaningPacks/${j}`));
     if (c.glyphs) {
       checkTextFields(c.glyphs.classes, `/cultures/${i}/glyphs/classes`, diag);

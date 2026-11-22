@@ -79,6 +79,8 @@ export default defineConfig({
           items: [
             { text: "@lexiconlang/language", link: "/packages/language" },
             { text: "@lexiconlang/glyphs", link: "/packages/glyphs" },
+            { text: "@lexiconlang/bases", link: "/packages/bases" },
+            { text: "@lexiconlang/packs", link: "/packages/packs" },
           ],
         },
         {
