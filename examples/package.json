@@ -16,6 +16,7 @@
     "glyphs": "tsx 09-glyphs.ts",
     "open-schema": "tsx 10-open-schema.ts",
     "constraints-blocklist": "tsx 11-constraints-blocklist.ts",
+    "dialects": "tsx 12-dialects.ts",
     "all": "tsx _run-all.ts"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
 import type { Context } from "@lexiconlang/core";
 import type { Culture, Lexicon, WordClass } from "./types.js";
-import { generateWord } from "./phonotactics.js";
+import { generateWord, generateWordTokenGroups } from "./phonotactics.js";
+import { deriveDialect, type DerivedLanguage, type DialectData, type OrthographyData, type TokenLexicon } from "./dialects.js";
 
 /** Default capacity of a {@link LexiconCache}. */
 export const DEFAULT_LEXICON_CACHE_CAPACITY = 128;
@@ -202,4 +203,113 @@ function createLexicon(culture: Culture, cultureCtx: Context): Lexicon {
       return result;
     },
   };
+}
+
+/**
+ * Opt-in token-retaining lexicon for B3 dialect derivation.
+ *
+ * Conforms to the same deterministic contract as {@link buildLexicon}: the
+ * `lang:<culture.id>` and `word:<meaningId>` forks stay exactly where they
+ * were, and `formOf` returns the same bytes. The only extension is that each
+ * meaning's atomic glyph tokens are retained for sound changes. Both passes
+ * start from the same immutable child context, so no extra RNG state leaks.
+ *
+ * `cultureIdOverride` is reserved for future world-resolved cultures; callers
+ * normally leave it unset.
+ */
+export function buildTokenLexicon(
+  culture: Culture,
+  ctx: Context,
+  cultureIdOverride?: string,
+  cache?: LexiconCache,
+): TokenLexicon {
+  const cultureCtx = ctx.child(`lang:${culture.id}`);
+  const orthography: OrthographyData = {
+    id: `lexicon:${culture.id}/orthography`,
+    mappings: [],
+    unknown: "preserve",
+  };
+
+  const build = (): TokenLexicon => {
+    const forms = new Map<string, string>();
+    const tokens = new Map<string, string[]>();
+    const segments = new Map<string, string[][]>();
+    const allMeaningIds: string[] = [];
+    const seen = new Set<string>();
+    for (const pack of culture.meaningPacks) {
+      for (const meaning of pack.meanings) {
+        if (seen.has(meaning.id)) continue;
+        seen.add(meaning.id);
+        allMeaningIds.push(meaning.id);
+      }
+    }
+
+    return {
+      cultureId: cultureIdOverride ?? culture.id,
+      orthography,
+      renderHint: { joiner: culture.glyphs.joiner },
+
+      formOf(meaningId: string): string {
+        const cached = forms.get(meaningId);
+        if (cached !== undefined) return cached;
+        const wordCtx = cultureCtx.child(`word:${meaningId}`);
+        const form = generateWord(culture.glyphs, wordCtx);
+        forms.set(meaningId, form);
+        return form;
+      },
+
+      segmentsOf(meaningId: string): readonly (readonly string[])[] {
+        const cached = segments.get(meaningId);
+        if (cached !== undefined) return cached;
+        const wordCtx = cultureCtx.child(`word:${meaningId}`);
+        const groups = generateWordTokenGroups(culture.glyphs, wordCtx);
+        segments.set(meaningId, groups);
+        return groups;
+      },
+
+      tokensOf(meaningId: string): readonly string[] {
+        const cached = tokens.get(meaningId);
+        if (cached !== undefined) return [...cached];
+        const picked = this.segmentsOf!(meaningId).flat();
+        tokens.set(meaningId, picked);
+        return [...picked];
+      },
+
+      byClass(c, tag) {
+        const result = [];
+        for (const pack of culture.meaningPacks) {
+          for (const meaning of pack.meanings) {
+            if (meaning.class !== c) continue;
+            if (tag && !meaning.tags.includes(tag)) continue;
+            result.push(meaning);
+          }
+        }
+        return result;
+      },
+
+      materialize() {
+        const result = new Map<string, string>();
+        for (const meaningId of allMeaningIds) result.set(meaningId, this.formOf(meaningId));
+        return result;
+      },
+    };
+  };
+
+  if (cache === undefined) return build();
+  return cache.getOrCreate(`token:${lexiconCacheKey(culture, cultureCtx)}`, () => build()) as TokenLexicon;
+}
+
+/**
+ * Build a token-aware proto lexicon from a Culture and immediately derive a
+ * daughter language. This is the direct form of the card's shorthand
+ * `deriveDialect(culture, rules)`; further daughters can be derived by
+ * passing the result to {@link deriveDialect} again.
+ */
+export function deriveDialectFromCulture(
+  culture: Culture,
+  data: DialectData,
+  ctx: Context,
+): DerivedLanguage {
+  const proto = buildTokenLexicon(culture, ctx, culture.id);
+  return deriveDialect(proto, data, ctx.child(`culture-dialect:${data.id}`));
 }

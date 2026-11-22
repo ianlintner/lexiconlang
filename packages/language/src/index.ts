@@ -30,13 +30,41 @@ export type {
 } from "./types.js";
 export { builtinWordClasses, defineCulture, isBuiltinWordClass } from "./types.js";
 export { constraintMatches } from "./glyphs.js";
-export { generateWord } from "./phonotactics.js";
 export { coreMeanings } from "./meanings.js";
 export {
   buildLexicon,
+  buildTokenLexicon,
   createLexiconCache,
   DEFAULT_LEXICON_CACHE_CAPACITY,
+  deriveDialectFromCulture,
 } from "./lexicon.js";
+export { generateWord, generateWordTokenGroups, generateWordTokens } from "./phonotactics.js";
+export {
+  applyOrthography,
+  applySoundChanges,
+  adjectiveFromPlace,
+  createRomanizationProfile,
+  demonym,
+  deriveDialect,
+  genitive,
+  inflect,
+  languageFamily,
+  parseSoundChange,
+  parseSoundChangeRule,
+  plural,
+} from "./dialects.js";
+export type {
+  DialectData,
+  DerivedLanguage,
+  EnvironmentSlot,
+  LanguageBranch,
+  MorphologyRule,
+  OrthographyData,
+  RomanizationProfile,
+  SoundChangeRule,
+  TokenLexicon,
+  WordRenderHint,
+} from "./dialects.js";
 export type { LexiconCache, LexiconCacheStats } from "./lexicon.js";
 export { generateName, resolveNameTemplates, generateNameFiltered } from "./templates.js";
 export { glossFor, withGlosses, localizePacks } from "./glosses.js";
