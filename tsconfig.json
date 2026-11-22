@@ -13,6 +13,7 @@
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
     { "path": "./packages/cli" },
-    { "path": "./packages/steampunk" }
+    { "path": "./packages/steampunk" },
+    { "path": "./packages/supers" }
   ]
 }

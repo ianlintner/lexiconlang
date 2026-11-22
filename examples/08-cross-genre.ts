@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { steampunk } from "@lexiconlang/steampunk";
+import { supers } from "@lexiconlang/supers";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -98,3 +99,16 @@ console.log(`  Vessel:   ${brass.airship()}`);
 console.log(`  Society:  ${brass.society()}`);
 console.log(`  Sunday headline: ${brass.headline()}`);
 console.log(`  Street omen: ${brass.omen().text}`);
+
+// ─── Scenario 4: a supers dossier in a shared city ───────────────────────
+
+const masked = supers.withSeed("masked-cross-genre");
+const dossier = masked.dossier();
+console.log("\nSupers dossier:");
+console.log(`  Codename: ${dossier.codename} (${dossier.alignment})`);
+console.log(`  Secret:   ${dossier.secretIdentity.form} of ${dossier.hometown.form}`);
+console.log(`  Power:    ${dossier.powers.ability} — ${dossier.powers.limit}`);
+console.log(`  Team:     ${dossier.team} · Base: ${dossier.lair}`);
+console.log(`  Motto:    ${dossier.motto}`);
+console.log(`  Headline: ${dossier.headline}`);
+console.log(`  Incident: ${masked.incident().text}`);
