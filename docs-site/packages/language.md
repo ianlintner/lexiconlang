@@ -42,6 +42,50 @@ lexicon.lookup("strong"); // "drakaz"
 The lexicon is content-addressable: `lookup("anvil")` is deterministic given
 the culture seed.
 
+## Localized glosses (B4)
+
+Translations are **opt-in** and affect only the human-readable `translation`
+(and `parts[].meaning`); the conlang `form`, meaning selection and RNG scope stay
+byte-identical to the legacy path. Built-in glosses cover the core, fantasy and
+scifi meaning packs in `es`, `de`, `fr`, `pt` and `ja`.
+
+```ts
+import { createContext } from "@lexiconlang/core";
+import { generateName, BUILTIN_GLOSS_LOCALES } from "@lexiconlang/language";
+import { dwarvish } from "@lexiconlang/fantasy";
+
+const ctx = createContext({ seed: "my-world" });
+const legacy = generateName(dwarvish, "given", ctx.child("hero"));
+const spanish = generateName(dwarvish, "given", ctx.child("hero"), { locale: "es" });
+
+legacy.form === spanish.form;          // true — the conlang form never changes
+legacy.translation;                    // "Strong-anvil"
+spanish.translation;                   // "Fuerte-yunque"
+
+// A locale on the context also selects the gloss:
+const japanese = generateName(
+  dwarvish, "given", createContext({ seed: "my-world", locale: "ja" }).child("hero"),
+);
+```
+
+Resolution order is **exact BCP 47 tag → primary subtag (case-insensitive) →
+legacy English `label` → meaning `id`**. With no locale, `glossFor` returns
+`label ?? id` exactly. Meaning packs may supply their own `glosses` map
+(also accepted in declarative pack JSON under `meaningPacks[].meanings[].glosses`);
+explicit pack glosses take precedence over the built-in rows.
+
+```ts
+import { glossFor, withGlosses } from "@lexiconlang/language";
+
+glossFor(meaning, "es-MX");  // "piedra mexicana" if present, else "piedra"
+const patched = withGlosses(pack, { [meaning.id]: { es: "roca" } }); // copy, not mutation
+```
+
+`BUILTIN_GLOSS_LOCALES` lists the five available locales. The gloss data is
+original, CC0-1.0, and carries no third-party corpus. See
+[`examples/12-localized-glosses.ts`](https://github.com/ianlintner/lexiconlang/blob/main/examples/12-localized-glosses.ts)
+for a runnable demo.
+
 ## Key types
 
 | Type             | Purpose                                                   |

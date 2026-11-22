@@ -73,8 +73,13 @@ export interface Meaning {
   class: WordClass;
   /** Semantic tags for template filtering. */
   tags: readonly string[];
-  /** Human-readable label. */
+  /** Human-readable label (legacy English fallback). Never an RNG key. */
   label?: string;
+  /**
+   * Localized glosses keyed by BCP 47 locale tag (e.g. `es`, `de`, `ja`).
+   * Opt-in: absent locale keeps the legacy `label` translation exactly.
+   */
+  glosses?: Readonly<Record<string, string>>;
 }
 
 /** Word classes shipped by @lexiconlang/language itself. */
