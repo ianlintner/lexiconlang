@@ -36,6 +36,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc -b",
     "samples": "vitest run tests/sample-output.test.ts",
+    "emit:vectors": "node scripts/portable-vectors/emit.mjs",
     "clean": "pnpm -r --filter='./packages/*' exec rm -rf dist tsconfig.tsbuildinfo",
     "changeset:add": "changeset add",
     "changeset:version": "changeset version",

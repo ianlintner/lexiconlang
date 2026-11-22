@@ -91,6 +91,7 @@ export default defineConfig({
             { text: "@lexiconlang/scifi", link: "/packages/scifi" },
             { text: "@lexiconlang/modern", link: "/packages/modern" },
             { text: "@lexiconlang/cyberpunk", link: "/packages/cyberpunk" },
+            { text: "@lexiconlang/steampunk", link: "/packages/steampunk" },
           ],
         },
         {
