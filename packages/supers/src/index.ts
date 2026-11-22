@@ -165,9 +165,19 @@ const grammarById = new Map<string, Grammar>(
 
 // ─── Table-backed oracles ────────────────────────────────────────────────
 
-const tableGenerators: Readonly<Record<string, Generator<string>>> = Object.fromEntries(
-  Object.entries(grammars).map(([key, gen]) => [`${PREFIX}/generator/${key}`, gen]),
-);
+// The table host resolves generator references by the exact ids declared in
+// the pack manifest, so a future table entry that references a generator
+// resolves correctly.
+const tableGenerators = new Map<string, Generator<string>>([
+  [`${PREFIX}/generator/hero-codename`, heroCodename],
+  [`${PREFIX}/generator/villain-codename`, villainCodename],
+  [`${PREFIX}/generator/power`, powerName],
+  [`${PREFIX}/generator/origin`, originName],
+  [`${PREFIX}/generator/team-name`, teamName],
+  [`${PREFIX}/generator/lair`, lairName],
+  [`${PREFIX}/generator/headline`, headline],
+  [`${PREFIX}/generator/motto`, motto],
+]);
 
 const tableHost: TableHost = {
   table(id: string) {
@@ -176,7 +186,7 @@ const tableHost: TableHost = {
     return table;
   },
   generator(id: string) {
-    const gen = tableGenerators[id];
+    const gen = tableGenerators.get(id);
     if (!gen) throw new Error(`supers pack: unknown table generator ${id}`);
     return gen;
   },
@@ -244,6 +254,24 @@ export const heroDossier: Generator<HeroDossier> = {
     };
   },
 };
+
+/**
+ * Resolve a generator by its exact pack-manifest id. This is the same lookup
+ * the table host uses for generator references inside table entries.
+ */
+export function generatorForId(id: string): Generator<unknown> | undefined {
+  return tableGenerators.get(id) ?? compositeGenerators.get(id);
+}
+
+const compositeGenerators = new Map<string, Generator<unknown>>([
+  [`${PREFIX}/generator/person-name`, personName],
+  [`${PREFIX}/generator/place-name`, placeName],
+  [`${PREFIX}/generator/power-set`, powerSet],
+  [`${PREFIX}/generator/hero-dossier`, heroDossier],
+  [`${PREFIX}/generator/power-limit`, powerLimitOracle],
+  [`${PREFIX}/generator/incident`, incidentOracle],
+  [`${PREFIX}/generator/shadow-omen`, shadowOmenOracle],
+]);
 
 /** All public generators, keyed by a short facade name. */
 export const generators = {

@@ -4,6 +4,7 @@ import { validatePack } from "@lexiconlang/packs";
 import packJson from "../data/supers.pack.json" with { type: "json" };
 import {
   generators,
+  generatorForId,
   heroDossier,
   pack,
   personName,
@@ -107,6 +108,13 @@ describe("supers declarative pack", () => {
     });
   }
 
+  it("resolves every declared generator id by its exact pack-manifest id", () => {
+    for (const descriptor of pack.generators) {
+      expect(generatorForId(descriptor.id)).toBeDefined();
+    }
+    expect(generatorForId(`${pack.id}/generator/does-not-exist`)).toBeUndefined();
+  });
+
   it("oracles return meaningful text", () => {
     for (const key of ["powerLimitOracle", "incidentOracle", "shadowOmenOracle"] as const) {
       const roll = generators[key].generate(createContext({ seed: "oracle-seed" }).child("roll"));
@@ -119,7 +127,7 @@ describe("supers declarative pack", () => {
     const seed = "dossier-sibling-test";
     const expected = heroDossier.generate(createContext({ seed }).child("dossier"));
     // Interleave unrelated sub-rolls before and after; the fixed child keys isolate them.
-    createContext({ seed }).child("unrelated-a").child("roll").rng.nextInt(10);
+    createContext({ seed }).child("unrelated-a").child("roll").rng.nextInt(0, 10);
     const actual = heroDossier.generate(createContext({ seed }).child("dossier"));
     expect(actual).toEqual(expected);
     expect(expected.secretIdentity.form).toContain(" ");
