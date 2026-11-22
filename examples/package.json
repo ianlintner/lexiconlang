@@ -17,6 +17,7 @@
     "open-schema": "tsx 10-open-schema.ts",
     "constraints-blocklist": "tsx 11-constraints-blocklist.ts",
     "dialects": "tsx 12-dialects.ts",
+    "b2-bases": "tsx 13-b2-bases.ts",
     "all": "tsx _run-all.ts"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "@lexiconlang/fantasy": "workspace:*",
     "@lexiconlang/scifi": "workspace:*",
     "@lexiconlang/modern": "workspace:*",
+    "@lexiconlang/bases": "workspace:*",
     "@lexiconlang/historical-medieval": "workspace:*",
     "@lexiconlang/steampunk": "workspace:*"
   },
