@@ -13,6 +13,7 @@
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
     { "path": "./packages/postapoc" },
+    { "path": "./packages/steampunk" },
     { "path": "./packages/cli" }
   ]
 }
