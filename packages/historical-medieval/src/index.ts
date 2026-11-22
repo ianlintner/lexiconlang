@@ -232,20 +232,10 @@ export const heraldry: Generator<HeraldicDevice> = {
     const field = oneOf(...tinctures).generate(ctx.child("field"));
     const charge = oneOf(...tableTexts(resourceIds.heraldicChargeTable)).generate(ctx.child("charge"));
     const attitude = oneOf(...attitudes).generate(ctx.child("attitude"));
-    // Enforce the documented contrast convention with bounded, key-scoped rerolls.
-    // Each attempt derives from a stable child key, so sibling order is irrelevant.
-    let chargeTincture: Tincture | undefined;
-    for (let attempt = 0; attempt < 8; attempt++) {
-      const candidate = oneOf(...tinctures).generate(ctx.child(`chargeTincture:${attempt}`));
-      if (hasHeraldicContrast(field, candidate)) {
-        chargeTincture = candidate;
-        break;
-      }
-    }
-    // The tincture pool always contains the opposite category, so 8 attempts
-    // cannot realistically fail; fall back to a deterministic complement.
-    const chosen = chargeTincture ?? (metals.has(field) ? "Azure" : "Or");
-    const base = { field, charge, chargeTincture: chosen, attitude };
+    // Pick directly from the opposite tincture class: deterministic, unbiased, no rerolls.
+    const opposite = tinctures.filter((t) => hasHeraldicContrast(field, t));
+    const chargeTincture = oneOf(...opposite).generate(ctx.child("chargeTincture"));
+    const base = { field, charge, chargeTincture, attitude };
     return { ...base, blazon: blazon(base) };
   },
 };

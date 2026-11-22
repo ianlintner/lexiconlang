@@ -23,15 +23,11 @@ console.log(hm.listing());         // { good: "Fine linen", price: 9, unit: "pen
 console.log(hm.event());           // "the roof of the granary was repaired"
 
 const arms = hm.arms();
-console.log(arms.blazon);          // "Vert, a tower Argent"
+console.log(arms.blazon);          // "Vert, a tower Or"
 console.log(hm.shield().slice(0, 60)); // '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"'
 ```
 
-Comments above show the sequential calls in this snippet, drawn from one seeded facade.
-Calling each method on a fresh `withSeed("chronicle")` facade yields the same values,
-because every method uses its own stable child scope.
-
-## Sample output (seed `chronicle`, fresh facade per generator)
+Examples below come from one seeded facade, so they depend on call order; the same seed and call sequence always reproduce them. Each facade call has its own key-scoped sub-context.
 
 | Generator | Example |
 | --- | --- |
@@ -42,7 +38,7 @@ because every method uses its own stable child scope.
 | title | `Eastern Squire` |
 | market listing | `{ good: "Fine linen", price: 9, unit: "penny" }` |
 | domain event | `the roof of the granary was repaired` |
-| heraldry | `Vert, a tower Argent` |
+| heraldry | `Vert, a tower Or` |
 
 ## Naming cultures
 

@@ -73,7 +73,11 @@ describe("historical-medieval pack", () => {
     const person = String(world.generate(id("person-name"), "p"));
     const manor = String(world.generate(id("manor"), "p"));
     expect(person).not.toBe(manor);
-    expect(person.split(/\s+/)).toHaveLength(2);
+    // Bynames are multi-word in many cultures ("de Silva", "the Stout"), so
+    // assert a given name plus a nonempty byname rather than exactly 2 tokens.
+    const [given, ...byname] = person.split(" ");
+    expect(given?.length).toBeGreaterThan(0);
+    expect(byname.join(" ").length).toBeGreaterThan(0);
     // The declarative heraldry grammar also follows the contrast convention.
     const blazonText = String(world.generate(id("heraldry"), "h"));
     const [field, chargeAndTincture] = blazonText.split(", ");
@@ -168,8 +172,8 @@ describe("historical-medieval pack", () => {
   it("matches three recorded fixed seed vectors", () => {
     const expected: Record<string, string[]> = {
       "vector-a": ["Mearc of Wōd", "St. Eanswythe's Lang Village", "Worshipful Company of Tanners", "Augustinian House of Malmesbury", "Knight", '{"good":"Fresh fish","price":13,"unit":"shilling"}', "the stone bridge was completed", "Sable, an eagle segreant Argent"],
-      "vector-b": ["Tiernan mac Aodha", "Raven Ridge", "Worshipful Company of Silversmiths", "Abbey of St. Swithun", "High Knight", '{"good":"Fine wool","price":9,"unit":"penny"}', "in the south a winter frost killed the vine cuttings", "Purpure, a boar passant Or"],
-      "vector-c": ["Ragnhildr með Saxi", "Holt Village", "Worshipful Company of Dyers", "Franciscan House of Jarrow", "Chaplain", '{"good":"grain","price":13,"unit":"shilling"}', "a foal was born in the stable", "Purpure, a harp Argent"],
+      "vector-b": ["Tiernan mac Aodha", "Raven Ridge", "Worshipful Company of Silversmiths", "Abbey of St. Swithun", "High Knight", '{"good":"Fine wool","price":9,"unit":"penny"}', "in the south a winter frost killed the vine cuttings", "Purpure, a boar passant Argent"],
+      "vector-c": ["Ragnhildr með Saxi", "Holt Village", "Worshipful Company of Dyers", "Franciscan House of Jarrow", "Chaplain", '{"good":"grain","price":13,"unit":"shilling"}', "a foal was born in the stable", "Purpure, a harp Or"],
     };
     for (const [seed, vector] of Object.entries(expected)) {
       const api = historicalMedieval.withSeed(seed);

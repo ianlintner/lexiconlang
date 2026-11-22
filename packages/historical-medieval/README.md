@@ -26,7 +26,7 @@ hm.arms();       // { field, charge, chargeTincture, attitude, blazon }
 hm.shield();     // '<svg …>…</svg>'
 ```
 
-Every method draws from a stable child scope, so identical seeds reproduce identical output.
+Every method draws from a key-scoped sub-context, so identical seeds and call sequences reproduce identical output. Values also depend on call order within one seeded facade.
 
 ## API
 
@@ -41,8 +41,9 @@ Every method draws from a stable child scope, so identical seeds reproduce ident
 ## Heraldic rules (documented subset)
 
 - **Field** and **charge tincture** are chosen from seven conventional tinctures: Or, Argent, Azure, Gules, Sable, Vert, Purpure.
-- **Contrast heuristic (enforced by `heraldry.generate()`):** a metal (Or/Argent) is always paired with a colour (Azure/Gules/Sable/Vert/Purpure), and vice versa; the tinctures are never equal. The generator uses bounded, key-scoped rerolls to enforce this deterministically. `hasHeraldicContrast(field, tincture)` exposes the predicate. The generator does not enforce every historical exception; `blazon(device)` renders a caller-supplied device verbatim, so callers using it directly remain responsible for their own rules.
+- The generator picks the charge tincture directly from the opposite metal/colour class (no rejection sampling); `hasHeraldicContrast(field, tincture)` exposes the predicate. The generator does not enforce every historical exception; `blazon(device)` renders a caller-supplied device verbatim, so callers using it directly remain responsible for their own rules.
 - **Attitude** is selected from rampant, passant, statant, displayed, salient and segreant. Attitudes apply to living charges; static charges render without an attitude (e.g. `"Gules, a cross Or"`).
+- The declarative grammar in the pack JSON uses a simplified template (`a <charge> <attitude>` for every charge) and draws given names and bynames from a shared pool; the typed facade above applies full English articles, living-charge attitudes and per-culture selection. Both are deterministic.
 - A blazon has the form `"<Field>, a|an <charge> <attitude?> <ChargeTincture>"`, e.g. `"Azure, a lion rampant Or"`. Articles follow English usage (`an eagle`).
 - The SVG renderer is intentionally simple (shield path + representative glyph), suitable for test fixtures rather than heraldic publication.
 
@@ -62,6 +63,6 @@ The pack is JSON (`data/historical-medieval.pack.json`) validated with `@lexicon
 | market good | 0.830 |
 | domain event | 0.830 |
 | market listing | 0.059 |
-| heraldry | 0.370 |
+| heraldry | 0.388 |
 
 Finite pools cap distinct values: the 170-entry tables necessarily yield at least 0.83 duplicates at 1,000 draws, so these are reported rather than presented as balance claims. The heraldry figure is higher because the enforced metal/colour contrast excludes roughly half of the 7×7 tincture pairs. Weights in the pack JSON are retained by the declarative engines; the thin TS facade samples the same pools uniformly. No claim is made that any distribution is "balanced" or historically representative.
