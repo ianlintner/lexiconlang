@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { weirdWest } from "@lexiconlang/weird-west";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -71,4 +72,14 @@ const sq = repeat(detective, 5).generate(ctx.child("squad"));
 for (const d of sq) {
   console.log(`  Det. ${d.legal}  (a.k.a. "${d.alias}")`);
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
+}
+
+// ─── Scenario 3: a weird-west wanted poster with a fantasy alias ─────────
+
+const frontier = weirdWest.withSeed("high-noon");
+console.log("\nWeird-west bounty board (+ fantasy aliases):");
+for (let i = 0; i < 3; i++) {
+  const alias = fantasyFullName.generate(ctx.child(`wanted:${i}`)).surname;
+  console.log(`  ${frontier.wantedPoster()}`);
+  console.log(`    also known in the old country as "${alias}" · hideout: ${frontier.mine()}\n`);
 }
