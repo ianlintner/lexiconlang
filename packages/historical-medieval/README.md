@@ -34,21 +34,21 @@ Every method draws from a stable child scope, so identical seeds reproduce ident
 - `personName` / `personNameGenerator({ culture })` — names from four original naming cultures (`latin`, `oldenglish`, `celtic`, `norse`), with translations.
 - `manorName`, `guildName`, `monasteryName` — grammar-backed place and organization names from the pack.
 - `feudalTitle`, `marketGood`, `marketListing`, `domainEvent` — weighted tables sourced from the pack.
-- `heraldry` — `Generator<HeraldicDevice>`; `blazon(device)` and `shieldSvg(device)` expose the text and SVG renderings.
+- `heraldry` — `Generator<HeraldicDevice>`; `hasHeraldicContrast(field, tincture)`, `blazon(device)` and `shieldSvg(device)` expose the rule and the text/SVG renderings.
 - `cultures` — the four naming cultures with given-name and byname pools.
 - `historicalMedievalPack` — the underlying validated pack manifest (`lexiconlang.historical-medieval`).
 
 ## Heraldic rules (documented subset)
 
 - **Field** and **charge tincture** are chosen from seven conventional tinctures: Or, Argent, Azure, Gules, Sable, Vert, Purpure.
-- **Contrast heuristic:** a metal (Or/Argent) should be placed on a colour (Azure/Gules/Sable/Vert/Purpure), and a colour on a metal. The generator does not enforce every historical exception; it documents this heuristic so callers can apply their own rules.
+- **Contrast heuristic (enforced by `heraldry.generate()`):** a metal (Or/Argent) is always paired with a colour (Azure/Gules/Sable/Vert/Purpure), and vice versa; the tinctures are never equal. The generator uses bounded, key-scoped rerolls to enforce this deterministically. `hasHeraldicContrast(field, tincture)` exposes the predicate. The generator does not enforce every historical exception; `blazon(device)` renders a caller-supplied device verbatim, so callers using it directly remain responsible for their own rules.
 - **Attitude** is selected from rampant, passant, statant, displayed, salient and segreant. Attitudes apply to living charges; static charges render without an attitude (e.g. `"Gules, a cross Or"`).
 - A blazon has the form `"<Field>, a|an <charge> <attitude?> <ChargeTincture>"`, e.g. `"Azure, a lion rampant Or"`. Articles follow English usage (`an eagle`).
 - The SVG renderer is intentionally simple (shield path + representative glyph), suitable for test fixtures rather than heraldic publication.
 
 ## Pack format and quality
 
-The pack is JSON (`data/historical-medieval.pack.json`) validated with `@lexiconlang/packs` and exposed through this thin typed TS facade. It declares four cultures, three grammars, five weighted tables and eight generator descriptors. Table pools contain 170 entries each for titles, market goods and events; tests assert that 100 rolls on one seed family yield ≥ 60% distinct results per family.
+The pack is JSON (`data/historical-medieval.pack.json`) validated with `@lexiconlang/packs` and exposed through this thin typed TS facade. It declares four cultures, five grammars (manor, guild, monastery, person-name, heraldry), five weighted tables and eight declarative generator descriptors; the TS facade exposes eleven generators (the extra three are market unit, market listing and culture selection). Table pools contain 170 entries each for titles, market goods and events; tests assert that 100 rolls on one seed family yield ≥ 60% distinct results per family.
 
 ### Measured duplicate rates (1,000 draws per family)
 
@@ -62,6 +62,6 @@ The pack is JSON (`data/historical-medieval.pack.json`) validated with `@lexicon
 | market good | 0.830 |
 | domain event | 0.830 |
 | market listing | 0.059 |
-| heraldry | 0.172 |
+| heraldry | 0.370 |
 
-Finite pools cap distinct values: the 170-entry tables necessarily yield at least 0.83 duplicates at 1,000 draws, so these are reported rather than presented as balance claims. Weights are documented in the pack JSON; no claim is made that any distribution is "balanced" or historically representative.
+Finite pools cap distinct values: the 170-entry tables necessarily yield at least 0.83 duplicates at 1,000 draws, so these are reported rather than presented as balance claims. The heraldry figure is higher because the enforced metal/colour contrast excludes roughly half of the 7×7 tincture pairs. Weights in the pack JSON are retained by the declarative engines; the thin TS facade samples the same pools uniformly. No claim is made that any distribution is "balanced" or historically representative.

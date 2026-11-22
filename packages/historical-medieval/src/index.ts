@@ -174,7 +174,19 @@ const hexByTincture: Record<Tincture, string> = {
   Purpure: "#6b3a73",
 };
 
-/** A conservative, documented subset of heraldic blazon: one field, one charge. */
+const metals = new Set<Tincture>(["Or", "Argent"]);
+
+/** True when field and charge tincture follow the documented metal/colour convention. */
+export function hasHeraldicContrast(field: Tincture, chargeTincture: Tincture): boolean {
+  if (field === chargeTincture) return false;
+  return metals.has(field) !== metals.has(chargeTincture);
+}
+
+/**
+ * A conservative, documented subset of heraldic blazon: one field, one charge.
+ * `blazon()` renders the supplied device verbatim; `heraldry.generate()` is the
+ * generator that enforces `hasHeraldicContrast`.
+ */
 export function blazon(device: Omit<HeraldicDevice, "blazon">): string {
   const article = /^[aeiou]/i.test(device.charge) ? "an" : "a";
   if (!chargeAttitudes.includes(device.charge)) {
@@ -219,9 +231,21 @@ export const heraldry: Generator<HeraldicDevice> = {
   generate(ctx: Context) {
     const field = oneOf(...tinctures).generate(ctx.child("field"));
     const charge = oneOf(...tableTexts(resourceIds.heraldicChargeTable)).generate(ctx.child("charge"));
-    const chargeTincture = oneOf(...tinctures).generate(ctx.child("chargeTincture"));
     const attitude = oneOf(...attitudes).generate(ctx.child("attitude"));
-    const base = { field, charge, chargeTincture, attitude };
+    // Enforce the documented contrast convention with bounded, key-scoped rerolls.
+    // Each attempt derives from a stable child key, so sibling order is irrelevant.
+    let chargeTincture: Tincture | undefined;
+    for (let attempt = 0; attempt < 8; attempt++) {
+      const candidate = oneOf(...tinctures).generate(ctx.child(`chargeTincture:${attempt}`));
+      if (hasHeraldicContrast(field, candidate)) {
+        chargeTincture = candidate;
+        break;
+      }
+    }
+    // The tincture pool always contains the opposite category, so 8 attempts
+    // cannot realistically fail; fall back to a deterministic complement.
+    const chosen = chargeTincture ?? (metals.has(field) ? "Azure" : "Or");
+    const base = { field, charge, chargeTincture: chosen, attitude };
     return { ...base, blazon: blazon(base) };
   },
 };

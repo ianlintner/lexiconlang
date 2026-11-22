@@ -1937,6 +1937,762 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/grammar/person-name",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#given# #byname#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "given",
+          "choices": [
+            {
+              "value": "Aedan",
+              "weight": 1
+            },
+            {
+              "value": "Aldric",
+              "weight": 1
+            },
+            {
+              "value": "Amalric",
+              "weight": 1
+            },
+            {
+              "value": "Ari",
+              "weight": 1
+            },
+            {
+              "value": "Arnulf",
+              "weight": 1
+            },
+            {
+              "value": "Beornwulf",
+              "weight": 1
+            },
+            {
+              "value": "Bertrand",
+              "weight": 1
+            },
+            {
+              "value": "Bjǫrn",
+              "weight": 1
+            },
+            {
+              "value": "Branwen",
+              "weight": 1
+            },
+            {
+              "value": "Brennan",
+              "weight": 1
+            },
+            {
+              "value": "Cadhla",
+              "weight": 1
+            },
+            {
+              "value": "Cenwulf",
+              "weight": 1
+            },
+            {
+              "value": "Ciaran",
+              "weight": 1
+            },
+            {
+              "value": "Claudius",
+              "weight": 1
+            },
+            {
+              "value": "Corvin",
+              "weight": 1
+            },
+            {
+              "value": "Dagfinnr",
+              "weight": 1
+            },
+            {
+              "value": "Diarmaid",
+              "weight": 1
+            },
+            {
+              "value": "Donal",
+              "weight": 1
+            },
+            {
+              "value": "Eadberht",
+              "weight": 1
+            },
+            {
+              "value": "Eadgyth",
+              "weight": 1
+            },
+            {
+              "value": "Eadric",
+              "weight": 1
+            },
+            {
+              "value": "Ealdred",
+              "weight": 1
+            },
+            {
+              "value": "Eiríkr",
+              "weight": 1
+            },
+            {
+              "value": "Elowen",
+              "weight": 1
+            },
+            {
+              "value": "Eormenlaf",
+              "weight": 1
+            },
+            {
+              "value": "Felician",
+              "weight": 1
+            },
+            {
+              "value": "Fergus",
+              "weight": 1
+            },
+            {
+              "value": "Florian",
+              "weight": 1
+            },
+            {
+              "value": "Gerard",
+              "weight": 1
+            },
+            {
+              "value": "Godric",
+              "weight": 1
+            },
+            {
+              "value": "Gregor",
+              "weight": 1
+            },
+            {
+              "value": "Guðrún",
+              "weight": 1
+            },
+            {
+              "value": "Gwenllian",
+              "weight": 1
+            },
+            {
+              "value": "Helga",
+              "weight": 1
+            },
+            {
+              "value": "Hilary",
+              "weight": 1
+            },
+            {
+              "value": "Hildehilde",
+              "weight": 1
+            },
+            {
+              "value": "Hroðgar",
+              "weight": 1
+            },
+            {
+              "value": "Hákon",
+              "weight": 1
+            },
+            {
+              "value": "Iseult",
+              "weight": 1
+            },
+            {
+              "value": "Jón",
+              "weight": 1
+            },
+            {
+              "value": "Ketill",
+              "weight": 1
+            },
+            {
+              "value": "Leofric",
+              "weight": 1
+            },
+            {
+              "value": "Leopold",
+              "weight": 1
+            },
+            {
+              "value": "Lorcan",
+              "weight": 1
+            },
+            {
+              "value": "Lucian",
+              "weight": 1
+            },
+            {
+              "value": "Maelgwn",
+              "weight": 1
+            },
+            {
+              "value": "Magnus",
+              "weight": 1
+            },
+            {
+              "value": "Martin",
+              "weight": 1
+            },
+            {
+              "value": "Mearc",
+              "weight": 1
+            },
+            {
+              "value": "Myrddin",
+              "weight": 1
+            },
+            {
+              "value": "Niamh",
+              "weight": 1
+            },
+            {
+              "value": "Nicholas",
+              "weight": 1
+            },
+            {
+              "value": "Odo",
+              "weight": 1
+            },
+            {
+              "value": "Osbern",
+              "weight": 1
+            },
+            {
+              "value": "Owain",
+              "weight": 1
+            },
+            {
+              "value": "Paternus",
+              "weight": 1
+            },
+            {
+              "value": "Quintin",
+              "weight": 1
+            },
+            {
+              "value": "Ragnhildr",
+              "weight": 1
+            },
+            {
+              "value": "Reginald",
+              "weight": 1
+            },
+            {
+              "value": "Rhys",
+              "weight": 1
+            },
+            {
+              "value": "Sigebert",
+              "weight": 1
+            },
+            {
+              "value": "Sigríðr",
+              "weight": 1
+            },
+            {
+              "value": "Silvester",
+              "weight": 1
+            },
+            {
+              "value": "Sorcha",
+              "weight": 1
+            },
+            {
+              "value": "Starkadr",
+              "weight": 1
+            },
+            {
+              "value": "Sturla",
+              "weight": 1
+            },
+            {
+              "value": "Sveinn",
+              "weight": 1
+            },
+            {
+              "value": "Swithwulf",
+              "weight": 1
+            },
+            {
+              "value": "Theobald",
+              "weight": 1
+            },
+            {
+              "value": "Théodred",
+              "weight": 1
+            },
+            {
+              "value": "Tiernan",
+              "weight": 1
+            },
+            {
+              "value": "Ulric",
+              "weight": 1
+            },
+            {
+              "value": "Valerian",
+              "weight": 1
+            },
+            {
+              "value": "Vigdís",
+              "weight": 1
+            },
+            {
+              "value": "Willelm",
+              "weight": 1
+            },
+            {
+              "value": "Wulfstan",
+              "weight": 1
+            },
+            {
+              "value": "Ástríðr",
+              "weight": 1
+            },
+            {
+              "value": "Ælfgifu",
+              "weight": 1
+            },
+            {
+              "value": "Ælfwine",
+              "weight": 1
+            },
+            {
+              "value": "Æthelstan",
+              "weight": 1
+            },
+            {
+              "value": "Ísólfr",
+              "weight": 1
+            },
+            {
+              "value": "Óláfr",
+              "weight": 1
+            },
+            {
+              "value": "Þorgrímr",
+              "weight": 1
+            },
+            {
+              "value": "Þórr",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "byname",
+          "choices": [
+            {
+              "value": "Cognomen",
+              "weight": 1
+            },
+            {
+              "value": "Faber",
+              "weight": 1
+            },
+            {
+              "value": "Hviti",
+              "weight": 1
+            },
+            {
+              "value": "Langi",
+              "weight": 1
+            },
+            {
+              "value": "Molendinus",
+              "weight": 1
+            },
+            {
+              "value": "Pistor",
+              "weight": 1
+            },
+            {
+              "value": "Rauði",
+              "weight": 1
+            },
+            {
+              "value": "Sartor",
+              "weight": 1
+            },
+            {
+              "value": "Se Smiþ",
+              "weight": 1
+            },
+            {
+              "value": "Se Weorþ",
+              "weight": 1
+            },
+            {
+              "value": "Smáli",
+              "weight": 1
+            },
+            {
+              "value": "Svarti",
+              "weight": 1
+            },
+            {
+              "value": "Textor",
+              "weight": 1
+            },
+            {
+              "value": "Veiðimaðr",
+              "weight": 1
+            },
+            {
+              "value": "af Fjalli",
+              "weight": 1
+            },
+            {
+              "value": "af Holti",
+              "weight": 1
+            },
+            {
+              "value": "ap Cynan",
+              "weight": 1
+            },
+            {
+              "value": "ap Dafydd",
+              "weight": 1
+            },
+            {
+              "value": "at Hamme",
+              "weight": 1
+            },
+            {
+              "value": "de Aula",
+              "weight": 1
+            },
+            {
+              "value": "de Campo",
+              "weight": 1
+            },
+            {
+              "value": "de Monte",
+              "weight": 1
+            },
+            {
+              "value": "de Ripa",
+              "weight": 1
+            },
+            {
+              "value": "de Silva",
+              "weight": 1
+            },
+            {
+              "value": "de Valle",
+              "weight": 1
+            },
+            {
+              "value": "mac Aodha",
+              "weight": 1
+            },
+            {
+              "value": "mac Con",
+              "weight": 1
+            },
+            {
+              "value": "með Saxi",
+              "weight": 1
+            },
+            {
+              "value": "of Beorg",
+              "weight": 1
+            },
+            {
+              "value": "of Broc",
+              "weight": 1
+            },
+            {
+              "value": "of Denne",
+              "weight": 1
+            },
+            {
+              "value": "of Ford",
+              "weight": 1
+            },
+            {
+              "value": "of Hōh",
+              "weight": 1
+            },
+            {
+              "value": "of Lēah",
+              "weight": 1
+            },
+            {
+              "value": "of Mersc",
+              "weight": 1
+            },
+            {
+              "value": "of Wōd",
+              "weight": 1
+            },
+            {
+              "value": "of the Grey Wood",
+              "weight": 1
+            },
+            {
+              "value": "of the Lake",
+              "weight": 1
+            },
+            {
+              "value": "of the Red Valley",
+              "weight": 1
+            },
+            {
+              "value": "of the Rock",
+              "weight": 1
+            },
+            {
+              "value": "of the White Ford",
+              "weight": 1
+            },
+            {
+              "value": "of Æcer",
+              "weight": 1
+            },
+            {
+              "value": "the Bard",
+              "weight": 1
+            },
+            {
+              "value": "the Fair",
+              "weight": 1
+            },
+            {
+              "value": "the Stout",
+              "weight": 1
+            },
+            {
+              "value": "á Bæ",
+              "weight": 1
+            },
+            {
+              "value": "í Dale",
+              "weight": 1
+            },
+            {
+              "value": "í Vík",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.historical-medieval/grammar/heraldry",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#metal#, a #charge# #attitude# #colour#",
+              "weight": 1
+            },
+            {
+              "value": "#colour#, a #charge# #attitude# #metal#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "metal",
+          "choices": [
+            {
+              "value": "Or",
+              "weight": 1
+            },
+            {
+              "value": "Argent",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "colour",
+          "choices": [
+            {
+              "value": "Azure",
+              "weight": 1
+            },
+            {
+              "value": "Gules",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Vert",
+              "weight": 1
+            },
+            {
+              "value": "Purpure",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "charge",
+          "choices": [
+            {
+              "value": "lion",
+              "weight": 1
+            },
+            {
+              "value": "eagle",
+              "weight": 1
+            },
+            {
+              "value": "crown",
+              "weight": 1
+            },
+            {
+              "value": "sword",
+              "weight": 1
+            },
+            {
+              "value": "cross",
+              "weight": 1
+            },
+            {
+              "value": "stag",
+              "weight": 1
+            },
+            {
+              "value": "wolf",
+              "weight": 1
+            },
+            {
+              "value": "bear",
+              "weight": 1
+            },
+            {
+              "value": "horse",
+              "weight": 1
+            },
+            {
+              "value": "griffin",
+              "weight": 1
+            },
+            {
+              "value": "dragon",
+              "weight": 1
+            },
+            {
+              "value": "falcon",
+              "weight": 1
+            },
+            {
+              "value": "raven",
+              "weight": 1
+            },
+            {
+              "value": "boar",
+              "weight": 1
+            },
+            {
+              "value": "bull",
+              "weight": 1
+            },
+            {
+              "value": "serpent",
+              "weight": 1
+            },
+            {
+              "value": "anchor",
+              "weight": 1
+            },
+            {
+              "value": "key",
+              "weight": 1
+            },
+            {
+              "value": "tower",
+              "weight": 1
+            },
+            {
+              "value": "oak tree",
+              "weight": 1
+            },
+            {
+              "value": "fleur-de-lis",
+              "weight": 1
+            },
+            {
+              "value": "star",
+              "weight": 1
+            },
+            {
+              "value": "crescent moon",
+              "weight": 1
+            },
+            {
+              "value": "sun",
+              "weight": 1
+            },
+            {
+              "value": "harp",
+              "weight": 1
+            },
+            {
+              "value": "bell",
+              "weight": 1
+            },
+            {
+              "value": "millwheel",
+              "weight": 1
+            },
+            {
+              "value": "ship",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "attitude",
+          "choices": [
+            {
+              "value": "rampant",
+              "weight": 1
+            },
+            {
+              "value": "passant",
+              "weight": 1
+            },
+            {
+              "value": "statant",
+              "weight": 1
+            },
+            {
+              "value": "displayed",
+              "weight": 1
+            },
+            {
+              "value": "salient",
+              "weight": 1
+            },
+            {
+              "value": "segreant",
+              "weight": 1
+            }
+          ]
+        }
+      ]
     }
   ],
   "tables": [
@@ -6344,7 +7100,7 @@
       ],
       "output": "string",
       "engine": "grammar-v1",
-      "grammar": "lexiconlang.historical-medieval/grammar/manor"
+      "grammar": "lexiconlang.historical-medieval/grammar/person-name"
     },
     {
       "id": "lexiconlang.historical-medieval/generator/manor",
@@ -6418,14 +7174,14 @@
     },
     {
       "id": "lexiconlang.historical-medieval/generator/heraldry",
-      "description": "Heraldic field and charge pair for a simplified blazon",
+      "description": "Simplified blazon: one field tincture and one charge with an attitude",
       "tags": [
         "medieval",
         "heraldry"
       ],
       "output": "string",
       "engine": "grammar-v1",
-      "grammar": "lexiconlang.historical-medieval/grammar/manor"
+      "grammar": "lexiconlang.historical-medieval/grammar/heraldry"
     }
   ],
   "extensions": {}

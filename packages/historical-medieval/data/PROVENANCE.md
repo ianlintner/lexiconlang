@@ -9,7 +9,7 @@ All data in `historical-medieval.pack.json` is original synthetic material autho
 
 ## Heraldry note
 
-Heraldry support implements a deliberately narrow, documented subset: one field tincture and one charge with an attitude. The rule enforced is the conventional "metal on colour / colour on metal" contrast heuristic (documented in the package README). It is a generator convenience, **not** a claim of historical or heraldic universal accuracy; users must verify arms against their own domain rules.
+Heraldry support implements a deliberately narrow, documented subset: one field tincture and one charge with an attitude. `heraldry.generate()` enforces the conventional "metal on colour / colour on metal" contrast heuristic with deterministic rerolls, so field and charge tincture are always different and always one metal plus one colour; `hasHeraldicContrast()` exposes the predicate and `blazon()` renders a caller-supplied device verbatim. This is a generator convenience, **not** a claim of historical or heraldic universal accuracy; users must verify arms against their own domain rules.
 
 ## Dependencies
 

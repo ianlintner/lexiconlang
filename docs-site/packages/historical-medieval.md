@@ -14,31 +14,35 @@ import { historicalMedieval } from "@lexiconlang/historical-medieval";
 
 const hm = historicalMedieval.withSeed("chronicle");
 
-console.log(hm.name().full);       // "Wulfstan of Lēah"
-console.log(hm.manor());           // "Ashby Grange"
-console.log(hm.guild());           // "Guild of Dyers"
-console.log(hm.monastery());       // "Priory of St. Cuthbert"
-console.log(hm.title());           // "Reeve"
-console.log(hm.listing());         // { good: "fine salt", price: 7, unit: "penny" }
-console.log(hm.event());           // "a relic was displayed at the abbey in the north"
+console.log(hm.name().full);       // "Rhys the Stout"
+console.log(hm.manor());           // "St. Dunstan's Lang Hamlet"
+console.log(hm.guild());           // "Guild of Tanners"
+console.log(hm.monastery());       // "Franciscan House of Rievaulx"
+console.log(hm.title());           // "Eastern Squire"
+console.log(hm.listing());         // { good: "Fine linen", price: 9, unit: "penny" }
+console.log(hm.event());           // "the roof of the granary was repaired"
 
 const arms = hm.arms();
-console.log(arms.blazon);          // "Azure, a lion rampant Or"
-console.log(hm.shield().slice(0, 60)); // '<svg xmlns="http://www.w3.org/2000/svg" …'
+console.log(arms.blazon);          // "Vert, a tower Argent"
+console.log(hm.shield().slice(0, 60)); // '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120"'
 ```
 
-## Sample output (seed `chronicle`)
+Comments above show the sequential calls in this snippet, drawn from one seeded facade.
+Calling each method on a fresh `withSeed("chronicle")` facade yields the same values,
+because every method uses its own stable child scope.
+
+## Sample output (seed `chronicle`, fresh facade per generator)
 
 | Generator | Example |
 | --- | --- |
-| person name | `Eiríkr af Fjalli` |
-| manor | `Thorn Hall` |
-| guild | `Worshipful Company of Goldsmiths` |
-| monastery | `Monastery of the Sacred Well` |
-| title | `Marcher Lord` |
-| market listing | `{ good: "winter rye", price: 12, unit: "penny" }` |
-| domain event | `the river froze at the coast` |
-| heraldry | `Gules, a griffin displayed Argent` |
+| person name | `Rhys the Stout` |
+| manor | `St. Dunstan's Lang Hamlet` |
+| guild | `Guild of Tanners` |
+| monastery | `Franciscan House of Rievaulx` |
+| title | `Eastern Squire` |
+| market listing | `{ good: "Fine linen", price: 9, unit: "penny" }` |
+| domain event | `the roof of the granary was repaired` |
+| heraldry | `Vert, a tower Argent` |
 
 ## Naming cultures
 
@@ -50,7 +54,7 @@ hm.name({ culture: "norse" });
 
 ## Heraldic rules (subset)
 
-Text blazons use seven tinctures (Or, Argent, Azure, Gules, Sable, Vert, Purpure) and a single charge. The documented heuristic is metal on colour / colour on metal; this is a generator convention, not a claim of universal heraldic accuracy. Attitudes cover rampant, passant, statant, displayed, salient and segreant. `shieldSvg(arms)` renders a simple deterministic SVG shield suitable for fixtures.
+Text blazons use seven tinctures (Or, Argent, Azure, Gules, Sable, Vert, Purpure) and a single charge. `heraldry.generate()` enforces the documented metal-on-colour / colour-on-metal contrast rule: the field and the charge tincture are always different and always one metal plus one colour. This is a generator convention, not a claim of universal heraldic accuracy. `blazon(device)` renders an arbitrary device verbatim, so callers supplying their own device remain responsible for its rules. Attitudes cover rampant, passant, statant, displayed, salient and segreant. `shieldSvg(arms)` renders a simple deterministic SVG shield suitable for fixtures.
 
 ## Open formats
 

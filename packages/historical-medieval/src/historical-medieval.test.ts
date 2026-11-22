@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createContext } from "@lexiconlang/core";
-import { definePack, validatePack } from "@lexiconlang/packs";
+import { createWorld, definePack, validatePack } from "@lexiconlang/packs";
 import {
   historicalMedieval,
   historicalMedievalPack,
@@ -15,11 +15,13 @@ import {
   heraldry,
   shieldSvg,
   blazon,
+  hasHeraldicContrast,
   cultures,
   type CultureId,
 } from "./index.js";
 
 const seed = "medieval-test-family";
+const historicPackId = historicalMedievalPack.id;
 
 describe("historical-medieval pack", () => {
   it("validates against the declarative pack v1 schema", () => {
@@ -28,7 +30,12 @@ describe("historical-medieval pack", () => {
   });
 
   it("declares four naming cultures with translated names", () => {
-    expect(cultures.length).toBeGreaterThanOrEqual(2);
+    expect(cultures.map((c) => c.id)).toEqual([
+      "lexiconlang.historical-medieval/culture/latin",
+      "lexiconlang.historical-medieval/culture/oldenglish",
+      "lexiconlang.historical-medieval/culture/celtic",
+      "lexiconlang.historical-medieval/culture/norse",
+    ]);
     for (const culture of cultures) {
       expect(culture.given.length).toBeGreaterThanOrEqual(20);
       expect(culture.byname.length).toBeGreaterThanOrEqual(10);
@@ -36,8 +43,46 @@ describe("historical-medieval pack", () => {
     }
   });
 
-  it("exposes at least six useful generator families", () => {
-    expect(Object.keys(historicalMedieval.generators).length).toBeGreaterThanOrEqual(8);
+  it("exposes all generator families and matching pack descriptors", () => {
+    expect(Object.keys(historicalMedieval.generators)).toHaveLength(11);
+    expect(historicalMedievalPack.generators).toHaveLength(8);
+    // Declarative descriptors and the TS facade must agree on which resource each uses.
+    const byId = new Map(historicalMedievalPack.generators.map((g) => [g.id, g]));
+    const expectedResources: Record<string, string> = {
+      "person-name": `${historicPackId}/grammar/person-name`,
+      manor: `${historicPackId}/grammar/manor`,
+      guild: `${historicPackId}/grammar/guild`,
+      monastery: `${historicPackId}/grammar/monastery`,
+      "feudal-title": `${historicPackId}/table/feudaltitle`,
+      "market-good": `${historicPackId}/table/marketgood`,
+      "domain-event": `${historicPackId}/table/domainevent`,
+      heraldry: `${historicPackId}/grammar/heraldry`,
+    };
+    for (const [suffix, resource] of Object.entries(expectedResources)) {
+      const descriptor = byId.get(`${historicPackId}/generator/${suffix}`);
+      expect(descriptor, `missing generator descriptor ${suffix}`).toBeDefined();
+      const target = "grammar" in descriptor! ? descriptor!.grammar : "table" in descriptor! ? descriptor!.table : "";
+      expect(target, `descriptor ${suffix} points at the wrong resource`).toBe(resource);
+    }
+  });
+
+  it("runs declarative descriptors through createWorld with the right resources", () => {
+    const world = createWorld({ seed: "declarative-family" }).use(definePack(historicalMedievalPack));
+    const id = (suffix: string) => `${historicPackId}/generator/${suffix}`;
+    // person-name must not return a manor name (the original descriptor bug).
+    const person = String(world.generate(id("person-name"), "p"));
+    const manor = String(world.generate(id("manor"), "p"));
+    expect(person).not.toBe(manor);
+    expect(person.split(/\s+/)).toHaveLength(2);
+    // The declarative heraldry grammar also follows the contrast convention.
+    const blazonText = String(world.generate(id("heraldry"), "h"));
+    const [field, chargeAndTincture] = blazonText.split(", ");
+    const tincture = chargeAndTincture?.split(" ").at(-1);
+    const tinctures = ["Or", "Argent", "Azure", "Gules", "Sable", "Vert", "Purpure"];
+    const metals = ["Or", "Argent"];
+    expect(tinctures).toContain(field);
+    expect(tinctures).toContain(tincture);
+    expect(metals.includes(field!)).not.toBe(metals.includes(tincture!));
   });
 
   it("is deterministic for the same seed and call sequence", () => {
@@ -89,6 +134,19 @@ describe("historical-medieval pack", () => {
     expect(svg).toContain("</svg>");
   });
 
+  it("enforces metal-on-colour contrast on every generated device", () => {
+    const ctx = createContext({ seed: "contrast-audit" }).child("heraldry");
+    for (let i = 0; i < 1000; i++) {
+      const arms = heraldry.generate(ctx.child(`sample:${i}`));
+      expect(hasHeraldicContrast(arms.field, arms.chargeTincture)).toBe(true);
+      expect(arms.blazon).toContain(` ${arms.chargeTincture}`);
+      expect(arms.chargeTincture).not.toBe(arms.field);
+    }
+    expect(hasHeraldicContrast("Or", "Argent")).toBe(false);
+    expect(hasHeraldicContrast("Or", "Or")).toBe(false);
+    expect(hasHeraldicContrast("Azure", "Or")).toBe(true);
+  });
+
   it("uses each naming culture, including opt-in culture selection", () => {
     const api = historicalMedieval.withSeed(seed);
     const ids: CultureId[] = cultures.map((c) => c.id as CultureId);
@@ -109,8 +167,8 @@ describe("historical-medieval pack", () => {
 
   it("matches three recorded fixed seed vectors", () => {
     const expected: Record<string, string[]> = {
-      "vector-a": ["Mearc of Wōd", "St. Eanswythe's Lang Village", "Worshipful Company of Tanners", "Augustinian House of Malmesbury", "Knight", '{"good":"Fresh fish","price":13,"unit":"shilling"}', "the stone bridge was completed", "Sable, an eagle segreant Vert"],
-      "vector-b": ["Tiernan mac Aodha", "Raven Ridge", "Worshipful Company of Silversmiths", "Abbey of St. Swithun", "High Knight", '{"good":"Fine wool","price":9,"unit":"penny"}', "in the south a winter frost killed the vine cuttings", "Purpure, a boar passant Vert"],
+      "vector-a": ["Mearc of Wōd", "St. Eanswythe's Lang Village", "Worshipful Company of Tanners", "Augustinian House of Malmesbury", "Knight", '{"good":"Fresh fish","price":13,"unit":"shilling"}', "the stone bridge was completed", "Sable, an eagle segreant Argent"],
+      "vector-b": ["Tiernan mac Aodha", "Raven Ridge", "Worshipful Company of Silversmiths", "Abbey of St. Swithun", "High Knight", '{"good":"Fine wool","price":9,"unit":"penny"}', "in the south a winter frost killed the vine cuttings", "Purpure, a boar passant Or"],
       "vector-c": ["Ragnhildr með Saxi", "Holt Village", "Worshipful Company of Dyers", "Franciscan House of Jarrow", "Chaplain", '{"good":"grain","price":13,"unit":"shilling"}', "a foal was born in the stable", "Purpure, a harp Argent"],
     };
     for (const [seed, vector] of Object.entries(expected)) {
@@ -132,8 +190,9 @@ describe("historical-medieval pack", () => {
       const duplicateRate = 1 - seen.size / 1000;
       console.info(`duplicate-rate ${label}: ${duplicateRate.toFixed(3)}`);
       // Finite pools cap distinct values (e.g. 170 table entries => >= 0.83
-      // duplicates at 1,000 draws). Rates are documented in the README.
-      expect(duplicateRate, `${label} duplicate rate ${duplicateRate}`).toBeLessThan(0.95);
+      // duplicates at 1,000 draws). A 0.90 ceiling still catches a broken
+      // generator that collapses onto a tiny subset of its declared pool.
+      expect(duplicateRate, `${label} duplicate rate ${duplicateRate}`).toBeLessThan(0.90);
     }
   });
 });
