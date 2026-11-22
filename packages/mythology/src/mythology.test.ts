@@ -80,7 +80,10 @@ describe("mythology declarative pack", () => {
     expect(fresh.person()).toEqual(baseline);
   });
 
-  it("aligns manifest name generators with the facade's all-culture banks", () => {
+  it("aligns manifest name banks with the facade's all-culture selection pool", () => {
+    // Note: manifest `person-name` (name-v1, kind: given) emits ONLY a given name;
+    // the facade's person() emits "given surname". The banks below are the same
+    // selection pool; the shapes are intentionally different (see README).
     const pan = pack.cultures.find((c) => c.id === "lexiconlang.mythology/culture/pan-mythic");
     expect(pan).toBeDefined();
     for (const [kind, key] of [["given", "form"], ["surname", "form"], ["settlement", "form"], ["deity", "form"], ["epithet", "form"]] as const) {
@@ -99,15 +102,55 @@ describe("mythology declarative pack", () => {
     }
   });
 
-  it("uses culture-specific deity and epithet banks", () => {
+  it("uses culture-specific deity and epithet banks with real glosses", () => {
     const seen = new Set<string>();
     for (let i = 0; i < 100; i++) {
       const cultural = mythology.withSeed(`cultural-${i}`).culturalDeity();
+      expect(cultural.form).toMatch(/^[A-ZÀ-Þ]/);
+      expect(cultural.form.length).toBeGreaterThanOrEqual(3);
       expect(cultural.translation.length).toBeGreaterThan(0);
+      expect(cultural.translation).not.toBe("invented divine name");
+      expect(cultural.translation).toMatch(/[a-z]{2}/);
       seen.add(cultural.form);
     }
     expect(seen.size).toBeGreaterThanOrEqual(60);
     expect(mythology.withSeed("x").culturalEpithet().form.length).toBeGreaterThan(0);
+  });
+
+  it("emits well-formed names: no lowercase root fragments or 1-2 letter tokens", () => {
+    // Regression guard for fragment grammar outputs such as "Glan Tl tec",
+    // "Yamu Helm is", "the Ibis dottir" or "the Mirror of dreagan".
+    const legacyRoots = new Set([
+      "nike", "dike", "sophia", "kratos", "phos", "thalassa", "aion", "charis", "eris", "harmonia",
+      "metis", "pneuma", "stasis", "tycha", "logos", "eros", "nomos", "poiesis", "soma", "psyche",
+      "vind", "sjo", "fjall", "eld", "is", "skog", "mal", "sverd", "hjort", "bjorn", "orn", "sver",
+      "troll", "blot", "varg", "sól", "geal", "dubh", "ruadh", "bán",
+      "fionn", "donn", "las", "cú", "sceach", "dris", "linn", "tuath", "cliú", "samh", "geimh",
+      "eoch", "grian", "gaoth", "dreagan", "odhr", "hotep", "ankh", "nefer", "djed", "tyet",
+      "croc", "papyrus", "tl", "catl", "coatl", "tzin", "lan", "tepec", "apan",
+      "mil", "huatl", "lotl", "mol", "nalli", "pitl", "quin", "tec", "tzli", "xcintli", "yotl",
+      "zotl", "miz", "dottir",
+    ]);
+    const smallWords = new Set([
+      "the", "of", "and", "at", "why", "a", "to", "in", "into", "on", "by", "from", "with", "its", "no", "or", "as", "is",
+    ]);
+    const methodKeys = [
+      "deity", "pantheon", "epithet", "myth", "holySite", "artifact", "monster", "faction",
+    ] as const;
+    for (let i = 0; i < 100; i++) {
+      const m = mythology.withSeed(`wellformed-${i}`);
+      for (const key of methodKeys) {
+        const output = m[key]();
+        for (const token of output.split(/[\s,]+/)) {
+          if (!token || smallWords.has(token.toLowerCase())) continue;
+          expect(token.length, `${key}: short token in ${output}`).toBeGreaterThan(2);
+          expect(legacyRoots.has(token.toLowerCase()), `${key}: legacy root in ${output}`).toBe(false);
+          // Lowercase English words are allowed as ordinary grammar (the, of,
+          // and, was...); the important guards are length and the legacy roots above.
+
+        }
+      }
+    }
   });
 
   it("gives >=60% distinct results over 100 rolls for every string generator", () => {

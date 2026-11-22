@@ -632,160 +632,160 @@
           {
             "value": {
               "kind": "literal",
-              "form": "nike",
-              "translation": "invented divine name"
+              "form": "Astraia",
+              "translation": "star-light"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dike",
-              "translation": "invented divine name"
+              "form": "Kalyxos",
+              "translation": "hidden bloom"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sophia",
-              "translation": "invented divine name"
+              "form": "Thalmeris",
+              "translation": "sea-witness"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "kratos",
-              "translation": "invented divine name"
+              "form": "Phainon",
+              "translation": "shining one"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "phos",
-              "translation": "invented divine name"
+              "form": "Elyndra",
+              "translation": "swift grace"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "thalassa",
-              "translation": "invented divine name"
+              "form": "Ortheon",
+              "translation": "right judgment"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "aion",
-              "translation": "invented divine name"
+              "form": "Char illustrated",
+              "translation": "gift-bringer"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "charis",
-              "translation": "invented divine name"
+              "form": "Nyxaris",
+              "translation": "night-grace"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eris",
-              "translation": "invented divine name"
+              "form": "Dorimedes",
+              "translation": "mountain counsel"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "harmonia",
-              "translation": "invented divine name"
+              "form": "Aetheris",
+              "translation": "high air"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "metis",
-              "translation": "invented divine name"
+              "form": "Kleiomene",
+              "translation": "praise-remembered"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "pneuma",
-              "translation": "invented divine name"
+              "form": "Sternobel",
+              "translation": "thunder voice"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "stasis",
-              "translation": "invented divine name"
+              "form": "Irthelia",
+              "translation": "spring-light"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tycha",
-              "translation": "invented divine name"
+              "form": "Lysandros",
+              "translation": "release-giver"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "logos",
-              "translation": "invented divine name"
+              "form": "Moiridion",
+              "translation": "portion of fate"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eros",
-              "translation": "invented divine name"
+              "form": "Xanthoria",
+              "translation": "golden dawn"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "nomos",
-              "translation": "invented divine name"
+              "form": "Pysmene",
+              "translation": "breath of life"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "poiesis",
-              "translation": "invented divine name"
+              "form": "Oikleon",
+              "translation": "house-binder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "soma",
-              "translation": "invented divine name"
+              "form": "Eridanos",
+              "translation": "river of strife"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "psyche",
-              "translation": "invented divine name"
+              "form": "Selenoros",
+              "translation": "moon-watcher"
             },
             "weight": 1
           }
@@ -1545,160 +1545,160 @@
           {
             "value": {
               "kind": "literal",
-              "form": "vind",
-              "translation": "invented divine name"
+              "form": "Vindheld",
+              "translation": "wind-holder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sjo",
-              "translation": "invented divine name"
+              "form": "Sjokari",
+              "translation": "sea-keeper"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "fjall",
-              "translation": "invented divine name"
+              "form": "Fjallvind",
+              "translation": "mountain-wind"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eld",
-              "translation": "invented divine name"
+              "form": "Eldbrenna",
+              "translation": "fire-kindler"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "is",
-              "translation": "invented divine name"
+              "form": "Isfrid",
+              "translation": "ice-peace"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "skog",
-              "translation": "invented divine name"
+              "form": "Skogsvakt",
+              "translation": "forest-watch"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "mal",
-              "translation": "invented divine name"
+              "form": "Malrún",
+              "translation": "speech-rune"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sverd",
-              "translation": "invented divine name"
+              "form": "Sverdfall",
+              "translation": "sword-fall"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "hjort",
-              "translation": "invented divine name"
+              "form": "Hjortbane",
+              "translation": "hart-path"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "bjorn",
-              "translation": "invented divine name"
+              "form": "Bjornskar",
+              "translation": "bear-share"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "orn",
-              "translation": "invented divine name"
+              "form": "Ornflug",
+              "translation": "eagle-flight"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sver",
-              "translation": "invented divine name"
+              "form": "Svafrun",
+              "translation": "weave-rune"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "troll",
-              "translation": "invented divine name"
+              "form": "Trollheim",
+              "translation": "troll-home"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "run",
-              "translation": "invented divine name"
+              "form": "Runasvid",
+              "translation": "rune-wise"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "saga",
-              "translation": "invented divine name"
+              "form": "Sagabind",
+              "translation": "story-binder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "helm",
-              "translation": "invented divine name"
+              "form": "Hjelmkapp",
+              "translation": "helm-warrior"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "gull",
-              "translation": "invented divine name"
+              "form": "Gullsend",
+              "translation": "gold-giver"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "blot",
-              "translation": "invented divine name"
+              "form": "Blotvard",
+              "translation": "rite-guard"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "varg",
-              "translation": "invented divine name"
+              "form": "Vargskuggi",
+              "translation": "wolf-shadow"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sól",
-              "translation": "invented divine name"
+              "form": "Solmemor",
+              "translation": "sun-memory"
             },
             "weight": 1
           }
@@ -2458,160 +2458,160 @@
           {
             "value": {
               "kind": "literal",
-              "form": "geal",
-              "translation": "invented divine name"
+              "form": "Gealbhan",
+              "translation": "white-winter"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dubh",
-              "translation": "invented divine name"
+              "form": "Dubhghrian",
+              "translation": "dark-sun"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "ruadh",
-              "translation": "invented divine name"
+              "form": "Ruadhlinn",
+              "translation": "red-pool"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "bán",
-              "translation": "invented divine name"
+              "form": "Banfhiann",
+              "translation": "fair-woman"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "fionn",
-              "translation": "invented divine name"
+              "form": "Fionnmhar",
+              "translation": "fair-handed"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "donn",
-              "translation": "invented divine name"
+              "form": "Donnchreach",
+              "translation": "brown-hawk"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "las",
-              "translation": "invented divine name"
+              "form": "Lasairghlan",
+              "translation": "clear-flame"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "cú",
-              "translation": "invented divine name"
+              "form": "Cuintinn",
+              "translation": "hound-whelp"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sceach",
-              "translation": "invented divine name"
+              "form": "Sceachghaoith",
+              "translation": "whitethorn-wind"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dris",
-              "translation": "invented divine name"
+              "form": "Driseog",
+              "translation": "bramble-bird"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "linn",
-              "translation": "invented divine name"
+              "form": "Linnfhear",
+              "translation": "pool-man"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tuath",
-              "translation": "invented divine name"
+              "form": "Tuathghaol",
+              "translation": "people-kin"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "cliú",
-              "translation": "invented divine name"
+              "form": "Cliunamh",
+              "translation": "fame-holder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "samh",
-              "translation": "invented divine name"
+              "form": "Samhthach",
+              "translation": "summer-gift"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "geimh",
-              "translation": "invented divine name"
+              "form": "Geimhriogh",
+              "translation": "winter-king"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eoch",
-              "translation": "invented divine name"
+              "form": "Eochbhri",
+              "translation": "horse-power"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "grian",
-              "translation": "invented divine name"
+              "form": "Grianchaint",
+              "translation": "sun-speech"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "gaoth",
-              "translation": "invented divine name"
+              "form": "Gaothbheart",
+              "translation": "wind-turning"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dreagan",
-              "translation": "invented divine name"
+              "form": "Dreaganshuil",
+              "translation": "dragon-eye"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "odhr",
-              "translation": "invented divine name"
+              "form": "Odharchosg",
+              "translation": "dun-step"
             },
             "weight": 1
           }
@@ -3371,160 +3371,160 @@
           {
             "value": {
               "kind": "literal",
-              "form": "hotep",
-              "translation": "invented divine name"
+              "form": "Hotepra",
+              "translation": "peace-sun"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "ankh",
-              "translation": "invented divine name"
+              "form": "Ankhnet",
+              "translation": "life-net"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "nefer",
-              "translation": "invented divine name"
+              "form": "Neferhat",
+              "translation": "beautiful-domain"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "djed",
-              "translation": "invented divine name"
+              "form": "Djedkhar",
+              "translation": "steady-heart"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "was",
-              "translation": "invented divine name"
+              "form": "Wassceptre",
+              "translation": "power-sceptre"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tyet",
-              "translation": "invented divine name"
+              "form": "Tyetweave",
+              "translation": "weave-amulet"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "scarab",
-              "translation": "invented divine name"
+              "form": "Scarabkhet",
+              "translation": "scarab-body"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "ibis",
-              "translation": "invented divine name"
+              "form": "Ibismer",
+              "translation": "ibis-name"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "croc",
-              "translation": "invented divine name"
+              "form": "Crocset",
+              "translation": "crocodile-place"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "lotus",
-              "translation": "invented divine name"
+              "form": "Lotusmar",
+              "translation": "lotus-field"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "papyrus",
-              "translation": "invented divine name"
+              "form": "Papyrskhor",
+              "translation": "papyrus-place"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "horizon",
-              "translation": "invented divine name"
+              "form": "Horizonset",
+              "translation": "horizon-abode"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sun",
-              "translation": "invented divine name"
+              "form": "Sunheru",
+              "translation": "sun-voice"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sand",
-              "translation": "invented divine name"
+              "form": "Sandeper",
+              "translation": "sand-house"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "river",
-              "translation": "invented divine name"
+              "form": "Riverkha",
+              "translation": "river-spirit"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "vulture",
-              "translation": "invented divine name"
+              "form": "Vulturehet",
+              "translation": "vulture-domain"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "cat",
-              "translation": "invented divine name"
+              "form": "Falconpat",
+              "translation": "falcon-path"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "falcon",
-              "translation": "invented divine name"
+              "form": "Stelekar",
+              "translation": "stele-maker"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "stele",
-              "translation": "invented divine name"
+              "form": "Shrineben",
+              "translation": "shrine-servant"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "shrine",
-              "translation": "invented divine name"
+              "form": "Kheperel",
+              "translation": "becoming-one"
             },
             "weight": 1
           }
@@ -4283,160 +4283,160 @@
           {
             "value": {
               "kind": "literal",
-              "form": "tl",
-              "translation": "invented divine name"
+              "form": "Tlalchim",
+              "translation": "rain-sower"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "catl",
-              "translation": "invented divine name"
+              "form": "Catemcoatl",
+              "translation": "serpent-chief"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "coatl",
-              "translation": "invented divine name"
+              "form": "Coatlitzin",
+              "translation": "serpent-noble"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tzin",
-              "translation": "invented divine name"
+              "form": "Tzinhuitl",
+              "translation": "lord-feather"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "lan",
-              "translation": "invented divine name"
+              "form": "Lanmecatl",
+              "translation": "reed-person"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tepec",
-              "translation": "invented divine name"
+              "form": "Tepecyotl",
+              "translation": "hill-spirit"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "apan",
-              "translation": "invented divine name"
+              "form": "Apanmiztli",
+              "translation": "river-jaguar"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "mil",
-              "translation": "invented divine name"
+              "form": "Milxochitl",
+              "translation": "field-flower"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "huatl",
-              "translation": "invented divine name"
+              "form": "Huatzin",
+              "translation": "chief-one"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "lotl",
-              "translation": "invented divine name"
+              "form": "Lotlchimalli",
+              "translation": "reed-shield"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "mol",
-              "translation": "invented divine name"
+              "form": "Molcuetl",
+              "translation": "maize-ear"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "nalli",
-              "translation": "invented divine name"
+              "form": "Nalticuicatl",
+              "translation": "song-of-four"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "pitl",
-              "translation": "invented divine name"
+              "form": "Pitzhuitl",
+              "translation": "turquoise-feather"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "quin",
-              "translation": "invented divine name"
+              "form": "Quinatzin",
+              "translation": "fifth-lord"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tec",
-              "translation": "invented divine name"
+              "form": "Tecepotl",
+              "translation": "obsidian-stone"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tzli",
-              "translation": "invented divine name"
+              "form": "Tzliyan",
+              "translation": "echo-voice"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "xcintli",
-              "translation": "invented divine name"
+              "form": "Xcintzotl",
+              "translation": "maize-older"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "yotl",
-              "translation": "invented divine name"
+              "form": "Yotlanextli",
+              "translation": "dawn-spirit"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "zotl",
-              "translation": "invented divine name"
+              "form": "Zotlchich",
+              "translation": "bat-breath"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "miz",
-              "translation": "invented divine name"
+              "form": "Mizquiahuitl",
+              "translation": "cloud-rain"
             },
             "weight": 1
           }
@@ -7499,800 +7499,800 @@
           {
             "value": {
               "kind": "literal",
-              "form": "nike",
-              "translation": "invented divine name"
+              "form": "Astraia",
+              "translation": "star-light"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dike",
-              "translation": "invented divine name"
+              "form": "Kalyxos",
+              "translation": "hidden bloom"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sophia",
-              "translation": "invented divine name"
+              "form": "Thalmeris",
+              "translation": "sea-witness"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "kratos",
-              "translation": "invented divine name"
+              "form": "Phainon",
+              "translation": "shining one"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "phos",
-              "translation": "invented divine name"
+              "form": "Elyndra",
+              "translation": "swift grace"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "thalassa",
-              "translation": "invented divine name"
+              "form": "Ortheon",
+              "translation": "right judgment"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "aion",
-              "translation": "invented divine name"
+              "form": "Char illustrated",
+              "translation": "gift-bringer"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "charis",
-              "translation": "invented divine name"
+              "form": "Nyxaris",
+              "translation": "night-grace"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eris",
-              "translation": "invented divine name"
+              "form": "Dorimedes",
+              "translation": "mountain counsel"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "harmonia",
-              "translation": "invented divine name"
+              "form": "Aetheris",
+              "translation": "high air"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "metis",
-              "translation": "invented divine name"
+              "form": "Kleiomene",
+              "translation": "praise-remembered"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "pneuma",
-              "translation": "invented divine name"
+              "form": "Sternobel",
+              "translation": "thunder voice"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "stasis",
-              "translation": "invented divine name"
+              "form": "Irthelia",
+              "translation": "spring-light"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tycha",
-              "translation": "invented divine name"
+              "form": "Lysandros",
+              "translation": "release-giver"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "logos",
-              "translation": "invented divine name"
+              "form": "Moiridion",
+              "translation": "portion of fate"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eros",
-              "translation": "invented divine name"
+              "form": "Xanthoria",
+              "translation": "golden dawn"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "nomos",
-              "translation": "invented divine name"
+              "form": "Pysmene",
+              "translation": "breath of life"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "poiesis",
-              "translation": "invented divine name"
+              "form": "Oikleon",
+              "translation": "house-binder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "soma",
-              "translation": "invented divine name"
+              "form": "Eridanos",
+              "translation": "river of strife"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "psyche",
-              "translation": "invented divine name"
+              "form": "Selenoros",
+              "translation": "moon-watcher"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "vind",
-              "translation": "invented divine name"
+              "form": "Vindheld",
+              "translation": "wind-holder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sjo",
-              "translation": "invented divine name"
+              "form": "Sjokari",
+              "translation": "sea-keeper"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "fjall",
-              "translation": "invented divine name"
+              "form": "Fjallvind",
+              "translation": "mountain-wind"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eld",
-              "translation": "invented divine name"
+              "form": "Eldbrenna",
+              "translation": "fire-kindler"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "is",
-              "translation": "invented divine name"
+              "form": "Isfrid",
+              "translation": "ice-peace"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "skog",
-              "translation": "invented divine name"
+              "form": "Skogsvakt",
+              "translation": "forest-watch"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "mal",
-              "translation": "invented divine name"
+              "form": "Malrún",
+              "translation": "speech-rune"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sverd",
-              "translation": "invented divine name"
+              "form": "Sverdfall",
+              "translation": "sword-fall"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "hjort",
-              "translation": "invented divine name"
+              "form": "Hjortbane",
+              "translation": "hart-path"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "bjorn",
-              "translation": "invented divine name"
+              "form": "Bjornskar",
+              "translation": "bear-share"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "orn",
-              "translation": "invented divine name"
+              "form": "Ornflug",
+              "translation": "eagle-flight"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sver",
-              "translation": "invented divine name"
+              "form": "Svafrun",
+              "translation": "weave-rune"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "troll",
-              "translation": "invented divine name"
+              "form": "Trollheim",
+              "translation": "troll-home"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "run",
-              "translation": "invented divine name"
+              "form": "Runasvid",
+              "translation": "rune-wise"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "saga",
-              "translation": "invented divine name"
+              "form": "Sagabind",
+              "translation": "story-binder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "helm",
-              "translation": "invented divine name"
+              "form": "Hjelmkapp",
+              "translation": "helm-warrior"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "gull",
-              "translation": "invented divine name"
+              "form": "Gullsend",
+              "translation": "gold-giver"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "blot",
-              "translation": "invented divine name"
+              "form": "Blotvard",
+              "translation": "rite-guard"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "varg",
-              "translation": "invented divine name"
+              "form": "Vargskuggi",
+              "translation": "wolf-shadow"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sól",
-              "translation": "invented divine name"
+              "form": "Solmemor",
+              "translation": "sun-memory"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "geal",
-              "translation": "invented divine name"
+              "form": "Gealbhan",
+              "translation": "white-winter"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dubh",
-              "translation": "invented divine name"
+              "form": "Dubhghrian",
+              "translation": "dark-sun"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "ruadh",
-              "translation": "invented divine name"
+              "form": "Ruadhlinn",
+              "translation": "red-pool"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "bán",
-              "translation": "invented divine name"
+              "form": "Banfhiann",
+              "translation": "fair-woman"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "fionn",
-              "translation": "invented divine name"
+              "form": "Fionnmhar",
+              "translation": "fair-handed"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "donn",
-              "translation": "invented divine name"
+              "form": "Donnchreach",
+              "translation": "brown-hawk"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "las",
-              "translation": "invented divine name"
+              "form": "Lasairghlan",
+              "translation": "clear-flame"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "cú",
-              "translation": "invented divine name"
+              "form": "Cuintinn",
+              "translation": "hound-whelp"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sceach",
-              "translation": "invented divine name"
+              "form": "Sceachghaoith",
+              "translation": "whitethorn-wind"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dris",
-              "translation": "invented divine name"
+              "form": "Driseog",
+              "translation": "bramble-bird"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "linn",
-              "translation": "invented divine name"
+              "form": "Linnfhear",
+              "translation": "pool-man"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tuath",
-              "translation": "invented divine name"
+              "form": "Tuathghaol",
+              "translation": "people-kin"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "cliú",
-              "translation": "invented divine name"
+              "form": "Cliunamh",
+              "translation": "fame-holder"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "samh",
-              "translation": "invented divine name"
+              "form": "Samhthach",
+              "translation": "summer-gift"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "geimh",
-              "translation": "invented divine name"
+              "form": "Geimhriogh",
+              "translation": "winter-king"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "eoch",
-              "translation": "invented divine name"
+              "form": "Eochbhri",
+              "translation": "horse-power"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "grian",
-              "translation": "invented divine name"
+              "form": "Grianchaint",
+              "translation": "sun-speech"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "gaoth",
-              "translation": "invented divine name"
+              "form": "Gaothbheart",
+              "translation": "wind-turning"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "dreagan",
-              "translation": "invented divine name"
+              "form": "Dreaganshuil",
+              "translation": "dragon-eye"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "odhr",
-              "translation": "invented divine name"
+              "form": "Odharchosg",
+              "translation": "dun-step"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "hotep",
-              "translation": "invented divine name"
+              "form": "Hotepra",
+              "translation": "peace-sun"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "ankh",
-              "translation": "invented divine name"
+              "form": "Ankhnet",
+              "translation": "life-net"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "nefer",
-              "translation": "invented divine name"
+              "form": "Neferhat",
+              "translation": "beautiful-domain"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "djed",
-              "translation": "invented divine name"
+              "form": "Djedkhar",
+              "translation": "steady-heart"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "was",
-              "translation": "invented divine name"
+              "form": "Wassceptre",
+              "translation": "power-sceptre"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tyet",
-              "translation": "invented divine name"
+              "form": "Tyetweave",
+              "translation": "weave-amulet"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "scarab",
-              "translation": "invented divine name"
+              "form": "Scarabkhet",
+              "translation": "scarab-body"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "ibis",
-              "translation": "invented divine name"
+              "form": "Ibismer",
+              "translation": "ibis-name"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "croc",
-              "translation": "invented divine name"
+              "form": "Crocset",
+              "translation": "crocodile-place"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "lotus",
-              "translation": "invented divine name"
+              "form": "Lotusmar",
+              "translation": "lotus-field"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "papyrus",
-              "translation": "invented divine name"
+              "form": "Papyrskhor",
+              "translation": "papyrus-place"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "horizon",
-              "translation": "invented divine name"
+              "form": "Horizonset",
+              "translation": "horizon-abode"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sun",
-              "translation": "invented divine name"
+              "form": "Sunheru",
+              "translation": "sun-voice"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "sand",
-              "translation": "invented divine name"
+              "form": "Sandeper",
+              "translation": "sand-house"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "river",
-              "translation": "invented divine name"
+              "form": "Riverkha",
+              "translation": "river-spirit"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "vulture",
-              "translation": "invented divine name"
+              "form": "Vulturehet",
+              "translation": "vulture-domain"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "cat",
-              "translation": "invented divine name"
+              "form": "Falconpat",
+              "translation": "falcon-path"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "falcon",
-              "translation": "invented divine name"
+              "form": "Stelekar",
+              "translation": "stele-maker"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "stele",
-              "translation": "invented divine name"
+              "form": "Shrineben",
+              "translation": "shrine-servant"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "shrine",
-              "translation": "invented divine name"
+              "form": "Kheperel",
+              "translation": "becoming-one"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tl",
-              "translation": "invented divine name"
+              "form": "Tlalchim",
+              "translation": "rain-sower"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "catl",
-              "translation": "invented divine name"
+              "form": "Catemcoatl",
+              "translation": "serpent-chief"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "coatl",
-              "translation": "invented divine name"
+              "form": "Coatlitzin",
+              "translation": "serpent-noble"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tzin",
-              "translation": "invented divine name"
+              "form": "Tzinhuitl",
+              "translation": "lord-feather"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "lan",
-              "translation": "invented divine name"
+              "form": "Lanmecatl",
+              "translation": "reed-person"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tepec",
-              "translation": "invented divine name"
+              "form": "Tepecyotl",
+              "translation": "hill-spirit"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "apan",
-              "translation": "invented divine name"
+              "form": "Apanmiztli",
+              "translation": "river-jaguar"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "mil",
-              "translation": "invented divine name"
+              "form": "Milxochitl",
+              "translation": "field-flower"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "huatl",
-              "translation": "invented divine name"
+              "form": "Huatzin",
+              "translation": "chief-one"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "lotl",
-              "translation": "invented divine name"
+              "form": "Lotlchimalli",
+              "translation": "reed-shield"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "mol",
-              "translation": "invented divine name"
+              "form": "Molcuetl",
+              "translation": "maize-ear"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "nalli",
-              "translation": "invented divine name"
+              "form": "Nalticuicatl",
+              "translation": "song-of-four"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "pitl",
-              "translation": "invented divine name"
+              "form": "Pitzhuitl",
+              "translation": "turquoise-feather"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "quin",
-              "translation": "invented divine name"
+              "form": "Quinatzin",
+              "translation": "fifth-lord"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tec",
-              "translation": "invented divine name"
+              "form": "Tecepotl",
+              "translation": "obsidian-stone"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "tzli",
-              "translation": "invented divine name"
+              "form": "Tzliyan",
+              "translation": "echo-voice"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "xcintli",
-              "translation": "invented divine name"
+              "form": "Xcintzotl",
+              "translation": "maize-older"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "yotl",
-              "translation": "invented divine name"
+              "form": "Yotlanextli",
+              "translation": "dawn-spirit"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "zotl",
-              "translation": "invented divine name"
+              "form": "Zotlchich",
+              "translation": "bat-breath"
             },
             "weight": 1
           },
           {
             "value": {
               "kind": "literal",
-              "form": "miz",
-              "translation": "invented divine name"
+              "form": "Mizquiahuitl",
+              "translation": "cloud-rain"
             },
             "weight": 1
           }
@@ -9118,19 +9118,15 @@
           "key": "start",
           "choices": [
             {
-              "value": "#prefix# #core.cap#",
-              "weight": 5
-            },
-            {
-              "value": "#prefix# #core.cap# #suffix#",
-              "weight": 3
-            },
-            {
-              "value": "the #core.cap# #suffix#",
+              "value": "#name#",
               "weight": 1
             },
             {
-              "value": "#core.cap# of the #root#",
+              "value": "#name# of the #root#",
+              "weight": 1
+            },
+            {
+              "value": "#name#, #suffix#",
               "weight": 1
             }
           ]
@@ -9949,203 +9945,43 @@
           "key": "suffix",
           "choices": [
             {
-              "value": "",
+              "value": "the Unyielding",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "the Far-Seeing",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "of Many Names",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "the Gentle",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "the Storm-Borne",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "the Ever-Waking",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "of the Last Gate",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "the Moon-Crowned",
               "weight": 1
             },
             {
-              "value": "",
+              "value": "the Silent",
               "weight": 1
             },
             {
-              "value": "",
-              "weight": 1
-            },
-            {
-              "value": "s",
-              "weight": 1
-            },
-            {
-              "value": "r",
-              "weight": 1
-            },
-            {
-              "value": "ach",
-              "weight": 1
-            },
-            {
-              "value": "et",
-              "weight": 1
-            },
-            {
-              "value": "li",
-              "weight": 1
-            },
-            {
-              "value": "n",
-              "weight": 1
-            },
-            {
-              "value": "n",
-              "weight": 1
-            },
-            {
-              "value": "ín",
-              "weight": 1
-            },
-            {
-              "value": "u",
-              "weight": 1
-            },
-            {
-              "value": "tl",
-              "weight": 1
-            },
-            {
-              "value": "ra",
-              "weight": 1
-            },
-            {
-              "value": "ir",
-              "weight": 1
-            },
-            {
-              "value": "mac",
-              "weight": 1
-            },
-            {
-              "value": "ra",
-              "weight": 1
-            },
-            {
-              "value": "tzin",
-              "weight": 1
-            },
-            {
-              "value": "is",
-              "weight": 1
-            },
-            {
-              "value": "dottir",
-              "weight": 1
-            },
-            {
-              "value": "nía",
-              "weight": 1
-            },
-            {
-              "value": "es",
-              "weight": 1
-            },
-            {
-              "value": "co",
-              "weight": 1
-            },
-            {
-              "value": "ion",
-              "weight": 1
-            },
-            {
-              "value": "son",
-              "weight": 1
-            },
-            {
-              "value": "bhan",
-              "weight": 1
-            },
-            {
-              "value": "neith",
-              "weight": 1
-            },
-            {
-              "value": "pan",
-              "weight": 1
-            },
-            {
-              "value": "eia",
-              "weight": 1
-            },
-            {
-              "value": "geirr",
-              "weight": 1
-            },
-            {
-              "value": "gach",
-              "weight": 1
-            },
-            {
-              "value": "set",
-              "weight": 1
-            },
-            {
-              "value": "lan",
-              "weight": 1
-            },
-            {
-              "value": "os",
-              "weight": 1
-            },
-            {
-              "value": "hildr",
-              "weight": 1
-            },
-            {
-              "value": "lach",
-              "weight": 1
-            },
-            {
-              "value": "hor",
-              "weight": 1
-            },
-            {
-              "value": "tec",
-              "weight": 1
-            },
-            {
-              "value": "aios",
-              "weight": 1
-            },
-            {
-              "value": "valdr",
-              "weight": 1
-            },
-            {
-              "value": "dhe",
-              "weight": 1
-            },
-            {
-              "value": "amon",
-              "weight": 1
-            },
-            {
-              "value": "yotl",
+              "value": "the Dawn-Bearer",
               "weight": 1
             }
           ]
@@ -10234,6 +10070,411 @@
               "weight": 1
             }
           ]
+        },
+        {
+          "key": "name",
+          "choices": [
+            {
+              "value": "Astraia",
+              "weight": 1
+            },
+            {
+              "value": "Kalyxos",
+              "weight": 1
+            },
+            {
+              "value": "Thalmeris",
+              "weight": 1
+            },
+            {
+              "value": "Phainon",
+              "weight": 1
+            },
+            {
+              "value": "Elyndra",
+              "weight": 1
+            },
+            {
+              "value": "Ortheon",
+              "weight": 1
+            },
+            {
+              "value": "Char illustrated",
+              "weight": 1
+            },
+            {
+              "value": "Nyxaris",
+              "weight": 1
+            },
+            {
+              "value": "Dorimedes",
+              "weight": 1
+            },
+            {
+              "value": "Aetheris",
+              "weight": 1
+            },
+            {
+              "value": "Kleiomene",
+              "weight": 1
+            },
+            {
+              "value": "Sternobel",
+              "weight": 1
+            },
+            {
+              "value": "Irthelia",
+              "weight": 1
+            },
+            {
+              "value": "Lysandros",
+              "weight": 1
+            },
+            {
+              "value": "Moiridion",
+              "weight": 1
+            },
+            {
+              "value": "Xanthoria",
+              "weight": 1
+            },
+            {
+              "value": "Pysmene",
+              "weight": 1
+            },
+            {
+              "value": "Oikleon",
+              "weight": 1
+            },
+            {
+              "value": "Eridanos",
+              "weight": 1
+            },
+            {
+              "value": "Selenoros",
+              "weight": 1
+            },
+            {
+              "value": "Vindheld",
+              "weight": 1
+            },
+            {
+              "value": "Sjokari",
+              "weight": 1
+            },
+            {
+              "value": "Fjallvind",
+              "weight": 1
+            },
+            {
+              "value": "Eldbrenna",
+              "weight": 1
+            },
+            {
+              "value": "Isfrid",
+              "weight": 1
+            },
+            {
+              "value": "Skogsvakt",
+              "weight": 1
+            },
+            {
+              "value": "Malrún",
+              "weight": 1
+            },
+            {
+              "value": "Sverdfall",
+              "weight": 1
+            },
+            {
+              "value": "Hjortbane",
+              "weight": 1
+            },
+            {
+              "value": "Bjornskar",
+              "weight": 1
+            },
+            {
+              "value": "Ornflug",
+              "weight": 1
+            },
+            {
+              "value": "Svafrun",
+              "weight": 1
+            },
+            {
+              "value": "Trollheim",
+              "weight": 1
+            },
+            {
+              "value": "Runasvid",
+              "weight": 1
+            },
+            {
+              "value": "Sagabind",
+              "weight": 1
+            },
+            {
+              "value": "Hjelmkapp",
+              "weight": 1
+            },
+            {
+              "value": "Gullsend",
+              "weight": 1
+            },
+            {
+              "value": "Blotvard",
+              "weight": 1
+            },
+            {
+              "value": "Vargskuggi",
+              "weight": 1
+            },
+            {
+              "value": "Solmemor",
+              "weight": 1
+            },
+            {
+              "value": "Gealbhan",
+              "weight": 1
+            },
+            {
+              "value": "Dubhghrian",
+              "weight": 1
+            },
+            {
+              "value": "Ruadhlinn",
+              "weight": 1
+            },
+            {
+              "value": "Banfhiann",
+              "weight": 1
+            },
+            {
+              "value": "Fionnmhar",
+              "weight": 1
+            },
+            {
+              "value": "Donnchreach",
+              "weight": 1
+            },
+            {
+              "value": "Lasairghlan",
+              "weight": 1
+            },
+            {
+              "value": "Cuintinn",
+              "weight": 1
+            },
+            {
+              "value": "Sceachghaoith",
+              "weight": 1
+            },
+            {
+              "value": "Driseog",
+              "weight": 1
+            },
+            {
+              "value": "Linnfhear",
+              "weight": 1
+            },
+            {
+              "value": "Tuathghaol",
+              "weight": 1
+            },
+            {
+              "value": "Cliunamh",
+              "weight": 1
+            },
+            {
+              "value": "Samhthach",
+              "weight": 1
+            },
+            {
+              "value": "Geimhriogh",
+              "weight": 1
+            },
+            {
+              "value": "Eochbhri",
+              "weight": 1
+            },
+            {
+              "value": "Grianchaint",
+              "weight": 1
+            },
+            {
+              "value": "Gaothbheart",
+              "weight": 1
+            },
+            {
+              "value": "Dreaganshuil",
+              "weight": 1
+            },
+            {
+              "value": "Odharchosg",
+              "weight": 1
+            },
+            {
+              "value": "Hotepra",
+              "weight": 1
+            },
+            {
+              "value": "Ankhnet",
+              "weight": 1
+            },
+            {
+              "value": "Neferhat",
+              "weight": 1
+            },
+            {
+              "value": "Djedkhar",
+              "weight": 1
+            },
+            {
+              "value": "Wassceptre",
+              "weight": 1
+            },
+            {
+              "value": "Tyetweave",
+              "weight": 1
+            },
+            {
+              "value": "Scarabkhet",
+              "weight": 1
+            },
+            {
+              "value": "Ibismer",
+              "weight": 1
+            },
+            {
+              "value": "Crocset",
+              "weight": 1
+            },
+            {
+              "value": "Lotusmar",
+              "weight": 1
+            },
+            {
+              "value": "Papyrskhor",
+              "weight": 1
+            },
+            {
+              "value": "Horizonset",
+              "weight": 1
+            },
+            {
+              "value": "Sunheru",
+              "weight": 1
+            },
+            {
+              "value": "Sandeper",
+              "weight": 1
+            },
+            {
+              "value": "Riverkha",
+              "weight": 1
+            },
+            {
+              "value": "Vulturehet",
+              "weight": 1
+            },
+            {
+              "value": "Falconpat",
+              "weight": 1
+            },
+            {
+              "value": "Stelekar",
+              "weight": 1
+            },
+            {
+              "value": "Shrineben",
+              "weight": 1
+            },
+            {
+              "value": "Kheperel",
+              "weight": 1
+            },
+            {
+              "value": "Tlalchim",
+              "weight": 1
+            },
+            {
+              "value": "Catemcoatl",
+              "weight": 1
+            },
+            {
+              "value": "Coatlitzin",
+              "weight": 1
+            },
+            {
+              "value": "Tzinhuitl",
+              "weight": 1
+            },
+            {
+              "value": "Lanmecatl",
+              "weight": 1
+            },
+            {
+              "value": "Tepecyotl",
+              "weight": 1
+            },
+            {
+              "value": "Apanmiztli",
+              "weight": 1
+            },
+            {
+              "value": "Milxochitl",
+              "weight": 1
+            },
+            {
+              "value": "Huatzin",
+              "weight": 1
+            },
+            {
+              "value": "Lotlchimalli",
+              "weight": 1
+            },
+            {
+              "value": "Molcuetl",
+              "weight": 1
+            },
+            {
+              "value": "Nalticuicatl",
+              "weight": 1
+            },
+            {
+              "value": "Pitzhuitl",
+              "weight": 1
+            },
+            {
+              "value": "Quinatzin",
+              "weight": 1
+            },
+            {
+              "value": "Tecepotl",
+              "weight": 1
+            },
+            {
+              "value": "Tzliyan",
+              "weight": 1
+            },
+            {
+              "value": "Xcintzotl",
+              "weight": 1
+            },
+            {
+              "value": "Yotlanextli",
+              "weight": 1
+            },
+            {
+              "value": "Zotlchich",
+              "weight": 1
+            },
+            {
+              "value": "Mizquiahuitl",
+              "weight": 1
+            }
+          ]
         }
       ]
     },
@@ -10251,19 +10492,19 @@
           "key": "start",
           "choices": [
             {
-              "value": "the #house# #assembly#",
-              "weight": 4
-            },
-            {
-              "value": "the #assembly# of #place#",
-              "weight": 3
+              "value": "the #house#",
+              "weight": 1
             },
             {
               "value": "the #kin# #assembly#",
-              "weight": 2
+              "weight": 1
             },
             {
-              "value": "the #assembly# #number#",
+              "value": "the #assembly# of #place#",
+              "weight": 1
+            },
+            {
+              "value": "the #assembly# of the #number#",
               "weight": 1
             }
           ]
@@ -10357,83 +10598,83 @@
           "key": "assembly",
           "choices": [
             {
-              "value": "family",
+              "value": "Family",
               "weight": 1
             },
             {
-              "value": "circle",
+              "value": "Circle",
               "weight": 1
             },
             {
-              "value": "court",
+              "value": "Court",
               "weight": 1
             },
             {
-              "value": "council",
+              "value": "Council",
               "weight": 1
             },
             {
-              "value": "kindred",
+              "value": "Kindred",
               "weight": 1
             },
             {
-              "value": "company",
+              "value": "Company",
               "weight": 1
             },
             {
-              "value": "round",
+              "value": "Round",
               "weight": 1
             },
             {
-              "value": "synod",
+              "value": "Synod",
               "weight": 1
             },
             {
-              "value": "troop",
+              "value": "Troop",
               "weight": 1
             },
             {
-              "value": "house",
+              "value": "House",
               "weight": 1
             },
             {
-              "value": "clan",
+              "value": "Clan",
               "weight": 1
             },
             {
-              "value": "congregation",
+              "value": "Congregation",
               "weight": 1
             },
             {
-              "value": "assembly",
+              "value": "Assembly",
               "weight": 1
             },
             {
-              "value": "conclave",
+              "value": "Conclave",
               "weight": 1
             },
             {
-              "value": "band",
+              "value": "Band",
               "weight": 1
             },
             {
-              "value": "union",
+              "value": "Union",
               "weight": 1
             },
             {
-              "value": "league",
+              "value": "League",
               "weight": 1
             },
             {
-              "value": "order",
+              "value": "Order",
               "weight": 1
             },
             {
-              "value": "siblings",
+              "value": "Siblings",
               "weight": 1
             },
             {
-              "value": "household",
+              "value": "Household",
               "weight": 1
             }
           ]
@@ -11038,19 +11279,19 @@
           "choices": [
             {
               "value": "the #deed# of #name.cap#",
-              "weight": 4
+              "weight": 1
             },
             {
               "value": "#name.cap# and the #trial#",
-              "weight": 4
+              "weight": 1
             },
             {
               "value": "why the #thing# #verb#",
-              "weight": 3
+              "weight": 1
             },
             {
               "value": "the #trial# at #place#",
-              "weight": 2
+              "weight": 1
             }
           ]
         },
@@ -11398,403 +11639,403 @@
           "key": "name",
           "choices": [
             {
-              "value": "nike",
+              "value": "Astraia",
               "weight": 1
             },
             {
-              "value": "dike",
+              "value": "Kalyxos",
               "weight": 1
             },
             {
-              "value": "sophia",
+              "value": "Thalmeris",
               "weight": 1
             },
             {
-              "value": "kratos",
+              "value": "Phainon",
               "weight": 1
             },
             {
-              "value": "phos",
+              "value": "Elyndra",
               "weight": 1
             },
             {
-              "value": "thalassa",
+              "value": "Ortheon",
               "weight": 1
             },
             {
-              "value": "aion",
+              "value": "Char illustrated",
               "weight": 1
             },
             {
-              "value": "charis",
+              "value": "Nyxaris",
               "weight": 1
             },
             {
-              "value": "eris",
+              "value": "Dorimedes",
               "weight": 1
             },
             {
-              "value": "harmonia",
+              "value": "Aetheris",
               "weight": 1
             },
             {
-              "value": "metis",
+              "value": "Kleiomene",
               "weight": 1
             },
             {
-              "value": "pneuma",
+              "value": "Sternobel",
               "weight": 1
             },
             {
-              "value": "stasis",
+              "value": "Irthelia",
               "weight": 1
             },
             {
-              "value": "tycha",
+              "value": "Lysandros",
               "weight": 1
             },
             {
-              "value": "logos",
+              "value": "Moiridion",
               "weight": 1
             },
             {
-              "value": "eros",
+              "value": "Xanthoria",
               "weight": 1
             },
             {
-              "value": "nomos",
+              "value": "Pysmene",
               "weight": 1
             },
             {
-              "value": "poiesis",
+              "value": "Oikleon",
               "weight": 1
             },
             {
-              "value": "soma",
+              "value": "Eridanos",
               "weight": 1
             },
             {
-              "value": "psyche",
+              "value": "Selenoros",
               "weight": 1
             },
             {
-              "value": "vind",
+              "value": "Vindheld",
               "weight": 1
             },
             {
-              "value": "sjo",
+              "value": "Sjokari",
               "weight": 1
             },
             {
-              "value": "fjall",
+              "value": "Fjallvind",
               "weight": 1
             },
             {
-              "value": "eld",
+              "value": "Eldbrenna",
               "weight": 1
             },
             {
-              "value": "is",
+              "value": "Isfrid",
               "weight": 1
             },
             {
-              "value": "skog",
+              "value": "Skogsvakt",
               "weight": 1
             },
             {
-              "value": "mal",
+              "value": "Malrún",
               "weight": 1
             },
             {
-              "value": "sverd",
+              "value": "Sverdfall",
               "weight": 1
             },
             {
-              "value": "hjort",
+              "value": "Hjortbane",
               "weight": 1
             },
             {
-              "value": "bjorn",
+              "value": "Bjornskar",
               "weight": 1
             },
             {
-              "value": "orn",
+              "value": "Ornflug",
               "weight": 1
             },
             {
-              "value": "sver",
+              "value": "Svafrun",
               "weight": 1
             },
             {
-              "value": "troll",
+              "value": "Trollheim",
               "weight": 1
             },
             {
-              "value": "run",
+              "value": "Runasvid",
               "weight": 1
             },
             {
-              "value": "saga",
+              "value": "Sagabind",
               "weight": 1
             },
             {
-              "value": "helm",
+              "value": "Hjelmkapp",
               "weight": 1
             },
             {
-              "value": "gull",
+              "value": "Gullsend",
               "weight": 1
             },
             {
-              "value": "blot",
+              "value": "Blotvard",
               "weight": 1
             },
             {
-              "value": "varg",
+              "value": "Vargskuggi",
               "weight": 1
             },
             {
-              "value": "sól",
+              "value": "Solmemor",
               "weight": 1
             },
             {
-              "value": "geal",
+              "value": "Gealbhan",
               "weight": 1
             },
             {
-              "value": "dubh",
+              "value": "Dubhghrian",
               "weight": 1
             },
             {
-              "value": "ruadh",
+              "value": "Ruadhlinn",
               "weight": 1
             },
             {
-              "value": "bán",
+              "value": "Banfhiann",
               "weight": 1
             },
             {
-              "value": "fionn",
+              "value": "Fionnmhar",
               "weight": 1
             },
             {
-              "value": "donn",
+              "value": "Donnchreach",
               "weight": 1
             },
             {
-              "value": "las",
+              "value": "Lasairghlan",
               "weight": 1
             },
             {
-              "value": "cú",
+              "value": "Cuintinn",
               "weight": 1
             },
             {
-              "value": "sceach",
+              "value": "Sceachghaoith",
               "weight": 1
             },
             {
-              "value": "dris",
+              "value": "Driseog",
               "weight": 1
             },
             {
-              "value": "linn",
+              "value": "Linnfhear",
               "weight": 1
             },
             {
-              "value": "tuath",
+              "value": "Tuathghaol",
               "weight": 1
             },
             {
-              "value": "cliú",
+              "value": "Cliunamh",
               "weight": 1
             },
             {
-              "value": "samh",
+              "value": "Samhthach",
               "weight": 1
             },
             {
-              "value": "geimh",
+              "value": "Geimhriogh",
               "weight": 1
             },
             {
-              "value": "eoch",
+              "value": "Eochbhri",
               "weight": 1
             },
             {
-              "value": "grian",
+              "value": "Grianchaint",
               "weight": 1
             },
             {
-              "value": "gaoth",
+              "value": "Gaothbheart",
               "weight": 1
             },
             {
-              "value": "dreagan",
+              "value": "Dreaganshuil",
               "weight": 1
             },
             {
-              "value": "odhr",
+              "value": "Odharchosg",
               "weight": 1
             },
             {
-              "value": "hotep",
+              "value": "Hotepra",
               "weight": 1
             },
             {
-              "value": "ankh",
+              "value": "Ankhnet",
               "weight": 1
             },
             {
-              "value": "nefer",
+              "value": "Neferhat",
               "weight": 1
             },
             {
-              "value": "djed",
+              "value": "Djedkhar",
               "weight": 1
             },
             {
-              "value": "was",
+              "value": "Wassceptre",
               "weight": 1
             },
             {
-              "value": "tyet",
+              "value": "Tyetweave",
               "weight": 1
             },
             {
-              "value": "scarab",
+              "value": "Scarabkhet",
               "weight": 1
             },
             {
-              "value": "ibis",
+              "value": "Ibismer",
               "weight": 1
             },
             {
-              "value": "croc",
+              "value": "Crocset",
               "weight": 1
             },
             {
-              "value": "lotus",
+              "value": "Lotusmar",
               "weight": 1
             },
             {
-              "value": "papyrus",
+              "value": "Papyrskhor",
               "weight": 1
             },
             {
-              "value": "horizon",
+              "value": "Horizonset",
               "weight": 1
             },
             {
-              "value": "sun",
+              "value": "Sunheru",
               "weight": 1
             },
             {
-              "value": "sand",
+              "value": "Sandeper",
               "weight": 1
             },
             {
-              "value": "river",
+              "value": "Riverkha",
               "weight": 1
             },
             {
-              "value": "vulture",
+              "value": "Vulturehet",
               "weight": 1
             },
             {
-              "value": "cat",
+              "value": "Falconpat",
               "weight": 1
             },
             {
-              "value": "falcon",
+              "value": "Stelekar",
               "weight": 1
             },
             {
-              "value": "stele",
+              "value": "Shrineben",
               "weight": 1
             },
             {
-              "value": "shrine",
+              "value": "Kheperel",
               "weight": 1
             },
             {
-              "value": "tl",
+              "value": "Tlalchim",
               "weight": 1
             },
             {
-              "value": "catl",
+              "value": "Catemcoatl",
               "weight": 1
             },
             {
-              "value": "coatl",
+              "value": "Coatlitzin",
               "weight": 1
             },
             {
-              "value": "tzin",
+              "value": "Tzinhuitl",
               "weight": 1
             },
             {
-              "value": "lan",
+              "value": "Lanmecatl",
               "weight": 1
             },
             {
-              "value": "tepec",
+              "value": "Tepecyotl",
               "weight": 1
             },
             {
-              "value": "apan",
+              "value": "Apanmiztli",
               "weight": 1
             },
             {
-              "value": "mil",
+              "value": "Milxochitl",
               "weight": 1
             },
             {
-              "value": "huatl",
+              "value": "Huatzin",
               "weight": 1
             },
             {
-              "value": "lotl",
+              "value": "Lotlchimalli",
               "weight": 1
             },
             {
-              "value": "mol",
+              "value": "Molcuetl",
               "weight": 1
             },
             {
-              "value": "nalli",
+              "value": "Nalticuicatl",
               "weight": 1
             },
             {
-              "value": "pitl",
+              "value": "Pitzhuitl",
               "weight": 1
             },
             {
-              "value": "quin",
+              "value": "Quinatzin",
               "weight": 1
             },
             {
-              "value": "tec",
+              "value": "Tecepotl",
               "weight": 1
             },
             {
-              "value": "tzli",
+              "value": "Tzliyan",
               "weight": 1
             },
             {
-              "value": "xcintli",
+              "value": "Xcintzotl",
               "weight": 1
             },
             {
-              "value": "yotl",
+              "value": "Yotlanextli",
               "weight": 1
             },
             {
-              "value": "zotl",
+              "value": "Zotlchich",
               "weight": 1
             },
             {
-              "value": "miz",
+              "value": "Mizquiahuitl",
               "weight": 1
             }
           ]
@@ -12407,403 +12648,403 @@
           "key": "name",
           "choices": [
             {
-              "value": "nike",
+              "value": "Astraia",
               "weight": 1
             },
             {
-              "value": "dike",
+              "value": "Kalyxos",
               "weight": 1
             },
             {
-              "value": "sophia",
+              "value": "Thalmeris",
               "weight": 1
             },
             {
-              "value": "kratos",
+              "value": "Phainon",
               "weight": 1
             },
             {
-              "value": "phos",
+              "value": "Elyndra",
               "weight": 1
             },
             {
-              "value": "thalassa",
+              "value": "Ortheon",
               "weight": 1
             },
             {
-              "value": "aion",
+              "value": "Char illustrated",
               "weight": 1
             },
             {
-              "value": "charis",
+              "value": "Nyxaris",
               "weight": 1
             },
             {
-              "value": "eris",
+              "value": "Dorimedes",
               "weight": 1
             },
             {
-              "value": "harmonia",
+              "value": "Aetheris",
               "weight": 1
             },
             {
-              "value": "metis",
+              "value": "Kleiomene",
               "weight": 1
             },
             {
-              "value": "pneuma",
+              "value": "Sternobel",
               "weight": 1
             },
             {
-              "value": "stasis",
+              "value": "Irthelia",
               "weight": 1
             },
             {
-              "value": "tycha",
+              "value": "Lysandros",
               "weight": 1
             },
             {
-              "value": "logos",
+              "value": "Moiridion",
               "weight": 1
             },
             {
-              "value": "eros",
+              "value": "Xanthoria",
               "weight": 1
             },
             {
-              "value": "nomos",
+              "value": "Pysmene",
               "weight": 1
             },
             {
-              "value": "poiesis",
+              "value": "Oikleon",
               "weight": 1
             },
             {
-              "value": "soma",
+              "value": "Eridanos",
               "weight": 1
             },
             {
-              "value": "psyche",
+              "value": "Selenoros",
               "weight": 1
             },
             {
-              "value": "vind",
+              "value": "Vindheld",
               "weight": 1
             },
             {
-              "value": "sjo",
+              "value": "Sjokari",
               "weight": 1
             },
             {
-              "value": "fjall",
+              "value": "Fjallvind",
               "weight": 1
             },
             {
-              "value": "eld",
+              "value": "Eldbrenna",
               "weight": 1
             },
             {
-              "value": "is",
+              "value": "Isfrid",
               "weight": 1
             },
             {
-              "value": "skog",
+              "value": "Skogsvakt",
               "weight": 1
             },
             {
-              "value": "mal",
+              "value": "Malrún",
               "weight": 1
             },
             {
-              "value": "sverd",
+              "value": "Sverdfall",
               "weight": 1
             },
             {
-              "value": "hjort",
+              "value": "Hjortbane",
               "weight": 1
             },
             {
-              "value": "bjorn",
+              "value": "Bjornskar",
               "weight": 1
             },
             {
-              "value": "orn",
+              "value": "Ornflug",
               "weight": 1
             },
             {
-              "value": "sver",
+              "value": "Svafrun",
               "weight": 1
             },
             {
-              "value": "troll",
+              "value": "Trollheim",
               "weight": 1
             },
             {
-              "value": "run",
+              "value": "Runasvid",
               "weight": 1
             },
             {
-              "value": "saga",
+              "value": "Sagabind",
               "weight": 1
             },
             {
-              "value": "helm",
+              "value": "Hjelmkapp",
               "weight": 1
             },
             {
-              "value": "gull",
+              "value": "Gullsend",
               "weight": 1
             },
             {
-              "value": "blot",
+              "value": "Blotvard",
               "weight": 1
             },
             {
-              "value": "varg",
+              "value": "Vargskuggi",
               "weight": 1
             },
             {
-              "value": "sól",
+              "value": "Solmemor",
               "weight": 1
             },
             {
-              "value": "geal",
+              "value": "Gealbhan",
               "weight": 1
             },
             {
-              "value": "dubh",
+              "value": "Dubhghrian",
               "weight": 1
             },
             {
-              "value": "ruadh",
+              "value": "Ruadhlinn",
               "weight": 1
             },
             {
-              "value": "bán",
+              "value": "Banfhiann",
               "weight": 1
             },
             {
-              "value": "fionn",
+              "value": "Fionnmhar",
               "weight": 1
             },
             {
-              "value": "donn",
+              "value": "Donnchreach",
               "weight": 1
             },
             {
-              "value": "las",
+              "value": "Lasairghlan",
               "weight": 1
             },
             {
-              "value": "cú",
+              "value": "Cuintinn",
               "weight": 1
             },
             {
-              "value": "sceach",
+              "value": "Sceachghaoith",
               "weight": 1
             },
             {
-              "value": "dris",
+              "value": "Driseog",
               "weight": 1
             },
             {
-              "value": "linn",
+              "value": "Linnfhear",
               "weight": 1
             },
             {
-              "value": "tuath",
+              "value": "Tuathghaol",
               "weight": 1
             },
             {
-              "value": "cliú",
+              "value": "Cliunamh",
               "weight": 1
             },
             {
-              "value": "samh",
+              "value": "Samhthach",
               "weight": 1
             },
             {
-              "value": "geimh",
+              "value": "Geimhriogh",
               "weight": 1
             },
             {
-              "value": "eoch",
+              "value": "Eochbhri",
               "weight": 1
             },
             {
-              "value": "grian",
+              "value": "Grianchaint",
               "weight": 1
             },
             {
-              "value": "gaoth",
+              "value": "Gaothbheart",
               "weight": 1
             },
             {
-              "value": "dreagan",
+              "value": "Dreaganshuil",
               "weight": 1
             },
             {
-              "value": "odhr",
+              "value": "Odharchosg",
               "weight": 1
             },
             {
-              "value": "hotep",
+              "value": "Hotepra",
               "weight": 1
             },
             {
-              "value": "ankh",
+              "value": "Ankhnet",
               "weight": 1
             },
             {
-              "value": "nefer",
+              "value": "Neferhat",
               "weight": 1
             },
             {
-              "value": "djed",
+              "value": "Djedkhar",
               "weight": 1
             },
             {
-              "value": "was",
+              "value": "Wassceptre",
               "weight": 1
             },
             {
-              "value": "tyet",
+              "value": "Tyetweave",
               "weight": 1
             },
             {
-              "value": "scarab",
+              "value": "Scarabkhet",
               "weight": 1
             },
             {
-              "value": "ibis",
+              "value": "Ibismer",
               "weight": 1
             },
             {
-              "value": "croc",
+              "value": "Crocset",
               "weight": 1
             },
             {
-              "value": "lotus",
+              "value": "Lotusmar",
               "weight": 1
             },
             {
-              "value": "papyrus",
+              "value": "Papyrskhor",
               "weight": 1
             },
             {
-              "value": "horizon",
+              "value": "Horizonset",
               "weight": 1
             },
             {
-              "value": "sun",
+              "value": "Sunheru",
               "weight": 1
             },
             {
-              "value": "sand",
+              "value": "Sandeper",
               "weight": 1
             },
             {
-              "value": "river",
+              "value": "Riverkha",
               "weight": 1
             },
             {
-              "value": "vulture",
+              "value": "Vulturehet",
               "weight": 1
             },
             {
-              "value": "cat",
+              "value": "Falconpat",
               "weight": 1
             },
             {
-              "value": "falcon",
+              "value": "Stelekar",
               "weight": 1
             },
             {
-              "value": "stele",
+              "value": "Shrineben",
               "weight": 1
             },
             {
-              "value": "shrine",
+              "value": "Kheperel",
               "weight": 1
             },
             {
-              "value": "tl",
+              "value": "Tlalchim",
               "weight": 1
             },
             {
-              "value": "catl",
+              "value": "Catemcoatl",
               "weight": 1
             },
             {
-              "value": "coatl",
+              "value": "Coatlitzin",
               "weight": 1
             },
             {
-              "value": "tzin",
+              "value": "Tzinhuitl",
               "weight": 1
             },
             {
-              "value": "lan",
+              "value": "Lanmecatl",
               "weight": 1
             },
             {
-              "value": "tepec",
+              "value": "Tepecyotl",
               "weight": 1
             },
             {
-              "value": "apan",
+              "value": "Apanmiztli",
               "weight": 1
             },
             {
-              "value": "mil",
+              "value": "Milxochitl",
               "weight": 1
             },
             {
-              "value": "huatl",
+              "value": "Huatzin",
               "weight": 1
             },
             {
-              "value": "lotl",
+              "value": "Lotlchimalli",
               "weight": 1
             },
             {
-              "value": "mol",
+              "value": "Molcuetl",
               "weight": 1
             },
             {
-              "value": "nalli",
+              "value": "Nalticuicatl",
               "weight": 1
             },
             {
-              "value": "pitl",
+              "value": "Pitzhuitl",
               "weight": 1
             },
             {
-              "value": "quin",
+              "value": "Quinatzin",
               "weight": 1
             },
             {
-              "value": "tec",
+              "value": "Tecepotl",
               "weight": 1
             },
             {
-              "value": "tzli",
+              "value": "Tzliyan",
               "weight": 1
             },
             {
-              "value": "xcintli",
+              "value": "Xcintzotl",
               "weight": 1
             },
             {
-              "value": "yotl",
+              "value": "Yotlanextli",
               "weight": 1
             },
             {
-              "value": "zotl",
+              "value": "Zotlchich",
               "weight": 1
             },
             {
-              "value": "miz",
+              "value": "Mizquiahuitl",
               "weight": 1
             }
           ]
@@ -13581,403 +13822,403 @@
           "key": "name",
           "choices": [
             {
-              "value": "nike",
+              "value": "Astraia",
               "weight": 1
             },
             {
-              "value": "dike",
+              "value": "Kalyxos",
               "weight": 1
             },
             {
-              "value": "sophia",
+              "value": "Thalmeris",
               "weight": 1
             },
             {
-              "value": "kratos",
+              "value": "Phainon",
               "weight": 1
             },
             {
-              "value": "phos",
+              "value": "Elyndra",
               "weight": 1
             },
             {
-              "value": "thalassa",
+              "value": "Ortheon",
               "weight": 1
             },
             {
-              "value": "aion",
+              "value": "Char illustrated",
               "weight": 1
             },
             {
-              "value": "charis",
+              "value": "Nyxaris",
               "weight": 1
             },
             {
-              "value": "eris",
+              "value": "Dorimedes",
               "weight": 1
             },
             {
-              "value": "harmonia",
+              "value": "Aetheris",
               "weight": 1
             },
             {
-              "value": "metis",
+              "value": "Kleiomene",
               "weight": 1
             },
             {
-              "value": "pneuma",
+              "value": "Sternobel",
               "weight": 1
             },
             {
-              "value": "stasis",
+              "value": "Irthelia",
               "weight": 1
             },
             {
-              "value": "tycha",
+              "value": "Lysandros",
               "weight": 1
             },
             {
-              "value": "logos",
+              "value": "Moiridion",
               "weight": 1
             },
             {
-              "value": "eros",
+              "value": "Xanthoria",
               "weight": 1
             },
             {
-              "value": "nomos",
+              "value": "Pysmene",
               "weight": 1
             },
             {
-              "value": "poiesis",
+              "value": "Oikleon",
               "weight": 1
             },
             {
-              "value": "soma",
+              "value": "Eridanos",
               "weight": 1
             },
             {
-              "value": "psyche",
+              "value": "Selenoros",
               "weight": 1
             },
             {
-              "value": "vind",
+              "value": "Vindheld",
               "weight": 1
             },
             {
-              "value": "sjo",
+              "value": "Sjokari",
               "weight": 1
             },
             {
-              "value": "fjall",
+              "value": "Fjallvind",
               "weight": 1
             },
             {
-              "value": "eld",
+              "value": "Eldbrenna",
               "weight": 1
             },
             {
-              "value": "is",
+              "value": "Isfrid",
               "weight": 1
             },
             {
-              "value": "skog",
+              "value": "Skogsvakt",
               "weight": 1
             },
             {
-              "value": "mal",
+              "value": "Malrún",
               "weight": 1
             },
             {
-              "value": "sverd",
+              "value": "Sverdfall",
               "weight": 1
             },
             {
-              "value": "hjort",
+              "value": "Hjortbane",
               "weight": 1
             },
             {
-              "value": "bjorn",
+              "value": "Bjornskar",
               "weight": 1
             },
             {
-              "value": "orn",
+              "value": "Ornflug",
               "weight": 1
             },
             {
-              "value": "sver",
+              "value": "Svafrun",
               "weight": 1
             },
             {
-              "value": "troll",
+              "value": "Trollheim",
               "weight": 1
             },
             {
-              "value": "run",
+              "value": "Runasvid",
               "weight": 1
             },
             {
-              "value": "saga",
+              "value": "Sagabind",
               "weight": 1
             },
             {
-              "value": "helm",
+              "value": "Hjelmkapp",
               "weight": 1
             },
             {
-              "value": "gull",
+              "value": "Gullsend",
               "weight": 1
             },
             {
-              "value": "blot",
+              "value": "Blotvard",
               "weight": 1
             },
             {
-              "value": "varg",
+              "value": "Vargskuggi",
               "weight": 1
             },
             {
-              "value": "sól",
+              "value": "Solmemor",
               "weight": 1
             },
             {
-              "value": "geal",
+              "value": "Gealbhan",
               "weight": 1
             },
             {
-              "value": "dubh",
+              "value": "Dubhghrian",
               "weight": 1
             },
             {
-              "value": "ruadh",
+              "value": "Ruadhlinn",
               "weight": 1
             },
             {
-              "value": "bán",
+              "value": "Banfhiann",
               "weight": 1
             },
             {
-              "value": "fionn",
+              "value": "Fionnmhar",
               "weight": 1
             },
             {
-              "value": "donn",
+              "value": "Donnchreach",
               "weight": 1
             },
             {
-              "value": "las",
+              "value": "Lasairghlan",
               "weight": 1
             },
             {
-              "value": "cú",
+              "value": "Cuintinn",
               "weight": 1
             },
             {
-              "value": "sceach",
+              "value": "Sceachghaoith",
               "weight": 1
             },
             {
-              "value": "dris",
+              "value": "Driseog",
               "weight": 1
             },
             {
-              "value": "linn",
+              "value": "Linnfhear",
               "weight": 1
             },
             {
-              "value": "tuath",
+              "value": "Tuathghaol",
               "weight": 1
             },
             {
-              "value": "cliú",
+              "value": "Cliunamh",
               "weight": 1
             },
             {
-              "value": "samh",
+              "value": "Samhthach",
               "weight": 1
             },
             {
-              "value": "geimh",
+              "value": "Geimhriogh",
               "weight": 1
             },
             {
-              "value": "eoch",
+              "value": "Eochbhri",
               "weight": 1
             },
             {
-              "value": "grian",
+              "value": "Grianchaint",
               "weight": 1
             },
             {
-              "value": "gaoth",
+              "value": "Gaothbheart",
               "weight": 1
             },
             {
-              "value": "dreagan",
+              "value": "Dreaganshuil",
               "weight": 1
             },
             {
-              "value": "odhr",
+              "value": "Odharchosg",
               "weight": 1
             },
             {
-              "value": "hotep",
+              "value": "Hotepra",
               "weight": 1
             },
             {
-              "value": "ankh",
+              "value": "Ankhnet",
               "weight": 1
             },
             {
-              "value": "nefer",
+              "value": "Neferhat",
               "weight": 1
             },
             {
-              "value": "djed",
+              "value": "Djedkhar",
               "weight": 1
             },
             {
-              "value": "was",
+              "value": "Wassceptre",
               "weight": 1
             },
             {
-              "value": "tyet",
+              "value": "Tyetweave",
               "weight": 1
             },
             {
-              "value": "scarab",
+              "value": "Scarabkhet",
               "weight": 1
             },
             {
-              "value": "ibis",
+              "value": "Ibismer",
               "weight": 1
             },
             {
-              "value": "croc",
+              "value": "Crocset",
               "weight": 1
             },
             {
-              "value": "lotus",
+              "value": "Lotusmar",
               "weight": 1
             },
             {
-              "value": "papyrus",
+              "value": "Papyrskhor",
               "weight": 1
             },
             {
-              "value": "horizon",
+              "value": "Horizonset",
               "weight": 1
             },
             {
-              "value": "sun",
+              "value": "Sunheru",
               "weight": 1
             },
             {
-              "value": "sand",
+              "value": "Sandeper",
               "weight": 1
             },
             {
-              "value": "river",
+              "value": "Riverkha",
               "weight": 1
             },
             {
-              "value": "vulture",
+              "value": "Vulturehet",
               "weight": 1
             },
             {
-              "value": "cat",
+              "value": "Falconpat",
               "weight": 1
             },
             {
-              "value": "falcon",
+              "value": "Stelekar",
               "weight": 1
             },
             {
-              "value": "stele",
+              "value": "Shrineben",
               "weight": 1
             },
             {
-              "value": "shrine",
+              "value": "Kheperel",
               "weight": 1
             },
             {
-              "value": "tl",
+              "value": "Tlalchim",
               "weight": 1
             },
             {
-              "value": "catl",
+              "value": "Catemcoatl",
               "weight": 1
             },
             {
-              "value": "coatl",
+              "value": "Coatlitzin",
               "weight": 1
             },
             {
-              "value": "tzin",
+              "value": "Tzinhuitl",
               "weight": 1
             },
             {
-              "value": "lan",
+              "value": "Lanmecatl",
               "weight": 1
             },
             {
-              "value": "tepec",
+              "value": "Tepecyotl",
               "weight": 1
             },
             {
-              "value": "apan",
+              "value": "Apanmiztli",
               "weight": 1
             },
             {
-              "value": "mil",
+              "value": "Milxochitl",
               "weight": 1
             },
             {
-              "value": "huatl",
+              "value": "Huatzin",
               "weight": 1
             },
             {
-              "value": "lotl",
+              "value": "Lotlchimalli",
               "weight": 1
             },
             {
-              "value": "mol",
+              "value": "Molcuetl",
               "weight": 1
             },
             {
-              "value": "nalli",
+              "value": "Nalticuicatl",
               "weight": 1
             },
             {
-              "value": "pitl",
+              "value": "Pitzhuitl",
               "weight": 1
             },
             {
-              "value": "quin",
+              "value": "Quinatzin",
               "weight": 1
             },
             {
-              "value": "tec",
+              "value": "Tecepotl",
               "weight": 1
             },
             {
-              "value": "tzli",
+              "value": "Tzliyan",
               "weight": 1
             },
             {
-              "value": "xcintli",
+              "value": "Xcintzotl",
               "weight": 1
             },
             {
-              "value": "yotl",
+              "value": "Yotlanextli",
               "weight": 1
             },
             {
-              "value": "zotl",
+              "value": "Zotlchich",
               "weight": 1
             },
             {
-              "value": "miz",
+              "value": "Mizquiahuitl",
               "weight": 1
             }
           ]
@@ -13999,15 +14240,15 @@
           "choices": [
             {
               "value": "the #quality# #kind#",
-              "weight": 4
+              "weight": 1
             },
             {
               "value": "#quality# #kind# of #place#",
-              "weight": 3
+              "weight": 1
             },
             {
               "value": "the #kind# #number#",
-              "weight": 3
+              "weight": 1
             }
           ]
         },
@@ -14768,15 +15009,15 @@
           "choices": [
             {
               "value": "the #order# of the #thing#",
-              "weight": 4
+              "weight": 1
             },
             {
               "value": "the #quality# #order#",
-              "weight": 3
+              "weight": 1
             },
             {
-              "value": "the #thing# #order#",
-              "weight": 3
+              "value": "the #thing.cap# #order#",
+              "weight": 1
             }
           ]
         },
@@ -14954,83 +15195,83 @@
           "key": "thing",
           "choices": [
             {
-              "value": "lantern",
+              "value": "Lantern",
               "weight": 1
             },
             {
-              "value": "gate",
+              "value": "Gate",
               "weight": 1
             },
             {
-              "value": "river",
+              "value": "River",
               "weight": 1
             },
             {
-              "value": "crown",
+              "value": "Crown",
               "weight": 1
             },
             {
-              "value": "seed",
+              "value": "Seed",
               "weight": 1
             },
             {
-              "value": "oath",
+              "value": "Oath",
               "weight": 1
             },
             {
-              "value": "feather",
+              "value": "Feather",
               "weight": 1
             },
             {
-              "value": "mirror",
+              "value": "Mirror",
               "weight": 1
             },
             {
-              "value": "wheel",
+              "value": "Wheel",
               "weight": 1
             },
             {
-              "value": "flame",
+              "value": "Flame",
               "weight": 1
             },
             {
-              "value": "stone",
+              "value": "Stone",
               "weight": 1
             },
             {
-              "value": "bell",
+              "value": "Bell",
               "weight": 1
             },
             {
-              "value": "road",
+              "value": "Road",
               "weight": 1
             },
             {
-              "value": "harp",
+              "value": "Harp",
               "weight": 1
             },
             {
-              "value": "tide",
+              "value": "Tide",
               "weight": 1
             },
             {
-              "value": "grove",
+              "value": "Grove",
               "weight": 1
             },
             {
-              "value": "star",
+              "value": "Star",
               "weight": 1
             },
             {
-              "value": "key",
+              "value": "Key",
               "weight": 1
             },
             {
-              "value": "drum",
+              "value": "Drum",
               "weight": 1
             },
             {
-              "value": "veil",
+              "value": "Veil",
               "weight": 1
             }
           ]
@@ -15052,15 +15293,15 @@
           "choices": [
             {
               "value": "the #prefix#-#core.cap#",
-              "weight": 4
+              "weight": 1
             },
             {
               "value": "#prefix# of the #thing#",
-              "weight": 3
+              "weight": 1
             },
             {
               "value": "the #core.cap# #suffix#",
-              "weight": 3
+              "weight": 1
             }
           ]
         },

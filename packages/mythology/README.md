@@ -23,8 +23,8 @@ import { mythology } from "@lexiconlang/mythology";
 const m = mythology.withSeed("old-oak");
 console.log(m.person());   // { form: "Llalli Chicomecoatl", translation: "earth, seven serpent", ... }
 console.log(m.place());    // { form: "Nekhen", translation: "the vulture town" }
-console.log(m.deity());    // "Nor Dike"
-console.log(m.pantheon()); // "the family of Lysaker"
+console.log(m.deity());    // "Gullsend"
+console.log(m.pantheon()); // "the Family of the Seven"
 console.log(m.myth());     // "the burning grove at Dalar"
 console.log(m.omen());     // { entry: "dream", text: "Someone in the household dreams of a locked door.", ... }
 ```
@@ -67,14 +67,17 @@ Five cultures ship, each with at least 24 given names, 24 surnames/epithets and
 - `hellenic` — inspired by romanized Ancient Greek; extends the greek B1 base.
 - `norse` — inspired by Old Norse; extends the norse B1 base.
 - `sylvan` — inspired by Old Irish / Gaelic; extends the celtic B1 base.
-- `riverland` — inspired by ancient Egyptian naming, **without** a base dependency.
-- `mesoamerican` — inspired by Nahuatl naming, **without** a base dependency.
+- `riverland` — inspired by ancient Egyptian naming; self-contained.
+- `mesoamerican` — inspired by Nahuatl naming; self-contained.
 
-`riverland` and `mesoamerican` are self-contained because the corresponding base
-packs have not merged yet; their names are original fiction, not reconstructed
+`riverland` and `mesoamerican` are self-contained by design: although the B2
+`ancient-egyptian` and `nahuatl` base packs are available on main, this pack does
+not depend on them — its names are original fiction, not reconstructions of
 historical forms. The manifest also declares a `pan-mythic` culture whose template
 banks concatenate all five styles; it backs the manifest's all-culture name
-generators and matches the facade's selection pool.
+generators and draws from the same selection pool as the facade. Note that the
+manifest's `person-name` (`name-v1`, `kind: given`) emits a single given name,
+while the facade's `person()` composes given + surname into a full person name.
 
 ## License
 
