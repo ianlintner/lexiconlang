@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fanta
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { steampunk } from "@lexiconlang/steampunk";
+import { mythology } from "@lexiconlang/mythology";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -85,3 +86,14 @@ console.log(`  Vessel:   ${brass.airship()}`);
 console.log(`  Society:  ${brass.society()}`);
 console.log(`  Sunday headline: ${brass.headline()}`);
 console.log(`  Street omen: ${brass.omen().text}`);
+
+// ─── Scenario 4: a mythic relic in a cross-genre campaign ────────────────
+
+const myth = mythology.withSeed("myth-cross-genre");
+console.log("\nMythic campaign seed:");
+console.log(`  Deity:    ${myth.deity()} — ${myth.epithet()}`);
+console.log(`  Pantheon: ${myth.pantheon()}`);
+console.log(`  Myth:     ${myth.myth()}`);
+console.log(`  Shrine:   ${myth.holySite()} · keeper ${myth.person().form}`);
+console.log(`  Relic:    ${myth.artifact()} — ${myth.relicPower().text}`);
+console.log(`  Omen:     ${myth.omen().text}`);

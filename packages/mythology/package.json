@@ -1,0 +1,32 @@
+{
+  "name": "@lexiconlang/mythology",
+  "version": "0.1.0",
+  "description": "Mythology and pantheons genre pack for lexiconlang — deities, families, epithets, myths, holy sites, relics, monsters and omens in five invented naming styles",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./pack.json": "./data/mythology.pack.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "PROVENANCE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  }
+}
