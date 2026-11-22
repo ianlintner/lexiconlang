@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "@lexiconlang/core": "workspace:*",
-    "@lexiconlang/grammar": "workspace:*",
     "@lexiconlang/language": "workspace:*",
     "@lexiconlang/packs": "workspace:*"
   },

@@ -222,6 +222,8 @@ describe("pack-runtime parity", () => {
 });
 
 describe("content artifacts", () => {
+  const REPEATED_WORD = /\b(\w+)\s+\1\b/i;
+
   it("never emits doubled articles in treasure or ship names", () => {
     for (let i = 0; i < 200; i++) {
       const seed = `artifact-${i}`;
@@ -236,6 +238,26 @@ describe("content artifacts", () => {
       const name = captainName.generate(createContext({ seed: `captain-space-${i}` }).child("captain"));
       expect(name.full).not.toMatch(/  /);
       expect(name.translation).not.toMatch(/  /);
+    }
+  });
+
+  it("emits no immediately repeated word in any pack generator", () => {
+    const pack = definePack(data as never);
+    for (let i = 0; i < 200; i++) {
+      const world = createWorld({ seed: `artifact-all-${i}` }).use(pack);
+      for (const generator of data.generators) {
+        const text = surface(world.generate(generator.id, "artifact"));
+        expect(text, `${generator.id} @ artifact-all-${i}`).not.toMatch(REPEATED_WORD);
+      }
+    }
+  });
+
+  it("capitalises every port and cove name", () => {
+    const pack = definePack(data as never);
+    for (let i = 0; i < 200; i++) {
+      const world = createWorld({ seed: `port-case-${i}` }).use(pack);
+      const name = surface(world.generate("lexiconlang.pirates/generator/port-cove", "port"));
+      expect(name, `port-cove @ port-case-${i}`).toMatch(/^[A-Z]/);
     }
   });
 });

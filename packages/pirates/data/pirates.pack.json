@@ -1828,7 +1828,7 @@
           "key": "noun",
           "choices": [
             {
-              "value": "crew",
+              "value": "seadogs",
               "weight": 1
             },
             {
@@ -1912,7 +1912,7 @@
               "weight": 5
             },
             {
-              "value": "#root# #suffix.cap#",
+              "value": "#stem.cap# #suffix.cap#",
               "weight": 4
             },
             {
@@ -2015,6 +2015,59 @@
             },
             {
               "value": "water",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "stem",
+          "choices": [
+            {
+              "value": "lantern",
+              "weight": 1
+            },
+            {
+              "value": "tide",
+              "weight": 1
+            },
+            {
+              "value": "gull",
+              "weight": 1
+            },
+            {
+              "value": "marsh",
+              "weight": 1
+            },
+            {
+              "value": "flint",
+              "weight": 1
+            },
+            {
+              "value": "anchor",
+              "weight": 1
+            },
+            {
+              "value": "brine",
+              "weight": 1
+            },
+            {
+              "value": "drift",
+              "weight": 1
+            },
+            {
+              "value": "wreck",
+              "weight": 1
+            },
+            {
+              "value": "reef",
+              "weight": 1
+            },
+            {
+              "value": "gale",
+              "weight": 1
+            },
+            {
+              "value": "cinder",
               "weight": 1
             }
           ]
@@ -2420,7 +2473,7 @@
           "key": "start",
           "choices": [
             {
-              "value": "the #adj# #noun# chart",
+              "value": "the #adj# #noun#",
               "weight": 5
             },
             {

@@ -197,9 +197,6 @@ importers:
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
-      '@lexiconlang/grammar':
-        specifier: workspace:*
-        version: link:../grammar
       '@lexiconlang/language':
         specifier: workspace:*
         version: link:../language
