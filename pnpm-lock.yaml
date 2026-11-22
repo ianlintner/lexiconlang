@@ -35,6 +35,9 @@ importers:
 
   examples:
     dependencies:
+      '@lexiconlang/bases':
+        specifier: workspace:*
+        version: link:../packages/bases
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../packages/core
@@ -132,6 +135,9 @@ importers:
       '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/glyphs:
     dependencies:
