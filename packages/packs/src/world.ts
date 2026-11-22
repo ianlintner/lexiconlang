@@ -154,17 +154,18 @@ function install(state: WorldState, pack: LoadedPack): void {
   for (const table of pack.manifest.tables) staged.tables.set(table.id, table);
   for (const generator of pack.manifest.generators) staged.generators.set(generator.id, generator);
 
+  const basePointers = new Map((pack.manifest.bases ?? []).map((base, i) => [base.id, `/bases/${i}`]));
   const resolveBase = (id: string, pointer: string): BaseData => {
     const base = staged.bases.get(id) ?? state.bases.get(id);
     if (!base) fail([{ code: "REFERENCE", pointer, message: `unknown base ${id}` }]);
     return base;
   };
   /** Culture-shaped defaults from a base descriptor (glyphs + templates + structures). */
-  const baseDefaults = (base: BaseData): AnyRecord => ({
-    glyphs: toGlyphSystem(base.glyphs, "/bases/default/glyphs"),
+  const baseDefaults = (base: BaseData, pointer: string): AnyRecord => ({
+    glyphs: toGlyphSystem(base.glyphs, `${pointer}/glyphs`),
     templates: Object.fromEntries(Object.entries(base.templates).map(([kind, choices]) => [
       kind,
-      choices.map((c) => [toLanguageTemplate(c.value, `/bases/default/templates/${kind}`), c.weight] as const),
+      choices.map((c) => [toLanguageTemplate(c.value, `${pointer}/templates/${kind}`), c.weight] as const),
     ])),
     nameStructures: { ...base.nameStructures },
     capitalize: "first",
@@ -195,7 +196,7 @@ function install(state: WorldState, pack: LoadedPack): void {
     }
     if (baseId) {
       const resolved = resolveBase(baseId, `${pointer}/base`);
-      const defaults = baseDefaults(resolved);
+      const defaults = baseDefaults(resolved, basePointers.get(baseId) ?? `${pointer}/base`);
       // Base defaults fill only what the parent/child has not supplied. Parent
       // resolved fields and child explicit fields win over base defaults.
       base = { ...defaults, ...base };

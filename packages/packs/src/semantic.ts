@@ -86,7 +86,7 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
   need("grammar-v1", manifest.grammars.length > 0 || manifest.generators.some((g) => g.engine === "grammar-v1"));
   need("tables-v1", manifest.tables.length > 0 || manifest.generators.some((g) => g.engine === "table-v1"));
   need("markov-v1", manifest.corpora.length > 0 || manifest.markovModels.length > 0 || manifest.generators.some((g) => g.engine === "markov-v1"));
-  need("bases-v1", (manifest.bases?.length ?? 0) > 0);
+  need("bases-v1", (manifest.bases?.length ?? 0) > 0 || manifest.cultures.some((c) => Boolean(c.base)));
   if ((manifest.dialects?.length ?? 0) > 0) diag.push({ code: "CAPABILITY", pointer: `/dialects`, message: `dialects-v1 is not implemented by this host` });
 
   // Provenance references and asset paths.
@@ -135,11 +135,14 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
     checkDictionaryKeys(diag, b.templates, `/bases/${i}/templates`);
     checkDictionaryKeys(diag, b.nameStructures, `/bases/${i}/nameStructures`);
     checkDictionaryKeys(diag, (b.glyphs as Record<string, unknown> | undefined)?.classes, `/bases/${i}/glyphs/classes`);
+    checkTextFields(b.templates, `/bases/${i}/templates`, diag);
+    checkTextFields((b.glyphs as Record<string, unknown> | undefined)?.classes, `/bases/${i}/glyphs/classes`, diag);
   });
 
   // Culture inheritance chains: single parent, acyclic, declared dependency.
   const cultureById = new Map(manifest.cultures.map((c, i) => [c.id, { c, i }]));
   const extensionSet = new Set(manifest.extends.map((d) => d.id));
+  const declaredPackSet = new Set([...depends, ...extensionSet]);
   const rootPack = (id: string) => id.split("/")[0] as string;
   for (const [i, c] of manifest.cultures.entries()) {
     const seen = new Set<string>([c.id]);
@@ -176,11 +179,21 @@ export function semanticDiagnostics(manifest: PackManifestV1): readonly PackDiag
   };
   manifest.cultures.forEach((c, i) => {
     if (c.extends) localRef(c.extends, `/cultures/${i}/extends`);
-    // Base refs may be local or from an installed dependency pack; only
-    // enforce existence for pack-local refs here. World install resolves the
-    // rest against the accumulated base registry.
-    if (c.base && rootPack(c.base) === packId && !ids.has(c.base)) {
-      diag.push({ code: "REFERENCE", pointer: `/cultures/${i}/base`, message: `unknown local base ${JSON.stringify(c.base)}` });
+    if (c.base) {
+      // Base ids follow the same resource-id format as other refs, including
+      // cross-pack refs. Existence of a cross-pack base is resolved at install
+      // time against the already-installed dependency pack.
+      if (!RESOURCE_ID.test(c.base)) {
+        diag.push({ code: "REFERENCE", pointer: `/cultures/${i}/base`, message: `invalid resource id ${JSON.stringify(c.base)}` });
+      } else {
+        const owner = rootPack(c.base);
+        if (owner !== packId && !declaredPackSet.has(owner)) {
+          diag.push({ code: "DEPENDENCY", pointer: `/cultures/${i}/base`, message: `base's pack is not declared in depends or extends` });
+        }
+        if (owner === packId && !ids.has(c.base)) {
+          diag.push({ code: "REFERENCE", pointer: `/cultures/${i}/base`, message: `unknown local base ${JSON.stringify(c.base)}` });
+        }
+      }
     }
     c.meaningPacks?.forEach((r, j) => localRef(r, `/cultures/${i}/meaningPacks/${j}`));
     if (c.glyphs) {

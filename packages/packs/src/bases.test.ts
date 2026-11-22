@@ -48,4 +48,28 @@ describe("F2 bases-v1 capability", () => {
     const bad = { ...baseManifest(), requires: ["language-v1"] };
     expect(validatePack(bad).some((d) => d.code === "CAPABILITY" && d.pointer === "/requires")).toBe(true);
   });
+
+  it("requires bases-v1 and a declared dependency for a cross-pack base", () => {
+    const external = "lexiconlang.bases.norse/base/default";
+    const child = (): PackManifestV1 => ({
+      ...baseManifest(),
+      id: "test.consumer",
+      bases: [],
+      cultures: [{ id: "test.consumer/culture/default", base: external }],
+      requires: ["language-v1"],
+    });
+    const undeclared = validatePack(child());
+    expect(undeclared.some((d) => d.code === "CAPABILITY" && d.pointer === "/requires")).toBe(true);
+    expect(undeclared.some((d) => d.code === "DEPENDENCY" && d.pointer === "/cultures/0/base")).toBe(true);
+
+    const declared = child();
+    declared.depends = [{ id: "lexiconlang.bases.norse", version: "^0.1.0" }];
+    declared.requires = ["language-v1", "bases-v1"];
+    expect(validatePack(declared)).toEqual([]);
+  });
+
+  it("rejects malformed base resource ids", () => {
+    const bad = { ...baseManifest(), cultures: [{ id: "test.basesv1/culture/default", base: "not-a-resource-id" }] };
+    expect(validatePack(bad).some((d) => d.pointer === "/cultures/0/base")).toBe(true);
+  });
 });

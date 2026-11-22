@@ -167,8 +167,10 @@ describe("B1 base packs as F2 extends targets", () => {
     const badManifest = { ...basePack(norse), cultures: [{ id: "lexiconlang.bases.norse/culture/default", base: "lexiconlang.bases.norse/base/missing" }] };
     expect(validatePack(badManifest).some((d) => d.code === "REFERENCE")).toBe(true);
     const crossPack = { ...basePack(norse), cultures: [{ id: "lexiconlang.bases.norse/culture/default", base: "lexiconlang.bases.unknown/base/default" }] };
-    expect(validatePack(crossPack)).toEqual([]);
-    expect(() => createWorld({ seed: "s" }).use(definePack(crossPack))).toThrow(/unknown base/);
+    expect(validatePack(crossPack).some((d) => d.code === "DEPENDENCY" && d.pointer === "/cultures/0/base")).toBe(true);
+    const declared = { ...crossPack, depends: [{ id: "lexiconlang.bases.unknown", version: "^0.1.0" }] };
+    expect(validatePack(declared)).toEqual([]);
+    expect(() => createWorld({ seed: "s" }).use(definePack(declared))).toThrow(/install lexiconlang.bases.unknown/);
   });
 
   it("rejects a culture that tries to switch base from its parent", () => {
@@ -179,7 +181,7 @@ describe("B1 base packs as F2 extends targets", () => {
       license: "CC0-1.0",
       description: "B1 child pack fixture",
       provenance: [],
-      depends: [],
+      depends: [{ id: "lexiconlang.bases.latin", version: "^0.1.0" }],
       extends: [{ id: "lexiconlang.bases.norse", version: "^0.1.0" }],
       requires: ["language-v1", "bases-v1"],
       bases: [],
@@ -195,6 +197,6 @@ describe("B1 base packs as F2 extends targets", () => {
       markovModels: [],
       generators: [],
     });
-    expect(() => createWorld({ seed: "s" }).use(definePack(basePack(norse))).use(child)).toThrow(/cannot change base/);
+    expect(() => createWorld({ seed: "s" }).use(definePack(basePack(norse))).use(definePack(basePack(latin))).use(child)).toThrow(/cannot change base/);
   });
 });

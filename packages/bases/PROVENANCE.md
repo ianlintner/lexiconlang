@@ -4,8 +4,10 @@
 
 All data in this package (phonotactic profiles, orthography mappings, name-structure
 descriptors, template lists, and the sample literal placeholders) is **original work
-authored for LexiconLang** and released under **CC0-1.0** (public domain dedication),
-matching the package license. No third-party corpora, word lists, name lists, or
+authored for LexiconLang** and released under **CC0-1.0** (public domain dedication).
+The TypeScript source and package distribution are **MIT** (see `package.json`);
+the CC0 dedication applies to the base data and generated pack manifests, which
+also declare `license: CC0-1.0`. No third-party corpora, word lists, name lists, or
 translations are included.
 
 The six "inspired-by" labels (Old Norse, Old Irish / Gaelic-Welsh, Classical Latin,
