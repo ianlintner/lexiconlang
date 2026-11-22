@@ -17,6 +17,8 @@ what you need; tree-shaking takes care of the rest.
 | ---------------------------------------- | -------------------------------------------------------------------------------------- |
 | [`@lexiconlang/language`](/packages/language) | Phonotactics, lexicon generation, morpheme packs, name templates, `TranslatedName` API |
 | [`@lexiconlang/glyphs`](/packages/glyphs)     | Visual writing systems: SVG / Unicode / Canvas glyphs with per-culture registries      |
+| [`@lexiconlang/bases`](/packages/bases)       | Six real-language-inspired base descriptors (Norse, Celtic, Latin, Greek, Japanese, Arabic) via selective subpaths |
+| [`@lexiconlang/packs`](/packages/packs)       | Declarative F2 pack format, loader, validator and `bases-v1` / `language-v1` capabilities |
 
 ## Genre packs
 

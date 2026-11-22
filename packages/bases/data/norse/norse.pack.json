@@ -1,0 +1,275 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.norse",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Old Norse; clipped consonants, strong vowels; deliberate simplifications. — Old Norse (Viking Age / medieval Scandinavian). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-norse-prov",
+      "source": "original:lexiconlang.bases.norse",
+      "title": "Old Norse (Viking Age / medieval Scandinavian)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.norse/base/default",
+      "inspiredBy": "Old Norse (Viking Age / medieval Scandinavian)",
+      "scope": "Phonotactics and name shapes inspired by Old Norse; clipped consonants, strong vowels; deliberate simplifications.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "h",
+            "k",
+            "l",
+            "m",
+            "n",
+            "r",
+            "s",
+            "t",
+            "v",
+            "th",
+            "kv",
+            "sk"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "y",
+            "ae",
+            "au",
+            "ei",
+            "o"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "C C V",
+            1
+          ],
+          [
+            "V C",
+            2
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ],
+        "joiner": ""
+      },
+      "orthography": {
+        "id": "norse-latin",
+        "mappings": [
+          {
+            "from": "th",
+            "to": "þ"
+          },
+          {
+            "from": "ae",
+            "to": "æ"
+          },
+          {
+            "from": "oo",
+            "to": "ǫ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "norse-roman",
+        "mappings": [
+          {
+            "from": "þ",
+            "to": "th"
+          },
+          {
+            "from": "æ",
+            "to": "ae"
+          },
+          {
+            "from": "ǫ",
+            "to": "oo"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sven",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bjorn",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "adjective",
+                  "tag": "strength",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "patronymic": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "literal": "son of ",
+                  "translation": "son of"
+                },
+                {
+                  "pick": "noun",
+                  "tag": "family",
+                  "capitalize": true
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "place"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "norse.patronymic": {
+          "id": "patronymic",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "patronymic",
+              "role": "patronymic",
+              "source": {
+                "type": "kind",
+                "kind": "patronymic"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "norse-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.norse/culture/default",
+      "base": "lexiconlang.bases.norse/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

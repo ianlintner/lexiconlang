@@ -80,6 +80,8 @@ export default defineConfig({
           items: [
             { text: "@lexiconlang/language", link: "/packages/language" },
             { text: "@lexiconlang/glyphs", link: "/packages/glyphs" },
+            { text: "@lexiconlang/bases", link: "/packages/bases" },
+            { text: "@lexiconlang/packs", link: "/packages/packs" },
           ],
         },
         {
@@ -89,6 +91,7 @@ export default defineConfig({
             { text: "@lexiconlang/scifi", link: "/packages/scifi" },
             { text: "@lexiconlang/modern", link: "/packages/modern" },
             { text: "@lexiconlang/historical-medieval", link: "/packages/historical-medieval" },
+            { text: "@lexiconlang/steampunk", link: "/packages/steampunk" },
           ],
         },
         {

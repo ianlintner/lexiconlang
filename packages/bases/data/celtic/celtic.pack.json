@@ -1,0 +1,238 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.celtic",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Sonorant-rich phonotactics and lenition-flavoured orthography inspired by Old Irish; simplified and fictionalised. — Old Irish (early medieval Gaelic). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-celtic-prov",
+      "source": "original:lexiconlang.bases.celtic",
+      "title": "Old Irish (early medieval Gaelic)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.celtic/base/default",
+      "inspiredBy": "Old Irish (early medieval Gaelic)",
+      "scope": "Sonorant-rich phonotactics and lenition-flavoured orthography inspired by Old Irish; simplified and fictionalised.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "bh",
+            "ch",
+            "dh",
+            "gh",
+            "mh"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ae",
+            "ai",
+            "ea",
+            "ei",
+            "ia",
+            "ua"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "V",
+            1
+          ],
+          [
+            "C V C",
+            2
+          ],
+          [
+            "C V V",
+            2
+          ],
+          [
+            "V C",
+            2
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            1
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "3",
+            2
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ],
+        "joiner": ""
+      },
+      "orthography": {
+        "id": "celtic-latin",
+        "mappings": [
+          {
+            "from": "mh",
+            "to": "ṁ"
+          },
+          {
+            "from": "bh",
+            "to": "ḃ"
+          },
+          {
+            "from": "ch",
+            "to": "ċ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aedan",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mairin",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "adjective",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "place"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "celtic.given-only": {
+          "id": "given-only",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "celtic-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.celtic/culture/default",
+      "base": "lexiconlang.bases.celtic/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

@@ -12,6 +12,8 @@
     { "path": "./packages/modern" },
     { "path": "./packages/historical-medieval" },
     { "path": "./packages/packs" },
-    { "path": "./packages/cli" }
+    { "path": "./packages/bases" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/steampunk" }
   ]
 }

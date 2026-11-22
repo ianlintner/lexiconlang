@@ -1,0 +1,789 @@
+{
+  "profile": "portable-v1",
+  "source": "@lexiconlang/packs F2",
+  "vectors": [
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/empty/root",
+      "engine": "portable-rng-v1",
+      "seed": "",
+      "path": [],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          668174826,
+          3909915632,
+          3631266127,
+          2369161918,
+          1294707693,
+          3860164495,
+          2644118958,
+          4115452424
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            880821661,
+            2647723615,
+            2587937348,
+            4164021943
+          ],
+          "origin": ""
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/empty/nested",
+      "engine": "portable-rng-v1",
+      "seed": "",
+      "path": [
+        "region:5",
+        "settlement:11",
+        "npc:3"
+      ],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          3961708205,
+          962774502,
+          2855457929,
+          561369439,
+          1044141566,
+          1959905863,
+          2328010061,
+          1488840482
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            3196624859,
+            1712284338,
+            219457368,
+            3674441589
+          ],
+          "origin": "891b7e73e5f9a870"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/ascii/root",
+      "engine": "portable-rng-v1",
+      "seed": "golden-master-1",
+      "path": [],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          461297399,
+          2278117481,
+          4066302559,
+          1197728002,
+          1291448475,
+          4194912592,
+          2154390991,
+          2332498926
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            2388763730,
+            1699109142,
+            3352506031,
+            1670052347
+          ],
+          "origin": "golden-master-1"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/ascii/nested",
+      "engine": "portable-rng-v1",
+      "seed": "golden-master-1",
+      "path": [
+        "region:5",
+        "settlement:11",
+        "npc:3"
+      ],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          111603474,
+          2995674797,
+          3120612086,
+          3101226364,
+          2940664557,
+          3683881935,
+          3311142113,
+          1812598192
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            436099769,
+            1841261110,
+            2900187907,
+            1049785400
+          ],
+          "origin": "3bbeb32bb2cd966d"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/accented/root",
+      "engine": "portable-rng-v1",
+      "seed": "café-ñ",
+      "path": [],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          2574517888,
+          990133551,
+          3064292484,
+          3798065489,
+          1448175635,
+          4131556803,
+          1082646590,
+          1508823307
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            391001492,
+            831113946,
+            724533549,
+            3452109903
+          ],
+          "origin": "café-ñ"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/accented/nested",
+      "engine": "portable-rng-v1",
+      "seed": "café-ñ",
+      "path": [
+        "region:5",
+        "settlement:11",
+        "npc:3"
+      ],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          2740139989,
+          3872042438,
+          2747162288,
+          3602293777,
+          2462439561,
+          3357598398,
+          3997041972,
+          2367198229
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            1688430278,
+            723173619,
+            2425258669,
+            3741178189
+          ],
+          "origin": "a544e95dcc586106"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/emoji/root",
+      "engine": "portable-rng-v1",
+      "seed": "🌊-tide",
+      "path": [],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          3025695053,
+          3142837365,
+          3054548111,
+          3680325523,
+          223441411,
+          725510143,
+          984074211,
+          2538430264
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            2425729673,
+            2635604657,
+            2223534420,
+            2765891905
+          ],
+          "origin": "🌊-tide"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "rng/emoji/nested",
+      "engine": "portable-rng-v1",
+      "seed": "🌊-tide",
+      "path": [
+        "region:5",
+        "settlement:11",
+        "npc:3"
+      ],
+      "input": {
+        "count": 8
+      },
+      "expected": {
+        "draws": [
+          688289562,
+          1452756047,
+          2433040500,
+          216482026,
+          725962391,
+          497610750,
+          3379053708,
+          367728335
+        ],
+        "state": {
+          "algo": "sfc32",
+          "state": [
+            4137573905,
+            2779334029,
+            1653899333,
+            2035149936
+          ],
+          "origin": "228c0178ec20bc46"
+        }
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "name/given/harbor-0",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/given",
+        "key:harbor-0"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/given",
+        "key": "harbor-0",
+        "options": {}
+      },
+      "expected": {
+        "form": "Mira",
+        "translation": "Mira",
+        "language": "acme.portable/culture/harbor",
+        "parts": [
+          {
+            "form": "Mira",
+            "meaning": "Mira"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "name/given/harbor-1",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/given",
+        "key:harbor-1"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/given",
+        "key": "harbor-1",
+        "options": {}
+      },
+      "expected": {
+        "form": "Mira",
+        "translation": "Mira",
+        "language": "acme.portable/culture/harbor",
+        "parts": [
+          {
+            "form": "Mira",
+            "meaning": "Mira"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "name/given/riverside",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/given",
+        "key:riverside"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/given",
+        "key": "riverside",
+        "options": {}
+      },
+      "expected": {
+        "form": "Mira",
+        "translation": "Mira",
+        "language": "acme.portable/culture/harbor",
+        "parts": [
+          {
+            "form": "Mira",
+            "meaning": "Mira"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "name/given/%C3%A9clair",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/given",
+        "key:éclair"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/given",
+        "key": "éclair",
+        "options": {}
+      },
+      "expected": {
+        "form": "Mira",
+        "translation": "Mira",
+        "language": "acme.portable/culture/harbor",
+        "parts": [
+          {
+            "form": "Mira",
+            "meaning": "Mira"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "name/given/%F0%9F%8C%8A",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/given",
+        "key:🌊"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/given",
+        "key": "🌊",
+        "options": {}
+      },
+      "expected": {
+        "form": "Mira",
+        "translation": "Mira",
+        "language": "acme.portable/culture/harbor",
+        "parts": [
+          {
+            "form": "Mira",
+            "meaning": "Mira"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "name/ship",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/ship",
+        "key:vessel-1"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/ship",
+        "key": "vessel-1",
+        "options": {}
+      },
+      "expected": {
+        "form": "Quiet Wake",
+        "translation": "Quiet Wake",
+        "language": "acme.portable/culture/harbor",
+        "parts": [
+          {
+            "form": "Quiet Wake",
+            "meaning": "Quiet Wake"
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "grammar/omen-0",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/omen",
+        "key:omen-0"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/omen",
+        "key": "omen-0",
+        "options": {}
+      },
+      "expected": "the Quiet star"
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "grammar/omen-1",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/omen",
+        "key:omen-1"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/omen",
+        "key": "omen-1",
+        "options": {}
+      },
+      "expected": "the Quiet tide"
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "grammar/omen-2",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/omen",
+        "key:omen-2"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/omen",
+        "key": "omen-2",
+        "options": {}
+      },
+      "expected": "the Restless tide"
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "table/weighted/weather-0",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/weather",
+        "key:weather-0"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/weather",
+        "key": "weather-0",
+        "options": {}
+      },
+      "expected": {
+        "table": "acme.portable/table/weather",
+        "entry": "calm",
+        "text": "calm",
+        "children": []
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "table/weighted/weather-1",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/weather",
+        "key:weather-1"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/weather",
+        "key": "weather-1",
+        "options": {}
+      },
+      "expected": {
+        "table": "acme.portable/table/weather",
+        "entry": "wind",
+        "text": "wind",
+        "children": []
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "table/dice/dice-0",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/dice",
+        "key:dice-0"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/dice",
+        "key": "dice-0",
+        "options": {}
+      },
+      "expected": {
+        "table": "acme.portable/table/dice",
+        "entry": "mid",
+        "total": 7,
+        "dice": [
+          2,
+          5
+        ],
+        "text": "mid",
+        "children": []
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "table/dice/dice-1",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/dice",
+        "key:dice-1"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/dice",
+        "key": "dice-1",
+        "options": {}
+      },
+      "expected": {
+        "table": "acme.portable/table/dice",
+        "entry": "high",
+        "total": 11,
+        "dice": [
+          5,
+          6
+        ],
+        "text": "high",
+        "children": []
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "table/combo",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/combo",
+        "key:combo-0"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/combo",
+        "key": "combo-0",
+        "options": {}
+      },
+      "expected": {
+        "table": "acme.portable/table/combo",
+        "entry": "combo",
+        "text": "wind / Restless tide / Quiet Wake",
+        "children": [
+          {
+            "table": "acme.portable/table/weather",
+            "entry": "wind",
+            "text": "wind",
+            "children": []
+          }
+        ]
+      }
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "markov/markov-0",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/markov",
+        "key:markov-0"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/markov",
+        "key": "markov-0",
+        "options": {}
+      },
+      "expected": "sea"
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "markov/markov-1",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/markov",
+        "key:markov-1"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/markov",
+        "key": "markov-1",
+        "options": {}
+      },
+      "expected": ""
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "markov/markov-2",
+      "engine": "portable-pack-v1",
+      "pack": {
+        "id": "acme.portable",
+        "version": "1.0.0",
+        "hash": "df494dcec0fb316ba7b874787c258d93ac9cb0a2a2cc3d8c0ad7b95439af5d6b",
+        "manifestHash": "c17ba1e43f32c446505d0c98d3a3cd127a61ed569b4f873c79f55b1387e8b61b"
+      },
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/markov",
+        "key:markov-2"
+      ],
+      "input": {
+        "generator": "acme.portable/generator/markov",
+        "key": "markov-2",
+        "options": {}
+      },
+      "expected": "sol"
+    },
+    {
+      "schema": "lexiconlang.n1.vectors/v1",
+      "id": "independence/sibling-traversal",
+      "engine": "portable-rng-v1",
+      "seed": "n1-portable-seed",
+      "path": [
+        "generator:acme.portable/generator/omen",
+        "key:independent"
+      ],
+      "input": {
+        "siblingForks": 20
+      },
+      "expected": {
+        "draws": [
+          2498316151,
+          1020795631,
+          1369761434,
+          2156617264,
+          4220888943,
+          1301161733,
+          1781526636,
+          26763674
+        ],
+        "afterTraversal": [
+          2498316151,
+          1020795631,
+          1369761434,
+          2156617264,
+          4220888943,
+          1301161733,
+          1781526636,
+          26763674
+        ]
+      }
+    }
+  ]
+}
