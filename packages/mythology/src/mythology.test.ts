@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { createContext } from "@lexiconlang/core";
+import { createContext, type Generator } from "@lexiconlang/core";
 import { validatePack } from "@lexiconlang/packs";
+import type { TableRoll } from "@lexiconlang/packs";
 import packJson from "../data/mythology.pack.json" with { type: "json" };
 import {
   generators,
@@ -64,10 +65,49 @@ describe("mythology declarative pack", () => {
     }
   });
 
-  it("keeps sibling order independent via stable child keys", () => {
-    const a = mythology.withSeed("sibling-proof");
-    const b = mythology.withSeed("sibling-proof");
-    expect(a.person()).toEqual(b.person());
+  it("keeps sibling order independent via per-method child keys", () => {
+    const reference = mythology.withSeed("sibling-proof");
+    const baseline = reference.person();
+    // Interleaving and repeating other calls must not shift person()'s stream.
+    const shuffled = mythology.withSeed("sibling-proof");
+    shuffled.deity();
+    shuffled.mythHook();
+    shuffled.person();
+    shuffled.epithet();
+    expect(shuffled.person()).toEqual(reference.person());
+    expect(shuffled.person()).not.toEqual(baseline); // second call advances only person's counter
+    const fresh = mythology.withSeed("sibling-proof");
+    expect(fresh.person()).toEqual(baseline);
+  });
+
+  it("aligns manifest name generators with the facade's all-culture banks", () => {
+    const pan = pack.cultures.find((c) => c.id === "lexiconlang.mythology/culture/pan-mythic");
+    expect(pan).toBeDefined();
+    for (const [kind, key] of [["given", "form"], ["surname", "form"], ["settlement", "form"], ["deity", "form"], ["epithet", "form"]] as const) {
+      const merged = pan?.templates?.[kind] ?? [];
+      const split = pack.cultures
+        .filter((c) => c.id !== pan?.id)
+        .flatMap((c) => c.templates?.[kind] ?? []);
+      expect(merged.length).toBe(split.length);
+      expect(merged.map((c) => (c.value.kind === "literal" ? c.value[key] : ""))).toEqual(
+        split.map((c) => (c.value.kind === "literal" ? c.value[key] : "")),
+      );
+    }
+    for (const id of ["person-name", "place-name", "cultural-deity-name", "cultural-epithet"]) {
+      const descriptor = pack.generators.find((g) => g.id === `lexiconlang.mythology/generator/${id}`);
+      expect(descriptor).toMatchObject({ engine: "name-v1", culture: pan?.id });
+    }
+  });
+
+  it("uses culture-specific deity and epithet banks", () => {
+    const seen = new Set<string>();
+    for (let i = 0; i < 100; i++) {
+      const cultural = mythology.withSeed(`cultural-${i}`).culturalDeity();
+      expect(cultural.translation.length).toBeGreaterThan(0);
+      seen.add(cultural.form);
+    }
+    expect(seen.size).toBeGreaterThanOrEqual(60);
+    expect(mythology.withSeed("x").culturalEpithet().form.length).toBeGreaterThan(0);
   });
 
   it("gives >=60% distinct results over 100 rolls for every string generator", () => {

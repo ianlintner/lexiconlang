@@ -72,7 +72,7 @@ export interface PersonName extends GlossedName {
   surname: GlossedName;
 }
 
-const cultures = pack.cultures;
+const cultures = pack.cultures.filter((c) => !c.id.endsWith("/pan-mythic"));
 const culturePicker: Generator<(typeof cultures)[number]> = oneOf(...cultures);
 
 function literalPicker(
@@ -133,6 +133,22 @@ export const placeName: Generator<GlossedName> = {
   },
 };
 
+/** A glossed form from a culture-specific template bank. */
+function culturalForm(kind: string, key: string, id: string): Generator<GlossedName> {
+  return {
+    id,
+    generate(ctx: Context) {
+      const culture = culturePicker.generate(ctx.child("culture"));
+      return literalPicker(culture, kind, key).generate(ctx.child(key));
+    },
+  };
+}
+
+/** Invented divine name drawn from a naming style's deity bank. */
+export const culturalDeityName = culturalForm("deity", "deity", `${PREFIX}/generator/cultural-deity-name`);
+/** Divine epithet drawn from a naming style's epithet bank. */
+export const culturalEpithet = culturalForm("epithet", "epithet", `${PREFIX}/generator/cultural-epithet`);
+
 // ─── Public generators ───────────────────────────────────────────────────
 
 export const deityName: Generator<string> = grammars.deity;
@@ -145,10 +161,8 @@ export const monsterName: Generator<string> = grammars.monster;
 export const factionName: Generator<string> = grammars.faction;
 
 const tableGenerators: Readonly<Record<string, Generator<string>>> = {
-  [`${PREFIX}/generator/deity`]: grammars.deity,
   [`${PREFIX}/generator/pantheon`]: grammars.pantheon,
-  [`${PREFIX}/generator/epithet`]: grammars.epithet,
-  [`${PREFIX}/generator/myth`]: grammars.myth,
+  [`${PREFIX}/generator/myth-title`]: grammars.myth,
   [`${PREFIX}/generator/holy-site`]: grammars["holy-site"],
   [`${PREFIX}/generator/artifact`]: grammars.artifact,
   [`${PREFIX}/generator/monster`]: grammars.monster,
@@ -193,8 +207,10 @@ export const generators = {
   personName,
   placeName,
   deityName,
+  culturalDeityName,
   pantheonName,
   epithet,
+  culturalEpithet,
   mythTitle,
   holySiteName,
   artifactName,
@@ -212,8 +228,10 @@ export interface MythologyAPI {
   person(): PersonName;
   place(): GlossedName;
   deity(): string;
+  culturalDeity(): GlossedName;
   pantheon(): string;
   epithet(): string;
+  culturalEpithet(): GlossedName;
   myth(): string;
   holySite(): string;
   artifact(): string;
@@ -238,14 +256,21 @@ export const mythology: MythologyEntry = {
   pack,
   withSeed(seed: Seed): MythologyAPI {
     const root = createContext({ seed });
-    let counter = 0;
-    const sub = (label: string) => root.child(`${label}:${counter++}`);
+    const counts = new Map<string, number>();
+    // Per-method counters: one generator's calls never shift another's stream.
+    const sub = (label: string) => {
+      const n = counts.get(label) ?? 0;
+      counts.set(label, n + 1);
+      return root.child(`${label}:${n}`);
+    };
     return {
       person: () => personName.generate(sub("person")),
       place: () => placeName.generate(sub("place")),
       deity: () => deityName.generate(sub("deity")),
+      culturalDeity: () => culturalDeityName.generate(sub("cultural-deity")),
       pantheon: () => pantheonName.generate(sub("pantheon")),
       epithet: () => epithet.generate(sub("epithet")),
+      culturalEpithet: () => culturalEpithet.generate(sub("cultural-epithet")),
       myth: () => mythTitle.generate(sub("myth")),
       holySite: () => holySiteName.generate(sub("holy-site")),
       artifact: () => artifactName.generate(sub("artifact")),

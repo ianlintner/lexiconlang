@@ -19,26 +19,30 @@ import { mythology } from "@lexiconlang/mythology";
 
 const m = mythology.withSeed("old-oak");
 console.log(m.person());
-// { form: "Frodi Finnson", translation: "wise one, son of Finn",
-//   cultureId: "lexiconlang.mythology/culture/norse", ... }
+// { form: "Llalli Chicomecoatl", translation: "earth, seven serpent",
+//   cultureId: "lexiconlang.mythology/culture/mesoamerican", ... }
 
-console.log(m.place());    // { form: "Tlacaelle", translation: "the great heart" }
-console.log(m.deity());    // "Thorn Ankh"
-console.log(m.pantheon()); // "the Salt Maintain company"
-console.log(m.epithet());  // "the Cold-Flying"
-console.log(m.myth());     // "the punishment of Tzin"
-console.log(m.holySite()); // "the Silent orchard"
-console.log(m.artifact()); // "the Laughing Anvil"
-console.log(m.monster());  // "the Salt Wraith"
-console.log(m.faction());  // "the First Reapers"
-console.log(m.mythHook().text);   // "A sacred tree withers on the day its keeper lies."
-console.log(m.rite().text);       // "A small clay boat is floated downstream..."
-console.log(m.relicPower().text); // "It protects its bearer from one act of betrayal."
-console.log(m.omen().text);       // "A mirror clouds over from the inside."
+console.log(m.place());    // { form: "Nekhen", translation: "the vulture town" }
+console.log(m.deity());    // "Nor Dike"
+console.log(m.pantheon()); // "the family of Lysaker"
+console.log(m.epithet());  // "the Keeping of the Feast"
+console.log(m.myth());     // "the burning grove at Dalar"
+console.log(m.holySite()); // "the ruin at Petraea"
+console.log(m.artifact()); // "the Hollow Ring"
+console.log(m.monster());  // "the Bone Wend"
+console.log(m.faction());  // "the lantern Order"
+console.log(m.mythHook().text);   // "An old king bargains for one more harvest."
+console.log(m.rite().text);       // "A small clay boat is floated downstream carrying a written regret."
+console.log(m.relicPower().text); // "It grants one night of untroubled sleep."
+console.log(m.omen().text);       // "Someone in the household dreams of a locked door."
+console.log(m.culturalDeity());   // { form: "kratos", translation: "invented divine name" }
+console.log(m.culturalEpithet()); // { form: "Many-Counselled", translation: "of many counsels" }
 ```
 
-Every method in `withSeed(seed)` draws from a stable child context: same seed and
+Every method in `withSeed(seed)` draws from a per-method child context: same seed and
 call sequence ⇒ same output, and adding a generator never shifts existing ones.
+`deity()` and `epithet()` use the pan-cultural grammars; `culturalDeity()` and
+`culturalEpithet()` draw from each naming style's own deity/epithet banks.
 
 ## Generators
 
@@ -47,8 +51,10 @@ call sequence ⇒ same output, and adding a generator never shifts existing ones
 | `person()` | Given + surname with glosses and naming-style id |
 | `place()` | Settlement name with gloss |
 | `deity()` | Invented divine name |
+| `culturalDeity()` | Glossed divine name from a naming style |
 | `pantheon()` | Divine family or council name |
 | `epithet()` | Divine or heroic epithet |
+| `culturalEpithet()` | Glossed epithet from a naming style |
 | `myth()` | Myth / legend title |
 | `holySite()` | Shrine, grove or spring name |
 | `artifact()` | Legendary artifact name |

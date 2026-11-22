@@ -7,7 +7,7 @@ this package is a thin typed facade over that manifest.
 **Framing:** every culture is *inspired by* a language family or historical naming
 style and is deliberately fictionalised. No content is a reconstruction of a real
 religion, no living person is named, and no trademarked or setting-specific IP is
-used. See [PROVENANCE.md](./PROVENANCE.md).
+used. See [PROVENANCE.md](./data/PROVENANCE.md).
 
 ## Install
 
@@ -21,17 +21,18 @@ pnpm add @lexiconlang/mythology
 import { mythology } from "@lexiconlang/mythology";
 
 const m = mythology.withSeed("old-oak");
-console.log(m.person());   // { form: "Frodi Finnson", translation: "wise one, son of Finn", ... }
-console.log(m.place());    // { form: "Tlacaelle", translation: "the great heart" }
-console.log(m.deity());    // "Thorn Ankh"
-console.log(m.pantheon()); // "the Salt Maintain company"
-console.log(m.myth());     // "the punishment of Tzin"
-console.log(m.omen());     // { entry: "mirror", text: "A mirror clouds over from the inside.", ... }
+console.log(m.person());   // { form: "Llalli Chicomecoatl", translation: "earth, seven serpent", ... }
+console.log(m.place());    // { form: "Nekhen", translation: "the vulture town" }
+console.log(m.deity());    // "Nor Dike"
+console.log(m.pantheon()); // "the family of Lysaker"
+console.log(m.myth());     // "the burning grove at Dalar"
+console.log(m.omen());     // { entry: "dream", text: "Someone in the household dreams of a locked door.", ... }
 ```
 
-Every call in `withSeed(seed)` draws from a stable child context, so the same seed
-and call sequence always produce the same output, and adding a new generator does
-not change existing results.
+Every call in `withSeed(seed)` draws from its own child context, so the same seed
+and call sequence always produce the same output, and adding a generator does not
+change existing results. `deity()`/`epithet()` use pan-cultural grammars;
+`culturalDeity()`/`culturalEpithet()` draw from each naming style's own banks.
 
 ## Generators
 
@@ -39,9 +40,11 @@ not change existing results.
 | --- | --- | --- |
 | `person()` | `personName` | Given + surname with glosses and `cultureId` |
 | `place()` | `placeName` | Settlement name with gloss |
-| `deity()` | `deityName` | Invented deity name |
+| `deity()` | `deityName` | Invented deity name (grammar) |
+| `culturalDeity()` | `culturalDeityName` | Glossed divine name from a naming style |
 | `pantheon()` | `pantheonName` | Divine family / council name |
-| `epithet()` | `epithet` | Divine or heroic epithet |
+| `epithet()` | `epithet` | Divine or heroic epithet (grammar) |
+| `culturalEpithet()` | `culturalEpithet` | Glossed epithet from a naming style |
 | `myth()` | `mythTitle` | Myth or legend title |
 | `holySite()` | `holySiteName` | Shrine / grove / spring name |
 | `artifact()` | `artifactName` | Legendary artifact name |
@@ -69,7 +72,9 @@ Five cultures ship, each with at least 24 given names, 24 surnames/epithets and
 
 `riverland` and `mesoamerican` are self-contained because the corresponding base
 packs have not merged yet; their names are original fiction, not reconstructed
-historical forms.
+historical forms. The manifest also declares a `pan-mythic` culture whose template
+banks concatenate all five styles; it backs the manifest's all-culture name
+generators and matches the facade's selection pool.
 
 ## License
 

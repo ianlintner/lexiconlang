@@ -16,8 +16,7 @@
   "files": [
     "dist",
     "data",
-    "README.md",
-    "PROVENANCE.md"
+    "README.md"
   ],
   "sideEffects": false,
   "scripts": {

@@ -20,9 +20,11 @@ historical naming conventions:
 
 Every form is invented; glosses describe the invented elements, not attested
 historical meanings. No name is claimed to be an authentic deity name, historical
-figure, liturgical formula or sacred/restricted name. Names resembling real
-mythological figures or places were deliberately altered (for example `Thor` → `Thorn`,
-`Quetzalcoatl` → `Quetzlcoatl`, `Karnak` → `Karnakh`).
+figure, liturgical formula or sacred/restricted name. The `pan-mythic` culture
+concatenates the five banks so the manifest's all-culture name generators match
+the facade's selection pool. Names resembling real mythological figures or places
+were deliberately altered (for example `Thor` → `Vorn`, `Karnak` → `Karnavet`,
+`Quetzalcoatl` → `Quetzlcoatl`).
 
 ## Sensitivity
 

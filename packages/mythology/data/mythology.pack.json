@@ -12,8 +12,8 @@
       "title": "Synthetic mythology and pantheon data",
       "creator": "LexiconLang contributors",
       "license": "CC0-1.0",
-      "attribution": "All names, stems, glosses, grammars, tables and text are original fictional content authored for LexiconLang. No deity names from living traditions, no real people, trademarks or setting-specific IP; no third-party corpora used.",
-      "modifications": "None",
+      "attribution": "All names, stems, glosses, grammars, tables and text are original fictional content authored for LexiconLang. No deity names from living traditions, no real people, trademarks or setting-specific IP; no third-party corpora used. Forms resembling historical names were deliberately altered (for example Thor -> Vorn, Karnak -> Karnavet, Quetzalcoatl -> Quetzlcoatl).",
+      "modifications": "Original invented content; no external source",
       "files": [
         "data/mythology.pack.json",
         "data/PROVENANCE.md"
@@ -1092,7 +1092,7 @@
             "value": {
               "kind": "literal",
               "form": "Thorvald",
-              "translation": "Thorn-valley ruler"
+              "translation": "Vorn-valley ruler"
             },
             "weight": 1
           },
@@ -3241,7 +3241,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Karnakh",
+              "form": "Karnavet",
               "translation": "the fortified town"
             },
             "weight": 1
@@ -3361,7 +3361,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Herakleon",
+              "form": "Herastor",
               "translation": "the city of the lion-hero"
             },
             "weight": 1
@@ -3741,7 +3741,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Huitzli",
+              "form": "Xitzli",
               "translation": "hummingbird"
             },
             "weight": 1
@@ -3927,7 +3927,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Huitzil",
+              "form": "Xitzil",
               "translation": "hummingbird"
             },
             "weight": 1
@@ -4063,7 +4063,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Tezcatl",
+              "form": "Teczal",
               "translation": "dark mirror"
             },
             "weight": 1
@@ -4193,7 +4193,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Quetzaltenko",
+              "form": "Quetzeltenko",
               "translation": "place of the quetzal"
             },
             "weight": 1
@@ -4604,6 +4604,4502 @@
           }
         ]
       }
+    },
+    {
+      "id": "lexiconlang.mythology/culture/pan-mythic",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aletheia",
+              "translation": "truth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Asterion",
+              "translation": "star-bearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Callias",
+              "translation": "beautiful dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dorimene",
+              "translation": "gift of the sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elphenor",
+              "translation": "hopeful strength"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Erythra",
+              "translation": "red dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Galene",
+              "translation": "calm sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hesperon",
+              "translation": "of the evening star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ianthe",
+              "translation": "violet bloom"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kallistos",
+              "translation": "most lovely"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lyriadne",
+              "translation": "lyric crown"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meleas",
+              "translation": "song-apple"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nerissa",
+              "translation": "sea-born"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orphalia",
+              "translation": "dawn-voice"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pandemos",
+              "translation": "all-peoples"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quirion",
+              "translation": "lord of quests"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rhaphe",
+              "translation": "flowing speech"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Selinor",
+              "translation": "moon-gift"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thalassa",
+              "translation": "sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ilythra",
+              "translation": "she who brings light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xanthion",
+              "translation": "golden-haired"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zephyra",
+              "translation": "west wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aetheris",
+              "translation": "bright sky"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chryseis",
+              "translation": "golden prize"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Alvar",
+              "translation": "elf guardian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bjorn",
+              "translation": "bear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dagfinn",
+              "translation": "day-finder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eirik",
+              "translation": "ever-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Frodi",
+              "translation": "wise one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gunnar",
+              "translation": "battle-bold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hakon",
+              "translation": "high kin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ingolf",
+              "translation": "Ing's wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jorund",
+              "translation": "earth-runner"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ketil",
+              "translation": "kettle-helmet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leif",
+              "translation": "heir"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Megin",
+              "translation": "strength"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Njal",
+              "translation": "burning one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oddr",
+              "translation": "spear-point"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ragnar",
+              "translation": "counsel-warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sigrid",
+              "translation": "victory-strength"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorvald",
+              "translation": "Vorn-valley ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulf",
+              "translation": "wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vidar",
+              "translation": "wide-ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yngve",
+              "translation": "young lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Astrid",
+              "translation": "star-strife"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brunhild",
+              "translation": "armour-battle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hilde",
+              "translation": "battle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Solveig",
+              "translation": "sun-strength"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aedan",
+              "translation": "little fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bairre",
+              "translation": "spear-like"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ciaran",
+              "translation": "dark one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dara",
+              "translation": "oak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elowen",
+              "translation": "elm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fergus",
+              "translation": "man's strength"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gwenn",
+              "translation": "blessed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iseult",
+              "translation": "fair one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lorcan",
+              "translation": "fierce little one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mairead",
+              "translation": "exalted one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Niamha",
+              "translation": "bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oisin",
+              "translation": "little deer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Padraig",
+              "translation": "noble one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Riaghan",
+              "translation": "little king"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sadhbh",
+              "translation": "sweet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tadhg",
+              "translation": "poet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Uallach",
+              "translation": "proud"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bran",
+              "translation": "raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Deirdre",
+              "translation": "sorrowful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fintan",
+              "translation": "white one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gwynn",
+              "translation": "white hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mabon",
+              "translation": "young one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nessa",
+              "translation": "not gentle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Taliesin",
+              "translation": "shining brow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amnera",
+              "translation": "sun is hidden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Basthet",
+              "translation": "she of the cat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Djehru",
+              "translation": "ibis one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Horem",
+              "translation": "the falcon is strong"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iseta",
+              "translation": "she who is"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kheperi",
+              "translation": "becoming one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Maatkor",
+              "translation": "truth is the heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nebaman",
+              "translation": "lord of the hidden one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Osiryun",
+              "translation": "of the underworld lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ptahem",
+              "translation": "the maker is with us"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ramsu",
+              "translation": "son of the sun"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Setna",
+              "translation": "of the desert"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thumose",
+              "translation": "born of the scribe-star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wadjit",
+              "translation": "green one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yamun",
+              "translation": "of the sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zanakht",
+              "translation": "strong of arm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ahmose",
+              "translation": "born of the moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bener",
+              "translation": "sweet one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Djedhor",
+              "translation": "the falcon is firm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Henuttawy",
+              "translation": "mistress of two shores"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Imhetep",
+              "translation": "he who comes in peace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Khaemwaset",
+              "translation": "appearing in the southern city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meret",
+              "translation": "beloved"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neferu",
+              "translation": "beautiful one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Atzin",
+              "translation": "water-honored"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cihuaton",
+              "translation": "little woman"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dann",
+              "translation": "obsidian-born"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ehecatl",
+              "translation": "wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flora",
+              "translation": "flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xitzli",
+              "translation": "hummingbird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Itzli",
+              "translation": "obsidian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kalton",
+              "translation": "house-honored"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Llalli",
+              "translation": "earth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Malin",
+              "translation": "maize"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nahui",
+              "translation": "four"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ollin",
+              "translation": "motion"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Papatl",
+              "translation": "dream-flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quetzli",
+              "translation": "feather"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rain",
+              "translation": "sky-water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sacatl",
+              "translation": "reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tlalli",
+              "translation": "the earth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulm",
+              "translation": "rubber"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Veinte",
+              "translation": "twenty"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xochitl",
+              "translation": "flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yolli",
+              "translation": "heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zacatl",
+              "translation": "grass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amatl",
+              "translation": "paper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cacatl",
+              "translation": "cacao"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Asterides",
+              "translation": "born of stars"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Briareos",
+              "translation": "strong one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chalcon",
+              "translation": "bronze-hearted"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dyssin",
+              "translation": "of the west wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elaios",
+              "translation": "olive-bearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Galanthos",
+              "translation": "milk-bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halcyon",
+              "translation": "calm-sea bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iapetos",
+              "translation": "arrow-singer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Klymenos",
+              "translation": "renowned"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lysander",
+              "translation": "liberator of men"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Melissos",
+              "translation": "honeyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nemeon",
+              "translation": "of the grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Olenios",
+              "translation": "of the hollow hills"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Praxidike",
+              "translation": "doer of justice"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rhodos",
+              "translation": "rose island"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sophron",
+              "translation": "self-controlled"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Telamon",
+              "translation": "far-spanning"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thalpios",
+              "translation": "sea-nurtured"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xanthos",
+              "translation": "golden one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zoryon",
+              "translation": "dawn-bound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Agenor",
+              "translation": "leader of the people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eupheme",
+              "translation": "well-spoken"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kairon",
+              "translation": "season's moment"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Palladia",
+              "translation": "of the spear maiden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Andersson",
+              "translation": "son of Anders"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bjornson",
+              "translation": "son of the bear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dagsson",
+              "translation": "day's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eiriksdottir",
+              "translation": "daughter of Eirik"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Finnson",
+              "translation": "son of Finn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gunnarsdottir",
+              "translation": "Gunnar's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hakonson",
+              "translation": "son of Hakon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jonsdottir",
+              "translation": "Jon's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ketilson",
+              "translation": "Ketil's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leifsdottir",
+              "translation": "Leif's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Njalsson",
+              "translation": "Njal's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oddsdottir",
+              "translation": "Odd's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ragnarsson",
+              "translation": "Ragnar's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sigurdsson",
+              "translation": "Sigurd's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorvalsdotter",
+              "translation": "Thorvald's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulfsson",
+              "translation": "Ulf's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vidarsdottir",
+              "translation": "Vidar's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yngvesson",
+              "translation": "Yngve's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Astridsdottir",
+              "translation": "Astrid's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bjornsdottir",
+              "translation": "Bjorn's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hildsson",
+              "translation": "Hild's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Solveigsson",
+              "translation": "Solveig's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stenerson",
+              "translation": "stone's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Svensdottir",
+              "translation": "Sven's daughter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Broin",
+              "translation": "descendant of the raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Aodha",
+              "translation": "son of fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ni Dhomhnaill",
+              "translation": "daughter of the lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Siochain",
+              "translation": "descendant of peace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Cathail",
+              "translation": "son of the battle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Maolain",
+              "translation": "descendant of the chief"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ni Bhroin",
+              "translation": "daughter of the raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Fergusa",
+              "translation": "son of Fergus"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O hAodha",
+              "translation": "descendant of Aodh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Lochlainn",
+              "translation": "son of the lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Neill",
+              "translation": "descendant of Neill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ni Mhaolain",
+              "translation": "daughter of the chief"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Raghnaill",
+              "translation": "son of Raghnall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Suilleabhain",
+              "translation": "descendant of the eye"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Tigernaigh",
+              "translation": "son of the lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O hEire",
+              "translation": "descendant of Eire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ni Chonail",
+              "translation": "daughter of Conall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Dara",
+              "translation": "son of the oak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Fearghail",
+              "translation": "descendant of valour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Fionntain",
+              "translation": "son of Fintan"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O Corrain",
+              "translation": "descendant of the spear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ni Ghallda",
+              "translation": "daughter of the stranger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mac Murchadha",
+              "translation": "son of the sea-hunter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "O hOgain",
+              "translation": "descendant of the young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ankhu",
+              "translation": "living one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Baket",
+              "translation": "servant"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Djehutynakht",
+              "translation": "the ibis is strong"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hapuseneb",
+              "translation": "the flood is healthy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ipuwer",
+              "translation": "the river speaks"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Khaemhet",
+              "translation": "he who appears in the horizon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mehre",
+              "translation": "sailor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nakhtaman",
+              "translation": "the hidden one is strong"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Paser",
+              "translation": "the southern one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Renutet",
+              "translation": "nursing serpent"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Seneb",
+              "translation": "healthy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tjay",
+              "translation": "the scribe"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Userhat",
+              "translation": "strong of face"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wenaman",
+              "translation": "the hidden one is with us"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yuf",
+              "translation": "the wanderer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zez",
+              "translation": "the wise one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ankhnes",
+              "translation": "she who lives"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Baketwerel",
+              "translation": "great servant"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dedu",
+              "translation": "the firm one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Henu",
+              "translation": "the praised one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ipuy",
+              "translation": "the revered one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kheti",
+              "translation": "the one of Khet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Merytnaith",
+              "translation": "beloved of the weaver"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sisobek",
+              "translation": "son of the river-keeper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Atl",
+              "translation": "water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cihuatl",
+              "translation": "woman-serpent"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tlalok",
+              "translation": "rain keeper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quetzlcoatl",
+              "translation": "feathered serpent"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xitzil",
+              "translation": "hummingbird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Itzkoatl",
+              "translation": "obsidian serpent"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Malinalli",
+              "translation": "maize grass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ollin",
+              "translation": "movement"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Papatzin",
+              "translation": "honored reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xochitl",
+              "translation": "flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yolotl",
+              "translation": "heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zacatlan",
+              "translation": "place of grass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amatlan",
+              "translation": "place of paper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cacahuatl",
+              "translation": "cacao"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ehecatl",
+              "translation": "wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tlaltzin",
+              "translation": "earth lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chicomecoatl",
+              "translation": "seven serpent"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinteotl",
+              "translation": "maize spirit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mictlan",
+              "translation": "land of the dead"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nanahuatl",
+              "translation": "the pustuled one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Omacatl",
+              "translation": "two-reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Teczal",
+              "translation": "dark mirror"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tonatiuh",
+              "translation": "bright sun"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xiuhmolpilli",
+              "translation": "year bundle"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aetherai",
+              "translation": "sky-place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Briarpolis",
+              "translation": "bramble city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chalkidon",
+              "translation": "bronze hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dawnhaven",
+              "translation": "dawn harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elaiavos",
+              "translation": "olive grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Galyssos",
+              "translation": "milk river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halcyon Bay",
+              "translation": "calm-sea bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ilieron",
+              "translation": "sacred hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kallidora",
+              "translation": "beautiful gift"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lyrkentos",
+              "translation": "song-point"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Myrtheon",
+              "translation": "myrtle place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nysos",
+              "translation": "wooded height"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orithyia",
+              "translation": "mountain-gale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Petraea",
+              "translation": "rocky land"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rhodanthe",
+              "translation": "rose-flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Selinunte",
+              "translation": "moon town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thalassos",
+              "translation": "sea-town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iolcos",
+              "translation": "ship haven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xanthoros",
+              "translation": "golden stream"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zephyros",
+              "translation": "west-wind place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Akanthos",
+              "translation": "thorn town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eretria",
+              "translation": "oarsman's shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Korythos",
+              "translation": "helmet hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pylaea",
+              "translation": "gateway land"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Askvoll",
+              "translation": "ash-field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bjordal",
+              "translation": "bear valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dalar",
+              "translation": "valleys"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eikheim",
+              "translation": "oak home"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fjellvik",
+              "translation": "mountain bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gullfjord",
+              "translation": "gold fjord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Havnestad",
+              "translation": "sea-haven stead"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isafell",
+              "translation": "ice-fell"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jarnvik",
+              "translation": "iron bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kaldal",
+              "translation": "cold valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lysaker",
+              "translation": "light-field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Myrheim",
+              "translation": "mire home"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nordfjord",
+              "translation": "north fjord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Osset",
+              "translation": "river-mouth stead"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ravenskar",
+              "translation": "raven skerry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Saltvik",
+              "translation": "salt bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skogar",
+              "translation": "forests"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stenstad",
+              "translation": "stone stead"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Trollheim",
+              "translation": "troll home"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ullsfjord",
+              "translation": "Ull's fjord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vatnvik",
+              "translation": "lake bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ytreholm",
+              "translation": "outer isle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Asheim",
+              "translation": "ridge home"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bergen",
+              "translation": "mountain meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ardmore",
+              "translation": "great height"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ballymore",
+              "translation": "big town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cloncarra",
+              "translation": "wood of the wren"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunmore",
+              "translation": "great fort"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emmore",
+              "translation": "great ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Galbally",
+              "translation": "rough town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Inisheer",
+              "translation": "island of the north"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kilkenny",
+              "translation": "church of the wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lisbriar",
+              "translation": "fort of the brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mullingar",
+              "translation": "bare plain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Navan",
+              "translation": "little fort"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Omagh",
+              "translation": "plain of the elms"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Portumna",
+              "translation": "port of the oak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rathmore",
+              "translation": "great rampart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sligo",
+              "translation": "abundance of shells"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tullamore",
+              "translation": "great hillock"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ennis",
+              "translation": "island"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fermoy",
+              "translation": "place of the yew"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gort",
+              "translation": "field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kinsale",
+              "translation": "head of the sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Limerick",
+              "translation": "bare place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mallow",
+              "translation": "plain of the hazels"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nenagh",
+              "translation": "little nest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Trim",
+              "translation": "edge of the plain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amunher",
+              "translation": "the hidden one is foremost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Basht",
+              "translation": "bastion"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Denderet",
+              "translation": "the holder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Edaphu",
+              "translation": "the pillared town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Faiyum",
+              "translation": "the lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gizra",
+              "translation": "the edge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Helionpol",
+              "translation": "sun city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iunu",
+              "translation": "the pillar"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Karnavet",
+              "translation": "the fortified town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lukshar",
+              "translation": "the palace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Memphes",
+              "translation": "the beautiful place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nekhen",
+              "translation": "the vulture town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "On",
+              "translation": "the pillar"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pelusium",
+              "translation": "the muddy one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qus",
+              "translation": "the high hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rosetta",
+              "translation": "the river mouth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sais",
+              "translation": "the storehouse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tanis",
+              "translation": "the lowland"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thebai",
+              "translation": "the bow town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Umm el-Gaab",
+              "translation": "mother of jars"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wadi Hammat",
+              "translation": "valley of baths"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Abydon",
+              "translation": "the ancient hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Esna",
+              "translation": "the island"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Herastor",
+              "translation": "the city of the lion-hero"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Atlixco",
+              "translation": "place of water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Calixtlahuaca",
+              "translation": "small house"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dzibilchaltun",
+              "translation": "written stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ecatepec",
+              "translation": "wind mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Florence",
+              "translation": "flowering place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Guaymas",
+              "translation": "the big house"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ixtapan",
+              "translation": "salt place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jalisco",
+              "translation": "sand place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lerma",
+              "translation": "the marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mitla",
+              "translation": "place of the dead"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nahuatlan",
+              "translation": "place of the Nahuatl tongue"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oaxaca",
+              "translation": "the gourd place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Palenke",
+              "translation": "the painted house"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quetzeltenko",
+              "translation": "place of the quetzal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rinkonada",
+              "translation": "corner place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sacatecas",
+              "translation": "place of the grass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tlacaelle",
+              "translation": "the great heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Uxmal",
+              "translation": "the thrice-built"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Veracruz",
+              "translation": "true cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xochimilco",
+              "translation": "place of the flower field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yagul",
+              "translation": "the old one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zacatepec",
+              "translation": "grass mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chalco",
+              "translation": "place of jade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tepoztlan",
+              "translation": "place of the hard stone"
+            },
+            "weight": 1
+          }
+        ],
+        "deity": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "nike",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "dike",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sophia",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "kratos",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "phos",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "thalassa",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "aion",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "charis",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "eris",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "harmonia",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "metis",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "pneuma",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "stasis",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tycha",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "logos",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "eros",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "nomos",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "poiesis",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "soma",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "psyche",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "vind",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sjo",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "fjall",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "eld",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "is",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "skog",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "mal",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sverd",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "hjort",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "bjorn",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "orn",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sver",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "troll",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "run",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "saga",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "helm",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "gull",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "blot",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "varg",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sól",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "geal",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "dubh",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "ruadh",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "bán",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "fionn",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "donn",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "las",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "cú",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sceach",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "dris",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "linn",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tuath",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "cliú",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "samh",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "geimh",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "eoch",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "grian",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "gaoth",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "dreagan",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "odhr",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "hotep",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "ankh",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "nefer",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "djed",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "was",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tyet",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "scarab",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "ibis",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "croc",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "lotus",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "papyrus",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "horizon",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sun",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sand",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "river",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "vulture",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "cat",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "falcon",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "stele",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "shrine",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "catl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "coatl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tzin",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "lan",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tepec",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "apan",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "mil",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "huatl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "lotl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "mol",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "nalli",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "pitl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "quin",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tec",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tzli",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "xcintli",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "yotl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "zotl",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "miz",
+              "translation": "invented divine name"
+            },
+            "weight": 1
+          }
+        ],
+        "epithet": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright-Eyed",
+              "translation": "bright-eyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Far Shore",
+              "translation": "of the far shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Unyielding",
+              "translation": "unyielding"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Many-Counselled",
+              "translation": "of many counsels"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Storm-Speaker",
+              "translation": "speaker of storms"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Gentle Hand",
+              "translation": "gentle of hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moon-Crowned",
+              "translation": "crowned by the moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keeper of Gates",
+              "translation": "keeper of gates"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Renewer",
+              "translation": "who renews"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Swift-in-Wrath",
+              "translation": "swift to anger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ear of the Grain",
+              "translation": "ear of the grain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Hidden One",
+              "translation": "hidden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lord of the Crossroads",
+              "translation": "lord of crossroads"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lady of the Deep",
+              "translation": "lady of the deep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Dawn-Bringer",
+              "translation": "bringer of dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Thousand Names",
+              "translation": "of a thousand names"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Silver-Tongued",
+              "translation": "silver-tongued"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warden of Bones",
+              "translation": "warden of bones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Ever-Young",
+              "translation": "ever young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Who Weaves the Wind",
+              "translation": "weaver of the wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright-Eyed",
+              "translation": "bright-eyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Far Shore",
+              "translation": "of the far shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Unyielding",
+              "translation": "unyielding"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Many-Counselled",
+              "translation": "of many counsels"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Storm-Speaker",
+              "translation": "speaker of storms"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Gentle Hand",
+              "translation": "gentle of hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moon-Crowned",
+              "translation": "crowned by the moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keeper of Gates",
+              "translation": "keeper of gates"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Renewer",
+              "translation": "who renews"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Swift-in-Wrath",
+              "translation": "swift to anger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ear of the Grain",
+              "translation": "ear of the grain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Hidden One",
+              "translation": "hidden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lord of the Crossroads",
+              "translation": "lord of crossroads"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lady of the Deep",
+              "translation": "lady of the deep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Dawn-Bringer",
+              "translation": "bringer of dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Thousand Names",
+              "translation": "of a thousand names"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Silver-Tongued",
+              "translation": "silver-tongued"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warden of Bones",
+              "translation": "warden of bones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Ever-Young",
+              "translation": "ever young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Who Weaves the Wind",
+              "translation": "weaver of the wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright-Eyed",
+              "translation": "bright-eyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Far Shore",
+              "translation": "of the far shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Unyielding",
+              "translation": "unyielding"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Many-Counselled",
+              "translation": "of many counsels"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Storm-Speaker",
+              "translation": "speaker of storms"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Gentle Hand",
+              "translation": "gentle of hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moon-Crowned",
+              "translation": "crowned by the moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keeper of Gates",
+              "translation": "keeper of gates"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Renewer",
+              "translation": "who renews"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Swift-in-Wrath",
+              "translation": "swift to anger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ear of the Grain",
+              "translation": "ear of the grain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Hidden One",
+              "translation": "hidden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lord of the Crossroads",
+              "translation": "lord of crossroads"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lady of the Deep",
+              "translation": "lady of the deep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Dawn-Bringer",
+              "translation": "bringer of dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Thousand Names",
+              "translation": "of a thousand names"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Silver-Tongued",
+              "translation": "silver-tongued"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warden of Bones",
+              "translation": "warden of bones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Ever-Young",
+              "translation": "ever young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Who Weaves the Wind",
+              "translation": "weaver of the wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright-Eyed",
+              "translation": "bright-eyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Far Shore",
+              "translation": "of the far shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Unyielding",
+              "translation": "unyielding"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Many-Counselled",
+              "translation": "of many counsels"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Storm-Speaker",
+              "translation": "speaker of storms"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Gentle Hand",
+              "translation": "gentle of hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moon-Crowned",
+              "translation": "crowned by the moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keeper of Gates",
+              "translation": "keeper of gates"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Renewer",
+              "translation": "who renews"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Swift-in-Wrath",
+              "translation": "swift to anger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ear of the Grain",
+              "translation": "ear of the grain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Hidden One",
+              "translation": "hidden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lord of the Crossroads",
+              "translation": "lord of crossroads"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lady of the Deep",
+              "translation": "lady of the deep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Dawn-Bringer",
+              "translation": "bringer of dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Thousand Names",
+              "translation": "of a thousand names"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Silver-Tongued",
+              "translation": "silver-tongued"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warden of Bones",
+              "translation": "warden of bones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Ever-Young",
+              "translation": "ever young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Who Weaves the Wind",
+              "translation": "weaver of the wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright-Eyed",
+              "translation": "bright-eyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Far Shore",
+              "translation": "of the far shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Unyielding",
+              "translation": "unyielding"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Many-Counselled",
+              "translation": "of many counsels"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Storm-Speaker",
+              "translation": "speaker of storms"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Gentle Hand",
+              "translation": "gentle of hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moon-Crowned",
+              "translation": "crowned by the moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keeper of Gates",
+              "translation": "keeper of gates"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Renewer",
+              "translation": "who renews"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Swift-in-Wrath",
+              "translation": "swift to anger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ear of the Grain",
+              "translation": "ear of the grain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Hidden One",
+              "translation": "hidden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lord of the Crossroads",
+              "translation": "lord of crossroads"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lady of the Deep",
+              "translation": "lady of the deep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Dawn-Bringer",
+              "translation": "bringer of dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Of the Thousand Names",
+              "translation": "of a thousand names"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Silver-Tongued",
+              "translation": "silver-tongued"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warden of Bones",
+              "translation": "warden of bones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Ever-Young",
+              "translation": "ever young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Who Weaves the Wind",
+              "translation": "weaver of the wind"
+            },
+            "weight": 1
+          }
+        ]
+      }
     }
   ],
   "meaningPacks": [],
@@ -4739,7 +9235,7 @@
               "weight": 1
             },
             {
-              "value": "Huitz",
+              "value": "Xitz",
               "weight": 1
             },
             {
@@ -4967,7 +9463,7 @@
               "weight": 1
             },
             {
-              "value": "Thorn",
+              "value": "Vorn",
               "weight": 1
             },
             {
@@ -5780,7 +10276,7 @@
               "weight": 1
             },
             {
-              "value": "Salt Maintain",
+              "value": "Salt Warden",
               "weight": 1
             },
             {
@@ -6319,7 +10815,7 @@
               "weight": 1
             },
             {
-              "value": "Karnakh",
+              "value": "Karnavet",
               "weight": 1
             },
             {
@@ -6379,7 +10875,7 @@
               "weight": 1
             },
             {
-              "value": "Herakleon",
+              "value": "Herastor",
               "weight": 1
             },
             {
@@ -6435,7 +10931,7 @@
               "weight": 1
             },
             {
-              "value": "Quetzaltenko",
+              "value": "Quetzeltenko",
               "weight": 1
             },
             {
@@ -7627,7 +12123,7 @@
               "weight": 1
             },
             {
-              "value": "Karnakh",
+              "value": "Karnavet",
               "weight": 1
             },
             {
@@ -7687,7 +12183,7 @@
               "weight": 1
             },
             {
-              "value": "Herakleon",
+              "value": "Herastor",
               "weight": 1
             },
             {
@@ -7743,7 +12239,7 @@
               "weight": 1
             },
             {
-              "value": "Quetzaltenko",
+              "value": "Quetzeltenko",
               "weight": 1
             },
             {
@@ -8636,7 +13132,7 @@
               "weight": 1
             },
             {
-              "value": "Karnakh",
+              "value": "Karnavet",
               "weight": 1
             },
             {
@@ -8696,7 +13192,7 @@
               "weight": 1
             },
             {
-              "value": "Herakleon",
+              "value": "Herastor",
               "weight": 1
             },
             {
@@ -8752,7 +13248,7 @@
               "weight": 1
             },
             {
-              "value": "Quetzaltenko",
+              "value": "Quetzeltenko",
               "weight": 1
             },
             {
@@ -9531,7 +14027,7 @@
               "weight": 1
             },
             {
-              "value": "Thorn",
+              "value": "Vorn",
               "weight": 1
             },
             {
@@ -10094,7 +14590,7 @@
               "weight": 1
             },
             {
-              "value": "Karnakh",
+              "value": "Karnavet",
               "weight": 1
             },
             {
@@ -10154,7 +14650,7 @@
               "weight": 1
             },
             {
-              "value": "Herakleon",
+              "value": "Herastor",
               "weight": 1
             },
             {
@@ -10210,7 +14706,7 @@
               "weight": 1
             },
             {
-              "value": "Quetzaltenko",
+              "value": "Quetzeltenko",
               "weight": 1
             },
             {
@@ -11404,25 +15900,25 @@
   "generators": [
     {
       "id": "lexiconlang.mythology/generator/person-name",
-      "description": "Invented personal name from one of five naming styles.",
+      "description": "Invented personal name drawn from all five naming styles.",
       "tags": [
         "person",
         "name"
       ],
       "engine": "name-v1",
-      "culture": "lexiconlang.mythology/culture/hellenic",
+      "culture": "lexiconlang.mythology/culture/pan-mythic",
       "kind": "given",
       "output": "translated-name-v1"
     },
     {
       "id": "lexiconlang.mythology/generator/place-name",
-      "description": "Invented settlement name from one of five naming styles.",
+      "description": "Invented settlement name drawn from all five naming styles.",
       "tags": [
         "place",
         "name"
       ],
       "engine": "name-v1",
-      "culture": "lexiconlang.mythology/culture/hellenic",
+      "culture": "lexiconlang.mythology/culture/pan-mythic",
       "kind": "settlement",
       "output": "translated-name-v1"
     },
@@ -11551,6 +16047,30 @@
       "engine": "table-v1",
       "table": "lexiconlang.mythology/table/divine-omen",
       "output": "table-roll-v1"
+    },
+    {
+      "id": "lexiconlang.mythology/generator/cultural-deity-name",
+      "description": "Invented divine name drawn from all five naming-style deity banks.",
+      "tags": [
+        "deity",
+        "name"
+      ],
+      "engine": "name-v1",
+      "culture": "lexiconlang.mythology/culture/pan-mythic",
+      "kind": "deity",
+      "output": "translated-name-v1"
+    },
+    {
+      "id": "lexiconlang.mythology/generator/cultural-epithet",
+      "description": "Divine epithet drawn from all five naming-style epithet banks.",
+      "tags": [
+        "epithet",
+        "title"
+      ],
+      "engine": "name-v1",
+      "culture": "lexiconlang.mythology/culture/pan-mythic",
+      "kind": "epithet",
+      "output": "translated-name-v1"
     }
   ]
 }
