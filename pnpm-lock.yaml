@@ -62,6 +62,9 @@ importers:
       '@lexiconlang/scifi':
         specifier: workspace:*
         version: link:../packages/scifi
+      '@lexiconlang/steampunk':
+        specifier: workspace:*
+        version: link:../packages/steampunk
     devDependencies:
       tsx:
         specifier: ^4.23.15
@@ -206,6 +209,18 @@ importers:
       '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
+
+  packages/steampunk:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
 packages:
 
