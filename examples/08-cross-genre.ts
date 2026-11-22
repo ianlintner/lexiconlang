@@ -7,7 +7,7 @@
 // Run: pnpm --filter examples cross-genre
 
 import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
-import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
+import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { steampunk } from "@lexiconlang/steampunk";
@@ -66,6 +66,19 @@ const detective = compose<ModernDetective>({
     partner: (ctx) => modern.generators.personName.generate(ctx).full,
   },
 });
+
+// ─── Scenario 3: expanded fantasy oracle in a mixed campaign ─────────────
+//
+// The P1 pack is opt-in and composes with the legacy fantasy generators.
+// Every oracle draw is a function of (seed, key), so reruns are reproducible.
+
+const world = expandedWithSeed("the-ironwake");
+console.log("\nExpanded fantasy oracle:");
+console.log(`  Tavern:  ${world.tavern.name()}`);
+console.log(`  Spell:   ${world.spell.name()} — ${world.spell.effect().text}`);
+console.log(`  Item:    ${world.magicItem.full()}`);
+console.log(`  Rumor:   ${world.rumor().text}`);
+console.log(`  Hero:    ${world.humanV2.northronFullName()}`);
 
 console.log("\nDetective squad (modern + fantasy aliases):");
 const sq = repeat(detective, 5).generate(ctx.child("squad"));

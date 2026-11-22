@@ -117,6 +117,9 @@ importers:
       '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/glyphs:
     dependencies:
