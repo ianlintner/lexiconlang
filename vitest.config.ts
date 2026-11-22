@@ -17,6 +17,7 @@ export default defineConfig({
       "@lexiconlang/modern": new URL("./packages/modern/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/packs/node": new URL("./packages/packs/src/node.ts", import.meta.url).pathname,
       "@lexiconlang/packs": new URL("./packages/packs/src/index.ts", import.meta.url).pathname,
+      "@lexiconlang/grimdark": new URL("./packages/grimdark/src/index.ts", import.meta.url).pathname,
     },
   },
 });

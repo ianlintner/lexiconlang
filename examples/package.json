@@ -28,7 +28,8 @@
     "@lexiconlang/fantasy": "workspace:*",
     "@lexiconlang/scifi": "workspace:*",
     "@lexiconlang/modern": "workspace:*",
-    "@lexiconlang/steampunk": "workspace:*"
+    "@lexiconlang/steampunk": "workspace:*",
+    "@lexiconlang/grimdark": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.23.15"

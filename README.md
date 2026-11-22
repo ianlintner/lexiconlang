@@ -343,6 +343,8 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 | [`@lexiconlang/scifi`](packages/scifi)     | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators)                                                                |
 | [`@lexiconlang/glyphs`](packages/glyphs)   | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies                                                           |
 | [`@lexiconlang/modern`](packages/modern)   | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators)                                                                                        |
+| [`@lexiconlang/steampunk`](packages/steampunk) | Genre pack: inventors, airships, guilds, automatons, patents, headlines, street omens (14 generators)                                                                                               |
+| [`@lexiconlang/grimdark`](packages/grimdark) | Genre pack: warbands, heresies, inquisitions, plagues, mutations, war machines, original ratfolk clans and warlords, doom-laden battles (16 generators)                                              |
 | [`@lexiconlang/cli`](packages/cli)         | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack`                                                                                                                                         |
 
 All packages ESM-only, `sideEffects: false`, no native deps.
@@ -362,7 +364,7 @@ Self-contained, runnable demos in [examples/](examples/) covering common consume
 | [05-custom-grammar](examples/05-custom-grammar.ts)     | Tracery grammars in JSON or TS template + custom modifiers          |
 | [06-custom-markov](examples/06-custom-markov.ts)       | training a Markov on your own corpus                                |
 | [07-seed-and-reroll](examples/07-seed-and-reroll.ts)   | save/load by seed; partial rerolls                                  |
-| [08-cross-genre](examples/08-cross-genre.ts)           | mixing fantasy + sci-fi + modern packs                              |
+| [08-cross-genre](examples/08-cross-genre.ts)           | mixing fantasy + sci-fi + modern + steampunk + grimdark packs          |
 | [09-glyphs](examples/09-glyphs.ts)                     | visual writing systems: SVG runes, Unicode ideograms, Canvas glyphs |
 | [10-open-schema](examples/10-open-schema.ts)           | custom name kinds, structured names, gender, lexicon cache          |
 

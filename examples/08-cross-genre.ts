@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { steampunk } from "@lexiconlang/steampunk";
+import { grimdark } from "@lexiconlang/grimdark";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -98,3 +99,17 @@ console.log(`  Vessel:   ${brass.airship()}`);
 console.log(`  Society:  ${brass.society()}`);
 console.log(`  Sunday headline: ${brass.headline()}`);
 console.log(`  Street omen: ${brass.omen().text}`);
+
+// ─── Scenario 4: a grimdark muster roll ─────────────────────────────────
+
+const dark = grimdark.withSeed("black-standard");
+console.log("\nGrimdark muster roll:");
+console.log(`  Warband:  ${dark.warband()}`);
+console.log(`  Banner:   ${dark.banner()}`);
+console.log(`  Captain:  ${dark.person().form} — ${dark.title()}`);
+console.log(`  Heresy:   ${dark.heresy()}`);
+console.log(`  Plague:   ${dark.plague()} — ${dark.plagueOutcome().text}`);
+console.log(`  Engine:   ${dark.warMachine()}`);
+console.log(`  Clan:     ${dark.clan()} under ${dark.warlord()}`);
+console.log(`  Battle:   ${dark.battle()}`);
+console.log(`  Omen:     ${dark.omen().text}`);

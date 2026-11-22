@@ -47,6 +47,9 @@ importers:
       '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../packages/grammar
+      '@lexiconlang/grimdark':
+        specifier: workspace:*
+        version: link:../packages/grimdark
       '@lexiconlang/language':
         specifier: workspace:*
         version: link:../packages/language
@@ -142,6 +145,18 @@ importers:
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
+
+  packages/grimdark:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/language:
     dependencies:

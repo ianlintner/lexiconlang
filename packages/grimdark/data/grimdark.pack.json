@@ -1,0 +1,4933 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.grimdark",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original fictional grimdark warbands, heresies, plagues, mutations, war machines, ratfolk clans and doom-laden battles.",
+  "provenance": [
+    {
+      "id": "original-grimdark",
+      "source": "original:lexiconlang",
+      "title": "Grimdark synthetic corpus",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "All strings in this pack are original synthetic fiction authored for LexiconLang. No real living people, trademarks or third-party setting names are reproduced.",
+      "modifications": "None",
+      "files": [
+        "data/grimdark.pack.json",
+        "data/PROVENANCE.md"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.grimdark/culture/ashbound",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aldrek",
+              "translation": "old ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bardulf",
+              "translation": "axe wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corvin",
+              "translation": "raven one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dreyr",
+              "translation": "blood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eldhane",
+              "translation": "fire bound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fenric",
+              "translation": "fen ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gorvin",
+              "translation": "spear friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Haldrek",
+              "translation": "hall ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isgrim",
+              "translation": "ice fury"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jorvane",
+              "translation": "earth sworn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kaelric",
+              "translation": "thin power"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lothar",
+              "translation": "famous army"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Morvane",
+              "translation": "moor sworn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Norlek",
+              "translation": "north power"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ordrik",
+              "translation": "wealth ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pyrren",
+              "translation": "fire water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ragnar",
+              "translation": "counsel army"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sablek",
+              "translation": "sand power"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorne",
+              "translation": "thorn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulfric",
+              "translation": "wolf ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Varkel",
+              "translation": "watcher power"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wulfrun",
+              "translation": "wolf rune"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ysbrand",
+              "translation": "fire brand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zevran",
+              "translation": "winter wanderer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Asmund",
+              "translation": "god protection"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beorn",
+              "translation": "bear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cedric",
+              "translation": "battle leader"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Doran",
+              "translation": "stranger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eirik",
+              "translation": "ever ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Falk",
+              "translation": "falcon"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashgrave",
+              "translation": "ash tomb"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blackmere",
+              "translation": "black pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bonefield",
+              "translation": "bone field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderveil",
+              "translation": "cinder veil"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dreadmoor",
+              "translation": "dread moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberfang",
+              "translation": "ember tooth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fellhammer",
+              "translation": "cruel hammer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimwald",
+              "translation": "grim forest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harrowgate",
+              "translation": "harrow gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironvein",
+              "translation": "iron vein"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keldarbor",
+              "translation": "spring fort"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lichfen",
+              "translation": "corpse marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mournstead",
+              "translation": "mourn place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightspire",
+              "translation": "night spire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oathbreaker",
+              "translation": "oath breaker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pyrehold",
+              "translation": "pyre hold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rivenoak",
+              "translation": "split oak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skullford",
+              "translation": "skull ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornspire",
+              "translation": "thorn spire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Undervale",
+              "translation": "below valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vigilkeep",
+              "translation": "watch keep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Witherhall",
+              "translation": "wither hall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewbarrow",
+              "translation": "yew mound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zerelith",
+              "translation": "barren stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashenwall",
+              "translation": "ash wall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bloodmere",
+              "translation": "blood pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Coldhearth",
+              "translation": "cold hearth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Doomridge",
+              "translation": "doom ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gravevine",
+              "translation": "grave vine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Holloway",
+              "translation": "hollow road"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashhold",
+              "translation": "ash stronghold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blackfen",
+              "translation": "black marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderwatch",
+              "translation": "cinder watch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dreadmoor",
+              "translation": "dread moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Embergate",
+              "translation": "ember gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fellmere",
+              "translation": "cruel pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimhollow",
+              "translation": "grim hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harrowmoor",
+              "translation": "harrow moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironvault",
+              "translation": "iron vault"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keldspire",
+              "translation": "spring spire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lichford",
+              "translation": "corpse ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mournhaven",
+              "translation": "mourn harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightbarrow",
+              "translation": "night mound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oathstone",
+              "translation": "oath stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pyrevale",
+              "translation": "pyre valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rivengate",
+              "translation": "split gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sorrowfen",
+              "translation": "sorrow marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornwall",
+              "translation": "thorn wall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Undercroft",
+              "translation": "below vault"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vigilmar",
+              "translation": "watch sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Witherhold",
+              "translation": "wither stronghold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewgrave",
+              "translation": "yew tomb"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zealot's Rest",
+              "translation": "zealot resting place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashenrow",
+              "translation": "ash row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bloodhollow",
+              "translation": "blood hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Coldspire",
+              "translation": "cold spire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Doomgate",
+              "translation": "doom gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gravewatch",
+              "translation": "grave watch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollowmere",
+              "translation": "hollow pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironbarrow",
+              "translation": "iron mound"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lexiconlang.grimdark/culture/vermin",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skrik",
+              "translation": "sharp cry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vrath",
+              "translation": "twitch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gnash",
+              "translation": "gnaw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pisk",
+              "translation": "piping"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Retch",
+              "translation": "retching"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skitter",
+              "translation": "scurry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thren",
+              "translation": "wailing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Verm",
+              "translation": "worm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zrill",
+              "translation": "chitter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kree",
+              "translation": "squeak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Morl",
+              "translation": "murk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nibb",
+              "translation": "nibble"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quill",
+              "translation": "quill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rasp",
+              "translation": "rasp"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Slink",
+              "translation": "sneak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Twick",
+              "translation": "twitch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulch",
+              "translation": "gulp"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wretch",
+              "translation": "wretch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yarl",
+              "translation": "warlord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zsk",
+              "translation": "bite"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blight",
+              "translation": "blight"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crawl",
+              "translation": "crawl"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dregg",
+              "translation": "dregs"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fester",
+              "translation": "fester"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grub",
+              "translation": "grub"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Husk",
+              "translation": "husk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ixil",
+              "translation": "grin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jibb",
+              "translation": "jib"
+            },
+            "weight": 1
+          }
+        ],
+        "clan": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greywhisker",
+              "translation": "grey whisker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Belltail",
+              "translation": "bell tail"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rustfang",
+              "translation": "rust tooth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sootpaw",
+              "translation": "soot paw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bonegnaw",
+              "translation": "bone gnaw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cindernest",
+              "translation": "cinder nest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duskear",
+              "translation": "dusk ear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberburrow",
+              "translation": "ember burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fennelspine",
+              "translation": "fennel spine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimwhisk",
+              "translation": "grim whisker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollowtail",
+              "translation": "hollow tail"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironnose",
+              "translation": "iron nose"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lichenfur",
+              "translation": "lichen fur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mireclaw",
+              "translation": "mire claw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightwhisk",
+              "translation": "night whisker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oatchev",
+              "translation": "oath cheek"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pipebone",
+              "translation": "pipe bone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarryden",
+              "translation": "quarry den"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rotspine",
+              "translation": "rot spine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sablefur",
+              "translation": "sable fur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornwhisk",
+              "translation": "thorn whisker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underburrow",
+              "translation": "under burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vilesnout",
+              "translation": "vile snout"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warptail",
+              "translation": "warp tail"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashsnout",
+              "translation": "ash snout"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blightpaw",
+              "translation": "blight paw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crumbear",
+              "translation": "crumb ear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dreadwhisk",
+              "translation": "dread whisker"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greyhollow",
+              "translation": "grey hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bellwarren",
+              "translation": "bell burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rustnest",
+              "translation": "rust nest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sootburrow",
+              "translation": "soot burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bonewarren",
+              "translation": "bone burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderden",
+              "translation": "cinder den"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duskroost",
+              "translation": "dusk roost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberhole",
+              "translation": "ember hole"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fennelwarren",
+              "translation": "fennel burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimroost",
+              "translation": "grim roost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollowburrow",
+              "translation": "hollow burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironwarren",
+              "translation": "iron burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lichenden",
+              "translation": "lichen den"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirehole",
+              "translation": "mire hole"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightden",
+              "translation": "night den"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oathroost",
+              "translation": "oath roost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pipewarren",
+              "translation": "pipe burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarryburrow",
+              "translation": "quarry burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rotnest",
+              "translation": "rot nest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sablehole",
+              "translation": "sable hole"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornwarren",
+              "translation": "thorn burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underroost",
+              "translation": "under roost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vilewarren",
+              "translation": "vile burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warpnest",
+              "translation": "warp nest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashwarren",
+              "translation": "ash burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blightroost",
+              "translation": "blight roost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crumbden",
+              "translation": "crumb den"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dreadburrow",
+              "translation": "dread burrow"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.grimdark/grammar/warband",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adj# #noun#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #body#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #noun# #body#",
+              "weight": 1
+            },
+            {
+              "value": "The #adj# #noun# of #body#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Bleak",
+              "weight": 1
+            },
+            {
+              "value": "Blood",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Cold",
+              "weight": 1
+            },
+            {
+              "value": "Cruel",
+              "weight": 1
+            },
+            {
+              "value": "Dire",
+              "weight": 1
+            },
+            {
+              "value": "Dread",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Fell",
+              "weight": 1
+            },
+            {
+              "value": "Foul",
+              "weight": 1
+            },
+            {
+              "value": "Gilded",
+              "weight": 1
+            },
+            {
+              "value": "Grim",
+              "weight": 1
+            },
+            {
+              "value": "Grave",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Jagged",
+              "weight": 1
+            },
+            {
+              "value": "Mourn",
+              "weight": 1
+            },
+            {
+              "value": "Night",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Riven",
+              "weight": 1
+            },
+            {
+              "value": "Rotten",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Scorched",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            },
+            {
+              "value": "Woe",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Banner",
+              "weight": 1
+            },
+            {
+              "value": "Company",
+              "weight": 1
+            },
+            {
+              "value": "Host",
+              "weight": 1
+            },
+            {
+              "value": "Legion",
+              "weight": 1
+            },
+            {
+              "value": "Oathband",
+              "weight": 1
+            },
+            {
+              "value": "Raiders",
+              "weight": 1
+            },
+            {
+              "value": "Reavers",
+              "weight": 1
+            },
+            {
+              "value": "Shieldwall",
+              "weight": 1
+            },
+            {
+              "value": "Swords",
+              "weight": 1
+            },
+            {
+              "value": "Vanguard",
+              "weight": 1
+            },
+            {
+              "value": "Warband",
+              "weight": 1
+            },
+            {
+              "value": "Wardens",
+              "weight": 1
+            },
+            {
+              "value": "Fangs",
+              "weight": 1
+            },
+            {
+              "value": "Ravens",
+              "weight": 1
+            },
+            {
+              "value": "Crows",
+              "weight": 1
+            },
+            {
+              "value": "Hounds",
+              "weight": 1
+            },
+            {
+              "value": "Wolves",
+              "weight": 1
+            },
+            {
+              "value": "Pikes",
+              "weight": 1
+            },
+            {
+              "value": "Axes",
+              "weight": 1
+            },
+            {
+              "value": "Spears",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "of the Fallen",
+              "weight": 1
+            },
+            {
+              "value": "of Ash",
+              "weight": 1
+            },
+            {
+              "value": "of the Cinder Vale",
+              "weight": 1
+            },
+            {
+              "value": "of the Broken Oath",
+              "weight": 1
+            },
+            {
+              "value": "of Dreadmoor",
+              "weight": 1
+            },
+            {
+              "value": "of the Iron Vein",
+              "weight": 1
+            },
+            {
+              "value": "of the Last Vigil",
+              "weight": 1
+            },
+            {
+              "value": "of the Pale Host",
+              "weight": 1
+            },
+            {
+              "value": "of the Thorn Wall",
+              "weight": 1
+            },
+            {
+              "value": "of the Withered Crown",
+              "weight": 1
+            },
+            {
+              "value": "of the Black Fen",
+              "weight": 1
+            },
+            {
+              "value": "of the Grave Road",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/banner",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #first# #second#",
+              "weight": 1
+            },
+            {
+              "value": "#first# #second#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# of #first# #second#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "first",
+          "choices": [
+            {
+              "value": "Blood",
+              "weight": 1
+            },
+            {
+              "value": "Ash",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Dread",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Fell",
+              "weight": 1
+            },
+            {
+              "value": "Grim",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Mourn",
+              "weight": 1
+            },
+            {
+              "value": "Night",
+              "weight": 1
+            },
+            {
+              "value": "Riven",
+              "weight": 1
+            },
+            {
+              "value": "Rot",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Woe",
+              "weight": 1
+            },
+            {
+              "value": "Doom",
+              "weight": 1
+            },
+            {
+              "value": "Ruin",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "second",
+          "choices": [
+            {
+              "value": "and Ruin",
+              "weight": 1
+            },
+            {
+              "value": "and Silence",
+              "weight": 1
+            },
+            {
+              "value": "and Ash",
+              "weight": 1
+            },
+            {
+              "value": "before Dawn",
+              "weight": 1
+            },
+            {
+              "value": "is Our Oath",
+              "weight": 1
+            },
+            {
+              "value": "is Our Crown",
+              "weight": 1
+            },
+            {
+              "value": "Never Yields",
+              "weight": 1
+            },
+            {
+              "value": "We Do Not Kneel",
+              "weight": 1
+            },
+            {
+              "value": "We Remember",
+              "weight": 1
+            },
+            {
+              "value": "We Reap",
+              "weight": 1
+            },
+            {
+              "value": "Endures",
+              "weight": 1
+            },
+            {
+              "value": "Prevails",
+              "weight": 1
+            },
+            {
+              "value": "Is All",
+              "weight": 1
+            },
+            {
+              "value": "We Carry",
+              "weight": 1
+            },
+            {
+              "value": "We Burn",
+              "weight": 1
+            },
+            {
+              "value": "We Bury",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Banner",
+              "weight": 1
+            },
+            {
+              "value": "Ensign",
+              "weight": 1
+            },
+            {
+              "value": "Standard",
+              "weight": 1
+            },
+            {
+              "value": "Pennant",
+              "weight": 1
+            },
+            {
+              "value": "Gonfalon",
+              "weight": 1
+            },
+            {
+              "value": "War Flag",
+              "weight": 1
+            },
+            {
+              "value": "Colours",
+              "weight": 1
+            },
+            {
+              "value": "Grave Cloth",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/heresy",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj# #noun#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #body#",
+              "weight": 1
+            },
+            {
+              "value": "The #adj.cap# #noun# #body#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #noun#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Abyssal",
+              "weight": 1
+            },
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Corrupt",
+              "weight": 1
+            },
+            {
+              "value": "Crooked",
+              "weight": 1
+            },
+            {
+              "value": "Dark",
+              "weight": 1
+            },
+            {
+              "value": "Fallen",
+              "weight": 1
+            },
+            {
+              "value": "Forsaken",
+              "weight": 1
+            },
+            {
+              "value": "Gnostic",
+              "weight": 1
+            },
+            {
+              "value": "Heretical",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Impure",
+              "weight": 1
+            },
+            {
+              "value": "Infernal",
+              "weight": 1
+            },
+            {
+              "value": "Lost",
+              "weight": 1
+            },
+            {
+              "value": "Marrow",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Profane",
+              "weight": 1
+            },
+            {
+              "value": "Rotten",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Twisted",
+              "weight": 1
+            },
+            {
+              "value": "Unclean",
+              "weight": 1
+            },
+            {
+              "value": "Void",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            },
+            {
+              "value": "Wretched",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Canticle",
+              "weight": 1
+            },
+            {
+              "value": "Circle",
+              "weight": 1
+            },
+            {
+              "value": "Confession",
+              "weight": 1
+            },
+            {
+              "value": "Creed",
+              "weight": 1
+            },
+            {
+              "value": "Doctrine",
+              "weight": 1
+            },
+            {
+              "value": "Faith",
+              "weight": 1
+            },
+            {
+              "value": "Gospel",
+              "weight": 1
+            },
+            {
+              "value": "Litany",
+              "weight": 1
+            },
+            {
+              "value": "Mystery",
+              "weight": 1
+            },
+            {
+              "value": "Order",
+              "weight": 1
+            },
+            {
+              "value": "Path",
+              "weight": 1
+            },
+            {
+              "value": "Rite",
+              "weight": 1
+            },
+            {
+              "value": "Sect",
+              "weight": 1
+            },
+            {
+              "value": "Testament",
+              "weight": 1
+            },
+            {
+              "value": "Truth",
+              "weight": 1
+            },
+            {
+              "value": "Way",
+              "weight": 1
+            },
+            {
+              "value": "Wisdom",
+              "weight": 1
+            },
+            {
+              "value": "Word",
+              "weight": 1
+            },
+            {
+              "value": "Zeal",
+              "weight": 1
+            },
+            {
+              "value": "Devotion",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "of the Broken Star",
+              "weight": 1
+            },
+            {
+              "value": "of the Empty Throne",
+              "weight": 1
+            },
+            {
+              "value": "of the Fallen Light",
+              "weight": 1
+            },
+            {
+              "value": "of the Hidden Flame",
+              "weight": 1
+            },
+            {
+              "value": "of the Last Whisper",
+              "weight": 1
+            },
+            {
+              "value": "of the Ninth Seal",
+              "weight": 1
+            },
+            {
+              "value": "of the Pale Sun",
+              "weight": 1
+            },
+            {
+              "value": "of the Rotting Word",
+              "weight": 1
+            },
+            {
+              "value": "of the Silent Choir",
+              "weight": 1
+            },
+            {
+              "value": "of the Void",
+              "weight": 1
+            },
+            {
+              "value": "of the Weeping Saint",
+              "weight": 1
+            },
+            {
+              "value": "of the Worm",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/inquisition",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj# #inquisition#",
+              "weight": 1
+            },
+            {
+              "value": "The #inquisition# #body#",
+              "weight": 1
+            },
+            {
+              "value": "The #adj.cap# #inquisition# of the #body#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #inquisition#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Blood",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Dread",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Fell",
+              "weight": 1
+            },
+            {
+              "value": "Grim",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Riven",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Scorched",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            },
+            {
+              "value": "Wrathful",
+              "weight": 1
+            },
+            {
+              "value": "Zealous",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "inquisition",
+          "choices": [
+            {
+              "value": "Compiler",
+              "weight": 1
+            },
+            {
+              "value": "Conclave",
+              "weight": 1
+            },
+            {
+              "value": "Council",
+              "weight": 1
+            },
+            {
+              "value": "Court",
+              "weight": 1
+            },
+            {
+              "value": "Inquest",
+              "weight": 1
+            },
+            {
+              "value": "Inquisition",
+              "weight": 1
+            },
+            {
+              "value": "Ministry",
+              "weight": 1
+            },
+            {
+              "value": "Office",
+              "weight": 1
+            },
+            {
+              "value": "Order",
+              "weight": 1
+            },
+            {
+              "value": "Synod",
+              "weight": 1
+            },
+            {
+              "value": "Tribunal",
+              "weight": 1
+            },
+            {
+              "value": "Warden",
+              "weight": 1
+            },
+            {
+              "value": "Watcher",
+              "weight": 1
+            },
+            {
+              "value": "Witness",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "of the Burning Crown",
+              "weight": 1
+            },
+            {
+              "value": "of the Cinder Throne",
+              "weight": 1
+            },
+            {
+              "value": "of the Holy Ash",
+              "weight": 1
+            },
+            {
+              "value": "of the Last Candle",
+              "weight": 1
+            },
+            {
+              "value": "of the Ninth Seal",
+              "weight": 1
+            },
+            {
+              "value": "of the Pale Flame",
+              "weight": 1
+            },
+            {
+              "value": "of the Red Ledger",
+              "weight": 1
+            },
+            {
+              "value": "of the Sacred Broth",
+              "weight": 1
+            },
+            {
+              "value": "of the Silent Bell",
+              "weight": 1
+            },
+            {
+              "value": "of the Thorned Cross",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/plague",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj# #noun#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #noun# #place#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #place#",
+              "weight": 1
+            },
+            {
+              "value": "The #adj# #noun# #place#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Bloody",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Creeping",
+              "weight": 1
+            },
+            {
+              "value": "Cursed",
+              "weight": 1
+            },
+            {
+              "value": "Dry",
+              "weight": 1
+            },
+            {
+              "value": "Fell",
+              "weight": 1
+            },
+            {
+              "value": "Grey",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Quiet",
+              "weight": 1
+            },
+            {
+              "value": "Rattening",
+              "weight": 1
+            },
+            {
+              "value": "Red",
+              "weight": 1
+            },
+            {
+              "value": "Rotting",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Silent",
+              "weight": 1
+            },
+            {
+              "value": "Weeping",
+              "weight": 1
+            },
+            {
+              "value": "White",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            },
+            {
+              "value": "Yellow",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Ague",
+              "weight": 1
+            },
+            {
+              "value": "Blight",
+              "weight": 1
+            },
+            {
+              "value": "Cough",
+              "weight": 1
+            },
+            {
+              "value": "Fever",
+              "weight": 1
+            },
+            {
+              "value": "Flux",
+              "weight": 1
+            },
+            {
+              "value": "Itch",
+              "weight": 1
+            },
+            {
+              "value": "Leprosy",
+              "weight": 1
+            },
+            {
+              "value": "Malaise",
+              "weight": 1
+            },
+            {
+              "value": "Murrain",
+              "weight": 1
+            },
+            {
+              "value": "Pest",
+              "weight": 1
+            },
+            {
+              "value": "Pox",
+              "weight": 1
+            },
+            {
+              "value": "Rot",
+              "weight": 1
+            },
+            {
+              "value": "Scourge",
+              "weight": 1
+            },
+            {
+              "value": "Septicemia",
+              "weight": 1
+            },
+            {
+              "value": "Sweats",
+              "weight": 1
+            },
+            {
+              "value": "Waste",
+              "weight": 1
+            },
+            {
+              "value": "Wilting",
+              "weight": 1
+            },
+            {
+              "value": "Worm",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "of Ashhold",
+              "weight": 1
+            },
+            {
+              "value": "of Blackfen",
+              "weight": 1
+            },
+            {
+              "value": "of Cinderwatch",
+              "weight": 1
+            },
+            {
+              "value": "of Dreadmoor",
+              "weight": 1
+            },
+            {
+              "value": "of Embergate",
+              "weight": 1
+            },
+            {
+              "value": "of Grimhollow",
+              "weight": 1
+            },
+            {
+              "value": "of Ironvault",
+              "weight": 1
+            },
+            {
+              "value": "of Lichford",
+              "weight": 1
+            },
+            {
+              "value": "of Mournhaven",
+              "weight": 1
+            },
+            {
+              "value": "of Nightbarrow",
+              "weight": 1
+            },
+            {
+              "value": "of Oathstone",
+              "weight": 1
+            },
+            {
+              "value": "of Pyrevale",
+              "weight": 1
+            },
+            {
+              "value": "of Rivengate",
+              "weight": 1
+            },
+            {
+              "value": "of Sorrowfen",
+              "weight": 1
+            },
+            {
+              "value": "of Thornwall",
+              "weight": 1
+            },
+            {
+              "value": "of Undercraft",
+              "weight": 1
+            },
+            {
+              "value": "of Vigilmar",
+              "weight": 1
+            },
+            {
+              "value": "of Witherhold",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/mutation",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj# #noun#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #effect#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #noun# #effect#",
+              "weight": 1
+            },
+            {
+              "value": "The #adj# #noun# #effect#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Bony",
+              "weight": 1
+            },
+            {
+              "value": "Bristled",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Crooked",
+              "weight": 1
+            },
+            {
+              "value": "Extra",
+              "weight": 1
+            },
+            {
+              "value": "Feral",
+              "weight": 1
+            },
+            {
+              "value": "Festering",
+              "weight": 1
+            },
+            {
+              "value": "Forked",
+              "weight": 1
+            },
+            {
+              "value": "Glowing",
+              "weight": 1
+            },
+            {
+              "value": "Gnarled",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Horned",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Many",
+              "weight": 1
+            },
+            {
+              "value": "Marrow",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Rotten",
+              "weight": 1
+            },
+            {
+              "value": "Scaled",
+              "weight": 1
+            },
+            {
+              "value": "Spined",
+              "weight": 1
+            },
+            {
+              "value": "Split",
+              "weight": 1
+            },
+            {
+              "value": "Swollen",
+              "weight": 1
+            },
+            {
+              "value": "Twisted",
+              "weight": 1
+            },
+            {
+              "value": "Velvet",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            },
+            {
+              "value": "Woolen",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Arm",
+              "weight": 1
+            },
+            {
+              "value": "Back",
+              "weight": 1
+            },
+            {
+              "value": "Belly",
+              "weight": 1
+            },
+            {
+              "value": "Blood",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Crown",
+              "weight": 1
+            },
+            {
+              "value": "Eye",
+              "weight": 1
+            },
+            {
+              "value": "Face",
+              "weight": 1
+            },
+            {
+              "value": "Fang",
+              "weight": 1
+            },
+            {
+              "value": "Finger",
+              "weight": 1
+            },
+            {
+              "value": "Flesh",
+              "weight": 1
+            },
+            {
+              "value": "Foot",
+              "weight": 1
+            },
+            {
+              "value": "Gland",
+              "weight": 1
+            },
+            {
+              "value": "Hand",
+              "weight": 1
+            },
+            {
+              "value": "Heart",
+              "weight": 1
+            },
+            {
+              "value": "Horn",
+              "weight": 1
+            },
+            {
+              "value": "Limb",
+              "weight": 1
+            },
+            {
+              "value": "Maw",
+              "weight": 1
+            },
+            {
+              "value": "Pelt",
+              "weight": 1
+            },
+            {
+              "value": "Scale",
+              "weight": 1
+            },
+            {
+              "value": "Skin",
+              "weight": 1
+            },
+            {
+              "value": "Spine",
+              "weight": 1
+            },
+            {
+              "value": "Tail",
+              "weight": 1
+            },
+            {
+              "value": "Tongue",
+              "weight": 1
+            },
+            {
+              "value": "Tooth",
+              "weight": 1
+            },
+            {
+              "value": "Womb",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "effect",
+          "choices": [
+            {
+              "value": "of the Rat King",
+              "weight": 1
+            },
+            {
+              "value": "of the Ash Saint",
+              "weight": 1
+            },
+            {
+              "value": "of the Broken Mirror",
+              "weight": 1
+            },
+            {
+              "value": "of the Crooked Star",
+              "weight": 1
+            },
+            {
+              "value": "of the Empty God",
+              "weight": 1
+            },
+            {
+              "value": "of the Fallen Spire",
+              "weight": 1
+            },
+            {
+              "value": "of the Hollow Choir",
+              "weight": 1
+            },
+            {
+              "value": "of the Last Plague",
+              "weight": 1
+            },
+            {
+              "value": "of the Pale Moon",
+              "weight": 1
+            },
+            {
+              "value": "of the Rotting Root",
+              "weight": 1
+            },
+            {
+              "value": "of the Silent Word",
+              "weight": 1
+            },
+            {
+              "value": "of the Worm",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/title",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#base#",
+              "weight": 1
+            },
+            {
+              "value": "#base# #body#",
+              "weight": 1
+            },
+            {
+              "value": "#body.cap# #base#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "base",
+          "choices": [
+            {
+              "value": "Ashwarden",
+              "weight": 1
+            },
+            {
+              "value": "Bearer of the Pyre",
+              "weight": 1
+            },
+            {
+              "value": "Bone Reader",
+              "weight": 1
+            },
+            {
+              "value": "Cinder Marshal",
+              "weight": 1
+            },
+            {
+              "value": "Doom Speaker",
+              "weight": 1
+            },
+            {
+              "value": "Dreadmaster",
+              "weight": 1
+            },
+            {
+              "value": "Emberlord",
+              "weight": 1
+            },
+            {
+              "value": "Fell Knight",
+              "weight": 1
+            },
+            {
+              "value": "Grave Herald",
+              "weight": 1
+            },
+            {
+              "value": "Hollow Abbot",
+              "weight": 1
+            },
+            {
+              "value": "Iron Prelate",
+              "weight": 1
+            },
+            {
+              "value": "Lich Warden",
+              "weight": 1
+            },
+            {
+              "value": "Mourn Captain",
+              "weight": 1
+            },
+            {
+              "value": "Night Confessor",
+              "weight": 1
+            },
+            {
+              "value": "Oath Breaker",
+              "weight": 1
+            },
+            {
+              "value": "Pale Inquisitor",
+              "weight": 1
+            },
+            {
+              "value": "Plague Bearer",
+              "weight": 1
+            },
+            {
+              "value": "Riven Duke",
+              "weight": 1
+            },
+            {
+              "value": "Rot Chancellor",
+              "weight": 1
+            },
+            {
+              "value": "Sable Ascetic",
+              "weight": 1
+            },
+            {
+              "value": "Skull Taker",
+              "weight": 1
+            },
+            {
+              "value": "Thorn Bishop",
+              "weight": 1
+            },
+            {
+              "value": "Vigil Master",
+              "weight": 1
+            },
+            {
+              "value": "Withered Sage",
+              "weight": 1
+            },
+            {
+              "value": "Woe Bringer",
+              "weight": 1
+            },
+            {
+              "value": "Zealot General",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "of Ashhold",
+              "weight": 1
+            },
+            {
+              "value": "of Blackfen",
+              "weight": 1
+            },
+            {
+              "value": "of Cinderwatch",
+              "weight": 1
+            },
+            {
+              "value": "of Dreadmoor",
+              "weight": 1
+            },
+            {
+              "value": "of Embergate",
+              "weight": 1
+            },
+            {
+              "value": "of Grimhollow",
+              "weight": 1
+            },
+            {
+              "value": "of Ironvault",
+              "weight": 1
+            },
+            {
+              "value": "of Lichford",
+              "weight": 1
+            },
+            {
+              "value": "of Mournhaven",
+              "weight": 1
+            },
+            {
+              "value": "of Nightbarrow",
+              "weight": 1
+            },
+            {
+              "value": "of Oathstone",
+              "weight": 1
+            },
+            {
+              "value": "of Pyrevale",
+              "weight": 1
+            },
+            {
+              "value": "of Rivengate",
+              "weight": 1
+            },
+            {
+              "value": "of Sorrowfen",
+              "weight": 1
+            },
+            {
+              "value": "of Thornwall",
+              "weight": 1
+            },
+            {
+              "value": "of Vigilmar",
+              "weight": 1
+            },
+            {
+              "value": "of Witherhold",
+              "weight": 1
+            },
+            {
+              "value": "of the Broken Oath",
+              "weight": 1
+            },
+            {
+              "value": "of the Fallen Crown",
+              "weight": 1
+            },
+            {
+              "value": "of the Ninth Seal",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/warmachine",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj# #noun#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #noun# #mark#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #mark#",
+              "weight": 1
+            },
+            {
+              "value": "#adj.cap# #machine# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Brazen",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Clanking",
+              "weight": 1
+            },
+            {
+              "value": "Crushing",
+              "weight": 1
+            },
+            {
+              "value": "Dread",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Fell",
+              "weight": 1
+            },
+            {
+              "value": "Grim",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Jagged",
+              "weight": 1
+            },
+            {
+              "value": "Marrow",
+              "weight": 1
+            },
+            {
+              "value": "Night",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Riven",
+              "weight": 1
+            },
+            {
+              "value": "Rotten",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Scorched",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Ballista",
+              "weight": 1
+            },
+            {
+              "value": "Battering Ram",
+              "weight": 1
+            },
+            {
+              "value": "Bellows",
+              "weight": 1
+            },
+            {
+              "value": "Boiler",
+              "weight": 1
+            },
+            {
+              "value": "Cannon",
+              "weight": 1
+            },
+            {
+              "value": "Catapult",
+              "weight": 1
+            },
+            {
+              "value": "Chariot",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Engine",
+              "weight": 1
+            },
+            {
+              "value": "Forge",
+              "weight": 1
+            },
+            {
+              "value": "Gallows",
+              "weight": 1
+            },
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Hammer",
+              "weight": 1
+            },
+            {
+              "value": "Harrow",
+              "weight": 1
+            },
+            {
+              "value": "Loom",
+              "weight": 1
+            },
+            {
+              "value": "Mill",
+              "weight": 1
+            },
+            {
+              "value": "Oven",
+              "weight": 1
+            },
+            {
+              "value": "Pike",
+              "weight": 1
+            },
+            {
+              "value": "Press",
+              "weight": 1
+            },
+            {
+              "value": "Pump",
+              "weight": 1
+            },
+            {
+              "value": "Quarry",
+              "weight": 1
+            },
+            {
+              "value": "Rack",
+              "weight": 1
+            },
+            {
+              "value": "Reaper",
+              "weight": 1
+            },
+            {
+              "value": "Saw",
+              "weight": 1
+            },
+            {
+              "value": "Siege Tower",
+              "weight": 1
+            },
+            {
+              "value": "Smelter",
+              "weight": 1
+            },
+            {
+              "value": "Tower",
+              "weight": 1
+            },
+            {
+              "value": "Trebuchet",
+              "weight": 1
+            },
+            {
+              "value": "Vat",
+              "weight": 1
+            },
+            {
+              "value": "Winch",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "machine",
+          "choices": [
+            {
+              "value": "Ballista",
+              "weight": 1
+            },
+            {
+              "value": "Battering Ram",
+              "weight": 1
+            },
+            {
+              "value": "Bellows",
+              "weight": 1
+            },
+            {
+              "value": "Boiler",
+              "weight": 1
+            },
+            {
+              "value": "Cannon",
+              "weight": 1
+            },
+            {
+              "value": "Catapult",
+              "weight": 1
+            },
+            {
+              "value": "Chariot",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Engine",
+              "weight": 1
+            },
+            {
+              "value": "Forge",
+              "weight": 1
+            },
+            {
+              "value": "Gallows",
+              "weight": 1
+            },
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Hammer",
+              "weight": 1
+            },
+            {
+              "value": "Harrow",
+              "weight": 1
+            },
+            {
+              "value": "Loom",
+              "weight": 1
+            },
+            {
+              "value": "Mill",
+              "weight": 1
+            },
+            {
+              "value": "Oven",
+              "weight": 1
+            },
+            {
+              "value": "Pike",
+              "weight": 1
+            },
+            {
+              "value": "Press",
+              "weight": 1
+            },
+            {
+              "value": "Pump",
+              "weight": 1
+            },
+            {
+              "value": "Quarry",
+              "weight": 1
+            },
+            {
+              "value": "Rack",
+              "weight": 1
+            },
+            {
+              "value": "Reaper",
+              "weight": 1
+            },
+            {
+              "value": "Saw",
+              "weight": 1
+            },
+            {
+              "value": "Siege Tower",
+              "weight": 1
+            },
+            {
+              "value": "Smelter",
+              "weight": 1
+            },
+            {
+              "value": "Tower",
+              "weight": 1
+            },
+            {
+              "value": "Trebuchet",
+              "weight": 1
+            },
+            {
+              "value": "Vat",
+              "weight": 1
+            },
+            {
+              "value": "Winch",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "mark",
+          "choices": [
+            {
+              "value": "Mark I",
+              "weight": 1
+            },
+            {
+              "value": "Mark II",
+              "weight": 1
+            },
+            {
+              "value": "Mark III",
+              "weight": 1
+            },
+            {
+              "value": "Mark IV",
+              "weight": 1
+            },
+            {
+              "value": "Mark V",
+              "weight": 1
+            },
+            {
+              "value": "Mark VI",
+              "weight": 1
+            },
+            {
+              "value": "Mark IX",
+              "weight": 1
+            },
+            {
+              "value": "No. 7",
+              "weight": 1
+            },
+            {
+              "value": "No. 13",
+              "weight": 1
+            },
+            {
+              "value": "the Broken",
+              "weight": 1
+            },
+            {
+              "value": "the Cruel",
+              "weight": 1
+            },
+            {
+              "value": "the Last",
+              "weight": 1
+            },
+            {
+              "value": "the Mourning",
+              "weight": 1
+            },
+            {
+              "value": "the Third",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/clan",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #prefix# #suffix# Clan",
+              "weight": 1
+            },
+            {
+              "value": "Clan #prefix.cap##suffix#",
+              "weight": 1
+            },
+            {
+              "value": "The #prefix.cap##suffix#",
+              "weight": 1
+            },
+            {
+              "value": "The Clan of the #prefix# #suffix#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "prefix",
+          "choices": [
+            {
+              "value": "Ash",
+              "weight": 1
+            },
+            {
+              "value": "Bell",
+              "weight": 1
+            },
+            {
+              "value": "Blight",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Crumb",
+              "weight": 1
+            },
+            {
+              "value": "Dread",
+              "weight": 1
+            },
+            {
+              "value": "Dusk",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Fennel",
+              "weight": 1
+            },
+            {
+              "value": "Grave",
+              "weight": 1
+            },
+            {
+              "value": "Grey",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Lichen",
+              "weight": 1
+            },
+            {
+              "value": "Mire",
+              "weight": 1
+            },
+            {
+              "value": "Night",
+              "weight": 1
+            },
+            {
+              "value": "Pip",
+              "weight": 1
+            },
+            {
+              "value": "Quarry",
+              "weight": 1
+            },
+            {
+              "value": "Rot",
+              "weight": 1
+            },
+            {
+              "value": "Rust",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Under",
+              "weight": 1
+            },
+            {
+              "value": "Vile",
+              "weight": 1
+            },
+            {
+              "value": "War",
+              "weight": 1
+            },
+            {
+              "value": "Warp",
+              "weight": 1
+            },
+            {
+              "value": "Whisk",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "suffix",
+          "choices": [
+            {
+              "value": "back",
+              "weight": 1
+            },
+            {
+              "value": "beard",
+              "weight": 1
+            },
+            {
+              "value": "burrow",
+              "weight": 1
+            },
+            {
+              "value": "claw",
+              "weight": 1
+            },
+            {
+              "value": "den",
+              "weight": 1
+            },
+            {
+              "value": "ear",
+              "weight": 1
+            },
+            {
+              "value": "fang",
+              "weight": 1
+            },
+            {
+              "value": "fur",
+              "weight": 1
+            },
+            {
+              "value": "hole",
+              "weight": 1
+            },
+            {
+              "value": "kin",
+              "weight": 1
+            },
+            {
+              "value": "nest",
+              "weight": 1
+            },
+            {
+              "value": "nose",
+              "weight": 1
+            },
+            {
+              "value": "paw",
+              "weight": 1
+            },
+            {
+              "value": "roost",
+              "weight": 1
+            },
+            {
+              "value": "snout",
+              "weight": 1
+            },
+            {
+              "value": "spine",
+              "weight": 1
+            },
+            {
+              "value": "tail",
+              "weight": 1
+            },
+            {
+              "value": "tooth",
+              "weight": 1
+            },
+            {
+              "value": "warren",
+              "weight": 1
+            },
+            {
+              "value": "whisk",
+              "weight": 1
+            },
+            {
+              "value": "whisker",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/warlord",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#title# #epithet#",
+              "weight": 1
+            },
+            {
+              "value": "Warlord #epithet#",
+              "weight": 1
+            },
+            {
+              "value": "#epithet# #title#",
+              "weight": 1
+            },
+            {
+              "value": "The #title# #epithet#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "choices": [
+            {
+              "value": "the Ashen",
+              "weight": 1
+            },
+            {
+              "value": "the Bell-Ringer",
+              "weight": 1
+            },
+            {
+              "value": "the Black",
+              "weight": 1
+            },
+            {
+              "value": "the Bone-Chewer",
+              "weight": 1
+            },
+            {
+              "value": "the Cruel",
+              "weight": 1
+            },
+            {
+              "value": "the Cunning",
+              "weight": 1
+            },
+            {
+              "value": "the Dread",
+              "weight": 1
+            },
+            {
+              "value": "the Ember-Crowned",
+              "weight": 1
+            },
+            {
+              "value": "the Fanged",
+              "weight": 1
+            },
+            {
+              "value": "the Grey",
+              "weight": 1
+            },
+            {
+              "value": "the Hollow",
+              "weight": 1
+            },
+            {
+              "value": "the Iron-Nosed",
+              "weight": 1
+            },
+            {
+              "value": "the Last",
+              "weight": 1
+            },
+            {
+              "value": "the Long-Tailed",
+              "weight": 1
+            },
+            {
+              "value": "the Mad",
+              "weight": 1
+            },
+            {
+              "value": "the Many-Fanged",
+              "weight": 1
+            },
+            {
+              "value": "the Pale",
+              "weight": 1
+            },
+            {
+              "value": "the Rotten",
+              "weight": 1
+            },
+            {
+              "value": "the Sable",
+              "weight": 1
+            },
+            {
+              "value": "the Sooty",
+              "weight": 1
+            },
+            {
+              "value": "the Thorned",
+              "weight": 1
+            },
+            {
+              "value": "the Twice-Bitten",
+              "weight": 1
+            },
+            {
+              "value": "the Undercroft",
+              "weight": 1
+            },
+            {
+              "value": "the Warped",
+              "weight": 1
+            },
+            {
+              "value": "the Whiskered",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "epithet",
+          "choices": [
+            {
+              "value": "Ashbringer",
+              "weight": 1
+            },
+            {
+              "value": "Backbiter",
+              "weight": 1
+            },
+            {
+              "value": "Bellows",
+              "weight": 1
+            },
+            {
+              "value": "Bonegnawer",
+              "weight": 1
+            },
+            {
+              "value": "Cinderpaw",
+              "weight": 1
+            },
+            {
+              "value": "Crumb-Snatcher",
+              "weight": 1
+            },
+            {
+              "value": "Doomwhisker",
+              "weight": 1
+            },
+            {
+              "value": "Dreadtail",
+              "weight": 1
+            },
+            {
+              "value": "Emberfang",
+              "weight": 1
+            },
+            {
+              "value": "Festerjaw",
+              "weight": 1
+            },
+            {
+              "value": "Greyclaw",
+              "weight": 1
+            },
+            {
+              "value": "Hollowsnout",
+              "weight": 1
+            },
+            {
+              "value": "Ironwhisk",
+              "weight": 1
+            },
+            {
+              "value": "Lichenback",
+              "weight": 1
+            },
+            {
+              "value": "Midnightpaw",
+              "weight": 1
+            },
+            {
+              "value": "Mirefang",
+              "weight": 1
+            },
+            {
+              "value": "Nightwhisker",
+              "weight": 1
+            },
+            {
+              "value": "Oathbreaker",
+              "weight": 1
+            },
+            {
+              "value": "Pipechewer",
+              "weight": 1
+            },
+            {
+              "value": "Quarryback",
+              "weight": 1
+            },
+            {
+              "value": "Rotspine",
+              "weight": 1
+            },
+            {
+              "value": "Rusttail",
+              "weight": 1
+            },
+            {
+              "value": "Sableclaw",
+              "weight": 1
+            },
+            {
+              "value": "Sootwhisker",
+              "weight": 1
+            },
+            {
+              "value": "Thornfang",
+              "weight": 1
+            },
+            {
+              "value": "Underking",
+              "weight": 1
+            },
+            {
+              "value": "Vilebitter",
+              "weight": 1
+            },
+            {
+              "value": "Warpfang",
+              "weight": 1
+            },
+            {
+              "value": "Whisker-Lord",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/grammar/battle",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #noun# #place#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #epithet#",
+              "weight": 1
+            },
+            {
+              "value": "#noun.cap# #place# #epithet#",
+              "weight": 1
+            },
+            {
+              "value": "The #epithet# #noun#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Advance",
+              "weight": 1
+            },
+            {
+              "value": "Annihilation",
+              "weight": 1
+            },
+            {
+              "value": "Breaking",
+              "weight": 1
+            },
+            {
+              "value": "Charge",
+              "weight": 1
+            },
+            {
+              "value": "Chevauchée",
+              "weight": 1
+            },
+            {
+              "value": "Defeat",
+              "weight": 1
+            },
+            {
+              "value": "Deliverance",
+              "weight": 1
+            },
+            {
+              "value": "Descent",
+              "weight": 1
+            },
+            {
+              "value": "Devastation",
+              "weight": 1
+            },
+            {
+              "value": "Massacre",
+              "weight": 1
+            },
+            {
+              "value": "Mutiny",
+              "weight": 1
+            },
+            {
+              "value": "Passage",
+              "weight": 1
+            },
+            {
+              "value": "Retreat",
+              "weight": 1
+            },
+            {
+              "value": "Rising",
+              "weight": 1
+            },
+            {
+              "value": "Ruin",
+              "weight": 1
+            },
+            {
+              "value": "Sacking",
+              "weight": 1
+            },
+            {
+              "value": "Siege",
+              "weight": 1
+            },
+            {
+              "value": "Skirmish",
+              "weight": 1
+            },
+            {
+              "value": "Slaughter",
+              "weight": 1
+            },
+            {
+              "value": "Storming",
+              "weight": 1
+            },
+            {
+              "value": "Subjugation",
+              "weight": 1
+            },
+            {
+              "value": "Uprising",
+              "weight": 1
+            },
+            {
+              "value": "Vigil",
+              "weight": 1
+            },
+            {
+              "value": "War",
+              "weight": 1
+            },
+            {
+              "value": "Winter",
+              "weight": 1
+            },
+            {
+              "value": "Wrath",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "at Ashford",
+              "weight": 1
+            },
+            {
+              "value": "at Blackfen Crossing",
+              "weight": 1
+            },
+            {
+              "value": "at Cinderwatch",
+              "weight": 1
+            },
+            {
+              "value": "at Dreadmoor",
+              "weight": 1
+            },
+            {
+              "value": "at Embergate",
+              "weight": 1
+            },
+            {
+              "value": "at Fellmere",
+              "weight": 1
+            },
+            {
+              "value": "at Grimhollow",
+              "weight": 1
+            },
+            {
+              "value": "at Harrowmoor",
+              "weight": 1
+            },
+            {
+              "value": "at Ironvault",
+              "weight": 1
+            },
+            {
+              "value": "at Keldspire",
+              "weight": 1
+            },
+            {
+              "value": "at Lichford",
+              "weight": 1
+            },
+            {
+              "value": "at Mournhaven",
+              "weight": 1
+            },
+            {
+              "value": "at Nightbarrow",
+              "weight": 1
+            },
+            {
+              "value": "at Oathstone",
+              "weight": 1
+            },
+            {
+              "value": "at Pyrevale",
+              "weight": 1
+            },
+            {
+              "value": "at Rivengate",
+              "weight": 1
+            },
+            {
+              "value": "at Sorrowfen",
+              "weight": 1
+            },
+            {
+              "value": "at Thornwall",
+              "weight": 1
+            },
+            {
+              "value": "at Undercraft",
+              "weight": 1
+            },
+            {
+              "value": "at Vigilmar",
+              "weight": 1
+            },
+            {
+              "value": "at Witherhold",
+              "weight": 1
+            },
+            {
+              "value": "at Yewbarrow",
+              "weight": 1
+            },
+            {
+              "value": "on the Ashen Road",
+              "weight": 1
+            },
+            {
+              "value": "on the Bone Plain",
+              "weight": 1
+            },
+            {
+              "value": "on the Grave Road",
+              "weight": 1
+            },
+            {
+              "value": "on the Weeping Fen",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "epithet",
+          "choices": [
+            {
+              "value": "of Ash",
+              "weight": 1
+            },
+            {
+              "value": "of Blood",
+              "weight": 1
+            },
+            {
+              "value": "of Broken Banners",
+              "weight": 1
+            },
+            {
+              "value": "of Broken Spears",
+              "weight": 1
+            },
+            {
+              "value": "of Cinders",
+              "weight": 1
+            },
+            {
+              "value": "of Crow and Carrion",
+              "weight": 1
+            },
+            {
+              "value": "of Doom",
+              "weight": 1
+            },
+            {
+              "value": "of Fire and Ruin",
+              "weight": 1
+            },
+            {
+              "value": "of Frozen Blood",
+              "weight": 1
+            },
+            {
+              "value": "of Hollow Crowns",
+              "weight": 1
+            },
+            {
+              "value": "of Iron and Tears",
+              "weight": 1
+            },
+            {
+              "value": "of Last Light",
+              "weight": 1
+            },
+            {
+              "value": "of Nine Banners",
+              "weight": 1
+            },
+            {
+              "value": "of Pale Graves",
+              "weight": 1
+            },
+            {
+              "value": "of Ruin",
+              "weight": 1
+            },
+            {
+              "value": "of Sable Wings",
+              "weight": 1
+            },
+            {
+              "value": "of Silent Drums",
+              "weight": 1
+            },
+            {
+              "value": "of Sorrow",
+              "weight": 1
+            },
+            {
+              "value": "of Ten Thousand Dead",
+              "weight": 1
+            },
+            {
+              "value": "of the Black Sun",
+              "weight": 1
+            },
+            {
+              "value": "of the Broken Oath",
+              "weight": 1
+            },
+            {
+              "value": "of the Fallen Saint",
+              "weight": 1
+            },
+            {
+              "value": "of the Final Horn",
+              "weight": 1
+            },
+            {
+              "value": "of the Hollow Choir",
+              "weight": 1
+            },
+            {
+              "value": "of the Red Moon",
+              "weight": 1
+            },
+            {
+              "value": "of the Weeping Wall",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.grimdark/table/doom-omen",
+      "description": "Weighted omen of impending doom for a grimdark warband.",
+      "tags": [
+        "oracle",
+        "doom",
+        "omen"
+      ],
+      "mode": "weighted",
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "ashen-crows",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "Ashen crows gather on the war banner and refuse to fly."
+          }
+        },
+        {
+          "key": "bell-thirteen",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "The watch-bell tolls thirteen; every soldier counts only twelve."
+          }
+        },
+        {
+          "key": "red-snow",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Red snow falls on the march and melts before it touches steel."
+          }
+        },
+        {
+          "key": "broken-oath",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "An old oath is spoken aloud; the speaker's voice is not their own."
+          }
+        },
+        {
+          "key": "empty-chair",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A place is set at the war-feast for one who has not yet died."
+          }
+        },
+        {
+          "key": "silent-drums",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "The war-drums are struck but make no sound, and the host marches anyway."
+          }
+        },
+        {
+          "key": "pale-hound",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A pale hound follows the column at a distance, bigger each night."
+          }
+        },
+        {
+          "key": "cinder-rain",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "Cinders rain upward from the campfires."
+          }
+        },
+        {
+          "key": "grave-bloom",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "White flowers bloom on the graves of the not-yet-buried."
+          }
+        },
+        {
+          "key": "last-candle",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "The last candle in the shrine gutters but will not go out."
+          }
+        },
+        {
+          "key": "worm-whisper",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Something beneath the earth whispers each soldier's true name."
+          }
+        },
+        {
+          "key": "iron-weeps",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Rust runs like tears down the blades before any blow is struck."
+          }
+        },
+        {
+          "key": "black-sun",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A black sun rises at noon, and no shadow falls."
+          }
+        },
+        {
+          "key": "cracked-mirror",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "Every mirror in the camp shows the same empty chair."
+          }
+        },
+        {
+          "key": "rat-omen",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "Rats abandon the supply wagons in disciplined ranks, carrying nothing."
+          }
+        },
+        {
+          "key": "host-of-none",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Fresh footprints ring the camp, but no sentry saw a soul."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.grimdark/table/plague-outcome",
+      "description": "2d6 table of grim plague outcomes for a settlement.",
+      "tags": [
+        "oracle",
+        "plague",
+        "fate"
+      ],
+      "mode": "dice",
+      "dice": {
+        "count": 2,
+        "sides": 6,
+        "modifier": 0
+      },
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "quiet-passing",
+          "range": [
+            2,
+            3
+          ],
+          "result": {
+            "type": "text",
+            "text": "The sickness passes quietly. Two households hang black cloth and say nothing."
+          }
+        },
+        {
+          "key": "coughing-days",
+          "range": [
+            4,
+            5
+          ],
+          "result": {
+            "type": "text",
+            "text": "A coughing sickness takes hold; half the quarter stays abed and the rest keeps watch."
+          }
+        },
+        {
+          "key": "closing-gates",
+          "range": [
+            6,
+            7
+          ],
+          "result": {
+            "type": "text",
+            "text": "The gates are sealed from within. No one leaves, and the bell rings each dawn."
+          }
+        },
+        {
+          "key": "burning-quarter",
+          "range": [
+            8,
+            9
+          ],
+          "result": {
+            "type": "text",
+            "text": "The tainted quarter is fired. Ash drifts over the inner wall for a week."
+          }
+        },
+        {
+          "key": "red-flight",
+          "range": [
+            10,
+            11
+          ],
+          "result": {
+            "type": "text",
+            "text": "The surviving population flees. Empty streets echo with the sound of open doors."
+          }
+        },
+        {
+          "key": "silent-city",
+          "range": [
+            12,
+            12
+          ],
+          "result": {
+            "type": "text",
+            "text": "By the tenth day no voice is raised in the city. The crows have it entirely."
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.grimdark/generator/person-name",
+      "description": "Warband person name from one of the two naming styles with a gloss.",
+      "tags": [
+        "person",
+        "warband"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.grimdark/culture/ashbound",
+      "kind": "given"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/place-name",
+      "description": "Settlement name from a naming style with a gloss.",
+      "tags": [
+        "place"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.grimdark/culture/ashbound",
+      "kind": "settlement"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/warband-name",
+      "description": "Dark-fantasy warband and company names.",
+      "tags": [
+        "faction",
+        "warband"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/warband"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/banner-motto",
+      "description": "Doom-laden war banner mottos.",
+      "tags": [
+        "banner",
+        "motto"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/banner"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/heresy-name",
+      "description": "Heretical creeds, sects and forbidden gospels.",
+      "tags": [
+        "heresy",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/heresy"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/inquisition-name",
+      "description": "Inquisitorial courts, synods and tribunals.",
+      "tags": [
+        "inquisition",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/inquisition"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/plague-name",
+      "description": "Grim plague and pestilence names.",
+      "tags": [
+        "plague",
+        "disease"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/plague"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/mutation-name",
+      "description": "Mutations and afflicted body-parts.",
+      "tags": [
+        "mutation",
+        "body"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/mutation"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/grim-title",
+      "description": "Grim titles and offices.",
+      "tags": [
+        "title",
+        "person"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/title"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/war-machine-name",
+      "description": "Siege engines and war machines.",
+      "tags": [
+        "warmachine",
+        "siege"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/warmachine"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/clan-name",
+      "description": "Ratfolk/vermin folk clan names.",
+      "tags": [
+        "clan",
+        "vermin",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/clan"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/warlord-name",
+      "description": "Ratfolk warlord designations.",
+      "tags": [
+        "warlord",
+        "vermin",
+        "person"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/warlord"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/battle-name",
+      "description": "Doom-laden battle names.",
+      "tags": [
+        "battle",
+        "event"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.grimdark/grammar/battle"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/doom-omen",
+      "description": "Weighted omen of impending doom.",
+      "tags": [
+        "oracle",
+        "doom"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.grimdark/table/doom-omen"
+    },
+    {
+      "id": "lexiconlang.grimdark/generator/plague-outcome",
+      "description": "2d6 plague outcome for a settlement.",
+      "tags": [
+        "oracle",
+        "plague"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.grimdark/table/plague-outcome"
+    }
+  ]
+}

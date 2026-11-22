@@ -30,6 +30,8 @@ content for a setting.
 | [`@lexiconlang/fantasy`](/packages/fantasy) | 5 races (dwarvish/elvish/orcish/halfling/draconic), NPCs, settlements, taverns, factions, dragons, ~35 generators total |
 | [`@lexiconlang/scifi`](/packages/scifi)     | 9 alien species, star systems, ships, megacorps, ~15 generators                          |
 | [`@lexiconlang/modern`](/packages/modern)   | People with email/phone/address, cities, streets, companies, bands, books, ~16 generators |
+| [`@lexiconlang/steampunk`](/packages/steampunk) | Steampunk/gaslamp: inventors, airships, guilds, districts, automatons, patents, headlines, omens (14 generators) |
+| [`@lexiconlang/grimdark`](/packages/grimdark) | Grimdark: warbands, heresies, inquisitions, plagues, mutations, war machines, ratfolk clans and warlords, doom-laden battles (16 generators) |
 
 ## Tooling
 
