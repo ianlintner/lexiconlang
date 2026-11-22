@@ -1,0 +1,185 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "acme.portable",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "description": "Original synthetic cross-port conformance pack for N1",
+  "provenance": [
+    {
+      "id": "original-acme-portable",
+      "source": "original:lexiconlang-n1",
+      "title": "N1 cross-port conformance pack",
+      "creator": "lexiconlang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original synthetic data authored for cross-port tests; no third-party corpora.",
+      "modifications": "None",
+      "files": ["portable.pack.json"]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": ["language-v1", "grammar-v1", "tables-v1", "markov-v1"],
+  "cultures": [
+    {
+      "id": "acme.portable/culture/harbor",
+      "glyphs": {
+        "classes": { "C": ["m", "n", "s", "t"], "V": ["a", "e", "i", "o"] },
+        "syllables": [["C V", 3], ["V C", 1]],
+        "wordShapes": [["1", 2], ["2", 1]]
+      },
+      "templates": {
+        "given": [
+          {
+            "value": { "kind": "literal", "form": "Mira", "translation": "Mira" },
+            "weight": 2
+          },
+          { "value": { "kind": "literal", "form": "Café 🌊", "translation": "Café 🌊" }, "weight": 1 }
+        ],
+        "ship": [
+          { "value": { "kind": "literal", "form": "Quiet Wake", "translation": "Quiet Wake" }, "weight": 1 }
+        ]
+      }
+    }
+  ],
+  "meaningPacks": [
+    {
+      "id": "acme.portable/meaning-pack/sea",
+      "version": "1.0.0",
+      "meanings": [
+        { "id": "acme.portable/meaning/wave", "class": "noun", "tags": ["sea"], "label": "wave" },
+        { "id": "acme.portable/meaning/tide", "class": "noun", "tags": ["sea"], "label": "tide" },
+        { "id": "acme.portable/meaning/mast", "class": "noun", "tags": ["sea"], "label": "mast" }
+      ]
+    }
+  ],
+  "grammars": [
+    {
+      "id": "acme.portable/grammar/omen",
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        { "key": "start", "choices": [{ "value": "the #adj.capitalize# #noun#", "weight": 3 }, { "value": "#noun# of the #adj#", "weight": 1 }] },
+        { "key": "adj", "choices": [{ "value": "quiet", "weight": 2 }, { "value": "restless", "weight": 1 }] },
+        { "key": "noun", "choices": [{ "value": "tide", "weight": 1 }, { "value": "star", "weight": 1 }] }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "acme.portable/table/weather",
+      "mode": "weighted",
+      "entries": [
+        { "key": "calm", "weight": 2, "result": { "type": "text", "text": "calm" } },
+        { "key": "wind", "weight": 1, "result": { "type": "text", "text": "wind" } }
+      ]
+    },
+    {
+      "id": "acme.portable/table/dice",
+      "mode": "dice",
+      "dice": { "count": 2, "sides": 6, "modifier": 0 },
+      "entries": [
+        { "key": "low", "range": [2, 6], "result": { "type": "text", "text": "low" } },
+        { "key": "mid", "range": [7, 9], "result": { "type": "text", "text": "mid" } },
+        { "key": "high", "range": [10, 12], "result": { "type": "text", "text": "high" } }
+      ]
+    },
+    {
+      "id": "acme.portable/table/combo",
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "combo",
+          "weight": 1,
+          "result": {
+            "type": "sequence",
+            "separator": " / ",
+            "parts": [
+              { "key": "a", "result": { "type": "table", "table": "acme.portable/table/weather" } },
+              { "key": "b", "result": { "type": "grammar", "grammar": "acme.portable/grammar/omen", "template": "#adj.capitalize# #noun#" } },
+              { "key": "c", "result": { "type": "generator", "generator": "acme.portable/generator/ship", "field": "form" } }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [
+    {
+      "id": "acme.portable/corpus/syllables",
+      "provenance": ["original-acme-portable"],
+      "asset": { "path": "assets/syllables.markov.json", "sha256": "2eae1549ed2dc54d2d2f0b24b94eeb6241a34dcef8b61d8a42607ddff946e74d" }
+    }
+  ],
+  "markovModels": [
+    {
+      "id": "acme.portable/markov/harbor",
+      "corpus": "acme.portable/corpus/syllables",
+      "asset": { "path": "assets/syllables.markov.json", "sha256": "2eae1549ed2dc54d2d2f0b24b94eeb6241a34dcef8b61d8a42607ddff946e74d" },
+      "profile": "markov-json-v1"
+    }
+  ],
+  "generators": [
+    {
+      "id": "acme.portable/generator/given",
+      "description": "Portable name-v1 given name",
+      "tags": ["name"],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "acme.portable/culture/harbor",
+      "kind": "given"
+    },
+    {
+      "id": "acme.portable/generator/ship",
+      "description": "Portable name-v1 ship name",
+      "tags": ["ship"],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "acme.portable/culture/harbor",
+      "kind": "ship"
+    },
+    {
+      "id": "acme.portable/generator/omen",
+      "description": "Portable grammar-v1 omen",
+      "tags": ["grammar"],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "acme.portable/grammar/omen"
+    },
+    {
+      "id": "acme.portable/generator/weather",
+      "description": "Portable table-v1 weather",
+      "tags": ["table"],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "acme.portable/table/weather"
+    },
+    {
+      "id": "acme.portable/generator/dice",
+      "description": "Portable table-v1 dice",
+      "tags": ["table"],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "acme.portable/table/dice"
+    },
+    {
+      "id": "acme.portable/generator/combo",
+      "description": "Portable table-v1 nested combo",
+      "tags": ["table"],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "acme.portable/table/combo"
+    },
+    {
+      "id": "acme.portable/generator/markov",
+      "description": "Portable markov-v1 sample",
+      "tags": ["markov"],
+      "output": "string",
+      "engine": "markov-v1",
+      "model": "acme.portable/markov/harbor"
+    }
+  ],
+  "bases": [],
+  "dialects": [],
+  "extensions": {}
+}
