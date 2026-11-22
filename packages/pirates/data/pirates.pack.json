@@ -548,8 +548,7 @@
               "source": {
                 "type": "kind",
                 "kind": "epithet"
-              },
-              "prefix": " "
+              }
             }
           ]
         }
@@ -1078,8 +1077,7 @@
               "source": {
                 "type": "kind",
                 "kind": "epithet"
-              },
-              "prefix": " "
+              }
             }
           ]
         }
@@ -1104,7 +1102,7 @@
               "weight": 3
             },
             {
-              "value": "The #noun.cap# of #place.cap#",
+              "value": "The #noun.cap# of the #place.cap#",
               "weight": 2
             },
             {
@@ -1268,11 +1266,11 @@
           "key": "place",
           "choices": [
             {
-              "value": "the Reef",
+              "value": "Reef",
               "weight": 1
             },
             {
-              "value": "the Narrows",
+              "value": "Narrows",
               "weight": 1
             },
             {
@@ -1280,7 +1278,7 @@
               "weight": 1
             },
             {
-              "value": "the Shoals",
+              "value": "Shoals",
               "weight": 1
             },
             {
@@ -1288,7 +1286,7 @@
               "weight": 1
             },
             {
-              "value": "the Deep",
+              "value": "Deep",
               "weight": 1
             },
             {
@@ -1296,7 +1294,7 @@
               "weight": 1
             },
             {
-              "value": "the Reach",
+              "value": "Reach",
               "weight": 1
             }
           ]
@@ -2387,7 +2385,7 @@
               "weight": 1
             },
             {
-              "value": "the Narrows",
+              "value": "Narrows",
               "weight": 1
             },
             {
@@ -2395,7 +2393,7 @@
               "weight": 1
             },
             {
-              "value": "the Shoals",
+              "value": "Shoals",
               "weight": 1
             },
             {
@@ -2403,7 +2401,7 @@
               "weight": 1
             },
             {
-              "value": "the Reach",
+              "value": "Reach",
               "weight": 1
             },
             {
@@ -3385,6 +3383,18 @@
       "engine": "structured-name-v1",
       "culture": "lexiconlang.pirates/culture/corsair",
       "structure": "corsair-captain"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/captain-name-buccaneer",
+      "description": "A buccaneer captain's structured name with epithet",
+      "tags": [
+        "person",
+        "captain"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.pirates/culture/buccaneer",
+      "structure": "buccaneer-captain"
     },
     {
       "id": "lexiconlang.pirates/generator/captain-epithet",

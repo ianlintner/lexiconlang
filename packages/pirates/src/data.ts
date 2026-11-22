@@ -20,12 +20,36 @@ export interface NameStructure {
 export interface CultureData {
   id: string;
   capitalize?: "first" | "all" | "none";
+  glyphs?: {
+    classes: Readonly<Record<string, readonly string[]>>;
+    syllables: readonly (readonly [string, number])[];
+    wordShapes: readonly (readonly [string, number])[];
+    constraints?: unknown;
+    joiner?: string;
+  };
+  meaningPacks?: readonly unknown[];
   templates: Record<string, readonly WeightedNameTemplate[]>;
   nameStructures: Record<string, NameStructure>;
 }
 export interface TableEntry { key: string; weight?: number; range?: readonly [number, number]; result: { type: string; text?: string } }
-export interface TableDescriptor { id: string; mode: "weighted" | "dice"; entries: readonly TableEntry[] }
-export interface GeneratorDescriptor { id: string; engine: string; description: string; tags: readonly string[] }
+export interface TableDescriptor {
+  id: string;
+  mode: "weighted" | "dice";
+  entries: readonly TableEntry[];
+  dice?: { count: number; sides: number; modifier: number };
+  maxDepth?: number;
+}
+export interface GeneratorDescriptor {
+  id: string;
+  engine: string;
+  description: string;
+  tags: readonly string[];
+  culture?: string;
+  structure?: string;
+  grammar?: string;
+  table?: string;
+  output?: string;
+}
 
 export interface PiratesPackData {
   $schema: string;
@@ -48,8 +72,11 @@ export interface PiratesPackData {
   extends: readonly unknown[];
   requires: readonly string[];
   cultures: readonly CultureData[];
+  meaningPacks: readonly unknown[];
   grammars: readonly GrammarDescriptor[];
   tables: readonly TableDescriptor[];
+  corpora: readonly unknown[];
+  markovModels: readonly unknown[];
   generators: readonly GeneratorDescriptor[];
 }
 

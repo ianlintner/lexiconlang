@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createContext } from "@lexiconlang/core";
-import { validatePack } from "@lexiconlang/packs";
+import { createWorld, definePack, rollTable, validatePack } from "@lexiconlang/packs";
 import pirates, {
   data,
   shipName,
@@ -123,16 +123,119 @@ describe("distinctness", () => {
     expect(seen.size / 100).toBeGreaterThanOrEqual(0.6);
   });
 
+const TABLE_PACK_IDS = [
+  "lexiconlang.pirates/table/sea-encounter",
+  "lexiconlang.pirates/table/weather-portent",
+  "lexiconlang.pirates/table/cargo-haul",
+] as const;
+const TABLE_GENERATOR_BY_PACK_ID: Record<string, (typeof TABLE_GENERATORS)[number]> = {
+  "lexiconlang.pirates/table/sea-encounter": seaEncounter,
+  "lexiconlang.pirates/table/weather-portent": weatherPortent,
+  "lexiconlang.pirates/table/cargo-haul": cargoHaul,
+};
+
   it("oracles exercise their bounded entry sets", () => {
-    for (const [i, table] of TABLE_GENERATORS.entries()) {
-      const descriptor = data.tables[i]!;
+    // Look the descriptor up by the generator's own pack ID, never by array
+    // position: adding or reordering tables in the JSON must not silently
+    // change what this test measures.
+    for (const packId of TABLE_PACK_IDS) {
+      const table = TABLE_GENERATOR_BY_PACK_ID[packId]!;
+      const descriptor = data.tables.find((t) => t.id === packId);
+      expect(descriptor, `missing table descriptor for ${packId}`).toBeDefined();
       const ctx = createContext({ seed: `distinct-${table.id}` });
       const seen = new Set<string>();
       for (let roll = 0; roll < 100; roll++) seen.add(table.generate(ctx.child(`roll:${roll}`)).entry);
       // Oracle tables are bounded-cardinality oracles (e.g. a d6 weather table).
       // Require broad coverage of the authored entries rather than 60 distinct
       // results from a six-sided die.
-      expect(seen.size).toBeGreaterThanOrEqual(Math.ceil(descriptor.entries.length * 0.6));
+      expect(seen.size).toBeGreaterThanOrEqual(Math.ceil(descriptor!.entries.length * 0.6));
+    }
+  });
+});
+
+// ─── JSON is the single source of truth ───────────────────────────────────
+//
+// The facade must roll through the same primitives createWorld() uses for
+// this pack. Deriving the context exactly as generateAt() does lets us assert
+// byte-for-byte parity for every grammar and table generator.
+
+const PACK_GENERATORS = [
+  ["shipName", "ship-name", "ship", shipName],
+  ["shipClass", "ship-class", "ship-class", shipClass],
+  ["captainEpithet", "captain-epithet", "epithet", captainEpithet],
+  ["crewName", "crew-name", "crew", crewName],
+  ["portCove", "port-cove", "port", portCove],
+  ["factionName", "faction-name", "faction", factionName],
+  ["treasure", "treasure", "treasure", treasure],
+  ["mapName", "map-name", "map", mapName],
+  ["shantyTitle", "shanty-title", "shanty", shantyTitle],
+  ["navalRank", "naval-rank", "rank", navalRank],
+  ["seaEncounter", "sea-encounter", "encounter", seaEncounter],
+  ["weatherPortent", "weather-portent", "weather", weatherPortent],
+  ["cargoHaul", "cargo-haul", "cargo", cargoHaul],
+] as const;
+
+function worldContext(seed: string, packId: string, key: string) {
+  return createContext({ seed }).child(`generator:${packId}`).child(`key:${key}`);
+}
+
+function surface(value: unknown): string {
+  if (typeof value === "string") return value;
+  if (value && typeof value === "object" && "text" in value) return String((value as { text: unknown }).text);
+  return JSON.stringify(value);
+}
+
+describe("pack-runtime parity", () => {
+  it("every grammar and oracle matches createWorld().use(definePack(data))", () => {
+    const pack = definePack(data as never);
+    for (const seed of ["parity-a", "parity-b", "parity-c"]) {
+      const world = createWorld({ seed }).use(pack);
+      for (const [, suffix, key, generator] of PACK_GENERATORS) {
+        const id = `lexiconlang.pirates/generator/${suffix}`;
+        const fromWorld = surface(world.generate(id, key));
+        const fromFacade = surface(generator.generate(worldContext(seed, id, key)));
+        expect(fromFacade, `${suffix} @ ${seed}`).toBe(fromWorld);
+      }
+    }
+  });
+
+  it("delegates oracle rolls to the exported rollTable primitive", () => {
+    const table = data.tables.find((t) => t.id.endsWith("/table/weather-portent"))!;
+    const id = table.id.replace("/table/", "/generator/");
+    const ctx = worldContext("direct-roll", id, "weather");
+    const host = {
+      table: (tableId: string) => data.tables.find((t) => t.id === tableId) as never,
+      generator: () => { throw new Error("unused"); },
+      expandGrammar: () => { throw new Error("unused"); },
+    };
+    expect(surface(weatherPortent.generate(ctx))).toBe(surface(rollTable(table as never, ctx, host)));
+  });
+
+  it("both cultures' captain structures are reachable through the pack runtime", () => {
+    const world = createWorld({ seed: "captains" }).use(definePack(data as never));
+    for (const suffix of ["captain-name", "captain-name-buccaneer"]) {
+      const name = surface(world.generate(`lexiconlang.pirates/generator/${suffix}`, "captain"));
+      expect(name).not.toMatch(/  /);
+      expect(name.length).toBeGreaterThan(3);
+    }
+  });
+});
+
+describe("content artifacts", () => {
+  it("never emits doubled articles in treasure or ship names", () => {
+    for (let i = 0; i < 200; i++) {
+      const seed = `artifact-${i}`;
+      const ctx = createContext({ seed });
+      expect(treasure.generate(ctx.child("treasure"))).not.toMatch(/\bthe\s+the\b/i);
+      expect(shipName.generate(ctx.child("ship"))).not.toMatch(/\bthe\s+the\b/i);
+    }
+  });
+
+  it("never emits double spaces in captain names", () => {
+    for (let i = 0; i < 200; i++) {
+      const name = captainName.generate(createContext({ seed: `captain-space-${i}` }).child("captain"));
+      expect(name.full).not.toMatch(/  /);
+      expect(name.translation).not.toMatch(/  /);
     }
   });
 });

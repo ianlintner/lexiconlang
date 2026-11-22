@@ -3,39 +3,39 @@ import {
   type Generator,
   type Seed,
   createContext,
-  oneOf,
 } from "@lexiconlang/core";
-import { grammar, type GrammarRules } from "@lexiconlang/grammar";
-import { rollTable, type TableRoll } from "@lexiconlang/packs";
-import { data, type CultureData, type GrammarDescriptor, type TableDescriptor } from "./data.js";
+import {
+  freezeCulture,
+  generateStructuredName,
+  type Culture,
+  type NameTemplate,
+} from "@lexiconlang/language";
+import {
+  portableGrammar,
+  rollTable,
+  type TableData,
+  type TableHost,
+  type TableRoll,
+} from "@lexiconlang/packs";
+import {
+  data,
+  type CultureData,
+  type GrammarDescriptor,
+  type TableDescriptor,
+} from "./data.js";
 export { data } from "./data.js";
 
-// ─── Helpers ─────────────────────────────────────────────────────────────
+// ─── Pack-runtime bridge ──────────────────────────────────────────────────
+//
+// The facade must roll through the *same* primitives that createWorld() uses
+// for a declarative pack (`portableGrammar` / `rollTable`). Re-implementing
+// selection here with core RNG helpers silently produced different results
+// from the JSON-loaded runtime; every generator below now delegates.
 
 function descriptorById(id: string): GrammarDescriptor {
   const found = data.grammars.find((g) => g.id === id);
   if (!found) throw new Error(`pirates: missing grammar descriptor ${id}`);
   return found;
-}
-
-/** Convert a portable pack grammar descriptor into typed grammar rules. */
-function rulesOf(descriptor: GrammarDescriptor): GrammarRules {
-  const rules: Record<string, unknown> = {};
-  for (const rule of descriptor.rules) {
-    // Grammar's portable weighted-object form is not supported by all hosts;
-    // the record form is byte-identical and universally portable.
-    const weights: Record<string, number> = {};
-    for (const choice of rule.choices) {
-      weights[choice.value] = (weights[choice.value] ?? 0) + choice.weight;
-    }
-    rules[rule.key] = weights;
-  }
-  return rules as GrammarRules;
-}
-
-function fromGrammar(id: string, name: string): Generator<string> {
-  const descriptor = descriptorById(id);
-  return grammar(rulesOf(descriptor), { id: name, start: descriptor.start });
 }
 
 function tableById(id: string): TableDescriptor {
@@ -44,50 +44,125 @@ function tableById(id: string): TableDescriptor {
   return found;
 }
 
-/**
- * Oracle generator: selects a literal table entry through a stable child key.
- * The pack's weighted/dice ranges are sampled without consuming the parent RNG.
- */
-function fromTable(id: string, name: string): Generator<TableRoll> {
-  const table = tableById(id);
-  return {
-    id: name,
-    generate(ctx: Context): TableRoll {
-      const rollCtx = ctx.child("select");
-      let index: number;
-      if (table.mode === "dice") {
-        const die = 1 + rollCtx.child("die:0").rng.nextInt(0, 6);
-        const entryIndex = table.entries.findIndex((e) => {
-          const range = e.range;
-          return range !== undefined && die >= range[0] && die <= range[1];
-        });
-        index = entryIndex < 0 ? 0 : entryIndex;
-        const chosen = table.entries[index]!;
-        return {
-          table: table.id,
-          entry: chosen.key,
-          total: die,
-          dice: [die],
-          text: chosen.result.text ?? "",
-          children: [],
-        };
-      }
-      const weights = table.entries.map((e) => e.weight ?? 1);
-      const total = weights.reduce((a, b) => a + b, 0);
-      let ticket = rollCtx.rng.nextInt(0, total);
-      index = weights.length - 1;
-      for (let i = 0; i < weights.length; i++) {
-        const w = weights[i]!;
-        if (ticket < w) { index = i; break; }
-        ticket -= w;
-      }
-      const chosen = table.entries[index]!;
-      return { table: table.id, entry: chosen.key, text: chosen.result.text ?? "", children: [] };
-    },
-  };
+/** No pirates grammar references an external generator; fail loudly if one appears. */
+function externalGenerator(id: string): never {
+  throw new Error(`pirates: unexpected external grammar reference ${id}`);
 }
 
-// ─── Generators ──────────────────────────────────────────────────────────
+const grammarHost = {
+  expandGrammar(id: string, template: string, ctx: Context): string {
+    return portableGrammar(descriptorById(id) as never, externalGenerator).expandTemplate(template, ctx);
+  },
+};
+
+const tableHost: TableHost = {
+  table: (id) => tableById(id) as unknown as TableData,
+  generator: (id) => {
+    const found = (generators as Record<string, Generator<unknown>>)[id];
+    if (!found) throw new Error(`pirates: unknown table generator ${id}`);
+    return found;
+  },
+  expandGrammar: grammarHost.expandGrammar,
+};
+
+/** A grammar generator backed by the pack's portable interpreter. */
+function fromGrammar(id: string, name: string): Generator<string> {
+  const portable = portableGrammar(descriptorById(id) as never, externalGenerator);
+  return { id: name, generate: (ctx) => portable.generate(ctx) };
+}
+
+/** An oracle generator backed by the pack's table roller (dice + weights). */
+function fromTable(id: string, name: string): Generator<TableRoll> {
+  const table = tableById(id) as unknown as TableData;
+  return { id: name, generate: (ctx) => rollTable(table, ctx, tableHost) };
+}
+
+// ─── Structured captain names ─────────────────────────────────────────────
+
+function nameTemplateOf(value: unknown): NameTemplate {
+  const v = value as { kind?: string; form?: string; translation?: string };
+  if (v?.kind !== "literal" || typeof v.form !== "string" || typeof v.translation !== "string") {
+    throw new Error("pirates: only literal name templates are supported by the facade");
+  }
+  return { kind: "literal", form: v.form, translation: v.translation };
+}
+
+/** Resolve a pack culture the same way createWorld().use(definePack(data)) does. */
+function resolveCulture(raw: CultureData): Culture {
+  const g = raw.glyphs as {
+    classes?: Record<string, readonly string[]>;
+    syllables?: readonly (readonly [string, number])[];
+    wordShapes?: readonly (readonly [string, number])[];
+    constraints?: unknown;
+    joiner?: string;
+  } | undefined;
+  const templates = Object.fromEntries(
+    Object.entries(raw.templates).map(([kind, choices]) => [
+      kind,
+      choices.map((c) => [nameTemplateOf(c.value), c.weight] as const),
+    ]),
+  );
+  return freezeCulture({
+    id: raw.id,
+    glyphs: {
+      classes: g?.classes ?? {},
+      syllables: g?.syllables ?? [],
+      wordShapes: g?.wordShapes ?? [],
+      ...(g?.constraints === undefined ? {} : { constraints: g.constraints }),
+      ...(g?.joiner === undefined ? {} : { joiner: g.joiner }),
+    },
+    templates,
+    nameStructures: raw.nameStructures,
+    capitalize: raw.capitalize ?? "first",
+    meaningPacks: [],
+    wordClasses: [],
+    genderTemplates: {},
+  } as unknown as Culture);
+}
+
+interface CaptainRecipe {
+  culture: Culture;
+  structure: string;
+}
+
+const captainRecipes: readonly CaptainRecipe[] = data.generators
+  .filter((g) => g.engine === "structured-name-v1" && g.tags.includes("captain"))
+  .map((g) => {
+    const raw = data.cultures.find((c) => c.id === g.culture);
+    if (!raw) throw new Error(`pirates: captain generator ${g.id} has unknown culture ${g.culture}`);
+    if (!g.structure) throw new Error(`pirates: captain generator ${g.id} has no structure`);
+    return { culture: resolveCulture(raw), structure: g.structure };
+  });
+
+export interface CaptainName {
+  full: string;
+  translation: string;
+  given: string;
+  surname: string;
+  epithet: string;
+  culture: string;
+}
+
+/** A captain name drawn from one of the two authored cultures, with an epithet. */
+export const captainName: Generator<CaptainName> = {
+  id: "pirates.captainName",
+  generate(ctx: Context): CaptainName {
+    const idx = ctx.child("culture").rng.nextInt(0, captainRecipes.length);
+    const recipe = captainRecipes[idx]!;
+    const named = generateStructuredName(recipe.culture, { structure: recipe.structure }, ctx);
+    const component = (role: string) => named.components.find((c) => c.role === role)?.value.form ?? "";
+    return {
+      full: named.form,
+      translation: named.translation,
+      given: component("given"),
+      surname: component("surname"),
+      epithet: component("epithet"),
+      culture: recipe.culture.id,
+    };
+  },
+};
+
+// ─── Generators ───────────────────────────────────────────────────────────
 
 export const shipName = fromGrammar("lexiconlang.pirates/grammar/ship-name", "pirates.shipName");
 export const shipClass = fromGrammar("lexiconlang.pirates/grammar/ship-class", "pirates.shipClass");
@@ -103,44 +178,6 @@ export const navalRank = fromGrammar("lexiconlang.pirates/grammar/naval-rank", "
 /** The two authored naming styles (cultures) in the pack. */
 export const cultures = data.cultures;
 
-export interface CaptainName {
-  full: string;
-  translation: string;
-  given: string;
-  surname: string;
-  epithet: string;
-  culture: string;
-}
-
-interface LiteralTemplate { form: string; translation?: string }
-/** Extract the literal forms + translations for one slot from a pack culture. */
-function slotChoices(culture: CultureData, slot: string): readonly LiteralTemplate[] {
-  return (culture.templates[slot] ?? [])
-    .map((t) => t.value as { kind?: string; form?: string; translation?: string })
-    .filter((v): v is { kind: string; form: string; translation: string } => v?.kind === "literal" && typeof v.form === "string")
-    .map((v) => ({ form: v.form, translation: v.translation ?? v.form }));
-}
-
-/** A captain name drawn from one of the two cultures, with an epithet. */
-export const captainName: Generator<CaptainName> = {
-  id: "pirates.captainName",
-  generate(ctx: Context): CaptainName {
-    const cultureIdx = ctx.child("culture").rng.nextInt(0, cultures.length);
-    const culture = cultures[cultureIdx]!;
-    const given = oneOf(...slotChoices(culture, "given")).generate(ctx.child("given"));
-    const surname = oneOf(...slotChoices(culture, "surname")).generate(ctx.child("surname"));
-    const epithet = oneOf(...slotChoices(culture, "epithet")).generate(ctx.child("epithet"));
-    return {
-      full: `${given.form} ${surname.form} ${epithet.form}`,
-      translation: `${given.translation} ${surname.translation} ${epithet.translation}`,
-      given: given.form,
-      surname: surname.form,
-      epithet: epithet.form,
-      culture: culture.id,
-    };
-  },
-};
-
 export const seaEncounter = fromTable("lexiconlang.pirates/table/sea-encounter", "pirates.seaEncounter");
 export const weatherPortent = fromTable("lexiconlang.pirates/table/weather-portent", "pirates.weatherPortent");
 export const cargoHaul = fromTable("lexiconlang.pirates/table/cargo-haul", "pirates.cargoHaul");
@@ -148,7 +185,7 @@ export const cargoHaul = fromTable("lexiconlang.pirates/table/cargo-haul", "pira
 // Expose the pure table roller for callers that want the full TableRoll tree.
 export { rollTable };
 
-// ─── Public API ──────────────────────────────────────────────────────────
+// ─── Public API ───────────────────────────────────────────────────────────
 
 export const generators = {
   shipName,
