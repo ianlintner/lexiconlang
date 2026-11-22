@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { steampunk } from "@lexiconlang/steampunk";
+import { wuxia } from "@lexiconlang/wuxia";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -98,3 +99,16 @@ console.log(`  Vessel:   ${brass.airship()}`);
 console.log(`  Society:  ${brass.society()}`);
 console.log(`  Sunday headline: ${brass.headline()}`);
 console.log(`  Street omen: ${brass.omen().text}`);
+
+// ─── Scenario 4: a gaslamp expedition into a cultivation secret realm ────
+
+const jianghu = wuxia.withSeed("brass-and-jade");
+console.log("\nGaslamp expedition into a hidden realm:");
+console.log(`  Wanderer:   ${jianghu.person().form} — \"${jianghu.nickname()}\"`);
+console.log(`  Sect:       ${jianghu.sect()}`);
+console.log(`  Technique:  ${jianghu.technique()}`);
+console.log(`  Realm:      ${jianghu.cultivationRealm()}`);
+console.log(`  Mountain:   ${jianghu.mountain().form}`);
+console.log(`  Destination: ${jianghu.secretRealm()}`);
+console.log(`  Treasure:   ${jianghu.treasure()}`);
+console.log(`  Trial:      ${jianghu.tribulation().text}`);

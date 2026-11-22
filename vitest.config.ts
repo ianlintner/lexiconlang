@@ -17,6 +17,8 @@ export default defineConfig({
       "@lexiconlang/modern": new URL("./packages/modern/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/packs/node": new URL("./packages/packs/src/node.ts", import.meta.url).pathname,
       "@lexiconlang/packs": new URL("./packages/packs/src/index.ts", import.meta.url).pathname,
+      "@lexiconlang/steampunk": new URL("./packages/steampunk/src/index.ts", import.meta.url).pathname,
+      "@lexiconlang/wuxia": new URL("./packages/wuxia/src/index.ts", import.meta.url).pathname,
     },
   },
 });
