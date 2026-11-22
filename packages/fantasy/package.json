@@ -25,6 +25,7 @@
     "@lexiconlang/core": "workspace:*",
     "@lexiconlang/grammar": "workspace:*",
     "@lexiconlang/language": "workspace:*",
-    "@lexiconlang/markov": "workspace:*"
+    "@lexiconlang/markov": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
   }
 }
