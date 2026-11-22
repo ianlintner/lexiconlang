@@ -1,0 +1,32 @@
+{
+  "name": "@lexiconlang/horror",
+  "version": "0.1.0",
+  "description": "Horror and cosmic-horror genre content pack for lexiconlang — investigators, entities, tomes, cults, omens and monster traits",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./horror.pack.json": "./src/horror.pack.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "PROVENANCE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/language": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  }
+}

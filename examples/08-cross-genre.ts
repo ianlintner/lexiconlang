@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { horror } from "@lexiconlang/horror";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -72,3 +73,20 @@ for (const d of sq) {
   console.log(`  Det. ${d.legal}  (a.k.a. "${d.alias}")`);
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
+
+// ─── Scenario 3: a horror investigation in a small town ──────────────────
+//
+// The horror pack is a standalone F2 pack with a `withSeed` facade, so it
+// composes with any other genre just by using a shared seed family.
+
+const h = horror.withSeed("the-silver-cord");
+
+console.log("\nSmall-town horror case file:");
+console.log(`  Investigator: ${h.investigator("lead")}`);
+console.log(`  Town:         ${h.town("setting").form}`);
+console.log(`  Haunted site: ${h.hauntedLocation("site")}`);
+console.log(`  Forbidden tome: ${h.forbiddenTome("evidence")}`);
+console.log(`  Cult:         ${h.cult("suspects")}`);
+console.log(`  Entity:       ${h.eldritchEntity("boss")} (${h.monsterTrait("tell")})`);
+console.log(`  Omen:         ${h.omen("first-sign")}`);
+console.log(`  Secret:       ${h.secret("backstory")}`);
