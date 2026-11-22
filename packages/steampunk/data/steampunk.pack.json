@@ -1,0 +1,5678 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.steampunk",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original fictional steampunk and gaslamp names, inventions, airships, guilds, districts, automatons, headlines and oracles.",
+  "provenance": [
+    {
+      "id": "original-steampunk",
+      "source": "original:lexiconlang",
+      "title": "Steampunk & gaslamp synthetic corpus",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "All strings in this pack are original synthetic fiction authored for LexiconLang. No real living people, trademarks or setting-specific IP are reproduced.",
+      "modifications": "None",
+      "files": [
+        "data/steampunk.pack.json",
+        "data/PROVENANCE.md"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.steampunk/culture/oldenglish",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aldric",
+              "translation": "old ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bramwell",
+              "translation": "broom well"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cedric",
+              "translation": "battle leader"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Edwin",
+              "translation": "blessed friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eldred",
+              "translation": "old counsel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fenwick",
+              "translation": "fen dweller"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Godric",
+              "translation": "good ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harold",
+              "translation": "army ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hugh",
+              "translation": "heart, spirit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leopold",
+              "translation": "bold people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oswin",
+              "translation": "god friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Percival",
+              "translation": "pierce the valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Roderick",
+              "translation": "famous ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thaddeus",
+              "translation": "courageous heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulric",
+              "translation": "wolf ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wren",
+              "translation": "small bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Alfred",
+              "translation": "elf counsel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Basil",
+              "translation": "noble, kingly"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cuthbert",
+              "translation": "famous bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunstan",
+              "translation": "brown stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Egbert",
+              "translation": "bright edge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Godfrey",
+              "translation": "god peace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollis",
+              "translation": "holly place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ivor",
+              "translation": "yew lord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingsley",
+              "translation": "king's clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Merrick",
+              "translation": "sea ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nathaniel",
+              "translation": "gift of God"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Owen",
+              "translation": "young warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rowan",
+              "translation": "little red one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sibley",
+              "translation": "seed clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Talbot",
+              "translation": "valley dwell"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Walter",
+              "translation": "army ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yarrow",
+              "translation": "yarrow plant"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashford",
+              "translation": "ford by the ash trees"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blackwood",
+              "translation": "dark wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brightmere",
+              "translation": "bright pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Copperthwaite",
+              "translation": "copper clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunmoor",
+              "translation": "brown moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberly",
+              "translation": "ember field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fallowfield",
+              "translation": "fallow field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grayson",
+              "translation": "son of the gray one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hartley",
+              "translation": "stag clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironbridge",
+              "translation": "iron bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingsford",
+              "translation": "king's ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lockhaven",
+              "translation": "locked harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marlowe",
+              "translation": "marsh hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Northcliffe",
+              "translation": "north cliff"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oakshott",
+              "translation": "oak thicket"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pembroke",
+              "translation": "border land"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quillfeather",
+              "translation": "quill feather"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ravenscroft",
+              "translation": "raven field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silverton",
+              "translation": "silver farm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornbury",
+              "translation": "thorn fort"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underhill",
+              "translation": "below the hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vane",
+              "translation": "weather vane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Westbrook",
+              "translation": "west brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewbarrow",
+              "translation": "yew hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashcrofte",
+              "translation": "ash field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brambley",
+              "translation": "bramble clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderly",
+              "translation": "cinder field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Draycott",
+              "translation": "dragon cottage"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elmhurst",
+              "translation": "elm wooded hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fennimore",
+              "translation": "fen moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Goldhawk",
+              "translation": "gold hawk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halloway",
+              "translation": "holy road"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironstone",
+              "translation": "iron stone"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderford",
+              "translation": "ford of cinders"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gloamhollow",
+              "translation": "hollow of twilight"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironmarsh",
+              "translation": "iron marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brasshaven",
+              "translation": "harbour of brass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sootheby",
+              "translation": "soothing village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wrenchester",
+              "translation": "wren fort"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashgate",
+              "translation": "ash gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bramblewick",
+              "translation": "bramble village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Coalhaven",
+              "translation": "coal harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duskhollow",
+              "translation": "vale of dusk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elderbarrow",
+              "translation": "elder burial hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Foxmere",
+              "translation": "fox pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimshaw",
+              "translation": " grim wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harrowgate",
+              "translation": "harrow gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lanternby",
+              "translation": "lantern village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Millstone",
+              "translation": "mill stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nettlebed",
+              "translation": "nettle bed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oakenshaft",
+              "translation": "oak wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pennygate",
+              "translation": "penny gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarryfield",
+              "translation": "quarry field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rookery",
+              "translation": "rookery"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Slatebridge",
+              "translation": "slate bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thistledown",
+              "translation": "thistle down"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underforge",
+              "translation": "below the forge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vaulton",
+              "translation": "vault town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Willowdean",
+              "translation": "willow valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewcross",
+              "translation": "yew cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashwell",
+              "translation": "ash spring"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brambleford",
+              "translation": "bramble ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderhill",
+              "translation": "cinder hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunwold",
+              "translation": "brown wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elderwick",
+              "translation": "elder village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Foxhollow",
+              "translation": "fox hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimswell",
+              "translation": "grim spring"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harrowmere",
+              "translation": "harrow pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lanternfield",
+              "translation": "lantern field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Millmere",
+              "translation": "mill pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nettlewick",
+              "translation": "nettle village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oakenside",
+              "translation": "oak hillside"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pennyhollow",
+              "translation": "penny hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarryside",
+              "translation": "quarry hillside"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rookford",
+              "translation": "rook ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Slatemere",
+              "translation": "slate pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thistlewick",
+              "translation": "thistle village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underwood",
+              "translation": "under the wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vaultwick",
+              "translation": "vault village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Willowmere",
+              "translation": "willow pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewhollow",
+              "translation": "yew hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashmere",
+              "translation": "ash pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bramblewick",
+              "translation": "bramble village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderwick",
+              "translation": "cinder village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunhaven",
+              "translation": "brown harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elderford",
+              "translation": "elder ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Foxbarrow",
+              "translation": "fox hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grimford",
+              "translation": "grim ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harrowden",
+              "translation": "harrow valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lanternwick",
+              "translation": "lantern village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Millhaven",
+              "translation": "mill harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nettlemere",
+              "translation": "nettle pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oakendale",
+              "translation": "oak valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pennywell",
+              "translation": "penny spring"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarrymere",
+              "translation": "quarry pool"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "full-name": {
+          "separator": " ",
+          "translationSeparator": ", ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lexiconlang.steampunk/culture/cosmopolitan",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Adelaide",
+              "translation": "noble kind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ambrose",
+              "translation": "immortal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beatrix",
+              "translation": "she who brings joy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cassian",
+              "translation": "brass, warm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cecily",
+              "translation": "blind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dorothea",
+              "translation": "gift of God"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elias",
+              "translation": "the Lord is my God"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Felicity",
+              "translation": "happiness"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gideon",
+              "translation": "great warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Helena",
+              "translation": "bright one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ignatius",
+              "translation": "fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Josephine",
+              "translation": "God shall add"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lucian",
+              "translation": "light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marguerite",
+              "translation": "pearl"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nikolai",
+              "translation": "victory of the people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ophelia",
+              "translation": "help"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quentin",
+              "translation": "fifth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rosalind",
+              "translation": "beautiful rose"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sebastian",
+              "translation": "venerable"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Theodora",
+              "translation": "gift of God"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Valentine",
+              "translation": "strong, healthy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wilhelmina",
+              "translation": "resolute protector"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zoe",
+              "translation": "life"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Auguste",
+              "translation": "great, majestic"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Clara",
+              "translation": "bright, clear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emil",
+              "translation": "industrious"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Freya",
+              "translation": "noble lady"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Henrietta",
+              "translation": "house ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isadora",
+              "translation": "gift of Isis"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Julian",
+              "translation": "youthful"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bellamy",
+              "translation": "fine friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cardew",
+              "translation": "dear friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Delacroix",
+              "translation": "of the cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Escobar",
+              "translation": "place of ropes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fontaine",
+              "translation": "fountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gresham",
+              "translation": "grass home"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halvorsen",
+              "translation": "Halvor's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ibsen",
+              "translation": "Ib's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Laurent",
+              "translation": "from Laurentium"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moreau",
+              "translation": "Maurice's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nevern",
+              "translation": "yew river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Olszewski",
+              "translation": "son of Olaf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Petrov",
+              "translation": "Peter's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rochester",
+              "translation": " resting place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sørensen",
+              "translation": "Søren's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thackeray",
+              "translation": "thatcher's clearing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vandermeer",
+              "translation": "from the lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Whitmore",
+              "translation": "white moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zamora",
+              "translation": "border land"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fontainebleau",
+              "translation": "beautiful fountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Arceneaux",
+              "translation": "arc and waters"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beaumont",
+              "translation": "beautiful mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corbin",
+              "translation": "raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duval",
+              "translation": "of the valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ellsworth",
+              "translation": "Ewell's enclosure"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fitzroy",
+              "translation": "son of the king"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Giraud",
+              "translation": "spear ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollingsworth",
+              "translation": "holly enclosure"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lemaire",
+              "translation": "the mayor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marchand",
+              "translation": "merchant"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rousseau",
+              "translation": "red-haired"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Villeneuve",
+              "translation": "new town"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bellevue",
+              "translation": "beautiful view"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Carrington",
+              "translation": "Carr's people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunmere Heights",
+              "translation": "high dun moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eastmere",
+              "translation": "eastern pool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fairmont",
+              "translation": "fair mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grandview",
+              "translation": "grand view"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Highgate",
+              "translation": "high gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ivycourt",
+              "translation": "ivy court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingsway",
+              "translation": "king's road"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lindenpark",
+              "translation": "linden park"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Montclair",
+              "translation": "clear mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "North End",
+              "translation": "northern end"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oakridge",
+              "translation": "oak ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pleasant Hill",
+              "translation": "pleasant hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Queensport",
+              "translation": "queen's port"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Riverton",
+              "translation": "river town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Southbank",
+              "translation": "south bank"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Terrace Hill",
+              "translation": "terrace hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Union Quay",
+              "translation": "union quay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vesta Row",
+              "translation": "vesta row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Westfield",
+              "translation": "west field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wrenford",
+              "translation": "wren ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yarrow Lane",
+              "translation": "yarrow lane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zenith Vale",
+              "translation": "highest valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashcourt",
+              "translation": "ash court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Briarhill",
+              "translation": "briar hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chestnut Row",
+              "translation": "chestnut row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dovecote",
+              "translation": "dove house"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elmgate",
+              "translation": "elm gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fairwater",
+              "translation": "fair water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Glasshaven",
+              "translation": "glass harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harbour Row",
+              "translation": "harbour row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ivystone",
+              "translation": "ivy stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Juniper Green",
+              "translation": "juniper green"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingscourt",
+              "translation": "king's court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lamplight",
+              "translation": "lamplight"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meadowfield",
+              "translation": "meadow field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Northgate",
+              "translation": "north gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orchard Way",
+              "translation": "orchard way"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Primrose Hill",
+              "translation": "primrose hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Queensway",
+              "translation": "queen's way"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Redbrick",
+              "translation": "red brick"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stonebridge",
+              "translation": "stone bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Templestone",
+              "translation": "temple stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Upton",
+              "translation": "upper farm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Violet Row",
+              "translation": "violet row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Westcourt",
+              "translation": "west court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewtree Vale",
+              "translation": "yew tree valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashgrove",
+              "translation": "ash grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Briarwood",
+              "translation": "briar wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chestnut Green",
+              "translation": "chestnut green"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dovehouse",
+              "translation": "dove house"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elmwood",
+              "translation": "elm wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fairhaven",
+              "translation": "fair harbour"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Glassford",
+              "translation": "glass ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harbourgate",
+              "translation": "harbour gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ivyfield",
+              "translation": "ivy field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Juniper Row",
+              "translation": "juniper row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingsmead",
+              "translation": "king's meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lanterncourt",
+              "translation": "lantern court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meadowgate",
+              "translation": "meadow gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Northwood",
+              "translation": "north wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orchard Court",
+              "translation": "orchard court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Primrose Vale",
+              "translation": "primrose valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Queensmead",
+              "translation": "queen's meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Redstone",
+              "translation": "red stone"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "full-name": {
+          "separator": " ",
+          "translationSeparator": ", ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.steampunk/grammar/airship",
+      "description": "Airship names, from workaday cargo haulers to grand passenger liners.",
+      "tags": [
+        "airship",
+        "vehicle"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#prefix# #noun.cap#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun.cap# #suffix#",
+              "weight": 1
+            },
+            {
+              "value": "#proper#",
+              "weight": 1
+            },
+            {
+              "value": "#prefix# #noun.cap# #suffix#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "prefix",
+          "choices": [
+            {
+              "value": "Aether",
+              "weight": 1
+            },
+            {
+              "value": "Brass",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Dawn",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Gilded",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Mercury",
+              "weight": 1
+            },
+            {
+              "value": "Night",
+              "weight": 1
+            },
+            {
+              "value": "Opal",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Tin",
+              "weight": 1
+            },
+            {
+              "value": "Vapor",
+              "weight": 1
+            },
+            {
+              "value": "Wind",
+              "weight": 1
+            },
+            {
+              "value": "Zephyr",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Rivet",
+              "weight": 1
+            },
+            {
+              "value": "Soot",
+              "weight": 1
+            },
+            {
+              "value": "Turbine",
+              "weight": 1
+            },
+            {
+              "value": "Velvet",
+              "weight": 1
+            },
+            {
+              "value": "Wandering",
+              "weight": 1
+            },
+            {
+              "value": "Galvanic",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Albatross",
+              "weight": 1
+            },
+            {
+              "value": "Arrow",
+              "weight": 1
+            },
+            {
+              "value": "Beacon",
+              "weight": 1
+            },
+            {
+              "value": "Comet",
+              "weight": 1
+            },
+            {
+              "value": "Condor",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Cygnet",
+              "weight": 1
+            },
+            {
+              "value": "Dart",
+              "weight": 1
+            },
+            {
+              "value": "Eagle",
+              "weight": 1
+            },
+            {
+              "value": "Falcon",
+              "weight": 1
+            },
+            {
+              "value": "Gannet",
+              "weight": 1
+            },
+            {
+              "value": "Heron",
+              "weight": 1
+            },
+            {
+              "value": "Hussar",
+              "weight": 1
+            },
+            {
+              "value": "Kestrel",
+              "weight": 1
+            },
+            {
+              "value": "Lark",
+              "weight": 1
+            },
+            {
+              "value": "Moth",
+              "weight": 1
+            },
+            {
+              "value": "Osprey",
+              "weight": 1
+            },
+            {
+              "value": "Peregrine",
+              "weight": 1
+            },
+            {
+              "value": "Petrel",
+              "weight": 1
+            },
+            {
+              "value": "Raven",
+              "weight": 1
+            },
+            {
+              "value": "Skylark",
+              "weight": 1
+            },
+            {
+              "value": "Swallow",
+              "weight": 1
+            },
+            {
+              "value": "Tempest",
+              "weight": 1
+            },
+            {
+              "value": "Wanderer",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "suffix",
+          "choices": [
+            {
+              "value": "of the Morn",
+              "weight": 1
+            },
+            {
+              "value": "of Ironvale",
+              "weight": 1
+            },
+            {
+              "value": "of the Clouds",
+              "weight": 1
+            },
+            {
+              "value": "Express",
+              "weight": 1
+            },
+            {
+              "value": "Ascendant",
+              "weight": 1
+            },
+            {
+              "value": "Mariner",
+              "weight": 1
+            },
+            {
+              "value": "Voyager",
+              "weight": 1
+            },
+            {
+              "value": "Trader",
+              "weight": 1
+            },
+            {
+              "value": "Courier",
+              "weight": 1
+            },
+            {
+              "value": "Surveyor",
+              "weight": 1
+            },
+            {
+              "value": "Patrol",
+              "weight": 1
+            },
+            {
+              "value": "Ensign",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "proper",
+          "choices": [
+            {
+              "value": "The Brass Bonnet",
+              "weight": 1
+            },
+            {
+              "value": "The Copper Kettle",
+              "weight": 1
+            },
+            {
+              "value": "The Gilded Lark",
+              "weight": 1
+            },
+            {
+              "value": "The Sooted Crown",
+              "weight": 1
+            },
+            {
+              "value": "The Tin Whistle",
+              "weight": 1
+            },
+            {
+              "value": "The Velvet Vane",
+              "weight": 1
+            },
+            {
+              "value": "The Aether Wren",
+              "weight": 1
+            },
+            {
+              "value": "The Rivet Rose",
+              "weight": 1
+            },
+            {
+              "value": "The Cinder Maid",
+              "weight": 1
+            },
+            {
+              "value": "The Lantern Hare",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/contraption",
+      "description": "Inventions and contraptions bearing maker names or model marks.",
+      "tags": [
+        "invention",
+        "contraption"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adjective.cap# #machine#",
+              "weight": 1
+            },
+            {
+              "value": "#inventor# #machine#",
+              "weight": 1
+            },
+            {
+              "value": "#machine# #mark#",
+              "weight": 1
+            },
+            {
+              "value": "#adjective.cap# #inventor# #machine#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Automatic",
+              "weight": 1
+            },
+            {
+              "value": "Brazen",
+              "weight": 1
+            },
+            {
+              "value": "Clockwork",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Differential",
+              "weight": 1
+            },
+            {
+              "value": "Electric",
+              "weight": 1
+            },
+            {
+              "value": "Galvanic",
+              "weight": 1
+            },
+            {
+              "value": "Hydraulic",
+              "weight": 1
+            },
+            {
+              "value": "Ingenious",
+              "weight": 1
+            },
+            {
+              "value": "Miniature",
+              "weight": 1
+            },
+            {
+              "value": "Ornate",
+              "weight": 1
+            },
+            {
+              "value": "Pneumatic",
+              "weight": 1
+            },
+            {
+              "value": "Portable",
+              "weight": 1
+            },
+            {
+              "value": "Rotary",
+              "weight": 1
+            },
+            {
+              "value": "Self-Regulating",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Steam-Driven",
+              "weight": 1
+            },
+            {
+              "value": "Tin",
+              "weight": 1
+            },
+            {
+              "value": "Universal",
+              "weight": 1
+            },
+            {
+              "value": "Vaporous",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "machine",
+          "choices": [
+            {
+              "value": "Actuator",
+              "weight": 1
+            },
+            {
+              "value": "Analyser",
+              "weight": 1
+            },
+            {
+              "value": "Boiler",
+              "weight": 1
+            },
+            {
+              "value": "Calculetter",
+              "weight": 1
+            },
+            {
+              "value": "Chimney",
+              "weight": 1
+            },
+            {
+              "value": "Condenser",
+              "weight": 1
+            },
+            {
+              "value": "Dynamo",
+              "weight": 1
+            },
+            {
+              "value": "Engine",
+              "weight": 1
+            },
+            {
+              "value": "Escapement",
+              "weight": 1
+            },
+            {
+              "value": "Governor",
+              "weight": 1
+            },
+            {
+              "value": "Gyroscope",
+              "weight": 1
+            },
+            {
+              "value": "Loom",
+              "weight": 1
+            },
+            {
+              "value": "Ornithopter",
+              "weight": 1
+            },
+            {
+              "value": "Press",
+              "weight": 1
+            },
+            {
+              "value": "Pump",
+              "weight": 1
+            },
+            {
+              "value": "Puppet",
+              "weight": 1
+            },
+            {
+              "value": "Regulator",
+              "weight": 1
+            },
+            {
+              "value": "Separator",
+              "weight": 1
+            },
+            {
+              "value": "Stirrer",
+              "weight": 1
+            },
+            {
+              "value": "Turbine",
+              "weight": 1
+            },
+            {
+              "value": "Typesetter",
+              "weight": 1
+            },
+            {
+              "value": "Valve",
+              "weight": 1
+            },
+            {
+              "value": "Ventilator",
+              "weight": 1
+            },
+            {
+              "value": "Walker",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "inventor",
+          "choices": [
+            {
+              "value": "Aldric",
+              "weight": 1
+            },
+            {
+              "value": "Bellamy",
+              "weight": 1
+            },
+            {
+              "value": "Cassian",
+              "weight": 1
+            },
+            {
+              "value": "Edwin",
+              "weight": 1
+            },
+            {
+              "value": "Fontaine",
+              "weight": 1
+            },
+            {
+              "value": "Godfrey",
+              "weight": 1
+            },
+            {
+              "value": "Helena",
+              "weight": 1
+            },
+            {
+              "value": "Ivor",
+              "weight": 1
+            },
+            {
+              "value": "Josephine",
+              "weight": 1
+            },
+            {
+              "value": "Kingsley",
+              "weight": 1
+            },
+            {
+              "value": "Lucian",
+              "weight": 1
+            },
+            {
+              "value": "Marguerite",
+              "weight": 1
+            },
+            {
+              "value": "Merrick",
+              "weight": 1
+            },
+            {
+              "value": "Nikolai",
+              "weight": 1
+            },
+            {
+              "value": "Oswin",
+              "weight": 1
+            },
+            {
+              "value": "Petrov",
+              "weight": 1
+            },
+            {
+              "value": "Quentin",
+              "weight": 1
+            },
+            {
+              "value": "Roderick",
+              "weight": 1
+            },
+            {
+              "value": "Rosalind",
+              "weight": 1
+            },
+            {
+              "value": "Sebastian",
+              "weight": 1
+            },
+            {
+              "value": "Theodora",
+              "weight": 1
+            },
+            {
+              "value": "Ulric",
+              "weight": 1
+            },
+            {
+              "value": "Valentine",
+              "weight": 1
+            },
+            {
+              "value": "Wilhelmina",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "mark",
+          "choices": [
+            {
+              "value": "Mk I",
+              "weight": 1
+            },
+            {
+              "value": "Mk II",
+              "weight": 1
+            },
+            {
+              "value": "Mk III",
+              "weight": 1
+            },
+            {
+              "value": "Mk IV",
+              "weight": 1
+            },
+            {
+              "value": "Mk V",
+              "weight": 1
+            },
+            {
+              "value": "Mk VII",
+              "weight": 1
+            },
+            {
+              "value": "No. 3",
+              "weight": 1
+            },
+            {
+              "value": "No. 7",
+              "weight": 1
+            },
+            {
+              "value": "No. 12",
+              "weight": 1
+            },
+            {
+              "value": "Pattern A",
+              "weight": 1
+            },
+            {
+              "value": "Pattern B",
+              "weight": 1
+            },
+            {
+              "value": "Pattern C",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/guild",
+      "description": "Trade guilds, engineering societies and chartered associations.",
+      "tags": [
+        "guild",
+        "faction",
+        "organization"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #trade# #body#",
+              "weight": 1
+            },
+            {
+              "value": "The #body# of #place#",
+              "weight": 1
+            },
+            {
+              "value": "#place# #trade# #body#",
+              "weight": 1
+            },
+            {
+              "value": "The #adjective.cap# #trade# #body#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "trade",
+          "choices": [
+            {
+              "value": "Airship",
+              "weight": 1
+            },
+            {
+              "value": "Boilermaker",
+              "weight": 1
+            },
+            {
+              "value": "Clockmaker",
+              "weight": 1
+            },
+            {
+              "value": "Coppersmith",
+              "weight": 1
+            },
+            {
+              "value": "Electrical",
+              "weight": 1
+            },
+            {
+              "value": "Engineer",
+              "weight": 1
+            },
+            {
+              "value": "Gasfitter",
+              "weight": 1
+            },
+            {
+              "value": "Glassblower",
+              "weight": 1
+            },
+            {
+              "value": "Instrument",
+              "weight": 1
+            },
+            {
+              "value": "Ironworker",
+              "weight": 1
+            },
+            {
+              "value": "Lens Grinder",
+              "weight": 1
+            },
+            {
+              "value": "Machinist",
+              "weight": 1
+            },
+            {
+              "value": "Metallurgist",
+              "weight": 1
+            },
+            {
+              "value": "Pneumatic",
+              "weight": 1
+            },
+            {
+              "value": "Precision",
+              "weight": 1
+            },
+            {
+              "value": "Railway",
+              "weight": 1
+            },
+            {
+              "value": "Riveter",
+              "weight": 1
+            },
+            {
+              "value": "Steam",
+              "weight": 1
+            },
+            {
+              "value": "Telegraph",
+              "weight": 1
+            },
+            {
+              "value": "Valve",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "Guild",
+              "weight": 1
+            },
+            {
+              "value": "Company",
+              "weight": 1
+            },
+            {
+              "value": "Brotherhood",
+              "weight": 1
+            },
+            {
+              "value": "Society",
+              "weight": 1
+            },
+            {
+              "value": "Association",
+              "weight": 1
+            },
+            {
+              "value": "Order",
+              "weight": 1
+            },
+            {
+              "value": " league",
+              "weight": 1
+            },
+            {
+              "value": "Union",
+              "weight": 1
+            },
+            {
+              "value": "Workshop",
+              "weight": 1
+            },
+            {
+              "value": "Council",
+              "weight": 1
+            },
+            {
+              "value": "Institute",
+              "weight": 1
+            },
+            {
+              "value": "Federation",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Ashford",
+              "weight": 1
+            },
+            {
+              "value": "Brasshaven",
+              "weight": 1
+            },
+            {
+              "value": "Cinderford",
+              "weight": 1
+            },
+            {
+              "value": "Eastmere",
+              "weight": 1
+            },
+            {
+              "value": "Gloamhollow",
+              "weight": 1
+            },
+            {
+              "value": "Highgate",
+              "weight": 1
+            },
+            {
+              "value": "Ironmarsh",
+              "weight": 1
+            },
+            {
+              "value": "Kingsway",
+              "weight": 1
+            },
+            {
+              "value": "Lindenpark",
+              "weight": 1
+            },
+            {
+              "value": "Montclair",
+              "weight": 1
+            },
+            {
+              "value": "Northcliffe",
+              "weight": 1
+            },
+            {
+              "value": "Oakridge",
+              "weight": 1
+            },
+            {
+              "value": "Pennygate",
+              "weight": 1
+            },
+            {
+              "value": "Quarryfield",
+              "weight": 1
+            },
+            {
+              "value": "Riverton",
+              "weight": 1
+            },
+            {
+              "value": "Silverton",
+              "weight": 1
+            },
+            {
+              "value": "Southbank",
+              "weight": 1
+            },
+            {
+              "value": "Thornbury",
+              "weight": 1
+            },
+            {
+              "value": "Union Quay",
+              "weight": 1
+            },
+            {
+              "value": "Westfield",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Ancient",
+              "weight": 1
+            },
+            {
+              "value": "Benevolent",
+              "weight": 1
+            },
+            {
+              "value": "Chartered",
+              "weight": 1
+            },
+            {
+              "value": "Collegiate",
+              "weight": 1
+            },
+            {
+              "value": "Federated",
+              "weight": 1
+            },
+            {
+              "value": "Grand",
+              "weight": 1
+            },
+            {
+              "value": "Honourable",
+              "weight": 1
+            },
+            {
+              "value": "Illustrious",
+              "weight": 1
+            },
+            {
+              "value": "Independent",
+              "weight": 1
+            },
+            {
+              "value": "Merchant",
+              "weight": 1
+            },
+            {
+              "value": "Municipal",
+              "weight": 1
+            },
+            {
+              "value": "Royal",
+              "weight": 1
+            },
+            {
+              "value": "Sovereign",
+              "weight": 1
+            },
+            {
+              "value": "Venerable",
+              "weight": 1
+            },
+            {
+              "value": "Worshipful",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/society",
+      "description": "Learned societies, clubs and civic associations of the gaslamp age.",
+      "tags": [
+        "society",
+        "faction",
+        "organization"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adjective.cap# #purpose# Society",
+              "weight": 1
+            },
+            {
+              "value": "#place# #purpose# Society",
+              "weight": 1
+            },
+            {
+              "value": "The #purpose# #body#",
+              "weight": 1
+            },
+            {
+              "value": "#adjective.cap# #purpose# #body#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Aetheric",
+              "weight": 1
+            },
+            {
+              "value": "Analytical",
+              "weight": 1
+            },
+            {
+              "value": "Antiquarian",
+              "weight": 1
+            },
+            {
+              "value": "Astronomical",
+              "weight": 1
+            },
+            {
+              "value": "Benevolent",
+              "weight": 1
+            },
+            {
+              "value": "Celestial",
+              "weight": 1
+            },
+            {
+              "value": "Chemical",
+              "weight": 1
+            },
+            {
+              "value": "Chronometric",
+              "weight": 1
+            },
+            {
+              "value": "Electric",
+              "weight": 1
+            },
+            {
+              "value": "Ethical",
+              "weight": 1
+            },
+            {
+              "value": "Geographic",
+              "weight": 1
+            },
+            {
+              "value": "Historical",
+              "weight": 1
+            },
+            {
+              "value": "Hydraulic",
+              "weight": 1
+            },
+            {
+              "value": "Imperial",
+              "weight": 1
+            },
+            {
+              "value": "Literary",
+              "weight": 1
+            },
+            {
+              "value": "Mechanical",
+              "weight": 1
+            },
+            {
+              "value": "Meteorological",
+              "weight": 1
+            },
+            {
+              "value": "Microscopic",
+              "weight": 1
+            },
+            {
+              "value": "Optical",
+              "weight": 1
+            },
+            {
+              "value": "Philanthropic",
+              "weight": 1
+            },
+            {
+              "value": "Philosophical",
+              "weight": 1
+            },
+            {
+              "value": "Pneumatic",
+              "weight": 1
+            },
+            {
+              "value": "Scientific",
+              "weight": 1
+            },
+            {
+              "value": "Spectroscopic",
+              "weight": 1
+            },
+            {
+              "value": "Vaporous",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "purpose",
+          "choices": [
+            {
+              "value": "Advancement",
+              "weight": 1
+            },
+            {
+              "value": "Antiquities",
+              "weight": 1
+            },
+            {
+              "value": "Archives",
+              "weight": 1
+            },
+            {
+              "value": "Atmospheres",
+              "weight": 1
+            },
+            {
+              "value": "Beacons",
+              "weight": 1
+            },
+            {
+              "value": "Cartography",
+              "weight": 1
+            },
+            {
+              "value": "Chronology",
+              "weight": 1
+            },
+            {
+              "value": "Collector",
+              "weight": 1
+            },
+            {
+              "value": "Curiosities",
+              "weight": 1
+            },
+            {
+              "value": "Discovery",
+              "weight": 1
+            },
+            {
+              "value": "Enquiry",
+              "weight": 1
+            },
+            {
+              "value": "Exploration",
+              "weight": 1
+            },
+            {
+              "value": "Invention",
+              "weight": 1
+            },
+            {
+              "value": "Languages",
+              "weight": 1
+            },
+            {
+              "value": "Maps",
+              "weight": 1
+            },
+            {
+              "value": "Mechanics",
+              "weight": 1
+            },
+            {
+              "value": "Meteorology",
+              "weight": 1
+            },
+            {
+              "value": "Microscopy",
+              "weight": 1
+            },
+            {
+              "value": "Optics",
+              "weight": 1
+            },
+            {
+              "value": "Photography",
+              "weight": 1
+            },
+            {
+              "value": "Progress",
+              "weight": 1
+            },
+            {
+              "value": "Relics",
+              "weight": 1
+            },
+            {
+              "value": "Research",
+              "weight": 1
+            },
+            {
+              "value": "Specimens",
+              "weight": 1
+            },
+            {
+              "value": "Statistics",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "Circle",
+              "weight": 1
+            },
+            {
+              "value": "Club",
+              "weight": 1
+            },
+            {
+              "value": "League",
+              "weight": 1
+            },
+            {
+              "value": "Society",
+              "weight": 1
+            },
+            {
+              "value": "Sorority",
+              "weight": 1
+            },
+            {
+              "value": "Union",
+              "weight": 1
+            },
+            {
+              "value": "Academy",
+              "weight": 1
+            },
+            {
+              "value": "Institute",
+              "weight": 1
+            },
+            {
+              "value": "Collegium",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Ashford",
+              "weight": 1
+            },
+            {
+              "value": "Bellevue",
+              "weight": 1
+            },
+            {
+              "value": "Brasshaven",
+              "weight": 1
+            },
+            {
+              "value": "Cinderford",
+              "weight": 1
+            },
+            {
+              "value": "Fairmont",
+              "weight": 1
+            },
+            {
+              "value": "Gloamhollow",
+              "weight": 1
+            },
+            {
+              "value": "Highgate",
+              "weight": 1
+            },
+            {
+              "value": "Ironmarsh",
+              "weight": 1
+            },
+            {
+              "value": "Kingsway",
+              "weight": 1
+            },
+            {
+              "value": "Lindenpark",
+              "weight": 1
+            },
+            {
+              "value": "Montclair",
+              "weight": 1
+            },
+            {
+              "value": "Northcliffe",
+              "weight": 1
+            },
+            {
+              "value": "Oakridge",
+              "weight": 1
+            },
+            {
+              "value": "Pennygate",
+              "weight": 1
+            },
+            {
+              "value": "Riverton",
+              "weight": 1
+            },
+            {
+              "value": "Silverton",
+              "weight": 1
+            },
+            {
+              "value": "Southbank",
+              "weight": 1
+            },
+            {
+              "value": "Thornbury",
+              "weight": 1
+            },
+            {
+              "value": "Union Quay",
+              "weight": 1
+            },
+            {
+              "value": "Westfield",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/headline",
+      "description": "Newspaper headlines in the style of a fictional gaslamp-era press.",
+      "tags": [
+        "newspaper",
+        "headline"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#place.cap#: #event.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#adjective.cap# #noun.cap# #verb# in #place.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#noun.cap# #verb# as #body.cap# #action#",
+              "weight": 1
+            },
+            {
+              "value": "EXTRA! #noun.cap# #verb# at #place.cap#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "ashford",
+              "weight": 1
+            },
+            {
+              "value": "bellevue",
+              "weight": 1
+            },
+            {
+              "value": "brasshaven",
+              "weight": 1
+            },
+            {
+              "value": "cinderford",
+              "weight": 1
+            },
+            {
+              "value": "dusk hollow",
+              "weight": 1
+            },
+            {
+              "value": "eastmere",
+              "weight": 1
+            },
+            {
+              "value": "fairmont",
+              "weight": 1
+            },
+            {
+              "value": "gloamhollow",
+              "weight": 1
+            },
+            {
+              "value": "highgate",
+              "weight": 1
+            },
+            {
+              "value": "ironmarsh",
+              "weight": 1
+            },
+            {
+              "value": "kingsway",
+              "weight": 1
+            },
+            {
+              "value": "lindenpark",
+              "weight": 1
+            },
+            {
+              "value": "montclair",
+              "weight": 1
+            },
+            {
+              "value": "northcliffe",
+              "weight": 1
+            },
+            {
+              "value": "oakridge",
+              "weight": 1
+            },
+            {
+              "value": "pennygate",
+              "weight": 1
+            },
+            {
+              "value": "quarryfield",
+              "weight": 1
+            },
+            {
+              "value": "riverton",
+              "weight": 1
+            },
+            {
+              "value": "silverton",
+              "weight": 1
+            },
+            {
+              "value": "southbank",
+              "weight": 1
+            },
+            {
+              "value": "thornbury",
+              "weight": 1
+            },
+            {
+              "value": "union quay",
+              "weight": 1
+            },
+            {
+              "value": "westfield",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "event",
+          "choices": [
+            {
+              "value": "airship vanishes",
+              "weight": 1
+            },
+            {
+              "value": "boiler bursts",
+              "weight": 1
+            },
+            {
+              "value": "brass idol found",
+              "weight": 1
+            },
+            {
+              "value": "clock strikes thirteen",
+              "weight": 1
+            },
+            {
+              "value": "fog swallowed the market",
+              "weight": 1
+            },
+            {
+              "value": "guild declares strike",
+              "weight": 1
+            },
+            {
+              "value": "inventor missing",
+              "weight": 1
+            },
+            {
+              "value": "lanterns fail at dusk",
+              "weight": 1
+            },
+            {
+              "value": "machine walks again",
+              "weight": 1
+            },
+            {
+              "value": "new engine unveiled",
+              "weight": 1
+            },
+            {
+              "value": "patent brawl erupts",
+              "weight": 1
+            },
+            {
+              "value": "river runs silver",
+              "weight": 1
+            },
+            {
+              "value": "robot refuses orders",
+              "weight": 1
+            },
+            {
+              "value": "society expels member",
+              "weight": 1
+            },
+            {
+              "value": "steam blast rocks quay",
+              "weight": 1
+            },
+            {
+              "value": "tower bell cracked",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Amazing",
+              "weight": 1
+            },
+            {
+              "value": "Baffling",
+              "weight": 1
+            },
+            {
+              "value": "Curious",
+              "weight": 1
+            },
+            {
+              "value": "Daring",
+              "weight": 1
+            },
+            {
+              "value": "Dreadful",
+              "weight": 1
+            },
+            {
+              "value": "Extraordinary",
+              "weight": 1
+            },
+            {
+              "value": "Grand",
+              "weight": 1
+            },
+            {
+              "value": "Mysterious",
+              "weight": 1
+            },
+            {
+              "value": "Odd",
+              "weight": 1
+            },
+            {
+              "value": "Remarkable",
+              "weight": 1
+            },
+            {
+              "value": "Scandalous",
+              "weight": 1
+            },
+            {
+              "value": "Singular",
+              "weight": 1
+            },
+            {
+              "value": "Startling",
+              "weight": 1
+            },
+            {
+              "value": "Strange",
+              "weight": 1
+            },
+            {
+              "value": "Uncanny",
+              "weight": 1
+            },
+            {
+              "value": "Unprecedented",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Airship",
+              "weight": 1
+            },
+            {
+              "value": "Automaton",
+              "weight": 1
+            },
+            {
+              "value": "Boiler",
+              "weight": 1
+            },
+            {
+              "value": "Clock",
+              "weight": 1
+            },
+            {
+              "value": "Engine",
+              "weight": 1
+            },
+            {
+              "value": "Guild",
+              "weight": 1
+            },
+            {
+              "value": "Inventor",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Machine",
+              "weight": 1
+            },
+            {
+              "value": "Mayor",
+              "weight": 1
+            },
+            {
+              "value": "Patent",
+              "weight": 1
+            },
+            {
+              "value": "Riveter",
+              "weight": 1
+            },
+            {
+              "value": "Rocket",
+              "weight": 1
+            },
+            {
+              "value": "Society",
+              "weight": 1
+            },
+            {
+              "value": "Telegraph",
+              "weight": 1
+            },
+            {
+              "value": "Turbine",
+              "weight": 1
+            },
+            {
+              "value": "Valve",
+              "weight": 1
+            },
+            {
+              "value": "Watchmaker",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "Amazes",
+              "weight": 1
+            },
+            {
+              "value": "Arrives",
+              "weight": 1
+            },
+            {
+              "value": "Collapses",
+              "weight": 1
+            },
+            {
+              "value": "Disappears",
+              "weight": 1
+            },
+            {
+              "value": "Explodes",
+              "weight": 1
+            },
+            {
+              "value": "Fails",
+              "weight": 1
+            },
+            {
+              "value": "Flees",
+              "weight": 1
+            },
+            {
+              "value": "Returns",
+              "weight": 1
+            },
+            {
+              "value": "Rumbles",
+              "weight": 1
+            },
+            {
+              "value": "Shocks",
+              "weight": 1
+            },
+            {
+              "value": "Sings",
+              "weight": 1
+            },
+            {
+              "value": "Stumbles",
+              "weight": 1
+            },
+            {
+              "value": "Survives",
+              "weight": 1
+            },
+            {
+              "value": "Takes Flight",
+              "weight": 1
+            },
+            {
+              "value": "Vanishes",
+              "weight": 1
+            },
+            {
+              "value": "Wakes",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "council",
+              "weight": 1
+            },
+            {
+              "value": "guild",
+              "weight": 1
+            },
+            {
+              "value": "inventors",
+              "weight": 1
+            },
+            {
+              "value": "machinists",
+              "weight": 1
+            },
+            {
+              "value": "mayor",
+              "weight": 1
+            },
+            {
+              "value": "patrol",
+              "weight": 1
+            },
+            {
+              "value": "society",
+              "weight": 1
+            },
+            {
+              "value": "workers",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "action",
+          "choices": [
+            {
+              "value": "demands answers",
+              "weight": 1
+            },
+            {
+              "value": "issues a warning",
+              "weight": 1
+            },
+            {
+              "value": "offers a reward",
+              "weight": 1
+            },
+            {
+              "value": "opens an inquiry",
+              "weight": 1
+            },
+            {
+              "value": "refuses comment",
+              "weight": 1
+            },
+            {
+              "value": "seals the district",
+              "weight": 1
+            },
+            {
+              "value": "votes tonight",
+              "weight": 1
+            },
+            {
+              "value": "will investigate",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/district",
+      "description": "Districts and neighbourhoods within a soot-and-brass metropolis.",
+      "tags": [
+        "district",
+        "place"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adjective.cap# #place#",
+              "weight": 1
+            },
+            {
+              "value": "#place.cap# #feature.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#feature.cap# #place#",
+              "weight": 1
+            },
+            {
+              "value": "#place.cap# Quarter",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Brass",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Clock",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Crystal",
+              "weight": 1
+            },
+            {
+              "value": "Dusky",
+              "weight": 1
+            },
+            {
+              "value": "Eastern",
+              "weight": 1
+            },
+            {
+              "value": "Foggy",
+              "weight": 1
+            },
+            {
+              "value": "Gaslit",
+              "weight": 1
+            },
+            {
+              "value": "Gilded",
+              "weight": 1
+            },
+            {
+              "value": "Glass",
+              "weight": 1
+            },
+            {
+              "value": "Grand",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Lower",
+              "weight": 1
+            },
+            {
+              "value": "Marble",
+              "weight": 1
+            },
+            {
+              "value": "Mercury",
+              "weight": 1
+            },
+            {
+              "value": "North",
+              "weight": 1
+            },
+            {
+              "value": "Old",
+              "weight": 1
+            },
+            {
+              "value": "Opal",
+              "weight": 1
+            },
+            {
+              "value": "Quiet",
+              "weight": 1
+            },
+            {
+              "value": "Riveted",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Smoky",
+              "weight": 1
+            },
+            {
+              "value": "South",
+              "weight": 1
+            },
+            {
+              "value": "Steam",
+              "weight": 1
+            },
+            {
+              "value": "Tin",
+              "weight": 1
+            },
+            {
+              "value": "Upper",
+              "weight": 1
+            },
+            {
+              "value": "Velvet",
+              "weight": 1
+            },
+            {
+              "value": "Western",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Alley",
+              "weight": 1
+            },
+            {
+              "value": "Borough",
+              "weight": 1
+            },
+            {
+              "value": "Cross",
+              "weight": 1
+            },
+            {
+              "value": "End",
+              "weight": 1
+            },
+            {
+              "value": "Field",
+              "weight": 1
+            },
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Green",
+              "weight": 1
+            },
+            {
+              "value": "Hill",
+              "weight": 1
+            },
+            {
+              "value": "Lane",
+              "weight": 1
+            },
+            {
+              "value": "Market",
+              "weight": 1
+            },
+            {
+              "value": "Mile",
+              "weight": 1
+            },
+            {
+              "value": "Quay",
+              "weight": 1
+            },
+            {
+              "value": "Row",
+              "weight": 1
+            },
+            {
+              "value": "Square",
+              "weight": 1
+            },
+            {
+              "value": "Step",
+              "weight": 1
+            },
+            {
+              "value": "Street",
+              "weight": 1
+            },
+            {
+              "value": "Walk",
+              "weight": 1
+            },
+            {
+              "value": "Wharf",
+              "weight": 1
+            },
+            {
+              "value": "Yard",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "feature",
+          "choices": [
+            {
+              "value": "Boiler",
+              "weight": 1
+            },
+            {
+              "value": "Bridge",
+              "weight": 1
+            },
+            {
+              "value": "Foundry",
+              "weight": 1
+            },
+            {
+              "value": "Glasshouse",
+              "weight": 1
+            },
+            {
+              "value": "Ironworks",
+              "weight": 1
+            },
+            {
+              "value": "Lighthouse",
+              "weight": 1
+            },
+            {
+              "value": "Observatory",
+              "weight": 1
+            },
+            {
+              "value": "Palace",
+              "weight": 1
+            },
+            {
+              "value": "Rivet",
+              "weight": 1
+            },
+            {
+              "value": "Smokestack",
+              "weight": 1
+            },
+            {
+              "value": "Telegraph",
+              "weight": 1
+            },
+            {
+              "value": "Tower",
+              "weight": 1
+            },
+            {
+              "value": "Vault",
+              "weight": 1
+            },
+            {
+              "value": "Warehouse",
+              "weight": 1
+            },
+            {
+              "value": "Workshop",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/automaton",
+      "description": "Automaton designations and functions, from domestic help to civic sentries.",
+      "tags": [
+        "automaton",
+        "robot",
+        "person"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#designation# #function.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#function.cap# #number#",
+              "weight": 1
+            },
+            {
+              "value": "#metal.cap# #function.cap#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "designation",
+          "choices": [
+            {
+              "value": "A-",
+              "weight": 1
+            },
+            {
+              "value": "B-",
+              "weight": 1
+            },
+            {
+              "value": "C-",
+              "weight": 1
+            },
+            {
+              "value": "D-",
+              "weight": 1
+            },
+            {
+              "value": "E-",
+              "weight": 1
+            },
+            {
+              "value": "H-",
+              "weight": 1
+            },
+            {
+              "value": "K-",
+              "weight": 1
+            },
+            {
+              "value": "M-",
+              "weight": 1
+            },
+            {
+              "value": "R-",
+              "weight": 1
+            },
+            {
+              "value": "S-",
+              "weight": 1
+            },
+            {
+              "value": "T-",
+              "weight": 1
+            },
+            {
+              "value": "Z-",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "number",
+          "choices": [
+            {
+              "value": "01",
+              "weight": 1
+            },
+            {
+              "value": "02",
+              "weight": 1
+            },
+            {
+              "value": "03",
+              "weight": 1
+            },
+            {
+              "value": "04",
+              "weight": 1
+            },
+            {
+              "value": "05",
+              "weight": 1
+            },
+            {
+              "value": "06",
+              "weight": 1
+            },
+            {
+              "value": "07",
+              "weight": 1
+            },
+            {
+              "value": "08",
+              "weight": 1
+            },
+            {
+              "value": "09",
+              "weight": 1
+            },
+            {
+              "value": "10",
+              "weight": 1
+            },
+            {
+              "value": "11",
+              "weight": 1
+            },
+            {
+              "value": "12",
+              "weight": 1
+            },
+            {
+              "value": "14",
+              "weight": 1
+            },
+            {
+              "value": "17",
+              "weight": 1
+            },
+            {
+              "value": "19",
+              "weight": 1
+            },
+            {
+              "value": "23",
+              "weight": 1
+            },
+            {
+              "value": "27",
+              "weight": 1
+            },
+            {
+              "value": "31",
+              "weight": 1
+            },
+            {
+              "value": "42",
+              "weight": 1
+            },
+            {
+              "value": "57",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "metal",
+          "choices": [
+            {
+              "value": "Brass",
+              "weight": 1
+            },
+            {
+              "value": "Bronze",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Nickel",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Steel",
+              "weight": 1
+            },
+            {
+              "value": "Tin",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "function",
+          "choices": [
+            {
+              "value": "Attendant",
+              "weight": 1
+            },
+            {
+              "value": "Bearer",
+              "weight": 1
+            },
+            {
+              "value": "Chimney Sweep",
+              "weight": 1
+            },
+            {
+              "value": "Clerk",
+              "weight": 1
+            },
+            {
+              "value": "Cook",
+              "weight": 1
+            },
+            {
+              "value": "Courier",
+              "weight": 1
+            },
+            {
+              "value": "Dancer",
+              "weight": 1
+            },
+            {
+              "value": "Doorman",
+              "weight": 1
+            },
+            {
+              "value": "Draughtsman",
+              "weight": 1
+            },
+            {
+              "value": "Guard",
+              "weight": 1
+            },
+            {
+              "value": "Herald",
+              "weight": 1
+            },
+            {
+              "value": "Hostler",
+              "weight": 1
+            },
+            {
+              "value": "Housemaid",
+              "weight": 1
+            },
+            {
+              "value": "Labourer",
+              "weight": 1
+            },
+            {
+              "value": "Nurse",
+              "weight": 1
+            },
+            {
+              "value": "Porter",
+              "weight": 1
+            },
+            {
+              "value": "Sentry",
+              "weight": 1
+            },
+            {
+              "value": "Scribe",
+              "weight": 1
+            },
+            {
+              "value": "Servitor",
+              "weight": 1
+            },
+            {
+              "value": "Shepherd",
+              "weight": 1
+            },
+            {
+              "value": "Stockboy",
+              "weight": 1
+            },
+            {
+              "value": "Surveyor",
+              "weight": 1
+            },
+            {
+              "value": "Valet",
+              "weight": 1
+            },
+            {
+              "value": "Watcher",
+              "weight": 1
+            },
+            {
+              "value": "Waiter",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/patent",
+      "description": "Patent application titles for spurious but plausible inventions.",
+      "tags": [
+        "patent",
+        "title"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "A #noun# for #purpose#",
+              "weight": 1
+            },
+            {
+              "value": "Improvements in #noun.cap#",
+              "weight": 1
+            },
+            {
+              "value": "A Novel #noun.cap# for #purpose#",
+              "weight": 1
+            },
+            {
+              "value": "Improvements to the #noun# #part#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "apparatus",
+              "weight": 1
+            },
+            {
+              "value": "boiler",
+              "weight": 1
+            },
+            {
+              "value": "clock",
+              "weight": 1
+            },
+            {
+              "value": "condenser",
+              "weight": 1
+            },
+            {
+              "value": "engine",
+              "weight": 1
+            },
+            {
+              "value": "escapement",
+              "weight": 1
+            },
+            {
+              "value": "governor",
+              "weight": 1
+            },
+            {
+              "value": "gyroscope",
+              "weight": 1
+            },
+            {
+              "value": "lamp",
+              "weight": 1
+            },
+            {
+              "value": "loom",
+              "weight": 1
+            },
+            {
+              "value": "machine",
+              "weight": 1
+            },
+            {
+              "value": "meter",
+              "weight": 1
+            },
+            {
+              "value": "pump",
+              "weight": 1
+            },
+            {
+              "value": "regulator",
+              "weight": 1
+            },
+            {
+              "value": "stirrer",
+              "weight": 1
+            },
+            {
+              "value": "telegraph",
+              "weight": 1
+            },
+            {
+              "value": "valve",
+              "weight": 1
+            },
+            {
+              "value": "ventilator",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "purpose",
+          "choices": [
+            {
+              "value": "aerial navigation",
+              "weight": 1
+            },
+            {
+              "value": "automatic typesetting",
+              "weight": 1
+            },
+            {
+              "value": "climate control",
+              "weight": 1
+            },
+            {
+              "value": "clocks work",
+              "weight": 1
+            },
+            {
+              "value": "coal consumption",
+              "weight": 1
+            },
+            {
+              "value": "electric lighting",
+              "weight": 1
+            },
+            {
+              "value": "fog dispersal",
+              "weight": 1
+            },
+            {
+              "value": "heating railway carriages",
+              "weight": 1
+            },
+            {
+              "value": "lifting heavy loads",
+              "weight": 1
+            },
+            {
+              "value": "mechanical transcription",
+              "weight": 1
+            },
+            {
+              "value": "ore separation",
+              "weight": 1
+            },
+            {
+              "value": "powering street lamps",
+              "weight": 1
+            },
+            {
+              "value": "precision timekeeping",
+              "weight": 1
+            },
+            {
+              "value": "purifying water",
+              "weight": 1
+            },
+            {
+              "value": "raising weights",
+              "weight": 1
+            },
+            {
+              "value": "safe boiler operation",
+              "weight": 1
+            },
+            {
+              "value": "sewing leather",
+              "weight": 1
+            },
+            {
+              "value": "silver plating",
+              "weight": 1
+            },
+            {
+              "value": "steam distillation",
+              "weight": 1
+            },
+            {
+              "value": "ventilating mines",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "part",
+          "choices": [
+            {
+              "value": "Actuator",
+              "weight": 1
+            },
+            {
+              "value": "Boiler",
+              "weight": 1
+            },
+            {
+              "value": "Condenser",
+              "weight": 1
+            },
+            {
+              "value": "Escapement",
+              "weight": 1
+            },
+            {
+              "value": "Governor",
+              "weight": 1
+            },
+            {
+              "value": "Indicator",
+              "weight": 1
+            },
+            {
+              "value": "Lamp",
+              "weight": 1
+            },
+            {
+              "value": "Lever",
+              "weight": 1
+            },
+            {
+              "value": "Meter",
+              "weight": 1
+            },
+            {
+              "value": "Pump",
+              "weight": 1
+            },
+            {
+              "value": "Rivet",
+              "weight": 1
+            },
+            {
+              "value": "Valve",
+              "weight": 1
+            },
+            {
+              "value": "Wheel",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/street",
+      "description": "Gaslamp-era streets, lanes and mews.",
+      "tags": [
+        "street",
+        "place"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#name.cap# #type#",
+              "weight": 1
+            },
+            {
+              "value": "#type# of #name.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#name.cap# #type.cap#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "name",
+          "choices": [
+            {
+              "value": "Ash",
+              "weight": 1
+            },
+            {
+              "value": "Bell",
+              "weight": 1
+            },
+            {
+              "value": "Brass",
+              "weight": 1
+            },
+            {
+              "value": "Bridge",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Clock",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Fennel",
+              "weight": 1
+            },
+            {
+              "value": "Gas",
+              "weight": 1
+            },
+            {
+              "value": "Glass",
+              "weight": 1
+            },
+            {
+              "value": "Granite",
+              "weight": 1
+            },
+            {
+              "value": "Hallow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Lime",
+              "weight": 1
+            },
+            {
+              "value": "Marble",
+              "weight": 1
+            },
+            {
+              "value": "Mill",
+              "weight": 1
+            },
+            {
+              "value": "North",
+              "weight": 1
+            },
+            {
+              "value": "Oak",
+              "weight": 1
+            },
+            {
+              "value": "Petrel",
+              "weight": 1
+            },
+            {
+              "value": "Quarry",
+              "weight": 1
+            },
+            {
+              "value": "Rivet",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Slate",
+              "weight": 1
+            },
+            {
+              "value": "South",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Vapor",
+              "weight": 1
+            },
+            {
+              "value": "West",
+              "weight": 1
+            },
+            {
+              "value": "Willow",
+              "weight": 1
+            },
+            {
+              "value": "Yew",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "type",
+          "choices": [
+            {
+              "value": "Alley",
+              "weight": 1
+            },
+            {
+              "value": "Arcade",
+              "weight": 1
+            },
+            {
+              "value": "Court",
+              "weight": 1
+            },
+            {
+              "value": "Crescent",
+              "weight": 1
+            },
+            {
+              "value": "Lane",
+              "weight": 1
+            },
+            {
+              "value": "Mews",
+              "weight": 1
+            },
+            {
+              "value": "Parade",
+              "weight": 1
+            },
+            {
+              "value": "Passage",
+              "weight": 1
+            },
+            {
+              "value": "Place",
+              "weight": 1
+            },
+            {
+              "value": "Row",
+              "weight": 1
+            },
+            {
+              "value": "Square",
+              "weight": 1
+            },
+            {
+              "value": "Stairs",
+              "weight": 1
+            },
+            {
+              "value": "Street",
+              "weight": 1
+            },
+            {
+              "value": "Terrace",
+              "weight": 1
+            },
+            {
+              "value": "Walk",
+              "weight": 1
+            },
+            {
+              "value": "Wharf",
+              "weight": 1
+            },
+            {
+              "value": "Yard",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/grammar/rank",
+      "description": "Civic ranks, official titles and guild offices.",
+      "tags": [
+        "title",
+        "occupation"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#title.cap# of #place#",
+              "weight": 1
+            },
+            {
+              "value": "#title.cap# #order#",
+              "weight": 1
+            },
+            {
+              "value": "#order.cap# #title#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "choices": [
+            {
+              "value": "Assayer",
+              "weight": 1
+            },
+            {
+              "value": "Borough Engineer",
+              "weight": 1
+            },
+            {
+              "value": "Chief Inspector",
+              "weight": 1
+            },
+            {
+              "value": "City Surveyor",
+              "weight": 1
+            },
+            {
+              "value": " Clerk",
+              "weight": 1
+            },
+            {
+              "value": "Consulting Engineer",
+              "weight": 1
+            },
+            {
+              "value": "Gasworks Manager",
+              "weight": 1
+            },
+            {
+              "value": "Guildmaster",
+              "weight": 1
+            },
+            {
+              "value": "Head Mechanist",
+              "weight": 1
+            },
+            {
+              "value": "Hydraulic Engineer",
+              "weight": 1
+            },
+            {
+              "value": "Lighthouse Keeper",
+              "weight": 1
+            },
+            {
+              "value": "Master of Works",
+              "weight": 1
+            },
+            {
+              "value": "Patent Examiner",
+              "weight": 1
+            },
+            {
+              "value": "Railway Surveyor",
+              "weight": 1
+            },
+            {
+              "value": "Steam Inspector",
+              "weight": 1
+            },
+            {
+              "value": "Town Architect",
+              "weight": 1
+            },
+            {
+              "value": "Traffic Warden",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "order",
+          "choices": [
+            {
+              "value": "First Class",
+              "weight": 1
+            },
+            {
+              "value": "Second Class",
+              "weight": 1
+            },
+            {
+              "value": "Third Class",
+              "weight": 1
+            },
+            {
+              "value": "Honorary",
+              "weight": 1
+            },
+            {
+              "value": "Imperial",
+              "weight": 1
+            },
+            {
+              "value": "Junior",
+              "weight": 1
+            },
+            {
+              "value": "Royal",
+              "weight": 1
+            },
+            {
+              "value": "Senior",
+              "weight": 1
+            },
+            {
+              "value": "Special",
+              "weight": 1
+            },
+            {
+              "value": "Supplemental",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Ashford",
+              "weight": 1
+            },
+            {
+              "value": "Brasshaven",
+              "weight": 1
+            },
+            {
+              "value": "Cinderford",
+              "weight": 1
+            },
+            {
+              "value": "Eastmere",
+              "weight": 1
+            },
+            {
+              "value": "Gloamhollow",
+              "weight": 1
+            },
+            {
+              "value": "Highgate",
+              "weight": 1
+            },
+            {
+              "value": "Ironmarsh",
+              "weight": 1
+            },
+            {
+              "value": "Kingsway",
+              "weight": 1
+            },
+            {
+              "value": "Lindenpark",
+              "weight": 1
+            },
+            {
+              "value": "Montclair",
+              "weight": 1
+            },
+            {
+              "value": "Northcliffe",
+              "weight": 1
+            },
+            {
+              "value": "Oakridge",
+              "weight": 1
+            },
+            {
+              "value": "Pennygate",
+              "weight": 1
+            },
+            {
+              "value": "Quarryfield",
+              "weight": 1
+            },
+            {
+              "value": "Riverton",
+              "weight": 1
+            },
+            {
+              "value": "Silverton",
+              "weight": 1
+            },
+            {
+              "value": "Southbank",
+              "weight": 1
+            },
+            {
+              "value": "Thornbury",
+              "weight": 1
+            },
+            {
+              "value": "Union Quay",
+              "weight": 1
+            },
+            {
+              "value": "Westfield",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.steampunk/table/malfunction",
+      "description": "A documentary-style fault oracle for invented machines; no real product or IP.",
+      "tags": [
+        "oracle",
+        "malfunction"
+      ],
+      "mode": "dice",
+      "maxDepth": 4,
+      "dice": {
+        "count": 2,
+        "sides": 6,
+        "modifier": 0
+      },
+      "entries": [
+        {
+          "key": "minor-hiss",
+          "range": [
+            2,
+            4
+          ],
+          "result": {
+            "type": "text",
+            "text": "A harmless hiss of steam; the operator turns red."
+          }
+        },
+        {
+          "key": "stuck-valve",
+          "range": [
+            5,
+            7
+          ],
+          "result": {
+            "type": "text",
+            "text": "A valve sticks. The machine proceeds at half pace."
+          }
+        },
+        {
+          "key": "clock-drift",
+          "range": [
+            8,
+            10
+          ],
+          "result": {
+            "type": "text",
+            "text": "The escapement loses four minutes an hour."
+          }
+        },
+        {
+          "key": "thrown-belt",
+          "range": [
+            11,
+            12
+          ],
+          "result": {
+            "type": "text",
+            "text": "A belt snaps and flails; everyone ducks."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.steampunk/table/gaslamp-omen",
+      "description": "Fictional street omens and encounters for a gaslamp district.",
+      "tags": [
+        "oracle",
+        "street",
+        "hook"
+      ],
+      "mode": "weighted",
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "lamplighter",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A lamplighter tips his hat and knows your name."
+          }
+        },
+        {
+          "key": "clock-thirteen",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "The tower clock strikes thirteen; nobody else reacts."
+          }
+        },
+        {
+          "key": "brass-coin",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A warm brass coin sits on the cobbles, minted next year."
+          }
+        },
+        {
+          "key": "fog-messenger",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A courier steps from the fog with a sealed envelope."
+          }
+        },
+        {
+          "key": "automaton",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "An automaton offers to carry your parcels, politely, forever."
+          }
+        },
+        {
+          "key": "inspector",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "An inspector asks to see your boiler licence."
+          }
+        },
+        {
+          "key": "papers",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A newspaper seller shouts a headline that has not happened yet."
+          }
+        },
+        {
+          "key": "quiet",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "For one block, the street is entirely silent."
+          }
+        },
+        {
+          "key": "lantern-blue",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A gas lantern burns blue and then goes out."
+          }
+        },
+        {
+          "key": "riveter",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Night-shift riveters are singing a marching tune."
+          }
+        },
+        {
+          "key": "shadow",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Your shadow arrives half a second after you do."
+          }
+        },
+        {
+          "key": "kettle",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A tea stall is open, and the vendor has been expecting you."
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.steampunk/generator/inventor-name",
+      "description": "Inventor given name with a gloss.",
+      "tags": [
+        "person",
+        "inventor"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.steampunk/culture/oldenglish",
+      "kind": "given"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/airship-name",
+      "description": "Airship names.",
+      "tags": [
+        "airship"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/airship"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/contraption-name",
+      "description": "Inventions and contraptions.",
+      "tags": [
+        "invention"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/contraption"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/guild-name",
+      "description": "Trade guilds.",
+      "tags": [
+        "guild",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/guild"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/society-name",
+      "description": "Learned societies.",
+      "tags": [
+        "society",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/society"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/headline",
+      "description": "Newspaper headlines.",
+      "tags": [
+        "newspaper"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/headline"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/district-name",
+      "description": "City districts.",
+      "tags": [
+        "district",
+        "place"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/district"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/automaton-name",
+      "description": "Automaton designations.",
+      "tags": [
+        "automaton"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/automaton"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/patent-title",
+      "description": "Patent titles.",
+      "tags": [
+        "patent"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/patent"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/street-name",
+      "description": "Gaslamp streets.",
+      "tags": [
+        "street",
+        "place"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/street"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/official-title",
+      "description": "Civic ranks and titles.",
+      "tags": [
+        "title"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.steampunk/grammar/rank"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/malfunction",
+      "description": "Machine malfunction oracle.",
+      "tags": [
+        "oracle"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.steampunk/table/malfunction"
+    },
+    {
+      "id": "lexiconlang.steampunk/generator/gaslamp-omen",
+      "description": "Street omen oracle.",
+      "tags": [
+        "oracle"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.steampunk/table/gaslamp-omen"
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { steampunk } from "@lexiconlang/steampunk";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -72,3 +73,15 @@ for (const d of sq) {
   console.log(`  Det. ${d.legal}  (a.k.a. "${d.alias}")`);
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
+
+// ─── Scenario 3: a gaslamp inventor's filing ─────────────────────────────
+
+const brass = steampunk.withSeed("brass-cross-genre");
+console.log("Gaslamp patent filing:");
+console.log(`  Inventor: ${brass.person().form}`);
+console.log(`  Workshop: ${brass.district()} · ${brass.street()}`);
+console.log(`  Patent:   ${brass.patent()}`);
+console.log(`  Vessel:   ${brass.airship()}`);
+console.log(`  Society:  ${brass.society()}`);
+console.log(`  Sunday headline: ${brass.headline()}`);
+console.log(`  Street omen: ${brass.omen().text}`);
