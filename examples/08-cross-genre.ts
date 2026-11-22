@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { postapoc } from "@lexiconlang/postapoc";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -72,3 +73,12 @@ for (const d of sq) {
   console.log(`  Det. ${d.legal}  (a.k.a. "${d.alias}")`);
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
+
+// ─── Scenario 3: a wasteland scene with a fantasy-named relic ──────────
+
+const waste = postapoc.withSeed("the-ironwake");
+console.log("\nWasteland scene (post-apocalyptic + fantasy):");
+console.log(`  Settlement: ${waste.settlement().form}  · raiders: ${waste.raiders().form}`);
+console.log(`  Bunker:     ${waste.vault().name}`);
+console.log(`  Loot:       ${waste.gear()}  ("${fantasyFullName.generate(ctx.child("relic")).surname}" brand)`);
+console.log(`  Encounter:  ${waste.encounter()}`);

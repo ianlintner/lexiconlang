@@ -343,6 +343,7 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 | [`@lexiconlang/scifi`](packages/scifi)     | Genre pack: alien species (humanoid/insectoid/aquatic/synth/human), star systems with planets, ships, megacorps, factions (~15 generators)                                                                |
 | [`@lexiconlang/glyphs`](packages/glyphs)   | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies                                                           |
 | [`@lexiconlang/modern`](packages/modern)   | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators)                                                                                        |
+| [`@lexiconlang/postapoc`](packages/postapoc) | Genre pack: post-apocalyptic survivors, tech-cults, settlements, raiders, bunkers, mutations, gear with condition, vehicles, trade goods, encounters oracle (14 generators) |
 | [`@lexiconlang/cli`](packages/cli)         | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack`                                                                                                                                         |
 
 All packages ESM-only, `sideEffects: false`, no native deps.

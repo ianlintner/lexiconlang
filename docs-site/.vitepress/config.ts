@@ -90,6 +90,7 @@ export default defineConfig({
             { text: "@lexiconlang/fantasy", link: "/packages/fantasy" },
             { text: "@lexiconlang/scifi", link: "/packages/scifi" },
             { text: "@lexiconlang/modern", link: "/packages/modern" },
+            { text: "@lexiconlang/postapoc", link: "/packages/postapoc" },
           ],
         },
         {

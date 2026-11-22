@@ -56,6 +56,9 @@ importers:
       '@lexiconlang/modern':
         specifier: workspace:*
         version: link:../packages/modern
+      '@lexiconlang/postapoc':
+        specifier: workspace:*
+        version: link:../packages/postapoc
       '@lexiconlang/scifi':
         specifier: workspace:*
         version: link:../packages/scifi
@@ -188,6 +191,15 @@ importers:
       ajv:
         specifier: ^8.20.0
         version: 8.20.0
+
+  packages/postapoc:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/scifi:
     dependencies:

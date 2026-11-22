@@ -27,7 +27,8 @@
     "@lexiconlang/glyphs": "workspace:*",
     "@lexiconlang/fantasy": "workspace:*",
     "@lexiconlang/scifi": "workspace:*",
-    "@lexiconlang/modern": "workspace:*"
+    "@lexiconlang/modern": "workspace:*",
+    "@lexiconlang/postapoc": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.23.15"
