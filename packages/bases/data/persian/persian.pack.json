@@ -1,0 +1,266 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.persian",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by New Persian; long vowels, elegant consonant frames; deliberate simplifications. — New Persian (romanized). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-persian-prov",
+      "source": "original:lexiconlang.bases.persian",
+      "title": "New Persian (romanized)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.persian/base/default",
+      "inspiredBy": "New Persian (romanized)",
+      "scope": "Phonotactics and name shapes inspired by New Persian; long vowels, elegant consonant frames; deliberate simplifications.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "v",
+            "z",
+            "sh",
+            "ch",
+            "gh",
+            "kh"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "aa",
+            "ee",
+            "oo",
+            "ai",
+            "au"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "C V V",
+            2
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ]
+      },
+      "orthography": {
+        "id": "persian-latin",
+        "mappings": [
+          {
+            "from": "sh",
+            "to": "š"
+          },
+          {
+            "from": "gh",
+            "to": "ġ"
+          },
+          {
+            "from": "aa",
+            "to": "ā"
+          },
+          {
+            "from": "oo",
+            "to": "ō"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "persian-roman",
+        "mappings": [
+          {
+            "from": "š",
+            "to": "sh"
+          },
+          {
+            "from": "ġ",
+            "to": "gh"
+          },
+          {
+            "from": "ā",
+            "to": "aa"
+          },
+          {
+            "from": "ō",
+            "to": "oo"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ardestan",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shiraz",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "nasab": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "family",
+                  "capitalize": true
+                },
+                {
+                  "literal": "i",
+                  "translation": "of"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "persian.nasab": {
+          "id": "nasab",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "nasab",
+              "role": "nasab",
+              "source": {
+                "type": "kind",
+                "kind": "nasab"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "persian-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.persian/culture/default",
+      "base": "lexiconlang.bases.persian/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

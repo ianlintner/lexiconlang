@@ -1,0 +1,251 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.finnish",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Finnish; vowel harmony, front/back contrasts and agglutinative case endings; deliberate simplifications. — Finnish. Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-finnish-prov",
+      "source": "original:lexiconlang.bases.finnish",
+      "title": "Finnish",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.finnish/base/default",
+      "inspiredBy": "Finnish",
+      "scope": "Phonotactics and name shapes inspired by Finnish; vowel harmony, front/back contrasts and agglutinative case endings; deliberate simplifications.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "v",
+            "y",
+            "nk",
+            "ng"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "y",
+            "ä",
+            "ö",
+            "aa",
+            "ee",
+            "ii",
+            "oo",
+            "uu",
+            "yy",
+            "ai",
+            "ei",
+            "oi",
+            "ui",
+            "au",
+            "eu",
+            "ou"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "V C",
+            2
+          ],
+          [
+            "C V V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ]
+      },
+      "orthography": {
+        "id": "finnish-latin",
+        "mappings": [
+          {
+            "from": "ae",
+            "to": "æ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "finnish-roman",
+        "mappings": [
+          {
+            "from": "æ",
+            "to": "ae"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ainokainen",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kaarno",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "literal": "lahti",
+                  "translation": "bay"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "finnish.given-family": {
+          "id": "given-family",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "family",
+              "role": "family",
+              "source": {
+                "type": "kind",
+                "kind": "family"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "finnish-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.finnish/culture/default",
+      "base": "lexiconlang.bases.finnish/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

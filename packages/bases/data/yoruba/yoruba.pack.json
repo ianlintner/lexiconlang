@@ -1,0 +1,229 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.yoruba",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Yoruba; open syllables and tonal vowels with ASCII fallback; deliberate simplifications. No orisha names ship. — Yoruba (romanized). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-yoruba-prov",
+      "source": "original:lexiconlang.bases.yoruba",
+      "title": "Yoruba (romanized)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.yoruba/base/default",
+      "inspiredBy": "Yoruba (romanized)",
+      "scope": "Phonotactics and name shapes inspired by Yoruba; open syllables and tonal vowels with ASCII fallback; deliberate simplifications. No orisha names ship.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "sh",
+            "t",
+            "w",
+            "y"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "gb",
+            "aa",
+            "ee",
+            "ii",
+            "oo",
+            "uu"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            5
+          ],
+          [
+            "V",
+            2
+          ],
+          [
+            "C V V",
+            2
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            3
+          ],
+          [
+            "2",
+            2
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ]
+      },
+      "orthography": {
+        "id": "yoruba-tone",
+        "mappings": [
+          {
+            "from": "a",
+            "to": "á"
+          },
+          {
+            "from": "e",
+            "to": "é"
+          },
+          {
+            "from": "i",
+            "to": "í"
+          },
+          {
+            "from": "o",
+            "to": "ó"
+          },
+          {
+            "from": "u",
+            "to": "ú"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "yoruba-ascii",
+        "mappings": [
+          {
+            "from": "á",
+            "to": "a"
+          },
+          {
+            "from": "é",
+            "to": "e"
+          },
+          {
+            "from": "í",
+            "to": "i"
+          },
+          {
+            "from": "ó",
+            "to": "o"
+          },
+          {
+            "from": "ú",
+            "to": "u"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Adeyemi",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oluwasen",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ]
+      },
+      "nameStructures": {
+        "yoruba.given-only": {
+          "id": "given-only",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "yoruba-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.yoruba/culture/default",
+      "base": "lexiconlang.bases.yoruba/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

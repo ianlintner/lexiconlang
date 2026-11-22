@@ -1,0 +1,289 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.mandarin",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Mandarin pinyin; initials/finals and four tone marks with ASCII fallback; deliberate simplifications. — Mandarin Chinese (Hanyu Pinyin, romanized). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-mandarin-prov",
+      "source": "original:lexiconlang.bases.mandarin",
+      "title": "Mandarin Chinese (Hanyu Pinyin, romanized)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.mandarin/base/default",
+      "inspiredBy": "Mandarin Chinese (Hanyu Pinyin, romanized)",
+      "scope": "Phonotactics and name shapes inspired by Mandarin pinyin; initials/finals and four tone marks with ASCII fallback; deliberate simplifications.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "p",
+            "m",
+            "f",
+            "d",
+            "t",
+            "n",
+            "l",
+            "g",
+            "k",
+            "h",
+            "j",
+            "q",
+            "x",
+            "zh",
+            "ch",
+            "sh",
+            "r",
+            "z",
+            "c",
+            "s"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ai",
+            "ei",
+            "ao",
+            "ou",
+            "an",
+            "en",
+            "ang",
+            "eng",
+            "ing",
+            "ong",
+            "ia",
+            "ie",
+            "iao",
+            "iu",
+            "ian",
+            "in",
+            "iang",
+            "iong",
+            "ua",
+            "uo",
+            "uai",
+            "ui",
+            "uan",
+            "un",
+            "uang",
+            "ueng",
+            "ü",
+            "üe",
+            "üan",
+            "ün"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            5
+          ],
+          [
+            "V",
+            2
+          ],
+          [
+            "C V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            3
+          ],
+          [
+            "2",
+            1
+          ]
+        ],
+        "joiner": ""
+      },
+      "orthography": {
+        "id": "mandarin-pinyin-tone",
+        "mappings": [
+          {
+            "from": "a",
+            "to": "ā"
+          },
+          {
+            "from": "e",
+            "to": "ē"
+          },
+          {
+            "from": "i",
+            "to": "ī"
+          },
+          {
+            "from": "o",
+            "to": "ō"
+          },
+          {
+            "from": "u",
+            "to": "ū"
+          },
+          {
+            "from": "ü",
+            "to": "ǖ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "mandarin-pinyin-ascii",
+        "mappings": [
+          {
+            "from": "ā",
+            "to": "a"
+          },
+          {
+            "from": "ē",
+            "to": "e"
+          },
+          {
+            "from": "ī",
+            "to": "i"
+          },
+          {
+            "from": "ō",
+            "to": "o"
+          },
+          {
+            "from": "ū",
+            "to": "u"
+          },
+          {
+            "from": "ǖ",
+            "to": "ü"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lianhua",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mingde",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "family": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chen",
+              "translation": "fictional surname placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lin",
+              "translation": "fictional surname placeholder"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "mandarin.family-first": {
+          "id": "family-first",
+          "slots": [
+            {
+              "key": "family",
+              "role": "family",
+              "source": {
+                "type": "kind",
+                "kind": "family"
+              }
+            },
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "mandarin-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.mandarin/culture/default",
+      "base": "lexiconlang.bases.mandarin/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}
