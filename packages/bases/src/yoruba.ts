@@ -10,7 +10,7 @@ export const yoruba: BaseData = defineBase({
   inspiredBy: "Yoruba (romanized)",
   scope: "Phonotactics and name shapes inspired by Yoruba; open syllables and tonal vowels with ASCII fallback; deliberate simplifications. No orisha names ship.",
   glyphs: {
-    classes: { C: ["b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "sh", "t", "w", "y"], V: ["a", "e", "i", "o", "u", "gb", "aa", "ee", "ii", "oo", "uu"] },
+    classes: { C: ["b", "d", "f", "g", "gb", "h", "j", "k", "l", "m", "n", "p", "r", "s", "sh", "t", "w", "y"], V: ["a", "e", "i", "o", "u", "aa", "ee", "ii", "oo", "uu"] },
     syllables: [["C V", 5], ["V", 2], ["C V V", 2]],
     wordShapes: [["1", 3], ["2", 2], ["1-2", 1]],
   },
@@ -26,8 +26,8 @@ export const yoruba: BaseData = defineBase({
   },
   templates: {
     given: [
-      literal("Adeyemi", "fictional given-name placeholder"),
-      literal("Oluwasen", "fictional given-name placeholder"),
+      literal("Daramola", "fictional given-name placeholder"),
+      literal("Folajimi", "fictional given-name placeholder"),
       {
         value: {
           kind: "compose",

@@ -47,7 +47,6 @@
             "s",
             "t",
             "v",
-            "y",
             "nk",
             "ng"
           ],
@@ -123,7 +122,7 @@
         "mappings": [
           {
             "from": "ae",
-            "to": "æ"
+            "to": "ä"
           }
         ],
         "unknown": "preserve"
@@ -132,7 +131,7 @@
         "id": "finnish-roman",
         "mappings": [
           {
-            "from": "æ",
+            "from": "ä",
             "to": "ae"
           }
         ],
@@ -191,6 +190,24 @@
                 }
               ],
               "sep": ""
+            },
+            "weight": 1
+          }
+        ],
+        "family": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kaskelahti",
+              "translation": "fictional family-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rautameri",
+              "translation": "fictional family-name placeholder"
             },
             "weight": 1
           }

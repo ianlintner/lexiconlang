@@ -36,6 +36,7 @@
             "d",
             "f",
             "g",
+            "gb",
             "h",
             "j",
             "k",
@@ -56,7 +57,6 @@
             "i",
             "o",
             "u",
-            "gb",
             "aa",
             "ee",
             "ii",
@@ -150,7 +150,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Adeyemi",
+              "form": "Daramola",
               "translation": "fictional given-name placeholder"
             },
             "weight": 1
@@ -158,7 +158,7 @@
           {
             "value": {
               "kind": "literal",
-              "form": "Oluwasen",
+              "form": "Folajimi",
               "translation": "fictional given-name placeholder"
             },
             "weight": 1

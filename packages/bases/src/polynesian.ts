@@ -27,8 +27,8 @@ export const polynesian: BaseData = defineBase({
   },
   templates: {
     given: [
-      literal("Rangi-moana", "fictional given-name placeholder"),
-      literal("Hine-kai", "fictional given-name placeholder"),
+      literal("Moanakiri", "fictional given-name placeholder"),
+      literal("Tarawhenua", "fictional given-name placeholder"),
       {
         value: {
           kind: "compose",

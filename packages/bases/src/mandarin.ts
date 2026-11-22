@@ -38,7 +38,7 @@ export const mandarin: BaseData = defineBase({
         weight: 2,
       },
     ],
-    family: [{ value: { kind: "literal", form: "Chen", translation: "fictional surname placeholder" }, weight: 1 }, { value: { kind: "literal", form: "Lin", translation: "fictional surname placeholder" }, weight: 1 }],
+    family: [{ value: { kind: "literal", form: "Zhanliu", translation: "fictional family-name placeholder" }, weight: 1 }, { value: { kind: "literal", form: "Wenlan", translation: "fictional family-name placeholder" }, weight: 1 }],
   },
   nameStructures: {
     "mandarin.family-first": {

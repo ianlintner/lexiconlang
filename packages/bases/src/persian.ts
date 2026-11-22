@@ -28,7 +28,7 @@ export const persian: BaseData = defineBase({
   templates: {
     given: [
       literal("Ardestan", "fictional given-name placeholder"),
-      literal("Shiraz", "fictional given-name placeholder"),
+      literal("Shiravar", "fictional given-name placeholder"),
       {
         value: {
           kind: "compose",

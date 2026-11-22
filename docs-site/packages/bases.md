@@ -90,10 +90,20 @@ living-person names ship.
 | `./ancient-egyptian` | Ancient Egyptian (romanized) | given-only | consonantal frames |
 | `./finnish` | Finnish | given-family | vowel harmony |
 
-`./mandarin`, `./yoruba` and `./polynesian` ship an `orthography` with diacritics
-and a matching `romanization` table back to ASCII. Diacritics are opt-in — call
-`renderOrthography(form, base.orthography)` when you want them; generated names
-use the authored ASCII forms by default.
+`./mandarin`, `./yoruba`, `./polynesian` and `./finnish` ship an `orthography`
+with diacritics and a matching `romanization` table back to ASCII. Diacritics
+are opt-in — call `renderOrthography(form, base.orthography)` when you want them;
+generated names use the authored ASCII forms by default.
+
+**Mandarin tone simplification:** the tone orthography maps each vowel to its
+macron form (e.g. `ai` → `āi`), always tone 1. This is a deliberate simplification,
+not pinyin tone placement: real pinyin marks tone on the appropriate vowel and
+distinguishes four tones plus neutral. The romanization table round-trips back
+to the original ASCII string.
+
+**Finnish orthography simplification:** `ae` maps to `ä` (not `æ`) and `ä`
+round-trips to `ae`; generated forms otherwise use plain ASCII vowels. The
+front/back vowel inventory is simplified and not a phonological reference.
 
 `./polynesian` is a documented Māori-inspired **fictional** CV-only sound
 palette; no iwi, marae, deity names or pan-Polynesian claim is made. The broad

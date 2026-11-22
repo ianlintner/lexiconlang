@@ -29,15 +29,18 @@ Following the design spec (`docs/superpowers/specs/2026-10-30-expansion-design.m
 - `framing`: "inspired-by, fictional, simplified" — the bases are not linguistic
   references and are not presented as reconstructions of any real language.
 - `exclusions`: sacred / liturgical / restricted names and living-person names are
-  not shipped. All literal template forms are invented placeholders
-  (`Sven`, `Bjorn`, `Aedan`, `Mairin`, `Marcus`, `Lucius`, `Alexis`, `Daphne`,
-  `Haru`, `Yuki`, `Karim`, `Layla`, `Veselimir`, `Dobroslava`, `Eadwulf`,
-  `Eadwenna`, `Ardestan`, `Shiraz`, `Arjavira`, `Kaushalya`, `Lianhua`,
-  `Mingde`, `Xochimil`, `Temal`, `Adeyemi`, `Oluwasen`, `Rangi-moana`,
-  `Hine-kai`, `Nefer-menu`, `Seneb-hat`, `Ainokainen`, `Kaarno`); none is a
-  deity, saint, scripture figure, tribal name, or the name of a real person.
-  B2 additionally excludes Vedic/pantheon deities, orisha, iwi/marae names,
-  pharaoh names and Kalevala deity names.
+  not shipped. B2 literal template forms are invented placeholders chosen to
+  avoid deity names, saint and scripture names, tribal / iwi / marae names,
+  historical-person names and well-known real-world place names. The B2 literal
+  placeholders are `Veselimir`, `Dobroslava`, `Eadwulf`, `Eadwenna`, `Ardestan`,
+  `Shiravar`, `Arjavira`, `Kausalindi`, `Lianhua`, `Mingde`, `Zhanliu`, `Wenlan`,
+  `Xochimil`, `Temal`, `Daramola`, `Folajimi`, `Moanakiri`, `Tarawhenua`,
+  `Nefer-menu`, `Seneb-hat`, `Ainokainen`, `Kaarno`, `Kaskelahti` and `Rautameri`.
+  Some Greek/Latin/Hebraic-Arabic B1 forms (`Sven`, `Bjorn`, `Aedan`, `Mairin`,
+  `Marcus`, `Lucius`, `Alexis`, `Daphne`, `Haru`, `Yuki`, `Karim`, `Layla`) are
+  common real-world names; they are B1 legacy forms retained for determinism and
+  are not claimed to be invented. B2 additionally excludes Vedic/pantheon
+  deities, orisha, iwi/marae names, pharaoh names and Kalevala deity names.
 - `review`: "context-sensitive" — downstream genre packs may combine a base with
   content generators; those packs are responsible for their own content review.
 

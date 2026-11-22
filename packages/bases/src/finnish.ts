@@ -10,19 +10,19 @@ export const finnish: BaseData = defineBase({
   inspiredBy: "Finnish",
   scope: "Phonotactics and name shapes inspired by Finnish; vowel harmony, front/back contrasts and agglutinative case endings; deliberate simplifications.",
   glyphs: {
-    classes: { C: ["b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "y", "nk", "ng"], V: ["a", "e", "i", "o", "u", "y", "ä", "ö", "aa", "ee", "ii", "oo", "uu", "yy", "ai", "ei", "oi", "ui", "au", "eu", "ou"] },
+    classes: { C: ["b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "nk", "ng"], V: ["a", "e", "i", "o", "u", "y", "ä", "ö", "aa", "ee", "ii", "oo", "uu", "yy", "ai", "ei", "oi", "ui", "au", "eu", "ou"] },
     syllables: [["C V", 4], ["C V C", 3], ["V C", 2], ["C V V", 1]],
     wordShapes: [["1", 2], ["2", 3], ["1-2", 1]],
     constraints: [{"pattern":["C","C","C"],"rule":"forbid"}],
   },
   orthography: {
     id: "finnish-latin",
-    mappings: [{ from: "ae", to: "æ" }],
+    mappings: [{ from: "ae", to: "ä" }],
     unknown: "preserve",
   },
   romanization: {
     id: "finnish-roman",
-    mappings: [{ from: "æ", to: "ae" }],
+    mappings: [{ from: "ä", to: "ae" }],
     unknown: "preserve",
   },
   templates: {
@@ -39,6 +39,10 @@ export const finnish: BaseData = defineBase({
       },
     ],
     settlement: [{ value: { kind: "compose", parts: [pick("noun", { tag: "nature", capitalize: true }), { literal: "lahti", translation: "bay" }], sep: "" }, weight: 1 }],
+    family: [
+      literal("Kaskelahti", "fictional family-name placeholder"),
+      literal("Rautameri", "fictional family-name placeholder"),
+    ],
   },
   nameStructures: {
     "finnish.given-family": {

@@ -106,11 +106,24 @@ describe("B2 base descriptor registry", () => {
     expect(finnish.nameStructures["finnish.given-family"].slots.map((s) => s.key)).toEqual(["given", "family"]);
   });
 
-  it("structured B2 names render with the declared separator", () => {
-    const culture = cultureFor(mandarin, [coreMeanings]);
-    const structured = generateStructuredName(culture, { structure: "mandarin.family-first" }, createContext({ seed: "b2-structured" }));
-    expect(structured.parts?.length ?? 0).toBeGreaterThan(0);
-    expect(structured.form.length).toBeGreaterThan(0);
+  it("structured B2 names render with the declared separator and every slot has a template pool", () => {
+    for (const [slug, base] of Object.entries(ALL)) {
+      const culture = cultureFor(base, [coreMeanings]);
+      for (const structure of Object.keys(base.nameStructures)) {
+        for (const seed of ["b2-structured-a", "b2-structured-b"]) {
+          const structured = generateStructuredName(
+            culture,
+            { structure },
+            createContext({ seed: `${slug}-${structure}-${seed}` }),
+          );
+          expect(structured.form.length, `${slug}/${structure}`).toBeGreaterThan(0);
+          expect(structured.parts?.length ?? 0, `${slug}/${structure}`).toBeGreaterThan(0);
+          expect(structured.form.trim().split(/\s+/).length).toBe(
+            base.nameStructures[structure]!.slots.length,
+          );
+        }
+      }
+    }
   });
 
   it("tone-marked bases round-trip to ASCII and back", () => {

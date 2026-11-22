@@ -28,7 +28,7 @@ export const sanskrit: BaseData = defineBase({
   templates: {
     given: [
       literal("Arjavira", "fictional given-name placeholder"),
-      literal("Kaushalya", "fictional given-name placeholder"),
+      literal("Kausalindi", "fictional given-name placeholder"),
       {
         value: {
           kind: "compose",
