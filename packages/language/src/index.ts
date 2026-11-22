@@ -39,6 +39,11 @@ export {
 } from "./lexicon.js";
 export type { LexiconCache, LexiconCacheStats } from "./lexicon.js";
 export { generateName, resolveNameTemplates, generateNameFiltered } from "./templates.js";
+export { glossFor, withGlosses, localizePacks } from "./glosses.js";
+export {
+  BUILTIN_GLOSS_LOCALES,
+  withBuiltinGlosses,
+} from "./builtin-glosses.js";
 export { generateStructuredName } from "./structures.js";
 export { freezeCulture, isFrozenCulture } from "./freeze.js";
 export { archetypes } from "./archetypes.js";

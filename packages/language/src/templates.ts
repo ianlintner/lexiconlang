@@ -13,6 +13,8 @@ import type {
 import { buildLexicon, createLexiconCache, DEFAULT_LEXICON_CACHE_CAPACITY } from "./lexicon.js";
 import { isFrozenCulture } from "./freeze.js";
 import { isBlocked, type Blocklist } from "./filter.js";
+import { glossFor } from "./glosses.js";
+import { withBuiltinGlosses } from "./builtin-glosses.js";
 
 /**
  * Shared, bounded lexicon memo used by {@link generateName} for frozen culture
@@ -34,6 +36,11 @@ const sharedLexiconCache = createLexiconCache({
  * `genderTemplates[gender]` pool for that kind, falling back to
  * `templates[kind]` when the gender declares no pool of its own. Omitting the
  * option leaves the RNG path — and therefore the output — untouched.
+ *
+ * Passing `options.locale` (or a `ctx.locale`) selects the locale for the
+ * *translation only*: the conlang `form`, the meaning selection and every RNG
+ * path stay byte-identical to the legacy call. With no locale, every lookup
+ * returns the legacy `label ?? id` exactly.
  */
 export function generateName<C extends Culture>(
   culture: C,
@@ -41,7 +48,11 @@ export function generateName<C extends Culture>(
   ctx: Context,
   options?: NameOptions,
 ): TranslatedName {
-  const templates = resolveNameTemplates(culture, nameKind, options?.gender);
+  const locale = options?.locale ?? ctx.locale;
+  // Locale only decorates glosses; a shallow localized culture copy keeps the
+  // original caller-owned packs untouched. With no locale this is identity.
+  const localized = withBuiltinGlosses(culture, locale);
+  const templates = resolveNameTemplates(localized, nameKind, options?.gender);
 
   if (!templates || templates.length === 0) {
     throw new Error(`No templates for ${String(nameKind)} in culture ${culture.id}`);
@@ -52,13 +63,13 @@ export function generateName<C extends Culture>(
 
   // Build lexicon (memoized only for immutable culture snapshots)
   const lexicon = buildLexicon(
-    culture,
+    localized,
     ctx.child("lexicon"),
-    isFrozenCulture(culture) ? sharedLexiconCache : undefined,
+    isFrozenCulture(localized) ? sharedLexiconCache : undefined,
   );
 
   // Render name from template
-  const rendered = renderTemplate(template, culture, lexicon, ctx.child("render"));
+  const rendered = renderTemplate(template, localized, lexicon, ctx.child("render"), locale);
 
   const translatedName: TranslatedName = {
     form: rendered.form,
@@ -110,6 +121,7 @@ function renderTemplate(
   culture: Culture,
   lexicon: ReturnType<typeof buildLexicon>,
   ctx: Context,
+  locale?: string,
 ): { form: string; translation: string; parts: Array<{ form: string; meaning: string }> } {
   if (template.kind === "literal") {
     return {
@@ -141,9 +153,12 @@ function renderTemplate(
       const meaning = candidates[partCtx.rng.nextInt(0, candidates.length - 1)]!;
       const form = lexicon.formOf(meaning.id);
       const morpheme = part.capitalize ? capitalize(form) : form;
+      // Locale affects only the human-readable gloss. Meaning selection, form,
+      // capitalization and RNG scope are all identical to the legacy path.
+      const gloss = glossFor(meaning, locale);
       forms.push(morpheme);
-      translations.push(meaning.label ?? meaning.id);
-      parts.push({ form: morpheme, meaning: meaning.label ?? meaning.id });
+      translations.push(gloss);
+      parts.push({ form: morpheme, meaning: gloss });
     }
   }
 

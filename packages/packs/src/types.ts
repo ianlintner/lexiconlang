@@ -65,7 +65,14 @@ export interface CultureData {
 export interface MeaningPackData {
   id: ResourceId;
   version: string;
-  meanings: readonly { id: ResourceId; class: string; tags: readonly string[]; label?: string }[];
+  meanings: readonly {
+    id: ResourceId;
+    class: string;
+    tags: readonly string[];
+    label?: string;
+    /** BCP 47 locale tag -> localized gloss. Optional; legacy label is the fallback. */
+    glosses?: Readonly<Record<string, string>>;
+  }[];
 }
 
 export interface GrammarData {

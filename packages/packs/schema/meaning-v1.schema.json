@@ -21,7 +21,13 @@
               "id": { "$ref": "common-v1.schema.json#/$defs/resourceId" },
               "class": { "type": "string", "minLength": 1 },
               "tags": { "$ref": "common-v1.schema.json#/$defs/stringArray" },
-              "label": { "$ref": "common-v1.schema.json#/$defs/safeString" }
+              "label": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+              "glosses": {
+                "type": "object",
+                "description": "Locale-keyed translations (BCP 47 tags). Optional; absent locale falls back to label.",
+                "additionalProperties": { "$ref": "common-v1.schema.json#/$defs/safeString" },
+                "propertyNames": { "type": "string", "minLength": 1 }
+              }
             }
           }
         }

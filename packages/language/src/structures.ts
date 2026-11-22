@@ -61,7 +61,9 @@ export function generateStructuredName<C extends Culture>(
       }
       value = generateName(culture, kind, ctx.child(`slot:${slot.key}`), {
         ...(input.gender !== undefined ? { gender: input.gender } : {}),
-        ...(input.locale !== undefined ? { locale: input.locale } : {}),
+        ...((input.locale ?? ctx.locale) !== undefined
+          ? { locale: input.locale ?? ctx.locale }
+          : {}),
       });
     } else {
       const provided = ownValue(

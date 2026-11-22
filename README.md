@@ -99,6 +99,24 @@ console.log(name.translation); // "Strong-anvil"
 console.log(name.language); // "fantasy.dwarvish"
 ```
 
+### Localized glosses (opt-in)
+
+Pass a BCP 47 locale to localize the human-readable translation only —
+the conlang form and seed-derived RNG are unchanged:
+
+```ts
+const es = generateName(dwarvish, "given", ctx.child("hero:1"), { locale: "es" });
+console.log(es.form);         // "Drakaztum" — identical
+console.log(es.translation);  // "Fuerte-yunque"
+```
+
+Built-in glosses are available for `es`, `de`, `fr`, `pt` and `ja` across the
+core, fantasy and scifi meaning packs. `glossFor(meaning, locale)` resolves
+exact tag → primary subtag → legacy English label → meaning id, and pack JSON
+may carry a `glosses` map per meaning. See
+[`examples/12-localized-glosses.ts`](examples/12-localized-glosses.ts) and the
+[language package docs](docs-site/packages/language.md).
+
 ### Full NPC with fantasy integration
 
 ```ts
