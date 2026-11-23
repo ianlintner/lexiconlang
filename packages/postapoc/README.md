@@ -29,4 +29,5 @@ Cultures: **scrapper** (degraded-English survivors), **techcult** (reverent mach
 Generators are also reachable by id through any `@lexiconlang/packs` world:
 `postapoc.install(world)` then `world.generate(generatorIds.mutation, "key")`.
 
-See `PROVENANCE.md` for data licensing (CC0-1.0, original).
+See `PROVENANCE.md` for data licensing: the TypeScript code is MIT, the generated corpus and
+`postapoc.pack.json` data are original and released under CC0-1.0.

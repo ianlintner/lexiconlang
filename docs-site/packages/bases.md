@@ -1,8 +1,10 @@
 # @lexiconlang/bases
 
 Real-language-inspired base descriptors: phonotactics, romanization, naming
-structures and small literal vocabularies for the six B1 bases — Norse, Celtic,
-Latin, Greek, Japanese and Arabic.
+structures and small literal vocabularies for the 16 shipped bases — the six B1
+bases (Norse, Celtic, Latin, Greek, Japanese, Arabic) and the ten B2 bases
+(Slavic, Old English, Persian, Sanskrit, Mandarin, Nahuatl, Yoruba, Polynesian,
+Ancient Egyptian, Finnish).
 
 ```bash
 pnpm add @lexiconlang/bases
@@ -39,6 +41,26 @@ renderOrthography("thorn", norse.orthography); // "þorn"
 existing `@lexiconlang/language` API. Pass a meaning pack array when you want
 composed names; omit it for literal-only templates.
 
+B2 example — Mandarin family-first with optional tone marks:
+
+```ts
+import { createContext } from "@lexiconlang/core";
+import { coreMeanings, generateStructuredName } from "@lexiconlang/language";
+import { mandarin } from "@lexiconlang/bases/mandarin";
+import { cultureFor, renderOrthography } from "@lexiconlang/bases";
+
+const culture = cultureFor(mandarin, [coreMeanings]);
+const name = generateStructuredName(
+  culture,
+  { structure: "mandarin.family-first" },
+  createContext({ seed: "demo" }),
+);
+console.log(name.form); // family name, space, given name
+
+renderOrthography("la", mandarin.orthography);  // "lā"
+renderOrthography("lā", mandarin.romanization); // "la"
+```
+
 ## The six bases
 
 | subpath | inspired by | naming structure | sample names |
@@ -52,6 +74,42 @@ composed names; omit it for literal-only templates.
 
 All literal names are invented placeholders; no sacred, restricted or
 living-person names ship.
+
+## The ten B2 bases
+
+| subpath | inspired by | naming structure | scope note |
+| --- | --- | --- | --- |
+| `./slavic` | Old East Slavic (romanized) | patronymic | soft/hard consonant pairs |
+| `./old-english` | Old English | patronymic | Germanic clusters, æ/þ |
+| `./persian` | New Persian (romanized) | nasab | long vowels |
+| `./sanskrit` | Sanskrit (romanized) | patronymic | aspirates, long vowels |
+| `./mandarin` | Mandarin pinyin | family-first | tone marks + ASCII pinyin fallback |
+| `./nahuatl` | Classical Nahuatl | given-only | `tl`/`ts` clusters |
+| `./yoruba` | Yoruba | given-only | open syllables, tone + ASCII fallback |
+| `./polynesian` | Māori-inspired | given-only | CV-only phonotactics |
+| `./ancient-egyptian` | Ancient Egyptian (romanized) | given-only | consonantal frames |
+| `./finnish` | Finnish | given-family | vowel harmony |
+
+`./mandarin`, `./yoruba`, `./polynesian` and `./finnish` ship an `orthography`
+with diacritics and a matching `romanization` table back to ASCII. Diacritics
+are opt-in — call `renderOrthography(form, base.orthography)` when you want them;
+generated names use the authored ASCII forms by default.
+
+**Mandarin tone simplification:** the tone orthography maps each vowel to its
+macron form (e.g. `ai` → `āi`), always tone 1. This is a deliberate simplification,
+not pinyin tone placement: real pinyin marks tone on the appropriate vowel and
+distinguishes four tones plus neutral. The romanization table round-trips back
+to the original ASCII string.
+
+**Finnish orthography simplification:** `ae` maps to `ä` (not `æ`) and `ä`
+round-trips to `ae`; generated forms otherwise use plain ASCII vowels. The
+front/back vowel inventory is simplified and not a phonological reference.
+
+`./polynesian` is a documented Māori-inspired **fictional** CV-only sound
+palette; no iwi, marae, deity names or pan-Polynesian claim is made. The broad
+B2 labels are package-discovery categories, not claims of cultural uniformity.
+The S0 spec's `ancient-egyptian` slug is used in place of the roadmap's shorter
+`egyptian` label; the spec wins and this is the only deviation from the card.
 
 ## Use as an F2 `extends` target
 

@@ -49,6 +49,17 @@ import {
 } from "./language/cultures.js";
 
 export { dwarvish, elvish, orcish, halfling, draconic, plantoid, mycanoids, celestial, fey, tiefling } from "./language/cultures.js";
+export {
+  expandedPack,
+  expandedGeneratorIds,
+  expandedGenerators,
+  expandedWithSeed,
+  validatePack as validateFantasyPack,
+  type ExpandedAPI,
+  type ExpandedGeneratorId,
+  type HumanV2,
+  type TableRollText,
+} from "./expanded.js";
 
 // ─── Culture mapping ─────────────────────────────────────────────────────
 

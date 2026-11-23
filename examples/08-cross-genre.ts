@@ -7,7 +7,7 @@
 // Run: pnpm --filter examples cross-genre
 
 import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
-import { fullName as fantasyFullName, dwarvenMaleName } from "@lexiconlang/fantasy";
+import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { postapoc } from "@lexiconlang/postapoc";
@@ -68,6 +68,19 @@ const detective = compose<ModernDetective>({
   },
 });
 
+// ─── Scenario 3: expanded fantasy oracle in a mixed campaign ─────────────
+//
+// The P1 pack is opt-in and composes with the legacy fantasy generators.
+// Every oracle draw is a function of (seed, key), so reruns are reproducible.
+
+const world = expandedWithSeed("the-ironwake");
+console.log("\nExpanded fantasy oracle:");
+console.log(`  Tavern:  ${world.tavern.name()}`);
+console.log(`  Spell:   ${world.spell.name()} — ${world.spell.effect().text}`);
+console.log(`  Item:    ${world.magicItem.full()}`);
+console.log(`  Rumor:   ${world.rumor().text}`);
+console.log(`  Hero:    ${world.humanV2.northronFullName()}`);
+
 console.log("\nDetective squad (modern + fantasy aliases):");
 const sq = repeat(detective, 5).generate(ctx.child("squad"));
 for (const d of sq) {
@@ -75,7 +88,7 @@ for (const d of sq) {
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
 
-// ─── Scenario 3: a wasteland scene with a fantasy-named relic ──────────
+// ─── Scenario 4: a wasteland scene with a fantasy-named relic ──────────
 
 const waste = postapoc.withSeed("the-ironwake");
 console.log("\nWasteland scene (post-apocalyptic + fantasy):");
@@ -84,10 +97,10 @@ console.log(`  Bunker:     ${waste.vault().name}`);
 console.log(`  Loot:       ${waste.gear()}  ("${fantasyFullName.generate(ctx.child("relic")).surname}" brand)`);
 console.log(`  Encounter:  ${waste.encounter()}`);
 
-// ─── Scenario 4: a gaslamp inventor's filing ─────────────────────────────
+// ─── Scenario 5: a gaslamp inventor's filing ─────────────────────────────
 
 const brass = steampunk.withSeed("brass-cross-genre");
-console.log("Gaslamp patent filing:");
+console.log("\nGaslamp patent filing:");
 console.log(`  Inventor: ${brass.person().form}`);
 console.log(`  Workshop: ${brass.district()} · ${brass.street()}`);
 console.log(`  Patent:   ${brass.patent()}`);

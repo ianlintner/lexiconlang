@@ -1,7 +1,9 @@
 # `@lexiconlang/bases`
 
 Real-language-inspired base descriptors for LexiconLang. Six B1 bases:
-**Norse, Celtic, Latin, Greek, Japanese, Arabic**.
+**Norse, Celtic, Latin, Greek, Japanese, Arabic**, plus ten B2 bases:
+**Slavic, Old English, Persian, Sanskrit, Mandarin, Nahuatl, Yoruba,
+Polynesian, Ancient Egyptian, Finnish**.
 
 Bases are *not* genres and not complete languages. Each is a compact bundle of
 phonotactics, romanization, naming structure and a few literal placeholders —
@@ -40,6 +42,23 @@ console.log(renderOrthography("thorn", norse.orthography)); // "þorn"
 
 // An F2 pack manifest that declares a `bases-v1` base and its root culture.
 const manifest = basePack(norse);
+```
+
+### B2 sample: Mandarin pinyin with tone marks and ASCII fallback
+
+```ts
+import { mandarin } from "@lexiconlang/bases/mandarin";
+import { cultureFor, renderOrthography } from "@lexiconlang/bases";
+import { createContext } from "@lexiconlang/core";
+import { coreMeanings, generateStructuredName } from "@lexiconlang/language";
+
+const culture = cultureFor(mandarin, [coreMeanings]);
+const name = generateStructuredName(culture, { structure: "mandarin.family-first" }, createContext({ seed: "demo" }));
+console.log(name.form); // family name first, then given name
+
+// Tone marks are opt-in rendering; ASCII pinyin is the fallback.
+console.log(renderOrthography("la", mandarin.orthography)); // "lā"
+console.log(renderOrthography("lā", mandarin.romanization)); // "la"
 ```
 
 ### Sample names
@@ -85,7 +104,7 @@ root culture to select a different base.
 
 | symbol | description |
 | --- | --- |
-| `BASE_SLUGS` | readonly tuple of the six slugs in spec order |
+| `BASE_SLUGS` | readonly tuple of all 16 slugs in spec order |
 | `cultureFor(base, meaningPacks?)` | frozen F1 `Culture` from a base descriptor |
 | `basePack(base)` | F2 pack manifest declaring the base and its root culture |
 | `renderOrthography(form, orthography)` | pure, deterministic, longest-match token mapping |
@@ -93,6 +112,8 @@ root culture to select a different base.
 | `literal`, `pick` | template helpers used by the inline descriptors |
 
 Per-base subpaths (`./norse`, `./celtic`, `./latin`, `./greek`, `./japanese`,
-`./arabic`) export `rawData`, `culture`, `pack` and the default descriptor.
+`./arabic`, `./slavic`, `./old-english`, `./persian`, `./sanskrit`, `./mandarin`,
+`./nahuatl`, `./yoruba`, `./polynesian`, `./ancient-egyptian`, `./finnish`)
+export `rawData`, `culture`, `pack` and the default descriptor.
 
 See [the docs-site page](../../docs-site/packages/bases.md) for the guided tour.
