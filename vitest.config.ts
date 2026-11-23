@@ -15,6 +15,7 @@ export default defineConfig({
       "@lexiconlang/fantasy": new URL("./packages/fantasy/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/scifi": new URL("./packages/scifi/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/modern": new URL("./packages/modern/src/index.ts", import.meta.url).pathname,
+      "@lexiconlang/cyberpunk": new URL("./packages/cyberpunk/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/packs/node": new URL("./packages/packs/src/node.ts", import.meta.url).pathname,
       "@lexiconlang/packs": new URL("./packages/packs/src/index.ts", import.meta.url).pathname,
     },

@@ -29,7 +29,9 @@
     "@lexiconlang/fantasy": "workspace:*",
     "@lexiconlang/scifi": "workspace:*",
     "@lexiconlang/modern": "workspace:*",
+    "@lexiconlang/cyberpunk": "workspace:*",
     "@lexiconlang/bases": "workspace:*",
+    "@lexiconlang/historical-medieval": "workspace:*",
     "@lexiconlang/steampunk": "workspace:*",
     "@lexiconlang/mythology": "workspace:*"
   },
