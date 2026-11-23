@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { cyberpunk } from "@lexiconlang/cyberpunk";
+import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
@@ -105,6 +106,18 @@ console.log(`  employer: ${corp.form} — "${corp.translation}"`);
 const ware = cp.cyberware();
 console.log(`  implant: ${ware.name} — ${ware.effect} [${ware.tier}]`);
 console.log(`  job: ${cp.fixerJob().text}`);
+
+// ─── Scenario 3: a medieval fair in a modern city ────────────────────────
+// The declarative medieval pack composes with other genres like any generator.
+
+const hm = historicalMedieval.withSeed("the-ironwake");
+console.log("Medieval fair in a modern city:");
+for (let i = 0; i < 3; i++) {
+  const guild = historicalMedieval.generators.guildName.generate(ctx.child(`guild:${i}`));
+  const listing = hm.listing();
+  console.log(`  ${guild} at ${modern.generators.cityName.generate(ctx.child(`city:${i}`))}: ${listing.good} (${listing.price} ${listing.unit})`);
+}
+console.log("  heraldry:", hm.arms().blazon);
 
 // ─── Scenario 4: a gaslamp inventor's filing ─────────────────────────────
 

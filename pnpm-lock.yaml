@@ -53,6 +53,9 @@ importers:
       '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../packages/grammar
+      '@lexiconlang/historical-medieval':
+        specifier: workspace:*
+        version: link:../packages/historical-medieval
       '@lexiconlang/language':
         specifier: workspace:*
         version: link:../packages/language
@@ -160,6 +163,18 @@ importers:
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
+
+  packages/historical-medieval:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/language:
     dependencies:
