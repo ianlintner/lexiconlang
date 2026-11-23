@@ -34,6 +34,7 @@
     "@lexiconlang/bases": "workspace:*",
     "@lexiconlang/historical-medieval": "workspace:*",
     "@lexiconlang/steampunk": "workspace:*",
+    "@lexiconlang/wuxia": "workspace:*",
     "@lexiconlang/mythology": "workspace:*"
   },
   "devDependencies": {
