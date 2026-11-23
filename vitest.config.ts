@@ -21,6 +21,7 @@ export default defineConfig({
       "@lexiconlang/packs": new URL("./packages/packs/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/steampunk": new URL("./packages/steampunk/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/wuxia": new URL("./packages/wuxia/src/index.ts", import.meta.url).pathname,
+      "@lexiconlang/supers": new URL("./packages/supers/src/index.ts", import.meta.url).pathname,
     },
   },
 });

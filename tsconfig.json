@@ -17,6 +17,7 @@
     { "path": "./packages/cyberpunk" },
     { "path": "./packages/cli" },
     { "path": "./packages/steampunk" },
-    { "path": "./packages/wuxia" }
+    { "path": "./packages/wuxia" },
+    { "path": "./packages/supers" }
   ]
 }
