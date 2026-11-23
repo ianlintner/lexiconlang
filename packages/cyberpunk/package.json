@@ -1,0 +1,35 @@
+{
+  "name": "@lexiconlang/cyberpunk",
+  "version": "0.1.0",
+  "description": "Cyberpunk genre content pack for lexiconlang: megacorps, gangs, handles, cyberware, districts, street drugs, fixer jobs, AI and product names",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./data/*": "./data/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/language": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

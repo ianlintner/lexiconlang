@@ -10,6 +10,9 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { postapoc } from "@lexiconlang/postapoc";
+import { cyberpunk } from "@lexiconlang/cyberpunk";
+import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
 import { wuxia } from "@lexiconlang/wuxia";
 
@@ -88,10 +91,50 @@ for (const d of sq) {
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
 
-// ─── Scenario 3: a gaslamp inventor's filing ─────────────────────────────
+// ─── Scenario 4: a wasteland scene with a fantasy-named relic ──────────
+
+const waste = postapoc.withSeed("the-ironwake");
+console.log("\nWasteland scene (post-apocalyptic + fantasy):");
+console.log(`  Settlement: ${waste.settlement().form}  · raiders: ${waste.raiders().form}`);
+console.log(`  Bunker:     ${waste.vault().name}`);
+console.log(`  Loot:       ${waste.gear()}  ("${fantasyFullName.generate(ctx.child("relic")).surname}" brand)`);
+console.log(`  Encounter:  ${waste.encounter()}`);
+
+// ─── Scenario 5: a gaslamp inventor's filing ─────────────────────────────
+// ─── Scenario 3: a cyberpunk crew with fantasy-flavored cover names ──────
+//
+// The cyberpunk pack is declarative JSON. `withSeed` hands back typed
+// helpers; names carry an in-world form plus a plain-language translation.
+
+const cp = cyberpunk.withSeed("neon-district-9");
+console.log("\nCyberpunk crew (cyberpunk pack + fantasy cover names):");
+for (let i = 0; i < 4; i++) {
+  const handle = cp.handle();
+  const cover = fantasyFullName.generate(ctx.child(`cover:${i}`)).surname;
+  console.log(`  ${handle.form.padEnd(12)} (${handle.translation}) · cover: ${cover}`);
+}
+const corp = cp.faction.megacorp();
+console.log(`  employer: ${corp.form} — "${corp.translation}"`);
+const ware = cp.cyberware();
+console.log(`  implant: ${ware.name} — ${ware.effect} [${ware.tier}]`);
+console.log(`  job: ${cp.fixerJob().text}`);
+
+// ─── Scenario 3: a medieval fair in a modern city ────────────────────────
+// The declarative medieval pack composes with other genres like any generator.
+
+const hm = historicalMedieval.withSeed("the-ironwake");
+console.log("Medieval fair in a modern city:");
+for (let i = 0; i < 3; i++) {
+  const guild = historicalMedieval.generators.guildName.generate(ctx.child(`guild:${i}`));
+  const listing = hm.listing();
+  console.log(`  ${guild} at ${modern.generators.cityName.generate(ctx.child(`city:${i}`))}: ${listing.good} (${listing.price} ${listing.unit})`);
+}
+console.log("  heraldry:", hm.arms().blazon);
+
+// ─── Scenario 4: a gaslamp inventor's filing ─────────────────────────────
 
 const brass = steampunk.withSeed("brass-cross-genre");
-console.log("Gaslamp patent filing:");
+console.log("\nGaslamp patent filing:");
 console.log(`  Inventor: ${brass.person().form}`);
 console.log(`  Workshop: ${brass.district()} · ${brass.street()}`);
 console.log(`  Patent:   ${brass.patent()}`);

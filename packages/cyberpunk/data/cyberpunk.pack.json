@@ -1,0 +1,7652 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.cyberpunk",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original cyberpunk content: megacorps, gangs, runner handles, cyberware, districts, street drugs, fixer jobs, AI names and products, in corp-speak and street-slang cultures",
+  "provenance": [
+    {
+      "id": "original-lexiconlang",
+      "source": "original:lexiconlang",
+      "title": "Original cyberpunk genre data",
+      "creator": "lexiconlang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original word lists, grammars and tables authored for lexiconlang; no third-party corpora, names or setting text used.",
+      "modifications": "None",
+      "files": [
+        "cyberpunk.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.cyberpunk/culture/corp-speak",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "k",
+            "v",
+            "n",
+            "s",
+            "t"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            1
+          ]
+        ]
+      },
+      "meaningPacks": [],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tavian",
+              "translation": "steadfast"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marlowe",
+              "translation": "driftwood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elias",
+              "translation": "my god is"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Soren",
+              "translation": "stern"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Delphine",
+              "translation": "dolphin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corin",
+              "translation": "spear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isolde",
+              "translation": "fair one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dorian",
+              "translation": "golden gift"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Katya",
+              "translation": "pure"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lucan",
+              "translation": "light bringer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Odalys",
+              "translation": "wealthy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Renzo",
+              "translation": "laurel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sabine",
+              "translation": "of the Sabines"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Teodor",
+              "translation": "gift of god"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vesper",
+              "translation": "evening star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Anselm",
+              "translation": "divine helmet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Calla",
+              "translation": "beautiful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Evander",
+              "translation": "good man"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ilsa",
+              "translation": "oath"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jorund",
+              "translation": "young warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leopold",
+              "translation": "bold people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mireille",
+              "translation": "to admire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nikolai",
+              "translation": "victory of people"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Perrin",
+              "translation": "stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quentin",
+              "translation": "fifth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rosalind",
+              "translation": "gentle horse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silas",
+              "translation": "of the forest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thessaly",
+              "translation": "from Thessaly"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulric",
+              "translation": "wolf power"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wilhelmina",
+              "translation": "resolute protector"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hartwell",
+              "translation": "stag spring"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Okoro",
+              "translation": "first son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Valcourt",
+              "translation": "valley court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashgrove",
+              "translation": "ash grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nakamura-Reyes",
+              "translation": "central village and king"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lindqvist",
+              "translation": "linden twig"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Abernathy",
+              "translation": "river mouth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Castellan",
+              "translation": "keeper of the keep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drummond",
+              "translation": "ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Everhart",
+              "translation": "ever heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fairweather",
+              "translation": "fair weather"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gallagher",
+              "translation": "foreign helper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halloran",
+              "translation": "stranger from afar"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ibarra-Cole",
+              "translation": "valley and coal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jaspers",
+              "translation": "treasurer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kessler",
+              "translation": "kettle maker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lockhart",
+              "translation": "locked heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Montrose",
+              "translation": "rose mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Northcott",
+              "translation": "north cottage"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oyelaran",
+              "translation": "wealth rises"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pemberton",
+              "translation": "barley farm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quillfeather",
+              "translation": "writing feather"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rothschild-Ames",
+              "translation": "red shield and friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sinclair",
+              "translation": "holy light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorne",
+              "translation": "thorn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underhill",
+              "translation": "beneath hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vandermeer",
+              "translation": "of the lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Whitlock",
+              "translation": "white lock"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yamashiro",
+              "translation": "mountain castle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zielinski",
+              "translation": "green one"
+            },
+            "weight": 1
+          }
+        ],
+        "corp-stem": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Veridian",
+              "translation": "ever-green"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Axiom",
+              "translation": "self-evident truth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nexora",
+              "translation": "nexus of tomorrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kalyx",
+              "translation": "sealed bud"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Omnivane",
+              "translation": "all-pointing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Helixor",
+              "translation": "spiral maker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Solvane",
+              "translation": "sun vane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quorix",
+              "translation": "quorum engine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aurelis",
+              "translation": "golden reach"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zentrix",
+              "translation": "zenith core"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lumora",
+              "translation": "light measure"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vantor",
+              "translation": "vantage holder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cerelux",
+              "translation": "bright mind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ardent",
+              "translation": "burning-keen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meridex",
+              "translation": "noon index"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stratos",
+              "translation": "layered sky"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Novaris",
+              "translation": "new star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pylon",
+              "translation": "gate tower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corvane",
+              "translation": "crow vane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ostrel",
+              "translation": "bright shell"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fenwick-Orr",
+              "translation": "marsh and shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halcyra",
+              "translation": "calm season"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Triplex",
+              "translation": "threefold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Monarch-Lyle",
+              "translation": "crown and lyre"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ibex",
+              "translation": "high climber"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sable-Ward",
+              "translation": "dark guardian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tessaract",
+              "translation": "four-sided frame"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ordina",
+              "translation": "rank and order"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Praxon",
+              "translation": "doing unit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eidolon",
+              "translation": "made image"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bastion-Ryu",
+              "translation": "keep and dragon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cobalt-Reeve",
+              "translation": "blue steward"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marrow",
+              "translation": "inner core"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vireo",
+              "translation": "small green bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lattice",
+              "translation": "woven grid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Obsidia",
+              "translation": "glass of fire"
+            },
+            "weight": 1
+          }
+        ],
+        "corp-suffix": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dynamics",
+              "translation": "engines of motion"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Holdings",
+              "translation": "things held"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Systems",
+              "translation": "ordered parts"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Group",
+              "translation": "gathering"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Industries",
+              "translation": "works"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Consolidated",
+              "translation": "bound together"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ventures",
+              "translation": "risks taken"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Logistics",
+              "translation": "supply reckoning"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Biologics",
+              "translation": "life craft"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Heavy Works",
+              "translation": "large works"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Capital",
+              "translation": "the head count"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Syndicate",
+              "translation": "joint council"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Partners",
+              "translation": "those who share"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Global",
+              "translation": "whole-world"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mutual",
+              "translation": "shared stake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Integrated",
+              "translation": "made whole"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Applied Sciences",
+              "translation": "used knowledge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Futures",
+              "translation": "coming days"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Combine",
+              "translation": "joined force"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dataworks",
+              "translation": "number works"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aerospace",
+              "translation": "air and void"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mobility",
+              "translation": "capacity to move"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Materials",
+              "translation": "stuff of making"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Assurance",
+              "translation": "promise of safety"
+            },
+            "weight": 1
+          }
+        ],
+        "product-stem": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lumina",
+              "translation": "light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aegis",
+              "translation": "shield"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pulse",
+              "translation": "beat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halo",
+              "translation": "ring of light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ember",
+              "translation": "glowing coal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vector",
+              "translation": "direction"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zephyr",
+              "translation": "west wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirage",
+              "translation": "false vision"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cascade",
+              "translation": "falling water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Onyx",
+              "translation": "black gem"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Solstice",
+              "translation": "sun standstill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Echo",
+              "translation": "returned sound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Prism",
+              "translation": "splitter of light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Helix",
+              "translation": "spiral"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Apex",
+              "translation": "summit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nimbus",
+              "translation": "rain cloud"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tether",
+              "translation": "binding line"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cipher",
+              "translation": "hidden code"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Atlas",
+              "translation": "world bearer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Surge",
+              "translation": "sudden rise"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sentinel",
+              "translation": "watcher"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kinetic",
+              "translation": "of motion"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Radiant",
+              "translation": "shining"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vertex",
+              "translation": "highest point"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lotus",
+              "translation": "calm flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quartz",
+              "translation": "clear crystal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Phantom",
+              "translation": "ghost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zenith",
+              "translation": "peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mantle",
+              "translation": "cloak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ripple",
+              "translation": "small wave"
+            },
+            "weight": 1
+          }
+        ],
+        "product-model": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "One",
+              "translation": "first"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pro",
+              "translation": "professional"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mk II",
+              "translation": "second mark"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Prime",
+              "translation": "chief"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Edge",
+              "translation": "cutting limit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lite",
+              "translation": "slim"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Max",
+              "translation": "greatest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ultra",
+              "translation": "beyond"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "S9",
+              "translation": "ninth small series"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neo",
+              "translation": "new"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Core",
+              "translation": "center"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Plus",
+              "translation": "more"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elite",
+              "translation": "chosen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Air",
+              "translation": "light as air"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "X",
+              "translation": "unknown"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Series 7",
+              "translation": "seventh line"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Studio",
+              "translation": "workshop grade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Titan",
+              "translation": "giant"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nano",
+              "translation": "tiny"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Omega",
+              "translation": "final"
+            },
+            "weight": 1
+          }
+        ],
+        "arcology-stem": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meridian",
+              "translation": "noon line"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinder",
+              "translation": "burnt ash"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Glasshaven",
+              "translation": "glass harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironvale",
+              "translation": "iron valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neon-Ridge",
+              "translation": "lit ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sunken Orchard",
+              "translation": "drowned grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lowtide",
+              "translation": "ebb water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gantry",
+              "translation": "crane frame"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halogen",
+              "translation": "bright gas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirrorhall",
+              "translation": "hall of mirrors"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tallow",
+              "translation": "rendered fat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vantage",
+              "translation": "good view"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sodium",
+              "translation": "yellow glow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Redwire",
+              "translation": "red cable"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Copperline",
+              "translation": "copper track"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollowcore",
+              "translation": "empty heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brightwater",
+              "translation": "clear water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stackhouse",
+              "translation": "piled house"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greymarket",
+              "translation": "gray trade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Siltgate",
+              "translation": "mud gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ember Row",
+              "translation": "coal row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halfmoon",
+              "translation": "half moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Paperlantern",
+              "translation": "paper light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quicksilver",
+              "translation": "mercury"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bluebell Deck",
+              "translation": "flower platform"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tinroof",
+              "translation": "metal roof"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Overpass",
+              "translation": "road above"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drydock",
+              "translation": "ship cradle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Static",
+              "translation": "noise"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lantern Mile",
+              "translation": "lit mile"
+            },
+            "weight": 1
+          }
+        ],
+        "arcology-suffix": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Arcology",
+              "translation": "self-contained tower city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Spire",
+              "translation": "tall needle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tier",
+              "translation": "stacked level"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stack",
+              "translation": "piled floors"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ward",
+              "translation": "managed district"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Terrace",
+              "translation": "raised step"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Complex",
+              "translation": "joined structure"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Annex",
+              "translation": "attached part"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Plaza",
+              "translation": "open square"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Heights",
+              "translation": "high ground"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Commons",
+              "translation": "shared ground"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Enclave",
+              "translation": "walled pocket"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Undercroft",
+              "translation": "lower vault"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Verge",
+              "translation": "edge strip"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Concourse",
+              "translation": "crossing hall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Habitat",
+              "translation": "living quarters"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mesa",
+              "translation": "flat top"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reach",
+              "translation": "far stretch"
+            },
+            "weight": 1
+          }
+        ],
+        "ai-stem": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oracle",
+              "translation": "speaker of answers"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warden",
+              "translation": "keeper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moirai",
+              "translation": "fate sisters"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tally",
+              "translation": "counter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quill",
+              "translation": "writing tool"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meridian",
+              "translation": "noon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sibyl",
+              "translation": "prophetess"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Anvil",
+              "translation": "forge block"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lullaby",
+              "translation": "sleep song"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Concord",
+              "translation": "agreement"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollis",
+              "translation": "holly grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mnemo",
+              "translation": "memory"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aster",
+              "translation": "star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vesta",
+              "translation": "hearth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Argent",
+              "translation": "silver"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cantor",
+              "translation": "singer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ledger",
+              "translation": "account book"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thrum",
+              "translation": "low hum"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reverie",
+              "translation": "daydream"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Seraph",
+              "translation": "burning one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cobweb",
+              "translation": "spun trap"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Murmur",
+              "translation": "soft sound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kestrel",
+              "translation": "small hawk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tamsin",
+              "translation": "twin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Palimpsest",
+              "translation": "rewritten page"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hearth",
+              "translation": "home fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marrow",
+              "translation": "inner core"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Solace",
+              "translation": "comfort"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gambit",
+              "translation": "opening risk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Parable",
+              "translation": "teaching story"
+            },
+            "weight": 1
+          }
+        ],
+        "ai-suffix": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-7",
+              "translation": "seventh instance"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-Prime",
+              "translation": "first instance"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mind",
+              "translation": "thinker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "OS",
+              "translation": "operating system"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-3",
+              "translation": "third instance"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Core",
+              "translation": "center"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-Lattice",
+              "translation": "woven mesh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Engine",
+              "translation": "driver"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-Nine",
+              "translation": "ninth instance"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Node",
+              "translation": "junction"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Daemon",
+              "translation": "background spirit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-Alpha",
+              "translation": "first letter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cluster",
+              "translation": "group of nodes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Intelligence",
+              "translation": "capacity to know"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "-Zero",
+              "translation": "origin instance"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "person": {
+          "id": "person",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "family",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ],
+          "separator": " ",
+          "translationSeparator": " of "
+        },
+        "person-formal": {
+          "id": "person-formal",
+          "slots": [
+            {
+              "key": "surname",
+              "role": "family",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              },
+              "suffix": ","
+            },
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "corp": {
+          "id": "corp",
+          "slots": [
+            {
+              "key": "stem",
+              "role": "brand",
+              "source": {
+                "type": "kind",
+                "kind": "corp-stem"
+              }
+            },
+            {
+              "key": "suffix",
+              "role": "form",
+              "source": {
+                "type": "kind",
+                "kind": "corp-suffix"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "product": {
+          "id": "product",
+          "slots": [
+            {
+              "key": "stem",
+              "role": "line",
+              "source": {
+                "type": "kind",
+                "kind": "product-stem"
+              }
+            },
+            {
+              "key": "model",
+              "role": "model",
+              "source": {
+                "type": "kind",
+                "kind": "product-model"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "arcology": {
+          "id": "arcology",
+          "slots": [
+            {
+              "key": "stem",
+              "role": "place",
+              "source": {
+                "type": "kind",
+                "kind": "arcology-stem"
+              }
+            },
+            {
+              "key": "suffix",
+              "role": "form",
+              "source": {
+                "type": "kind",
+                "kind": "arcology-suffix"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "ai": {
+          "id": "ai",
+          "slots": [
+            {
+              "key": "stem",
+              "role": "name",
+              "source": {
+                "type": "kind",
+                "kind": "ai-stem"
+              }
+            },
+            {
+              "key": "suffix",
+              "role": "instance",
+              "source": {
+                "type": "kind",
+                "kind": "ai-suffix"
+              }
+            }
+          ],
+          "separator": "",
+          "translationSeparator": " "
+        }
+      },
+      "capitalize": "none"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/culture/street-slang",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "k",
+            "v",
+            "n",
+            "s",
+            "t"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            1
+          ]
+        ]
+      },
+      "meaningPacks": [],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mako",
+              "translation": "shark"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dez",
+              "translation": "desert"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kit",
+              "translation": "fox kit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rook",
+              "translation": "crow bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Juno",
+              "translation": "young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pike",
+              "translation": "spear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nix",
+              "translation": "nothing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tamsin",
+              "translation": "twin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lark",
+              "translation": "songbird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rafe",
+              "translation": "wolf counsel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vesta",
+              "translation": "hearth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cass",
+              "translation": "prophet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jinx",
+              "translation": "bad luck"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Odie",
+              "translation": "wealth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sparrow",
+              "translation": "small bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blaze",
+              "translation": "flame"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Echo",
+              "translation": "answer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollis",
+              "translation": "holly grove"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marlo",
+              "translation": "driftwood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Teddy",
+              "translation": "gift"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ziggy",
+              "translation": "zigzag"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Roxy",
+              "translation": "dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dax",
+              "translation": "leader"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pru",
+              "translation": "careful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fenn",
+              "translation": "marsh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gus",
+              "translation": "staff"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ines",
+              "translation": "pure"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Colt",
+              "translation": "young horse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wren",
+              "translation": "small bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lux",
+              "translation": "light"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Okafor",
+              "translation": "born on market day"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Delgado",
+              "translation": "slender"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mbeki",
+              "translation": "small bush"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ito",
+              "translation": "thread"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Park",
+              "translation": "garden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reyes",
+              "translation": "kings"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Novak",
+              "translation": "new man"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bianchi",
+              "translation": "white"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Haddad",
+              "translation": "smith"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kowalczyk",
+              "translation": "little smith"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mahlangu",
+              "translation": "from the fields"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sato",
+              "translation": "helper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ferreira",
+              "translation": "ironworker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Volkov",
+              "translation": "wolf's"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Obi",
+              "translation": "heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nguyen",
+              "translation": "musical instrument"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chavez",
+              "translation": "keys"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Laurent",
+              "translation": "laurel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Santos",
+              "translation": "saints"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brandt",
+              "translation": "fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vega",
+              "translation": "meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kang",
+              "translation": "healthy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duarte",
+              "translation": "rich guard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Abara",
+              "translation": "they are born"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Petrov",
+              "translation": "rock's"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moreau",
+              "translation": "dark"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Salazar",
+              "translation": "old hall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tanaka-Wu",
+              "translation": "rice field and martial"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ibrahim",
+              "translation": "father of many"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kruger",
+              "translation": "pitcher"
+            },
+            "weight": 1
+          }
+        ],
+        "handle-a": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Glass",
+              "translation": "glass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wire",
+              "translation": "wire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rust",
+              "translation": "rust"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Static",
+              "translation": "static"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chrome",
+              "translation": "chrome"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ghost",
+              "translation": "ghost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skrap",
+              "translation": "scrap"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neon",
+              "translation": "neon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hex",
+              "translation": "curse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jack",
+              "translation": "plug"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sleet",
+              "translation": "cold rain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Slag",
+              "translation": "waste metal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bit",
+              "translation": "small piece"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Null",
+              "translation": "nothing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fuse",
+              "translation": "breaker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Spike",
+              "translation": "sharp point"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vapor",
+              "translation": "haze"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Burn",
+              "translation": "scorch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Echo",
+              "translation": "returned sound"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grit",
+              "translation": "dirt"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tin",
+              "translation": "cheap metal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zero",
+              "translation": "nil"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dusk",
+              "translation": "late light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Soot",
+              "translation": "smoke dust"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Splice",
+              "translation": "join"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Patch",
+              "translation": "repair"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flicker",
+              "translation": "unsteady light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crash",
+              "translation": "collapse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Siren",
+              "translation": "alarm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mold",
+              "translation": "growth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cold",
+              "translation": "cold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pixel",
+              "translation": "dot"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lock",
+              "translation": "bar"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Razor",
+              "translation": "blade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ash",
+              "translation": "cinder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stray",
+              "translation": "lost"
+            },
+            "weight": 1
+          }
+        ],
+        "handle-b": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "wire",
+              "translation": "cable"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "jaw",
+              "translation": "jaw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "fang",
+              "translation": "tooth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "rat",
+              "translation": "rat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "saint",
+              "translation": "holy one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "ghost",
+              "translation": "spirit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "crow",
+              "translation": "crow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "spark",
+              "translation": "flash"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "hand",
+              "translation": "hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "mouth",
+              "translation": "speaker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "eye",
+              "translation": "watcher"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "finger",
+              "translation": "digit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "stitch",
+              "translation": "seam"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "bite",
+              "translation": "snap"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "drift",
+              "translation": "slow move"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "runner",
+              "translation": "courier"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "sweep",
+              "translation": "cleaning"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "knot",
+              "translation": "tangle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "cat",
+              "translation": "cat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "worm",
+              "translation": "worm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "skin",
+              "translation": "hide"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "blade",
+              "translation": "knife"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "tooth",
+              "translation": "fang"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "pulse",
+              "translation": "beat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "thread",
+              "translation": "strand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "dog",
+              "translation": "dog"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "angel",
+              "translation": "messenger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "engine",
+              "translation": "motor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "wasp",
+              "translation": "stinger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "moth",
+              "translation": "night flier"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "lung",
+              "translation": "breather"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "gate",
+              "translation": "door"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "queen",
+              "translation": "ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "kid",
+              "translation": "youth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "bone",
+              "translation": "frame"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "fox",
+              "translation": "fox"
+            },
+            "weight": 1
+          }
+        ],
+        "gang-a": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rust",
+              "translation": "rust"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neon",
+              "translation": "neon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Glass",
+              "translation": "glass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chrome",
+              "translation": "chrome"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Black",
+              "translation": "black"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollow",
+              "translation": "empty"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Broken",
+              "translation": "snapped"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Burning",
+              "translation": "on fire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silent",
+              "translation": "quiet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sleeper",
+              "translation": "dozing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Red",
+              "translation": "red"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pale",
+              "translation": "washed out"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stitched",
+              "translation": "sewn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drowned",
+              "translation": "underwater"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wire",
+              "translation": "wire"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Savage",
+              "translation": "wild"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Midnight",
+              "translation": "late dark"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gutter",
+              "translation": "drain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Static",
+              "translation": "noise"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lucky",
+              "translation": "fortunate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iron",
+              "translation": "iron"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Velvet",
+              "translation": "soft cloth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinder",
+              "translation": "ember"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Feral",
+              "translation": "gone wild"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sunless",
+              "translation": "lightless"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Paper",
+              "translation": "paper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Salt",
+              "translation": "salt"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorn",
+              "translation": "barb"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Copper",
+              "translation": "copper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shattered",
+              "translation": "broken apart"
+            },
+            "weight": 1
+          }
+        ],
+        "gang-b": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Saints",
+              "translation": "holy ones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kings",
+              "translation": "rulers"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jackals",
+              "translation": "scavenger dogs"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wolves",
+              "translation": "wolves"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crows",
+              "translation": "crows"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Knives",
+              "translation": "blades"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hounds",
+              "translation": "dogs"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mutes",
+              "translation": "speechless ones"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reapers",
+              "translation": "harvesters"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sparks",
+              "translation": "flashes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Choir",
+              "translation": "singers"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Syndicate",
+              "translation": "crew"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dolls",
+              "translation": "puppets"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rats",
+              "translation": "rats"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vipers",
+              "translation": "snakes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orphans",
+              "translation": "parentless"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hands",
+              "translation": "hands"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gears",
+              "translation": "cogs"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Coil",
+              "translation": "loop"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bishops",
+              "translation": "church heads"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ravens",
+              "translation": "large crows"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Teeth",
+              "translation": "fangs"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ghouls",
+              "translation": "corpse eaters"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pilgrims",
+              "translation": "travelers"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Clowns",
+              "translation": "jesters"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tide",
+              "translation": "ebb and flow"
+            },
+            "weight": 1
+          }
+        ],
+        "district-a": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gutter",
+              "translation": "drain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rustbelt",
+              "translation": "rusted band"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lowtown",
+              "translation": "low town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skidrow",
+              "translation": "ruined street"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sump",
+              "translation": "waste pit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Scrapyard",
+              "translation": "wreck lot"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Noodle",
+              "translation": "noodle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Deadlight",
+              "translation": "dead light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Smog",
+              "translation": "smoke fog"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bunk",
+              "translation": "bed shelf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cutthroat",
+              "translation": "killer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chop",
+              "translation": "cut"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Slick",
+              "translation": "oily"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Backwash",
+              "translation": "reflux"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cargo",
+              "translation": "freight"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pawn",
+              "translation": "loan shop"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dimlit",
+              "translation": "poor light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gridlock",
+              "translation": "jam"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flophouse",
+              "translation": "cheap bed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ratrun",
+              "translation": "rat route"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shanty",
+              "translation": "shack"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wirewalk",
+              "translation": "cable path"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tarpit",
+              "translation": "sticky pit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kilo",
+              "translation": "thousand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Midnight",
+              "translation": "late dark"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pinwheel",
+              "translation": "spinner"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sleazy",
+              "translation": "shabby"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brine",
+              "translation": "salt water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dockside",
+              "translation": "by the pier"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fumes",
+              "translation": "vapors"
+            },
+            "weight": 1
+          }
+        ],
+        "district-b": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Row",
+              "translation": "line"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Strip",
+              "translation": "long way"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Alley",
+              "translation": "narrow way"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Block",
+              "translation": "city block"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flats",
+              "translation": "apartments"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yards",
+              "translation": "lots"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stacks",
+              "translation": "piles"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crawl",
+              "translation": "slow trip"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pits",
+              "translation": "holes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Market",
+              "translation": "trading ground"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollow",
+              "translation": "depression"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drag",
+              "translation": "main run"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Steps",
+              "translation": "stairs"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Warren",
+              "translation": "burrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underpass",
+              "translation": "road under"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lanes",
+              "translation": "paths"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarter",
+              "translation": "district"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Heap",
+              "translation": "pile"
+            },
+            "weight": 1
+          }
+        ],
+        "drug-a": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zip",
+              "translation": "quick"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Glow",
+              "translation": "shine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sleet",
+              "translation": "cold rain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Murk",
+              "translation": "gloom"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halo",
+              "translation": "ring"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drift",
+              "translation": "float"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rush",
+              "translation": "dash"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vex",
+              "translation": "annoy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lull",
+              "translation": "calm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nova",
+              "translation": "new star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sweet",
+              "translation": "sugared"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Black",
+              "translation": "black"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pale",
+              "translation": "pale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gutter",
+              "translation": "drain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kind",
+              "translation": "gentle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Slow",
+              "translation": "slow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hush",
+              "translation": "quiet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Snap",
+              "translation": "crack"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Velvet",
+              "translation": "soft"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirror",
+              "translation": "reflector"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brine",
+              "translation": "salt"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Coil",
+              "translation": "loop"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tin",
+              "translation": "cheap metal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinder",
+              "translation": "ember"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mellow",
+              "translation": "soft"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorn",
+              "translation": "barb"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wick",
+              "translation": "candle thread"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ruby",
+              "translation": "red gem"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cold",
+              "translation": "cold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fizz",
+              "translation": "bubble"
+            },
+            "weight": 1
+          }
+        ],
+        "drug-b": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dust",
+              "translation": "powder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tabs",
+              "translation": "pills"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Smoke",
+              "translation": "fumes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Juice",
+              "translation": "liquid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drops",
+              "translation": "drips"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wire",
+              "translation": "line"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sticks",
+              "translation": "sticks"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mist",
+              "translation": "spray"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gel",
+              "translation": "goo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Milk",
+              "translation": "white liquid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shine",
+              "translation": "gloss"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Salt",
+              "translation": "crystals"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Candy",
+              "translation": "sweets"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fizz",
+              "translation": "bubbles"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Honey",
+              "translation": "sweet syrup"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ice",
+              "translation": "crystal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lace",
+              "translation": "trim"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Patch",
+              "translation": "skin pad"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bloom",
+              "translation": "flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ash",
+              "translation": "cinder"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "person": {
+          "id": "person",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "handle",
+              "role": "epithet",
+              "source": {
+                "type": "kind",
+                "kind": "handle-a"
+              },
+              "prefix": "\"",
+              "suffix": "\""
+            },
+            {
+              "key": "surname",
+              "role": "family",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "handle": {
+          "id": "handle",
+          "slots": [
+            {
+              "key": "a",
+              "role": "first",
+              "source": {
+                "type": "kind",
+                "kind": "handle-a"
+              }
+            },
+            {
+              "key": "b",
+              "role": "second",
+              "source": {
+                "type": "kind",
+                "kind": "handle-b"
+              }
+            }
+          ],
+          "separator": "",
+          "translationSeparator": " "
+        },
+        "gang": {
+          "id": "gang",
+          "slots": [
+            {
+              "key": "a",
+              "role": "adjective",
+              "source": {
+                "type": "kind",
+                "kind": "gang-a"
+              }
+            },
+            {
+              "key": "b",
+              "role": "noun",
+              "source": {
+                "type": "kind",
+                "kind": "gang-b"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "district": {
+          "id": "district",
+          "slots": [
+            {
+              "key": "a",
+              "role": "place",
+              "source": {
+                "type": "kind",
+                "kind": "district-a"
+              }
+            },
+            {
+              "key": "b",
+              "role": "form",
+              "source": {
+                "type": "kind",
+                "kind": "district-b"
+              }
+            }
+          ],
+          "separator": " "
+        },
+        "drug": {
+          "id": "drug",
+          "slots": [
+            {
+              "key": "a",
+              "role": "flavor",
+              "source": {
+                "type": "kind",
+                "kind": "drug-a"
+              }
+            },
+            {
+              "key": "b",
+              "role": "form",
+              "source": {
+                "type": "kind",
+                "kind": "drug-b"
+              }
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "capitalize": "none"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.cyberpunk/grammar/cyberware",
+      "description": "Cyberware names and effects per body slot",
+      "tags": [
+        "cyberpunk"
+      ],
+      "start": "eye-name",
+      "rules": [
+        {
+          "key": "brand",
+          "choices": [
+            {
+              "value": "Kestrel",
+              "weight": 1
+            },
+            {
+              "value": "Vanta",
+              "weight": 1
+            },
+            {
+              "value": "Orlo",
+              "weight": 1
+            },
+            {
+              "value": "Brightline",
+              "weight": 1
+            },
+            {
+              "value": "Mako",
+              "weight": 1
+            },
+            {
+              "value": "Halvorsen",
+              "weight": 1
+            },
+            {
+              "value": "Tessel",
+              "weight": 1
+            },
+            {
+              "value": "Nova-Cut",
+              "weight": 1
+            },
+            {
+              "value": "Redfin",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Pallas",
+              "weight": 1
+            },
+            {
+              "value": "Quill",
+              "weight": 1
+            },
+            {
+              "value": "Dunmore",
+              "weight": 1
+            },
+            {
+              "value": "Ferro",
+              "weight": 1
+            },
+            {
+              "value": "Ikon",
+              "weight": 1
+            },
+            {
+              "value": "Lowell",
+              "weight": 1
+            },
+            {
+              "value": "Marrow",
+              "weight": 1
+            },
+            {
+              "value": "Onda",
+              "weight": 1
+            },
+            {
+              "value": "Prowl",
+              "weight": 1
+            },
+            {
+              "value": "Rook",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "mark",
+          "choices": [
+            {
+              "value": "Mk I",
+              "weight": 1
+            },
+            {
+              "value": "Mk II",
+              "weight": 1
+            },
+            {
+              "value": "Mk III",
+              "weight": 1
+            },
+            {
+              "value": "Mk IV",
+              "weight": 1
+            },
+            {
+              "value": "Series 5",
+              "weight": 1
+            },
+            {
+              "value": "Gen 2",
+              "weight": 1
+            },
+            {
+              "value": "Gen 3",
+              "weight": 1
+            },
+            {
+              "value": "v2.0",
+              "weight": 1
+            },
+            {
+              "value": "v3.1",
+              "weight": 1
+            },
+            {
+              "value": "X",
+              "weight": 1
+            },
+            {
+              "value": "Lite",
+              "weight": 1
+            },
+            {
+              "value": "Pro",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "eye-noun",
+          "choices": [
+            {
+              "value": "Optics",
+              "weight": 1
+            },
+            {
+              "value": "Lens",
+              "weight": 1
+            },
+            {
+              "value": "Retina",
+              "weight": 1
+            },
+            {
+              "value": "Scope",
+              "weight": 1
+            },
+            {
+              "value": "Iris",
+              "weight": 1
+            },
+            {
+              "value": "Visor",
+              "weight": 1
+            },
+            {
+              "value": "Sightline",
+              "weight": 1
+            },
+            {
+              "value": "Glasseye",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "arm-noun",
+          "choices": [
+            {
+              "value": "Forearm",
+              "weight": 1
+            },
+            {
+              "value": "Grip",
+              "weight": 1
+            },
+            {
+              "value": "Gauntlet",
+              "weight": 1
+            },
+            {
+              "value": "Knuckle",
+              "weight": 1
+            },
+            {
+              "value": "Actuator",
+              "weight": 1
+            },
+            {
+              "value": "Sleeve",
+              "weight": 1
+            },
+            {
+              "value": "Mantis Arm",
+              "weight": 1
+            },
+            {
+              "value": "Hand",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "leg-noun",
+          "choices": [
+            {
+              "value": "Strider",
+              "weight": 1
+            },
+            {
+              "value": "Springs",
+              "weight": 1
+            },
+            {
+              "value": "Greaves",
+              "weight": 1
+            },
+            {
+              "value": "Piston Leg",
+              "weight": 1
+            },
+            {
+              "value": "Runner",
+              "weight": 1
+            },
+            {
+              "value": "Hamstring",
+              "weight": 1
+            },
+            {
+              "value": "Kickframe",
+              "weight": 1
+            },
+            {
+              "value": "Anklet",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "spine-noun",
+          "choices": [
+            {
+              "value": "Spine",
+              "weight": 1
+            },
+            {
+              "value": "Backbone",
+              "weight": 1
+            },
+            {
+              "value": "Lattice",
+              "weight": 1
+            },
+            {
+              "value": "Rail",
+              "weight": 1
+            },
+            {
+              "value": "Column",
+              "weight": 1
+            },
+            {
+              "value": "Reflex Rig",
+              "weight": 1
+            },
+            {
+              "value": "Trunkline",
+              "weight": 1
+            },
+            {
+              "value": "Vertebra",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "skin-noun",
+          "choices": [
+            {
+              "value": "Weave",
+              "weight": 1
+            },
+            {
+              "value": "Plating",
+              "weight": 1
+            },
+            {
+              "value": "Dermis",
+              "weight": 1
+            },
+            {
+              "value": "Mesh",
+              "weight": 1
+            },
+            {
+              "value": "Carapace",
+              "weight": 1
+            },
+            {
+              "value": "Cloak",
+              "weight": 1
+            },
+            {
+              "value": "Hide",
+              "weight": 1
+            },
+            {
+              "value": "Film",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "heart-noun",
+          "choices": [
+            {
+              "value": "Pump",
+              "weight": 1
+            },
+            {
+              "value": "Core",
+              "weight": 1
+            },
+            {
+              "value": "Cardio Unit",
+              "weight": 1
+            },
+            {
+              "value": "Regulator",
+              "weight": 1
+            },
+            {
+              "value": "Heartframe",
+              "weight": 1
+            },
+            {
+              "value": "Valve",
+              "weight": 1
+            },
+            {
+              "value": "Reactor",
+              "weight": 1
+            },
+            {
+              "value": "Pacer",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "brain-noun",
+          "choices": [
+            {
+              "value": "Co-processor",
+              "weight": 1
+            },
+            {
+              "value": "Cortex Link",
+              "weight": 1
+            },
+            {
+              "value": "Memory Shard",
+              "weight": 1
+            },
+            {
+              "value": "Router",
+              "weight": 1
+            },
+            {
+              "value": "Port",
+              "weight": 1
+            },
+            {
+              "value": "Overlay",
+              "weight": 1
+            },
+            {
+              "value": "Halo Rig",
+              "weight": 1
+            },
+            {
+              "value": "Thought Cache",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "ear-noun",
+          "choices": [
+            {
+              "value": "Cochlea",
+              "weight": 1
+            },
+            {
+              "value": "Listener",
+              "weight": 1
+            },
+            {
+              "value": "Earpiece",
+              "weight": 1
+            },
+            {
+              "value": "Resonator",
+              "weight": 1
+            },
+            {
+              "value": "Tympan",
+              "weight": 1
+            },
+            {
+              "value": "Hearing Rig",
+              "weight": 1
+            },
+            {
+              "value": "Echo Cell",
+              "weight": 1
+            },
+            {
+              "value": "Mic Bud",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "eye-name",
+          "choices": [
+            {
+              "value": "#brand# #eye-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "arm-name",
+          "choices": [
+            {
+              "value": "#brand# #arm-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "leg-name",
+          "choices": [
+            {
+              "value": "#brand# #leg-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "spine-name",
+          "choices": [
+            {
+              "value": "#brand# #spine-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "skin-name",
+          "choices": [
+            {
+              "value": "#brand# #skin-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "heart-name",
+          "choices": [
+            {
+              "value": "#brand# #heart-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "brain-name",
+          "choices": [
+            {
+              "value": "#brand# #brain-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "ear-name",
+          "choices": [
+            {
+              "value": "#brand# #ear-noun# #mark#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "eye-effect",
+          "choices": [
+            {
+              "value": "Low-light and thermal vision, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Zoom and range-finding overlay, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Records everything seen to a local chip, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Flags faces against a local watchlist, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Polarized glare filter and target lock, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Reads lips at distance, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "arm-effect",
+          "choices": [
+            {
+              "value": "Crushing grip and a hidden tool bay, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Retractable blades along the forearm, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Doubled lifting strength, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Fine-motor stabilizer for surgery or lockpicking, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Built-in taser and wire spool, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Palm-mounted data jack and scanner, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "leg-effect",
+          "choices": [
+            {
+              "value": "Leaps two floors, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Silent steps and shock absorption, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Sprint boost for short bursts, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Magnetic soles for rails and hulls, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Climbing spikes in the heel, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Hidden storage cavity in the calf, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "spine-effect",
+          "choices": [
+            {
+              "value": "Reflex boost to hand-eye response, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Pain dampening on demand, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Sustains carrying loads over long hauls, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Auto-balance in zero-grip falls, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Neural bridge for remote drones, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Adrenal surge on a timer, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "skin-effect",
+          "choices": [
+            {
+              "value": "Subdermal armor against knives, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Color-shifting camouflage, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Heat-shedding weave to hide from scanners, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Flameproof sealant layer, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Self-sealing minor wounds, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Static-discharge shock on touch, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "heart-effect",
+          "choices": [
+            {
+              "value": "Runs hot for hours without rest, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Stabilizes toxin and blood loss, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Reserve power for other implants, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Calms the pulse under stress, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Overclock burst of speed, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Emergency defibrillator reflex, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "brain-effect",
+          "choices": [
+            {
+              "value": "Photographic recall of recent days, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Wireless link to local nets, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Language and dialect translation overlay, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Firewalls against intrusion, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Parallel thinking for planning, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Dream recorder and playback, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "ear-effect",
+          "choices": [
+            {
+              "value": "Filters gunfire and amplifies whispers, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Triangulates sound sources, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Tapped radio and short-range comms, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Noise-cancelling bubble, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Ultrasonic sense for tight spaces, with #flaw#",
+              "weight": 1
+            },
+            {
+              "value": "Voice-print matching, with #flaw#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "flaw",
+          "choices": [
+            {
+              "value": "a recurring tinnitus whine",
+              "weight": 1
+            },
+            {
+              "value": "a monthly maintenance fee",
+              "weight": 1
+            },
+            {
+              "value": "a tendency to overheat",
+              "weight": 1
+            },
+            {
+              "value": "glitches during storms",
+              "weight": 1
+            },
+            {
+              "value": "cheap parts that wear out",
+              "weight": 1
+            },
+            {
+              "value": "a firmware lock owned by the maker",
+              "weight": 1
+            },
+            {
+              "value": "headaches after long use",
+              "weight": 1
+            },
+            {
+              "value": "an audible whirr",
+              "weight": 1
+            },
+            {
+              "value": "a rejection risk in humid districts",
+              "weight": 1
+            },
+            {
+              "value": "a habit of leaking fluid",
+              "weight": 1
+            },
+            {
+              "value": "a license that expires",
+              "weight": 1
+            },
+            {
+              "value": "phantom twitches at night",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/grammar/drug-effects",
+      "description": "Street drug effects and risks",
+      "tags": [
+        "cyberpunk"
+      ],
+      "start": "effect",
+      "rules": [
+        {
+          "key": "effect",
+          "choices": [
+            {
+              "value": "#sensation# for #duration#, then #comedown#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "sensation",
+          "choices": [
+            {
+              "value": "Razor focus",
+              "weight": 1
+            },
+            {
+              "value": "Warm, floating calm",
+              "weight": 1
+            },
+            {
+              "value": "Burst of manic energy",
+              "weight": 1
+            },
+            {
+              "value": "Vivid waking dreams",
+              "weight": 1
+            },
+            {
+              "value": "Numb, easy confidence",
+              "weight": 1
+            },
+            {
+              "value": "Night-vision sharpness",
+              "weight": 1
+            },
+            {
+              "value": "Sudden talkative cheer",
+              "weight": 1
+            },
+            {
+              "value": "Dull ache muffled away",
+              "weight": 1
+            },
+            {
+              "value": "Slowed time and sharp edges",
+              "weight": 1
+            },
+            {
+              "value": "Crawling static behind the eyes",
+              "weight": 1
+            },
+            {
+              "value": "Floating detachment from fear",
+              "weight": 1
+            },
+            {
+              "value": "Hours of tireless stamina",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "duration",
+          "choices": [
+            {
+              "value": "an hour",
+              "weight": 1
+            },
+            {
+              "value": "half a night",
+              "weight": 1
+            },
+            {
+              "value": "a few hours",
+              "weight": 1
+            },
+            {
+              "value": "a whole shift",
+              "weight": 1
+            },
+            {
+              "value": "twenty minutes",
+              "weight": 1
+            },
+            {
+              "value": "most of a day",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "comedown",
+          "choices": [
+            {
+              "value": "a crash into sleep",
+              "weight": 1
+            },
+            {
+              "value": "shaking hands and a foul mood",
+              "weight": 1
+            },
+            {
+              "value": "a day of fog",
+              "weight": 1
+            },
+            {
+              "value": "a craving that gnaws",
+              "weight": 1
+            },
+            {
+              "value": "nothing at all, which is the trouble",
+              "weight": 1
+            },
+            {
+              "value": "nosebleeds and thirst",
+              "weight": 1
+            },
+            {
+              "value": "a flat grey mood",
+              "weight": 1
+            },
+            {
+              "value": "a bad week of dreams",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "risk",
+          "choices": [
+            {
+              "value": "Cut with cheap filler and unpredictable",
+              "weight": 1
+            },
+            {
+              "value": "Habit-forming after a few uses",
+              "weight": 1
+            },
+            {
+              "value": "Clashes with chrome and cooks implants",
+              "weight": 1
+            },
+            {
+              "value": "Sold by a gang that wants repeat customers",
+              "weight": 1
+            },
+            {
+              "value": "Legal in the arcology, deadly in the gutter",
+              "weight": 1
+            },
+            {
+              "value": "Mild, but easy to overdose",
+              "weight": 1
+            },
+            {
+              "value": "Rumored to carry a tracking dye",
+              "weight": 1
+            },
+            {
+              "value": "Safe enough from a clean source, rare as a result",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+      "description": "Fixer job fragments",
+      "tags": [
+        "cyberpunk"
+      ],
+      "start": "client",
+      "rules": [
+        {
+          "key": "client",
+          "choices": [
+            {
+              "value": "a nervous junior exec",
+              "weight": 1
+            },
+            {
+              "value": "a street doctor with debts",
+              "weight": 1
+            },
+            {
+              "value": "a gang boss who pays in favors",
+              "weight": 1
+            },
+            {
+              "value": "a rival corp's cutout",
+              "weight": 1
+            },
+            {
+              "value": "a retired fixer calling in a debt",
+              "weight": 1
+            },
+            {
+              "value": "a worried parent",
+              "weight": 1
+            },
+            {
+              "value": "a nameless voice on a burner line",
+              "weight": 1
+            },
+            {
+              "value": "an arcology residents' committee",
+              "weight": 1
+            },
+            {
+              "value": "a data broker with a grudge",
+              "weight": 1
+            },
+            {
+              "value": "a courier company short on drivers",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "cargo",
+          "choices": [
+            {
+              "value": "a sealed case of prototype implants",
+              "weight": 1
+            },
+            {
+              "value": "a cracked memory shard",
+              "weight": 1
+            },
+            {
+              "value": "a crate of illegal medicine",
+              "weight": 1
+            },
+            {
+              "value": "a stolen delivery drone",
+              "weight": 1
+            },
+            {
+              "value": "a witness to a corporate accident",
+              "weight": 1
+            },
+            {
+              "value": "a vault key on a necklace",
+              "weight": 1
+            },
+            {
+              "value": "a courier's missing bag",
+              "weight": 1
+            },
+            {
+              "value": "an unregistered AI core in a lunchbox",
+              "weight": 1
+            },
+            {
+              "value": "a stack of forged transit passes",
+              "weight": 1
+            },
+            {
+              "value": "a prisoner on a medical hold",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "site",
+          "choices": [
+            {
+              "value": "a flooded parking deck",
+              "weight": 1
+            },
+            {
+              "value": "a rooftop clinic",
+              "weight": 1
+            },
+            {
+              "value": "a derelict monorail depot",
+              "weight": 1
+            },
+            {
+              "value": "a corporate loading bay",
+              "weight": 1
+            },
+            {
+              "value": "a night market at closing",
+              "weight": 1
+            },
+            {
+              "value": "an abandoned server farm",
+              "weight": 1
+            },
+            {
+              "value": "a luxury sky-lounge",
+              "weight": 1
+            },
+            {
+              "value": "a laundromat that fronts for a gang",
+              "weight": 1
+            },
+            {
+              "value": "a half-built tower",
+              "weight": 1
+            },
+            {
+              "value": "a customs warehouse",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "Retrieve",
+              "weight": 1
+            },
+            {
+              "value": "Deliver",
+              "weight": 1
+            },
+            {
+              "value": "Spoil",
+              "weight": 1
+            },
+            {
+              "value": "Escort",
+              "weight": 1
+            },
+            {
+              "value": "Steal",
+              "weight": 1
+            },
+            {
+              "value": "Plant evidence in",
+              "weight": 1
+            },
+            {
+              "value": "Break into",
+              "weight": 1
+            },
+            {
+              "value": "Watch",
+              "weight": 1
+            },
+            {
+              "value": "Erase records from",
+              "weight": 1
+            },
+            {
+              "value": "Rescue someone from",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "twist",
+          "choices": [
+            {
+              "value": "the client is lying about the price",
+              "weight": 1
+            },
+            {
+              "value": "a second crew wants the same prize",
+              "weight": 1
+            },
+            {
+              "value": "the target is already dead",
+              "weight": 1
+            },
+            {
+              "value": "an inside contact has quietly sold you out",
+              "weight": 1
+            },
+            {
+              "value": "the job is a test for a bigger one",
+              "weight": 1
+            },
+            {
+              "value": "security rotates early tonight",
+              "weight": 1
+            },
+            {
+              "value": "the payment is in a currency nobody will take",
+              "weight": 1
+            },
+            {
+              "value": "a street rumor says the site is cursed with bad luck",
+              "weight": 1
+            },
+            {
+              "value": "the client's name is on a corp blacklist",
+              "weight": 1
+            },
+            {
+              "value": "half the crew wakes up with their implants locked",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "deadline",
+          "choices": [
+            {
+              "value": "by dawn",
+              "weight": 1
+            },
+            {
+              "value": "before the shift change",
+              "weight": 1
+            },
+            {
+              "value": "in forty minutes",
+              "weight": 1
+            },
+            {
+              "value": "before the rain stops",
+              "weight": 1
+            },
+            {
+              "value": "by the next transit run",
+              "weight": 1
+            },
+            {
+              "value": "tonight, no extensions",
+              "weight": 1
+            },
+            {
+              "value": "within three days",
+              "weight": 1
+            },
+            {
+              "value": "before the tower lights go out",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "pay",
+          "choices": [
+            {
+              "value": "Pay is decent and half up front",
+              "weight": 1
+            },
+            {
+              "value": "Pay is poor but the favor is worth more",
+              "weight": 1
+            },
+            {
+              "value": "Pay is generous, which is suspicious",
+              "weight": 1
+            },
+            {
+              "value": "Pay is in parts and information",
+              "weight": 1
+            },
+            {
+              "value": "Pay is a clean ID and a clear conscience",
+              "weight": 1
+            },
+            {
+              "value": "Pay is a rare piece of chrome",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/grammar/street-encounters",
+      "description": "Street encounter fragments",
+      "tags": [
+        "cyberpunk"
+      ],
+      "start": "who",
+      "rules": [
+        {
+          "key": "who",
+          "choices": [
+            {
+              "value": "A drifter",
+              "weight": 1
+            },
+            {
+              "value": "A street medic",
+              "weight": 1
+            },
+            {
+              "value": "A bored enforcer",
+              "weight": 1
+            },
+            {
+              "value": "A pair of runaways",
+              "weight": 1
+            },
+            {
+              "value": "A food-cart vendor",
+              "weight": 1
+            },
+            {
+              "value": "A broken courier drone",
+              "weight": 1
+            },
+            {
+              "value": "A gang scout",
+              "weight": 1
+            },
+            {
+              "value": "A corp patrol",
+              "weight": 1
+            },
+            {
+              "value": "A rooftop preacher",
+              "weight": 1
+            },
+            {
+              "value": "A holo-ad salesperson",
+              "weight": 1
+            },
+            {
+              "value": "A masked net-diver",
+              "weight": 1
+            },
+            {
+              "value": "A retired bodyguard",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "doing",
+          "choices": [
+            {
+              "value": "arguing over a stolen coat",
+              "weight": 1
+            },
+            {
+              "value": "hawking cheap chrome from a tray",
+              "weight": 1
+            },
+            {
+              "value": "dragging a sealed crate through the rain",
+              "weight": 1
+            },
+            {
+              "value": "muttering at a dead screen",
+              "weight": 1
+            },
+            {
+              "value": "offering a rumor for a drink",
+              "weight": 1
+            },
+            {
+              "value": "hiding from a patrol under a stairwell",
+              "weight": 1
+            },
+            {
+              "value": "fixing a flickering sign",
+              "weight": 1
+            },
+            {
+              "value": "selling forged ration cards",
+              "weight": 1
+            },
+            {
+              "value": "trading favors for a ride",
+              "weight": 1
+            },
+            {
+              "value": "staring at a freshly painted warning",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "detail",
+          "choices": [
+            {
+              "value": "The air smells of ozone and frying oil.",
+              "weight": 1
+            },
+            {
+              "value": "Every screen nearby flickers the same ad.",
+              "weight": 1
+            },
+            {
+              "value": "A siren wails somewhere above.",
+              "weight": 1
+            },
+            {
+              "value": "The ground is slick with last night's rain.",
+              "weight": 1
+            },
+            {
+              "value": "A drone circles lazily overhead.",
+              "weight": 1
+            },
+            {
+              "value": "Someone is playing old music from a window.",
+              "weight": 1
+            },
+            {
+              "value": "A neon sign sputters out.",
+              "weight": 1
+            },
+            {
+              "value": "Steam hisses from a vent.",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "hook",
+          "choices": [
+            {
+              "value": "They know a way into a sealed block.",
+              "weight": 1
+            },
+            {
+              "value": "They owe someone dangerous.",
+              "weight": 1
+            },
+            {
+              "value": "They are carrying a message for you by name.",
+              "weight": 1
+            },
+            {
+              "value": "They want to trade a secret for protection.",
+              "weight": 1
+            },
+            {
+              "value": "They are bait for something worse.",
+              "weight": 1
+            },
+            {
+              "value": "They remember you from somewhere you cannot place.",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/grammar/factions",
+      "description": "Faction and organization names",
+      "tags": [
+        "cyberpunk"
+      ],
+      "start": "org",
+      "rules": [
+        {
+          "key": "org",
+          "choices": [
+            {
+              "value": "#adj# #noun# #kind#",
+              "weight": 1
+            },
+            {
+              "value": "The #noun# #kind#",
+              "weight": 1
+            },
+            {
+              "value": "#adj# #kind# of #place#",
+              "weight": 1
+            },
+            {
+              "value": "#place# #noun# #kind#",
+              "weight": 1
+            },
+            {
+              "value": "#noun# and #noun2# #kind#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Free",
+              "weight": 1
+            },
+            {
+              "value": "Open",
+              "weight": 1
+            },
+            {
+              "value": "Quiet",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Neon",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Green",
+              "weight": 1
+            },
+            {
+              "value": "Brother",
+              "weight": 1
+            },
+            {
+              "value": "Last",
+              "weight": 1
+            },
+            {
+              "value": "Midnight",
+              "weight": 1
+            },
+            {
+              "value": "Unlicensed",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Public",
+              "weight": 1
+            },
+            {
+              "value": "Seventh",
+              "weight": 1
+            },
+            {
+              "value": "Shared",
+              "weight": 1
+            },
+            {
+              "value": "Rising",
+              "weight": 1
+            },
+            {
+              "value": "Cold",
+              "weight": 1
+            },
+            {
+              "value": "Burning",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Ledger",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Circuit",
+              "weight": 1
+            },
+            {
+              "value": "Signal",
+              "weight": 1
+            },
+            {
+              "value": "Anvil",
+              "weight": 1
+            },
+            {
+              "value": "Bridge",
+              "weight": 1
+            },
+            {
+              "value": "Ferry",
+              "weight": 1
+            },
+            {
+              "value": "Harbor",
+              "weight": 1
+            },
+            {
+              "value": "Mirror",
+              "weight": 1
+            },
+            {
+              "value": "Lighthouse",
+              "weight": 1
+            },
+            {
+              "value": "Orchard",
+              "weight": 1
+            },
+            {
+              "value": "Chorus",
+              "weight": 1
+            },
+            {
+              "value": "Key",
+              "weight": 1
+            },
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Loom",
+              "weight": 1
+            },
+            {
+              "value": "Beacon",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun2",
+          "choices": [
+            {
+              "value": "Lamp",
+              "weight": 1
+            },
+            {
+              "value": "Wire",
+              "weight": 1
+            },
+            {
+              "value": "Thread",
+              "weight": 1
+            },
+            {
+              "value": "Pawn",
+              "weight": 1
+            },
+            {
+              "value": "Stone",
+              "weight": 1
+            },
+            {
+              "value": "Drum",
+              "weight": 1
+            },
+            {
+              "value": "Coin",
+              "weight": 1
+            },
+            {
+              "value": "Salt",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "kind",
+          "choices": [
+            {
+              "value": "Collective",
+              "weight": 1
+            },
+            {
+              "value": "Union",
+              "weight": 1
+            },
+            {
+              "value": "Guild",
+              "weight": 1
+            },
+            {
+              "value": "Mutual",
+              "weight": 1
+            },
+            {
+              "value": "Cooperative",
+              "weight": 1
+            },
+            {
+              "value": "Brigade",
+              "weight": 1
+            },
+            {
+              "value": "Front",
+              "weight": 1
+            },
+            {
+              "value": "Order",
+              "weight": 1
+            },
+            {
+              "value": "Compact",
+              "weight": 1
+            },
+            {
+              "value": "League",
+              "weight": 1
+            },
+            {
+              "value": "Council",
+              "weight": 1
+            },
+            {
+              "value": "Network",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Lowtown",
+              "weight": 1
+            },
+            {
+              "value": "Eastgate",
+              "weight": 1
+            },
+            {
+              "value": "the Undercity",
+              "weight": 1
+            },
+            {
+              "value": "Harbor Row",
+              "weight": 1
+            },
+            {
+              "value": "the Flats",
+              "weight": 1
+            },
+            {
+              "value": "Seventh Street",
+              "weight": 1
+            },
+            {
+              "value": "the Spires",
+              "weight": 1
+            },
+            {
+              "value": "Dockside",
+              "weight": 1
+            },
+            {
+              "value": "Ninth Ward",
+              "weight": 1
+            },
+            {
+              "value": "the Canals",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.cyberpunk/table/price-tier",
+      "description": "Street price tier",
+      "tags": [
+        "cyberpunk"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "pocket-change-under-100-cred-01",
+          "weight": 30,
+          "result": {
+            "type": "text",
+            "text": "Pocket change (under 100 cred)"
+          }
+        },
+        {
+          "key": "street-100-to-1-000-cred-02",
+          "weight": 30,
+          "result": {
+            "type": "text",
+            "text": "Street (100 to 1,000 cred)"
+          }
+        },
+        {
+          "key": "mid-market-1-000-to-10-000-cred-03",
+          "weight": 20,
+          "result": {
+            "type": "text",
+            "text": "Mid-market (1,000 to 10,000 cred)"
+          }
+        },
+        {
+          "key": "high-end-10-000-to-100-000-cred-04",
+          "weight": 12,
+          "result": {
+            "type": "text",
+            "text": "High-end (10,000 to 100,000 cred)"
+          }
+        },
+        {
+          "key": "corporate-100-000-to-1-million-cred-05",
+          "weight": 6,
+          "result": {
+            "type": "text",
+            "text": "Corporate (100,000 to 1 million cred)"
+          }
+        },
+        {
+          "key": "mythic-over-1-million-cred-never-openly-sold-06",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Mythic (over 1 million cred, never openly sold)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/table/cyberware",
+      "description": "Cyberware: name | effect | street price tier",
+      "tags": [
+        "cyberpunk"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "eye",
+          "weight": 4,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#eye-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#eye-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "arm",
+          "weight": 4,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#arm-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#arm-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "leg",
+          "weight": 3,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#leg-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#leg-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "spine",
+          "weight": 3,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#spine-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#spine-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "skin",
+          "weight": 3,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#skin-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#skin-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "heart",
+          "weight": 2,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#heart-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#heart-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "brain",
+          "weight": 3,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#brain-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#brain-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "ear",
+          "weight": 2,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#ear-name#"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/cyberware",
+                  "template": "#ear-effect#"
+                }
+              },
+              {
+                "key": "tier",
+                "result": {
+                  "type": "table",
+                  "table": "lexiconlang.cyberpunk/table/price-tier"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/table/street-drug",
+      "description": "Street drug: name | effect | risk",
+      "tags": [
+        "cyberpunk"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "stim",
+          "weight": 4,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "generator",
+                  "generator": "lexiconlang.cyberpunk/generator/drug-name",
+                  "field": "form"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#effect#"
+                }
+              },
+              {
+                "key": "risk",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#risk#"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "downer",
+          "weight": 3,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "generator",
+                  "generator": "lexiconlang.cyberpunk/generator/drug-name",
+                  "field": "form"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#effect#"
+                }
+              },
+              {
+                "key": "risk",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#risk#"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "dream",
+          "weight": 2,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "generator",
+                  "generator": "lexiconlang.cyberpunk/generator/drug-name",
+                  "field": "form"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#effect#"
+                }
+              },
+              {
+                "key": "risk",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#risk#"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "edge",
+          "weight": 3,
+          "result": {
+            "type": "sequence",
+            "separator": " | ",
+            "parts": [
+              {
+                "key": "name",
+                "result": {
+                  "type": "generator",
+                  "generator": "lexiconlang.cyberpunk/generator/drug-name",
+                  "field": "form"
+                }
+              },
+              {
+                "key": "effect",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#effect#"
+                }
+              },
+              {
+                "key": "risk",
+                "result": {
+                  "type": "grammar",
+                  "grammar": "lexiconlang.cyberpunk/grammar/drug-effects",
+                  "template": "#risk#"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/table/fixer-job",
+      "description": "Fixer job oracle (d20)",
+      "tags": [
+        "cyberpunk"
+      ],
+      "mode": "dice",
+      "dice": {
+        "count": 1,
+        "sides": 20,
+        "modifier": 0
+      },
+      "entries": [
+        {
+          "key": "job-01",
+          "range": [
+            1,
+            1
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "#verb.capitalize# #cargo# at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-02",
+          "range": [
+            2,
+            2
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Escort #cargo# out of #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-03",
+          "range": [
+            3,
+            3
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Steal #cargo# from #site# on behalf of #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-04",
+          "range": [
+            4,
+            4
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Deliver #cargo# to #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-05",
+          "range": [
+            5,
+            5
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Rescue a stranger from #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-06",
+          "range": [
+            6,
+            6
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Erase #cargo# from the records at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-07",
+          "range": [
+            7,
+            7
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Watch #site# for #client# and report back #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-08",
+          "range": [
+            8,
+            8
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Recover #cargo# lost near #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-09",
+          "range": [
+            9,
+            9
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Plant #cargo# at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-10",
+          "range": [
+            10,
+            10
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Guard #cargo# at #site# for #client# until the handoff, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-11",
+          "range": [
+            11,
+            11
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Break into #site# to find #cargo# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-12",
+          "range": [
+            12,
+            12
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Spoil a rival's deal at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-13",
+          "range": [
+            13,
+            13
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Smuggle #cargo# past a checkpoint near #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-14",
+          "range": [
+            14,
+            14
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Find out who is following #client# near #site#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-15",
+          "range": [
+            15,
+            15
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Swap #cargo# for a decoy at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-16",
+          "range": [
+            16,
+            16
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Fake an accident at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-17",
+          "range": [
+            17,
+            17
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Hire out your crew as muscle at #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-18",
+          "range": [
+            18,
+            18
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Hold #site# against a rival crew for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-19",
+          "range": [
+            19,
+            19
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Tail a courier carrying #cargo# from #site# for #client#, #deadline#. Complication: #twist#. #pay#."
+          }
+        },
+        {
+          "key": "job-20",
+          "range": [
+            20,
+            20
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/fixer-jobs",
+            "template": "Do a favor at #site# that #client# will not explain, #deadline#. Complication: #twist#. #pay#."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.cyberpunk/table/street-encounter",
+      "description": "Street encounter oracle (d12)",
+      "tags": [
+        "cyberpunk"
+      ],
+      "mode": "dice",
+      "dice": {
+        "count": 1,
+        "sides": 12,
+        "modifier": 0
+      },
+      "entries": [
+        {
+          "key": "enc-01",
+          "range": [
+            1,
+            1
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#. #detail# #hook#"
+          }
+        },
+        {
+          "key": "enc-02",
+          "range": [
+            2,
+            2
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#detail# #who# is #doing#. #hook#"
+          }
+        },
+        {
+          "key": "enc-03",
+          "range": [
+            3,
+            3
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#. #hook#"
+          }
+        },
+        {
+          "key": "enc-04",
+          "range": [
+            4,
+            4
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#, nervous. #detail#"
+          }
+        },
+        {
+          "key": "enc-05",
+          "range": [
+            5,
+            5
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#detail# #who# #doing#."
+          }
+        },
+        {
+          "key": "enc-06",
+          "range": [
+            6,
+            6
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#. #detail# #hook#"
+          }
+        },
+        {
+          "key": "enc-07",
+          "range": [
+            7,
+            7
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#detail# #hook# #who# #doing#."
+          }
+        },
+        {
+          "key": "enc-08",
+          "range": [
+            8,
+            8
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#. #hook#"
+          }
+        },
+        {
+          "key": "enc-09",
+          "range": [
+            9,
+            9
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#. #detail#"
+          }
+        },
+        {
+          "key": "enc-10",
+          "range": [
+            10,
+            10
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#detail# #who# #doing#. #hook#"
+          }
+        },
+        {
+          "key": "enc-11",
+          "range": [
+            11,
+            11
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#; #hook#"
+          }
+        },
+        {
+          "key": "enc-12",
+          "range": [
+            12,
+            12
+          ],
+          "result": {
+            "type": "grammar",
+            "grammar": "lexiconlang.cyberpunk/grammar/street-encounters",
+            "template": "#who# #doing#. #detail# #hook#"
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.cyberpunk/generator/person-name-corp",
+      "description": "Corp-speak person name with translation",
+      "tags": [
+        "cyberpunk",
+        "person",
+        "corp"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/corp-speak",
+      "structure": "person"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/person-name-street",
+      "description": "Street-slang person name with handle epithet",
+      "tags": [
+        "cyberpunk",
+        "person",
+        "street"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/street-slang",
+      "structure": "person"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/megacorp-name",
+      "description": "Megacorp name with plain-language translation",
+      "tags": [
+        "cyberpunk",
+        "faction",
+        "corp"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/corp-speak",
+      "structure": "corp"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/gang-name",
+      "description": "Street gang name",
+      "tags": [
+        "cyberpunk",
+        "faction",
+        "street"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/street-slang",
+      "structure": "gang"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/handle",
+      "description": "Runner handle (net-diver alias)",
+      "tags": [
+        "cyberpunk",
+        "person",
+        "street",
+        "handle"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/street-slang",
+      "structure": "handle"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/district-name",
+      "description": "Street-slang district name",
+      "tags": [
+        "cyberpunk",
+        "place",
+        "street"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/street-slang",
+      "structure": "district"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/arcology-name",
+      "description": "Corporate arcology or tower-district name",
+      "tags": [
+        "cyberpunk",
+        "place",
+        "corp"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/corp-speak",
+      "structure": "arcology"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/ai-name",
+      "description": "Corporate or rogue AI name",
+      "tags": [
+        "cyberpunk",
+        "ai"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/corp-speak",
+      "structure": "ai"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/product-name",
+      "description": "Corporate product name",
+      "tags": [
+        "cyberpunk",
+        "product",
+        "corp"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/corp-speak",
+      "structure": "product"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/drug-name",
+      "description": "Street drug name",
+      "tags": [
+        "cyberpunk",
+        "item",
+        "street"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.cyberpunk/culture/street-slang",
+      "structure": "drug"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/faction-name",
+      "description": "Faction or organization name (English)",
+      "tags": [
+        "cyberpunk",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.cyberpunk/grammar/factions"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/cyberware",
+      "description": "Cyberware: name | effect | street price tier",
+      "tags": [
+        "cyberpunk",
+        "item",
+        "table"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.cyberpunk/table/cyberware"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/street-drug",
+      "description": "Street drug: name | effect | risk",
+      "tags": [
+        "cyberpunk",
+        "item",
+        "table"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.cyberpunk/table/street-drug"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/fixer-job",
+      "description": "Fixer job oracle (d20)",
+      "tags": [
+        "cyberpunk",
+        "oracle",
+        "table"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.cyberpunk/table/fixer-job"
+    },
+    {
+      "id": "lexiconlang.cyberpunk/generator/street-encounter",
+      "description": "Street encounter oracle (d12)",
+      "tags": [
+        "cyberpunk",
+        "oracle",
+        "table"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.cyberpunk/table/street-encounter"
+    }
+  ]
+}
