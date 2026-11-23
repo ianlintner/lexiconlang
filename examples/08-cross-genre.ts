@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { postapoc } from "@lexiconlang/postapoc";
 import { cyberpunk } from "@lexiconlang/cyberpunk";
 import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
@@ -90,6 +91,16 @@ for (const d of sq) {
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
 
+// ─── Scenario 4: a wasteland scene with a fantasy-named relic ──────────
+
+const waste = postapoc.withSeed("the-ironwake");
+console.log("\nWasteland scene (post-apocalyptic + fantasy):");
+console.log(`  Settlement: ${waste.settlement().form}  · raiders: ${waste.raiders().form}`);
+console.log(`  Bunker:     ${waste.vault().name}`);
+console.log(`  Loot:       ${waste.gear()}  ("${fantasyFullName.generate(ctx.child("relic")).surname}" brand)`);
+console.log(`  Encounter:  ${waste.encounter()}`);
+
+// ─── Scenario 5: a gaslamp inventor's filing ─────────────────────────────
 // ─── Scenario 3: a cyberpunk crew with fantasy-flavored cover names ──────
 //
 // The cyberpunk pack is declarative JSON. `withSeed` hands back typed
@@ -123,7 +134,7 @@ console.log("  heraldry:", hm.arms().blazon);
 // ─── Scenario 4: a gaslamp inventor's filing ─────────────────────────────
 
 const brass = steampunk.withSeed("brass-cross-genre");
-console.log("Gaslamp patent filing:");
+console.log("\nGaslamp patent filing:");
 console.log(`  Inventor: ${brass.person().form}`);
 console.log(`  Workshop: ${brass.district()} · ${brass.street()}`);
 console.log(`  Patent:   ${brass.patent()}`);
