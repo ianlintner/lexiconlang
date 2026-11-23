@@ -344,6 +344,7 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 | [`@lexiconlang/glyphs`](packages/glyphs)   | Visual writing systems: deterministic SVG / Unicode / Canvas glyph rendering per culture, with phoneme / morpheme / holistic mapping strategies                                                           |
 | [`@lexiconlang/cyberpunk`](packages/cyberpunk) | Genre pack (declarative JSON): megacorps, gangs, runner handles, cyberware with price tiers, districts, street drugs, fixer-job and street-encounter oracles, AI and product names; corp-speak and street-slang cultures |
 | [`@lexiconlang/modern`](packages/modern)   | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators)                                                                                        |
+| [`@lexiconlang/postapoc`](packages/postapoc) | Genre pack: post-apocalyptic survivors, tech-cults, settlements, raiders, bunkers, mutations, gear with condition, vehicles, trade goods, encounters oracle (14 generators) |
 | [`@lexiconlang/cli`](packages/cli)         | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack`                                                                                                                                         |
 
 All packages ESM-only, `sideEffects: false`, no native deps.
