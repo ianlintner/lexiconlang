@@ -1,0 +1,4062 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.wuxia",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original fictional wuxia, xianxia and cultivation content: sects, martial techniques, realms, treasures, jianghu nicknames, mountains, secret realms and pinyin-style names with English glosses. Not a reconstruction of any real tradition or published setting.",
+  "provenance": [
+    {
+      "id": "original-wuxia",
+      "source": "original:lexiconlang",
+      "title": "Synthetic wuxia / xianxia corpus",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "All strings in this pack are original synthetic fiction authored for LexiconLang. Pinyin-style spellings are invented aesthetics, not transcriptions of living people's names. No trademarks, real sects or setting-specific IP are reproduced.",
+      "modifications": "None",
+      "files": [
+        "data/wuxia.pack.json",
+        "data/PROVENANCE.md"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.wuxia/culture/pinyin",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Língxiá",
+              "translation": "spirit dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yùndé",
+              "translation": "cloud virtue"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngyǔ",
+              "translation": "clear rain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chénxī",
+              "translation": "morning brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jǐnglán",
+              "translation": "well orchid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fēnghé",
+              "translation": "wind crane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mòyán",
+              "translation": "ink swallow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báishuāng",
+              "translation": "white frost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zhāoyáng",
+              "translation": "morning sun"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wǎnqíng",
+              "translation": "evening clear"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sīyuǎn",
+              "translation": "thoughtful distance"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ruòshuǐ",
+              "translation": "like water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Juéyǐng",
+              "translation": "broken shadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Liúguāng",
+              "translation": "flowing light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yínzhú",
+              "translation": "silver candle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dānxīn",
+              "translation": "red heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xuánwǔ",
+              "translation": "dark warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zhìyǔ",
+              "translation": "wise rain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tíngyuè",
+              "translation": "stopping moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hánzhāng",
+              "translation": "cold chapter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yìfēi",
+              "translation": "soaring flight"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chúnjiàn",
+              "translation": "pure sword"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qiūlán",
+              "translation": "autumn orchid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Míngchè",
+              "translation": "bright clarity"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yānsōng",
+              "translation": "mist pine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tiānjī",
+              "translation": "heavenly mechanism"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zhǎnliú",
+              "translation": "surging current"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wénlán",
+              "translation": "literary orchid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shùnbēi",
+              "translation": "obedient cup"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mùyún",
+              "translation": "wood cloud"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Língzhōu",
+              "translation": "spirit boat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīnguī",
+              "translation": "gold tortoise"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báiyún",
+              "translation": "white cloud"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngléi",
+              "translation": "green thunder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chìyàn",
+              "translation": "red swallow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hánshān",
+              "translation": "cold mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fēixīng",
+              "translation": "flying star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tiězhèn",
+              "translation": "iron town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Liǔyīn",
+              "translation": "willow shade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sōngquán",
+              "translation": "pine spring"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hèlù",
+              "translation": "crane dew"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Méiyǐng",
+              "translation": "plum shadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shuǐjìng",
+              "translation": "water mirror"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yùpǔ",
+              "translation": "jade garden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīnpíng",
+              "translation": "gold vase"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yínlín",
+              "translation": "silver scale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zhúyǐng",
+              "translation": "bamboo shadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wùyǔn",
+              "translation": "matter rhyme"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qiānlǐ",
+              "translation": "thousand mile"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gūjiàn",
+              "translation": "lonely sword"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yìjūn",
+              "translation": "one ruler"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sìhǎi",
+              "translation": "four seas"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngyún Zhèn",
+              "translation": "clear cloud town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Liúshuǐ Cūn",
+              "translation": "flowing water village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wòlóng Shān",
+              "translation": "sleeping dragon mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīnpíng Chéng",
+              "translation": "gold vase city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báilù Wān",
+              "translation": "white dew bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yùquán Dòng",
+              "translation": "jade spring cave"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chángfēng Dào",
+              "translation": "long wind pass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hányuè Gǔ",
+              "translation": "cold moon valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mùyǔ Tíng",
+              "translation": "evening rain pavilion"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shénsōng Lín",
+              "translation": "spirit pine forest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yānbo Dǎo",
+              "translation": "mist wave island"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wàngshū Tái",
+              "translation": "missing-letter terrace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fēixiá Xiá",
+              "translation": "flying gorge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tiěqiáo Zhèn",
+              "translation": "iron bridge town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zǐyún Jiàn",
+              "translation": "purple cloud stream"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīnglián Sì",
+              "translation": "green lotus temple"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gūdēng Chéng",
+              "translation": "lonely lamp city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ruòshuǐ Biān",
+              "translation": "weak water shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cāngláng Pǔ",
+              "translation": "blue wave garden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yǐngluò Gǔ",
+              "translation": "shadow falling valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báishí Qiáo",
+              "translation": "white stone bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Língquán Cūn",
+              "translation": "spirit spring village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wúyǔng Gǎng",
+              "translation": "no-wind harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chìxiá Guān",
+              "translation": "red cloud pass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīgǔ Tái",
+              "translation": "drum terrace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yuèyǐng Hú",
+              "translation": "moon shadow lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shíqiáo Cūn",
+              "translation": "stone bridge village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fēihuā Gǔ",
+              "translation": "falling flower valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngjìng Sì",
+              "translation": "clear mirror temple"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báiyǔ Lóu",
+              "translation": "white rain tower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sōngyǐng Zhèn",
+              "translation": "pine shadow town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lányǔ Biān",
+              "translation": "blue rain shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hánjīn Dòng",
+              "translation": "cold gold cave"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zǐtíng Gǎng",
+              "translation": "violet pavilion harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mùyáng Pō",
+              "translation": "shepherd slope"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yínshā Dǎo",
+              "translation": "silver sand isle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngniú Zhèn",
+              "translation": "green ox town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yèyǔ Cheng",
+              "translation": "night rain city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wàngquán Gǔ",
+              "translation": "forgotten spring valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīnpí Lǐng",
+              "translation": "golden threshold ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gūxīng Dǎo",
+              "translation": "lonely star isle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Liúyíng Pǔ",
+              "translation": "flowing glow garden"
+            },
+            "weight": 1
+          }
+        ],
+        "mountain": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wòlóng Shān",
+              "translation": "sleeping dragon mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hányuè Fēng",
+              "translation": "cold moon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cāngsōng Lǐng",
+              "translation": "blue pine ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báixuě Shān",
+              "translation": "white snow mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngléi Fēng",
+              "translation": "green thunder peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yùncuì Lǐng",
+              "translation": "cloud jade ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gūyàn Fēng",
+              "translation": "lonely wild goose peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tiēgǔ Shān",
+              "translation": "iron bone mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zǐyān Lǐng",
+              "translation": "purple mist ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Míngyuè Fēng",
+              "translation": "bright moon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shénsōng Shān",
+              "translation": "spirit pine mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yínpíng Lǐng",
+              "translation": "silver vase ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chìxiá Fēng",
+              "translation": "red cloud peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Húndi Shān",
+              "translation": "soul lake mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīnpíng Lǐng",
+              "translation": "gold vase ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fēilóng Fēng",
+              "translation": "flying dragon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ruòshuǐ Shān",
+              "translation": "weak water mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wúyǐng Lǐng",
+              "translation": "shadowless ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qiūshuāng Fēng",
+              "translation": "autumn frost peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yěhuǒ Shān",
+              "translation": "wildfire mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Língquán Fēng",
+              "translation": "spirit spring peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bìluó Shān",
+              "translation": "green vine mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dānxiá Lǐng",
+              "translation": "cinnabar cloud ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chénxī Fēng",
+              "translation": "dawn brook peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báilù Fēng",
+              "translation": "white dew peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngjìng Lǐng",
+              "translation": "clear mirror ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yèyǔ Shān",
+              "translation": "night rain mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gǔsōng Fēng",
+              "translation": "ancient pine peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yùnduàn Lǐng",
+              "translation": "cloud broken ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hánxīng Shān",
+              "translation": "cold star mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zǐwēi Fēng",
+              "translation": "purple violet peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shíjìng Lǐng",
+              "translation": "stone mirror ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lúhuā Shān",
+              "translation": "reed flower mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yínyuè Fēng",
+              "translation": "silver moon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fēixuě Lǐng",
+              "translation": "flying snow ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wúmíng Shān",
+              "translation": "nameless mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jīnpí Fēng",
+              "translation": "gold threshold peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dānxīn Lǐng",
+              "translation": "red heart ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mùyǔ Shān",
+              "translation": "evening rain mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Báigǔ Fēng",
+              "translation": "white bone peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shénmì Lǐng",
+              "translation": "mysterious ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lǎngyàn Shān",
+              "translation": "clear wild goose mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qīngyín Fēng",
+              "translation": "clear silver peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dānhé Lǐng",
+              "translation": "red crane ridge"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lexiconlang.wuxia/culture/translated",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dawnpetal",
+              "translation": "dawn petal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cloudshear",
+              "translation": "cloud shearer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brightreed",
+              "translation": "bright reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stillwater",
+              "translation": "still water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Frostlane",
+              "translation": "frost path"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberquill",
+              "translation": "ember quill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moonwoven",
+              "translation": "moon woven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silvercrane",
+              "translation": "silver crane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mistwalker",
+              "translation": "mist walker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jadelight",
+              "translation": "jade light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Riverwhisper",
+              "translation": "river whisper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pinechoir",
+              "translation": "pine choir"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wavebrother",
+              "translation": "wave brother"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Autumnblade",
+              "translation": "autumn blade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Starfold",
+              "translation": "star fold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightcandle",
+              "translation": "night candle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thunderink",
+              "translation": "thunder ink"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lotusheart",
+              "translation": "lotus heart"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Windletter",
+              "translation": "wind letter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Snowplum",
+              "translation": "snow plum"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Goldfinch",
+              "translation": "gold finch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironwillow",
+              "translation": "iron willow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crimsonstep",
+              "translation": "crimson step"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greycloud",
+              "translation": "grey cloud"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Larkspur",
+              "translation": "lark's spur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duskbloom",
+              "translation": "dusk bloom"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nine Pines",
+              "translation": "nine pines"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright River",
+              "translation": "bright river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "High Orchard",
+              "translation": "high orchard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stone Lotus",
+              "translation": "stone lotus"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Far Lantern",
+              "translation": "far lantern"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quiet Forge",
+              "translation": "quiet forge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Red Reed",
+              "translation": "red reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "White Crane",
+              "translation": "white crane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Deepwell",
+              "translation": "deep well"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cloudgate",
+              "translation": "cloud gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornscript",
+              "translation": "thorn script"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Northbridge",
+              "translation": "north bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silverbank",
+              "translation": "silver bank"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollowbamboo",
+              "translation": "hollow bamboo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iron Orchard",
+              "translation": "iron orchard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Longshadow",
+              "translation": "long shadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Frostpine",
+              "translation": "frost pine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duskharbor",
+              "translation": "dusk harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skyward",
+              "translation": "skyward"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mossgate",
+              "translation": "moss gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Copperleaf",
+              "translation": "copper leaf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stillpeak",
+              "translation": "still peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Windwright",
+              "translation": "wind wright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Goldencreed",
+              "translation": "golden reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moonfold",
+              "translation": "moon fold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashenvale",
+              "translation": "ashen vale"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mistgate",
+              "translation": "mist gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lantern Ford",
+              "translation": "lantern ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pinefall",
+              "translation": "pine fall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silver terrace",
+              "translation": "silver terrace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cloudrest",
+              "translation": "cloud rest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jade Hollow",
+              "translation": "jade hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Windward Quay",
+              "translation": "windward quay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stillwater Cross",
+              "translation": "stillwater cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Craneview",
+              "translation": "crane view"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bamboo Bend",
+              "translation": "bamboo bend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberwatch",
+              "translation": "ember watch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Frostbloom",
+              "translation": "frost bloom"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Golden Reed Village",
+              "translation": "golden reed village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Longbridge",
+              "translation": "long bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashen Pass",
+              "translation": "ashen pass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lotus Bay",
+              "translation": "lotus bay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greystone Harbor",
+              "translation": "greystone harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dawnwell",
+              "translation": "dawn well"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Riverbend",
+              "translation": "river bend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Highreed",
+              "translation": "high reed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moonmere",
+              "translation": "moon mere"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thornhollow",
+              "translation": "thorn hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quietstep",
+              "translation": "quiet step"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Starfall Market",
+              "translation": "starfall market"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Willowmere",
+              "translation": "willow mere"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironvale",
+              "translation": "iron vale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stonebridge Village",
+              "translation": "stonebridge village"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Falling Flower Vale",
+              "translation": "falling flower vale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirror Temple",
+              "translation": "mirror temple"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "White Rain Tower",
+              "translation": "white rain tower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pineshade Town",
+              "translation": "pineshade town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blue Rain Shore",
+              "translation": "blue rain shore"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Coldgold Grotto",
+              "translation": "coldgold grotto"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Violet Pavilion Port",
+              "translation": "violet pavilion port"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shepherd Slope",
+              "translation": "shepherd slope"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silversand Isle",
+              "translation": "silversand isle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Green Ox Town",
+              "translation": "green ox town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightrain City",
+              "translation": "nightrain city"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Forgotten Spring Vale",
+              "translation": "forgotten spring vale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gold Threshold Ridge",
+              "translation": "gold threshold ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lonestar Isle",
+              "translation": "lonestar isle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flowing Glow Garden",
+              "translation": "flowing glow garden"
+            },
+            "weight": 1
+          }
+        ],
+        "mountain": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sleeping Dragon Mountain",
+              "translation": "sleeping dragon mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cold Moon Peak",
+              "translation": "cold moon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blue Pine Ridge",
+              "translation": "blue pine ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "White Snow Mountain",
+              "translation": "white snow mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Green Thunder Peak",
+              "translation": "green thunder peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cloudjade Ridge",
+              "translation": "cloud jade ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lone Goose Peak",
+              "translation": "lonely wild goose peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironbone Mountain",
+              "translation": "iron bone mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Purple Mist Ridge",
+              "translation": "purple mist ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bright Moon Peak",
+              "translation": "bright moon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Spirit Pine Mountain",
+              "translation": "spirit pine mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silver Vase Ridge",
+              "translation": "silver vase ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Red Cloud Peak",
+              "translation": "red cloud peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Soul Lake Mountain",
+              "translation": "soul lake mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gold Vase Ridge",
+              "translation": "gold vase ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flying Dragon Peak",
+              "translation": "flying dragon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Weak Water Mountain",
+              "translation": "weak water mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shadowless Ridge",
+              "translation": "shadowless ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Autumn Frost Peak",
+              "translation": "autumn frost peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wildfire Mountain",
+              "translation": "wildfire mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Spirit Spring Peak",
+              "translation": "spirit spring peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Green Vine Mountain",
+              "translation": "green vine mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinnabar Cloud Ridge",
+              "translation": "cinnabar cloud ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dawnbrook Peak",
+              "translation": "dawn brook peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "White Dew Peak",
+              "translation": "white dew peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Clear Mirror Ridge",
+              "translation": "clear mirror ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightrain Mountain",
+              "translation": "night rain mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ancient Pine Peak",
+              "translation": "ancient pine peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Broken Cloud Ridge",
+              "translation": "broken cloud ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cold Star Mountain",
+              "translation": "cold star mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Violet Peak",
+              "translation": "violet peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stone Mirror Ridge",
+              "translation": "stone mirror ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reed Flower Mountain",
+              "translation": "reed flower mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silver Moon Peak",
+              "translation": "silver moon peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flying Snow Ridge",
+              "translation": "flying snow ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nameless Mountain",
+              "translation": "nameless mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gold Threshold Peak",
+              "translation": "gold threshold peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Red Heart Ridge",
+              "translation": "red heart ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Evening Rain Mountain",
+              "translation": "evening rain mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "White Bone Peak",
+              "translation": "white bone peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mysterious Ridge",
+              "translation": "mysterious ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Clear Goose Mountain",
+              "translation": "clear goose mountain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Clear Silver Peak",
+              "translation": "clear silver peak"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Red Crane Ridge",
+              "translation": "red crane ridge"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.wuxia/grammar/sect",
+      "description": "Wuxia martial sects and schools.",
+      "tags": [
+        "sect",
+        "faction"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#prefix# #core# #suffix#",
+              "weight": 6
+            },
+            {
+              "value": "The #prefix# #core# #suffix#",
+              "weight": 2
+            },
+            {
+              "value": "#prefix# #core# #suffix# of the #place#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "prefix",
+          "choices": [
+            {
+              "value": "Cloud",
+              "weight": 1
+            },
+            {
+              "value": "Jade",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "White",
+              "weight": 1
+            },
+            {
+              "value": "Red",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Mist",
+              "weight": 1
+            },
+            {
+              "value": "Thunder",
+              "weight": 1
+            },
+            {
+              "value": "Bamboo",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Shadow",
+              "weight": 1
+            },
+            {
+              "value": "North",
+              "weight": 1
+            },
+            {
+              "value": "Southern",
+              "weight": 1
+            },
+            {
+              "value": "Ancient",
+              "weight": 1
+            },
+            {
+              "value": "Hidden",
+              "weight": 1
+            },
+            {
+              "value": "Empty",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "core",
+          "choices": [
+            {
+              "value": "Sword",
+              "weight": 1
+            },
+            {
+              "value": "Lotus",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Palm",
+              "weight": 1
+            },
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Pine",
+              "weight": 1
+            },
+            {
+              "value": "River",
+              "weight": 1
+            },
+            {
+              "value": "Scripture",
+              "weight": 1
+            },
+            {
+              "value": "Fist",
+              "weight": 1
+            },
+            {
+              "value": "Drum",
+              "weight": 1
+            },
+            {
+              "value": "Banner",
+              "weight": 1
+            },
+            {
+              "value": "Bell",
+              "weight": 1
+            },
+            {
+              "value": "Needle",
+              "weight": 1
+            },
+            {
+              "value": "Censer",
+              "weight": 1
+            },
+            {
+              "value": "Mirror",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "suffix",
+          "choices": [
+            {
+              "value": "Sect",
+              "weight": 4
+            },
+            {
+              "value": "School",
+              "weight": 3
+            },
+            {
+              "value": "Order",
+              "weight": 2
+            },
+            {
+              "value": "Guild",
+              "weight": 1
+            },
+            {
+              "value": "Academy",
+              "weight": 2
+            },
+            {
+              "value": "House",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Silent Valley",
+              "weight": 1
+            },
+            {
+              "value": "Nine Bends",
+              "weight": 1
+            },
+            {
+              "value": "Pine Terrace",
+              "weight": 1
+            },
+            {
+              "value": "Cloud Ford",
+              "weight": 1
+            },
+            {
+              "value": "Red Pass",
+              "weight": 1
+            },
+            {
+              "value": "Jade Well",
+              "weight": 1
+            },
+            {
+              "value": "Long River",
+              "weight": 1
+            },
+            {
+              "value": "Broken Gate",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/technique",
+      "description": "Martial arts techniques, including the Nine Heavens Thunder family.",
+      "tags": [
+        "technique",
+        "martial-arts"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#canon# #form##grade#",
+              "weight": 8
+            },
+            {
+              "value": "The #canon# #form#",
+              "weight": 2
+            },
+            {
+              "value": "#canon# #form# of the #season#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "canon",
+          "choices": [
+            {
+              "value": "Nine Heavens Thunder",
+              "weight": 1
+            },
+            {
+              "value": "Silent River",
+              "weight": 1
+            },
+            {
+              "value": "White Crane",
+              "weight": 1
+            },
+            {
+              "value": "Jade Spear",
+              "weight": 1
+            },
+            {
+              "value": "Iron Bamboo",
+              "weight": 1
+            },
+            {
+              "value": "Mist Step",
+              "weight": 1
+            },
+            {
+              "value": "Red Lotus",
+              "weight": 1
+            },
+            {
+              "value": "Cold Moon",
+              "weight": 1
+            },
+            {
+              "value": "Golden Bell",
+              "weight": 1
+            },
+            {
+              "value": "Shadow Thread",
+              "weight": 1
+            },
+            {
+              "value": "Dragon Tide",
+              "weight": 1
+            },
+            {
+              "value": "Empty Mountain",
+              "weight": 1
+            },
+            {
+              "value": "Pine Wind",
+              "weight": 1
+            },
+            {
+              "value": "Silver Needle",
+              "weight": 1
+            },
+            {
+              "value": "Cloud Ladder",
+              "weight": 1
+            },
+            {
+              "value": "Thousand Petal",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "form",
+          "choices": [
+            {
+              "value": "Palm",
+              "weight": 3
+            },
+            {
+              "value": "Sword",
+              "weight": 3
+            },
+            {
+              "value": "Fist",
+              "weight": 2
+            },
+            {
+              "value": "Step",
+              "weight": 2
+            },
+            {
+              "value": "Art",
+              "weight": 2
+            },
+            {
+              "value": "Staff",
+              "weight": 1
+            },
+            {
+              "value": "Dagger",
+              "weight": 1
+            },
+            {
+              "value": "Technique",
+              "weight": 2
+            },
+            {
+              "value": "Strike",
+              "weight": 2
+            },
+            {
+              "value": "Stance",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "grade",
+          "choices": [
+            {
+              "value": "",
+              "weight": 3
+            },
+            {
+              "value": " Supreme",
+              "weight": 1
+            },
+            {
+              "value": " Mortal",
+              "weight": 1
+            },
+            {
+              "value": " Unfettered",
+              "weight": 1
+            },
+            {
+              "value": " Ancient",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "season",
+          "choices": [
+            {
+              "value": "East Wind",
+              "weight": 1
+            },
+            {
+              "value": "Autumn Rain",
+              "weight": 1
+            },
+            {
+              "value": "Winter Sun",
+              "weight": 1
+            },
+            {
+              "value": "Spring Thunder",
+              "weight": 1
+            },
+            {
+              "value": "Dusk",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/realm",
+      "description": "Cultivation realms on an original ladder of invented stages.",
+      "tags": [
+        "realm",
+        "cultivation"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#layer# #stage# Realm",
+              "weight": 6
+            },
+            {
+              "value": "#stage# Realm",
+              "weight": 3
+            },
+            {
+              "value": "#layer# #stage#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "layer",
+          "choices": [
+            {
+              "value": "Early",
+              "weight": 2
+            },
+            {
+              "value": "Middle",
+              "weight": 2
+            },
+            {
+              "value": "Late",
+              "weight": 2
+            },
+            {
+              "value": "Peak",
+              "weight": 1
+            },
+            {
+              "value": "",
+              "weight": 1
+            },
+            {
+              "value": "Half-step",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "stage",
+          "choices": [
+            {
+              "value": "Qi Gathering",
+              "weight": 1
+            },
+            {
+              "value": "Foundation",
+              "weight": 1
+            },
+            {
+              "value": "Core",
+              "weight": 1
+            },
+            {
+              "value": "Nascent Soul",
+              "weight": 1
+            },
+            {
+              "value": "Spirit Severing",
+              "weight": 1
+            },
+            {
+              "value": "Void Return",
+              "weight": 1
+            },
+            {
+              "value": "Ascendant",
+              "weight": 1
+            },
+            {
+              "value": "Unity",
+              "weight": 1
+            },
+            {
+              "value": "Timeless",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Starwind",
+              "weight": 1
+            },
+            {
+              "value": "Iron Slumber",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/treasure",
+      "description": "Treasures, pills and spirit artifacts (fictional items only).",
+      "tags": [
+        "treasure",
+        "artifact"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#material# #kind##quality#",
+              "weight": 7
+            },
+            {
+              "value": "The #material# #kind# of #owner#",
+              "weight": 2
+            },
+            {
+              "value": "#material# #kind#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "material",
+          "choices": [
+            {
+              "value": "Jade",
+              "weight": 1
+            },
+            {
+              "value": "Bronze",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Gold",
+              "weight": 1
+            },
+            {
+              "value": "Crystal",
+              "weight": 1
+            },
+            {
+              "value": "Ironwood",
+              "weight": 1
+            },
+            {
+              "value": "Porcelain",
+              "weight": 1
+            },
+            {
+              "value": "Bone",
+              "weight": 1
+            },
+            {
+              "value": "Glass",
+              "weight": 1
+            },
+            {
+              "value": "Ink",
+              "weight": 1
+            },
+            {
+              "value": "Thunderstone",
+              "weight": 1
+            },
+            {
+              "value": "Moonstone",
+              "weight": 1
+            },
+            {
+              "value": "Cinnabar",
+              "weight": 1
+            },
+            {
+              "value": "Pearl",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "kind",
+          "choices": [
+            {
+              "value": "Pendant",
+              "weight": 1
+            },
+            {
+              "value": "Censer",
+              "weight": 1
+            },
+            {
+              "value": "Gourd",
+              "weight": 1
+            },
+            {
+              "value": "Mirror",
+              "weight": 1
+            },
+            {
+              "value": "Robe",
+              "weight": 1
+            },
+            {
+              "value": "Ring",
+              "weight": 1
+            },
+            {
+              "value": "Bell",
+              "weight": 1
+            },
+            {
+              "value": "Scroll",
+              "weight": 1
+            },
+            {
+              "value": "Sword",
+              "weight": 1
+            },
+            {
+              "value": "Cup",
+              "weight": 1
+            },
+            {
+              "value": "Seal",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Needle",
+              "weight": 1
+            },
+            {
+              "value": "Drum",
+              "weight": 1
+            },
+            {
+              "value": "Comb",
+              "weight": 1
+            },
+            {
+              "value": "Flute",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "quality",
+          "choices": [
+            {
+              "value": " of the Cloud Vault",
+              "weight": 1
+            },
+            {
+              "value": " of Silent Water",
+              "weight": 1
+            },
+            {
+              "value": " of the Nine Terraces",
+              "weight": 1
+            },
+            {
+              "value": " of Dawn",
+              "weight": 1
+            },
+            {
+              "value": " of the Hidden Valley",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "owner",
+          "choices": [
+            {
+              "value": "the Jade Hermit",
+              "weight": 1
+            },
+            {
+              "value": "the Mist Court",
+              "weight": 1
+            },
+            {
+              "value": "the Nine Terraces",
+              "weight": 1
+            },
+            {
+              "value": "the Silent Abbot",
+              "weight": 1
+            },
+            {
+              "value": "the River Duke",
+              "weight": 1
+            },
+            {
+              "value": "the Cloud Vault",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/nickname",
+      "description": "Jianghu nicknames used by wanderers and martial artists.",
+      "tags": [
+        "nickname",
+        "jianghu"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#prefix# #noun#",
+              "weight": 6
+            },
+            {
+              "value": "#prefix# #noun#, #title#",
+              "weight": 3
+            },
+            {
+              "value": "The #prefix# #noun#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "prefix",
+          "choices": [
+            {
+              "value": "Thunder",
+              "weight": 1
+            },
+            {
+              "value": "Jade",
+              "weight": 1
+            },
+            {
+              "value": "Crimson",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Mist",
+              "weight": 1
+            },
+            {
+              "value": "Dusk",
+              "weight": 1
+            },
+            {
+              "value": "Laughing",
+              "weight": 1
+            },
+            {
+              "value": "Silent",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Drunken",
+              "weight": 1
+            },
+            {
+              "value": "Wandering",
+              "weight": 1
+            },
+            {
+              "value": "Frost",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Hidden",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Sword",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Tiger",
+              "weight": 1
+            },
+            {
+              "value": "Lotus",
+              "weight": 1
+            },
+            {
+              "value": "Fox",
+              "weight": 1
+            },
+            {
+              "value": "Dragon",
+              "weight": 1
+            },
+            {
+              "value": "Bamboo",
+              "weight": 1
+            },
+            {
+              "value": "Palm",
+              "weight": 1
+            },
+            {
+              "value": "Pine",
+              "weight": 1
+            },
+            {
+              "value": "Wolf",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Raven",
+              "weight": 1
+            },
+            {
+              "value": "Serpent",
+              "weight": 1
+            },
+            {
+              "value": "Mountain",
+              "weight": 1
+            },
+            {
+              "value": "River",
+              "weight": 1
+            },
+            {
+              "value": "Sparrow",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "title",
+          "choices": [
+            {
+              "value": "the Uncrowned",
+              "weight": 1
+            },
+            {
+              "value": "of the Mist Gate",
+              "weight": 1
+            },
+            {
+              "value": "Who Never Kneels",
+              "weight": 1
+            },
+            {
+              "value": "of the Thousand Faces",
+              "weight": 1
+            },
+            {
+              "value": "the Night Walker",
+              "weight": 1
+            },
+            {
+              "value": "of the Broken Blade",
+              "weight": 1
+            },
+            {
+              "value": "the Quiet Guest",
+              "weight": 1
+            },
+            {
+              "value": "of the Far Lantern",
+              "weight": 1
+            },
+            {
+              "value": "the Cloud Rider",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/mountain",
+      "description": "Sacred mountains and famous peaks (fictional geography).",
+      "tags": [
+        "mountain",
+        "place"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj# #noun# #kind# of #place#",
+              "weight": 1
+            },
+            {
+              "value": "#adj# #noun# #kind#",
+              "weight": 6
+            },
+            {
+              "value": "The #adj# #noun# #kind#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Sleeping",
+              "weight": 1
+            },
+            {
+              "value": "Cold",
+              "weight": 1
+            },
+            {
+              "value": "Green",
+              "weight": 1
+            },
+            {
+              "value": "White",
+              "weight": 1
+            },
+            {
+              "value": "Red",
+              "weight": 1
+            },
+            {
+              "value": "Ancient",
+              "weight": 1
+            },
+            {
+              "value": "Hidden",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Misty",
+              "weight": 1
+            },
+            {
+              "value": "Thunder",
+              "weight": 1
+            },
+            {
+              "value": "Lonely",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Dragon",
+              "weight": 1
+            },
+            {
+              "value": "Moon",
+              "weight": 1
+            },
+            {
+              "value": "Pine",
+              "weight": 1
+            },
+            {
+              "value": "Snow",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Cloud",
+              "weight": 1
+            },
+            {
+              "value": "Tiger",
+              "weight": 1
+            },
+            {
+              "value": "Lotus",
+              "weight": 1
+            },
+            {
+              "value": "Frost",
+              "weight": 1
+            },
+            {
+              "value": "Bell",
+              "weight": 1
+            },
+            {
+              "value": "Spear",
+              "weight": 1
+            },
+            {
+              "value": "Phoenix",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "kind",
+          "choices": [
+            {
+              "value": "Mountain",
+              "weight": 3
+            },
+            {
+              "value": "Peak",
+              "weight": 2
+            },
+            {
+              "value": "Ridge",
+              "weight": 2
+            },
+            {
+              "value": "Crag",
+              "weight": 1
+            },
+            {
+              "value": "Range",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Silent Valley",
+              "weight": 1
+            },
+            {
+              "value": "Nine Bends",
+              "weight": 1
+            },
+            {
+              "value": "Pine Terrace",
+              "weight": 1
+            },
+            {
+              "value": "Cloud Ford",
+              "weight": 1
+            },
+            {
+              "value": "Red Pass",
+              "weight": 1
+            },
+            {
+              "value": "Jade Well",
+              "weight": 1
+            },
+            {
+              "value": "Long River",
+              "weight": 1
+            },
+            {
+              "value": "Broken Gate",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/secret-realm",
+      "description": "Secret realms, hidden valleys and trial grounds.",
+      "tags": [
+        "secret-realm",
+        "place",
+        "hook"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adj# #realm#",
+              "weight": 6
+            },
+            {
+              "value": "The #adj# #realm# of #keeper#",
+              "weight": 3
+            },
+            {
+              "value": "#realm# of the #adj# #keeper#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Sleeping",
+              "weight": 1
+            },
+            {
+              "value": "Cold",
+              "weight": 1
+            },
+            {
+              "value": "Green",
+              "weight": 1
+            },
+            {
+              "value": "White",
+              "weight": 1
+            },
+            {
+              "value": "Red",
+              "weight": 1
+            },
+            {
+              "value": "Ancient",
+              "weight": 1
+            },
+            {
+              "value": "Hidden",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Misty",
+              "weight": 1
+            },
+            {
+              "value": "Thunder",
+              "weight": 1
+            },
+            {
+              "value": "Lonely",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "realm",
+          "choices": [
+            {
+              "value": "Gate",
+              "weight": 1
+            },
+            {
+              "value": "Valley",
+              "weight": 1
+            },
+            {
+              "value": "Grotto",
+              "weight": 1
+            },
+            {
+              "value": "Garden",
+              "weight": 1
+            },
+            {
+              "value": "Terrace",
+              "weight": 1
+            },
+            {
+              "value": "Cavern",
+              "weight": 1
+            },
+            {
+              "value": "Sanctum",
+              "weight": 1
+            },
+            {
+              "value": "Passage",
+              "weight": 1
+            },
+            {
+              "value": "Basin",
+              "weight": 1
+            },
+            {
+              "value": "Isle",
+              "weight": 1
+            },
+            {
+              "value": "Court",
+              "weight": 1
+            },
+            {
+              "value": "Threshold",
+              "weight": 1
+            },
+            {
+              "value": "Lake",
+              "weight": 1
+            },
+            {
+              "value": "Furnace",
+              "weight": 1
+            },
+            {
+              "value": "Library",
+              "weight": 1
+            },
+            {
+              "value": "Ladder",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "keeper",
+          "choices": [
+            {
+              "value": "Cloud Hermit",
+              "weight": 1
+            },
+            {
+              "value": "Jade Dragon",
+              "weight": 1
+            },
+            {
+              "value": "Silent Monk",
+              "weight": 1
+            },
+            {
+              "value": "Thunder Saint",
+              "weight": 1
+            },
+            {
+              "value": "Mist Maiden",
+              "weight": 1
+            },
+            {
+              "value": "Iron Wanderer",
+              "weight": 1
+            },
+            {
+              "value": "Pine Sage",
+              "weight": 1
+            },
+            {
+              "value": "Crane Elder",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/grammar/pill",
+      "description": "Alchemical pills and elixirs from an invented pharmacopoeia.",
+      "tags": [
+        "pill",
+        "treasure"
+      ],
+      "start": "start",
+      "maxDepth": 10,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#ingredient# #form#",
+              "weight": 7
+            },
+            {
+              "value": "#ingredient# #form# of #effect#",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "key": "ingredient",
+          "choices": [
+            {
+              "value": "Cloud Lotus",
+              "weight": 1
+            },
+            {
+              "value": "Silver Dew",
+              "weight": 1
+            },
+            {
+              "value": "Jade Marrow",
+              "weight": 1
+            },
+            {
+              "value": "Red Cinnabar",
+              "weight": 1
+            },
+            {
+              "value": "Moon Petal",
+              "weight": 1
+            },
+            {
+              "value": "Pine Resin",
+              "weight": 1
+            },
+            {
+              "value": "Thunder Root",
+              "weight": 1
+            },
+            {
+              "value": "Crane Feather",
+              "weight": 1
+            },
+            {
+              "value": "Gold Ash",
+              "weight": 1
+            },
+            {
+              "value": "Frost Berry",
+              "weight": 1
+            },
+            {
+              "value": "Ink Cap",
+              "weight": 1
+            },
+            {
+              "value": "Pearl Dust",
+              "weight": 1
+            },
+            {
+              "value": "River Stone",
+              "weight": 1
+            },
+            {
+              "value": "Ember Seed",
+              "weight": 1
+            },
+            {
+              "value": "Night Orchid",
+              "weight": 1
+            },
+            {
+              "value": "Bamboo Heart",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "form",
+          "choices": [
+            {
+              "value": "Pill",
+              "weight": 5
+            },
+            {
+              "value": "Elixir",
+              "weight": 3
+            },
+            {
+              "value": "Draught",
+              "weight": 2
+            },
+            {
+              "value": "Decoction",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "effect",
+          "choices": [
+            {
+              "value": "Clear Sight",
+              "weight": 1
+            },
+            {
+              "value": "Steel Bones",
+              "weight": 1
+            },
+            {
+              "value": "Quiet Breath",
+              "weight": 1
+            },
+            {
+              "value": "Long Life",
+              "weight": 1
+            },
+            {
+              "value": "Iron Will",
+              "weight": 1
+            },
+            {
+              "value": "Fleet Foot",
+              "weight": 1
+            },
+            {
+              "value": "Warm Core",
+              "weight": 1
+            },
+            {
+              "value": "Still Mind",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.wuxia/table/tribulation",
+      "description": "2d6 ascension trial oracle for a fictional cultivation ladder (not a game-balance rule).",
+      "tags": [
+        "oracle",
+        "tribulation",
+        "cultivation"
+      ],
+      "mode": "dice",
+      "dice": {
+        "count": 2,
+        "sides": 6,
+        "modifier": 0
+      },
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "still-sky",
+          "range": [
+            2,
+            4
+          ],
+          "result": {
+            "type": "text",
+            "text": "The sky stays clear; the trial passes without incident."
+          }
+        },
+        {
+          "key": "wind-turn",
+          "range": [
+            5,
+            7
+          ],
+          "result": {
+            "type": "text",
+            "text": "A cold wind turns the cultivator's robe inside out."
+          }
+        },
+        {
+          "key": "red-thunder",
+          "range": [
+            8,
+            9
+          ],
+          "result": {
+            "type": "text",
+            "text": "Red thunder splits the peak; the third strike is the true one."
+          }
+        },
+        {
+          "key": "heart-echo",
+          "range": [
+            10,
+            10
+          ],
+          "result": {
+            "type": "text",
+            "text": "An old regret speaks in a familiar voice. It knows your name."
+          }
+        },
+        {
+          "key": "cloud-pillar",
+          "range": [
+            11,
+            11
+          ],
+          "result": {
+            "type": "text",
+            "text": "A pillar of cloud descends; the mountain holds its breath."
+          }
+        },
+        {
+          "key": "double-trial",
+          "range": [
+            12,
+            12
+          ],
+          "result": {
+            "type": "text",
+            "text": "Two trials arrive together. Even the master steps back."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.wuxia/table/jianghu-omen",
+      "description": "Weighted roadside encounter oracle for jianghu wanderers.",
+      "tags": [
+        "oracle",
+        "jianghu",
+        "hook"
+      ],
+      "mode": "weighted",
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "beggar",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "A laughing beggar offers a riddle and refuses payment."
+          }
+        },
+        {
+          "key": "bell",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A temple bell rings at dusk with no one near the rope."
+          }
+        },
+        {
+          "key": "crane",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A white crane lands on the road and will not move aside."
+          }
+        },
+        {
+          "key": "sword-rain",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Sword-light flashes above the ridge; no thunder follows."
+          }
+        },
+        {
+          "key": "lantern",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A paper lantern drifts upstream against the current."
+          }
+        },
+        {
+          "key": "merchant",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A merchant sells an empty gourd and calls it a treasure."
+          }
+        },
+        {
+          "key": "child-song",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A child's song names a name no living elder recognizes."
+          }
+        },
+        {
+          "key": "master",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A sword master asks directions to a village that burned years ago."
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.wuxia/generator/person-name",
+      "description": "Portable subset: a pinyin-style given name with a literal gloss. The TS facade also picks a naming style and prefixes a surname.",
+      "tags": [
+        "person",
+        "name"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.wuxia/culture/pinyin",
+      "kind": "given"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/place-name",
+      "description": "Portable subset: a pinyin-style settlement name with a literal gloss. The TS facade may pick either naming style.",
+      "tags": [
+        "place",
+        "name"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.wuxia/culture/pinyin",
+      "kind": "settlement"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/sect-name",
+      "description": "Martial sect or school.",
+      "tags": [
+        "sect",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/sect"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/technique-name",
+      "description": "Martial technique or palm art.",
+      "tags": [
+        "technique"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/technique"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/realm",
+      "description": "Cultivation realm from an original ladder.",
+      "tags": [
+        "realm",
+        "cultivation"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/realm"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/treasure-name",
+      "description": "Treasure, pill vessel or spirit artifact.",
+      "tags": [
+        "treasure"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/treasure"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/nickname",
+      "description": "Jianghu nickname.",
+      "tags": [
+        "nickname",
+        "jianghu"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/nickname"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/mountain-name",
+      "description": "Portable grammar for sacred peaks. The TS facade uses glossed culture templates instead; both draw from the same fictional corpus.",
+      "tags": [
+        "mountain",
+        "place"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/mountain"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/secret-realm",
+      "description": "Hidden valley or trial ground.",
+      "tags": [
+        "secret-realm",
+        "place"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/secret-realm"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/pill-name",
+      "description": "Alchemical pill or elixir.",
+      "tags": [
+        "pill",
+        "treasure"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.wuxia/grammar/pill"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/tribulation-oracle",
+      "description": "2d6 ascension trial outcome.",
+      "tags": [
+        "oracle",
+        "tribulation"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.wuxia/table/tribulation"
+    },
+    {
+      "id": "lexiconlang.wuxia/generator/jianghu-omen-oracle",
+      "description": "Weighted roadside encounter.",
+      "tags": [
+        "oracle",
+        "jianghu"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.wuxia/table/jianghu-omen"
+    }
+  ]
+}

@@ -33,7 +33,8 @@
     "@lexiconlang/cyberpunk": "workspace:*",
     "@lexiconlang/bases": "workspace:*",
     "@lexiconlang/historical-medieval": "workspace:*",
-    "@lexiconlang/steampunk": "workspace:*"
+    "@lexiconlang/steampunk": "workspace:*",
+    "@lexiconlang/wuxia": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.23.15"

@@ -74,6 +74,9 @@ importers:
       '@lexiconlang/steampunk':
         specifier: workspace:*
         version: link:../packages/steampunk
+      '@lexiconlang/wuxia':
+        specifier: workspace:*
+        version: link:../packages/wuxia
     devDependencies:
       tsx:
         specifier: ^4.23.15
@@ -256,6 +259,18 @@ importers:
         version: link:../markov
 
   packages/steampunk:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
+  packages/wuxia:
     dependencies:
       '@lexiconlang/core':
         specifier: workspace:*

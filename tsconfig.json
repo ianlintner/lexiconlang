@@ -16,6 +16,7 @@
     { "path": "./packages/postapoc" },
     { "path": "./packages/cyberpunk" },
     { "path": "./packages/cli" },
-    { "path": "./packages/steampunk" }
+    { "path": "./packages/steampunk" },
+    { "path": "./packages/wuxia" }
   ]
 }
