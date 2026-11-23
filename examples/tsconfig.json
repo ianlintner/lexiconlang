@@ -10,7 +10,10 @@
       "@lexiconlang/markov": ["../packages/markov/src/index.ts"],
       "@lexiconlang/fantasy": ["../packages/fantasy/src/index.ts"],
       "@lexiconlang/scifi": ["../packages/scifi/src/index.ts"],
-      "@lexiconlang/modern": ["../packages/modern/src/index.ts"]
+      "@lexiconlang/modern": ["../packages/modern/src/index.ts"],
+      "@lexiconlang/cyberpunk": ["../packages/cyberpunk/src/index.ts"],
+      "@lexiconlang/language": ["../packages/language/src/index.ts"],
+      "@lexiconlang/packs": ["../packages/packs/src/index.ts"]
     }
   },
   "include": ["./**/*.ts"]

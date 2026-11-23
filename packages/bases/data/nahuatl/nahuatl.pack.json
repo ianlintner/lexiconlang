@@ -1,0 +1,217 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.nahuatl",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Classical Nahuatl; agglutinative shapes and tl/stl clusters; deliberate simplifications. No historical-person or deity names ship. — Classical Nahuatl (romanized). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-nahuatl-prov",
+      "source": "original:lexiconlang.bases.nahuatl",
+      "title": "Classical Nahuatl (romanized)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.nahuatl/base/default",
+      "inspiredBy": "Classical Nahuatl (romanized)",
+      "scope": "Phonotactics and name shapes inspired by Classical Nahuatl; agglutinative shapes and tl/stl clusters; deliberate simplifications. No historical-person or deity names ship.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "ch",
+            "h",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "s",
+            "t",
+            "tl",
+            "ts",
+            "w",
+            "x",
+            "y",
+            "z"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "aa",
+            "ee",
+            "ii",
+            "oo",
+            "uu"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            2
+          ],
+          [
+            "V",
+            2
+          ],
+          [
+            "C C V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ]
+      },
+      "orthography": {
+        "id": "nahuatl-latin",
+        "mappings": [
+          {
+            "from": "tl",
+            "to": "ƛ"
+          },
+          {
+            "from": "kw",
+            "to": "kʷ"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "nahuatl-roman",
+        "mappings": [
+          {
+            "from": "ƛ",
+            "to": "tl"
+          },
+          {
+            "from": "kʷ",
+            "to": "kw"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xochimil",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Temal",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ]
+      },
+      "nameStructures": {
+        "nahuatl.given-only": {
+          "id": "given-only",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "nahuatl-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.nahuatl/culture/default",
+      "base": "lexiconlang.bases.nahuatl/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}

@@ -1,0 +1,226 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.ancient-egyptian",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Ancient Egyptian romanization; consonantal frames with vowels supplied for pronounceability; deliberate simplifications. No pharaoh or deity names ship. — Ancient Egyptian (romanized transliteration). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-ancient-egyptian-prov",
+      "source": "original:lexiconlang.bases.ancient-egyptian",
+      "title": "Ancient Egyptian (romanized transliteration)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.ancient-egyptian/base/default",
+      "inspiredBy": "Ancient Egyptian (romanized transliteration)",
+      "scope": "Phonotactics and name shapes inspired by Ancient Egyptian romanization; consonantal frames with vowels supplied for pronounceability; deliberate simplifications. No pharaoh or deity names ship.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "h",
+            "k",
+            "kh",
+            "m",
+            "n",
+            "p",
+            "q",
+            "r",
+            "s",
+            "sh",
+            "t",
+            "th",
+            "w",
+            "y",
+            "z"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "aa",
+            "ii",
+            "uu"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "V C",
+            2
+          ],
+          [
+            "C V V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ]
+      },
+      "orthography": {
+        "id": "ancient-egyptian-latin",
+        "mappings": [
+          {
+            "from": "kh",
+            "to": "ḵ"
+          },
+          {
+            "from": "th",
+            "to": "ṯ"
+          },
+          {
+            "from": "sh",
+            "to": "š"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "ancient-egyptian-roman",
+        "mappings": [
+          {
+            "from": "ḵ",
+            "to": "kh"
+          },
+          {
+            "from": "ṯ",
+            "to": "th"
+          },
+          {
+            "from": "š",
+            "to": "sh"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nefer-menu",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Seneb-hat",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": "-"
+            },
+            "weight": 2
+          }
+        ]
+      },
+      "nameStructures": {
+        "ancient-egyptian.given-only": {
+          "id": "given-only",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "ancient-egyptian-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.ancient-egyptian/culture/default",
+      "base": "lexiconlang.bases.ancient-egyptian/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}
