@@ -10,10 +10,12 @@
     { "path": "./packages/fantasy" },
     { "path": "./packages/scifi" },
     { "path": "./packages/modern" },
+    { "path": "./packages/historical-medieval" },
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
     { "path": "./packages/postapoc" },
-    { "path": "./packages/steampunk" },
-    { "path": "./packages/cli" }
+    { "path": "./packages/cyberpunk" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/steampunk" }
   ]
 }
