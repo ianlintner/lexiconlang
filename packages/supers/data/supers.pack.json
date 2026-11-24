@@ -1,0 +1,5070 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.supers",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original fictional supers content: hero and villain codenames, power sets with limits, origins, teams, modern secret identities, lairs, headlines and incident oracles.",
+  "provenance": [
+    {
+      "id": "original-supers",
+      "source": "original:lexiconlang",
+      "title": "Supers synthetic corpus",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "All strings in this pack are original synthetic fiction authored for LexiconLang. No real living people, trademarks or setting-specific IP are reproduced.",
+      "modifications": "None",
+      "files": [
+        "data/supers.pack.json",
+        "data/PROVENANCE.md"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.supers/culture/civic",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mara",
+              "translation": "bitter sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Devin",
+              "translation": "poet's valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Imani",
+              "translation": "faith"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kellan",
+              "translation": "slender river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sorrel",
+              "translation": "sorrel plant"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jules",
+              "translation": "youthful"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Priya",
+              "translation": "beloved"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emmett",
+              "translation": "universal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nadia",
+              "translation": "hope"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cassian",
+              "translation": "brass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lena",
+              "translation": "bright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Omar",
+              "translation": "long-lived"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wren",
+              "translation": "small bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Talia",
+              "translation": "dew from heaven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rafael",
+              "translation": "god has healed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Junie",
+              "translation": "young"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amara",
+              "translation": "everlasting"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tomas",
+              "translation": "twin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Selin",
+              "translation": "moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iris",
+              "translation": "rainbow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dara",
+              "translation": "gift"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Felix",
+              "translation": "fortunate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Noor",
+              "translation": "light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Avery",
+              "translation": "ruler of the elves"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zora",
+              "translation": "dawn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Milo",
+              "translation": "gentle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sasha",
+              "translation": "helper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yara",
+              "translation": "butterfly"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brightwell",
+              "translation": "bright well"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Okonkwo",
+              "translation": "readers of the ledger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vasquez",
+              "translation": "son of Vas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Holloway",
+              "translation": "hollow way"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grant",
+              "translation": "great"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashford",
+              "translation": "ash ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moreau",
+              "translation": "Moorish"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bellamy",
+              "translation": "beautiful friend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sato",
+              "translation": "helpful person"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Delacroix",
+              "translation": "of the cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mercer",
+              "translation": "merchant"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Okafor",
+              "translation": "born on the feast day"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lindqvist",
+              "translation": "linden branch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Washington",
+              "translation": "son of Wassa"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ferreira",
+              "translation": "iron worker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nguyen",
+              "translation": "musical person"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kowalski",
+              "translation": "shoemaker's son"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Adeyemi",
+              "translation": "crowned joy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rossi",
+              "translation": "little red one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Novak",
+              "translation": "new man"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Petrov",
+              "translation": "son of Peter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hayashi",
+              "translation": "forest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Costa",
+              "translation": "coast"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ibrahim",
+              "translation": "father of Ibrahim"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Murphy",
+              "translation": "sea warrior"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jensen",
+              "translation": "son of Jens"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fairhaven",
+              "translation": "fair harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Briarwood",
+              "translation": "briar wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Westhatch",
+              "translation": "west hatch"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Larkspur",
+              "translation": "lark spur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stonebridge",
+              "translation": "stone bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hollowfield",
+              "translation": "hollow field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Northgate",
+              "translation": "north gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rivermouth",
+              "translation": "river mouth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cedar Point",
+              "translation": "cedar point"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Millbrook",
+              "translation": "mill brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Highcross",
+              "translation": "high cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marlowe",
+              "translation": "marsh meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greystone",
+              "translation": "gray stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashcombe",
+              "translation": "ash valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dawnport",
+              "translation": "dawn port"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mayfield",
+              "translation": "may field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elderinch",
+              "translation": "elder bend"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quietwater",
+              "translation": "quiet water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brambleton",
+              "translation": "bramble town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Silverlake",
+              "translation": "silver lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingsford",
+              "translation": "king's ford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wrentham",
+              "translation": "wren home"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elmstead",
+              "translation": "elm place"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Windward",
+              "translation": "windward side"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Foxglove",
+              "translation": "foxglove flower"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Briarhill",
+              "translation": "briar hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pinehurst",
+              "translation": "pine hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cobbleport",
+              "translation": "cobble port"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fernwick",
+              "translation": "fern district"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harrowgate",
+              "translation": "harrow gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Larkhall",
+              "translation": "lark hall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mossbank",
+              "translation": "moss bank"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Redcliff",
+              "translation": "red cliff"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Southmere",
+              "translation": "south mere"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thistlebrook",
+              "translation": "thistle brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Willowdell",
+              "translation": "willow valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yewcross",
+              "translation": "yew cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brightmead",
+              "translation": "bright meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Claypole",
+              "translation": "clay pole"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunmoor",
+              "translation": "dark moor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eastvale",
+              "translation": "east valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Flintwick",
+              "translation": "flint district"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Goldenhurst",
+              "translation": "golden wooded hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hazelbank",
+              "translation": "hazel bank"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ivyfold",
+              "translation": "ivy fold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jasperfield",
+              "translation": "jasper field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kitehill",
+              "translation": "kite hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lindenwall",
+              "translation": "linden wall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Meadowbrook",
+              "translation": "meadow brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nettlebed",
+              "translation": "nettle bed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orchard Vale",
+              "translation": "orchard valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pebbleton",
+              "translation": "pebble town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quillbrook",
+              "translation": "quill brook"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ridgeway",
+              "translation": "ridge way"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "lexiconlang.supers/culture/nightshift",
+      "capitalize": "first",
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kit",
+              "translation": "a small cat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rook",
+              "translation": "a rook bird"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zane",
+              "translation": "God is gracious"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nyx",
+              "translation": "night"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beck",
+              "translation": "beckoning"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jett",
+              "translation": "jet stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mica",
+              "translation": "mica mineral"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Echo",
+              "translation": "echo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vesper",
+              "translation": "evening star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dax",
+              "translation": "leader"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Indigo",
+              "translation": "indigo dye"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fenn",
+              "translation": "fen land"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shiv",
+              "translation": "a sharp blade"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lux",
+              "translation": "light"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bram",
+              "translation": "broom"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kira",
+              "translation": "light-bringer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tex",
+              "translation": "Texas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zev",
+              "translation": "wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Onyx",
+              "translation": "onyx stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sable",
+              "translation": "sable fur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rio",
+              "translation": "river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ash",
+              "translation": "ash tree"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nova",
+              "translation": "new star"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cipher",
+              "translation": "a secret code"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Juno",
+              "translation": "youthful one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rune",
+              "translation": "a secret"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ember",
+              "translation": "ember"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cobalt",
+              "translation": "cobalt blue"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vance",
+              "translation": "one who vances"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kincaid",
+              "translation": "son of Caid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blackwood",
+              "translation": "black wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Steele",
+              "translation": "steel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cross",
+              "translation": "cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Valdez",
+              "translation": "son of Val"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mercy",
+              "translation": "mercy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Doyle",
+              "translation": "dark stranger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sloane",
+              "translation": "a raid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wolfe",
+              "translation": "wolf"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kane",
+              "translation": "little battle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reyes",
+              "translation": "kings"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorne",
+              "translation": "thorn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vale",
+              "translation": "valley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hart",
+              "translation": "stag"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Strickland",
+              "translation": "strict land"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Monroe",
+              "translation": "mouth of the Roe"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Diaz",
+              "translation": "son of Diego"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quinn",
+              "translation": "descendant of Conn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rourke",
+              "translation": "red king"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Frost",
+              "translation": "frost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sable",
+              "translation": "sable"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vega",
+              "translation": "a meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Shaw",
+              "translation": "a thicket"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rivas",
+              "translation": "riverbanks"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pike",
+              "translation": "a pike fish"
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nightdock",
+              "translation": "night dock"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinder Row",
+              "translation": "cinder row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lowbridge",
+              "translation": "low bridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rookery",
+              "translation": "rookery"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fog Hollow",
+              "translation": "fog hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironwash",
+              "translation": "iron wash"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Deadman's Quay",
+              "translation": "dead man's quay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Velvet Mile",
+              "translation": "velvet mile"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sootgate",
+              "translation": "soot gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Copper Alley",
+              "translation": "copper alley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lantern Hill",
+              "translation": "lantern hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gallows Green",
+              "translation": "gallows green"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tidewell",
+              "translation": "tide well"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Scrapfield",
+              "translation": "scrap field"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blind Corners",
+              "translation": "blind corners"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Railtown",
+              "translation": "rail town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Salt End",
+              "translation": "salt end"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grinder's Rest",
+              "translation": "grinder's rest"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neon Cross",
+              "translation": "neon cross"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Old Foundry",
+              "translation": "old foundry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sable Height",
+              "translation": "sable height"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hushwater",
+              "translation": "hush water"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chalkdust",
+              "translation": "chalk dust"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sepia Flats",
+              "translation": "sepia flats"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ragmarket",
+              "translation": "rag market"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blackstep",
+              "translation": "black step"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cinderwell",
+              "translation": "cinder well"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duskhaven",
+              "translation": "dusk haven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emberlane",
+              "translation": "ember lane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Foothold",
+              "translation": "foothold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grim alley",
+              "translation": "grim alley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halfmoon",
+              "translation": "half moon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ironjaw",
+              "translation": "iron jaw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Junkyard",
+              "translation": "junk yard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keelhaul",
+              "translation": "keel haul"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lockstep",
+              "translation": "lockstep"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mire End",
+              "translation": "mire end"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Narrowgate",
+              "translation": "narrow gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oiltown",
+              "translation": "oil town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Palehorse",
+              "translation": "pale horse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quarry Row",
+              "translation": "quarry row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rusthaven",
+              "translation": "rust haven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Smokestack",
+              "translation": "smoke stack"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tallow Court",
+              "translation": "tallow court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Underpass",
+              "translation": "underpass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Varnish Row",
+              "translation": "varnish row"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Whitecoat",
+              "translation": "white coat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yellowbrick",
+              "translation": "yellow brick"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zincville",
+              "translation": "zinc town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashpit",
+              "translation": "ash pit"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Boneyard",
+              "translation": "bone yard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Clappergate",
+              "translation": "clapper gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dripstone",
+              "translation": "drip stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eelmarket",
+              "translation": "eel market"
+            },
+            "weight": 1
+          }
+        ]
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.supers/grammar/hero-codename",
+      "description": "Hero codenames built from bright nouns, virtues and animal totems.",
+      "tags": [
+        "hero",
+        "codename"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#epithet.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#animal.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#epithet.cap# #animal.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#animal.cap# #epithet.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#article# #epithet.cap#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "epithet",
+          "choices": [
+            {
+              "value": "Ardent",
+              "weight": 1
+            },
+            {
+              "value": "Beacon",
+              "weight": 1
+            },
+            {
+              "value": "Bright",
+              "weight": 1
+            },
+            {
+              "value": "Civic",
+              "weight": 1
+            },
+            {
+              "value": "Dawn",
+              "weight": 1
+            },
+            {
+              "value": "Daring",
+              "weight": 1
+            },
+            {
+              "value": "Gallant",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Haven",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Jolly",
+              "weight": 1
+            },
+            {
+              "value": "Kindly",
+              "weight": 1
+            },
+            {
+              "value": "Loyal",
+              "weight": 1
+            },
+            {
+              "value": "Merry",
+              "weight": 1
+            },
+            {
+              "value": "Nimble",
+              "weight": 1
+            },
+            {
+              "value": "Open",
+              "weight": 1
+            },
+            {
+              "value": "Patient",
+              "weight": 1
+            },
+            {
+              "value": "Quick",
+              "weight": 1
+            },
+            {
+              "value": "Radiant",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Steady",
+              "weight": 1
+            },
+            {
+              "value": "True",
+              "weight": 1
+            },
+            {
+              "value": "Umbral",
+              "weight": 1
+            },
+            {
+              "value": "Valiant",
+              "weight": 1
+            },
+            {
+              "value": "Wise",
+              "weight": 1
+            },
+            {
+              "value": "Young",
+              "weight": 1
+            },
+            {
+              "value": "Zealous",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "animal",
+          "choices": [
+            {
+              "value": "Albatross",
+              "weight": 1
+            },
+            {
+              "value": "Badger",
+              "weight": 1
+            },
+            {
+              "value": "Crane",
+              "weight": 1
+            },
+            {
+              "value": "Dove",
+              "weight": 1
+            },
+            {
+              "value": "Falcon",
+              "weight": 1
+            },
+            {
+              "value": "Finch",
+              "weight": 1
+            },
+            {
+              "value": "Fox",
+              "weight": 1
+            },
+            {
+              "value": "Gannet",
+              "weight": 1
+            },
+            {
+              "value": "Hare",
+              "weight": 1
+            },
+            {
+              "value": "Heron",
+              "weight": 1
+            },
+            {
+              "value": "Kestrel",
+              "weight": 1
+            },
+            {
+              "value": "Lark",
+              "weight": 1
+            },
+            {
+              "value": "Lynx",
+              "weight": 1
+            },
+            {
+              "value": "Marten",
+              "weight": 1
+            },
+            {
+              "value": "Moth",
+              "weight": 1
+            },
+            {
+              "value": "Otter",
+              "weight": 1
+            },
+            {
+              "value": "Owl",
+              "weight": 1
+            },
+            {
+              "value": "Peregrine",
+              "weight": 1
+            },
+            {
+              "value": "Robin",
+              "weight": 1
+            },
+            {
+              "value": "Sparrow",
+              "weight": 1
+            },
+            {
+              "value": "Swallow",
+              "weight": 1
+            },
+            {
+              "value": "Swift",
+              "weight": 1
+            },
+            {
+              "value": "Vole",
+              "weight": 1
+            },
+            {
+              "value": "Wren",
+              "weight": 1
+            },
+            {
+              "value": "Yak",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "article",
+          "choices": [
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "A",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/villain-codename",
+      "description": "Villain codenames: sharp adjectives, cold objects and ominous titles.",
+      "tags": [
+        "villain",
+        "codename"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adjective.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#object.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#adjective.cap# #object.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#article# #adjective.cap# #object.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#object.cap# #number#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Bitter",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Bloodless",
+              "weight": 1
+            },
+            {
+              "value": "Brittle",
+              "weight": 1
+            },
+            {
+              "value": "Cold",
+              "weight": 1
+            },
+            {
+              "value": "Cruel",
+              "weight": 1
+            },
+            {
+              "value": "Cynical",
+              "weight": 1
+            },
+            {
+              "value": "Dread",
+              "weight": 1
+            },
+            {
+              "value": "Empty",
+              "weight": 1
+            },
+            {
+              "value": "Faded",
+              "weight": 1
+            },
+            {
+              "value": "Grim",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Jaded",
+              "weight": 1
+            },
+            {
+              "value": "Keen",
+              "weight": 1
+            },
+            {
+              "value": "Lone",
+              "weight": 1
+            },
+            {
+              "value": "Merciless",
+              "weight": 1
+            },
+            {
+              "value": "Night",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Ruthless",
+              "weight": 1
+            },
+            {
+              "value": "Silent",
+              "weight": 1
+            },
+            {
+              "value": "Sour",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Vile",
+              "weight": 1
+            },
+            {
+              "value": "Withered",
+              "weight": 1
+            },
+            {
+              "value": "Zealot",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "object",
+          "choices": [
+            {
+              "value": "Anchor",
+              "weight": 1
+            },
+            {
+              "value": "Blade",
+              "weight": 1
+            },
+            {
+              "value": "Bracket",
+              "weight": 1
+            },
+            {
+              "value": "Cipher",
+              "weight": 1
+            },
+            {
+              "value": "Crown",
+              "weight": 1
+            },
+            {
+              "value": "Dagger",
+              "weight": 1
+            },
+            {
+              "value": "Fang",
+              "weight": 1
+            },
+            {
+              "value": "Gauntlet",
+              "weight": 1
+            },
+            {
+              "value": "Glass",
+              "weight": 1
+            },
+            {
+              "value": "Hook",
+              "weight": 1
+            },
+            {
+              "value": "Key",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Ledger",
+              "weight": 1
+            },
+            {
+              "value": "Masks",
+              "weight": 1
+            },
+            {
+              "value": "Needle",
+              "weight": 1
+            },
+            {
+              "value": "Noose",
+              "weight": 1
+            },
+            {
+              "value": "Prism",
+              "weight": 1
+            },
+            {
+              "value": "Quill",
+              "weight": 1
+            },
+            {
+              "value": "Razor",
+              "weight": 1
+            },
+            {
+              "value": "Rust",
+              "weight": 1
+            },
+            {
+              "value": "Scales",
+              "weight": 1
+            },
+            {
+              "value": "Shard",
+              "weight": 1
+            },
+            {
+              "value": "Spike",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Vise",
+              "weight": 1
+            },
+            {
+              "value": "Wire",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "article",
+          "choices": [
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "A",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "number",
+          "choices": [
+            {
+              "value": "I",
+              "weight": 1
+            },
+            {
+              "value": "II",
+              "weight": 1
+            },
+            {
+              "value": "III",
+              "weight": 1
+            },
+            {
+              "value": "IV",
+              "weight": 1
+            },
+            {
+              "value": "IX",
+              "weight": 1
+            },
+            {
+              "value": "XIII",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/power",
+      "description": "A power set entry: a verb of action paired with a strange faculty.",
+      "tags": [
+        "power",
+        "ability"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#verb.cap# #noun#",
+              "weight": 1
+            },
+            {
+              "value": "#control.cap# #domain#",
+              "weight": 1
+            },
+            {
+              "value": "#noun.cap# #effect#",
+              "weight": 1
+            },
+            {
+              "value": "#verb.cap# #domain# #effect#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "Bend",
+              "weight": 1
+            },
+            {
+              "value": "Bind",
+              "weight": 1
+            },
+            {
+              "value": "Channel",
+              "weight": 1
+            },
+            {
+              "value": "Command",
+              "weight": 1
+            },
+            {
+              "value": "Conjure",
+              "weight": 1
+            },
+            {
+              "value": "Divert",
+              "weight": 1
+            },
+            {
+              "value": "Douse",
+              "weight": 1
+            },
+            {
+              "value": "Embrace",
+              "weight": 1
+            },
+            {
+              "value": "Fold",
+              "weight": 1
+            },
+            {
+              "value": "Harvest",
+              "weight": 1
+            },
+            {
+              "value": "Ignite",
+              "weight": 1
+            },
+            {
+              "value": "Invoke",
+              "weight": 1
+            },
+            {
+              "value": "Lift",
+              "weight": 1
+            },
+            {
+              "value": "Mend",
+              "weight": 1
+            },
+            {
+              "value": "Mirror",
+              "weight": 1
+            },
+            {
+              "value": "Pierce",
+              "weight": 1
+            },
+            {
+              "value": "Pull",
+              "weight": 1
+            },
+            {
+              "value": "Quell",
+              "weight": 1
+            },
+            {
+              "value": "Raise",
+              "weight": 1
+            },
+            {
+              "value": "Rend",
+              "weight": 1
+            },
+            {
+              "value": "Route",
+              "weight": 1
+            },
+            {
+              "value": "Shelter",
+              "weight": 1
+            },
+            {
+              "value": "Siphon",
+              "weight": 1
+            },
+            {
+              "value": "Still",
+              "weight": 1
+            },
+            {
+              "value": "Stretch",
+              "weight": 1
+            },
+            {
+              "value": "Turn",
+              "weight": 1
+            },
+            {
+              "value": "Unmake",
+              "weight": 1
+            },
+            {
+              "value": "Weave",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "control",
+          "choices": [
+            {
+              "value": "Aegis",
+              "weight": 1
+            },
+            {
+              "value": "Aperture",
+              "weight": 1
+            },
+            {
+              "value": "Current",
+              "weight": 1
+            },
+            {
+              "value": "Eclipse",
+              "weight": 1
+            },
+            {
+              "value": "Fathom",
+              "weight": 1
+            },
+            {
+              "value": "Filter",
+              "weight": 1
+            },
+            {
+              "value": "Grid",
+              "weight": 1
+            },
+            {
+              "value": "Halo",
+              "weight": 1
+            },
+            {
+              "value": "Lattice",
+              "weight": 1
+            },
+            {
+              "value": "Momentum",
+              "weight": 1
+            },
+            {
+              "value": "Parallax",
+              "weight": 1
+            },
+            {
+              "value": "Prism",
+              "weight": 1
+            },
+            {
+              "value": "Relay",
+              "weight": 1
+            },
+            {
+              "value": "Resonance",
+              "weight": 1
+            },
+            {
+              "value": "Tide",
+              "weight": 1
+            },
+            {
+              "value": "Vector",
+              "weight": 1
+            },
+            {
+              "value": "Verge",
+              "weight": 1
+            },
+            {
+              "value": "Vortex",
+              "weight": 1
+            },
+            {
+              "value": "Warding",
+              "weight": 1
+            },
+            {
+              "value": "Web",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "afterimages",
+              "weight": 1
+            },
+            {
+              "value": "ambient heat",
+              "weight": 1
+            },
+            {
+              "value": "bone echoes",
+              "weight": 1
+            },
+            {
+              "value": "cables",
+              "weight": 1
+            },
+            {
+              "value": "chalk lines",
+              "weight": 1
+            },
+            {
+              "value": "circuit maps",
+              "weight": 1
+            },
+            {
+              "value": "cold light",
+              "weight": 1
+            },
+            {
+              "value": "concrete",
+              "weight": 1
+            },
+            {
+              "value": "crowds",
+              "weight": 1
+            },
+            {
+              "value": "dream fragments",
+              "weight": 1
+            },
+            {
+              "value": "dust",
+              "weight": 1
+            },
+            {
+              "value": "embers",
+              "weight": 1
+            },
+            {
+              "value": "glass",
+              "weight": 1
+            },
+            {
+              "value": "gravity wells",
+              "weight": 1
+            },
+            {
+              "value": "hollow voices",
+              "weight": 1
+            },
+            {
+              "value": "ink",
+              "weight": 1
+            },
+            {
+              "value": "keys",
+              "weight": 1
+            },
+            {
+              "value": "lagoon water",
+              "weight": 1
+            },
+            {
+              "value": "lightning",
+              "weight": 1
+            },
+            {
+              "value": "memories",
+              "weight": 1
+            },
+            {
+              "value": "mirror shards",
+              "weight": 1
+            },
+            {
+              "value": "motions",
+              "weight": 1
+            },
+            {
+              "value": "paper cranes",
+              "weight": 1
+            },
+            {
+              "value": "rain",
+              "weight": 1
+            },
+            {
+              "value": "reflections",
+              "weight": 1
+            },
+            {
+              "value": "shadows",
+              "weight": 1
+            },
+            {
+              "value": "smoke",
+              "weight": 1
+            },
+            {
+              "value": "static",
+              "weight": 1
+            },
+            {
+              "value": "steam",
+              "weight": 1
+            },
+            {
+              "value": "stones",
+              "weight": 1
+            },
+            {
+              "value": "sunlight",
+              "weight": 1
+            },
+            {
+              "value": "threads",
+              "weight": 1
+            },
+            {
+              "value": "wind",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "domain",
+          "choices": [
+            {
+              "value": "of acoustics",
+              "weight": 1
+            },
+            {
+              "value": "of atmosphere",
+              "weight": 1
+            },
+            {
+              "value": "of decay",
+              "weight": 1
+            },
+            {
+              "value": "of electricity",
+              "weight": 1
+            },
+            {
+              "value": "of flora",
+              "weight": 1
+            },
+            {
+              "value": "of geometry",
+              "weight": 1
+            },
+            {
+              "value": "of glass",
+              "weight": 1
+            },
+            {
+              "value": "of gravitation",
+              "weight": 1
+            },
+            {
+              "value": "of heat",
+              "weight": 1
+            },
+            {
+              "value": "of hydrography",
+              "weight": 1
+            },
+            {
+              "value": "of machines",
+              "weight": 1
+            },
+            {
+              "value": "of metal",
+              "weight": 1
+            },
+            {
+              "value": "of motion",
+              "weight": 1
+            },
+            {
+              "value": "of optics",
+              "weight": 1
+            },
+            {
+              "value": "of pressure",
+              "weight": 1
+            },
+            {
+              "value": "of radiation",
+              "weight": 1
+            },
+            {
+              "value": "of shadows",
+              "weight": 1
+            },
+            {
+              "value": "of sound",
+              "weight": 1
+            },
+            {
+              "value": "of spacetime",
+              "weight": 1
+            },
+            {
+              "value": "of thermodynamics",
+              "weight": 1
+            },
+            {
+              "value": "of tides",
+              "weight": 1
+            },
+            {
+              "value": "of waste",
+              "weight": 1
+            },
+            {
+              "value": "of weather",
+              "weight": 1
+            },
+            {
+              "value": "of will",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "effect",
+          "choices": [
+            {
+              "value": "at a distance",
+              "weight": 1
+            },
+            {
+              "value": "by touch",
+              "weight": 1
+            },
+            {
+              "value": "for a heartbeat",
+              "weight": 1
+            },
+            {
+              "value": "in a radius",
+              "weight": 1
+            },
+            {
+              "value": "in bursts",
+              "weight": 1
+            },
+            {
+              "value": "in secret",
+              "weight": 1
+            },
+            {
+              "value": "in slow motion",
+              "weight": 1
+            },
+            {
+              "value": "once per dusk",
+              "weight": 1
+            },
+            {
+              "value": "under open sky",
+              "weight": 1
+            },
+            {
+              "value": "without warning",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/origin",
+      "description": "How an ordinary person acquired an extraordinary faculty.",
+      "tags": [
+        "origin",
+        "backstory"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#source.cap# in #place#",
+              "weight": 1
+            },
+            {
+              "value": "#event.cap# at #place#",
+              "weight": 1
+            },
+            {
+              "value": "#source.cap# #event#",
+              "weight": 1
+            },
+            {
+              "value": "#event.cap# #time#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "source",
+          "choices": [
+            {
+              "value": "a diverted meteor",
+              "weight": 1
+            },
+            {
+              "value": "a botched experiment",
+              "weight": 1
+            },
+            {
+              "value": "a buried signal",
+              "weight": 1
+            },
+            {
+              "value": "a cosmic storm",
+              "weight": 1
+            },
+            {
+              "value": "a cursed heirloom",
+              "weight": 1
+            },
+            {
+              "value": "a deep-sea vent",
+              "weight": 1
+            },
+            {
+              "value": "a failed reactor",
+              "weight": 1
+            },
+            {
+              "value": "a forgotten vaccine",
+              "weight": 1
+            },
+            {
+              "value": "a glowing spore",
+              "weight": 1
+            },
+            {
+              "value": "a hidden door",
+              "weight": 1
+            },
+            {
+              "value": "a lab accident",
+              "weight": 1
+            },
+            {
+              "value": "a lunar bloom",
+              "weight": 1
+            },
+            {
+              "value": "a malfunctioning portal",
+              "weight": 1
+            },
+            {
+              "value": "a mysterious inheritance",
+              "weight": 1
+            },
+            {
+              "value": "a near-death dream",
+              "weight": 1
+            },
+            {
+              "value": "a pirate broadcast",
+              "weight": 1
+            },
+            {
+              "value": "a radiant mineral",
+              "weight": 1
+            },
+            {
+              "value": "a rogue satellite",
+              "weight": 1
+            },
+            {
+              "value": "a strange transfusion",
+              "weight": 1
+            },
+            {
+              "value": "a sunlight eclipse",
+              "weight": 1
+            },
+            {
+              "value": "a thunderous exposure",
+              "weight": 1
+            },
+            {
+              "value": "a viral equation",
+              "weight": 1
+            },
+            {
+              "value": "a wish at midnight",
+              "weight": 1
+            },
+            {
+              "value": "an alien compass",
+              "weight": 1
+            },
+            {
+              "value": "an ancient battery",
+              "weight": 1
+            },
+            {
+              "value": "an unsent letter",
+              "weight": 1
+            },
+            {
+              "value": "an untested serum",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "event",
+          "choices": [
+            {
+              "value": "changed everything",
+              "weight": 1
+            },
+            {
+              "value": "gave a new purpose",
+              "weight": 1
+            },
+            {
+              "value": "left a permanent mark",
+              "weight": 1
+            },
+            {
+              "value": "opened an unexpected door",
+              "weight": 1
+            },
+            {
+              "value": "rewrote the senses",
+              "weight": 1
+            },
+            {
+              "value": "sealed a dangerous secret",
+              "weight": 1
+            },
+            {
+              "value": "split the timeline",
+              "weight": 1
+            },
+            {
+              "value": "started a chain of coincidences",
+              "weight": 1
+            },
+            {
+              "value": "took a year to understand",
+              "weight": 1
+            },
+            {
+              "value": "unlocked a hidden aptitude",
+              "weight": 1
+            },
+            {
+              "value": "woke something old",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "a coastal lab",
+              "weight": 1
+            },
+            {
+              "value": "an orbital station",
+              "weight": 1
+            },
+            {
+              "value": "a subway platform",
+              "weight": 1
+            },
+            {
+              "value": "a mountaintop observatory",
+              "weight": 1
+            },
+            {
+              "value": "a derelict hospital",
+              "weight": 1
+            },
+            {
+              "value": "a flooded archive",
+              "weight": 1
+            },
+            {
+              "value": "a hidden bunker",
+              "weight": 1
+            },
+            {
+              "value": "a late-night laundromat",
+              "weight": 1
+            },
+            {
+              "value": "a lost expedition camp",
+              "weight": 1
+            },
+            {
+              "value": "a sealed vault",
+              "weight": 1
+            },
+            {
+              "value": "a university basement",
+              "weight": 1
+            },
+            {
+              "value": "an abandoned factory",
+              "weight": 1
+            },
+            {
+              "value": "a village well",
+              "weight": 1
+            },
+            {
+              "value": "a radiation ward",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "time",
+          "choices": [
+            {
+              "value": "at seventeen",
+              "weight": 1
+            },
+            {
+              "value": "during blackout week",
+              "weight": 1
+            },
+            {
+              "value": "in a single impossible night",
+              "weight": 1
+            },
+            {
+              "value": "on a winter solstice",
+              "weight": 1
+            },
+            {
+              "value": "under a blue moon",
+              "weight": 1
+            },
+            {
+              "value": "when the sirens failed",
+              "weight": 1
+            },
+            {
+              "value": "years before the first headline",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/team",
+      "description": "Hero teams, villain syndicates and semi-legitimate organizations.",
+      "tags": [
+        "team",
+        "faction",
+        "organization"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#article# #adjective.cap# #body#",
+              "weight": 1
+            },
+            {
+              "value": "#adjective.cap# #body.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#body.cap# of #place#",
+              "weight": 1
+            },
+            {
+              "value": "#initialism# — the #adjective.cap# #body#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "article",
+          "choices": [
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "A",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Aegis",
+              "weight": 1
+            },
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Aurora",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Bright",
+              "weight": 1
+            },
+            {
+              "value": "Civic",
+              "weight": 1
+            },
+            {
+              "value": "Cobalt",
+              "weight": 1
+            },
+            {
+              "value": "Crimson",
+              "weight": 1
+            },
+            {
+              "value": "Dawn",
+              "weight": 1
+            },
+            {
+              "value": "Eclipse",
+              "weight": 1
+            },
+            {
+              "value": "Emerald",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Midnight",
+              "weight": 1
+            },
+            {
+              "value": "Obsidian",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Quantum",
+              "weight": 1
+            },
+            {
+              "value": "Radiant",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Thorn",
+              "weight": 1
+            },
+            {
+              "value": "Velvet",
+              "weight": 1
+            },
+            {
+              "value": "Verdant",
+              "weight": 1
+            },
+            {
+              "value": "White",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "body",
+          "choices": [
+            {
+              "value": "Alliance",
+              "weight": 1
+            },
+            {
+              "value": "Brigade",
+              "weight": 1
+            },
+            {
+              "value": "Circle",
+              "weight": 1
+            },
+            {
+              "value": "Collective",
+              "weight": 1
+            },
+            {
+              "value": "Compact",
+              "weight": 1
+            },
+            {
+              "value": "Corps",
+              "weight": 1
+            },
+            {
+              "value": "Covenant",
+              "weight": 1
+            },
+            {
+              "value": "Guild",
+              "weight": 1
+            },
+            {
+              "value": "League",
+              "weight": 1
+            },
+            {
+              "value": "Order",
+              "weight": 1
+            },
+            {
+              "value": "Pact",
+              "weight": 1
+            },
+            {
+              "value": "Patrol",
+              "weight": 1
+            },
+            {
+              "value": "Posse",
+              "weight": 1
+            },
+            {
+              "value": "Project",
+              "weight": 1
+            },
+            {
+              "value": "Regiment",
+              "weight": 1
+            },
+            {
+              "value": "Society",
+              "weight": 1
+            },
+            {
+              "value": "Syndicate",
+              "weight": 1
+            },
+            {
+              "value": "Union",
+              "weight": 1
+            },
+            {
+              "value": "Watch",
+              "weight": 1
+            },
+            {
+              "value": "Workshop",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Briarwood",
+              "weight": 1
+            },
+            {
+              "value": "Cinder Row",
+              "weight": 1
+            },
+            {
+              "value": "Fairhaven",
+              "weight": 1
+            },
+            {
+              "value": "Hollowfield",
+              "weight": 1
+            },
+            {
+              "value": "Ironwash",
+              "weight": 1
+            },
+            {
+              "value": "Larkspur",
+              "weight": 1
+            },
+            {
+              "value": "Lowbridge",
+              "weight": 1
+            },
+            {
+              "value": "Marlowe",
+              "weight": 1
+            },
+            {
+              "value": "Nightdock",
+              "weight": 1
+            },
+            {
+              "value": "Northgate",
+              "weight": 1
+            },
+            {
+              "value": "Quietwater",
+              "weight": 1
+            },
+            {
+              "value": "Rivermouth",
+              "weight": 1
+            },
+            {
+              "value": "Silverlake",
+              "weight": 1
+            },
+            {
+              "value": "Stonebridge",
+              "weight": 1
+            },
+            {
+              "value": "Westhatch",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "initialism",
+          "choices": [
+            {
+              "value": "A.R.C.",
+              "weight": 1
+            },
+            {
+              "value": "B.L.I.M.",
+              "weight": 1
+            },
+            {
+              "value": "C.O.R.E.",
+              "weight": 1
+            },
+            {
+              "value": "D.E.F.",
+              "weight": 1
+            },
+            {
+              "value": "E.C.H.O.",
+              "weight": 1
+            },
+            {
+              "value": "F.O.R.C.E.",
+              "weight": 1
+            },
+            {
+              "value": "G.R.I.D.",
+              "weight": 1
+            },
+            {
+              "value": "H.A.V.E.N.",
+              "weight": 1
+            },
+            {
+              "value": "I.O.N.",
+              "weight": 1
+            },
+            {
+              "value": "J.U.S.T.",
+              "weight": 1
+            },
+            {
+              "value": "K.E.Y.",
+              "weight": 1
+            },
+            {
+              "value": "L.O.O.P.",
+              "weight": 1
+            },
+            {
+              "value": "M.A.S.K.",
+              "weight": 1
+            },
+            {
+              "value": "N.E.X.U.S.",
+              "weight": 1
+            },
+            {
+              "value": "O.R.B.I.T.",
+              "weight": 1
+            },
+            {
+              "value": "P.R.I.S.M.",
+              "weight": 1
+            },
+            {
+              "value": "Q.U.E.S.T.",
+              "weight": 1
+            },
+            {
+              "value": "R.E.L.A.Y.",
+              "weight": 1
+            },
+            {
+              "value": "S.H.I.F.T.",
+              "weight": 1
+            },
+            {
+              "value": "T.R.U.S.T.",
+              "weight": 1
+            },
+            {
+              "value": "U.N.I.T.",
+              "weight": 1
+            },
+            {
+              "value": "V.E.C.T.O.R.",
+              "weight": 1
+            },
+            {
+              "value": "W.E.B.",
+              "weight": 1
+            },
+            {
+              "value": "X.E.N.O.",
+              "weight": 1
+            },
+            {
+              "value": "Y.E.S.",
+              "weight": 1
+            },
+            {
+              "value": "Z.E.R.O.",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/lair",
+      "description": "Hero hideouts and villain headquarters, from rooftops to disused infrastructure.",
+      "tags": [
+        "lair",
+        "place",
+        "base"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#article# #adjective.cap# #structure#",
+              "weight": 1
+            },
+            {
+              "value": "#structure.cap# on #street#",
+              "weight": 1
+            },
+            {
+              "value": "#adjective.cap# #structure.cap#",
+              "weight": 1
+            },
+            {
+              "value": "#structure.cap# beneath #place#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "article",
+          "choices": [
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "The",
+              "weight": 1
+            },
+            {
+              "value": "A",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adjective",
+          "choices": [
+            {
+              "value": "Abandoned",
+              "weight": 1
+            },
+            {
+              "value": "Aerial",
+              "weight": 1
+            },
+            {
+              "value": "Beneath",
+              "weight": 1
+            },
+            {
+              "value": "Blind",
+              "weight": 1
+            },
+            {
+              "value": "Blue",
+              "weight": 1
+            },
+            {
+              "value": "Brass",
+              "weight": 1
+            },
+            {
+              "value": "Broken",
+              "weight": 1
+            },
+            {
+              "value": "Buried",
+              "weight": 1
+            },
+            {
+              "value": "Cinder",
+              "weight": 1
+            },
+            {
+              "value": "Clockwork",
+              "weight": 1
+            },
+            {
+              "value": "Concealed",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Frozen",
+              "weight": 1
+            },
+            {
+              "value": "Glass",
+              "weight": 1
+            },
+            {
+              "value": "Gilded",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Hidden",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Low",
+              "weight": 1
+            },
+            {
+              "value": "Mirror",
+              "weight": 1
+            },
+            {
+              "value": "Neon",
+              "weight": 1
+            },
+            {
+              "value": "Quiet",
+              "weight": 1
+            },
+            {
+              "value": "Rusted",
+              "weight": 1
+            },
+            {
+              "value": "Sandstone",
+              "weight": 1
+            },
+            {
+              "value": "Silent",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Velvet",
+              "weight": 1
+            },
+            {
+              "value": "Winter",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "structure",
+          "choices": [
+            {
+              "value": "Annex",
+              "weight": 1
+            },
+            {
+              "value": "Arcade",
+              "weight": 1
+            },
+            {
+              "value": "Archive",
+              "weight": 1
+            },
+            {
+              "value": "Atrium",
+              "weight": 1
+            },
+            {
+              "value": "Basement",
+              "weight": 1
+            },
+            {
+              "value": "Bunker",
+              "weight": 1
+            },
+            {
+              "value": "Cavern",
+              "weight": 1
+            },
+            {
+              "value": "Cistern",
+              "weight": 1
+            },
+            {
+              "value": "Depot",
+              "weight": 1
+            },
+            {
+              "value": "Dome",
+              "weight": 1
+            },
+            {
+              "value": "Foundry",
+              "weight": 1
+            },
+            {
+              "value": "Garage",
+              "weight": 1
+            },
+            {
+              "value": "Hatch",
+              "weight": 1
+            },
+            {
+              "value": "Loft",
+              "weight": 1
+            },
+            {
+              "value": "Observatory",
+              "weight": 1
+            },
+            {
+              "value": "Platform",
+              "weight": 1
+            },
+            {
+              "value": "Refinery",
+              "weight": 1
+            },
+            {
+              "value": "Roost",
+              "weight": 1
+            },
+            {
+              "value": "Signal Tower",
+              "weight": 1
+            },
+            {
+              "value": "Substation",
+              "weight": 1
+            },
+            {
+              "value": "Tunnel",
+              "weight": 1
+            },
+            {
+              "value": "Vault",
+              "weight": 1
+            },
+            {
+              "value": "Warehouse",
+              "weight": 1
+            },
+            {
+              "value": "Workshop",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "street",
+          "choices": [
+            {
+              "value": "Ash Lane",
+              "weight": 1
+            },
+            {
+              "value": "Bell Alley",
+              "weight": 1
+            },
+            {
+              "value": "Cinder Row",
+              "weight": 1
+            },
+            {
+              "value": "Dusk Street",
+              "weight": 1
+            },
+            {
+              "value": "Fog Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Ironwash Road",
+              "weight": 1
+            },
+            {
+              "value": "Lantern Hill",
+              "weight": 1
+            },
+            {
+              "value": "Mill Row",
+              "weight": 1
+            },
+            {
+              "value": "Nightdock",
+              "weight": 1
+            },
+            {
+              "value": "Pike Street",
+              "weight": 1
+            },
+            {
+              "value": "Quay Nine",
+              "weight": 1
+            },
+            {
+              "value": "Rookery Steps",
+              "weight": 1
+            },
+            {
+              "value": "Sable Height",
+              "weight": 1
+            },
+            {
+              "value": "Tidewell",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "the aquarium",
+              "weight": 1
+            },
+            {
+              "value": "the archive",
+              "weight": 1
+            },
+            {
+              "value": "the canal",
+              "weight": 1
+            },
+            {
+              "value": "the cathedral",
+              "weight": 1
+            },
+            {
+              "value": "the city hall",
+              "weight": 1
+            },
+            {
+              "value": "the clocktower",
+              "weight": 1
+            },
+            {
+              "value": "the foundry",
+              "weight": 1
+            },
+            {
+              "value": "the hospital",
+              "weight": 1
+            },
+            {
+              "value": "the library",
+              "weight": 1
+            },
+            {
+              "value": "the museum",
+              "weight": 1
+            },
+            {
+              "value": "the observatory",
+              "weight": 1
+            },
+            {
+              "value": "the old bridge",
+              "weight": 1
+            },
+            {
+              "value": "the opera house",
+              "weight": 1
+            },
+            {
+              "value": "the rail yard",
+              "weight": 1
+            },
+            {
+              "value": "the reservoir",
+              "weight": 1
+            },
+            {
+              "value": "the stadium",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/headline",
+      "description": "Tabloid and broadsheet headlines about costumed incidents.",
+      "tags": [
+        "headline",
+        "news"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#subject.cap# #verb# #object#",
+              "weight": 1
+            },
+            {
+              "value": "#exclamation.cap#: #subject# #verb# #object#",
+              "weight": 1
+            },
+            {
+              "value": "#verb.cap# #object# as #subject# watches",
+              "weight": 1
+            },
+            {
+              "value": "#subject.cap# #verb# #object# in #place#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "subject",
+          "choices": [
+            {
+              "value": "Beacon",
+              "weight": 1
+            },
+            {
+              "value": "the Aegis",
+              "weight": 1
+            },
+            {
+              "value": "the Cobalt Fox",
+              "weight": 1
+            },
+            {
+              "value": "the Dawn Choir",
+              "weight": 1
+            },
+            {
+              "value": "the Glass Hand",
+              "weight": 1
+            },
+            {
+              "value": "the Hollow Ledger",
+              "weight": 1
+            },
+            {
+              "value": "the Iron Wren",
+              "weight": 1
+            },
+            {
+              "value": "the Lantern Brigade",
+              "weight": 1
+            },
+            {
+              "value": "the Mirror Court",
+              "weight": 1
+            },
+            {
+              "value": "the Night Ledger",
+              "weight": 1
+            },
+            {
+              "value": "the Obsidian Vale",
+              "weight": 1
+            },
+            {
+              "value": "the Silver Lark",
+              "weight": 1
+            },
+            {
+              "value": "the Thorn Syndicate",
+              "weight": 1
+            },
+            {
+              "value": "the Verdant Circle",
+              "weight": 1
+            },
+            {
+              "value": "the Velvet Rook",
+              "weight": 1
+            },
+            {
+              "value": "the Watch",
+              "weight": 1
+            },
+            {
+              "value": "two masked figures",
+              "weight": 1
+            },
+            {
+              "value": "an unregistered team",
+              "weight": 1
+            },
+            {
+              "value": "a lone vigilante",
+              "weight": 1
+            },
+            {
+              "value": "the city council",
+              "weight": 1
+            },
+            {
+              "value": "the emergency service",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "absconds with",
+              "weight": 1
+            },
+            {
+              "value": "amazes",
+              "weight": 1
+            },
+            {
+              "value": "allegedly disarms",
+              "weight": 1
+            },
+            {
+              "value": "arrives at",
+              "weight": 1
+            },
+            {
+              "value": "blames",
+              "weight": 1
+            },
+            {
+              "value": "confronts",
+              "weight": 1
+            },
+            {
+              "value": "conjures",
+              "weight": 1
+            },
+            {
+              "value": "defuses",
+              "weight": 1
+            },
+            {
+              "value": "denies",
+              "weight": 1
+            },
+            {
+              "value": "disappears from",
+              "weight": 1
+            },
+            {
+              "value": "escapes",
+              "weight": 1
+            },
+            {
+              "value": "exposes",
+              "weight": 1
+            },
+            {
+              "value": "halts",
+              "weight": 1
+            },
+            {
+              "value": "haunts",
+              "weight": 1
+            },
+            {
+              "value": "ignites",
+              "weight": 1
+            },
+            {
+              "value": "infiltrates",
+              "weight": 1
+            },
+            {
+              "value": "invents",
+              "weight": 1
+            },
+            {
+              "value": "mirrors",
+              "weight": 1
+            },
+            {
+              "value": "rescues",
+              "weight": 1
+            },
+            {
+              "value": "reveals",
+              "weight": 1
+            },
+            {
+              "value": "sabotages",
+              "weight": 1
+            },
+            {
+              "value": "saves",
+              "weight": 1
+            },
+            {
+              "value": "seals",
+              "weight": 1
+            },
+            {
+              "value": "silences",
+              "weight": 1
+            },
+            {
+              "value": "storms",
+              "weight": 1
+            },
+            {
+              "value": "thwarts",
+              "weight": 1
+            },
+            {
+              "value": "unmasks",
+              "weight": 1
+            },
+            {
+              "value": "vanishes from",
+              "weight": 1
+            },
+            {
+              "value": "warns of",
+              "weight": 1
+            },
+            {
+              "value": "witnesses",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "object",
+          "choices": [
+            {
+              "value": "a collapsing bridge",
+              "weight": 1
+            },
+            {
+              "value": "a stolen ledger",
+              "weight": 1
+            },
+            {
+              "value": "a disputed patent",
+              "weight": 1
+            },
+            {
+              "value": "a flooded subway",
+              "weight": 1
+            },
+            {
+              "value": "a ghost signal",
+              "weight": 1
+            },
+            {
+              "value": "a missing heirloom",
+              "weight": 1
+            },
+            {
+              "value": "a rogue automaton",
+              "weight": 1
+            },
+            {
+              "value": "a sealed vault",
+              "weight": 1
+            },
+            {
+              "value": "a shadow plume",
+              "weight": 1
+            },
+            {
+              "value": "a singular anomaly",
+              "weight": 1
+            },
+            {
+              "value": "a strange comet",
+              "weight": 1
+            },
+            {
+              "value": "a sunken archive",
+              "weight": 1
+            },
+            {
+              "value": "the city grid",
+              "weight": 1
+            },
+            {
+              "value": "the courthouse steps",
+              "weight": 1
+            },
+            {
+              "value": "the night shift",
+              "weight": 1
+            },
+            {
+              "value": "the old foundry",
+              "weight": 1
+            },
+            {
+              "value": "the public trust",
+              "weight": 1
+            },
+            {
+              "value": "the weather bureau",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "exclamation",
+          "choices": [
+            {
+              "value": "ASTOUNDING",
+              "weight": 1
+            },
+            {
+              "value": "BREAKING",
+              "weight": 1
+            },
+            {
+              "value": "EXCLUSIVE",
+              "weight": 1
+            },
+            {
+              "value": "HEROISM",
+              "weight": 1
+            },
+            {
+              "value": "MYSTERY",
+              "weight": 1
+            },
+            {
+              "value": "SHOCK",
+              "weight": 1
+            },
+            {
+              "value": "SPECTACULAR",
+              "weight": 1
+            },
+            {
+              "value": "UNBELIEVABLE",
+              "weight": 1
+            },
+            {
+              "value": "URGENT",
+              "weight": 1
+            },
+            {
+              "value": "WITNESS",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Briarwood",
+              "weight": 1
+            },
+            {
+              "value": "Cinder Row",
+              "weight": 1
+            },
+            {
+              "value": "Fairhaven",
+              "weight": 1
+            },
+            {
+              "value": "Nightdock",
+              "weight": 1
+            },
+            {
+              "value": "Northgate",
+              "weight": 1
+            },
+            {
+              "value": "Rivermouth",
+              "weight": 1
+            },
+            {
+              "value": "Stonebridge",
+              "weight": 1
+            },
+            {
+              "value": "Westhatch",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/grammar/motto",
+      "description": "Short Public Service mottoes used by teams and vigilantes.",
+      "tags": [
+        "motto",
+        "slogan"
+      ],
+      "start": "start",
+      "maxDepth": 12,
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#verb.cap# #object#",
+              "weight": 1
+            },
+            {
+              "value": "#object.cap# #time#",
+              "weight": 1
+            },
+            {
+              "value": "No #object# without #virtue#",
+              "weight": 1
+            },
+            {
+              "value": "We #verb# #object#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "Answer",
+              "weight": 1
+            },
+            {
+              "value": "Defend",
+              "weight": 1
+            },
+            {
+              "value": "Endure",
+              "weight": 1
+            },
+            {
+              "value": "Guard",
+              "weight": 1
+            },
+            {
+              "value": "Hold",
+              "weight": 1
+            },
+            {
+              "value": "Illuminate",
+              "weight": 1
+            },
+            {
+              "value": "Keep",
+              "weight": 1
+            },
+            {
+              "value": "Mend",
+              "weight": 1
+            },
+            {
+              "value": "Protect",
+              "weight": 1
+            },
+            {
+              "value": "Remember",
+              "weight": 1
+            },
+            {
+              "value": "Restore",
+              "weight": 1
+            },
+            {
+              "value": "Reveal",
+              "weight": 1
+            },
+            {
+              "value": "Shield",
+              "weight": 1
+            },
+            {
+              "value": "Stand for",
+              "weight": 1
+            },
+            {
+              "value": "Warn of",
+              "weight": 1
+            },
+            {
+              "value": "Watch",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "object",
+          "choices": [
+            {
+              "value": "the alley",
+              "weight": 1
+            },
+            {
+              "value": "the beam",
+              "weight": 1
+            },
+            {
+              "value": "the bridge",
+              "weight": 1
+            },
+            {
+              "value": "the city",
+              "weight": 1
+            },
+            {
+              "value": "the clock",
+              "weight": 1
+            },
+            {
+              "value": "the code",
+              "weight": 1
+            },
+            {
+              "value": "the dark",
+              "weight": 1
+            },
+            {
+              "value": "the door",
+              "weight": 1
+            },
+            {
+              "value": "the flame",
+              "weight": 1
+            },
+            {
+              "value": "the grid",
+              "weight": 1
+            },
+            {
+              "value": "the line",
+              "weight": 1
+            },
+            {
+              "value": "the night",
+              "weight": 1
+            },
+            {
+              "value": "the promise",
+              "weight": 1
+            },
+            {
+              "value": "the quiet",
+              "weight": 1
+            },
+            {
+              "value": "the signal",
+              "weight": 1
+            },
+            {
+              "value": "the street",
+              "weight": 1
+            },
+            {
+              "value": "the truth",
+              "weight": 1
+            },
+            {
+              "value": "the vulnerable",
+              "weight": 1
+            },
+            {
+              "value": "the weak",
+              "weight": 1
+            },
+            {
+              "value": "the witness",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "virtue",
+          "choices": [
+            {
+              "value": "courage",
+              "weight": 1
+            },
+            {
+              "value": "fairness",
+              "weight": 1
+            },
+            {
+              "value": "hope",
+              "weight": 1
+            },
+            {
+              "value": "justice",
+              "weight": 1
+            },
+            {
+              "value": "mercy",
+              "weight": 1
+            },
+            {
+              "value": "patience",
+              "weight": 1
+            },
+            {
+              "value": "reason",
+              "weight": 1
+            },
+            {
+              "value": "resolve",
+              "weight": 1
+            },
+            {
+              "value": "solidarity",
+              "weight": 1
+            },
+            {
+              "value": "truth",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "time",
+          "choices": [
+            {
+              "value": "after dark",
+              "weight": 1
+            },
+            {
+              "value": "at dawn",
+              "weight": 1
+            },
+            {
+              "value": "before the sirens",
+              "weight": 1
+            },
+            {
+              "value": "in public",
+              "weight": 1
+            },
+            {
+              "value": "in silence",
+              "weight": 1
+            },
+            {
+              "value": "on the hour",
+              "weight": 1
+            },
+            {
+              "value": "without fear",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.supers/table/power-limit",
+      "description": "A 2d6 oracle for the cost or boundary attached to an invented superhuman faculty.",
+      "tags": [
+        "oracle",
+        "power",
+        "limit"
+      ],
+      "mode": "dice",
+      "maxDepth": 4,
+      "dice": {
+        "count": 2,
+        "sides": 6,
+        "modifier": 0
+      },
+      "entries": [
+        {
+          "key": "brief-burn",
+          "range": [
+            2,
+            4
+          ],
+          "result": {
+            "type": "text",
+            "text": "Usable for only a heartbeat; the effort leaves a ringing headache."
+          }
+        },
+        {
+          "key": "contact",
+          "range": [
+            5,
+            7
+          ],
+          "result": {
+            "type": "text",
+            "text": "Requires direct touch and a clear line of sight to the target."
+          }
+        },
+        {
+          "key": "charge",
+          "range": [
+            8,
+            10
+          ],
+          "result": {
+            "type": "text",
+            "text": "Needs several minutes of stillness to gather a single charge."
+          }
+        },
+        {
+          "key": "costly",
+          "range": [
+            11,
+            12
+          ],
+          "result": {
+            "type": "text",
+            "text": "Each use erases one cherished memory, permanently and without warning."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/table/incident",
+      "description": "A weighted oracle of strange public incidents suitable for a headline hook.",
+      "tags": [
+        "oracle",
+        "incident",
+        "hook"
+      ],
+      "mode": "weighted",
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "blackout",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A six-block blackout resolves itself; every clock in the district runs slow."
+          }
+        },
+        {
+          "key": "levitation",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A city bus hovers politely at an intersection until a masked figure waves it down."
+          }
+        },
+        {
+          "key": "duplicate",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Two identical figures report the same stolen umbrella at two police stations."
+          }
+        },
+        {
+          "key": "mirror",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "Every shop window on one street reflects the same impossible sunrise."
+          }
+        },
+        {
+          "key": "summons",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A hidden transmitter broadcasts a nine-word message in a dead language."
+          }
+        },
+        {
+          "key": "quarantine",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "An unmarked cordon appears around a laundromat; nobody remembers ordering it."
+          }
+        },
+        {
+          "key": "rescue",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A falling crane is stopped mid-air by something that leaves chalk-white handprints."
+          }
+        },
+        {
+          "key": "memory",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A crowd collectively forgets the name of the mayor for one entire afternoon."
+          }
+        },
+        {
+          "key": "signal",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A dead radio station transmits weather reports from a date three years ahead."
+          }
+        },
+        {
+          "key": "rift",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A hairline crack of blue light opens above the river and closes before noon."
+          }
+        },
+        {
+          "key": "archive",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A sealed archive releases a thousand paper cranes, each bearing a case number."
+          }
+        },
+        {
+          "key": "civic",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "The city council unanimously votes to thank an unidentified benefactor."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.supers/table/shadow-omen",
+      "description": "A weighted oracle of quiet warnings that precede a superhuman confrontation.",
+      "tags": [
+        "oracle",
+        "omen"
+      ],
+      "mode": "weighted",
+      "maxDepth": 4,
+      "entries": [
+        {
+          "key": "cold-rail",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "The underground rail is ten degrees colder than the platform."
+          }
+        },
+        {
+          "key": "chalk-mark",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A chalk circle appears overnight beneath your usual bus stop."
+          }
+        },
+        {
+          "key": "double-shadow",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Your shadow arrives a half-second after you do."
+          }
+        },
+        {
+          "key": "quiet-dog",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Every dog on the block faces the same empty alley."
+          }
+        },
+        {
+          "key": "wrong-news",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Tomorrow's paper is already on the stand, with today's date."
+          }
+        },
+        {
+          "key": "lantern",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A streetlamp burns blue and then goes out completely."
+          }
+        },
+        {
+          "key": "ledger",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "An unfamiliar accounting ledger lists your name under 'outstanding'."
+          }
+        },
+        {
+          "key": "knock",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Three soft knocks come from a door that has been bricked up for years."
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.supers/generator/person-name",
+      "description": "A modern personal name with a literal gloss.",
+      "tags": [
+        "person",
+        "identity"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.supers/culture/civic",
+      "kind": "given"
+    },
+    {
+      "id": "lexiconlang.supers/generator/hero-codename",
+      "description": "Hero codename.",
+      "tags": [
+        "hero",
+        "codename"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/hero-codename"
+    },
+    {
+      "id": "lexiconlang.supers/generator/villain-codename",
+      "description": "Villain codename.",
+      "tags": [
+        "villain",
+        "codename"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/villain-codename"
+    },
+    {
+      "id": "lexiconlang.supers/generator/power",
+      "description": "A single superhuman faculty.",
+      "tags": [
+        "power"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/power"
+    },
+    {
+      "id": "lexiconlang.supers/generator/origin",
+      "description": "An origin event and location.",
+      "tags": [
+        "origin"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/origin"
+    },
+    {
+      "id": "lexiconlang.supers/generator/team-name",
+      "description": "A hero team, villain syndicate or organization.",
+      "tags": [
+        "team",
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/team"
+    },
+    {
+      "id": "lexiconlang.supers/generator/lair",
+      "description": "A hideout or headquarters.",
+      "tags": [
+        "lair",
+        "place"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/lair"
+    },
+    {
+      "id": "lexiconlang.supers/generator/headline",
+      "description": "A newspaper headline about a masked incident.",
+      "tags": [
+        "headline",
+        "news"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/headline"
+    },
+    {
+      "id": "lexiconlang.supers/generator/motto",
+      "description": "A short team motto.",
+      "tags": [
+        "motto"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.supers/grammar/motto"
+    },
+    {
+      "id": "lexiconlang.supers/generator/place-name",
+      "description": "A modern settlement name with a gloss.",
+      "tags": [
+        "place"
+      ],
+      "output": "translated-name-v1",
+      "engine": "name-v1",
+      "culture": "lexiconlang.supers/culture/civic",
+      "kind": "settlement"
+    },
+    {
+      "id": "lexiconlang.supers/generator/power-limit",
+      "description": "A 2d6 cost or boundary for a power.",
+      "tags": [
+        "oracle",
+        "power"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.supers/table/power-limit"
+    },
+    {
+      "id": "lexiconlang.supers/generator/incident",
+      "description": "A strange public incident hook.",
+      "tags": [
+        "oracle",
+        "incident"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.supers/table/incident"
+    },
+    {
+      "id": "lexiconlang.supers/generator/shadow-omen",
+      "description": "A quiet warning omen.",
+      "tags": [
+        "oracle",
+        "omen"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.supers/table/shadow-omen"
+    }
+  ]
+}

@@ -32,6 +32,7 @@ content for a setting.
 | [`@lexiconlang/modern`](/packages/modern)   | People with email/phone/address, cities, streets, companies, bands, books, ~16 generators |
 | [`@lexiconlang/steampunk`](/packages/steampunk) | Steampunk/gaslamp: inventors, airships, guilds, districts, automatons, patents, headlines, omens (14 generators) |
 | [`@lexiconlang/grimdark`](/packages/grimdark) | Grimdark: warbands, heresies, inquisitions, plagues, mutations, war machines, ratfolk clans and warlords, doom-laden battles (16 generators) |
+| [`@lexiconlang/postapoc`](/packages/postapoc) | Survivors, tech-cults, settlements, mutations, gear, vehicles, trade goods, encounters oracle, 14 generators |
 
 ## Tooling
 

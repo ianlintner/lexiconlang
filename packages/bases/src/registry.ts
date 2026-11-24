@@ -3,11 +3,30 @@ import type { BaseData, NameTemplate as PackNameTemplate, NameStructure as PackN
 
 export type { BaseData, OrthographyData, SensitivityData } from "@lexiconlang/packs";
 
-/** A base identifier in the `@lexiconlang/bases` registry. */
-export type BaseSlug = "norse" | "celtic" | "latin" | "greek" | "japanese" | "arabic";
+export type BaseSlug =
+  | "norse"
+  | "celtic"
+  | "latin"
+  | "greek"
+  | "japanese"
+  | "arabic"
+  | "slavic"
+  | "old-english"
+  | "persian"
+  | "sanskrit"
+  | "mandarin"
+  | "nahuatl"
+  | "yoruba"
+  | "polynesian"
+  | "ancient-egyptian"
+  | "finnish";
 
-/** All B1 slugs, in spec order. */
-export const BASE_SLUGS = ["norse", "celtic", "latin", "greek", "japanese", "arabic"] as const satisfies readonly BaseSlug[];
+/** All B1 and B2 slugs, in spec order. */
+export const BASE_SLUGS = [
+  "norse", "celtic", "latin", "greek", "japanese", "arabic",
+  "slavic", "old-english", "persian", "sanskrit", "mandarin",
+  "nahuatl", "yoruba", "polynesian", "ancient-egyptian", "finnish",
+] as const satisfies readonly BaseSlug[];
 
 /**
  * Apply an orthography mapping to a token string.
