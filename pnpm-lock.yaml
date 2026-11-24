@@ -35,9 +35,15 @@ importers:
 
   examples:
     dependencies:
+      '@lexiconlang/bases':
+        specifier: workspace:*
+        version: link:../packages/bases
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../packages/core
+      '@lexiconlang/cyberpunk':
+        specifier: workspace:*
+        version: link:../packages/cyberpunk
       '@lexiconlang/fantasy':
         specifier: workspace:*
         version: link:../packages/fantasy
@@ -47,6 +53,9 @@ importers:
       '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../packages/grammar
+      '@lexiconlang/historical-medieval':
+        specifier: workspace:*
+        version: link:../packages/historical-medieval
       '@lexiconlang/language':
         specifier: workspace:*
         version: link:../packages/language
@@ -59,12 +68,21 @@ importers:
       '@lexiconlang/pirates':
         specifier: workspace:*
         version: link:../packages/pirates
+      '@lexiconlang/postapoc':
+        specifier: workspace:*
+        version: link:../packages/postapoc
       '@lexiconlang/scifi':
         specifier: workspace:*
         version: link:../packages/scifi
       '@lexiconlang/steampunk':
         specifier: workspace:*
         version: link:../packages/steampunk
+      '@lexiconlang/supers':
+        specifier: workspace:*
+        version: link:../packages/supers
+      '@lexiconlang/wuxia':
+        specifier: workspace:*
+        version: link:../packages/wuxia
     devDependencies:
       tsx:
         specifier: ^4.23.15
@@ -106,6 +124,18 @@ importers:
 
   packages/core: {}
 
+  packages/cyberpunk:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/language':
+        specifier: workspace:*
+        version: link:../language
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
   packages/fantasy:
     dependencies:
       '@lexiconlang/core':
@@ -120,6 +150,9 @@ importers:
       '@lexiconlang/markov':
         specifier: workspace:*
         version: link:../markov
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/glyphs:
     dependencies:
@@ -142,6 +175,18 @@ importers:
       '@lexiconlang/core':
         specifier: workspace:*
         version: link:../core
+
+  packages/historical-medieval:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/language:
     dependencies:
@@ -214,6 +259,15 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(tsx@4.23.15)(yaml@2.9.1))
 
+  packages/postapoc:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
   packages/scifi:
     dependencies:
       '@lexiconlang/core':
@@ -230,6 +284,30 @@ importers:
         version: link:../markov
 
   packages/steampunk:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
+  packages/supers:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
+  packages/wuxia:
     dependencies:
       '@lexiconlang/core':
         specifier: workspace:*

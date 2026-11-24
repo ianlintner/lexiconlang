@@ -1,0 +1,34 @@
+{
+  "name": "@lexiconlang/historical-medieval",
+  "version": "0.1.0",
+  "description": "Historical-medieval genre pack for lexiconlang — realistic names, manors, guilds, monasteries, titles, markets and heraldry",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./pack": {
+      "types": "./dist/pack.d.ts",
+      "import": "./dist/pack.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "data",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  }
+}

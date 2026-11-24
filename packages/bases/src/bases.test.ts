@@ -13,6 +13,9 @@ import { japanese } from "./japanese.js";
 import { arabic } from "./arabic.js";
 import type { BaseData } from "./index.js";
 
+/** B1 slugs are the first six entries of the registry; B2 is covered by b2.test.ts. */
+const B1_SLUGS = BASE_SLUGS.slice(0, 6);
+
 const ALL: Record<string, BaseData> = { norse, celtic, latin, greek, japanese, arabic };
 
 /** Set of single characters allowed in a base's orthographic output. */
@@ -38,8 +41,8 @@ function allowedGraphemeSet(base: BaseData): Set<string> {
 
 describe("B1 base descriptor registry", () => {
   it("exposes exactly the six B1 bases in spec order", () => {
-    expect([...BASE_SLUGS]).toEqual(["norse", "celtic", "latin", "greek", "japanese", "arabic"]);
-    expect(Object.keys(ALL).sort()).toEqual([...BASE_SLUGS].sort());
+    expect([...B1_SLUGS]).toEqual(["norse", "celtic", "latin", "greek", "japanese", "arabic"]);
+    expect(Object.keys(ALL).sort()).toEqual([...B1_SLUGS].sort());
   });
 
   it("every base is schema-valid and declares the required S0 fields", () => {
@@ -58,7 +61,7 @@ describe("B1 base descriptor registry", () => {
 
   it("shipped .pack.json data files validate and match the inline descriptors", () => {
     const dataRoot = fileURLToPath(new URL("../data/", import.meta.url));
-    for (const slug of BASE_SLUGS) {
+    for (const slug of B1_SLUGS) {
       const json = JSON.parse(readFileSync(`${dataRoot}${slug}/${slug}.pack.json`, "utf8"));
       expect(validatePack(json)).toEqual([]);
       expect(json.bases?.[0]?.id).toBe(`lexiconlang.bases.${slug}/base/default`);

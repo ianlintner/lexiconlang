@@ -1,0 +1,31 @@
+{
+  "name": "@lexiconlang/wuxia",
+  "version": "0.1.0",
+  "description": "Wuxia, xianxia and cultivation genre pack for lexiconlang — sects, martial techniques, realms, treasures, jianghu nicknames, mountains and secret realms",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./pack.json": "./data/wuxia.pack.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  }
+}

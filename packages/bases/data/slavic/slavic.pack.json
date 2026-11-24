@@ -1,0 +1,303 @@
+{
+  "formatVersion": 1,
+  "id": "lexiconlang.bases.slavic",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Phonotactics and name shapes inspired by Old East Slavic; soft/hard consonant pairs, rich vowels; deliberate simplifications. — Old East Slavic (medieval East Slavic, romanized). Fictional, simplified; not a linguistic reference.",
+  "provenance": [
+    {
+      "id": "lexiconlang-bases-slavic-prov",
+      "source": "original:lexiconlang.bases.slavic",
+      "title": "Old East Slavic (medieval East Slavic, romanized)",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original data authored for LexiconLang",
+      "modifications": "None",
+      "files": [
+        "data/default/default.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "bases-v1"
+  ],
+  "bases": [
+    {
+      "id": "lexiconlang.bases.slavic/base/default",
+      "inspiredBy": "Old East Slavic (medieval East Slavic, romanized)",
+      "scope": "Phonotactics and name shapes inspired by Old East Slavic; soft/hard consonant pairs, rich vowels; deliberate simplifications.",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "v",
+            "g",
+            "d",
+            "z",
+            "zh",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "f",
+            "kh",
+            "ts",
+            "ch",
+            "sh",
+            "shch"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "y",
+            "ia",
+            "ie",
+            "ai",
+            "ei"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "V C",
+            2
+          ],
+          [
+            "C C V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            2
+          ],
+          [
+            "2",
+            3
+          ],
+          [
+            "1-2",
+            1
+          ]
+        ],
+        "constraints": [
+          {
+            "pattern": [
+              "C",
+              "C",
+              "C"
+            ],
+            "rule": "forbid"
+          }
+        ],
+        "joiner": ""
+      },
+      "orthography": {
+        "id": "slavic-latin",
+        "mappings": [
+          {
+            "from": "kh",
+            "to": "х"
+          },
+          {
+            "from": "zh",
+            "to": "ж"
+          },
+          {
+            "from": "shch",
+            "to": "щ"
+          },
+          {
+            "from": "sh",
+            "to": "ш"
+          },
+          {
+            "from": "ch",
+            "to": "ч"
+          },
+          {
+            "from": "ts",
+            "to": "ц"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "romanization": {
+        "id": "slavic-roman",
+        "mappings": [
+          {
+            "from": "щ",
+            "to": "shch"
+          },
+          {
+            "from": "ж",
+            "to": "zh"
+          },
+          {
+            "from": "ш",
+            "to": "sh"
+          },
+          {
+            "from": "ч",
+            "to": "ch"
+          },
+          {
+            "from": "ц",
+            "to": "ts"
+          },
+          {
+            "from": "х",
+            "to": "kh"
+          }
+        ],
+        "unknown": "preserve"
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Veselimir",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dobroslava",
+              "translation": "fictional given-name placeholder"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "adjective",
+                  "tag": "virtue",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "nature"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 2
+          }
+        ],
+        "patronymic": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "family",
+                  "capitalize": true
+                },
+                {
+                  "literal": "ovich",
+                  "translation": "son of"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ],
+        "settlement": [
+          {
+            "value": {
+              "kind": "compose",
+              "parts": [
+                {
+                  "pick": "noun",
+                  "tag": "nature",
+                  "capitalize": true
+                },
+                {
+                  "pick": "noun",
+                  "tag": "place"
+                }
+              ],
+              "sep": ""
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "slavic.patronymic": {
+          "id": "patronymic",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "patronymic",
+              "role": "patronymic",
+              "source": {
+                "type": "kind",
+                "kind": "patronymic"
+              },
+              "prefix": " "
+            }
+          ],
+          "separator": " "
+        }
+      },
+      "provenance": [
+        "slavic-prov"
+      ],
+      "sensitivity": {
+        "framing": "Inspired by documented phonology and naming patterns; fictional, simplified; not a linguistic reference.",
+        "exclusions": [
+          "sacred or restricted names",
+          "ceremonial material",
+          "ethnic slurs",
+          "living people's names"
+        ],
+        "review": "Original data reviewed for broad, non-stereotyped inspiration; no community endorsement claimed."
+      }
+    }
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.bases.slavic/culture/default",
+      "base": "lexiconlang.bases.slavic/base/default"
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [],
+  "tables": [],
+  "corpora": [],
+  "markovModels": [],
+  "generators": []
+}
