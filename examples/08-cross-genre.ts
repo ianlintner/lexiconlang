@@ -16,6 +16,7 @@ import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
 import { mythology } from "@lexiconlang/mythology";
 import { wuxia } from "@lexiconlang/wuxia";
+import { supers } from "@lexiconlang/supers";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -167,3 +168,16 @@ console.log(`  Mountain:   ${jianghu.mountain().form}`);
 console.log(`  Destination: ${jianghu.secretRealm()}`);
 console.log(`  Treasure:   ${jianghu.treasure()}`);
 console.log(`  Trial:      ${jianghu.tribulation().text}`);
+
+// ─── Scenario 5: a supers dossier in a shared city ───────────────────────
+
+const masked = supers.withSeed("masked-cross-genre");
+const dossier = masked.dossier();
+console.log("\nSupers dossier:");
+console.log(`  Codename: ${dossier.codename} (${dossier.alignment})`);
+console.log(`  Secret:   ${dossier.secretIdentity.form} of ${dossier.hometown.form}`);
+console.log(`  Power:    ${dossier.powers.ability} — ${dossier.powers.limit}`);
+console.log(`  Team:     ${dossier.team} · Base: ${dossier.lair}`);
+console.log(`  Motto:    ${dossier.motto}`);
+console.log(`  Headline: ${dossier.headline}`);
+console.log(`  Incident: ${masked.incident().text}`);

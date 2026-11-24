@@ -35,6 +35,7 @@
     "@lexiconlang/historical-medieval": "workspace:*",
     "@lexiconlang/steampunk": "workspace:*",
     "@lexiconlang/wuxia": "workspace:*",
+    "@lexiconlang/supers": "workspace:*",
     "@lexiconlang/mythology": "workspace:*"
   },
   "devDependencies": {
