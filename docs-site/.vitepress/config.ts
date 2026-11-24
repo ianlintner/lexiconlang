@@ -95,6 +95,7 @@ export default defineConfig({
             { text: "@lexiconlang/historical-medieval", link: "/packages/historical-medieval" },
             { text: "@lexiconlang/steampunk", link: "/packages/steampunk" },
             { text: "@lexiconlang/wuxia", link: "/packages/wuxia" },
+            { text: "@lexiconlang/supers", link: "/packages/supers" },
           ],
         },
         {
