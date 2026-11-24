@@ -113,9 +113,11 @@ function literalPicker(culture: (typeof cultures)[number], kind: string, key: st
   };
 }
 
-/** Person name from a stable naming style: given + lineage with glosses. */
+// Composite facade names: the pack declares the simple name-v1 generators,
+// while the TS facade adds a lineage / realm qualifier. Distinct IDs keep the
+// declarative manifest honest for other ports reading pack.json.
 export const personName: Generator<PersonName> = {
-  id: `${PREFIX}/generator/person-name`,
+  id: `${PREFIX}/generator/person-composite`,
   generate(ctx: Context) {
     const culture = culturePicker.generate(ctx.child("culture"));
     const given = literalPicker(culture, "given", "given").generate(ctx.child("given"));
@@ -152,7 +154,7 @@ const placeQualifiers = weightedList<PlaceQualifier>([
 
 /** Place name drawn from a naming style, with a gloss of its elements. */
 export const placeName: Generator<GlossedName> = {
-  id: `${PREFIX}/generator/place-name`,
+  id: `${PREFIX}/generator/place-composite`,
   generate(ctx: Context) {
     const culture = culturePicker.generate(ctx.child("culture"));
     const place = literalPicker(culture, "settlement", "settlement").generate(ctx.child("settlement"));
@@ -193,9 +195,7 @@ export const clanName: Generator<string> = grammars.clan;
 export const warlordName: Generator<string> = grammars.warlord;
 export const battleName: Generator<string> = grammars.battle;
 
-const tableGenerators: Readonly<Record<string, Generator<string>>> = Object.fromEntries(
-  Object.entries(grammars).map(([key, gen]) => [`${PREFIX}/generator/${key === "title" ? "grim-title" : key === "warmachine" ? "war-machine-name" : key}-name`, gen]),
-);
+// ─── Public generators ───────────────────────────────────────────────────
 
 const tableHost: TableHost = {
   table(id: string) {
@@ -204,7 +204,7 @@ const tableHost: TableHost = {
     return table;
   },
   generator(id: string) {
-    const gen = tableGenerators[id];
+    const gen = generatorById.get(id);
     if (!gen) throw new Error(`grimdark pack: unknown table generator ${id}`);
     return gen;
   },
@@ -227,6 +227,34 @@ function oracle(suffix: string): Generator<TableRoll> {
 
 export const doomOmenOracle: Generator<TableRoll> = oracle("doom-omen");
 export const plagueOutcomeOracle: Generator<TableRoll> = oracle("plague-outcome");
+
+// The pack declares grammar-v1 generator IDs (`.../generator/warband-name`);
+// the facade's grammar objects carry the grammar ID. Register each public
+// generator under the ID the pack declares so table references resolve.
+const grammarGeneratorIds: Readonly<Record<keyof typeof grammars, string>> = {
+  warband: `${PREFIX}/generator/warband-name`,
+  banner: `${PREFIX}/generator/banner-motto`,
+  heresy: `${PREFIX}/generator/heresy-name`,
+  inquisition: `${PREFIX}/generator/inquisition-name`,
+  plague: `${PREFIX}/generator/plague-name`,
+  mutation: `${PREFIX}/generator/mutation-name`,
+  title: `${PREFIX}/generator/grim-title`,
+  warmachine: `${PREFIX}/generator/war-machine-name`,
+  clan: `${PREFIX}/generator/clan-name`,
+  warlord: `${PREFIX}/generator/warlord-name`,
+  battle: `${PREFIX}/generator/battle-name`,
+};
+
+const generatorById: ReadonlyMap<string, Generator<unknown>> = new Map<string, Generator<unknown>>([
+  [`${PREFIX}/generator/person-composite`, personName],
+  [`${PREFIX}/generator/place-composite`, placeName],
+  [`${PREFIX}/generator/vermin-warlord-name`, verminWarlordName],
+  [`${PREFIX}/generator/doom-omen`, doomOmenOracle],
+  [`${PREFIX}/generator/plague-outcome`, plagueOutcomeOracle],
+  ...(Object.keys(grammars) as (keyof typeof grammars)[]).map(
+    (key) => [grammarGeneratorIds[key], grammars[key]] as [string, Generator<unknown>],
+  ),
+]);
 
 /** All public generators, keyed by a short facade name. */
 export const generators = {

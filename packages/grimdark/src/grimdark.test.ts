@@ -142,6 +142,26 @@ describe("grimdark declarative pack", () => {
   it("plague-outcome dice table covers all 2d6 sums", () => {
     const table = pack.tables.find((t) => t.id === "lexiconlang.grimdark/table/plague-outcome");
     expect(table?.mode).toBe("dice");
-    expect(table?.entries?.length).toBeGreaterThanOrEqual(6);
+    const ranges = (table?.entries ?? []).map((entry) => {
+      const range = (entry as { range?: readonly [number, number] }).range;
+      if (!range) throw new Error("plague-outcome entry is missing a range");
+      return range;
+    });
+    for (let sum = 2; sum <= 12; sum++) {
+      expect(ranges.some(([min, max]) => sum >= min && sum <= max)).toBe(true);
+    }
+  });
+
+  it("resolves every declared generator ID through the table host", () => {
+    // Every pack generator ID that a table may reference must be reachable by
+    // the facade's table host; the old ad-hoc key derivation missed several.
+    const expected = [
+      "warband-name", "banner-motto", "heresy-name", "inquisition-name",
+      "plague-name", "mutation-name", "grim-title", "war-machine-name",
+      "clan-name", "warlord-name", "battle-name", "doom-omen", "plague-outcome",
+    ];
+    for (const suffix of expected) {
+      expect(pack.generators.some((g) => g.id === `lexiconlang.grimdark/generator/${suffix}`)).toBe(true);
+    }
   });
 });
