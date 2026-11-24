@@ -11,8 +11,14 @@
     { "path": "./packages/scifi" },
     { "path": "./packages/modern" },
     { "path": "./packages/horror" },
+    { "path": "./packages/historical-medieval" },
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
-    { "path": "./packages/cli" }
+    { "path": "./packages/postapoc" },
+    { "path": "./packages/cyberpunk" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/steampunk" },
+    { "path": "./packages/wuxia" },
+    { "path": "./packages/supers" }
   ]
 }

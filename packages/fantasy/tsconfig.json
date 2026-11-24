@@ -7,15 +7,17 @@
       "@lexiconlang/core": ["../core/src/index.ts"],
       "@lexiconlang/grammar": ["../grammar/src/index.ts"],
       "@lexiconlang/language": ["../language/src/index.ts"],
-      "@lexiconlang/markov": ["../markov/src/index.ts"]
+      "@lexiconlang/markov": ["../markov/src/index.ts"],
+      "@lexiconlang/packs": ["../packs/src/index.ts"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/fantasy.pack.json"],
   "exclude": ["src/**/*.test.ts", "dist"],
   "references": [
     { "path": "../core" },
     { "path": "../grammar" },
     { "path": "../language" },
-    { "path": "../markov" }
+    { "path": "../markov" },
+    { "path": "../packs" }
   ]
 }

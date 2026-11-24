@@ -1,0 +1,35 @@
+{
+  "name": "@lexiconlang/postapoc",
+  "version": "0.1.0",
+  "description": "Post-apocalyptic genre content pack for lexiconlang — survivors, tech-cults, settlements, mutations, gear, vehicles, trade goods and an encounters oracle",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./postapoc.pack.json": "./src/postapoc.pack.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "PROVENANCE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
