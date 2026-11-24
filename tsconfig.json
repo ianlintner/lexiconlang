@@ -10,9 +10,15 @@
     { "path": "./packages/fantasy" },
     { "path": "./packages/scifi" },
     { "path": "./packages/modern" },
+    { "path": "./packages/historical-medieval" },
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
-    { "path": "./packages/weird-west" },
-    { "path": "./packages/cli" }
+    { "path": "./packages/postapoc" },
+    { "path": "./packages/cyberpunk" },
+    { "path": "./packages/cli" },
+    { "path": "./packages/steampunk" },
+    { "path": "./packages/wuxia" },
+    { "path": "./packages/supers" },
+    { "path": "./packages/weird-west" }
   ]
 }

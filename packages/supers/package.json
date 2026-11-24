@@ -1,0 +1,32 @@
+{
+  "name": "@lexiconlang/supers",
+  "version": "0.1.0",
+  "description": "Supers genre pack for lexiconlang — hero and villain codenames, power sets with limits, origins, teams, secret identities, lairs, headlines and incident oracles",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./pack.json": "./data/supers.pack.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "PROVENANCE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/grammar": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  }
+}

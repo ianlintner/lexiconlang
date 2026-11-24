@@ -10,12 +10,16 @@ the CC0 dedication applies to the base data and generated pack manifests, which
 also declare `license: CC0-1.0`. No third-party corpora, word lists, name lists, or
 translations are included.
 
-The six "inspired-by" labels (Old Norse, Old Irish / Gaelic-Welsh, Classical Latin,
+The B1 "inspired-by" labels (Old Norse, Old Irish / Gaelic-Welsh, Classical Latin,
 Ancient Greek in romanized transcription, modern Japanese in romanized form, Modern
-Standard Arabic in romanized form) describe **family resemblance only**. The
+Standard Arabic in romanized form) and the B2 labels (Old East Slavic, Old English,
+New Persian, Sanskrit in romanized transliteration, Mandarin pinyin, Classical
+Nahuatl, Yoruba, a Māori-inspired Polynesian sound palette, Ancient Egyptian in
+romanized transliteration, Finnish) describe **family resemblance only**. The
 phonotactics and letter inventories are simplified, deliberately incomplete, and
 fictionalised for name generation. Each base's `scope` field in the data file states
-this explicitly.
+this explicitly. Broad labels (Slavic, Polynesian) are package-discovery categories
+and do not claim uniformity across all cultures they name.
 
 ## Sensitivity framework
 
@@ -25,10 +29,18 @@ Following the design spec (`docs/superpowers/specs/2026-10-30-expansion-design.m
 - `framing`: "inspired-by, fictional, simplified" — the bases are not linguistic
   references and are not presented as reconstructions of any real language.
 - `exclusions`: sacred / liturgical / restricted names and living-person names are
-  not shipped. All literal template forms are invented placeholders
-  (`Sven`, `Bjorn`, `Aedan`, `Mairin`, `Marcus`, `Lucius`, `Alexis`, `Daphne`,
-  `Haru`, `Yuki`, `Karim`, `Layla`); none is a deity, saint, scripture figure,
-  tribal name, or the name of a real person.
+  not shipped. B2 literal template forms are invented placeholders chosen to
+  avoid deity names, saint and scripture names, tribal / iwi / marae names,
+  historical-person names and well-known real-world place names. The B2 literal
+  placeholders are `Veselimir`, `Dobroslava`, `Eadwulf`, `Eadwenna`, `Ardestan`,
+  `Shiravar`, `Arjavira`, `Kausalindi`, `Lianhua`, `Mingde`, `Zhanliu`, `Wenlan`,
+  `Xochimil`, `Temal`, `Daramola`, `Folajimi`, `Moanakiri`, `Tarawhenua`,
+  `Nefer-menu`, `Seneb-hat`, `Ainokainen`, `Kaarno`, `Kaskelahti` and `Rautameri`.
+  Some Greek/Latin/Hebraic-Arabic B1 forms (`Sven`, `Bjorn`, `Aedan`, `Mairin`,
+  `Marcus`, `Lucius`, `Alexis`, `Daphne`, `Haru`, `Yuki`, `Karim`, `Layla`) are
+  common real-world names; they are B1 legacy forms retained for determinism and
+  are not claimed to be invented. B2 additionally excludes Vedic/pantheon
+  deities, orisha, iwi/marae names, pharaoh names and Kalevala deity names.
 - `review`: "context-sensitive" — downstream genre packs may combine a base with
   content generators; those packs are responsible for their own content review.
 
