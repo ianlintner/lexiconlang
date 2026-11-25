@@ -30,6 +30,7 @@ content for a setting.
 | [`@lexiconlang/fantasy`](/packages/fantasy) | 5 races (dwarvish/elvish/orcish/halfling/draconic), NPCs, settlements, taverns, factions, dragons, ~35 generators total |
 | [`@lexiconlang/scifi`](/packages/scifi)     | 9 alien species, star systems, ships, megacorps, ~15 generators                          |
 | [`@lexiconlang/modern`](/packages/modern)   | People with email/phone/address, cities, streets, companies, bands, books, ~16 generators |
+| [`@lexiconlang/pirates`](/packages/pirates) | Pirates & age of sail: ships, captains, crews, ports, treasure, shanties, ranks, oracles (14 generators) |
 | [`@lexiconlang/postapoc`](/packages/postapoc) | Survivors, tech-cults, settlements, mutations, gear, vehicles, trade goods, encounters oracle, 14 generators |
 
 ## Tooling
