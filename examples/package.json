@@ -36,6 +36,7 @@
     "@lexiconlang/steampunk": "workspace:*",
     "@lexiconlang/wuxia": "workspace:*",
     "@lexiconlang/supers": "workspace:*",
+    "@lexiconlang/weird-west": "workspace:*",
     "@lexiconlang/mythology": "workspace:*"
   },
   "devDependencies": {

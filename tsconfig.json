@@ -19,6 +19,7 @@
     { "path": "./packages/steampunk" },
     { "path": "./packages/wuxia" },
     { "path": "./packages/supers" },
+    { "path": "./packages/weird-west" },
     { "path": "./packages/mythology" }
   ]
 }
