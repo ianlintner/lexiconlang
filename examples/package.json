@@ -30,6 +30,7 @@
     "@lexiconlang/scifi": "workspace:*",
     "@lexiconlang/modern": "workspace:*",
     "@lexiconlang/horror": "workspace:*",
+    "@lexiconlang/pirates": "workspace:*",
     "@lexiconlang/postapoc": "workspace:*",
     "@lexiconlang/cyberpunk": "workspace:*",
     "@lexiconlang/bases": "workspace:*",

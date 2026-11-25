@@ -11,6 +11,7 @@ import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
 import { horror } from "@lexiconlang/horror";
+import { pirates } from "@lexiconlang/pirates";
 import { postapoc } from "@lexiconlang/postapoc";
 import { cyberpunk } from "@lexiconlang/cyberpunk";
 import { historicalMedieval } from "@lexiconlang/historical-medieval";
@@ -110,6 +111,29 @@ console.log(`  Cult:         ${h.cult("suspects")}`);
 console.log(`  Entity:       ${h.eldritchEntity("boss")} (${h.monsterTrait("tell")})`);
 console.log(`  Omen:         ${h.omen("first-sign")}`);
 console.log(`  Secret:       ${h.secret("backstory")}`);
+// ─── Scenario 3: a pirate crew with a fantasy quartermaster ──────────────
+interface PirateRoster {
+  captain: string;
+  ship: string;
+  rank: string;
+  alias: string;
+}
+const pirateCrew = compose<PirateRoster>({
+  id: "crossgenre.pirate-crew",
+  parts: {
+    captain: (ctx) => pirates.generators.captainName.generate(ctx.child("captain")).full,
+    ship: pirates.generators.shipName,
+    rank: pirates.generators.navalRank,
+    alias: (ctx) => fantasyFullName.generate(ctx.child("alias")).surname.form,
+  },
+});
+console.log("Pirate crew manifest (pirates + fantasy):");
+const crew = repeat(pirateCrew, 4).generate(ctx.child("pirate-crew"));
+for (const c of crew) {
+  console.log(`  ${c.rank.padEnd(20)} ${c.captain.padEnd(38)} a.k.a. "${c.alias}" aboard ${c.ship}`);
+}
+const voyage = pirates.withSeed("a-golden-reef");
+console.log(`\nTreasure: ${voyage.treasure()}  ·  ${voyage.encounter().text}`);
 // ─── Scenario 4: a wasteland scene with a fantasy-named relic ──────────
 
 const waste = postapoc.withSeed("the-ironwake");

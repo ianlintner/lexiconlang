@@ -14,6 +14,7 @@
     { "path": "./packages/historical-medieval" },
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
+    { "path": "./packages/pirates" },
     { "path": "./packages/postapoc" },
     { "path": "./packages/cyberpunk" },
     { "path": "./packages/cli" },

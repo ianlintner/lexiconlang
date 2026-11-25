@@ -31,6 +31,7 @@ content for a setting.
 | [`@lexiconlang/scifi`](/packages/scifi)     | 9 alien species, star systems, ships, megacorps, ~15 generators                          |
 | [`@lexiconlang/modern`](/packages/modern)   | People with email/phone/address, cities, streets, companies, bands, books, ~16 generators |
 | [`@lexiconlang/horror`](/packages/horror)   | 1920s investigators, eldritch entities, forbidden tomes, cults, haunts, omens, 11 generators |
+| [`@lexiconlang/pirates`](/packages/pirates) | Pirates & age of sail: ships, captains, crews, ports, treasure, shanties, ranks, oracles (14 generators) |
 | [`@lexiconlang/postapoc`](/packages/postapoc) | Survivors, tech-cults, settlements, mutations, gear, vehicles, trade goods, encounters oracle, 14 generators |
 
 ## Tooling
