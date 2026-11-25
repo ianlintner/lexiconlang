@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/steampunk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Steampunk and gaslamp genre pack for lexiconlang — inventors, airships, guilds, districts, automatons, patent titles and newspaper headlines",
   "type": "module",
   "main": "./dist/src/index.js",

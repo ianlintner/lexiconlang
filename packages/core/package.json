@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Seedable RNG, Context, Generator, and composition primitives for lexiconlang",
   "type": "module",
   "main": "./dist/index.js",
