@@ -18,6 +18,7 @@
     { "path": "./packages/cli" },
     { "path": "./packages/steampunk" },
     { "path": "./packages/wuxia" },
-    { "path": "./packages/supers" }
+    { "path": "./packages/supers" },
+    { "path": "./packages/weird-west" }
   ]
 }

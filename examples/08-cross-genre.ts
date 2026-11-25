@@ -16,6 +16,7 @@ import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
 import { wuxia } from "@lexiconlang/wuxia";
 import { supers } from "@lexiconlang/supers";
+import { weirdWest } from "@lexiconlang/weird-west";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -169,3 +170,13 @@ console.log(`  Team:     ${dossier.team} · Base: ${dossier.lair}`);
 console.log(`  Motto:    ${dossier.motto}`);
 console.log(`  Headline: ${dossier.headline}`);
 console.log(`  Incident: ${masked.incident().text}`);
+
+// ─── Scenario 6: a weird-west wanted poster with a fantasy alias ─────────
+
+const frontier = weirdWest.withSeed("high-noon");
+console.log("\nWeird-west bounty board (+ fantasy aliases):");
+for (let i = 0; i < 3; i++) {
+  const alias = fantasyFullName.generate(ctx.child(`wanted:${i}`)).surname;
+  console.log(`  ${frontier.wantedPoster()}`);
+  console.log(`    also known in the old country as "${alias}" · hideout: ${frontier.mine()}\n`);
+}

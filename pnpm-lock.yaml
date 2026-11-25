@@ -74,12 +74,15 @@ importers:
       '@lexiconlang/steampunk':
         specifier: workspace:*
         version: link:../packages/steampunk
-      '@lexiconlang/wuxia':
-        specifier: workspace:*
-        version: link:../packages/wuxia
       '@lexiconlang/supers':
         specifier: workspace:*
         version: link:../packages/supers
+      '@lexiconlang/weird-west':
+        specifier: workspace:*
+        version: link:../packages/weird-west
+      '@lexiconlang/wuxia':
+        specifier: workspace:*
+        version: link:../packages/wuxia
     devDependencies:
       tsx:
         specifier: ^4.23.15
@@ -273,7 +276,7 @@ importers:
         specifier: workspace:*
         version: link:../packs
 
-  packages/wuxia:
+  packages/supers:
     dependencies:
       '@lexiconlang/core':
         specifier: workspace:*
@@ -285,7 +288,26 @@ importers:
         specifier: workspace:*
         version: link:../packs
 
-  packages/supers:
+  packages/weird-west:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+    devDependencies:
+      '@types/node':
+        specifier: ^26.6.6
+        version: 26.6.6
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+      vitest:
+        specifier: ^5.1.0
+        version: 5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(tsx@4.23.15)(yaml@2.9.1))
+
+  packages/wuxia:
     dependencies:
       '@lexiconlang/core':
         specifier: workspace:*
