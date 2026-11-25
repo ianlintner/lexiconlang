@@ -1,0 +1,44 @@
+{
+  "name": "@lexiconlang/weird-west",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Weird west genre pack for LexiconLang: frontier towns, outlaws, gangs, saloons, mines, ranches, bounties, relics, rumors and anomalies.",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./data/*": "./data/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "PROVENANCE.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "engines": {
+    "node": "^22.13.0 || ^24.0.0 || >=26.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
