@@ -13,12 +13,14 @@
     { "path": "./packages/historical-medieval" },
     { "path": "./packages/packs" },
     { "path": "./packages/bases" },
+    { "path": "./packages/pirates" },
     { "path": "./packages/postapoc" },
     { "path": "./packages/cyberpunk" },
     { "path": "./packages/cli" },
     { "path": "./packages/steampunk" },
     { "path": "./packages/grimdark" },
     { "path": "./packages/wuxia" },
-    { "path": "./packages/supers" }
+    { "path": "./packages/supers" },
+    { "path": "./packages/weird-west" }
   ]
 }

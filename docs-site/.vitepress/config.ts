@@ -90,6 +90,7 @@ export default defineConfig({
             { text: "@lexiconlang/fantasy", link: "/packages/fantasy" },
             { text: "@lexiconlang/scifi", link: "/packages/scifi" },
             { text: "@lexiconlang/modern", link: "/packages/modern" },
+            { text: "@lexiconlang/pirates", link: "/packages/pirates" },
             { text: "@lexiconlang/postapoc", link: "/packages/postapoc" },
             { text: "@lexiconlang/cyberpunk", link: "/packages/cyberpunk" },
             { text: "@lexiconlang/historical-medieval", link: "/packages/historical-medieval" },
@@ -97,6 +98,7 @@ export default defineConfig({
             { text: "@lexiconlang/grimdark", link: "/packages/grimdark" },
             { text: "@lexiconlang/wuxia", link: "/packages/wuxia" },
             { text: "@lexiconlang/supers", link: "/packages/supers" },
+            { text: "@lexiconlang/weird-west", link: "/packages/weird-west" },
           ],
         },
         {

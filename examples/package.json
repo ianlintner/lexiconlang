@@ -31,12 +31,14 @@
     "@lexiconlang/modern": "workspace:*",
     "@lexiconlang/steampunk": "workspace:*",
     "@lexiconlang/grimdark": "workspace:*",
+    "@lexiconlang/pirates": "workspace:*",
     "@lexiconlang/postapoc": "workspace:*",
     "@lexiconlang/cyberpunk": "workspace:*",
     "@lexiconlang/bases": "workspace:*",
     "@lexiconlang/historical-medieval": "workspace:*",
     "@lexiconlang/wuxia": "workspace:*",
-    "@lexiconlang/supers": "workspace:*"
+    "@lexiconlang/supers": "workspace:*",
+    "@lexiconlang/weird-west": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.23.15"

@@ -10,6 +10,7 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { pirates } from "@lexiconlang/pirates";
 import { postapoc } from "@lexiconlang/postapoc";
 import { cyberpunk } from "@lexiconlang/cyberpunk";
 import { historicalMedieval } from "@lexiconlang/historical-medieval";
@@ -17,6 +18,7 @@ import { steampunk } from "@lexiconlang/steampunk";
 import { grimdark } from "@lexiconlang/grimdark";
 import { wuxia } from "@lexiconlang/wuxia";
 import { supers } from "@lexiconlang/supers";
+import { weirdWest } from "@lexiconlang/weird-west";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -93,6 +95,29 @@ for (const d of sq) {
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
 
+// ─── Scenario 3: a pirate crew with a fantasy quartermaster ──────────────
+interface PirateRoster {
+  captain: string;
+  ship: string;
+  rank: string;
+  alias: string;
+}
+const pirateCrew = compose<PirateRoster>({
+  id: "crossgenre.pirate-crew",
+  parts: {
+    captain: (ctx) => pirates.generators.captainName.generate(ctx.child("captain")).full,
+    ship: pirates.generators.shipName,
+    rank: pirates.generators.navalRank,
+    alias: (ctx) => fantasyFullName.generate(ctx.child("alias")).surname.form,
+  },
+});
+console.log("Pirate crew manifest (pirates + fantasy):");
+const crew = repeat(pirateCrew, 4).generate(ctx.child("pirate-crew"));
+for (const c of crew) {
+  console.log(`  ${c.rank.padEnd(20)} ${c.captain.padEnd(38)} a.k.a. "${c.alias}" aboard ${c.ship}`);
+}
+const voyage = pirates.withSeed("a-golden-reef");
+console.log(`\nTreasure: ${voyage.treasure()}  ·  ${voyage.encounter().text}`);
 // ─── Scenario 4: a wasteland scene with a fantasy-named relic ──────────
 
 const waste = postapoc.withSeed("the-ironwake");
@@ -184,3 +209,13 @@ console.log(`  Team:     ${dossier.team} · Base: ${dossier.lair}`);
 console.log(`  Motto:    ${dossier.motto}`);
 console.log(`  Headline: ${dossier.headline}`);
 console.log(`  Incident: ${masked.incident().text}`);
+
+// ─── Scenario 6: a weird-west wanted poster with a fantasy alias ─────────
+
+const frontier = weirdWest.withSeed("high-noon");
+console.log("\nWeird-west bounty board (+ fantasy aliases):");
+for (let i = 0; i < 3; i++) {
+  const alias = fantasyFullName.generate(ctx.child(`wanted:${i}`)).surname;
+  console.log(`  ${frontier.wantedPoster()}`);
+  console.log(`    also known in the old country as "${alias}" · hideout: ${frontier.mine()}\n`);
+}
