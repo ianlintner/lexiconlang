@@ -1,0 +1,3610 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.pirates",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original fictional pirates and age-of-sail names, ships, crews, ports, treasure, shanties and sea encounters",
+  "provenance": [
+    {
+      "id": "original-lexiconlang",
+      "source": "original:lexiconlang",
+      "title": "Pirates & age of sail genre data",
+      "creator": "lexiconlang contributors",
+      "license": "CC0-1.0",
+      "attribution": "Original synthetic data authored for lexiconlang. No real people, trademarked names, setting-specific IP or third-party corpora used.",
+      "modifications": "None",
+      "files": [
+        "pirates.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.pirates/culture/corsair",
+      "capitalize": "first",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "m",
+            "n",
+            "r",
+            "s",
+            "t",
+            "v",
+            "z"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ai",
+            "ea",
+            "ou"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            3
+          ],
+          [
+            "C V C",
+            2
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            2
+          ],
+          [
+            "2-2",
+            1
+          ]
+        ],
+        "joiner": ""
+      },
+      "meaningPacks": [],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isabel",
+              "translation": "Isabel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rafael",
+              "translation": "Rafael"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Catalina",
+              "translation": "Catalina"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Diego",
+              "translation": "Diego"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marisol",
+              "translation": "Marisol"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sebastián",
+              "translation": "Sebastian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lucía",
+              "translation": "Lucia"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tomás",
+              "translation": "Tomas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Inés",
+              "translation": "Ines"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hugo",
+              "translation": "Hugo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Valeria",
+              "translation": "Valeria"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emilio",
+              "translation": "Emilio"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Camila",
+              "translation": "Camila"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mateo",
+              "translation": "Mateo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Almudena",
+              "translation": "Almudena"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fernando",
+              "translation": "Fernando"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rosaura",
+              "translation": "Rosaura"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Joaquín",
+              "translation": "Joaquin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elena",
+              "translation": "Elena"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Álvaro",
+              "translation": "Alvaro"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Paloma",
+              "translation": "Paloma"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nicolás",
+              "translation": "Nicolas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beatriz",
+              "translation": "Beatriz"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gonzalo",
+              "translation": "Gonzalo"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "del Mar",
+              "translation": "of the sea"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ventura",
+              "translation": "Ventura"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Salazar",
+              "translation": "Salazar"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bermúdez",
+              "translation": "Bermudez"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cordero",
+              "translation": "Cordero"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Navarro",
+              "translation": "Navarro"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fuentes",
+              "translation": "Fuentes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Montoya",
+              "translation": "Montoya"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vargas",
+              "translation": "Vargas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Espinoza",
+              "translation": "Espinoza"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Castañeda",
+              "translation": "Castaneda"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rivas",
+              "translation": "Rivas"
+            },
+            "weight": 1
+          }
+        ],
+        "epithet": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Salt-Hearted",
+              "translation": "the salt-hearted"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Red Sails",
+              "translation": "of the red sails"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Tide-Breaker",
+              "translation": "the tide-breaker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Lantern Thief",
+              "translation": "the lantern thief"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Drowned Bell",
+              "translation": "of the drowned bell"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Gull-Whisperer",
+              "translation": "the gull-whisperer"
+            },
+            "weight": 1
+          }
+        ],
+        "ship": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "La Sirena",
+              "translation": "the mermaid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "El Viento",
+              "translation": "the wind"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Santa Marina",
+              "translation": "Saint Marina"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "La Estrella",
+              "translation": "the star"
+            },
+            "weight": 1
+          }
+        ],
+        "port": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Puerto Esperanza",
+              "translation": "Hope Harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vista Hermosa",
+              "translation": "Fair View"
+            },
+            "weight": 1
+          }
+        ],
+        "faction": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "la Hermandad",
+              "translation": "the Brotherhood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "los Navegantes",
+              "translation": "the Navigators"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "corsair-full": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        },
+        "corsair-captain": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            },
+            {
+              "key": "epithet",
+              "role": "epithet",
+              "source": {
+                "type": "kind",
+                "kind": "epithet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lexiconlang.pirates/culture/buccaneer",
+      "capitalize": "first",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "h",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "w",
+            "y"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ai",
+            "ee",
+            "oa"
+          ]
+        },
+        "syllables": [
+          [
+            "C V C",
+            3
+          ],
+          [
+            "C V",
+            2
+          ],
+          [
+            "C C V",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "1",
+            1
+          ],
+          [
+            "1-2",
+            2
+          ]
+        ],
+        "joiner": ""
+      },
+      "meaningPacks": [],
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Anne",
+              "translation": "Anne"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Edward",
+              "translation": "Edward"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mary",
+              "translation": "Mary"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "William",
+              "translation": "William"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Charlotte",
+              "translation": "Charlotte"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Henry",
+              "translation": "Henry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Grace",
+              "translation": "Grace"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thomas",
+              "translation": "Thomas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elizabeth",
+              "translation": "Elizabeth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "James",
+              "translation": "James"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ruth",
+              "translation": "Ruth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "George",
+              "translation": "George"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Alice",
+              "translation": "Alice"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Samuel",
+              "translation": "Samuel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Katherine",
+              "translation": "Katherine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nathaniel",
+              "translation": "Nathaniel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Margaret",
+              "translation": "Margaret"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Joseph",
+              "translation": "Joseph"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eleanor",
+              "translation": "Eleanor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Benjamin",
+              "translation": "Benjamin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jane",
+              "translation": "Jane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Richard",
+              "translation": "Richard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hannah",
+              "translation": "Hannah"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Robert",
+              "translation": "Robert"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hawke",
+              "translation": "Hawke"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Raven",
+              "translation": "Raven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sparrow",
+              "translation": "Sparrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marlowe",
+              "translation": "Marlowe"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Blackwood",
+              "translation": "Blackwood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ashford",
+              "translation": "Ashford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thorne",
+              "translation": "Thorne"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wren",
+              "translation": "Wren"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kettle",
+              "translation": "Kettle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunn",
+              "translation": "Dunn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Farrow",
+              "translation": "Farrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quill",
+              "translation": "Quill"
+            },
+            "weight": 1
+          }
+        ],
+        "epithet": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Crimson",
+              "translation": "the crimson"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Foam",
+              "translation": "of the foam"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Unburied",
+              "translation": "the unburied"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Lantern-Eyed",
+              "translation": "the lantern-eyed"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "of the Long Wake",
+              "translation": "of the long wake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Storm-Caller",
+              "translation": "the storm-caller"
+            },
+            "weight": 1
+          }
+        ],
+        "ship": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "The Grey Gull",
+              "translation": "the grey gull"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sea Wraith",
+              "translation": "sea wraith"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Morning Tide",
+              "translation": "morning tide"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Black Briar",
+              "translation": "black briar"
+            },
+            "weight": 1
+          }
+        ],
+        "port": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greyhaven",
+              "translation": "Greyhaven"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Drummouth",
+              "translation": "Drummouth"
+            },
+            "weight": 1
+          }
+        ],
+        "faction": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Free Company",
+              "translation": "the Free Company"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "the Tideward League",
+              "translation": "the Tideward League"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "buccaneer-full": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        },
+        "buccaneer-captain": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            },
+            {
+              "key": "epithet",
+              "role": "epithet",
+              "source": {
+                "type": "kind",
+                "kind": "epithet"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.pirates/grammar/ship-name",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The #adj.cap# #noun.cap#",
+              "weight": 4
+            },
+            {
+              "value": "#proper.cap#",
+              "weight": 3
+            },
+            {
+              "value": "The #noun.cap# of the #place.cap#",
+              "weight": 2
+            },
+            {
+              "value": "#color.cap# #animal.cap#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "wandering",
+              "weight": 1
+            },
+            {
+              "value": "silent",
+              "weight": 1
+            },
+            {
+              "value": "gilded",
+              "weight": 1
+            },
+            {
+              "value": "forsaken",
+              "weight": 1
+            },
+            {
+              "value": "restless",
+              "weight": 1
+            },
+            {
+              "value": "crimson",
+              "weight": 1
+            },
+            {
+              "value": "weathered",
+              "weight": 1
+            },
+            {
+              "value": "bright",
+              "weight": 1
+            },
+            {
+              "value": "hollow",
+              "weight": 1
+            },
+            {
+              "value": "unquiet",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "wake",
+              "weight": 1
+            },
+            {
+              "value": "tide",
+              "weight": 1
+            },
+            {
+              "value": "gull",
+              "weight": 1
+            },
+            {
+              "value": "lantern",
+              "weight": 1
+            },
+            {
+              "value": "compass",
+              "weight": 1
+            },
+            {
+              "value": "anchor",
+              "weight": 1
+            },
+            {
+              "value": "tempest",
+              "weight": 1
+            },
+            {
+              "value": "horizon",
+              "weight": 1
+            },
+            {
+              "value": "bell",
+              "weight": 1
+            },
+            {
+              "value": "reef",
+              "weight": 1
+            },
+            {
+              "value": "moon",
+              "weight": 1
+            },
+            {
+              "value": "keel",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "proper",
+          "choices": [
+            {
+              "value": "Sea Wraith",
+              "weight": 1
+            },
+            {
+              "value": "Salt Maiden",
+              "weight": 1
+            },
+            {
+              "value": "Grey Fortune",
+              "weight": 1
+            },
+            {
+              "value": "Dusk Runner",
+              "weight": 1
+            },
+            {
+              "value": "Wave Breaker",
+              "weight": 1
+            },
+            {
+              "value": "North Star",
+              "weight": 1
+            },
+            {
+              "value": "Ember Queen",
+              "weight": 1
+            },
+            {
+              "value": "Foghorn",
+              "weight": 1
+            },
+            {
+              "value": "Tide Singer",
+              "weight": 1
+            },
+            {
+              "value": "Wayward Son",
+              "weight": 1
+            },
+            {
+              "value": "Storm Petrel",
+              "weight": 1
+            },
+            {
+              "value": "Gold Finch",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Reef",
+              "weight": 1
+            },
+            {
+              "value": "Narrows",
+              "weight": 1
+            },
+            {
+              "value": "Stillwater",
+              "weight": 1
+            },
+            {
+              "value": "Shoals",
+              "weight": 1
+            },
+            {
+              "value": "Blackwater",
+              "weight": 1
+            },
+            {
+              "value": "Deep",
+              "weight": 1
+            },
+            {
+              "value": "Gull Rock",
+              "weight": 1
+            },
+            {
+              "value": "Reach",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "color",
+          "choices": [
+            {
+              "value": "grey",
+              "weight": 1
+            },
+            {
+              "value": "golden",
+              "weight": 1
+            },
+            {
+              "value": "scarlet",
+              "weight": 1
+            },
+            {
+              "value": "pale",
+              "weight": 1
+            },
+            {
+              "value": "iron",
+              "weight": 1
+            },
+            {
+              "value": "silver",
+              "weight": 1
+            },
+            {
+              "value": "green",
+              "weight": 1
+            },
+            {
+              "value": "sable",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "animal",
+          "choices": [
+            {
+              "value": "petrel",
+              "weight": 1
+            },
+            {
+              "value": "albatross",
+              "weight": 1
+            },
+            {
+              "value": "kraken",
+              "weight": 1
+            },
+            {
+              "value": "shal",
+              "weight": 1
+            },
+            {
+              "value": "manta",
+              "weight": 1
+            },
+            {
+              "value": "seal",
+              "weight": 1
+            },
+            {
+              "value": "cormorant",
+              "weight": 1
+            },
+            {
+              "value": "ray",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/ship-class",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adj.cap# #type#",
+              "weight": 6
+            },
+            {
+              "value": "#type#",
+              "weight": 4
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "swift",
+              "weight": 1
+            },
+            {
+              "value": "armed",
+              "weight": 1
+            },
+            {
+              "value": "merchant",
+              "weight": 1
+            },
+            {
+              "value": "light",
+              "weight": 1
+            },
+            {
+              "value": "heavy",
+              "weight": 1
+            },
+            {
+              "value": "privateer",
+              "weight": 1
+            },
+            {
+              "value": "long-range",
+              "weight": 1
+            },
+            {
+              "value": "shallow-draft",
+              "weight": 1
+            },
+            {
+              "value": "stout",
+              "weight": 1
+            },
+            {
+              "value": "clipper",
+              "weight": 1
+            },
+            {
+              "value": "refitted",
+              "weight": 1
+            },
+            {
+              "value": "weathered",
+              "weight": 1
+            },
+            {
+              "value": "renamed",
+              "weight": 1
+            },
+            {
+              "value": "salt-worn",
+              "weight": 1
+            },
+            {
+              "value": "gold-hulled",
+              "weight": 1
+            },
+            {
+              "value": "compact",
+              "weight": 1
+            },
+            {
+              "value": "deep-keeled",
+              "weight": 1
+            },
+            {
+              "value": "ported",
+              "weight": 1
+            },
+            {
+              "value": "escort",
+              "weight": 1
+            },
+            {
+              "value": "corsair",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "type",
+          "choices": [
+            {
+              "value": "sloop",
+              "weight": 1
+            },
+            {
+              "value": "brigantine",
+              "weight": 1
+            },
+            {
+              "value": "brig",
+              "weight": 1
+            },
+            {
+              "value": "frigate",
+              "weight": 1
+            },
+            {
+              "value": "schooner",
+              "weight": 1
+            },
+            {
+              "value": "galleon",
+              "weight": 1
+            },
+            {
+              "value": "cutter",
+              "weight": 1
+            },
+            {
+              "value": "corvette",
+              "weight": 1
+            },
+            {
+              "value": "ketch",
+              "weight": 1
+            },
+            {
+              "value": "barque",
+              "weight": 1
+            },
+            {
+              "value": "xebec",
+              "weight": 1
+            },
+            {
+              "value": "pinnace",
+              "weight": 1
+            },
+            {
+              "value": "snow",
+              "weight": 1
+            },
+            {
+              "value": "fluyt",
+              "weight": 1
+            },
+            {
+              "value": "catamaran",
+              "weight": 1
+            },
+            {
+              "value": "dhow",
+              "weight": 1
+            },
+            {
+              "value": "junk",
+              "weight": 1
+            },
+            {
+              "value": "galley",
+              "weight": 1
+            },
+            {
+              "value": "galleass",
+              "weight": 1
+            },
+            {
+              "value": "carrack",
+              "weight": 1
+            },
+            {
+              "value": "barbette",
+              "weight": 1
+            },
+            {
+              "value": "lugger",
+              "weight": 1
+            },
+            {
+              "value": "smack",
+              "weight": 1
+            },
+            {
+              "value": "yawl",
+              "weight": 1
+            },
+            {
+              "value": "wherry",
+              "weight": 1
+            },
+            {
+              "value": "barge",
+              "weight": 1
+            },
+            {
+              "value": "crewer",
+              "weight": 1
+            },
+            {
+              "value": "tartan",
+              "weight": 1
+            },
+            {
+              "value": "polacre",
+              "weight": 1
+            },
+            {
+              "value": "felucca",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/captain-epithet",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "the #adj# #noun#",
+              "weight": 5
+            },
+            {
+              "value": "of the #color# #noun#",
+              "weight": 4
+            },
+            {
+              "value": "the #noun#—#echo#",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "crimson",
+              "weight": 1
+            },
+            {
+              "value": "salt-bitten",
+              "weight": 1
+            },
+            {
+              "value": "unburied",
+              "weight": 1
+            },
+            {
+              "value": "storm-tossed",
+              "weight": 1
+            },
+            {
+              "value": "one-eyed",
+              "weight": 1
+            },
+            {
+              "value": "laughing",
+              "weight": 1
+            },
+            {
+              "value": "silent",
+              "weight": 1
+            },
+            {
+              "value": "iron",
+              "weight": 1
+            },
+            {
+              "value": "gilded",
+              "weight": 1
+            },
+            {
+              "value": "wandering",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "reaver",
+              "weight": 1
+            },
+            {
+              "value": "gull",
+              "weight": 1
+            },
+            {
+              "value": "wake",
+              "weight": 1
+            },
+            {
+              "value": "lantern",
+              "weight": 1
+            },
+            {
+              "value": "tide",
+              "weight": 1
+            },
+            {
+              "value": "blade",
+              "weight": 1
+            },
+            {
+              "value": "storm",
+              "weight": 1
+            },
+            {
+              "value": "crow",
+              "weight": 1
+            },
+            {
+              "value": "reef",
+              "weight": 1
+            },
+            {
+              "value": "compass",
+              "weight": 1
+            },
+            {
+              "value": "bell",
+              "weight": 1
+            },
+            {
+              "value": "shark",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "echo",
+          "choices": [
+            {
+              "value": "abyss",
+              "weight": 1
+            },
+            {
+              "value": "tempest",
+              "weight": 1
+            },
+            {
+              "value": "maroon",
+              "weight": 1
+            },
+            {
+              "value": "gallow",
+              "weight": 1
+            },
+            {
+              "value": "wreck",
+              "weight": 1
+            },
+            {
+              "value": "knell",
+              "weight": 1
+            },
+            {
+              "value": "riven",
+              "weight": 1
+            },
+            {
+              "value": "salt",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "color",
+          "choices": [
+            {
+              "value": "red",
+              "weight": 1
+            },
+            {
+              "value": "black",
+              "weight": 1
+            },
+            {
+              "value": "pale",
+              "weight": 1
+            },
+            {
+              "value": "golden",
+              "weight": 1
+            },
+            {
+              "value": "grey",
+              "weight": 1
+            },
+            {
+              "value": "green",
+              "weight": 1
+            },
+            {
+              "value": "silver",
+              "weight": 1
+            },
+            {
+              "value": "drowned",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/crew-name",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "the #adj.cap# #noun.cap#",
+              "weight": 6
+            },
+            {
+              "value": "#noun.cap# #collective#",
+              "weight": 4
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "ragged",
+              "weight": 1
+            },
+            {
+              "value": "bold",
+              "weight": 1
+            },
+            {
+              "value": "silent",
+              "weight": 1
+            },
+            {
+              "value": "golden",
+              "weight": 1
+            },
+            {
+              "value": "lost",
+              "weight": 1
+            },
+            {
+              "value": "salt-stained",
+              "weight": 1
+            },
+            {
+              "value": "lantern-lit",
+              "weight": 1
+            },
+            {
+              "value": "iron",
+              "weight": 1
+            },
+            {
+              "value": "weary",
+              "weight": 1
+            },
+            {
+              "value": "unbroken",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "seadogs",
+              "weight": 1
+            },
+            {
+              "value": "hands",
+              "weight": 1
+            },
+            {
+              "value": "mates",
+              "weight": 1
+            },
+            {
+              "value": "marines",
+              "weight": 1
+            },
+            {
+              "value": "sailors",
+              "weight": 1
+            },
+            {
+              "value": "gunners",
+              "weight": 1
+            },
+            {
+              "value": "lookouts",
+              "weight": 1
+            },
+            {
+              "value": "deckhands",
+              "weight": 1
+            },
+            {
+              "value": "corsairs",
+              "weight": 1
+            },
+            {
+              "value": "buccaneers",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "collective",
+          "choices": [
+            {
+              "value": "Company",
+              "weight": 1
+            },
+            {
+              "value": "Crew",
+              "weight": 1
+            },
+            {
+              "value": "Band",
+              "weight": 1
+            },
+            {
+              "value": "Brotherhood",
+              "weight": 1
+            },
+            {
+              "value": "Gang",
+              "weight": 1
+            },
+            {
+              "value": "Mess",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/port-cove",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#prefix##root#",
+              "weight": 5
+            },
+            {
+              "value": "#stem.cap# #suffix.cap#",
+              "weight": 4
+            },
+            {
+              "value": "#prefix##root# #suffix.cap#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "prefix",
+          "choices": [
+            {
+              "value": "Port",
+              "weight": 1
+            },
+            {
+              "value": "Cape",
+              "weight": 1
+            },
+            {
+              "value": "Grey",
+              "weight": 1
+            },
+            {
+              "value": "New",
+              "weight": 1
+            },
+            {
+              "value": "Old",
+              "weight": 1
+            },
+            {
+              "value": "Black",
+              "weight": 1
+            },
+            {
+              "value": "Fair",
+              "weight": 1
+            },
+            {
+              "value": "Saint",
+              "weight": 1
+            },
+            {
+              "value": "Deep",
+              "weight": 1
+            },
+            {
+              "value": "Low",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "root",
+          "choices": [
+            {
+              "value": "haven",
+              "weight": 1
+            },
+            {
+              "value": "mouth",
+              "weight": 1
+            },
+            {
+              "value": "reach",
+              "weight": 1
+            },
+            {
+              "value": "bay",
+              "weight": 1
+            },
+            {
+              "value": "cove",
+              "weight": 1
+            },
+            {
+              "value": "harbor",
+              "weight": 1
+            },
+            {
+              "value": "shore",
+              "weight": 1
+            },
+            {
+              "value": "sands",
+              "weight": 1
+            },
+            {
+              "value": "point",
+              "weight": 1
+            },
+            {
+              "value": "rook",
+              "weight": 1
+            },
+            {
+              "value": "bar",
+              "weight": 1
+            },
+            {
+              "value": "water",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "stem",
+          "choices": [
+            {
+              "value": "lantern",
+              "weight": 1
+            },
+            {
+              "value": "tide",
+              "weight": 1
+            },
+            {
+              "value": "gull",
+              "weight": 1
+            },
+            {
+              "value": "marsh",
+              "weight": 1
+            },
+            {
+              "value": "flint",
+              "weight": 1
+            },
+            {
+              "value": "anchor",
+              "weight": 1
+            },
+            {
+              "value": "brine",
+              "weight": 1
+            },
+            {
+              "value": "drift",
+              "weight": 1
+            },
+            {
+              "value": "wreck",
+              "weight": 1
+            },
+            {
+              "value": "reef",
+              "weight": 1
+            },
+            {
+              "value": "gale",
+              "weight": 1
+            },
+            {
+              "value": "cinder",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "suffix",
+          "choices": [
+            {
+              "value": "Harbor",
+              "weight": 1
+            },
+            {
+              "value": "Cove",
+              "weight": 1
+            },
+            {
+              "value": "Reach",
+              "weight": 1
+            },
+            {
+              "value": "Bay",
+              "weight": 1
+            },
+            {
+              "value": "Shoals",
+              "weight": 1
+            },
+            {
+              "value": "Landing",
+              "weight": 1
+            },
+            {
+              "value": "Anchorage",
+              "weight": 1
+            },
+            {
+              "value": "Wharf",
+              "weight": 1
+            },
+            {
+              "value": "Bight",
+              "weight": 1
+            },
+            {
+              "value": "Quay",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/faction-name",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "the #adj.cap# #noun.cap#",
+              "weight": 6
+            },
+            {
+              "value": "the #noun.cap# of the #place.cap#",
+              "weight": 3
+            },
+            {
+              "value": "#proper.cap# #collective#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Free",
+              "weight": 1
+            },
+            {
+              "value": "Golden",
+              "weight": 1
+            },
+            {
+              "value": "Silent",
+              "weight": 1
+            },
+            {
+              "value": "Salt",
+              "weight": 1
+            },
+            {
+              "value": "Broken",
+              "weight": 1
+            },
+            {
+              "value": "Tideward",
+              "weight": 1
+            },
+            {
+              "value": "Crimson",
+              "weight": 1
+            },
+            {
+              "value": "Wandering",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Last",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Company",
+              "weight": 1
+            },
+            {
+              "value": "League",
+              "weight": 1
+            },
+            {
+              "value": "Guild",
+              "weight": 1
+            },
+            {
+              "value": "Covenant",
+              "weight": 1
+            },
+            {
+              "value": "Brotherhood",
+              "weight": 1
+            },
+            {
+              "value": "Fleet",
+              "weight": 1
+            },
+            {
+              "value": "Concord",
+              "weight": 1
+            },
+            {
+              "value": "Order",
+              "weight": 1
+            },
+            {
+              "value": "Compact",
+              "weight": 1
+            },
+            {
+              "value": "Circuit",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Reef",
+              "weight": 1
+            },
+            {
+              "value": "Narrows",
+              "weight": 1
+            },
+            {
+              "value": "Shoals",
+              "weight": 1
+            },
+            {
+              "value": "Deep",
+              "weight": 1
+            },
+            {
+              "value": "Reach",
+              "weight": 1
+            },
+            {
+              "value": "Harbor",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "proper",
+          "choices": [
+            {
+              "value": "Blackwater",
+              "weight": 1
+            },
+            {
+              "value": "Stormwatch",
+              "weight": 1
+            },
+            {
+              "value": "Greyhaven",
+              "weight": 1
+            },
+            {
+              "value": "Duskmere",
+              "weight": 1
+            },
+            {
+              "value": "Thornport",
+              "weight": 1
+            },
+            {
+              "value": "Wavebreak",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "collective",
+          "choices": [
+            {
+              "value": "Company",
+              "weight": 1
+            },
+            {
+              "value": "Fleet",
+              "weight": 1
+            },
+            {
+              "value": "League",
+              "weight": 1
+            },
+            {
+              "value": "Covenant",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/treasure",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adj.cap# #noun.cap#",
+              "weight": 5
+            },
+            {
+              "value": "#noun.cap# of the #place.cap#",
+              "weight": 4
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "gilded",
+              "weight": 1
+            },
+            {
+              "value": "buried",
+              "weight": 1
+            },
+            {
+              "value": "storm-wrought",
+              "weight": 1
+            },
+            {
+              "value": "salt-crusted",
+              "weight": 1
+            },
+            {
+              "value": "forgotten",
+              "weight": 1
+            },
+            {
+              "value": "silver",
+              "weight": 1
+            },
+            {
+              "value": "crimson",
+              "weight": 1
+            },
+            {
+              "value": "ancient",
+              "weight": 1
+            },
+            {
+              "value": "unclaimed",
+              "weight": 1
+            },
+            {
+              "value": "black",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "doubloons",
+              "weight": 1
+            },
+            {
+              "value": "bullion",
+              "weight": 1
+            },
+            {
+              "value": "chalice",
+              "weight": 1
+            },
+            {
+              "value": "astrolabe",
+              "weight": 1
+            },
+            {
+              "value": "crown",
+              "weight": 1
+            },
+            {
+              "value": "strongbox",
+              "weight": 1
+            },
+            {
+              "value": "pearls",
+              "weight": 1
+            },
+            {
+              "value": "chart",
+              "weight": 1
+            },
+            {
+              "value": "ingots",
+              "weight": 1
+            },
+            {
+              "value": "relic",
+              "weight": 1
+            },
+            {
+              "value": "casket",
+              "weight": 1
+            },
+            {
+              "value": "signet",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "Drowned Reef",
+              "weight": 1
+            },
+            {
+              "value": "Gull Rock",
+              "weight": 1
+            },
+            {
+              "value": "Narrows",
+              "weight": 1
+            },
+            {
+              "value": "Stillwater",
+              "weight": 1
+            },
+            {
+              "value": "Shoals",
+              "weight": 1
+            },
+            {
+              "value": "Blackwater",
+              "weight": 1
+            },
+            {
+              "value": "Reach",
+              "weight": 1
+            },
+            {
+              "value": "Tidewatch",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/map-name",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "the #adj# #noun#",
+              "weight": 5
+            },
+            {
+              "value": "#proper# #noun#",
+              "weight": 4
+            },
+            {
+              "value": "#noun# of #proper#",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "salt-stained",
+              "weight": 1
+            },
+            {
+              "value": "folded",
+              "weight": 1
+            },
+            {
+              "value": "water-worn",
+              "weight": 1
+            },
+            {
+              "value": "hidden",
+              "weight": 1
+            },
+            {
+              "value": "crimson",
+              "weight": 1
+            },
+            {
+              "value": "torn",
+              "weight": 1
+            },
+            {
+              "value": "faded",
+              "weight": 1
+            },
+            {
+              "value": "unfinished",
+              "weight": 1
+            },
+            {
+              "value": "buried",
+              "weight": 1
+            },
+            {
+              "value": "silent",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "chart",
+              "weight": 1
+            },
+            {
+              "value": "map",
+              "weight": 1
+            },
+            {
+              "value": "bearing",
+              "weight": 1
+            },
+            {
+              "value": "course",
+              "weight": 1
+            },
+            {
+              "value": "survey",
+              "weight": 1
+            },
+            {
+              "value": "waypoint",
+              "weight": 1
+            },
+            {
+              "value": "route",
+              "weight": 1
+            },
+            {
+              "value": "plot",
+              "weight": 1
+            },
+            {
+              "value": "compass",
+              "weight": 1
+            },
+            {
+              "value": "sounding",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "proper",
+          "choices": [
+            {
+              "value": "Greyhaven",
+              "weight": 1
+            },
+            {
+              "value": "Duskmere",
+              "weight": 1
+            },
+            {
+              "value": "Blackwater",
+              "weight": 1
+            },
+            {
+              "value": "Stormwatch",
+              "weight": 1
+            },
+            {
+              "value": "Thornport",
+              "weight": 1
+            },
+            {
+              "value": "Wavebreak",
+              "weight": 1
+            },
+            {
+              "value": "Stillwater",
+              "weight": 1
+            },
+            {
+              "value": "Fog Reef",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/shanty-title",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "The Ballad of #proper#",
+              "weight": 3
+            },
+            {
+              "value": "#noun.cap# at #proper#",
+              "weight": 3
+            },
+            {
+              "value": "The #adj# #noun#",
+              "weight": 3
+            },
+            {
+              "value": "Oh, #proper.cap#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "proper",
+          "choices": [
+            {
+              "value": "the grey gull",
+              "weight": 1
+            },
+            {
+              "value": "the drowned bell",
+              "weight": 1
+            },
+            {
+              "value": "the long wake",
+              "weight": 1
+            },
+            {
+              "value": "the salt queen",
+              "weight": 1
+            },
+            {
+              "value": "the wandering tide",
+              "weight": 1
+            },
+            {
+              "value": "the iron shore",
+              "weight": 1
+            },
+            {
+              "value": "the last lantern",
+              "weight": 1
+            },
+            {
+              "value": "the storm coast",
+              "weight": 1
+            },
+            {
+              "value": "the golden reef",
+              "weight": 1
+            },
+            {
+              "value": "the hollow mast",
+              "weight": 1
+            },
+            {
+              "value": "the broken compass",
+              "weight": 1
+            },
+            {
+              "value": "the silent harbor",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "sail",
+              "weight": 1
+            },
+            {
+              "value": "tide",
+              "weight": 1
+            },
+            {
+              "value": "anchor",
+              "weight": 1
+            },
+            {
+              "value": "shanty",
+              "weight": 1
+            },
+            {
+              "value": "watch",
+              "weight": 1
+            },
+            {
+              "value": "storm",
+              "weight": 1
+            },
+            {
+              "value": "harbor",
+              "weight": 1
+            },
+            {
+              "value": "wake",
+              "weight": 1
+            },
+            {
+              "value": "lantern",
+              "weight": 1
+            },
+            {
+              "value": "compass",
+              "weight": 1
+            },
+            {
+              "value": "gull",
+              "weight": 1
+            },
+            {
+              "value": "reef",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "wandering",
+              "weight": 1
+            },
+            {
+              "value": "crimson",
+              "weight": 1
+            },
+            {
+              "value": "silent",
+              "weight": 1
+            },
+            {
+              "value": "salt-bitten",
+              "weight": 1
+            },
+            {
+              "value": "unquiet",
+              "weight": 1
+            },
+            {
+              "value": "golden",
+              "weight": 1
+            },
+            {
+              "value": "weary",
+              "weight": 1
+            },
+            {
+              "value": "storm-tossed",
+              "weight": 1
+            },
+            {
+              "value": "forsaken",
+              "weight": 1
+            },
+            {
+              "value": "gilded",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/grammar/naval-rank",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#senior#",
+              "weight": 6
+            },
+            {
+              "value": "#junior#",
+              "weight": 5
+            },
+            {
+              "value": "#staff#",
+              "weight": 4
+            },
+            {
+              "value": "#branch.cap# #junior#",
+              "weight": 5
+            },
+            {
+              "value": "#senior# of the #station#",
+              "weight": 4
+            }
+          ]
+        },
+        {
+          "key": "senior",
+          "choices": [
+            {
+              "value": "Captain",
+              "weight": 1
+            },
+            {
+              "value": "Commodore",
+              "weight": 1
+            },
+            {
+              "value": "Admiral",
+              "weight": 1
+            },
+            {
+              "value": "Vice Admiral",
+              "weight": 1
+            },
+            {
+              "value": "Rear Admiral",
+              "weight": 1
+            },
+            {
+              "value": "Commander",
+              "weight": 1
+            },
+            {
+              "value": "Lieutenant Commander",
+              "weight": 1
+            },
+            {
+              "value": "Master",
+              "weight": 1
+            },
+            {
+              "value": "Flag Captain",
+              "weight": 1
+            },
+            {
+              "value": "Fleet Captain",
+              "weight": 1
+            },
+            {
+              "value": "Port Admiral",
+              "weight": 1
+            },
+            {
+              "value": "Superintendent",
+              "weight": 1
+            },
+            {
+              "value": "Harbour Master",
+              "weight": 1
+            },
+            {
+              "value": "Senior Captain",
+              "weight": 1
+            },
+            {
+              "value": "Captain of the Fleet",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "junior",
+          "choices": [
+            {
+              "value": "Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Ensign",
+              "weight": 1
+            },
+            {
+              "value": "Midshipman",
+              "weight": 1
+            },
+            {
+              "value": "Sub-Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Cornet",
+              "weight": 1
+            },
+            {
+              "value": "Mate",
+              "weight": 1
+            },
+            {
+              "value": "Master's Mate",
+              "weight": 1
+            },
+            {
+              "value": "Quartermaster",
+              "weight": 1
+            },
+            {
+              "value": "Boatswain",
+              "weight": 1
+            },
+            {
+              "value": "Coxswain",
+              "weight": 1
+            },
+            {
+              "value": "Second Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Third Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Acting Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Volunteer",
+              "weight": 1
+            },
+            {
+              "value": "Assistant Surgeon",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "staff",
+          "choices": [
+            {
+              "value": "Surgeon",
+              "weight": 1
+            },
+            {
+              "value": "Purser",
+              "weight": 1
+            },
+            {
+              "value": "Chaplain",
+              "weight": 1
+            },
+            {
+              "value": "Navigator",
+              "weight": 1
+            },
+            {
+              "value": "Carpenter",
+              "weight": 1
+            },
+            {
+              "value": "Gunner",
+              "weight": 1
+            },
+            {
+              "value": "Steward",
+              "weight": 1
+            },
+            {
+              "value": "Sailmaker",
+              "weight": 1
+            },
+            {
+              "value": "Cooper",
+              "weight": 1
+            },
+            {
+              "value": "Armourer",
+              "weight": 1
+            },
+            {
+              "value": "Clerk",
+              "weight": 1
+            },
+            {
+              "value": "Schoolmaster",
+              "weight": 1
+            },
+            {
+              "value": "Botanist",
+              "weight": 1
+            },
+            {
+              "value": "Interpreter",
+              "weight": 1
+            },
+            {
+              "value": "Provost Marshal",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "branch",
+          "choices": [
+            {
+              "value": "deck",
+              "weight": 1
+            },
+            {
+              "value": "gun",
+              "weight": 1
+            },
+            {
+              "value": "survey",
+              "weight": 1
+            },
+            {
+              "value": "signal",
+              "weight": 1
+            },
+            {
+              "value": "shore",
+              "weight": 1
+            },
+            {
+              "value": "harbor",
+              "weight": 1
+            },
+            {
+              "value": "fleet",
+              "weight": 1
+            },
+            {
+              "value": "coast",
+              "weight": 1
+            },
+            {
+              "value": "watch",
+              "weight": 1
+            },
+            {
+              "value": "marine",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "station",
+          "choices": [
+            {
+              "value": "Reef",
+              "weight": 1
+            },
+            {
+              "value": "Reach",
+              "weight": 1
+            },
+            {
+              "value": "Narrows",
+              "weight": 1
+            },
+            {
+              "value": "Deep",
+              "weight": 1
+            },
+            {
+              "value": "Harbor",
+              "weight": 1
+            },
+            {
+              "value": "Shoals",
+              "weight": 1
+            },
+            {
+              "value": "Watch",
+              "weight": 1
+            },
+            {
+              "value": "Sound",
+              "weight": 1
+            },
+            {
+              "value": "Point",
+              "weight": 1
+            },
+            {
+              "value": "Bay",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.pirates/table/sea-encounter",
+      "description": "Weighted sea encounters oracle for open-water travel",
+      "tags": [
+        "oracle",
+        "encounter",
+        "sea"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "trader",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "A laden merchant vessel flying unfamiliar colors."
+          }
+        },
+        {
+          "key": "naval-patrol",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A naval patrol scans the horizon for contraband."
+          }
+        },
+        {
+          "key": "derelict",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A derelict ship drifts, its sails half-furled."
+          }
+        },
+        {
+          "key": "storm",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A squall rolls in; the rigging groans."
+          }
+        },
+        {
+          "key": "fog",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A thick fog swallows the sea; a bell tolls unseen."
+          }
+        },
+        {
+          "key": "pirate-raider",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "A raider closes fast under black canvas."
+          }
+        },
+        {
+          "key": "rocks",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Hidden rocks break the surf ahead."
+          }
+        },
+        {
+          "key": "castaway",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A castaway waves from a speck of a boat."
+          }
+        },
+        {
+          "key": "marine-life",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A great shadow passes beneath the hull."
+          }
+        },
+        {
+          "key": "island",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "An uncharted island rises from the haze."
+          }
+        },
+        {
+          "key": "smuggler",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A smuggler's skiff slips between the waves."
+          }
+        },
+        {
+          "key": "floating-cargo",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A crate of unknown cargo bobs in the swell."
+          }
+        },
+        {
+          "key": "ghost-light",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A pale light dances on the water; the crew falls silent."
+          }
+        },
+        {
+          "key": "calm",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "The sea goes glass-calm, and the hours stretch long."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/table/weather-portent",
+      "description": "d6 weather and omens table for departure or landfall",
+      "tags": [
+        "oracle",
+        "weather",
+        "dice"
+      ],
+      "mode": "dice",
+      "dice": {
+        "count": 1,
+        "sides": 6,
+        "modifier": 0
+      },
+      "entries": [
+        {
+          "key": "fair",
+          "range": [
+            1,
+            2
+          ],
+          "result": {
+            "type": "text",
+            "text": "Fair winds and a clear horizon."
+          }
+        },
+        {
+          "key": "clouds",
+          "range": [
+            3,
+            3
+          ],
+          "result": {
+            "type": "text",
+            "text": "Cloud banks gather to windward."
+          }
+        },
+        {
+          "key": "rain",
+          "range": [
+            4,
+            4
+          ],
+          "result": {
+            "type": "text",
+            "text": "Driving rain; the deck runs with water."
+          }
+        },
+        {
+          "key": "squall",
+          "range": [
+            5,
+            5
+          ],
+          "result": {
+            "type": "text",
+            "text": "A sudden squall; reef the sails."
+          }
+        },
+        {
+          "key": "portent",
+          "range": [
+            6,
+            6
+          ],
+          "result": {
+            "type": "text",
+            "text": "A bird crosses the bow—the old hands exchange a look."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.pirates/table/cargo-haul",
+      "description": "Cargo and plunder oracle for a seized hold",
+      "tags": [
+        "oracle",
+        "cargo",
+        "treasure"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "spice",
+          "weight": 4,
+          "result": {
+            "type": "text",
+            "text": "Bales of pepper, cinnamon and clove."
+          }
+        },
+        {
+          "key": "cloth",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "Bolt upon bolt of dyed sailcloth and silk."
+          }
+        },
+        {
+          "key": "coins",
+          "weight": 3,
+          "result": {
+            "type": "text",
+            "text": "Crates of foreign coin, still in their wax-sealed bags."
+          }
+        },
+        {
+          "key": "arms",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A cache of cutlasses and powder flasks."
+          }
+        },
+        {
+          "key": "chart",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A folded chart marked with a private cross."
+          }
+        },
+        {
+          "key": "medicine",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "Jars of quinine and healing salts."
+          }
+        },
+        {
+          "key": "livestock",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A coop of squawking birds bound for some governor's table."
+          }
+        },
+        {
+          "key": "art",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A framed painting of a forgotten saint."
+          }
+        },
+        {
+          "key": "letters",
+          "weight": 2,
+          "result": {
+            "type": "text",
+            "text": "A bundle of sealed letters, their wax broken."
+          }
+        },
+        {
+          "key": "nothing",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Nothing but ballast and the smell of bilge."
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.pirates/generator/ship-name",
+      "description": "A pirate or merchant ship name",
+      "tags": [
+        "ship",
+        "name"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/ship-name"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/ship-class",
+      "description": "A vessel class or rig",
+      "tags": [
+        "ship",
+        "class"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/ship-class"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/captain-name",
+      "description": "A pirate captain's structured name with epithet",
+      "tags": [
+        "person",
+        "captain"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.pirates/culture/corsair",
+      "structure": "corsair-captain"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/captain-name-buccaneer",
+      "description": "A buccaneer captain's structured name with epithet",
+      "tags": [
+        "person",
+        "captain"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.pirates/culture/buccaneer",
+      "structure": "buccaneer-captain"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/captain-epithet",
+      "description": "A pirate captain's epithet",
+      "tags": [
+        "person",
+        "epithet"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/captain-epithet"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/crew-name",
+      "description": "The name of a pirate crew",
+      "tags": [
+        "faction",
+        "crew"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/crew-name"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/port-cove",
+      "description": "A port, harbor or hidden cove",
+      "tags": [
+        "place",
+        "port"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/port-cove"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/faction-name",
+      "description": "A pirates' company, league or guild",
+      "tags": [
+        "faction"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/faction-name"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/treasure",
+      "description": "A treasure or piece of plunder",
+      "tags": [
+        "item",
+        "treasure"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/treasure"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/map-name",
+      "description": "The title of a treasure map or chart",
+      "tags": [
+        "item",
+        "map"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/map-name"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/shanty-title",
+      "description": "A sea shanty ballad title",
+      "tags": [
+        "text",
+        "shanty"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/shanty-title"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/naval-rank",
+      "description": "A naval rank or shipboard role",
+      "tags": [
+        "person",
+        "rank"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.pirates/grammar/naval-rank"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/sea-encounter",
+      "description": "An encounter at sea",
+      "tags": [
+        "oracle",
+        "encounter"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.pirates/table/sea-encounter"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/weather-portent",
+      "description": "Weather and omens for a voyage",
+      "tags": [
+        "oracle",
+        "weather"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.pirates/table/weather-portent"
+    },
+    {
+      "id": "lexiconlang.pirates/generator/cargo-haul",
+      "description": "Cargo found in a seized hold",
+      "tags": [
+        "oracle",
+        "cargo"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.pirates/table/cargo-haul"
+    }
+  ]
+}

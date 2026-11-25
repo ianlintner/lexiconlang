@@ -68,6 +68,9 @@ importers:
       '@lexiconlang/mythology':
         specifier: workspace:*
         version: link:../packages/mythology
+      '@lexiconlang/pirates':
+        specifier: workspace:*
+        version: link:../packages/pirates
       '@lexiconlang/postapoc':
         specifier: workspace:*
         version: link:../packages/postapoc
@@ -254,6 +257,25 @@ importers:
       ajv:
         specifier: ^8.20.0
         version: 8.20.0
+
+  packages/pirates:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/language':
+        specifier: workspace:*
+        version: link:../language
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+    devDependencies:
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
+      vitest:
+        specifier: ^5.1.0
+        version: 5.1.0(@types/node@26.6.6)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(tsx@4.23.15)(yaml@2.9.1))
 
   packages/postapoc:
     dependencies:
