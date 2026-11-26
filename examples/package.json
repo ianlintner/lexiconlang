@@ -29,6 +29,7 @@
     "@lexiconlang/fantasy": "workspace:*",
     "@lexiconlang/scifi": "workspace:*",
     "@lexiconlang/modern": "workspace:*",
+    "@lexiconlang/horror": "workspace:*",
     "@lexiconlang/steampunk": "workspace:*",
     "@lexiconlang/grimdark": "workspace:*",
     "@lexiconlang/pirates": "workspace:*",

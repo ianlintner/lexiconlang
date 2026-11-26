@@ -59,6 +59,9 @@ importers:
       '@lexiconlang/historical-medieval':
         specifier: workspace:*
         version: link:../packages/historical-medieval
+      '@lexiconlang/horror':
+        specifier: workspace:*
+        version: link:../packages/horror
       '@lexiconlang/language':
         specifier: workspace:*
         version: link:../packages/language
@@ -202,6 +205,18 @@ importers:
       '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
+  packages/horror:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/language':
+        specifier: workspace:*
+        version: link:../language
       '@lexiconlang/packs':
         specifier: workspace:*
         version: link:../packs
