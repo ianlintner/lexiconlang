@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/markov",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Markov-chain name and word generator with offline trainer",
   "type": "module",
   "main": "./dist/index.js",

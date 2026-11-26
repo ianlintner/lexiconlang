@@ -1,5 +1,16 @@
 # @lexiconlang/cli
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies [7609b94]
+- Updated dependencies [cac33e3]
+- Updated dependencies [0942d8d]
+  - @lexiconlang/packs@0.2.0
+  - @lexiconlang/core@0.3.0
+  - @lexiconlang/markov@0.2.1
+
 ## 0.2.0
 
 ### Minor Changes

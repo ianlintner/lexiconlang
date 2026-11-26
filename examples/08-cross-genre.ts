@@ -10,11 +10,13 @@ import { compose, createContext, oneOf, repeat } from "@lexiconlang/core";
 import { fullName as fantasyFullName, dwarvenMaleName, expandedWithSeed } from "@lexiconlang/fantasy";
 import { scifi } from "@lexiconlang/scifi";
 import { modern } from "@lexiconlang/modern";
+import { horror } from "@lexiconlang/horror";
 import { pirates } from "@lexiconlang/pirates";
 import { postapoc } from "@lexiconlang/postapoc";
 import { cyberpunk } from "@lexiconlang/cyberpunk";
 import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
+import { grimdark } from "@lexiconlang/grimdark";
 import { mythology } from "@lexiconlang/mythology";
 import { wuxia } from "@lexiconlang/wuxia";
 import { supers } from "@lexiconlang/supers";
@@ -95,6 +97,22 @@ for (const d of sq) {
   console.log(`    station: ${d.station}  · partner: ${d.partner}\n`);
 }
 
+// ─── Scenario 3: a horror investigation in a small town ──────────────────
+//
+// The horror pack is a standalone F2 pack with a `withSeed` facade, so it
+// composes with any other genre just by using a shared seed family.
+
+const h = horror.withSeed("the-silver-cord");
+
+console.log("\nSmall-town horror case file:");
+console.log(`  Investigator: ${h.investigator("lead")}`);
+console.log(`  Town:         ${h.town("setting").form}`);
+console.log(`  Haunted site: ${h.hauntedLocation("site")}`);
+console.log(`  Forbidden tome: ${h.forbiddenTome("evidence")}`);
+console.log(`  Cult:         ${h.cult("suspects")}`);
+console.log(`  Entity:       ${h.eldritchEntity("boss")} (${h.monsterTrait("tell")})`);
+console.log(`  Omen:         ${h.omen("first-sign")}`);
+console.log(`  Secret:       ${h.secret("backstory")}`);
 // ─── Scenario 3: a pirate crew with a fantasy quartermaster ──────────────
 interface PirateRoster {
   captain: string;
@@ -170,6 +188,20 @@ console.log(`  Society:  ${brass.society()}`);
 console.log(`  Sunday headline: ${brass.headline()}`);
 console.log(`  Street omen: ${brass.omen().text}`);
 
+// ─── Scenario 4: a grimdark muster roll ─────────────────────────────────
+
+const dark = grimdark.withSeed("black-standard");
+console.log("\nGrimdark muster roll:");
+console.log(`  Warband:  ${dark.warband()}`);
+console.log(`  Banner:   ${dark.banner()}`);
+console.log(`  Captain:  ${dark.person().form} — ${dark.title()}`);
+console.log(`  Heresy:   ${dark.heresy()}`);
+console.log(`  Plague:   ${dark.plague()} — ${dark.plagueOutcome().text}`);
+console.log(`  Engine:   ${dark.warMachine()}`);
+console.log(`  Clan:     ${dark.clan()} under ${dark.warlord()}`);
+console.log(`  Battle:   ${dark.battle()}`);
+console.log(`  Omen:     ${dark.omen().text}`);
+
 // ─── Scenario 4: a mythic relic in a cross-genre campaign ────────────────
 
 const myth = mythology.withSeed("myth-cross-genre");
@@ -181,7 +213,7 @@ console.log(`  Shrine:   ${myth.holySite()} · keeper ${myth.person().form}`);
 console.log(`  Relic:    ${myth.artifact()} — ${myth.relicPower().text}`);
 console.log(`  Omen:     ${myth.omen().text}`);
 
-// ─── Scenario 4: a gaslamp expedition into a cultivation secret realm ────
+// ─── Scenario 5: a gaslamp expedition into a cultivation secret realm ────
 
 const jianghu = wuxia.withSeed("brass-and-jade");
 console.log("\nGaslamp expedition into a hidden realm:");
@@ -194,7 +226,7 @@ console.log(`  Destination: ${jianghu.secretRealm()}`);
 console.log(`  Treasure:   ${jianghu.treasure()}`);
 console.log(`  Trial:      ${jianghu.tribulation().text}`);
 
-// ─── Scenario 5: a supers dossier in a shared city ───────────────────────
+// ─── Scenario 6: a supers dossier in a shared city ───────────────────────
 
 const masked = supers.withSeed("masked-cross-genre");
 const dossier = masked.dossier();

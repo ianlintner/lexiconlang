@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/historical-medieval",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Historical-medieval genre pack for lexiconlang — realistic names, manors, guilds, monasteries, titles, markets and heraldry",
   "type": "module",
   "main": "./dist/index.js",
