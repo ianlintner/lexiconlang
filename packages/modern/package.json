@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/modern",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Modern-day genre content pack for lexiconlang — names, cities, companies, streets",
   "type": "module",
   "main": "./dist/index.js",
