@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "lexiconlang command-line tool: build Markov models, scaffold packs",
   "type": "module",
   "main": "./dist/index.js",

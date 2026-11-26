@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/grammar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tracery-compatible grammar engine for lexiconlang, with TS tagged-template DSL",
   "type": "module",
   "main": "./dist/index.js",

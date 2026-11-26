@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/packs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Declarative JSON pack format v1, schema validation, portable generators and world assembly",
   "type": "module",
   "main": "./dist/src/index.js",

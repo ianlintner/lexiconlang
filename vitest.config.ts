@@ -20,6 +20,7 @@ export default defineConfig({
       "@lexiconlang/cyberpunk": new URL("./packages/cyberpunk/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/packs/node": new URL("./packages/packs/src/node.ts", import.meta.url).pathname,
       "@lexiconlang/packs": new URL("./packages/packs/src/index.ts", import.meta.url).pathname,
+      "@lexiconlang/grimdark": new URL("./packages/grimdark/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/pirates": new URL("./packages/pirates/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/steampunk": new URL("./packages/steampunk/src/index.ts", import.meta.url).pathname,
       "@lexiconlang/wuxia": new URL("./packages/wuxia/src/index.ts", import.meta.url).pathname,
