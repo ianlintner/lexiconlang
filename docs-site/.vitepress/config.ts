@@ -95,6 +95,7 @@ export default defineConfig({
             { text: "@lexiconlang/cyberpunk", link: "/packages/cyberpunk" },
             { text: "@lexiconlang/historical-medieval", link: "/packages/historical-medieval" },
             { text: "@lexiconlang/steampunk", link: "/packages/steampunk" },
+            { text: "@lexiconlang/grimdark", link: "/packages/grimdark" },
             { text: "@lexiconlang/wuxia", link: "/packages/wuxia" },
             { text: "@lexiconlang/supers", link: "/packages/supers" },
             { text: "@lexiconlang/weird-west", link: "/packages/weird-west" },

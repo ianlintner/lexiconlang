@@ -18,6 +18,7 @@
     { "path": "./packages/cyberpunk" },
     { "path": "./packages/cli" },
     { "path": "./packages/steampunk" },
+    { "path": "./packages/grimdark" },
     { "path": "./packages/wuxia" },
     { "path": "./packages/supers" },
     { "path": "./packages/weird-west" }
