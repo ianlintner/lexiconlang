@@ -44,6 +44,9 @@ importers:
       '@lexiconlang/cyberpunk':
         specifier: workspace:*
         version: link:../packages/cyberpunk
+      '@lexiconlang/espionage':
+        specifier: workspace:*
+        version: link:../packages/espionage
       '@lexiconlang/fantasy':
         specifier: workspace:*
         version: link:../packages/fantasy
@@ -134,6 +137,18 @@ importers:
   packages/core: {}
 
   packages/cyberpunk:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/language':
+        specifier: workspace:*
+        version: link:../language
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
+
+  packages/espionage:
     dependencies:
       '@lexiconlang/core':
         specifier: workspace:*

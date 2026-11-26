@@ -39,7 +39,8 @@
     "@lexiconlang/historical-medieval": "workspace:*",
     "@lexiconlang/wuxia": "workspace:*",
     "@lexiconlang/supers": "workspace:*",
-    "@lexiconlang/weird-west": "workspace:*"
+    "@lexiconlang/weird-west": "workspace:*",
+    "@lexiconlang/espionage": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.23.15"

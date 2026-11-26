@@ -33,6 +33,7 @@ content for a setting.
 | [`@lexiconlang/horror`](/packages/horror)   | 1920s investigators, eldritch entities, forbidden tomes, cults, haunts, omens, 11 generators |
 | [`@lexiconlang/steampunk`](/packages/steampunk) | Steampunk/gaslamp: inventors, airships, guilds, districts, automatons, patents, headlines, omens (14 generators) |
 | [`@lexiconlang/grimdark`](/packages/grimdark) | Grimdark: warbands, heresies, inquisitions, plagues, mutations, war machines, ratfolk clans and warlords, doom-laden battles (16 generators) |
+| [`@lexiconlang/espionage`](/packages/espionage) | Espionage & military: operation codenames, callsigns, agencies, units, safehouses, dead-drops, cover identities, briefings, ranks, mottos (18 generators) |
 | [`@lexiconlang/pirates`](/packages/pirates) | Pirates & age of sail: ships, captains, crews, ports, treasure, shanties, ranks, oracles (14 generators) |
 | [`@lexiconlang/postapoc`](/packages/postapoc) | Survivors, tech-cults, settlements, mutations, gear, vehicles, trade goods, encounters oracle, 14 generators |
 
