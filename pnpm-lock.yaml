@@ -74,6 +74,9 @@ importers:
       '@lexiconlang/modern':
         specifier: workspace:*
         version: link:../packages/modern
+      '@lexiconlang/mythology':
+        specifier: workspace:*
+        version: link:../packages/mythology
       '@lexiconlang/pirates':
         specifier: workspace:*
         version: link:../packages/pirates
@@ -269,6 +272,18 @@ importers:
       '@lexiconlang/grammar':
         specifier: workspace:*
         version: link:../grammar
+
+  packages/mythology:
+    dependencies:
+      '@lexiconlang/core':
+        specifier: workspace:*
+        version: link:../core
+      '@lexiconlang/grammar':
+        specifier: workspace:*
+        version: link:../grammar
+      '@lexiconlang/packs':
+        specifier: workspace:*
+        version: link:../packs
 
   packages/packs:
     dependencies:

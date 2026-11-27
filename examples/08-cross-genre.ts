@@ -17,6 +17,7 @@ import { cyberpunk } from "@lexiconlang/cyberpunk";
 import { historicalMedieval } from "@lexiconlang/historical-medieval";
 import { steampunk } from "@lexiconlang/steampunk";
 import { grimdark } from "@lexiconlang/grimdark";
+import { mythology } from "@lexiconlang/mythology";
 import { wuxia } from "@lexiconlang/wuxia";
 import { supers } from "@lexiconlang/supers";
 import { weirdWest } from "@lexiconlang/weird-west";
@@ -201,6 +202,17 @@ console.log(`  Engine:   ${dark.warMachine()}`);
 console.log(`  Clan:     ${dark.clan()} under ${dark.warlord()}`);
 console.log(`  Battle:   ${dark.battle()}`);
 console.log(`  Omen:     ${dark.omen().text}`);
+
+// ─── Scenario 4: a mythic relic in a cross-genre campaign ────────────────
+
+const myth = mythology.withSeed("myth-cross-genre");
+console.log("\nMythic campaign seed:");
+console.log(`  Deity:    ${myth.deity()} — ${myth.epithet()}`);
+console.log(`  Pantheon: ${myth.pantheon()}`);
+console.log(`  Myth:     ${myth.myth()}`);
+console.log(`  Shrine:   ${myth.holySite()} · keeper ${myth.person().form}`);
+console.log(`  Relic:    ${myth.artifact()} — ${myth.relicPower().text}`);
+console.log(`  Omen:     ${myth.omen().text}`);
 
 // ─── Scenario 5: a gaslamp expedition into a cultivation secret realm ────
 
