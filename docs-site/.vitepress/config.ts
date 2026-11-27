@@ -100,6 +100,7 @@ export default defineConfig({
             { text: "@lexiconlang/wuxia", link: "/packages/wuxia" },
             { text: "@lexiconlang/supers", link: "/packages/supers" },
             { text: "@lexiconlang/weird-west", link: "/packages/weird-west" },
+            { text: "@lexiconlang/mythology", link: "/packages/mythology" },
           ],
         },
         {
