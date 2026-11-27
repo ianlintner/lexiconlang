@@ -21,6 +21,7 @@ import { mythology } from "@lexiconlang/mythology";
 import { wuxia } from "@lexiconlang/wuxia";
 import { supers } from "@lexiconlang/supers";
 import { weirdWest } from "@lexiconlang/weird-west";
+import { espionage } from "@lexiconlang/espionage";
 
 // ─── Scenario 1: a sci-fantasy ship's crew ───────────────────────────────
 //
@@ -248,3 +249,15 @@ for (let i = 0; i < 3; i++) {
   console.log(`  ${frontier.wantedPoster()}`);
   console.log(`    also known in the old country as "${alias}" · hideout: ${frontier.mine()}\n`);
 }
+
+// ─── Scenario 7: a spy-thriller briefing with a fantasy-named informant ──
+
+const spy = espionage.withSeed("cold-harbor");
+console.log("\nEspionage briefing (+ fantasy informant):");
+console.log(`  ${spy.operationCodename("op")} — ${spy.agencyName("home")}`);
+console.log(`  Cover:     ${spy.coverIdentityModern("cover").form}, ${spy.coverOccupation("cover-job")}`);
+console.log(`  Informant: ${fantasyFullName.generate(ctx.child("informant")).surname} (${spy.assetReliability("informant")})`);
+console.log(`  Safehouse: ${spy.safehouse("hide")}`);
+console.log(`  Dead-drop: ${spy.deadDrop("drop")}`);
+console.log(`  Tasking:   ${spy.missionBriefing("tasking")}`);
+console.log(`  Snag:      ${spy.fieldComplication("snag")}`);

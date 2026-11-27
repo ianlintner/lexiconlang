@@ -1,0 +1,32 @@
+{
+  "name": "@lexiconlang/espionage",
+  "version": "0.1.0",
+  "description": "Espionage & military genre content pack for lexiconlang — operation codenames, callsigns, agencies, units, safehouses, dead-drops, cover identities, briefings, ranks and mottos",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./espionage.pack.json": "./src/espionage.pack.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "PROVENANCE.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lexiconlang/core": "workspace:*",
+    "@lexiconlang/language": "workspace:*",
+    "@lexiconlang/packs": "workspace:*"
+  }
+}

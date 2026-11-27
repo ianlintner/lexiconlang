@@ -23,6 +23,7 @@
     { "path": "./packages/wuxia" },
     { "path": "./packages/supers" },
     { "path": "./packages/weird-west" },
-    { "path": "./packages/mythology" }
+    { "path": "./packages/mythology" },
+    { "path": "./packages/espionage" }
   ]
 }

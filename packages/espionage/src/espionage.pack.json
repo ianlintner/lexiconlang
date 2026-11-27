@@ -1,0 +1,7210 @@
+{
+  "$schema": "https://lexiconlang.dev/schemas/pack-v1.schema.json",
+  "formatVersion": 1,
+  "id": "lexiconlang.espionage",
+  "version": "0.1.0",
+  "license": "CC0-1.0",
+  "description": "Original fictional espionage and military codenames, callsigns, agencies, units, safehouses, dead-drops, cover identities, briefings and ranks for lexiconlang",
+  "provenance": [
+    {
+      "id": "original-lexiconlang-espionage",
+      "source": "original:lexiconlang.espionage",
+      "title": "Espionage & military genre data",
+      "creator": "LexiconLang contributors",
+      "license": "CC0-1.0",
+      "attribution": "All strings in this pack are original synthetic fiction authored for lexiconlang. No real people, trademarks, or setting-specific copyrighted names are reproduced.",
+      "modifications": "None",
+      "files": [
+        "src/espionage.pack.json"
+      ]
+    }
+  ],
+  "depends": [],
+  "extends": [],
+  "requires": [
+    "language-v1",
+    "grammar-v1",
+    "tables-v1"
+  ],
+  "cultures": [
+    {
+      "id": "lexiconlang.espionage/culture/postwar",
+      "capitalize": "first",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "m",
+            "n",
+            "r",
+            "s",
+            "t",
+            "v",
+            "z",
+            "th",
+            "sh"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ae",
+            "ei"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            3
+          ],
+          [
+            "3",
+            2
+          ],
+          [
+            "2-2",
+            1
+          ]
+        ],
+        "joiner": ""
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Arthur",
+              "translation": "Arthur"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beryl",
+              "translation": "Beryl"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cecil",
+              "translation": "Cecil"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dorothy",
+              "translation": "Dorothy"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Edwin",
+              "translation": "Edwin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Florence",
+              "translation": "Florence"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gerald",
+              "translation": "Gerald"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hilda",
+              "translation": "Hilda"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Irving",
+              "translation": "Irving"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Joan",
+              "translation": "Joan"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kenneth",
+              "translation": "Kenneth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lillian",
+              "translation": "Lillian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Malcolm",
+              "translation": "Malcolm"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Norma",
+              "translation": "Norma"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oswald",
+              "translation": "Oswald"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pamela",
+              "translation": "Pamela"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Reginald",
+              "translation": "Reginald"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sybil",
+              "translation": "Sybil"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Trevor",
+              "translation": "Trevor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vivian",
+              "translation": "Vivian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Walter",
+              "translation": "Walter"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Winifred",
+              "translation": "Winifred"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Alistair",
+              "translation": "Alistair"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bernard",
+              "translation": "Bernard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Constance",
+              "translation": "Constance"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Douglas",
+              "translation": "Douglas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eileen",
+              "translation": "Eileen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Francis",
+              "translation": "Francis"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gladys",
+              "translation": "Gladys"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Harold",
+              "translation": "Harold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iris",
+              "translation": "Iris"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Julian",
+              "translation": "Julian"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lorna",
+              "translation": "Lorna"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Maurice",
+              "translation": "Maurice"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nora",
+              "translation": "Nora"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Percival",
+              "translation": "Percival"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ruth",
+              "translation": "Ruth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Stanley",
+              "translation": "Stanley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thelma",
+              "translation": "Thelma"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Victor",
+              "translation": "Victor"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aldridge",
+              "translation": "Aldridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Barrow",
+              "translation": "Barrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cartwright",
+              "translation": "Cartwright"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dewhurst",
+              "translation": "Dewhurst"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eldon",
+              "translation": "Eldon"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fothergill",
+              "translation": "Fothergill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gaskell",
+              "translation": "Gaskell"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hargreaves",
+              "translation": "Hargreaves"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ibbotson",
+              "translation": "Ibbotson"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jarrett",
+              "translation": "Jarrett"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kettering",
+              "translation": "Kettering"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lowther",
+              "translation": "Lowther"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Maddox",
+              "translation": "Maddox"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Netherby",
+              "translation": "Netherby"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Oakes",
+              "translation": "Oakes"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pickering",
+              "translation": "Pickering"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quennell",
+              "translation": "Quennell"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rutherford",
+              "translation": "Rutherford"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sedgwick",
+              "translation": "Sedgwick"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tolliver",
+              "translation": "Tolliver"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Upshaw",
+              "translation": "Upshaw"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Venables",
+              "translation": "Venables"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Whitcombe",
+              "translation": "Whitcombe"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yardley",
+              "translation": "Yardley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ainsley",
+              "translation": "Ainsley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bickerstaff",
+              "translation": "Bickerstaff"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Crabtree",
+              "translation": "Crabtree"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dunstan",
+              "translation": "Dunstan"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Entwistle",
+              "translation": "Entwistle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Farnsworth",
+              "translation": "Farnsworth"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Goodall",
+              "translation": "Goodall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Holroyd",
+              "translation": "Holroyd"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isherwood",
+              "translation": "Isherwood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jephson",
+              "translation": "Jephson"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kingsley",
+              "translation": "Kingsley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lumley",
+              "translation": "Lumley"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mansfield",
+              "translation": "Mansfield"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nuttall",
+              "translation": "Nuttall"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ormerod",
+              "translation": "Ormerod"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Penhallow",
+              "translation": "Penhallow"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "postwar-cover": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lexiconlang.espionage/culture/modern",
+      "capitalize": "first",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "m",
+            "n",
+            "r",
+            "s",
+            "t",
+            "v",
+            "z",
+            "th",
+            "sh"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ae",
+            "ei"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            3
+          ],
+          [
+            "3",
+            2
+          ],
+          [
+            "2-2",
+            1
+          ]
+        ],
+        "joiner": ""
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aiden",
+              "translation": "Aiden"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Amara",
+              "translation": "Amara"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Beckett",
+              "translation": "Beckett"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Camila",
+              "translation": "Camila"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dario",
+              "translation": "Dario"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Elena",
+              "translation": "Elena"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Farid",
+              "translation": "Farid"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Greta",
+              "translation": "Greta"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hana",
+              "translation": "Hana"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Idris",
+              "translation": "Idris"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jonas",
+              "translation": "Jonas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Keiko",
+              "translation": "Keiko"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lucia",
+              "translation": "Lucia"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mateo",
+              "translation": "Mateo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nia",
+              "translation": "Nia"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Omar",
+              "translation": "Omar"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Priya",
+              "translation": "Priya"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rafael",
+              "translation": "Rafael"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Saoirse",
+              "translation": "Saoirse"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tomas",
+              "translation": "Tomas"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Uma",
+              "translation": "Uma"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vikram",
+              "translation": "Vikram"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Willa",
+              "translation": "Willa"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xavier",
+              "translation": "Xavier"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yasmin",
+              "translation": "Yasmin"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zane",
+              "translation": "Zane"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Anika",
+              "translation": "Anika"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bruno",
+              "translation": "Bruno"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Chidi",
+              "translation": "Chidi"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dalia",
+              "translation": "Dalia"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Emil",
+              "translation": "Emil"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fatima",
+              "translation": "Fatima"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gabriel",
+              "translation": "Gabriel"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Helga",
+              "translation": "Helga"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ines",
+              "translation": "Ines"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jamal",
+              "translation": "Jamal"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kira",
+              "translation": "Kira"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Leandro",
+              "translation": "Leandro"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mei",
+              "translation": "Mei"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nikhil",
+              "translation": "Nikhil"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Abara",
+              "translation": "Abara"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brennan",
+              "translation": "Brennan"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Castellano",
+              "translation": "Castellano"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dragomir",
+              "translation": "Dragomir"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eklund",
+              "translation": "Eklund"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fontaine",
+              "translation": "Fontaine"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Guerrero",
+              "translation": "Guerrero"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Haddad",
+              "translation": "Haddad"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Iyer",
+              "translation": "Iyer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jovanovic",
+              "translation": "Jovanovic"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kowalski",
+              "translation": "Kowalski"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lindgren",
+              "translation": "Lindgren"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Moretti",
+              "translation": "Moretti"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nakamura",
+              "translation": "Nakamura"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Okonkwo",
+              "translation": "Okonkwo"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Petrosyan",
+              "translation": "Petrosyan"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quintero",
+              "translation": "Quintero"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rasmussen",
+              "translation": "Rasmussen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Santoro",
+              "translation": "Santoro"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Takeda",
+              "translation": "Takeda"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulloa",
+              "translation": "Ulloa"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vasquez",
+              "translation": "Vasquez"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wójcik",
+              "translation": "Wójcik"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Xu",
+              "translation": "Xu"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yilmaz",
+              "translation": "Yilmaz"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zamora",
+              "translation": "Zamora"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Andersen",
+              "translation": "Andersen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Bianchi",
+              "translation": "Bianchi"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cho",
+              "translation": "Cho"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Duarte",
+              "translation": "Duarte"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Esposito",
+              "translation": "Esposito"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Fischer",
+              "translation": "Fischer"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gallagher",
+              "translation": "Gallagher"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Horvat",
+              "translation": "Horvat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ivanova",
+              "translation": "Ivanova"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Jankowski",
+              "translation": "Jankowski"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kovalenko",
+              "translation": "Kovalenko"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Larsen",
+              "translation": "Larsen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mbeki",
+              "translation": "Mbeki"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Novotny",
+              "translation": "Novotny"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "modern-cover": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "lexiconlang.espionage/culture/meridian",
+      "capitalize": "first",
+      "glyphs": {
+        "classes": {
+          "C": [
+            "b",
+            "d",
+            "f",
+            "g",
+            "k",
+            "l",
+            "m",
+            "n",
+            "r",
+            "s",
+            "t",
+            "v",
+            "z",
+            "th",
+            "sh"
+          ],
+          "V": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u",
+            "ae",
+            "ei"
+          ]
+        },
+        "syllables": [
+          [
+            "C V",
+            4
+          ],
+          [
+            "C V C",
+            3
+          ],
+          [
+            "V C",
+            1
+          ]
+        ],
+        "wordShapes": [
+          [
+            "2",
+            3
+          ],
+          [
+            "3",
+            2
+          ],
+          [
+            "2-2",
+            1
+          ]
+        ],
+        "joiner": ""
+      },
+      "templates": {
+        "given": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Varek",
+              "translation": "watcher"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Isolde",
+              "translation": "ember"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tavian",
+              "translation": "ferryman"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neris",
+              "translation": "tide"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dorrin",
+              "translation": "keeper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Calyth",
+              "translation": "lantern"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirel",
+              "translation": "quiet one"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orsen",
+              "translation": "stranger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kaya",
+              "translation": "hawk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brannic",
+              "translation": "gatekeeper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lessa",
+              "translation": "willow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Torvald",
+              "translation": "thorn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ysolen",
+              "translation": "dusk"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hadrek",
+              "translation": "stone"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sevra",
+              "translation": "ash"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ilmar",
+              "translation": "river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zenna",
+              "translation": "frost"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corvin",
+              "translation": "crow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pashka",
+              "translation": "sparrow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mathis",
+              "translation": "walker"
+            },
+            "weight": 1
+          }
+        ],
+        "surname": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dovrenko",
+              "translation": "of the pale river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Valcourt",
+              "translation": "of the vale court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ostrander",
+              "translation": "of the east strand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kessenwald",
+              "translation": "of the keeper's wood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marchetti",
+              "translation": "of the march"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brandelov",
+              "translation": "of the burnt ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Szarvas",
+              "translation": "the stag"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lindqvarn",
+              "translation": "of the linden fen"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rhoswen",
+              "translation": "of the white rose"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tarkanov",
+              "translation": "of the tower road"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aldermere",
+              "translation": "of the elder lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ziegler",
+              "translation": "tile-maker"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Prokhor",
+              "translation": "the steward"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hallvard",
+              "translation": "the hall guard"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Navarro",
+              "translation": "of the plain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Quillfeather",
+              "translation": "the scribe"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Roskov",
+              "translation": "of the rose hill"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sundqvist",
+              "translation": "of the sound"
+            },
+            "weight": 1
+          }
+        ],
+        "place-first": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kalvren",
+              "translation": "grey"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ostar",
+              "translation": "salt"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Marrik",
+              "translation": "lantern"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tessor",
+              "translation": "watchers'"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vhelm",
+              "translation": "ash"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sundrel",
+              "translation": "divided"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pyrrek",
+              "translation": "bell-iron"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dormael",
+              "translation": "long-night"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Cassiv",
+              "translation": "glass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brannoch",
+              "translation": "quiet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ilvane",
+              "translation": "lamp"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zorreth",
+              "translation": "broken"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Neruv",
+              "translation": "far"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Halcyr",
+              "translation": "cold"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orvaine",
+              "translation": "pale"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tulgar",
+              "translation": "iron"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Venzor",
+              "translation": "seventh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Qirath",
+              "translation": "high"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Aldov",
+              "translation": "old"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mirenth",
+              "translation": "sleeping"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Draskel",
+              "translation": "thorn"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yevane",
+              "translation": "mirrored"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Corvath",
+              "translation": "crow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Belmar",
+              "translation": "unmapped"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Skarra",
+              "translation": "wind"
+            },
+            "weight": 1
+          }
+        ],
+        "place-second": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dosh",
+              "translation": "crossing"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vell",
+              "translation": "stair"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hal",
+              "translation": "quay"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orra",
+              "translation": "river"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Anh",
+              "translation": "town"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ul",
+              "translation": "fortress"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kai",
+              "translation": "gate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mon",
+              "translation": "harbor"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Esh",
+              "translation": "meadow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sol",
+              "translation": "fjord"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ro",
+              "translation": "lake"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nul",
+              "translation": "coast"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dun",
+              "translation": "garrison"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tash",
+              "translation": "archive"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pel",
+              "translation": "ferry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Wyr",
+              "translation": "plain"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ethar",
+              "translation": "station"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Voss",
+              "translation": "market"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rend",
+              "translation": "pass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Lorn",
+              "translation": "orchard"
+            },
+            "weight": 1
+          }
+        ],
+        "faction-first": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Orrin",
+              "translation": "ledger"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dasmark",
+              "translation": "veiled"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kessiv",
+              "translation": "lamp"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Thaldren",
+              "translation": "quiet"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ismar",
+              "translation": "third"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rovanth",
+              "translation": "border"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Salkir",
+              "translation": "tide"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Yolvane",
+              "translation": "paper"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Brevoth",
+              "translation": "hollow"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Mazrek",
+              "translation": "glass"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ulvar",
+              "translation": "night"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Zennor",
+              "translation": "salt"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Pellor",
+              "translation": "seventh"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Averin",
+              "translation": "open-hand"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gorrath",
+              "translation": "iron"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hesperil",
+              "translation": "evening"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Tormund",
+              "translation": "ridge"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Livarra",
+              "translation": "silent"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Nokthar",
+              "translation": "cipher"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Eskavane",
+              "translation": "long-shadow"
+            },
+            "weight": 1
+          }
+        ],
+        "faction-second": [
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vael",
+              "translation": "circle"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hul",
+              "translation": "directorate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ok",
+              "translation": "concordat"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Vo",
+              "translation": "chamber"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Dun",
+              "translation": "syndicate"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ar",
+              "translation": "court"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Hesh",
+              "translation": "guild"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Kai",
+              "translation": "registry"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Sol",
+              "translation": "league"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ae",
+              "translation": "brotherhood"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Rask",
+              "translation": "assembly"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Teln",
+              "translation": "order"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Murr",
+              "translation": "office"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Gesh",
+              "translation": "service"
+            },
+            "weight": 1
+          },
+          {
+            "value": {
+              "kind": "literal",
+              "form": "Ithe",
+              "translation": "union"
+            },
+            "weight": 1
+          }
+        ]
+      },
+      "nameStructures": {
+        "meridian-agent": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "given",
+              "role": "given",
+              "source": {
+                "type": "kind",
+                "kind": "given"
+              }
+            },
+            {
+              "key": "surname",
+              "role": "surname",
+              "source": {
+                "type": "kind",
+                "kind": "surname"
+              }
+            }
+          ]
+        },
+        "meridian-place": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "place-first",
+              "role": "place-first",
+              "source": {
+                "type": "kind",
+                "kind": "place-first"
+              }
+            },
+            {
+              "key": "place-second",
+              "role": "place-second",
+              "source": {
+                "type": "kind",
+                "kind": "place-second"
+              }
+            }
+          ]
+        },
+        "meridian-faction": {
+          "separator": " ",
+          "translationSeparator": " ",
+          "slots": [
+            {
+              "key": "faction-first",
+              "role": "faction-first",
+              "source": {
+                "type": "kind",
+                "kind": "faction-first"
+              }
+            },
+            {
+              "key": "faction-second",
+              "role": "faction-second",
+              "source": {
+                "type": "kind",
+                "kind": "faction-second"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "meaningPacks": [],
+  "grammars": [
+    {
+      "id": "lexiconlang.espionage/grammar/operation-codename",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "Operation #adj# #noun#",
+              "weight": 5
+            },
+            {
+              "value": "#adj# #noun#",
+              "weight": 3
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Silent",
+              "weight": 1
+            },
+            {
+              "value": "Crimson",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Amber",
+              "weight": 1
+            },
+            {
+              "value": "Velvet",
+              "weight": 1
+            },
+            {
+              "value": "Iron",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Winter",
+              "weight": 1
+            },
+            {
+              "value": "Broken",
+              "weight": 1
+            },
+            {
+              "value": "Distant",
+              "weight": 1
+            },
+            {
+              "value": "Midnight",
+              "weight": 1
+            },
+            {
+              "value": "Copper",
+              "weight": 1
+            },
+            {
+              "value": "Quiet",
+              "weight": 1
+            },
+            {
+              "value": "Gilded",
+              "weight": 1
+            },
+            {
+              "value": "Ashen",
+              "weight": 1
+            },
+            {
+              "value": "Bitter",
+              "weight": 1
+            },
+            {
+              "value": "Glass",
+              "weight": 1
+            },
+            {
+              "value": "Northern",
+              "weight": 1
+            },
+            {
+              "value": "Sable",
+              "weight": 1
+            },
+            {
+              "value": "Scarlet",
+              "weight": 1
+            },
+            {
+              "value": "Shadowed",
+              "weight": 1
+            },
+            {
+              "value": "Slate",
+              "weight": 1
+            },
+            {
+              "value": "Static",
+              "weight": 1
+            },
+            {
+              "value": "Burning",
+              "weight": 1
+            },
+            {
+              "value": "Frozen",
+              "weight": 1
+            },
+            {
+              "value": "Hidden",
+              "weight": 1
+            },
+            {
+              "value": "Linen",
+              "weight": 1
+            },
+            {
+              "value": "Marble",
+              "weight": 1
+            },
+            {
+              "value": "Narrow",
+              "weight": 1
+            },
+            {
+              "value": "Obsidian",
+              "weight": 1
+            },
+            {
+              "value": "Paper",
+              "weight": 1
+            },
+            {
+              "value": "Rusted",
+              "weight": 1
+            },
+            {
+              "value": "Sterling",
+              "weight": 1
+            },
+            {
+              "value": "Thorned",
+              "weight": 1
+            },
+            {
+              "value": "Umber",
+              "weight": 1
+            },
+            {
+              "value": "Violet",
+              "weight": 1
+            },
+            {
+              "value": "Wandering",
+              "weight": 1
+            },
+            {
+              "value": "Hushed",
+              "weight": 1
+            },
+            {
+              "value": "Ivory",
+              "weight": 1
+            },
+            {
+              "value": "Crooked",
+              "weight": 1
+            },
+            {
+              "value": "Lonely",
+              "weight": 1
+            },
+            {
+              "value": "Brass",
+              "weight": 1
+            },
+            {
+              "value": "Cobalt",
+              "weight": 1
+            },
+            {
+              "value": "Saffron",
+              "weight": 1
+            },
+            {
+              "value": "Wicker",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Harbor",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Falcon",
+              "weight": 1
+            },
+            {
+              "value": "Meridian",
+              "weight": 1
+            },
+            {
+              "value": "Compass",
+              "weight": 1
+            },
+            {
+              "value": "Orchard",
+              "weight": 1
+            },
+            {
+              "value": "Cipher",
+              "weight": 1
+            },
+            {
+              "value": "Anvil",
+              "weight": 1
+            },
+            {
+              "value": "Ledger",
+              "weight": 1
+            },
+            {
+              "value": "Mirror",
+              "weight": 1
+            },
+            {
+              "value": "Citadel",
+              "weight": 1
+            },
+            {
+              "value": "Tide",
+              "weight": 1
+            },
+            {
+              "value": "Vesper",
+              "weight": 1
+            },
+            {
+              "value": "Bridge",
+              "weight": 1
+            },
+            {
+              "value": "Thistle",
+              "weight": 1
+            },
+            {
+              "value": "Quarry",
+              "weight": 1
+            },
+            {
+              "value": "Pendulum",
+              "weight": 1
+            },
+            {
+              "value": "Warden",
+              "weight": 1
+            },
+            {
+              "value": "Lattice",
+              "weight": 1
+            },
+            {
+              "value": "Beacon",
+              "weight": 1
+            },
+            {
+              "value": "Garrison",
+              "weight": 1
+            },
+            {
+              "value": "Kestrel",
+              "weight": 1
+            },
+            {
+              "value": "Monsoon",
+              "weight": 1
+            },
+            {
+              "value": "Parapet",
+              "weight": 1
+            },
+            {
+              "value": "Sparrow",
+              "weight": 1
+            },
+            {
+              "value": "Tundra",
+              "weight": 1
+            },
+            {
+              "value": "Gambit",
+              "weight": 1
+            },
+            {
+              "value": "Lighthouse",
+              "weight": 1
+            },
+            {
+              "value": "Marionette",
+              "weight": 1
+            },
+            {
+              "value": "Almanac",
+              "weight": 1
+            },
+            {
+              "value": "Bastion",
+              "weight": 1
+            },
+            {
+              "value": "Cormorant",
+              "weight": 1
+            },
+            {
+              "value": "Dagger",
+              "weight": 1
+            },
+            {
+              "value": "Embassy",
+              "weight": 1
+            },
+            {
+              "value": "Furnace",
+              "weight": 1
+            },
+            {
+              "value": "Gallows",
+              "weight": 1
+            },
+            {
+              "value": "Heron",
+              "weight": 1
+            },
+            {
+              "value": "Junction",
+              "weight": 1
+            },
+            {
+              "value": "Keystone",
+              "weight": 1
+            },
+            {
+              "value": "Labyrinth",
+              "weight": 1
+            },
+            {
+              "value": "Mantle",
+              "weight": 1
+            },
+            {
+              "value": "Needle",
+              "weight": 1
+            },
+            {
+              "value": "Overture",
+              "weight": 1
+            },
+            {
+              "value": "Palisade",
+              "weight": 1
+            },
+            {
+              "value": "Rampart",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/callsign",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#adj# #noun#",
+              "weight": 5
+            },
+            {
+              "value": "#noun# #num#",
+              "weight": 4
+            },
+            {
+              "value": "#adj# #noun# #num#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "Quiet",
+              "weight": 1
+            },
+            {
+              "value": "Swift",
+              "weight": 1
+            },
+            {
+              "value": "Pale",
+              "weight": 1
+            },
+            {
+              "value": "Brisk",
+              "weight": 1
+            },
+            {
+              "value": "Dusky",
+              "weight": 1
+            },
+            {
+              "value": "Hollow",
+              "weight": 1
+            },
+            {
+              "value": "Lucky",
+              "weight": 1
+            },
+            {
+              "value": "Steady",
+              "weight": 1
+            },
+            {
+              "value": "Gentle",
+              "weight": 1
+            },
+            {
+              "value": "Restless",
+              "weight": 1
+            },
+            {
+              "value": "Silver",
+              "weight": 1
+            },
+            {
+              "value": "Tawny",
+              "weight": 1
+            },
+            {
+              "value": "Wary",
+              "weight": 1
+            },
+            {
+              "value": "Brave",
+              "weight": 1
+            },
+            {
+              "value": "Cunning",
+              "weight": 1
+            },
+            {
+              "value": "Dim",
+              "weight": 1
+            },
+            {
+              "value": "Eager",
+              "weight": 1
+            },
+            {
+              "value": "Faint",
+              "weight": 1
+            },
+            {
+              "value": "Grim",
+              "weight": 1
+            },
+            {
+              "value": "Humble",
+              "weight": 1
+            },
+            {
+              "value": "Idle",
+              "weight": 1
+            },
+            {
+              "value": "Jaunty",
+              "weight": 1
+            },
+            {
+              "value": "Keen",
+              "weight": 1
+            },
+            {
+              "value": "Lean",
+              "weight": 1
+            },
+            {
+              "value": "Mellow",
+              "weight": 1
+            },
+            {
+              "value": "Nimble",
+              "weight": 1
+            },
+            {
+              "value": "Plain",
+              "weight": 1
+            },
+            {
+              "value": "Rustic",
+              "weight": 1
+            },
+            {
+              "value": "Sly",
+              "weight": 1
+            },
+            {
+              "value": "Tidy",
+              "weight": 1
+            },
+            {
+              "value": "Vagrant",
+              "weight": 1
+            },
+            {
+              "value": "Wistful",
+              "weight": 1
+            },
+            {
+              "value": "Amber",
+              "weight": 1
+            },
+            {
+              "value": "Ember",
+              "weight": 1
+            },
+            {
+              "value": "Frost",
+              "weight": 1
+            },
+            {
+              "value": "Granite",
+              "weight": 1
+            },
+            {
+              "value": "Hazel",
+              "weight": 1
+            },
+            {
+              "value": "Indigo",
+              "weight": 1
+            },
+            {
+              "value": "Juniper",
+              "weight": 1
+            },
+            {
+              "value": "Cedar",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "noun",
+          "choices": [
+            {
+              "value": "Heron",
+              "weight": 1
+            },
+            {
+              "value": "Badger",
+              "weight": 1
+            },
+            {
+              "value": "Lantern",
+              "weight": 1
+            },
+            {
+              "value": "Marten",
+              "weight": 1
+            },
+            {
+              "value": "Pelican",
+              "weight": 1
+            },
+            {
+              "value": "Thistle",
+              "weight": 1
+            },
+            {
+              "value": "Wren",
+              "weight": 1
+            },
+            {
+              "value": "Anchor",
+              "weight": 1
+            },
+            {
+              "value": "Barley",
+              "weight": 1
+            },
+            {
+              "value": "Cricket",
+              "weight": 1
+            },
+            {
+              "value": "Dove",
+              "weight": 1
+            },
+            {
+              "value": "Egret",
+              "weight": 1
+            },
+            {
+              "value": "Ferret",
+              "weight": 1
+            },
+            {
+              "value": "Gannet",
+              "weight": 1
+            },
+            {
+              "value": "Hornet",
+              "weight": 1
+            },
+            {
+              "value": "Ibis",
+              "weight": 1
+            },
+            {
+              "value": "Jackdaw",
+              "weight": 1
+            },
+            {
+              "value": "Kite",
+              "weight": 1
+            },
+            {
+              "value": "Lynx",
+              "weight": 1
+            },
+            {
+              "value": "Magpie",
+              "weight": 1
+            },
+            {
+              "value": "Newt",
+              "weight": 1
+            },
+            {
+              "value": "Osprey",
+              "weight": 1
+            },
+            {
+              "value": "Plover",
+              "weight": 1
+            },
+            {
+              "value": "Quail",
+              "weight": 1
+            },
+            {
+              "value": "Raven",
+              "weight": 1
+            },
+            {
+              "value": "Stoat",
+              "weight": 1
+            },
+            {
+              "value": "Tern",
+              "weight": 1
+            },
+            {
+              "value": "Urchin",
+              "weight": 1
+            },
+            {
+              "value": "Vole",
+              "weight": 1
+            },
+            {
+              "value": "Whippet",
+              "weight": 1
+            },
+            {
+              "value": "Yarrow",
+              "weight": 1
+            },
+            {
+              "value": "Zephyr",
+              "weight": 1
+            },
+            {
+              "value": "Bramble",
+              "weight": 1
+            },
+            {
+              "value": "Cobbler",
+              "weight": 1
+            },
+            {
+              "value": "Drover",
+              "weight": 1
+            },
+            {
+              "value": "Falconer",
+              "weight": 1
+            },
+            {
+              "value": "Glazier",
+              "weight": 1
+            },
+            {
+              "value": "Harrier",
+              "weight": 1
+            },
+            {
+              "value": "Mallard",
+              "weight": 1
+            },
+            {
+              "value": "Otter",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "num",
+          "choices": [
+            {
+              "value": "One",
+              "weight": 1
+            },
+            {
+              "value": "Two",
+              "weight": 1
+            },
+            {
+              "value": "Three",
+              "weight": 1
+            },
+            {
+              "value": "Four",
+              "weight": 1
+            },
+            {
+              "value": "Five",
+              "weight": 1
+            },
+            {
+              "value": "Six",
+              "weight": 1
+            },
+            {
+              "value": "Seven",
+              "weight": 1
+            },
+            {
+              "value": "Eight",
+              "weight": 1
+            },
+            {
+              "value": "Nine",
+              "weight": 1
+            },
+            {
+              "value": "Niner",
+              "weight": 1
+            },
+            {
+              "value": "Zero",
+              "weight": 1
+            },
+            {
+              "value": "Twelve",
+              "weight": 1
+            },
+            {
+              "value": "Fifteen",
+              "weight": 1
+            },
+            {
+              "value": "Twenty",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/agency-name",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#kind# of #func#",
+              "weight": 4
+            },
+            {
+              "value": "#qual# #func# #kind#",
+              "weight": 4
+            },
+            {
+              "value": "#qual# #kind# for #func#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "func",
+          "choices": [
+            {
+              "value": "External Liaison",
+              "weight": 1
+            },
+            {
+              "value": "Special Review",
+              "weight": 1
+            },
+            {
+              "value": "Signals Assessment",
+              "weight": 1
+            },
+            {
+              "value": "Strategic Reconnaissance",
+              "weight": 1
+            },
+            {
+              "value": "Foreign Analysis",
+              "weight": 1
+            },
+            {
+              "value": "Covert Support",
+              "weight": 1
+            },
+            {
+              "value": "Border Intelligence",
+              "weight": 1
+            },
+            {
+              "value": "Technical Services",
+              "weight": 1
+            },
+            {
+              "value": "Counter-Subversion",
+              "weight": 1
+            },
+            {
+              "value": "Field Coordination",
+              "weight": 1
+            },
+            {
+              "value": "Diplomatic Security",
+              "weight": 1
+            },
+            {
+              "value": "Maritime Observation",
+              "weight": 1
+            },
+            {
+              "value": "Economic Warfare",
+              "weight": 1
+            },
+            {
+              "value": "Archival Research",
+              "weight": 1
+            },
+            {
+              "value": "Cryptologic Services",
+              "weight": 1
+            },
+            {
+              "value": "Overseas Operations",
+              "weight": 1
+            },
+            {
+              "value": "Internal Affairs",
+              "weight": 1
+            },
+            {
+              "value": "Aerial Surveillance",
+              "weight": 1
+            },
+            {
+              "value": "Political Assessment",
+              "weight": 1
+            },
+            {
+              "value": "Special Projects",
+              "weight": 1
+            },
+            {
+              "value": "Strategic Studies",
+              "weight": 1
+            },
+            {
+              "value": "Communications Security",
+              "weight": 1
+            },
+            {
+              "value": "Emerging Threats",
+              "weight": 1
+            },
+            {
+              "value": "Regional Stability",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "qual",
+          "choices": [
+            {
+              "value": "Northern",
+              "weight": 1
+            },
+            {
+              "value": "Southern",
+              "weight": 1
+            },
+            {
+              "value": "Joint",
+              "weight": 1
+            },
+            {
+              "value": "Allied",
+              "weight": 1
+            },
+            {
+              "value": "Combined",
+              "weight": 1
+            },
+            {
+              "value": "Federal",
+              "weight": 1
+            },
+            {
+              "value": "Central",
+              "weight": 1
+            },
+            {
+              "value": "Overseas",
+              "weight": 1
+            },
+            {
+              "value": "Maritime",
+              "weight": 1
+            },
+            {
+              "value": "Continental",
+              "weight": 1
+            },
+            {
+              "value": "Colonial",
+              "weight": 1
+            },
+            {
+              "value": "Republic",
+              "weight": 1
+            },
+            {
+              "value": "Crown",
+              "weight": 1
+            },
+            {
+              "value": "Union",
+              "weight": 1
+            },
+            {
+              "value": "Frontier",
+              "weight": 1
+            },
+            {
+              "value": "Pacific",
+              "weight": 1
+            },
+            {
+              "value": "Atlantic",
+              "weight": 1
+            },
+            {
+              "value": "Eastern",
+              "weight": 1
+            },
+            {
+              "value": "Western",
+              "weight": 1
+            },
+            {
+              "value": "Imperial",
+              "weight": 1
+            },
+            {
+              "value": "Coastal",
+              "weight": 1
+            },
+            {
+              "value": "Highland",
+              "weight": 1
+            },
+            {
+              "value": "Civil",
+              "weight": 1
+            },
+            {
+              "value": "National",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "kind",
+          "choices": [
+            {
+              "value": "Directorate",
+              "weight": 1
+            },
+            {
+              "value": "Bureau",
+              "weight": 1
+            },
+            {
+              "value": "Office",
+              "weight": 1
+            },
+            {
+              "value": "Service",
+              "weight": 1
+            },
+            {
+              "value": "Agency",
+              "weight": 1
+            },
+            {
+              "value": "Authority",
+              "weight": 1
+            },
+            {
+              "value": "Section",
+              "weight": 1
+            },
+            {
+              "value": "Division",
+              "weight": 1
+            },
+            {
+              "value": "Commission",
+              "weight": 1
+            },
+            {
+              "value": "Secretariat",
+              "weight": 1
+            },
+            {
+              "value": "Department",
+              "weight": 1
+            },
+            {
+              "value": "Institute",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/military-unit",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#ord# #type# #form#",
+              "weight": 6
+            },
+            {
+              "value": "#ord# #form#, #type#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "ord",
+          "choices": [
+            {
+              "value": "1st",
+              "weight": 1
+            },
+            {
+              "value": "2nd",
+              "weight": 1
+            },
+            {
+              "value": "3rd",
+              "weight": 1
+            },
+            {
+              "value": "4th",
+              "weight": 1
+            },
+            {
+              "value": "5th",
+              "weight": 1
+            },
+            {
+              "value": "6th",
+              "weight": 1
+            },
+            {
+              "value": "7th",
+              "weight": 1
+            },
+            {
+              "value": "8th",
+              "weight": 1
+            },
+            {
+              "value": "9th",
+              "weight": 1
+            },
+            {
+              "value": "10th",
+              "weight": 1
+            },
+            {
+              "value": "11th",
+              "weight": 1
+            },
+            {
+              "value": "12th",
+              "weight": 1
+            },
+            {
+              "value": "14th",
+              "weight": 1
+            },
+            {
+              "value": "17th",
+              "weight": 1
+            },
+            {
+              "value": "21st",
+              "weight": 1
+            },
+            {
+              "value": "22nd",
+              "weight": 1
+            },
+            {
+              "value": "33rd",
+              "weight": 1
+            },
+            {
+              "value": "41st",
+              "weight": 1
+            },
+            {
+              "value": "52nd",
+              "weight": 1
+            },
+            {
+              "value": "63rd",
+              "weight": 1
+            },
+            {
+              "value": "77th",
+              "weight": 1
+            },
+            {
+              "value": "101st",
+              "weight": 1
+            },
+            {
+              "value": "303rd",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "type",
+          "choices": [
+            {
+              "value": "Armoured Reconnaissance",
+              "weight": 1
+            },
+            {
+              "value": "Light Infantry",
+              "weight": 1
+            },
+            {
+              "value": "Mountain",
+              "weight": 1
+            },
+            {
+              "value": "Airborne",
+              "weight": 1
+            },
+            {
+              "value": "Signals",
+              "weight": 1
+            },
+            {
+              "value": "Special Reconnaissance",
+              "weight": 1
+            },
+            {
+              "value": "Engineer",
+              "weight": 1
+            },
+            {
+              "value": "Coastal Defence",
+              "weight": 1
+            },
+            {
+              "value": "Long-Range Patrol",
+              "weight": 1
+            },
+            {
+              "value": "Pathfinder",
+              "weight": 1
+            },
+            {
+              "value": "Mechanised",
+              "weight": 1
+            },
+            {
+              "value": "Naval Commando",
+              "weight": 1
+            },
+            {
+              "value": "Intelligence",
+              "weight": 1
+            },
+            {
+              "value": "Parachute",
+              "weight": 1
+            },
+            {
+              "value": "Combined Arms",
+              "weight": 1
+            },
+            {
+              "value": "Border Guard",
+              "weight": 1
+            },
+            {
+              "value": "Rapid Reaction",
+              "weight": 1
+            },
+            {
+              "value": "Fusilier",
+              "weight": 1
+            },
+            {
+              "value": "Rifle",
+              "weight": 1
+            },
+            {
+              "value": "Ranger",
+              "weight": 1
+            },
+            {
+              "value": "Jaeger",
+              "weight": 1
+            },
+            {
+              "value": "Cavalry",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "form",
+          "choices": [
+            {
+              "value": "Battalion",
+              "weight": 1
+            },
+            {
+              "value": "Company",
+              "weight": 1
+            },
+            {
+              "value": "Squadron",
+              "weight": 1
+            },
+            {
+              "value": "Regiment",
+              "weight": 1
+            },
+            {
+              "value": "Brigade",
+              "weight": 1
+            },
+            {
+              "value": "Wing",
+              "weight": 1
+            },
+            {
+              "value": "Detachment",
+              "weight": 1
+            },
+            {
+              "value": "Group",
+              "weight": 1
+            },
+            {
+              "value": "Flotilla",
+              "weight": 1
+            },
+            {
+              "value": "Troop",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/safehouse",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "a #adj# #bld# #place#",
+              "weight": 6
+            },
+            {
+              "value": "the #adj# #bld# #place#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "adj",
+          "choices": [
+            {
+              "value": "quiet",
+              "weight": 1
+            },
+            {
+              "value": "cramped",
+              "weight": 1
+            },
+            {
+              "value": "damp",
+              "weight": 1
+            },
+            {
+              "value": "sun-bleached",
+              "weight": 1
+            },
+            {
+              "value": "shuttered",
+              "weight": 1
+            },
+            {
+              "value": "whitewashed",
+              "weight": 1
+            },
+            {
+              "value": "drafty",
+              "weight": 1
+            },
+            {
+              "value": "lamplit",
+              "weight": 1
+            },
+            {
+              "value": "sagging",
+              "weight": 1
+            },
+            {
+              "value": "soundproofed",
+              "weight": 1
+            },
+            {
+              "value": "mouldering",
+              "weight": 1
+            },
+            {
+              "value": "tidy",
+              "weight": 1
+            },
+            {
+              "value": "windowless",
+              "weight": 1
+            },
+            {
+              "value": "cluttered",
+              "weight": 1
+            },
+            {
+              "value": "drab",
+              "weight": 1
+            },
+            {
+              "value": "narrow",
+              "weight": 1
+            },
+            {
+              "value": "sparse",
+              "weight": 1
+            },
+            {
+              "value": "mock-Tudor",
+              "weight": 1
+            },
+            {
+              "value": "cheerful",
+              "weight": 1
+            },
+            {
+              "value": "forgettable",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "bld",
+          "choices": [
+            {
+              "value": "flat above a closed tailor",
+              "weight": 1
+            },
+            {
+              "value": "farmhouse",
+              "weight": 1
+            },
+            {
+              "value": "boathouse",
+              "weight": 1
+            },
+            {
+              "value": "attic room",
+              "weight": 1
+            },
+            {
+              "value": "lock-up garage",
+              "weight": 1
+            },
+            {
+              "value": "bungalow",
+              "weight": 1
+            },
+            {
+              "value": "houseboat",
+              "weight": 1
+            },
+            {
+              "value": "lighthouse keeper's cottage",
+              "weight": 1
+            },
+            {
+              "value": "back office",
+              "weight": 1
+            },
+            {
+              "value": "cellar flat",
+              "weight": 1
+            },
+            {
+              "value": "chalet",
+              "weight": 1
+            },
+            {
+              "value": "rooftop studio",
+              "weight": 1
+            },
+            {
+              "value": "bookshop loft",
+              "weight": 1
+            },
+            {
+              "value": "boarding house room",
+              "weight": 1
+            },
+            {
+              "value": "disused signal box",
+              "weight": 1
+            },
+            {
+              "value": "chapel annex",
+              "weight": 1
+            },
+            {
+              "value": "shepherd's hut",
+              "weight": 1
+            },
+            {
+              "value": "warehouse office",
+              "weight": 1
+            },
+            {
+              "value": "villa",
+              "weight": 1
+            },
+            {
+              "value": "caravan",
+              "weight": 1
+            },
+            {
+              "value": "dockside tenement",
+              "weight": 1
+            },
+            {
+              "value": "mill cottage",
+              "weight": 1
+            },
+            {
+              "value": "hotel suite",
+              "weight": 1
+            },
+            {
+              "value": "allotment shed",
+              "weight": 1
+            },
+            {
+              "value": "garden apartment",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "on Quay Row",
+              "weight": 1
+            },
+            {
+              "value": "off Tanner's Lane",
+              "weight": 1
+            },
+            {
+              "value": "beyond the tram depot",
+              "weight": 1
+            },
+            {
+              "value": "above the fish market",
+              "weight": 1
+            },
+            {
+              "value": "behind the rail yard",
+              "weight": 1
+            },
+            {
+              "value": "by the old customs wharf",
+              "weight": 1
+            },
+            {
+              "value": "on Almond Street",
+              "weight": 1
+            },
+            {
+              "value": "at the end of Pilchard Alley",
+              "weight": 1
+            },
+            {
+              "value": "outside the town walls",
+              "weight": 1
+            },
+            {
+              "value": "near the lake ferry",
+              "weight": 1
+            },
+            {
+              "value": "on Marrow Hill",
+              "weight": 1
+            },
+            {
+              "value": "in the cannery district",
+              "weight": 1
+            },
+            {
+              "value": "above the harbour road",
+              "weight": 1
+            },
+            {
+              "value": "past the cattle bridge",
+              "weight": 1
+            },
+            {
+              "value": "on Tithe Street",
+              "weight": 1
+            },
+            {
+              "value": "beside the water tower",
+              "weight": 1
+            },
+            {
+              "value": "in the university quarter",
+              "weight": 1
+            },
+            {
+              "value": "on the coast road",
+              "weight": 1
+            },
+            {
+              "value": "under the viaduct",
+              "weight": 1
+            },
+            {
+              "value": "behind the cathedral close",
+              "weight": 1
+            },
+            {
+              "value": "on Foundry Lane",
+              "weight": 1
+            },
+            {
+              "value": "at the edge of the pine wood",
+              "weight": 1
+            },
+            {
+              "value": "off Mercer Row",
+              "weight": 1
+            },
+            {
+              "value": "by the salt works",
+              "weight": 1
+            },
+            {
+              "value": "in the ropewalk",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/dead-drop",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#cont#, #place#, flagged by #signal#",
+              "weight": 6
+            },
+            {
+              "value": "#cont# #place#; the signal is #signal#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "cont",
+          "choices": [
+            {
+              "value": "a hollowed library book",
+              "weight": 1
+            },
+            {
+              "value": "a loose brick",
+              "weight": 1
+            },
+            {
+              "value": "a tin of boot polish",
+              "weight": 1
+            },
+            {
+              "value": "a false-bottomed flowerpot",
+              "weight": 1
+            },
+            {
+              "value": "a magnetic key case",
+              "weight": 1
+            },
+            {
+              "value": "a rolled newspaper",
+              "weight": 1
+            },
+            {
+              "value": "a cigarette packet",
+              "weight": 1
+            },
+            {
+              "value": "a hollow bolt",
+              "weight": 1
+            },
+            {
+              "value": "a wax-sealed jar",
+              "weight": 1
+            },
+            {
+              "value": "a coat-lining pocket",
+              "weight": 1
+            },
+            {
+              "value": "a birdhouse cavity",
+              "weight": 1
+            },
+            {
+              "value": "a lunch pail",
+              "weight": 1
+            },
+            {
+              "value": "a sheet-music folder",
+              "weight": 1
+            },
+            {
+              "value": "a chess piece",
+              "weight": 1
+            },
+            {
+              "value": "a dented thermos",
+              "weight": 1
+            },
+            {
+              "value": "a waterproof tube",
+              "weight": 1
+            },
+            {
+              "value": "a gap behind a radiator",
+              "weight": 1
+            },
+            {
+              "value": "a cracked flagstone",
+              "weight": 1
+            },
+            {
+              "value": "a fishing-tackle box",
+              "weight": 1
+            },
+            {
+              "value": "a child's toy",
+              "weight": 1
+            },
+            {
+              "value": "a buried can",
+              "weight": 1
+            },
+            {
+              "value": "a hat-band",
+              "weight": 1
+            },
+            {
+              "value": "a hymn book",
+              "weight": 1
+            },
+            {
+              "value": "a rusted bicycle pump",
+              "weight": 1
+            },
+            {
+              "value": "a matchbox",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "place",
+          "choices": [
+            {
+              "value": "under the third bench in the park",
+              "weight": 1
+            },
+            {
+              "value": "in the cemetery's north wall",
+              "weight": 1
+            },
+            {
+              "value": "behind the clock in the station hall",
+              "weight": 1
+            },
+            {
+              "value": "inside the hollow oak by the canal",
+              "weight": 1
+            },
+            {
+              "value": "at the back of the municipal library",
+              "weight": 1
+            },
+            {
+              "value": "beneath the pier steps",
+              "weight": 1
+            },
+            {
+              "value": "in the lost-property office",
+              "weight": 1
+            },
+            {
+              "value": "behind a pew at the side chapel",
+              "weight": 1
+            },
+            {
+              "value": "under the bridge's east pylon",
+              "weight": 1
+            },
+            {
+              "value": "at the fountain in the market square",
+              "weight": 1
+            },
+            {
+              "value": "in the tool shed of the allotments",
+              "weight": 1
+            },
+            {
+              "value": "at a quiet café table",
+              "weight": 1
+            },
+            {
+              "value": "behind the carousel's ticket booth",
+              "weight": 1
+            },
+            {
+              "value": "on the zoo's aviary path",
+              "weight": 1
+            },
+            {
+              "value": "on the ferry's upper deck",
+              "weight": 1
+            },
+            {
+              "value": "at the lighthouse base",
+              "weight": 1
+            },
+            {
+              "value": "in the museum's cloakroom",
+              "weight": 1
+            },
+            {
+              "value": "along the old tow path",
+              "weight": 1
+            },
+            {
+              "value": "in the abandoned bandstand",
+              "weight": 1
+            },
+            {
+              "value": "on the rail platform's last bench",
+              "weight": 1
+            },
+            {
+              "value": "beneath a shop awning",
+              "weight": 1
+            },
+            {
+              "value": "in the orchard wall",
+              "weight": 1
+            },
+            {
+              "value": "by the war memorial",
+              "weight": 1
+            },
+            {
+              "value": "inside the church's bell tower",
+              "weight": 1
+            },
+            {
+              "value": "at the foot of the signal hill",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "signal",
+          "choices": [
+            {
+              "value": "a chalk mark on a lamppost",
+              "weight": 1
+            },
+            {
+              "value": "a red scarf tied to a railing",
+              "weight": 1
+            },
+            {
+              "value": "a potted geranium in the window",
+              "weight": 1
+            },
+            {
+              "value": "a bicycle leaned left",
+              "weight": 1
+            },
+            {
+              "value": "a folded newspaper on the sill",
+              "weight": 1
+            },
+            {
+              "value": "two pebbles on a wall",
+              "weight": 1
+            },
+            {
+              "value": "an open umbrella",
+              "weight": 1
+            },
+            {
+              "value": "a torn ticket stub",
+              "weight": 1
+            },
+            {
+              "value": "a yellow ribbon",
+              "weight": 1
+            },
+            {
+              "value": "a half-drawn blind",
+              "weight": 1
+            },
+            {
+              "value": "a bottle on the step",
+              "weight": 1
+            },
+            {
+              "value": "a paper boat in the gutter",
+              "weight": 1
+            },
+            {
+              "value": "a cracked mirror charm",
+              "weight": 1
+            },
+            {
+              "value": "an unlit lamp",
+              "weight": 1
+            },
+            {
+              "value": "three taps on a pipe",
+              "weight": 1
+            },
+            {
+              "value": "a coat on a hook",
+              "weight": 1
+            },
+            {
+              "value": "a stopped clock",
+              "weight": 1
+            },
+            {
+              "value": "a green door left ajar",
+              "weight": 1
+            },
+            {
+              "value": "a child's drawing",
+              "weight": 1
+            },
+            {
+              "value": "a lit candle by day",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/insignia-motto",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#verb# #abstr#",
+              "weight": 4
+            },
+            {
+              "value": "#qual#, #verb.lower# #abstr#",
+              "weight": 3
+            },
+            {
+              "value": "#padj.cap# #pl#",
+              "weight": 2
+            },
+            {
+              "value": "#qual#",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "Watch",
+              "weight": 1
+            },
+            {
+              "value": "Listen",
+              "weight": 1
+            },
+            {
+              "value": "Wait",
+              "weight": 1
+            },
+            {
+              "value": "Strike",
+              "weight": 1
+            },
+            {
+              "value": "Hold",
+              "weight": 1
+            },
+            {
+              "value": "Observe",
+              "weight": 1
+            },
+            {
+              "value": "Endure",
+              "weight": 1
+            },
+            {
+              "value": "Seek",
+              "weight": 1
+            },
+            {
+              "value": "Conceal",
+              "weight": 1
+            },
+            {
+              "value": "Advance",
+              "weight": 1
+            },
+            {
+              "value": "Defend",
+              "weight": 1
+            },
+            {
+              "value": "Prevail",
+              "weight": 1
+            },
+            {
+              "value": "Persist",
+              "weight": 1
+            },
+            {
+              "value": "Guard",
+              "weight": 1
+            },
+            {
+              "value": "Serve",
+              "weight": 1
+            },
+            {
+              "value": "Remember",
+              "weight": 1
+            },
+            {
+              "value": "Question",
+              "weight": 1
+            },
+            {
+              "value": "Guide",
+              "weight": 1
+            },
+            {
+              "value": "Vanish",
+              "weight": 1
+            },
+            {
+              "value": "Return",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "abstr",
+          "choices": [
+            {
+              "value": "the dawn",
+              "weight": 1
+            },
+            {
+              "value": "the dark",
+              "weight": 1
+            },
+            {
+              "value": "the silence",
+              "weight": 1
+            },
+            {
+              "value": "the border",
+              "weight": 1
+            },
+            {
+              "value": "the long road",
+              "weight": 1
+            },
+            {
+              "value": "the tide",
+              "weight": 1
+            },
+            {
+              "value": "the storm",
+              "weight": 1
+            },
+            {
+              "value": "the unseen",
+              "weight": 1
+            },
+            {
+              "value": "the shadow",
+              "weight": 1
+            },
+            {
+              "value": "the ridge",
+              "weight": 1
+            },
+            {
+              "value": "the gate",
+              "weight": 1
+            },
+            {
+              "value": "the horizon",
+              "weight": 1
+            },
+            {
+              "value": "the hour",
+              "weight": 1
+            },
+            {
+              "value": "the ledger",
+              "weight": 1
+            },
+            {
+              "value": "the line",
+              "weight": 1
+            },
+            {
+              "value": "the oath",
+              "weight": 1
+            },
+            {
+              "value": "the frontier",
+              "weight": 1
+            },
+            {
+              "value": "the mountain",
+              "weight": 1
+            },
+            {
+              "value": "the signal",
+              "weight": 1
+            },
+            {
+              "value": "the seal",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "qual",
+          "choices": [
+            {
+              "value": "Without fear",
+              "weight": 1
+            },
+            {
+              "value": "Without noise",
+              "weight": 1
+            },
+            {
+              "value": "In good faith",
+              "weight": 1
+            },
+            {
+              "value": "By any road",
+              "weight": 1
+            },
+            {
+              "value": "As one",
+              "weight": 1
+            },
+            {
+              "value": "At the last hour",
+              "weight": 1
+            },
+            {
+              "value": "Through the night",
+              "weight": 1
+            },
+            {
+              "value": "Before the light",
+              "weight": 1
+            },
+            {
+              "value": "With open eyes",
+              "weight": 1
+            },
+            {
+              "value": "Against the wind",
+              "weight": 1
+            },
+            {
+              "value": "In silence",
+              "weight": 1
+            },
+            {
+              "value": "Beyond the line",
+              "weight": 1
+            },
+            {
+              "value": "By patient hand",
+              "weight": 1
+            },
+            {
+              "value": "Under every flag",
+              "weight": 1
+            },
+            {
+              "value": "For those unseen",
+              "weight": 1
+            },
+            {
+              "value": "From the shadow",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "padj",
+          "choices": [
+            {
+              "value": "silent",
+              "weight": 1
+            },
+            {
+              "value": "vigilant",
+              "weight": 1
+            },
+            {
+              "value": "steadfast",
+              "weight": 1
+            },
+            {
+              "value": "unseen",
+              "weight": 1
+            },
+            {
+              "value": "tireless",
+              "weight": 1
+            },
+            {
+              "value": "patient",
+              "weight": 1
+            },
+            {
+              "value": "loyal",
+              "weight": 1
+            },
+            {
+              "value": "watchful",
+              "weight": 1
+            },
+            {
+              "value": "sleepless",
+              "weight": 1
+            },
+            {
+              "value": "unbroken",
+              "weight": 1
+            },
+            {
+              "value": "faithful",
+              "weight": 1
+            },
+            {
+              "value": "steady",
+              "weight": 1
+            },
+            {
+              "value": "resolute",
+              "weight": 1
+            },
+            {
+              "value": "discreet",
+              "weight": 1
+            },
+            {
+              "value": "ready",
+              "weight": 1
+            },
+            {
+              "value": "unyielding",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "pl",
+          "choices": [
+            {
+              "value": "eyes",
+              "weight": 1
+            },
+            {
+              "value": "hands",
+              "weight": 1
+            },
+            {
+              "value": "hearts",
+              "weight": 1
+            },
+            {
+              "value": "shields",
+              "weight": 1
+            },
+            {
+              "value": "wings",
+              "weight": 1
+            },
+            {
+              "value": "sentinels",
+              "weight": 1
+            },
+            {
+              "value": "keys",
+              "weight": 1
+            },
+            {
+              "value": "walls",
+              "weight": 1
+            },
+            {
+              "value": "lamps",
+              "weight": 1
+            },
+            {
+              "value": "oars",
+              "weight": 1
+            },
+            {
+              "value": "blades",
+              "weight": 1
+            },
+            {
+              "value": "wardens",
+              "weight": 1
+            },
+            {
+              "value": "ears",
+              "weight": 1
+            },
+            {
+              "value": "voices",
+              "weight": 1
+            },
+            {
+              "value": "anchors",
+              "weight": 1
+            },
+            {
+              "value": "bridges",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/officer",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#rank0# #given# #surname#, Land Forces",
+              "weight": 1
+            },
+            {
+              "value": "#rank1# #given# #surname#, Naval Service",
+              "weight": 1
+            },
+            {
+              "value": "#rank2# #given# #surname#, Air Arm",
+              "weight": 1
+            },
+            {
+              "value": "#rank3# #given# #surname#, Marine Corps",
+              "weight": 1
+            },
+            {
+              "value": "#rank4# #given# #surname#, Intelligence Corps",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "rank0",
+          "choices": [
+            {
+              "value": "Private",
+              "weight": 1
+            },
+            {
+              "value": "Corporal",
+              "weight": 1
+            },
+            {
+              "value": "Sergeant",
+              "weight": 1
+            },
+            {
+              "value": "Staff Sergeant",
+              "weight": 1
+            },
+            {
+              "value": "Sergeant Major",
+              "weight": 1
+            },
+            {
+              "value": "Second Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Captain",
+              "weight": 1
+            },
+            {
+              "value": "Major",
+              "weight": 1
+            },
+            {
+              "value": "Lieutenant Colonel",
+              "weight": 1
+            },
+            {
+              "value": "Colonel",
+              "weight": 1
+            },
+            {
+              "value": "Brigadier",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "rank1",
+          "choices": [
+            {
+              "value": "Able Seaman",
+              "weight": 1
+            },
+            {
+              "value": "Petty Officer",
+              "weight": 1
+            },
+            {
+              "value": "Chief Petty Officer",
+              "weight": 1
+            },
+            {
+              "value": "Midshipman",
+              "weight": 1
+            },
+            {
+              "value": "Sub-Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Lieutenant Commander",
+              "weight": 1
+            },
+            {
+              "value": "Commander",
+              "weight": 1
+            },
+            {
+              "value": "Captain",
+              "weight": 1
+            },
+            {
+              "value": "Commodore",
+              "weight": 1
+            },
+            {
+              "value": "Rear Admiral",
+              "weight": 1
+            },
+            {
+              "value": "Vice Admiral",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "rank2",
+          "choices": [
+            {
+              "value": "Aircraftman",
+              "weight": 1
+            },
+            {
+              "value": "Corporal",
+              "weight": 1
+            },
+            {
+              "value": "Sergeant",
+              "weight": 1
+            },
+            {
+              "value": "Flight Sergeant",
+              "weight": 1
+            },
+            {
+              "value": "Pilot Officer",
+              "weight": 1
+            },
+            {
+              "value": "Flying Officer",
+              "weight": 1
+            },
+            {
+              "value": "Flight Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Squadron Leader",
+              "weight": 1
+            },
+            {
+              "value": "Wing Commander",
+              "weight": 1
+            },
+            {
+              "value": "Group Captain",
+              "weight": 1
+            },
+            {
+              "value": "Air Commodore",
+              "weight": 1
+            },
+            {
+              "value": "Air Vice-Marshal",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "rank3",
+          "choices": [
+            {
+              "value": "Marine",
+              "weight": 1
+            },
+            {
+              "value": "Lance Corporal",
+              "weight": 1
+            },
+            {
+              "value": "Corporal",
+              "weight": 1
+            },
+            {
+              "value": "Sergeant",
+              "weight": 1
+            },
+            {
+              "value": "Gunnery Sergeant",
+              "weight": 1
+            },
+            {
+              "value": "Second Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "First Lieutenant",
+              "weight": 1
+            },
+            {
+              "value": "Captain",
+              "weight": 1
+            },
+            {
+              "value": "Major",
+              "weight": 1
+            },
+            {
+              "value": "Lieutenant Colonel",
+              "weight": 1
+            },
+            {
+              "value": "Colonel",
+              "weight": 1
+            },
+            {
+              "value": "Brigadier General",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "rank4",
+          "choices": [
+            {
+              "value": "Analyst",
+              "weight": 1
+            },
+            {
+              "value": "Senior Analyst",
+              "weight": 1
+            },
+            {
+              "value": "Case Officer",
+              "weight": 1
+            },
+            {
+              "value": "Desk Officer",
+              "weight": 1
+            },
+            {
+              "value": "Station Officer",
+              "weight": 1
+            },
+            {
+              "value": "Section Chief",
+              "weight": 1
+            },
+            {
+              "value": "Deputy Chief",
+              "weight": 1
+            },
+            {
+              "value": "Chief of Station",
+              "weight": 1
+            },
+            {
+              "value": "Assistant Director",
+              "weight": 1
+            },
+            {
+              "value": "Deputy Director",
+              "weight": 1
+            },
+            {
+              "value": "Director",
+              "weight": 1
+            },
+            {
+              "value": "Controller",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "given",
+          "choices": [
+            {
+              "value": "Aldous",
+              "weight": 1
+            },
+            {
+              "value": "Beatrix",
+              "weight": 1
+            },
+            {
+              "value": "Cedric",
+              "weight": 1
+            },
+            {
+              "value": "Dorothea",
+              "weight": 1
+            },
+            {
+              "value": "Edmund",
+              "weight": 1
+            },
+            {
+              "value": "Fenella",
+              "weight": 1
+            },
+            {
+              "value": "Gideon",
+              "weight": 1
+            },
+            {
+              "value": "Harriet",
+              "weight": 1
+            },
+            {
+              "value": "Ivor",
+              "weight": 1
+            },
+            {
+              "value": "Josephine",
+              "weight": 1
+            },
+            {
+              "value": "Kendrick",
+              "weight": 1
+            },
+            {
+              "value": "Lavinia",
+              "weight": 1
+            },
+            {
+              "value": "Maxim",
+              "weight": 1
+            },
+            {
+              "value": "Nadia",
+              "weight": 1
+            },
+            {
+              "value": "Osric",
+              "weight": 1
+            },
+            {
+              "value": "Philippa",
+              "weight": 1
+            },
+            {
+              "value": "Quentin",
+              "weight": 1
+            },
+            {
+              "value": "Rosalind",
+              "weight": 1
+            },
+            {
+              "value": "Silas",
+              "weight": 1
+            },
+            {
+              "value": "Tamsin",
+              "weight": 1
+            },
+            {
+              "value": "Ulric",
+              "weight": 1
+            },
+            {
+              "value": "Vera",
+              "weight": 1
+            },
+            {
+              "value": "Walter",
+              "weight": 1
+            },
+            {
+              "value": "Xenia",
+              "weight": 1
+            },
+            {
+              "value": "Yorick",
+              "weight": 1
+            },
+            {
+              "value": "Zelda",
+              "weight": 1
+            },
+            {
+              "value": "Anton",
+              "weight": 1
+            },
+            {
+              "value": "Bianca",
+              "weight": 1
+            },
+            {
+              "value": "Conrad",
+              "weight": 1
+            },
+            {
+              "value": "Delphine",
+              "weight": 1
+            },
+            {
+              "value": "Emil",
+              "weight": 1
+            },
+            {
+              "value": "Freya",
+              "weight": 1
+            },
+            {
+              "value": "Gustav",
+              "weight": 1
+            },
+            {
+              "value": "Helena",
+              "weight": 1
+            },
+            {
+              "value": "Ingrid",
+              "weight": 1
+            },
+            {
+              "value": "Jasper",
+              "weight": 1
+            },
+            {
+              "value": "Katya",
+              "weight": 1
+            },
+            {
+              "value": "Lucian",
+              "weight": 1
+            },
+            {
+              "value": "Marta",
+              "weight": 1
+            },
+            {
+              "value": "Nikolai",
+              "weight": 1
+            },
+            {
+              "value": "Odette",
+              "weight": 1
+            },
+            {
+              "value": "Pavel",
+              "weight": 1
+            },
+            {
+              "value": "Renata",
+              "weight": 1
+            },
+            {
+              "value": "Stefan",
+              "weight": 1
+            },
+            {
+              "value": "Tessa",
+              "weight": 1
+            },
+            {
+              "value": "Viktor",
+              "weight": 1
+            },
+            {
+              "value": "Wilhelmina",
+              "weight": 1
+            },
+            {
+              "value": "Alaric",
+              "weight": 1
+            },
+            {
+              "value": "Brenna",
+              "weight": 1
+            },
+            {
+              "value": "Casimir",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "surname",
+          "choices": [
+            {
+              "value": "Ashworth",
+              "weight": 1
+            },
+            {
+              "value": "Brandt",
+              "weight": 1
+            },
+            {
+              "value": "Calloway",
+              "weight": 1
+            },
+            {
+              "value": "Dunmore",
+              "weight": 1
+            },
+            {
+              "value": "Eastwick",
+              "weight": 1
+            },
+            {
+              "value": "Falk",
+              "weight": 1
+            },
+            {
+              "value": "Grayling",
+              "weight": 1
+            },
+            {
+              "value": "Hollis",
+              "weight": 1
+            },
+            {
+              "value": "Ivers",
+              "weight": 1
+            },
+            {
+              "value": "Janssen",
+              "weight": 1
+            },
+            {
+              "value": "Kessler",
+              "weight": 1
+            },
+            {
+              "value": "Lindqvist",
+              "weight": 1
+            },
+            {
+              "value": "Marlowe",
+              "weight": 1
+            },
+            {
+              "value": "Novak",
+              "weight": 1
+            },
+            {
+              "value": "Orsini",
+              "weight": 1
+            },
+            {
+              "value": "Pemberton",
+              "weight": 1
+            },
+            {
+              "value": "Quist",
+              "weight": 1
+            },
+            {
+              "value": "Rourke",
+              "weight": 1
+            },
+            {
+              "value": "Sandoval",
+              "weight": 1
+            },
+            {
+              "value": "Thorne",
+              "weight": 1
+            },
+            {
+              "value": "Underhill",
+              "weight": 1
+            },
+            {
+              "value": "Voss",
+              "weight": 1
+            },
+            {
+              "value": "Whitlock",
+              "weight": 1
+            },
+            {
+              "value": "Yarrow",
+              "weight": 1
+            },
+            {
+              "value": "Zielinski",
+              "weight": 1
+            },
+            {
+              "value": "Abernathy",
+              "weight": 1
+            },
+            {
+              "value": "Bellamy",
+              "weight": 1
+            },
+            {
+              "value": "Castellan",
+              "weight": 1
+            },
+            {
+              "value": "Draycott",
+              "weight": 1
+            },
+            {
+              "value": "Ellery",
+              "weight": 1
+            },
+            {
+              "value": "Fairbanks",
+              "weight": 1
+            },
+            {
+              "value": "Garrity",
+              "weight": 1
+            },
+            {
+              "value": "Halloran",
+              "weight": 1
+            },
+            {
+              "value": "Ingram",
+              "weight": 1
+            },
+            {
+              "value": "Jessop",
+              "weight": 1
+            },
+            {
+              "value": "Kowalczyk",
+              "weight": 1
+            },
+            {
+              "value": "Lockhart",
+              "weight": 1
+            },
+            {
+              "value": "Mercer",
+              "weight": 1
+            },
+            {
+              "value": "Nordmark",
+              "weight": 1
+            },
+            {
+              "value": "Okafor",
+              "weight": 1
+            },
+            {
+              "value": "Prescott",
+              "weight": 1
+            },
+            {
+              "value": "Quigley",
+              "weight": 1
+            },
+            {
+              "value": "Radcliffe",
+              "weight": 1
+            },
+            {
+              "value": "Sinclair",
+              "weight": 1
+            },
+            {
+              "value": "Tavener",
+              "weight": 1
+            },
+            {
+              "value": "Vance",
+              "weight": 1
+            },
+            {
+              "value": "Wexford",
+              "weight": 1
+            },
+            {
+              "value": "Yates",
+              "weight": 1
+            },
+            {
+              "value": "Zeller",
+              "weight": 1
+            },
+            {
+              "value": "Hartigan",
+              "weight": 1
+            },
+            {
+              "value": "Kovacs",
+              "weight": 1
+            },
+            {
+              "value": "Moreau",
+              "weight": 1
+            },
+            {
+              "value": "Ostrander",
+              "weight": 1
+            },
+            {
+              "value": "Petrov",
+              "weight": 1
+            },
+            {
+              "value": "Sorensen",
+              "weight": 1
+            },
+            {
+              "value": "Valdez",
+              "weight": 1
+            },
+            {
+              "value": "Winslow",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/cover-occupation",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#job# at #firm#",
+              "weight": 5
+            },
+            {
+              "value": "#job# for #firm#",
+              "weight": 3
+            },
+            {
+              "value": "#job#, formerly of #firm#",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "job",
+          "choices": [
+            {
+              "value": "import clerk",
+              "weight": 1
+            },
+            {
+              "value": "wine merchant",
+              "weight": 1
+            },
+            {
+              "value": "insurance assessor",
+              "weight": 1
+            },
+            {
+              "value": "translator",
+              "weight": 1
+            },
+            {
+              "value": "vice-consul's secretary",
+              "weight": 1
+            },
+            {
+              "value": "radio repairman",
+              "weight": 1
+            },
+            {
+              "value": "shipping agent",
+              "weight": 1
+            },
+            {
+              "value": "antiquarian bookseller",
+              "weight": 1
+            },
+            {
+              "value": "piano tuner",
+              "weight": 1
+            },
+            {
+              "value": "cartographer",
+              "weight": 1
+            },
+            {
+              "value": "trade-fair representative",
+              "weight": 1
+            },
+            {
+              "value": "language tutor",
+              "weight": 1
+            },
+            {
+              "value": "travelling salesman",
+              "weight": 1
+            },
+            {
+              "value": "hotel manager",
+              "weight": 1
+            },
+            {
+              "value": "press attaché",
+              "weight": 1
+            },
+            {
+              "value": "museum conservator",
+              "weight": 1
+            },
+            {
+              "value": "grain broker",
+              "weight": 1
+            },
+            {
+              "value": "stamp dealer",
+              "weight": 1
+            },
+            {
+              "value": "cultural exchange officer",
+              "weight": 1
+            },
+            {
+              "value": "ferry purser",
+              "weight": 1
+            },
+            {
+              "value": "customs broker",
+              "weight": 1
+            },
+            {
+              "value": "orchid grower",
+              "weight": 1
+            },
+            {
+              "value": "optician",
+              "weight": 1
+            },
+            {
+              "value": "dentist",
+              "weight": 1
+            },
+            {
+              "value": "charity auditor",
+              "weight": 1
+            },
+            {
+              "value": "newsreel cameraman",
+              "weight": 1
+            },
+            {
+              "value": "watchmaker",
+              "weight": 1
+            },
+            {
+              "value": "tour guide",
+              "weight": 1
+            },
+            {
+              "value": "agricultural advisor",
+              "weight": 1
+            },
+            {
+              "value": "concert promoter",
+              "weight": 1
+            },
+            {
+              "value": "freight forwarder",
+              "weight": 1
+            },
+            {
+              "value": "florist",
+              "weight": 1
+            },
+            {
+              "value": "architect's draughtsman",
+              "weight": 1
+            },
+            {
+              "value": "schoolteacher",
+              "weight": 1
+            },
+            {
+              "value": "chess instructor",
+              "weight": 1
+            },
+            {
+              "value": "mining surveyor",
+              "weight": 1
+            },
+            {
+              "value": "pharmaceutical rep",
+              "weight": 1
+            },
+            {
+              "value": "lighthouse inspector",
+              "weight": 1
+            },
+            {
+              "value": "seed merchant",
+              "weight": 1
+            },
+            {
+              "value": "bank courier",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "firm",
+          "choices": [
+            {
+              "value": "Halvorsen & Sons",
+              "weight": 1
+            },
+            {
+              "value": "the Meridian Trading Company",
+              "weight": 1
+            },
+            {
+              "value": "Linden Freight",
+              "weight": 1
+            },
+            {
+              "value": "Corvane Imports",
+              "weight": 1
+            },
+            {
+              "value": "Pellman Associates",
+              "weight": 1
+            },
+            {
+              "value": "the Alder Street Institute",
+              "weight": 1
+            },
+            {
+              "value": "Brightwater Logistics",
+              "weight": 1
+            },
+            {
+              "value": "Oakhaven Textiles",
+              "weight": 1
+            },
+            {
+              "value": "Tidewell Shipping",
+              "weight": 1
+            },
+            {
+              "value": "Quillon & Marsh",
+              "weight": 1
+            },
+            {
+              "value": "the Northgate Agency",
+              "weight": 1
+            },
+            {
+              "value": "Fenwick Surveyors",
+              "weight": 1
+            },
+            {
+              "value": "Larkspur Press",
+              "weight": 1
+            },
+            {
+              "value": "Westmark Consultants",
+              "weight": 1
+            },
+            {
+              "value": "Ironbridge Provisions",
+              "weight": 1
+            },
+            {
+              "value": "Calder & Pryce",
+              "weight": 1
+            },
+            {
+              "value": "Harrowgate Optics",
+              "weight": 1
+            },
+            {
+              "value": "Seabright Exports",
+              "weight": 1
+            },
+            {
+              "value": "the Pinewood Academy",
+              "weight": 1
+            },
+            {
+              "value": "Thornley Brokerage",
+              "weight": 1
+            },
+            {
+              "value": "Redfern Wine Shippers",
+              "weight": 1
+            },
+            {
+              "value": "Ashlar Engineering",
+              "weight": 1
+            },
+            {
+              "value": "Marrow Lane Books",
+              "weight": 1
+            },
+            {
+              "value": "Caldwell Orchards",
+              "weight": 1
+            },
+            {
+              "value": "Sundial Travel",
+              "weight": 1
+            },
+            {
+              "value": "Kestrel Insurance",
+              "weight": 1
+            },
+            {
+              "value": "Orrin Clockworks",
+              "weight": 1
+            },
+            {
+              "value": "Bellweather Tea",
+              "weight": 1
+            },
+            {
+              "value": "the Garnet Foundation",
+              "weight": 1
+            },
+            {
+              "value": "Dovecote Publishing",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/grammar/mission-briefing",
+      "start": "start",
+      "rules": [
+        {
+          "key": "start",
+          "choices": [
+            {
+              "value": "#verb# #target# #loc#, #cond#.",
+              "weight": 6
+            },
+            {
+              "value": "#verb# #target# #loc#.",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "key": "verb",
+          "choices": [
+            {
+              "value": "Locate",
+              "weight": 1
+            },
+            {
+              "value": "Recover",
+              "weight": 1
+            },
+            {
+              "value": "Extract",
+              "weight": 1
+            },
+            {
+              "value": "Shadow",
+              "weight": 1
+            },
+            {
+              "value": "Neutralise",
+              "weight": 1
+            },
+            {
+              "value": "Substitute",
+              "weight": 1
+            },
+            {
+              "value": "Photograph",
+              "weight": 1
+            },
+            {
+              "value": "Intercept",
+              "weight": 1
+            },
+            {
+              "value": "Verify",
+              "weight": 1
+            },
+            {
+              "value": "Escort",
+              "weight": 1
+            },
+            {
+              "value": "Infiltrate",
+              "weight": 1
+            },
+            {
+              "value": "Monitor",
+              "weight": 1
+            },
+            {
+              "value": "Recruit",
+              "weight": 1
+            },
+            {
+              "value": "Expose",
+              "weight": 1
+            },
+            {
+              "value": "Divert",
+              "weight": 1
+            },
+            {
+              "value": "Protect",
+              "weight": 1
+            },
+            {
+              "value": "Plant",
+              "weight": 1
+            },
+            {
+              "value": "Decipher",
+              "weight": 1
+            },
+            {
+              "value": "Retrieve",
+              "weight": 1
+            },
+            {
+              "value": "Disrupt",
+              "weight": 1
+            },
+            {
+              "value": "Authenticate",
+              "weight": 1
+            },
+            {
+              "value": "Trace",
+              "weight": 1
+            },
+            {
+              "value": "Silence",
+              "weight": 1
+            },
+            {
+              "value": "Exfiltrate",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "target",
+          "choices": [
+            {
+              "value": "a defecting cipher clerk",
+              "weight": 1
+            },
+            {
+              "value": "a courier carrying microfilm",
+              "weight": 1
+            },
+            {
+              "value": "a forged diplomatic pouch",
+              "weight": 1
+            },
+            {
+              "value": "a double agent",
+              "weight": 1
+            },
+            {
+              "value": "a ministry archivist",
+              "weight": 1
+            },
+            {
+              "value": "a stolen prototype",
+              "weight": 1
+            },
+            {
+              "value": "a coded ledger",
+              "weight": 1
+            },
+            {
+              "value": "a visiting arms broker",
+              "weight": 1
+            },
+            {
+              "value": "a cultural attaché",
+              "weight": 1
+            },
+            {
+              "value": "a sleeper cell",
+              "weight": 1
+            },
+            {
+              "value": "a sealed treaty draft",
+              "weight": 1
+            },
+            {
+              "value": "a radio relay",
+              "weight": 1
+            },
+            {
+              "value": "a missing analyst",
+              "weight": 1
+            },
+            {
+              "value": "a bonded warehouse",
+              "weight": 1
+            },
+            {
+              "value": "a shipment of ball bearings",
+              "weight": 1
+            },
+            {
+              "value": "a minor royal's envoy",
+              "weight": 1
+            },
+            {
+              "value": "a compromised safehouse",
+              "weight": 1
+            },
+            {
+              "value": "a rogue station chief",
+              "weight": 1
+            },
+            {
+              "value": "a smuggled map",
+              "weight": 1
+            },
+            {
+              "value": "a naval attaché",
+              "weight": 1
+            },
+            {
+              "value": "a counterfeit passport mill",
+              "weight": 1
+            },
+            {
+              "value": "a signals depot",
+              "weight": 1
+            },
+            {
+              "value": "a retired code-breaker",
+              "weight": 1
+            },
+            {
+              "value": "a grain-silo informant",
+              "weight": 1
+            },
+            {
+              "value": "a trade-delegation interpreter",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "loc",
+          "choices": [
+            {
+              "value": "in a border rail town",
+              "weight": 1
+            },
+            {
+              "value": "aboard a night ferry",
+              "weight": 1
+            },
+            {
+              "value": "during a trade fair",
+              "weight": 1
+            },
+            {
+              "value": "at a lakeside embassy",
+              "weight": 1
+            },
+            {
+              "value": "in a mountain spa hotel",
+              "weight": 1
+            },
+            {
+              "value": "in the harbour quarter",
+              "weight": 1
+            },
+            {
+              "value": "during a state funeral",
+              "weight": 1
+            },
+            {
+              "value": "at a provincial opera house",
+              "weight": 1
+            },
+            {
+              "value": "on a coastal plateau",
+              "weight": 1
+            },
+            {
+              "value": "in a closed-off capital district",
+              "weight": 1
+            },
+            {
+              "value": "at a railway junction",
+              "weight": 1
+            },
+            {
+              "value": "within a monastery archive",
+              "weight": 1
+            },
+            {
+              "value": "during a regatta",
+              "weight": 1
+            },
+            {
+              "value": "at a customs checkpoint",
+              "weight": 1
+            },
+            {
+              "value": "on a floodlit airfield",
+              "weight": 1
+            },
+            {
+              "value": "beneath an old fortress",
+              "weight": 1
+            },
+            {
+              "value": "at a cross-border market",
+              "weight": 1
+            },
+            {
+              "value": "in a quarantined port",
+              "weight": 1
+            },
+            {
+              "value": "on a long-haul sleeper train",
+              "weight": 1
+            },
+            {
+              "value": "at a winter sports resort",
+              "weight": 1
+            },
+            {
+              "value": "at a university conference",
+              "weight": 1
+            },
+            {
+              "value": "along a smugglers' road",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "key": "cond",
+          "choices": [
+            {
+              "value": "with no local support",
+              "weight": 1
+            },
+            {
+              "value": "before the next tide",
+              "weight": 1
+            },
+            {
+              "value": "without leaving traces",
+              "weight": 1
+            },
+            {
+              "value": "under diplomatic cover",
+              "weight": 1
+            },
+            {
+              "value": "within forty-eight hours",
+              "weight": 1
+            },
+            {
+              "value": "while avoiding the border patrol",
+              "weight": 1
+            },
+            {
+              "value": "using only civilian transport",
+              "weight": 1
+            },
+            {
+              "value": "without alerting the host service",
+              "weight": 1
+            },
+            {
+              "value": "before the summit opens",
+              "weight": 1
+            },
+            {
+              "value": "with a single contact",
+              "weight": 1
+            },
+            {
+              "value": "under radio silence",
+              "weight": 1
+            },
+            {
+              "value": "before the courier is replaced",
+              "weight": 1
+            },
+            {
+              "value": "with deniability intact",
+              "weight": 1
+            },
+            {
+              "value": "ahead of a rival service",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "tables": [
+    {
+      "id": "lexiconlang.espionage/table/rank-ladder",
+      "description": "Military ranks by branch",
+      "tags": [
+        "rank",
+        "oracle"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "e01",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Sergeant"
+          }
+        },
+        {
+          "key": "e02",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Staff Sergeant"
+          }
+        },
+        {
+          "key": "e03",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Sergeant Major"
+          }
+        },
+        {
+          "key": "e04",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Second Lieutenant"
+          }
+        },
+        {
+          "key": "e05",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Lieutenant"
+          }
+        },
+        {
+          "key": "e06",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Captain"
+          }
+        },
+        {
+          "key": "e07",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Major"
+          }
+        },
+        {
+          "key": "e08",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Land Forces: Lieutenant Colonel"
+          }
+        },
+        {
+          "key": "e09",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Chief Petty Officer"
+          }
+        },
+        {
+          "key": "e10",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Midshipman"
+          }
+        },
+        {
+          "key": "e11",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Sub-Lieutenant"
+          }
+        },
+        {
+          "key": "e12",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Lieutenant"
+          }
+        },
+        {
+          "key": "e13",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Lieutenant Commander"
+          }
+        },
+        {
+          "key": "e14",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Commander"
+          }
+        },
+        {
+          "key": "e15",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Captain"
+          }
+        },
+        {
+          "key": "e16",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Naval Service: Commodore"
+          }
+        },
+        {
+          "key": "e17",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Sergeant"
+          }
+        },
+        {
+          "key": "e18",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Flight Sergeant"
+          }
+        },
+        {
+          "key": "e19",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Pilot Officer"
+          }
+        },
+        {
+          "key": "e20",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Flying Officer"
+          }
+        },
+        {
+          "key": "e21",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Flight Lieutenant"
+          }
+        },
+        {
+          "key": "e22",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Squadron Leader"
+          }
+        },
+        {
+          "key": "e23",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Wing Commander"
+          }
+        },
+        {
+          "key": "e24",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Air Arm: Group Captain"
+          }
+        },
+        {
+          "key": "e25",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Corporal"
+          }
+        },
+        {
+          "key": "e26",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Sergeant"
+          }
+        },
+        {
+          "key": "e27",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Gunnery Sergeant"
+          }
+        },
+        {
+          "key": "e28",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Second Lieutenant"
+          }
+        },
+        {
+          "key": "e29",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: First Lieutenant"
+          }
+        },
+        {
+          "key": "e30",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Captain"
+          }
+        },
+        {
+          "key": "e31",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Major"
+          }
+        },
+        {
+          "key": "e32",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Marine Corps: Lieutenant Colonel"
+          }
+        },
+        {
+          "key": "e33",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Case Officer"
+          }
+        },
+        {
+          "key": "e34",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Desk Officer"
+          }
+        },
+        {
+          "key": "e35",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Station Officer"
+          }
+        },
+        {
+          "key": "e36",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Section Chief"
+          }
+        },
+        {
+          "key": "e37",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Deputy Chief"
+          }
+        },
+        {
+          "key": "e38",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Chief of Station"
+          }
+        },
+        {
+          "key": "e39",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Assistant Director"
+          }
+        },
+        {
+          "key": "e40",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Intelligence Corps: Deputy Director"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/table/field-complication",
+      "description": "Complications that spoil a plan mid-operation",
+      "tags": [
+        "oracle",
+        "complication"
+      ],
+      "mode": "weighted",
+      "entries": [
+        {
+          "key": "e01",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A rival service has the same target under watch."
+          }
+        },
+        {
+          "key": "e02",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The contact fails to appear at the second meeting."
+          }
+        },
+        {
+          "key": "e03",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A border crossing closes without warning."
+          }
+        },
+        {
+          "key": "e04",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The cover identity is recognised by a former classmate."
+          }
+        },
+        {
+          "key": "e05",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The safehouse has been visited while you were away."
+          }
+        },
+        {
+          "key": "e06",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The asset demands extraction tonight, not tomorrow."
+          }
+        },
+        {
+          "key": "e07",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A radio frequency is jammed by an unknown party."
+          }
+        },
+        {
+          "key": "e08",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The courier delivers a decoy."
+          }
+        },
+        {
+          "key": "e09",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Local police detain someone on a trivial charge."
+          }
+        },
+        {
+          "key": "e10",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The weather grounds every aircraft for two days."
+          }
+        },
+        {
+          "key": "e11",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "An ally quietly reports to the other side."
+          }
+        },
+        {
+          "key": "e12",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The dead drop is cleared by a stranger."
+          }
+        },
+        {
+          "key": "e13",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A newspaper prints a photograph of the operation's location."
+          }
+        },
+        {
+          "key": "e14",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The cipher key has been changed without notice."
+          }
+        },
+        {
+          "key": "e15",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A diplomat's reception puts the target in the same room as the team."
+          }
+        },
+        {
+          "key": "e16",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The payment arrives short and late."
+          }
+        },
+        {
+          "key": "e17",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "An informant is more valuable than briefed — and more frightened."
+          }
+        },
+        {
+          "key": "e18",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A cover story collides with the real tenant of the flat."
+          }
+        },
+        {
+          "key": "e19",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A sudden strike halts rail and ferry traffic."
+          }
+        },
+        {
+          "key": "e20",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The briefing omitted a second objective."
+          }
+        },
+        {
+          "key": "e21",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A trusted handler has gone silent."
+          }
+        },
+        {
+          "key": "e22",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "The safe-conduct paper is a forgery."
+          }
+        },
+        {
+          "key": "e23",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "A child recognises a face from the briefing photos."
+          }
+        },
+        {
+          "key": "e24",
+          "weight": 1,
+          "result": {
+            "type": "text",
+            "text": "Orders arrive to abort — but the code word is wrong."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lexiconlang.espionage/table/asset-reliability",
+      "description": "d6 reliability grade for an asset or informant",
+      "tags": [
+        "oracle",
+        "asset"
+      ],
+      "mode": "dice",
+      "dice": {
+        "count": 1,
+        "sides": 6,
+        "modifier": 0
+      },
+      "entries": [
+        {
+          "key": "r1",
+          "range": [
+            1,
+            1
+          ],
+          "result": {
+            "type": "text",
+            "text": "Compromised — feeds you what the other side wants heard."
+          }
+        },
+        {
+          "key": "r2",
+          "range": [
+            2,
+            2
+          ],
+          "result": {
+            "type": "text",
+            "text": "Unreliable — frightened, embellishes, needs constant reassurance."
+          }
+        },
+        {
+          "key": "r3",
+          "range": [
+            3,
+            3
+          ],
+          "result": {
+            "type": "text",
+            "text": "Uncertain — accurate in small things, vague in large ones."
+          }
+        },
+        {
+          "key": "r4",
+          "range": [
+            4,
+            4
+          ],
+          "result": {
+            "type": "text",
+            "text": "Reliable — consistent, cautious, rarely volunteers more than asked."
+          }
+        },
+        {
+          "key": "r5",
+          "range": [
+            5,
+            5
+          ],
+          "result": {
+            "type": "text",
+            "text": "Trusted — proven across several operations."
+          }
+        },
+        {
+          "key": "r6",
+          "range": [
+            6,
+            6
+          ],
+          "result": {
+            "type": "text",
+            "text": "Exceptional — highly placed, accurate, and willing to take risks."
+          }
+        }
+      ]
+    }
+  ],
+  "corpora": [],
+  "markovModels": [],
+  "generators": [
+    {
+      "id": "lexiconlang.espionage/generator/operation-codename",
+      "description": "Two-word operation codename",
+      "tags": [
+        "operation",
+        "codename"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/operation-codename"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/callsign",
+      "description": "Radio callsign",
+      "tags": [
+        "person",
+        "callsign"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/callsign"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/agency-name",
+      "description": "Intelligence agency or bureau name",
+      "tags": [
+        "faction",
+        "agency"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/agency-name"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/military-unit",
+      "description": "Military unit designation",
+      "tags": [
+        "faction",
+        "military"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/military-unit"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/safehouse",
+      "description": "Safehouse description",
+      "tags": [
+        "place",
+        "safehouse"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/safehouse"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/dead-drop",
+      "description": "Dead-drop container, location and signal",
+      "tags": [
+        "place",
+        "dead-drop"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/dead-drop"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/insignia-motto",
+      "description": "Unit insignia motto",
+      "tags": [
+        "faction",
+        "motto"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/insignia-motto"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/officer",
+      "description": "Military officer with rank and branch",
+      "tags": [
+        "person",
+        "military",
+        "rank"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/officer"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/cover-occupation",
+      "description": "Cover occupation and employer",
+      "tags": [
+        "person",
+        "cover"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/cover-occupation"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/mission-briefing",
+      "description": "One-line mission briefing",
+      "tags": [
+        "oracle",
+        "briefing"
+      ],
+      "output": "string",
+      "engine": "grammar-v1",
+      "grammar": "lexiconlang.espionage/grammar/mission-briefing"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/cover-identity-postwar",
+      "description": "Mid-century cover identity",
+      "tags": [
+        "person",
+        "cover",
+        "postwar"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.espionage/culture/postwar",
+      "structure": "postwar-cover"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/cover-identity-modern",
+      "description": "Contemporary cover identity",
+      "tags": [
+        "person",
+        "cover",
+        "modern"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.espionage/culture/modern",
+      "structure": "modern-cover"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/meridian-agent",
+      "description": "Agent name in the invented Meridian tongue, with translation",
+      "tags": [
+        "person",
+        "meridian"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.espionage/culture/meridian",
+      "structure": "meridian-agent"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/meridian-place",
+      "description": "Meridian place name with English translation",
+      "tags": [
+        "place",
+        "meridian"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.espionage/culture/meridian",
+      "structure": "meridian-place"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/meridian-faction",
+      "description": "Meridian faction or service name with English translation",
+      "tags": [
+        "faction",
+        "meridian"
+      ],
+      "output": "structured-name-v1",
+      "engine": "structured-name-v1",
+      "culture": "lexiconlang.espionage/culture/meridian",
+      "structure": "meridian-faction"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/rank-ladder",
+      "description": "A military rank, by branch",
+      "tags": [
+        "rank",
+        "oracle"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.espionage/table/rank-ladder"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/field-complication",
+      "description": "Mid-operation complication",
+      "tags": [
+        "oracle",
+        "complication"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.espionage/table/field-complication"
+    },
+    {
+      "id": "lexiconlang.espionage/generator/asset-reliability",
+      "description": "Reliability grade of an asset",
+      "tags": [
+        "oracle",
+        "asset"
+      ],
+      "output": "table-roll-v1",
+      "engine": "table-v1",
+      "table": "lexiconlang.espionage/table/asset-reliability"
+    }
+  ]
+}

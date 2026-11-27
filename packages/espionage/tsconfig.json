@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@lexiconlang/core": ["../core/src/index.ts"],
+      "@lexiconlang/language": ["../language/src/index.ts"],
+      "@lexiconlang/packs": ["../packs/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*", "src/espionage.pack.json"],
+  "exclude": ["src/**/*.test.ts", "dist"],
+  "references": [
+    { "path": "../core" },
+    { "path": "../language" },
+    { "path": "../packs" }
+  ]
+}

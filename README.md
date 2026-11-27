@@ -346,6 +346,7 @@ Bumping `v:0` → `v:1` rerolls just that one settlement.
 | [`@lexiconlang/modern`](packages/modern)   | Genre pack: people with full email/phone/address, cities, streets, companies, bands, songs, books (~16 generators)                                                                                        |
 | [`@lexiconlang/steampunk`](packages/steampunk) | Genre pack: inventors, airships, guilds, automatons, patents, headlines, street omens (14 generators)                                                                                               |
 | [`@lexiconlang/grimdark`](packages/grimdark) | Genre pack: warbands, heresies, inquisitions, plagues, mutations, war machines, original ratfolk clans and warlords, doom-laden battles (16 generators)                                              |
+| [`@lexiconlang/espionage`](packages/espionage) | Genre pack: operation codenames, callsigns, agencies, units, safehouses, dead-drops, cover identities, mission briefings, ranks and unit mottos (18 generators) |
 | [`@lexiconlang/postapoc`](packages/postapoc) | Genre pack: post-apocalyptic survivors, tech-cults, settlements, raiders, bunkers, mutations, gear with condition, vehicles, trade goods, encounters oracle (14 generators) |
 | [`@lexiconlang/cli`](packages/cli)         | `lexiconlang` command-line tool — `build-markov`, `scaffold-pack`                                                                                                                                         |
 

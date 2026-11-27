@@ -40,7 +40,8 @@
     "@lexiconlang/wuxia": "workspace:*",
     "@lexiconlang/supers": "workspace:*",
     "@lexiconlang/weird-west": "workspace:*",
-    "@lexiconlang/mythology": "workspace:*"
+    "@lexiconlang/mythology": "workspace:*",
+    "@lexiconlang/espionage": "workspace:*"
   },
   "devDependencies": {
     "tsx": "^4.23.15"
