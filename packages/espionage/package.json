@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/espionage",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Espionage & military genre content pack for lexiconlang — operation codenames, callsigns, agencies, units, safehouses, dead-drops, cover identities, briefings, ranks and mottos",
   "type": "module",
   "main": "./dist/index.js",

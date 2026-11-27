@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/horror",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Horror and cosmic-horror genre content pack for lexiconlang — investigators, entities, tomes, cults, omens and monster traits",
   "type": "module",
   "main": "./dist/index.js",
