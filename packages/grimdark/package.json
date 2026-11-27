@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/grimdark",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Grimdark genre pack for lexiconlang — warbands, heresies, plagues, mutations, war machines, ratfolk clans and doom-laden battles",
   "type": "module",
   "main": "./dist/src/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@lexiconlang/mythology",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Mythology and pantheons genre pack for lexiconlang — deities, families, epithets, myths, holy sites, relics, monsters and omens in five invented naming styles",
   "type": "module",
   "main": "./dist/src/index.js",
